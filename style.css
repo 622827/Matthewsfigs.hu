@@ -25,6 +25,7 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .nav{display:flex;gap:22px;margin-left:auto}
 .nav a{text-decoration:none;font-weight:600;font-size:15px;opacity:.9}
 .nav a:hover{color:var(--gold)}
+.nav__main{color:var(--gold)}
 .lang{background:transparent;border:1.5px solid var(--gold);color:var(--gold);font:700 13px var(--body);padding:6px 10px;border-radius:8px;cursor:pointer}
 .lang:hover{background:var(--gold);color:var(--green)}
 
@@ -124,8 +125,9 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .legal{grid-column:1/-1;font-size:12px!important;opacity:.6;border-top:1px solid rgba(247,243,227,.15);padding-top:18px}
 
 @media (max-width:900px){
-  .nav{display:none}
-  .lang{margin-left:auto}
+  .nav{gap:14px}
+  .nav a:not(.nav__main){display:none}
+  .brand span{display:none}
   .stats__in{grid-template-columns:repeat(2,1fr)}
   .cards{grid-template-columns:repeat(2,1fr)}
   .about__in{grid-template-columns:1fr;gap:32px}
@@ -142,3 +144,4 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
   .tab{padding:8px 12px;font-size:14px}
   .foot__in{grid-template-columns:1fr}
 }
+.shop{scroll-margin-top:68px}

@@ -1,7 +1,7 @@
 (() => {
   const PAGE = 24;
   const EN = {
-    "nav.about":"About","nav.shop":"Shop",
+    "nav.about":"About","nav.sets":"Sets","nav.figs":"Minifigures","nav.shop":"Shop",
     "about.kicker":"About us","about.title":"Who we are",
     "about.p1":"Matthew's Fig Supply Co. is a LEGO® set and minifigure shop based in Budapest. We buy sealed sets in bulk, so we can sell them below retail. Every figure is checked one by one and its condition is clearly marked, used ones included.",
     "about.p2":"If something isn't in stock, we'll source it: a rare figure, a long-retired set or a whole wanted list. We ship within Hungary and abroad, and you can pick up your order in person in Budapest.",
@@ -110,10 +110,21 @@
     more.parentElement.hidden = list.length <= shown;
   }
 
-  document.querySelectorAll(".tab").forEach(b => b.onclick = () => {
-    document.querySelectorAll(".tab").forEach(x => x.classList.toggle("is-on", x === b));
-    type = b.dataset.type; render(true);
-  });
+  function selectTab(t) {
+    document.querySelectorAll(".tab").forEach(x => x.classList.toggle("is-on", x.dataset.type === t));
+    type = t; render(true);
+  }
+  document.querySelectorAll(".tab").forEach(b => b.onclick = () => selectTab(b.dataset.type));
+
+  // Top menu: "Szettek" / "Figurák" open the shop on that tab
+  const NAV = { "#szettek": "SET", "#figurak": "MINIFIG" };
+  function fromHash() {
+    const t = NAV[location.hash];
+    if (!t) return;
+    selectTab(t);
+    document.getElementById("kinalat").scrollIntoView({ behavior: "smooth" });
+  }
+  window.addEventListener("hashchange", fromHash);
   q.oninput = () => render(true);
   cond.onchange = () => render(true);
   more.onclick = () => { shown += PAGE; render(); };
@@ -126,6 +137,7 @@
       if (d.updated) document.getElementById("updated").textContent =
         new Date(d.updated).toLocaleString(lang === "hu" ? "hu-HU" : "en-GB", { dateStyle: "medium", timeStyle: "short" });
       render(true);
+      fromHash();
     })
     .catch(() => { empty.hidden = false; });
 
