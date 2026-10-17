@@ -22,9 +22,11 @@
     "ord.bl":"BrickLink store","ord.msg":"Custom request on Messenger",
     "foot.contact":"Contact",
     "foot.legal":"LEGO® is a trademark of the LEGO Group, which does not sponsor, authorize or endorse this site.",
-    "cond.N":"New","cond.U":"Used","price.ask":"Ask"
+    "cond.N":"New","cond.U":"Used","price.ask":"Ask",
+    "parts.title":"Parts","parts.text":"We have {lots} lots ({qty} pieces) of parts in stock. Browse them with colour filters in our BrickLink store.","parts.cta":"Browse parts on BrickLink"
   };
-  const HU = {"cond.N":"Új","cond.U":"Használt","price.ask":"Érdeklődj"};
+  const HU = {"cond.N":"Új","cond.U":"Használt","price.ask":"Érdeklődj",
+    "parts.title":"Alkatrészek","parts.text":"{lots} tétel ({qty} darab) alkatrész van raktáron. Színre és típusra szűrve a BrickLink boltunkban böngészheted őket.","parts.cta":"Alkatrészek a BrickLinken"};
 
   let lang = "hu";
   try { lang = localStorage.getItem("mfs-lang") || (navigator.language.startsWith("hu") ? "hu" : "en"); } catch (e) {}
@@ -55,7 +57,7 @@
 
   const money = v => {
     if (v == null || v === "") return t("price.ask");
-    const cur = data.currency || "HUF";
+    const cur = data.currency || "EUR";
     return new Intl.NumberFormat(lang === "hu" ? "hu-HU" : "en-GB", {
       style: "currency", currency: cur, maximumFractionDigits: cur === "HUF" ? 0 : 2
     }).format(v);
@@ -73,6 +75,15 @@
 
   function render(reset) {
     if (reset) shown = PAGE;
+    if (type === "PART") {
+      const lots = data.parts_lots || 0, qty = data.parts_qty || 0;
+      grid.innerHTML = `<div class="parts">
+        <h3>${t("parts.title")}</h3>
+        <p>${t("parts.text").replace("{lots}", lots).replace("{qty}", qty.toLocaleString(lang === "hu" ? "hu-HU" : "en-GB"))}</p>
+        <a class="btn btn--gold" href="https://store.bricklink.com/MatthewHorseman#/shop?o={%22itemType%22:%22P%22}" target="_blank" rel="noopener">${t("parts.cta")}</a>
+      </div>`;
+      empty.hidden = true; more.parentElement.hidden = true; return;
+    }
     const list = filtered();
     grid.innerHTML = list.slice(0, shown).map(i => `
       <a class="item" href="${esc(i.url)}" target="_blank" rel="noopener">
@@ -80,6 +91,7 @@
         <div class="item__body">
           <span class="item__no">${esc(i.no)}${i.color ? " · " + esc(i.color) : ""}</span>
           <span class="item__name">${esc(i.name)}</span>
+          ${i.note ? `<span class="item__note">${esc(i.note)}</span>` : ""}
           <div class="item__foot">
             <span class="price">${money(i.price)}</span>
             <span class="badge ${i.cond === "U" ? "badge--u" : ""}">${t("cond." + i.cond)}</span>

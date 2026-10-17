@@ -25,10 +25,10 @@ A régi A rekordokat (ha vannak) töröld. A változás pár perctől néhány �
 2. Hozz létre Access Tokent. **IP-címnek `0.0.0.0`-t adj meg**, mert a GitHub szerverei változó IP-ről futnak.
 3. Repó → **Settings → Secrets and variables → Actions** → *New repository secret*, négy darab:
    `BL_CONSUMER_KEY`, `BL_CONSUMER_SECRET`, `BL_TOKEN`, `BL_TOKEN_SECRET`
-4. Ha a boltod nem forintban árazik, a *Variables* fülön adj meg egy `STORE_CURRENCY` változót (pl. `EUR`).
+4. Az árak euróban jelennek meg (a bolt pénzneme). Ha ez változik, a *Variables* fülön adj meg egy `STORE_CURRENCY` változót.
 5. **Actions** fül → *BrickLink készlet szinkron* → **Run workflow**. Pár perc múlva az oldalon a valódi készlet látszik.
 
-Addig a `data/inventory.json` csak minta-tételeket tartalmaz.
+Addig a `data/inventory.json` a 2026. október 17-i készletet mutatja (szettek és minifigurák; az alkatrészekhez a BrickLink boltra visz az oldal).
 
 ## Szerkesztés
 - Szövegek: `index.html` (magyar), `app.js` elején az `EN` szótár (angol).

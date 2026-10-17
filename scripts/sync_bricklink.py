@@ -12,7 +12,7 @@ from pathlib import Path
 
 API = "https://api.bricklink.com/api/store/v1"
 STORE = os.environ.get("BL_STORE", "MatthewHorseman")
-CURRENCY = os.environ.get("STORE_CURRENCY", "HUF")
+CURRENCY = os.environ.get("STORE_CURRENCY", "EUR")
 OUT = Path(__file__).resolve().parent.parent / "data" / "inventory.json"
 
 TYPE_LETTER = {"SET": "S", "MINIFIG": "M", "PART": "P", "BOOK": "B", "GEAR": "G",
@@ -57,10 +57,17 @@ def image_url(item_type, no, color_id):
 def main():
     rows = oauth_get(f"{API}/inventories")
     items = []
+    parts_lots = parts_qty = 0
     for r in rows:
         if r.get("is_stock_room"):
             continue  # not publicly for sale
         it = r["item"]
+        if it["type"] == "PART":
+            parts_lots += 1
+            parts_qty += r.get("quantity", 0)
+            continue  # parts are browsed on BrickLink, not listed on the site
+        if it["type"] not in ("SET", "MINIFIG"):
+            continue
         try:
             price = round(float(r.get("unit_price") or 0), 2) or None
         except ValueError:
@@ -74,6 +81,7 @@ def main():
             "cond": r.get("new_or_used", "N"),
             "qty": r.get("quantity", 0),
             "price": price,
+            "note": (r.get("description") or "").strip(),
             "img": image_url(it["type"], it["no"], r.get("color_id", 0)),
             "url": f"https://www.bricklink.com/store.asp?p={STORE}&itemID={r['inventory_id']}",
         })
@@ -82,9 +90,10 @@ def main():
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps({
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        "store": STORE, "currency": CURRENCY, "total_lots": len(items), "items": items,
+        "store": STORE, "currency": CURRENCY, "total_lots": len(items) + parts_lots,
+        "parts_lots": parts_lots, "parts_qty": parts_qty, "items": items,
     }, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(f"Wrote {len(items)} lots to {OUT}")
+    print(f"Wrote {len(items)} sets/minifigs (+{parts_lots} part lots) to {OUT}")
 
 
 if __name__ == "__main__":

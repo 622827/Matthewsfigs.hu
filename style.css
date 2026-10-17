@@ -72,6 +72,10 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .item__body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px;flex:1}
 .item__no{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:.03em}
 .item__name{font-weight:600;font-size:15px;line-height:1.3;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.item__note{font-size:12px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden}
+.parts{grid-column:1/-1;background:var(--green);color:var(--cream);border-radius:var(--r);padding:36px;display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.parts h3{color:var(--gold);font-size:28px}
+.parts p{margin:0;max-width:560px;opacity:.9}
 .item__foot{margin-top:auto;padding-top:8px;display:flex;justify-content:space-between;align-items:center;gap:8px}
 .price{font-family:var(--display);font-weight:800;font-size:19px;color:var(--green)}
 .badge{font-size:11px;font-weight:700;padding:3px 8px;border-radius:999px;background:#e9f3ea;color:var(--green)}
