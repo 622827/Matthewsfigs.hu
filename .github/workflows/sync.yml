@@ -1,0 +1,33 @@
+name: BrickLink készlet szinkron
+
+on:
+  schedule:
+    - cron: "17 */6 * * *"   # 6 óránként
+  workflow_dispatch: {}       # kézi indítás az Actions fülön
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Készlet letöltése
+        env:
+          BL_CONSUMER_KEY: ${{ secrets.BL_CONSUMER_KEY }}
+          BL_CONSUMER_SECRET: ${{ secrets.BL_CONSUMER_SECRET }}
+          BL_TOKEN: ${{ secrets.BL_TOKEN }}
+          BL_TOKEN_SECRET: ${{ secrets.BL_TOKEN_SECRET }}
+          STORE_CURRENCY: ${{ vars.STORE_CURRENCY || 'HUF' }}
+        run: python scripts/sync_bricklink.py
+      - name: Változás mentése
+        run: |
+          git config user.name "inventory-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/inventory.json
+          git diff --cached --quiet || git commit -m "Készlet frissítése $(date -u +%F' '%H:%M)"
+          git push

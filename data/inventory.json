@@ -1,0 +1,117 @@
+{
+ "sample": true,
+ "updated": null,
+ "store": "MatthewHorseman",
+ "currency": "HUF",
+ "total_lots": 735,
+ "items": [
+  {
+   "id": "75314",
+   "type": "SET",
+   "no": "75314-1",
+   "name": "The Bad Batch Attack Shuttle",
+   "color": null,
+   "cond": "N",
+   "qty": 1,
+   "price": 79000,
+   "img": "https://img.bricklink.com/ItemImage/SN/0/75314-1.png",
+   "url": "https://store.bricklink.com/MatthewHorseman"
+  },
+  {
+   "id": "75347",
+   "type": "SET",
+   "no": "75347-1",
+   "name": "TIE Bomber",
+   "color": null,
+   "cond": "N",
+   "qty": 1,
+   "price": null,
+   "img": "https://img.bricklink.com/ItemImage/SN/0/75347-1.png",
+   "url": "https://store.bricklink.com/MatthewHorseman"
+  },
+  {
+   "id": "75391",
+   "type": "SET",
+   "no": "75391-1",
+   "name": "Captain Rex Y-Wing Microfighter",
+   "color": null,
+   "cond": "N",
+   "qty": 1,
+   "price": null,
+   "img": "https://img.bricklink.com/ItemImage/SN/0/75391-1.png",
+   "url": "https://store.bricklink.com/MatthewHorseman"
+  },
+  {
+   "id": "75381",
+   "type": "SET",
+   "no": "75381-1",
+   "name": "Droideka",
+   "color": null,
+   "cond": "N",
+   "qty": 1,
+   "price": null,
+   "img": "https://img.bricklink.com/ItemImage/SN/0/75381-1.png",
+   "url": "https://store.bricklink.com/MatthewHorseman"
+  },
+  {
+   "id": "75345",
+   "type": "SET",
+   "no": "75345-1",
+   "name": "501st Clone Troopers Battle Pack",
+   "color": null,
+   "cond": "N",
+   "qty": 1,
+   "price": null,
+   "img": "https://img.bricklink.com/ItemImage/SN/0/75345-1.png",
+   "url": "https://store.bricklink.com/MatthewHorseman"
+  },
+  {
+   "id": "75359",
+   "type": "SET",
+   "no": "75359-1",
+   "name": "332nd Ahsoka's Clone Trooper Battle Pack",
+   "color": null,
+   "cond": "N",
+   "qty": 1,
+   "price": null,
+   "img": "https://img.bricklink.com/ItemImage/SN/0/75359-1.png",
+   "url": "https://store.bricklink.com/MatthewHorseman"
+  },
+  {
+   "id": "75362",
+   "type": "SET",
+   "no": "75362-1",
+   "name": "Ahsoka Tano's T-6 Jedi Shuttle",
+   "color": null,
+   "cond": "N",
+   "qty": 1,
+   "price": null,
+   "img": "https://img.bricklink.com/ItemImage/SN/0/75362-1.png",
+   "url": "https://store.bricklink.com/MatthewHorseman"
+  },
+  {
+   "id": "75342",
+   "type": "SET",
+   "no": "75342-1",
+   "name": "Republic Fighter Tank",
+   "color": null,
+   "cond": "N",
+   "qty": 1,
+   "price": null,
+   "img": "https://img.bricklink.com/ItemImage/SN/0/75342-1.png",
+   "url": "https://store.bricklink.com/MatthewHorseman"
+  },
+  {
+   "id": "sw0001a",
+   "type": "MINIFIG",
+   "no": "sw0001a",
+   "name": "Battle Droid",
+   "color": null,
+   "cond": "U",
+   "qty": 1,
+   "price": null,
+   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0001a.png",
+   "url": "https://store.bricklink.com/MatthewHorseman"
+  }
+ ]
+}

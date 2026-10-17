@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Matthew's Fig Supply Co. – LEGO® szettek és minifigurák</title>
+<meta name="description" content="Nagytételes LEGO® szettek és minifigurák Budapesten. Ritka, kifutott darabok egyedi beszerzése pár héten belül.">
+<meta property="og:title" content="Matthew's Fig Supply Co.">
+<meta property="og:description" content="LEGO® szettek és minifigurák a legjobb áron – ha nincs meg, beszerezzük!">
+<meta property="og:image" content="assets/hero.jpg">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="#">
+      <img src="assets/logo.png" alt="" width="44" height="44">
+      <span>Matthew's <em>Fig Supply Co.</em></span>
+    </a>
+    <nav class="nav">
+      <a href="#kinalat" data-i18n="nav.shop">Kínálat</a>
+      <a href="#beszerzes" data-i18n="nav.sourcing">Beszerzés</a>
+      <a href="#rendeles" data-i18n="nav.order">Rendelés</a>
+      <a href="#kapcsolat" data-i18n="nav.contact">Kapcsolat</a>
+    </nav>
+    <button class="lang" id="langBtn" aria-label="Nyelv / Language">EN</button>
+  </div>
+</header>
+
+<section class="hero">
+  <img class="hero__img" src="assets/hero.jpg" alt="">
+  <div class="hero__shade"></div>
+  <div class="wrap hero__in">
+    <p class="kicker" data-i18n="hero.kicker">LEGO® szettek · minifigurák · alkatrészek</p>
+    <h1 data-i18n="hero.title">Ha nincs meg,<br>beszerezzük.</h1>
+    <p class="hero__lead" data-i18n="hero.lead">Nagytételes beszerzés, bolti ár alatt. Ritka figura vagy rég kifutott szett? Írj nekünk, és pár héten belül megszerezzük.</p>
+    <div class="hero__cta">
+      <a class="btn btn--gold" href="#kinalat" data-i18n="hero.cta1">Kínálat böngészése</a>
+      <a class="btn btn--ghost" href="https://m.me/100091130775442" target="_blank" rel="noopener" data-i18n="hero.cta2">Üzenet Messengeren</a>
+    </div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="wrap stats__in">
+    <div><b id="statLots">735</b><span data-i18n="stats.lots">tétel raktáron</span></div>
+    <div><b>100%</b><span data-i18n="stats.praise">pozitív értékelés</span></div>
+    <div><b>🇭🇺 / 🌍</b><span data-i18n="stats.ship">szállítás itthon és külföldre</span></div>
+    <div><b>Budapest</b><span data-i18n="stats.place">személyes átvétel</span></div>
+  </div>
+</section>
+
+<section class="shop" id="kinalat">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 data-i18n="shop.title">Kínálat</h2>
+      <p class="muted"><span data-i18n="shop.updated">Frissítve:</span> <span id="updated">–</span></p>
+    </div>
+    <div class="filters">
+      <div class="tabs" role="tablist">
+        <button class="tab is-on" data-type="SET" data-i18n="shop.sets">Szettek</button>
+        <button class="tab" data-type="MINIFIG" data-i18n="shop.figs">Minifigurák</button>
+        <button class="tab" data-type="PART" data-i18n="shop.parts">Alkatrészek</button>
+        <button class="tab" data-type="ALL" data-i18n="shop.all">Mind</button>
+      </div>
+      <input class="search" id="search" type="search" placeholder="Keresés: név vagy cikkszám…" data-i18n-ph="shop.search">
+      <select class="cond" id="cond">
+        <option value="" data-i18n="shop.condAll">Minden állapot</option>
+        <option value="N" data-i18n="shop.condNew">Új</option>
+        <option value="U" data-i18n="shop.condUsed">Használt</option>
+      </select>
+    </div>
+    <div class="grid" id="grid"></div>
+    <p class="empty" id="empty" hidden data-i18n="shop.empty">Nincs találat. Írj nekünk, és beszerezzük!</p>
+    <div class="more"><button class="btn btn--line" id="moreBtn" data-i18n="shop.more">Továbbiak</button></div>
+  </div>
+</section>
+
+<section class="sourcing" id="beszerzes">
+  <div class="wrap">
+    <h2 data-i18n="src.title">Te megálmodod, mi beszerezzük</h2>
+    <div class="cards">
+      <article><span class="ic">📦</span><h3 data-i18n="src.c1t">Nagytételes szettek</h3><p data-i18n="src.c1">Bontatlan LEGO® szettek a bolti árak alatt.</p></article>
+      <article><span class="ic">🔍</span><h3 data-i18n="src.c2t">Kifutott szettek</h3><p data-i18n="src.c2">Régi, nehezen elérhető készletet keresel? Megoldjuk.</p></article>
+      <article><span class="ic">🧑‍🚀</span><h3 data-i18n="src.c3t">Ritka minifigurák</h3><p data-i18n="src.c3">Hiányzik egy karakter a vitrinedből? Írj nekünk privátban.</p></article>
+      <article><span class="ic">🧩</span><h3 data-i18n="src.c4t">Extra szolgáltatások</h3><p data-i18n="src.c4">Alkatrész-válogatás, kívánságlisták beszerzése, értékbecslés.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="order" id="rendeles">
+  <div class="wrap">
+    <h2 data-i18n="ord.title">Így rendelhetsz</h2>
+    <ol class="steps">
+      <li><b data-i18n="ord.s1t">Válassz</b><span data-i18n="ord.s1">Böngészd a kínálatot itt vagy a BrickLink boltunkban.</span></li>
+      <li><b data-i18n="ord.s2t">Rendelj</b><span data-i18n="ord.s2">Kosárba tétel és fizetés a BrickLinken, vagy írj Messengeren.</span></li>
+      <li><b data-i18n="ord.s3t">Megkapod</b><span data-i18n="ord.s3">Gondos csomagolás, postázás vagy személyes átvétel Budapesten.</span></li>
+    </ol>
+    <div class="order__cta">
+      <a class="btn btn--gold" href="https://store.bricklink.com/MatthewHorseman" target="_blank" rel="noopener" data-i18n="ord.bl">BrickLink bolt</a>
+      <a class="btn btn--line" href="https://m.me/100091130775442" target="_blank" rel="noopener" data-i18n="ord.msg">Egyedi kérés Messengeren</a>
+    </div>
+  </div>
+</section>
+
+<footer class="foot" id="kapcsolat">
+  <div class="wrap foot__in">
+    <div>
+      <img src="assets/logo.png" alt="Matthew's Fig Supply Co." width="88" height="88">
+    </div>
+    <div>
+      <h3 data-i18n="foot.contact">Kapcsolat</h3>
+      <p>Bartók Béla út 10–12.<br>1111 Budapest</p>
+      <p><a href="https://www.facebook.com/profile.php?id=100091130775442" target="_blank" rel="noopener">Facebook</a> · <a href="https://m.me/100091130775442" target="_blank" rel="noopener">Messenger</a> · <a href="https://store.bricklink.com/MatthewHorseman" target="_blank" rel="noopener">BrickLink</a></p>
+    </div>
+    <p class="legal" data-i18n="foot.legal">A LEGO® a LEGO Group védjegye, amely nem szponzorálja, nem engedélyezi és nem támogatja ezt az oldalt.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
