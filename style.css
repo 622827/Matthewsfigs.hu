@@ -1,5 +1,5 @@
 :root{
-  --green:#123a22; --green-2:#0b2716; --gold:#f2c418; --gold-2:#d9a90a;
+  --green:#123a22; --green-2:#0b2716; --gold:#ffcd03; --gold-2:#e0a800; --gold-ink:#a37800;
   --cream:#f7f3e3; --ink:#15170f; --muted:#5e6253; --line:#e3dcc0;
   --fig:#8a4fb0; --card:#fffdf4;
   --r:14px;
@@ -58,7 +58,7 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .about__text{max-width:62ch}
 .about__text h2{margin-bottom:20px}
 .about__text p{margin:0 0 14px}
-.kicker--dark{color:var(--gold-2)}
+.kicker--dark{color:var(--gold-ink)}
 .about__name{font-size:15px;color:var(--muted);border-left:3px solid var(--gold);padding-left:14px;margin-top:22px!important}
 .facts{margin:0;background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:8px 24px}
 .facts div{display:grid;gap:2px;padding:14px 0;border-bottom:1px solid var(--line)}
