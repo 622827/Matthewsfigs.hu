@@ -179,3 +179,5 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
   .bigsearch{border-radius:18px;flex-direction:column}
   .bigsearch .btn{width:100%}
 }
+
+.price small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--muted)}

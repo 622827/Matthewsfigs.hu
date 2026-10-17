@@ -2,14 +2,14 @@
   const EN = {
     "nav.about":"About",
     "home.setsTitle":"Featured sets","home.setsAll":"All sets","home.figsTitle":"Featured minifigures","home.figsAll":"All minifigures",
-    "cat.sets.kicker":"Shop","cat.sets.title":"Sets","cat.sets.lead":"Sealed LEGO® sets, mostly from the Star Wars universe. Search by set number or keyword.",
+    "cat.sets.kicker":"Shop","cat.sets.title":"Sets","cat.sets.lead":"Only sealed (MISB) LEGO® sets, mostly from the Star Wars universe. Search by set number or keyword.",
     "cat.sets.ph":"Set number or keyword, e.g. 75391, Clone, Microfighter…",
-    "cat.figs.kicker":"Shop","cat.figs.title":"Minifigures","cat.figs.lead":"New and used minifigures, each with its condition clearly marked. Search by name, number or keyword.",
+    "cat.figs.kicker":"Shop","cat.figs.title":"Minifigures","cat.figs.lead":"Minifigures from the Star Wars universe and beyond. Search by name, number or keyword.",
     "cat.figs.ph":"Name, number or keyword, e.g. Rex, sw0314, 501st…",
     "cat.go":"Search","cat.popular":"Popular:","cat.results":"results","cat.for":" for","cat.ask":"Ask us on Messenger",
     "sort.pd":"Price: high to low","sort.pa":"Price: low to high","sort.na":"Name: A–Z","nav.sets":"Sets","nav.figs":"Minifigures","nav.shop":"Shop",
     "about.kicker":"About us","about.title":"Who we are",
-    "about.p1":"Matthew's Fig Supply Co. is a LEGO® set and minifigure shop based in Budapest. We buy sealed sets in bulk, so we can sell them below retail. Every figure is checked one by one and its condition is clearly marked, used ones included.",
+    "about.p1":"Matthew's Fig Supply Co. is a LEGO® set and minifigure shop based in Budapest. We buy sealed sets in bulk, so we can sell them below retail. We only sell sets sealed (MISB), and every figure is checked one by one.",
     "about.p2":"If something isn't in stock, we'll source it: a rare figure, a long-retired set or a whole wanted list. We ship within Hungary and abroad, and you can pick up your order in person in Budapest.",
     "about.name":"The name? Csikós Máté translates to Matthew Horseman in English. \"Fig\" stands for minifigures, and the fig on the logo is a little pun.",
     "about.f1t":"What we sell","about.f1":"Sealed sets, minifigures, parts",
@@ -36,10 +36,10 @@
     "ord.bl":"BrickLink store","ord.msg":"Custom request on Messenger",
     "foot.contact":"Contact",
     "foot.legal":"LEGO® is a trademark of the LEGO Group, which does not sponsor, authorize or endorse this site.",
-    "cond.N":"New","cond.U":"Used","price.ask":"Ask",
+    "badge.sealed":"Sealed","price.ask":"Ask",
     "parts.title":"Parts","parts.text":"We have {lots} lots ({qty} pieces) of parts in stock. Browse them with colour filters in our BrickLink store.","parts.cta":"Browse parts on BrickLink"
   };
-  const HU = {"cat.for":" erre","cond.N":"Új","cond.U":"Használt","price.ask":"Érdeklődj",
+  const HU = {"cat.for":" erre","badge.sealed":"Bontatlan","price.ask":"Érdeklődj",
     "parts.title":"Alkatrészek","parts.text":"{lots} tétel ({qty} darab) alkatrész van raktáron. Színre és típusra szűrve a BrickLink boltunkban böngészheted őket.","parts.cta":"Alkatrészek a BrickLinken"};
 
   let lang = "hu";
@@ -82,10 +82,9 @@
         <div class="item__body">
           <span class="item__no">${esc(i.no)}${i.qty > 1 ? ` · ${i.qty} ${lang === "hu" ? "db" : "pcs"}` : ""}</span>
           <span class="item__name">${esc(i.name)}</span>
-          ${i.note ? `<span class="item__note">${esc(i.note)}</span>` : ""}
           <div class="item__foot">
-            <span class="price">${money(i.price)}</span>
-            <span class="badge ${i.cond === "U" ? "badge--u" : ""}">${t("cond." + i.cond)}</span>
+            <span class="price">${i.from ? `<small>${lang === "hu" ? "" : "from "}</small>` : ""}${money(i.price)}${i.from && lang === "hu" ? "<small>-tól</small>" : ""}</span>
+            ${i.type === "SET" ? `<span class="badge">${t("badge.sealed")}</span>` : ""}
           </div>
         </div>
       </a>`;
@@ -101,8 +100,7 @@
     minecraft: "steve|alex|creeper|zombie|skeleton, minecraft|illager|blaze|wither|pigman|minecraft",
     birodalmi: "imperial|stormtrooper|snowtrooper|sandtrooper|tie|at-at", imperial: "imperial|stormtrooper|snowtrooper|sandtrooper|tie",
     lazado: "rebel|hoth|endor|luke|leia|chewbacca|han solo", rebel: "rebel|hoth|endor|leia|chewbacca",
-    klon: "clone", tasak: "bag|foil|polybag", polybag: "bag|foil|polybag", bontatlan: "misb|sealed|never opened|brand new",
-    uj: "@N", new: "@N", hasznalt: "@U", used: "@U"
+    klon: "clone", tasak: "bag|foil|polybag", polybag: "bag|foil|polybag"
   };
   function matcher(query) {
     const q = norm(query).trim();
@@ -111,8 +109,8 @@
     const tokens = q.includes("|") ? [q] : q.split(/\s+/);
     const groups = tokens.map(tok => (ALIAS[tok] || tok).split("|").map(x => x.trim()).filter(Boolean));
     return i => {
-      const hay = norm(`${i.no} ${i.no.replace(/-1$/, "")} ${i.name} ${i.note || ""}`);
-      return groups.every(g => g.some(w => w[0] === "@" ? i.cond === w[1].toUpperCase() : hay.includes(w)));
+      const hay = norm(`${i.no} ${i.no.replace(/-1$/, "")} ${i.name}`);
+      return groups.every(g => g.some(w => hay.includes(w)));
     };
   }
 
@@ -140,8 +138,8 @@
   function renderCatalog(reset) {
     if (reset) shown = PAGE;
     const qv = $("search").value;
-    const match = matcher(qv), cond = $("cond").value, sort = $("sort").value;
-    let list = data.items.filter(i => i.type === TYPE && (!cond || i.cond === cond) && match(i));
+    const match = matcher(qv), sort = $("sort").value;
+    let list = data.items.filter(i => i.type === TYPE && match(i));
     list.sort(sort === "pa" ? (a, b) => a.price - b.price : sort === "na" ? (a, b) => a.name.localeCompare(b.name) : (a, b) => b.price - a.price);
     $("grid").innerHTML = list.slice(0, shown).map(card).join("");
     $("count").textContent = list.length;
@@ -161,7 +159,6 @@
     let timer;
     $("search").addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(() => { renderCatalog(true); syncUrl(); }, 120); });
     $("searchForm").addEventListener("submit", e => { e.preventDefault(); renderCatalog(true); syncUrl(); $("search").blur(); });
-    $("cond").onchange = () => renderCatalog(true);
     $("sort").onchange = () => renderCatalog(true);
     $("moreBtn").onclick = () => { shown += PAGE; renderCatalog(); };
     document.querySelectorAll(".chip").forEach(c => c.onclick = () => {
@@ -178,6 +175,15 @@
   fetch("data/inventory.json", { cache: "no-cache" })
     .then(r => r.json())
     .then(d => {
+      const byItem = new Map();
+      for (const i of d.items) {
+        const k = i.type + ":" + i.no, m = byItem.get(k);
+        if (!m) { byItem.set(k, { ...i }); continue; }
+        m.qty += i.qty;
+        if (i.price !== m.price) m.from = true;
+        if (i.price < m.price) { m.price = i.price; m.url = i.url; }
+      }
+      d.items = [...byItem.values()];
       data = d;
       const lots = $("statLots"); if (lots && d.total_lots) lots.textContent = d.total_lots;
       if (d.updated && $("updated")) $("updated").textContent =
