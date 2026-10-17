@@ -1,5 +1,5 @@
 :root{
-  --green:#123a22; --green-2:#0b2716; --gold:#ffcd03; --gold-2:#e0a800; --gold-ink:#a37800;
+  --green:#12321b; --green-2:#0a2111; --gold:#ffcd03; --gold-2:#e0a800; --gold-ink:#a37800;
   --cream:#f7f3e3; --ink:#15170f; --muted:#5e6253; --line:#e3dcc0;
   --fig:#8a4fb0; --card:#fffdf4;
   --r:14px;
@@ -31,7 +31,7 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 /* hero */
 .hero{position:relative;min-height:560px;display:flex;align-items:flex-end;overflow:hidden;background:var(--green-2)}
 .hero__img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero__shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,39,22,.94) 0%,rgba(11,39,22,.75) 45%,rgba(11,39,22,.15) 100%)}
+.hero__shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(10,33,17,.94) 0%,rgba(10,33,17,.75) 45%,rgba(10,33,17,.15) 100%)}
 .hero__in{position:relative;padding-top:80px;padding-bottom:72px;color:var(--cream);max-width:1180px;width:100%}
 .kicker{color:var(--gold);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;margin:0 0 14px}
 .hero h1{font-size:clamp(46px,7.5vw,92px);font-weight:800;max-width:12ch}
@@ -80,7 +80,7 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:18px}
 .item{background:var(--card);border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;text-decoration:none;transition:transform .15s,box-shadow .15s}
-.item:hover{transform:translateY(-3px);box-shadow:0 10px 24px -12px rgba(18,58,34,.35);border-color:var(--gold)}
+.item:hover{transform:translateY(-3px);box-shadow:0 10px 24px -12px rgba(18,50,27,.35);border-color:var(--gold)}
 .item__img{aspect-ratio:4/3;background:#fff;display:grid;place-items:center;padding:14px;border-bottom:1.5px solid var(--line)}
 .item__img img{max-height:100%;object-fit:contain}
 .item__body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px;flex:1}
