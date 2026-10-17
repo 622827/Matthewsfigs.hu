@@ -1,7 +1,15 @@
 (() => {
   const PAGE = 24;
   const EN = {
-    "nav.shop":"Shop","nav.sourcing":"Sourcing","nav.order":"How to order","nav.contact":"Contact",
+    "nav.about":"About","nav.shop":"Shop",
+    "about.kicker":"About us","about.title":"Who we are",
+    "about.p1":"Matthew's Fig Supply Co. is a LEGO® set and minifigure shop based in Budapest. We buy sealed sets in bulk, so we can sell them below retail. Every figure is checked one by one and its condition is clearly marked, used ones included.",
+    "about.p2":"If something isn't in stock, we'll source it: a rare figure, a long-retired set or a whole wanted list. We ship within Hungary and abroad, and you can pick up your order in person in Budapest.",
+    "about.name":"The name? Csikós Máté translates to Matthew Horseman in English. \"Fig\" stands for minifigures, and the fig on the logo is a little pun.",
+    "about.f1t":"What we sell","about.f1":"Sealed sets, minifigures, parts",
+    "about.f2t":"Main theme","about.f2":"Star Wars, plus Minecraft and Castle",
+    "about.f3t":"Where to buy","about.f3":"Our BrickLink store, Messenger or in person",
+    "about.f4t":"Based in","about.f5t":"Languages","about.f5":"Hungarian and English","nav.sourcing":"Sourcing","nav.order":"How to order","nav.contact":"Contact",
     "hero.kicker":"LEGO® sets · minifigures · parts",
     "hero.title":"If we don't have it,<br>we can get it.",
     "hero.lead":"Bulk LEGO® sets and minifigures below retail. Looking for a rare figure or a long-retired set? Message us and we'll source it within a few weeks.",

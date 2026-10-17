@@ -52,6 +52,20 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .stats b{display:block;font-family:var(--display);font-size:28px;font-weight:800}
 .stats span{font-size:14px;font-weight:600}
 
+/* about */
+.about{padding:80px 0;border-bottom:1.5px solid var(--line)}
+.about__in{display:grid;grid-template-columns:1.3fr 1fr;gap:56px;align-items:start}
+.about__text{max-width:62ch}
+.about__text h2{margin-bottom:20px}
+.about__text p{margin:0 0 14px}
+.kicker--dark{color:var(--gold-2)}
+.about__name{font-size:15px;color:var(--muted);border-left:3px solid var(--gold);padding-left:14px;margin-top:22px!important}
+.facts{margin:0;background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:8px 24px}
+.facts div{display:grid;gap:2px;padding:14px 0;border-bottom:1px solid var(--line)}
+.facts div:last-child{border-bottom:0}
+.facts dt{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.facts dd{margin:0;font-weight:600;color:var(--green)}
+
 /* shop */
 .shop{padding:80px 0}
 .sec-head{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:24px}
@@ -114,6 +128,7 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
   .lang{margin-left:auto}
   .stats__in{grid-template-columns:repeat(2,1fr)}
   .cards{grid-template-columns:repeat(2,1fr)}
+  .about__in{grid-template-columns:1fr;gap:32px}
   .steps{grid-template-columns:1fr}
 }
 @media (max-width:560px){
