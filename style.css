@@ -145,3 +145,37 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
   .foot__in{grid-template-columns:1fr}
 }
 .shop{scroll-margin-top:68px}
+
+/* home shelves */
+.shelf{margin-bottom:44px}
+.shelf__head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px}
+.shelf__head h3{font-size:24px;color:var(--green)}
+.shelf__all{font-weight:700;color:var(--green);text-decoration:none;border-bottom:2px solid var(--gold)}
+.shelf__all:hover{background:var(--gold)}
+
+/* catalog pages */
+.nav__main.is-current{text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px}
+.cat-hero{background:var(--green);color:var(--cream);padding:56px 0 40px}
+.cat-hero h1{font-size:clamp(40px,6vw,64px);font-weight:800}
+.cat-hero__lead{max-width:60ch;opacity:.9;margin:12px 0 26px}
+.bigsearch{display:flex;gap:10px;max-width:760px;background:var(--cream);padding:8px;border-radius:999px;box-shadow:0 0 0 4px var(--gold)}
+.bigsearch input{flex:1;min-width:0;border:0;background:transparent;font:18px var(--body);padding:10px 16px;color:var(--ink)}
+.bigsearch input:focus{outline:none}
+.bigsearch .btn{box-shadow:none;padding:11px 24px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:18px}
+.chips__label{font-size:14px;opacity:.75;margin-right:4px}
+.chip{font:600 14px var(--body);color:var(--cream);background:transparent;border:1.5px solid rgba(247,243,227,.45);border-radius:999px;padding:6px 14px;cursor:pointer}
+.chip:hover{border-color:var(--gold);color:var(--gold)}
+.chip.is-on{background:var(--gold);border-color:var(--gold);color:var(--green)}
+.shop--cat{padding-top:32px}
+.toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:20px}
+.count{margin:0;font-size:16px}
+.count b{font-family:var(--display);font-size:24px;color:var(--green)}
+.toolbar__ctrl{display:flex;gap:10px;flex-wrap:wrap}
+.empty{display:flex;flex-direction:column;align-items:center;gap:14px}
+.empty[hidden]{display:none}
+.updated{text-align:center;font-size:13px;margin-top:28px}
+@media (max-width:560px){
+  .bigsearch{border-radius:18px;flex-direction:column}
+  .bigsearch .btn{width:100%}
+}

@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Szettek – Matthew's Fig Supply Co.</title>
+<meta name="description" content="Nagytételes LEGO® szettek és minifigurák Budapesten. Ritka, kifutott darabok egyedi beszerzése pár héten belül.">
+<meta property="og:title" content="Matthew's Fig Supply Co.">
+<meta property="og:description" content="LEGO® szettek és minifigurák a legjobb áron – ha nincs meg, beszerezzük!">
+<meta property="og:image" content="assets/hero.jpg">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="catalog" data-type="SET">
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="" width="44" height="44">
+      <span>Matthew's <em>Fig Supply Co.</em></span>
+    </a>
+    <nav class="nav">
+      <a href="szettek.html" class="nav__main is-current" aria-current="page" data-i18n="nav.sets">Szettek</a>
+      <a href="figurak.html" class="nav__main" data-i18n="nav.figs">Figurák</a>
+      <a href="index.html#rolunk" data-i18n="nav.about">Rólunk</a>
+      <a href="index.html#beszerzes" data-i18n="nav.sourcing">Beszerzés</a>
+      <a href="index.html#rendeles" data-i18n="nav.order">Rendelés</a>
+      <a href="index.html#kapcsolat" data-i18n="nav.contact">Kapcsolat</a>
+    </nav>
+    <button class="lang" id="langBtn" aria-label="Nyelv / Language">EN</button>
+  </div>
+</header>
+
+
+<section class="cat-hero">
+  <div class="wrap">
+    <p class="kicker" data-i18n="cat.sets.kicker">Kínálat</p>
+    <h1 data-i18n="cat.sets.title">Szettek</h1>
+    <p class="cat-hero__lead" data-i18n="cat.sets.lead">Bontatlan LEGO® szettek, főleg a Star Wars világából. Keress szettszámra vagy kulcsszóra.</p>
+    <form class="bigsearch" id="searchForm" role="search">
+      <input id="search" type="search" autocomplete="off" placeholder="Szettszám vagy kulcsszó, pl. 75391, Clone, Microfighter…" data-i18n-ph="cat.sets.ph" aria-label="Keresés">
+      <button class="btn btn--gold" type="submit" data-i18n="cat.go">Keresés</button>
+    </form>
+    <div class="chips">
+      <span class="chips__label" data-i18n="cat.popular">Népszerű:</span>
+        <button class="chip" data-q="battle pack">Battle Pack</button>
+        <button class="chip" data-q="microfighter">Microfighter</button>
+        <button class="chip" data-q="clone">Clone</button>
+        <button class="chip" data-q="mandalorian">Mandalorian</button>
+        <button class="chip" data-q="bag|foil">Tasakok</button>
+    </div>
+  </div>
+</section>
+
+<section class="shop shop--cat">
+  <div class="wrap">
+    <div class="toolbar">
+      <p class="count"><b id="count">0</b> <span data-i18n="cat.results">találat</span><span id="qlabel"></span></p>
+      <div class="toolbar__ctrl">
+        <select class="cond" id="cond" aria-label="Állapot">
+          <option value="" data-i18n="shop.condAll">Minden állapot</option>
+          <option value="N" data-i18n="shop.condNew">Új</option>
+          <option value="U" data-i18n="shop.condUsed">Használt</option>
+        </select>
+        <select class="cond" id="sort" aria-label="Rendezés">
+          <option value="pd" data-i18n="sort.pd">Ár: legdrágább elöl</option>
+          <option value="pa" data-i18n="sort.pa">Ár: legolcsóbb elöl</option>
+          <option value="na" data-i18n="sort.na">Név: A–Z</option>
+        </select>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+    <div class="empty" id="empty" hidden>
+      <p data-i18n="shop.empty">Nincs találat. Írj nekünk, és beszerezzük!</p>
+      <a class="btn btn--gold" href="https://m.me/100091130775442" target="_blank" rel="noopener" data-i18n="cat.ask">Kérdezz Messengeren</a>
+    </div>
+    <div class="more"><button class="btn btn--line" id="moreBtn" data-i18n="shop.more">Továbbiak</button></div>
+    <p class="muted updated"><span data-i18n="shop.updated">Frissítve:</span> <span id="updated">–</span></p>
+  </div>
+</section>
+
+<footer class="foot" id="kapcsolat">
+  <div class="wrap foot__in">
+    <div>
+      <img src="assets/logo.png" alt="Matthew's Fig Supply Co." width="88" height="88">
+    </div>
+    <div>
+      <h3 data-i18n="foot.contact">Kapcsolat</h3>
+      <p>Bartók Béla út 10–12.<br>1111 Budapest</p>
+      <p><a href="https://www.facebook.com/profile.php?id=100091130775442" target="_blank" rel="noopener">Facebook</a> · <a href="https://m.me/100091130775442" target="_blank" rel="noopener">Messenger</a> · <a href="https://store.bricklink.com/MatthewHorseman" target="_blank" rel="noopener">BrickLink</a></p>
+    </div>
+    <p class="legal" data-i18n="foot.legal">A LEGO® a LEGO Group védjegye, amely nem szponzorálja, nem engedélyezi és nem támogatja ezt az oldalt.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,7 +1,13 @@
 (() => {
-  const PAGE = 24;
   const EN = {
-    "nav.about":"About","nav.sets":"Sets","nav.figs":"Minifigures","nav.shop":"Shop",
+    "nav.about":"About",
+    "home.setsTitle":"Featured sets","home.setsAll":"All sets","home.figsTitle":"Featured minifigures","home.figsAll":"All minifigures",
+    "cat.sets.kicker":"Shop","cat.sets.title":"Sets","cat.sets.lead":"Sealed LEGO® sets, mostly from the Star Wars universe. Search by set number or keyword.",
+    "cat.sets.ph":"Set number or keyword, e.g. 75391, Clone, Microfighter…",
+    "cat.figs.kicker":"Shop","cat.figs.title":"Minifigures","cat.figs.lead":"New and used minifigures, each with its condition clearly marked. Search by name, number or keyword.",
+    "cat.figs.ph":"Name, number or keyword, e.g. Rex, sw0314, 501st…",
+    "cat.go":"Search","cat.popular":"Popular:","cat.results":"results","cat.for":" for","cat.ask":"Ask us on Messenger",
+    "sort.pd":"Price: high to low","sort.pa":"Price: low to high","sort.na":"Name: A–Z","nav.sets":"Sets","nav.figs":"Minifigures","nav.shop":"Shop",
     "about.kicker":"About us","about.title":"Who we are",
     "about.p1":"Matthew's Fig Supply Co. is a LEGO® set and minifigure shop based in Budapest. We buy sealed sets in bulk, so we can sell them below retail. Every figure is checked one by one and its condition is clearly marked, used ones included.",
     "about.p2":"If something isn't in stock, we'll source it: a rare figure, a long-retired set or a whole wanted list. We ship within Hungary and abroad, and you can pick up your order in person in Budapest.",
@@ -33,12 +39,15 @@
     "cond.N":"New","cond.U":"Used","price.ask":"Ask",
     "parts.title":"Parts","parts.text":"We have {lots} lots ({qty} pieces) of parts in stock. Browse them with colour filters in our BrickLink store.","parts.cta":"Browse parts on BrickLink"
   };
-  const HU = {"cond.N":"Új","cond.U":"Használt","price.ask":"Érdeklődj",
+  const HU = {"cat.for":" erre","cond.N":"Új","cond.U":"Használt","price.ask":"Érdeklődj",
     "parts.title":"Alkatrészek","parts.text":"{lots} tétel ({qty} darab) alkatrész van raktáron. Színre és típusra szűrve a BrickLink boltunkban böngészheted őket.","parts.cta":"Alkatrészek a BrickLinken"};
 
   let lang = "hu";
   try { lang = localStorage.getItem("mfs-lang") || (navigator.language.startsWith("hu") ? "hu" : "en"); } catch (e) {}
   const t = k => (lang === "en" ? EN[k] : HU[k]) ?? k;
+  const $ = id => document.getElementById(id);
+  const PAGE_KIND = document.body.dataset.page;      // "home" | "catalog"
+  const TYPE = document.body.dataset.type;           // SET | MINIFIG on catalog pages
 
   // Remember the Hungarian originals from the markup
   document.querySelectorAll("[data-i18n]").forEach(el => { HU[el.dataset.i18n] = el.innerHTML; });
@@ -48,21 +57,18 @@
     document.documentElement.lang = lang;
     document.querySelectorAll("[data-i18n]").forEach(el => { el.innerHTML = t(el.dataset.i18n); });
     document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
-    document.getElementById("langBtn").textContent = lang === "hu" ? "EN" : "HU";
-    render(true);
+    $("langBtn").textContent = lang === "hu" ? "EN" : "HU";
+    renderAll(true);
   }
-  document.getElementById("langBtn").onclick = () => {
+  $("langBtn").onclick = () => {
     lang = lang === "hu" ? "en" : "hu";
     try { localStorage.setItem("mfs-lang", lang); } catch (e) {}
     applyLang();
   };
 
-  // Inventory
-  let data = { items: [] }, type = "SET", shown = PAGE;
-  const grid = document.getElementById("grid"), empty = document.getElementById("empty"),
-        more = document.getElementById("moreBtn"), q = document.getElementById("search"),
-        cond = document.getElementById("cond");
-
+  // ---------- helpers ----------
+  let data = { items: [] };
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
   const money = v => {
     if (v == null || v === "") return t("price.ask");
     const cur = data.currency || "EUR";
@@ -70,34 +76,11 @@
       style: "currency", currency: cur, maximumFractionDigits: cur === "HUF" ? 0 : 2
     }).format(v);
   };
-  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
-
-  function filtered() {
-    const s = q.value.trim().toLowerCase();
-    return data.items.filter(i =>
-      (type === "ALL" || i.type === type) &&
-      (!cond.value || i.cond === cond.value) &&
-      (!s || i.name.toLowerCase().includes(s) || i.no.toLowerCase().includes(s))
-    );
-  }
-
-  function render(reset) {
-    if (reset) shown = PAGE;
-    if (type === "PART") {
-      const lots = data.parts_lots || 0, qty = data.parts_qty || 0;
-      grid.innerHTML = `<div class="parts">
-        <h3>${t("parts.title")}</h3>
-        <p>${t("parts.text").replace("{lots}", lots).replace("{qty}", qty.toLocaleString(lang === "hu" ? "hu-HU" : "en-GB"))}</p>
-        <a class="btn btn--gold" href="https://store.bricklink.com/MatthewHorseman#/shop?o={%22itemType%22:%22P%22}" target="_blank" rel="noopener">${t("parts.cta")}</a>
-      </div>`;
-      empty.hidden = true; more.parentElement.hidden = true; return;
-    }
-    const list = filtered();
-    grid.innerHTML = list.slice(0, shown).map(i => `
+  const card = i => `
       <a class="item" href="${esc(i.url)}" target="_blank" rel="noopener">
         <div class="item__img"><img loading="lazy" src="${esc(i.img)}" alt="" onerror="this.style.opacity=0"></div>
         <div class="item__body">
-          <span class="item__no">${esc(i.no)}${i.color ? " · " + esc(i.color) : ""}</span>
+          <span class="item__no">${esc(i.no)}${i.qty > 1 ? ` · ${i.qty} ${lang === "hu" ? "db" : "pcs"}` : ""}</span>
           <span class="item__name">${esc(i.name)}</span>
           ${i.note ? `<span class="item__note">${esc(i.note)}</span>` : ""}
           <div class="item__foot">
@@ -105,41 +88,103 @@
             <span class="badge ${i.cond === "U" ? "badge--u" : ""}">${t("cond." + i.cond)}</span>
           </div>
         </div>
-      </a>`).join("");
-    empty.hidden = list.length > 0;
-    more.parentElement.hidden = list.length <= shown;
+      </a>`;
+
+  // ---------- search ----------
+  const norm = s => String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "");
+  // Keyword shortcuts: one word stands for several names
+  const ALIAS = {
+    jedi: "jedi|obi-wan|kenobi|ahsoka|anakin|luke|ki-adi|plo koon|shaak|aayla|even piell|coleman|nahdar|barriss|yoda",
+    sith: "sith|darth|vader|maul|palpatine|emperor|savage|malak|dooku",
+    mando: "mandalorian|fett|din djarin|cobb vanth|sabine|super commando|death watch",
+    droid: "droid|r2-d2|r4-|r7-|c-3po|k-2so|astromech|ev-a4",
+    minecraft: "steve|alex|creeper|zombie|skeleton, minecraft|illager|blaze|wither|pigman|minecraft",
+    birodalmi: "imperial|stormtrooper|snowtrooper|sandtrooper|tie|at-at", imperial: "imperial|stormtrooper|snowtrooper|sandtrooper|tie",
+    lazado: "rebel|hoth|endor|luke|leia|chewbacca|han solo", rebel: "rebel|hoth|endor|leia|chewbacca",
+    klon: "clone", tasak: "bag|foil|polybag", polybag: "bag|foil|polybag", bontatlan: "misb|sealed|never opened|brand new",
+    uj: "@N", new: "@N", hasznalt: "@U", used: "@U"
+  };
+  function matcher(query) {
+    const q = norm(query).trim();
+    if (!q) return () => true;
+    // whole phrase alias first (e.g. "battle pack" stays a phrase via the OR syntax)
+    const tokens = q.includes("|") ? [q] : q.split(/\s+/);
+    const groups = tokens.map(tok => (ALIAS[tok] || tok).split("|").map(x => x.trim()).filter(Boolean));
+    return i => {
+      const hay = norm(`${i.no} ${i.no.replace(/-1$/, "")} ${i.name} ${i.note || ""}`);
+      return groups.every(g => g.some(w => w[0] === "@" ? i.cond === w[1].toUpperCase() : hay.includes(w)));
+    };
   }
 
-  function selectTab(t) {
-    document.querySelectorAll(".tab").forEach(x => x.classList.toggle("is-on", x.dataset.type === t));
-    type = t; render(true);
+  // ---------- home page ----------
+  function renderHome() {
+    document.querySelectorAll("[data-shelf]").forEach(g => {
+      const list = data.items.filter(i => i.type === g.dataset.shelf).slice(0, 8);
+      g.innerHTML = list.map(card).join("");
+    });
+    document.querySelectorAll("[data-count]").forEach(el => {
+      el.textContent = data.items.filter(i => i.type === el.dataset.count).length || el.textContent;
+    });
+    const p = $("partsPanel");
+    if (p) {
+      const qty = (data.parts_qty || 0).toLocaleString(lang === "hu" ? "hu-HU" : "en-GB");
+      p.innerHTML = `<h3>${t("parts.title")}</h3>
+        <p>${t("parts.text").replace("{lots}", data.parts_lots || 0).replace("{qty}", qty)}</p>
+        <a class="btn btn--gold" href="https://store.bricklink.com/MatthewHorseman#/shop?o={%22itemType%22:%22P%22}" target="_blank" rel="noopener">${t("parts.cta")}</a>`;
+    }
   }
-  document.querySelectorAll(".tab").forEach(b => b.onclick = () => selectTab(b.dataset.type));
 
-  // Top menu: "Szettek" / "Figurák" open the shop on that tab
-  const NAV = { "#szettek": "SET", "#figurak": "MINIFIG" };
-  function fromHash() {
-    const t = NAV[location.hash];
-    if (!t) return;
-    selectTab(t);
-    document.getElementById("kinalat").scrollIntoView({ behavior: "smooth" });
+  // ---------- catalog pages ----------
+  const PAGE = 24;
+  let shown = PAGE;
+  function renderCatalog(reset) {
+    if (reset) shown = PAGE;
+    const qv = $("search").value;
+    const match = matcher(qv), cond = $("cond").value, sort = $("sort").value;
+    let list = data.items.filter(i => i.type === TYPE && (!cond || i.cond === cond) && match(i));
+    list.sort(sort === "pa" ? (a, b) => a.price - b.price : sort === "na" ? (a, b) => a.name.localeCompare(b.name) : (a, b) => b.price - a.price);
+    $("grid").innerHTML = list.slice(0, shown).map(card).join("");
+    $("count").textContent = list.length;
+    $("qlabel").textContent = qv.trim() && !qv.includes("|") ? `${t("cat.for")}: „${qv.trim()}”` : "";
+    $("empty").hidden = list.length > 0;
+    $("moreBtn").parentElement.hidden = list.length <= shown;
+    document.querySelectorAll(".chip").forEach(c => c.classList.toggle("is-on", norm(c.dataset.q) === norm(qv)));
   }
-  window.addEventListener("hashchange", fromHash);
-  q.oninput = () => render(true);
-  cond.onchange = () => render(true);
-  more.onclick = () => { shown += PAGE; render(); };
+  function syncUrl() {
+    const q = $("search").value.trim();
+    const u = new URL(location.href);
+    q ? u.searchParams.set("q", q) : u.searchParams.delete("q");
+    history.replaceState(null, "", u);
+  }
+  if (PAGE_KIND === "catalog") {
+    $("search").value = new URLSearchParams(location.search).get("q") || "";
+    let timer;
+    $("search").addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(() => { renderCatalog(true); syncUrl(); }, 120); });
+    $("searchForm").addEventListener("submit", e => { e.preventDefault(); renderCatalog(true); syncUrl(); $("search").blur(); });
+    $("cond").onchange = () => renderCatalog(true);
+    $("sort").onchange = () => renderCatalog(true);
+    $("moreBtn").onclick = () => { shown += PAGE; renderCatalog(); };
+    document.querySelectorAll(".chip").forEach(c => c.onclick = () => {
+      $("search").value = c.classList.contains("is-on") ? "" : c.dataset.q;
+      renderCatalog(true); syncUrl();
+    });
+  }
+
+  function renderAll(reset) {
+    if (!data.items.length) return;
+    PAGE_KIND === "catalog" ? renderCatalog(reset) : renderHome();
+  }
 
   fetch("data/inventory.json", { cache: "no-cache" })
     .then(r => r.json())
     .then(d => {
       data = d;
-      if (d.total_lots) document.getElementById("statLots").textContent = d.total_lots;
-      if (d.updated) document.getElementById("updated").textContent =
+      const lots = $("statLots"); if (lots && d.total_lots) lots.textContent = d.total_lots;
+      if (d.updated && $("updated")) $("updated").textContent =
         new Date(d.updated).toLocaleString(lang === "hu" ? "hu-HU" : "en-GB", { dateStyle: "medium", timeStyle: "short" });
-      render(true);
-      fromHash();
+      renderAll(true);
     })
-    .catch(() => { empty.hidden = false; });
+    .catch(() => { const e = $("empty"); if (e) e.hidden = false; });
 
   applyLang();
 })();
