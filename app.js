@@ -208,8 +208,8 @@
       <p class="kicker">${lang === "hu" ? "Jelenleg elfogyott" : "Sold out right now"}</p>
       <h3>${esc(i.name)}</h3>
       <p>${want
-        ? (lang === "hu" ? "Szeretnél egyet ebből? Messengeren megnyílik egy kész üzenet, csak el kell küldened, és beszerezzük neked." : "Would you like one? Messenger opens with the request already written, just send it and we'll get one for you.")
-        : (lang === "hu" ? "Szeretnél értesítést kapni, ha újra elérhető lesz? Messengeren megnyílik egy kész üzenet, csak el kell küldened, és szólunk, amint megvan." : "Would you like a message when it's back in stock? Messenger opens with the request already written, just send it and we'll let you know.")}</p>
+        ? (lang === "hu" ? "Szeretnél egyet ebből? A Facebook-oldalunkra irányítunk, ahol egy előre megírt üzenet automatikusan jelzi nekünk, hogy elsőként neked szóljunk, amikor megérkezik. Csak el kell küldened." : "Would you like one? We'll take you to our Facebook page, where a ready-made message automatically tells us to let you know first when it arrives. Just send it.")
+        : (lang === "hu" ? "Szeretnél értesítést kapni, ha újra elérhető lesz? A Facebook-oldalunkra irányítunk, ahol egy előre megírt üzenet automatikusan jelzi nekünk, hogy elsőként neked szóljunk, amikor megérkezik. Csak el kell küldened." : "Would you like to hear when it's back in stock? We'll take you to our Facebook page, where a ready-made message automatically tells us to let you know first when it arrives. Just send it.")}</p>
       <div class="notify__btns">
         <a class="btn btn--gold" href="${esc(href)}" target="_blank" rel="noopener" id="notifyYes">${want ? (lang === "hu" ? "Igen, kérek egyet" : "Yes, I want one") : (lang === "hu" ? "Igen, értesítsetek" : "Yes, notify me")}</a>
         <button class="btn btn--line" value="no">${lang === "hu" ? "Mégsem" : "No thanks"}</button>
