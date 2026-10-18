@@ -1,6 +1,6 @@
 # matthewsfigs.hu
 
-Matthew's Fig Supply Co. bemutató oldala. Statikus oldal GitHub Pages-en; a kínálatot egy GitHub Action 6 óránként frissíti a BrickLink boltból.
+Matthew's Fig Supply Co. bemutató oldala. Statikus oldal GitHub Pages-en; a kínálatot egy GitHub Action félóránként frissíti a BrickLink boltból.
 
 ## 1. GitHub repó és Pages
 1. Hozz létre egy új repót (pl. `matthewsfigs`), és töltsd fel ennek a mappának a teljes tartalmát (a `.github` mappát is).

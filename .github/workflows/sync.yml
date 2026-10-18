@@ -1,8 +1,12 @@
 name: BrickLink készlet szinkron
 
+concurrency:
+  group: inventory-sync
+  cancel-in-progress: false
+
 on:
   schedule:
-    - cron: "17 */6 * * *"   # 6 óránként
+    - cron: "7,37 * * * *"   # félóránként
   workflow_dispatch: {}       # kézi indítás az Actions fülön
 
 permissions:

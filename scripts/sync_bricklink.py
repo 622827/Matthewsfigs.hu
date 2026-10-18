@@ -96,11 +96,24 @@ def main():
         })
     order = {"SET": 0, "MINIFIG": 1, "PART": 2}
     items.sort(key=lambda i: (order.get(i["type"], 3), -(i["price"] or 0)))
-    OUT.parent.mkdir(parents=True, exist_ok=True)
-    OUT.write_text(json.dumps({
-        "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    payload = {
         "store": STORE, "currency": CURRENCY, "total_lots": len(items) + parts_lots,
         "parts_lots": parts_lots, "parts_qty": parts_qty, "items": items,
+    }
+    # Only touch the file when the stock really changed, so frequent runs
+    # don't create a commit (and a site rebuild) every time.
+    if OUT.exists():
+        try:
+            old = json.loads(OUT.read_text(encoding="utf-8"))
+            old.pop("updated", None)
+            if old == payload:
+                print("Nincs változás a készletben.")
+                return
+        except ValueError:
+            pass
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps({
+        "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"), **payload,
     }, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"Wrote {len(items)} sets/minifigs (+{parts_lots} part lots) to {OUT}")
 
