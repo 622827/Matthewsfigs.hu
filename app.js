@@ -180,7 +180,11 @@
   const wantLink = i => MESSENGER + "?text=" + encodeURIComponent(
     (lang === "hu" ? "Szia! Szeretnék egyet ebből: " : "Hi! I'd like one of these: ") + `${shortNo(i)} ${i.name}`);
   // "Szeretnék egyet!" button: straight to Facebook Messenger with the request typed in
-  const openWant = el => window.open(el.dataset.href, "_blank", "noopener");
+  const openWant = el => {
+    const a = el.closest("a.item--pre");
+    const i = a && data.items.find(x => x.preorder && x.no === a.dataset.pre);
+    if (i) askNotify(i, el.dataset.href, "want");
+  };
   document.addEventListener("click", e => {
     const w = e.target.closest(".want");
     if (!w) return;
@@ -192,7 +196,8 @@
   });
 
   // pre-order cards: ask first, then open Messenger with the request already typed in
-  function askNotify(i, href) {
+  function askNotify(i, href, mode = "notify") {
+    const want = mode === "want";
     let dlg = document.getElementById("notifyDlg");
     if (!dlg) {
       dlg = document.createElement("dialog"); dlg.id = "notifyDlg"; dlg.className = "notify";
@@ -202,9 +207,11 @@
     dlg.innerHTML = `<form method="dialog">
       <p class="kicker">${lang === "hu" ? "Jelenleg elfogyott" : "Sold out right now"}</p>
       <h3>${esc(i.name)}</h3>
-      <p>${lang === "hu" ? "Szeretnél értesítést kapni, ha újra elérhető lesz? Messengeren megnyílik egy kész üzenet, csak el kell küldened, és szólunk, amint megvan." : "Would you like a message when it's back in stock? Messenger opens with the request already written, just send it and we'll let you know."}</p>
+      <p>${want
+        ? (lang === "hu" ? "Szeretnél egyet ebből? Messengeren megnyílik egy kész üzenet, csak el kell küldened, és beszerezzük neked." : "Would you like one? Messenger opens with the request already written, just send it and we'll get one for you.")
+        : (lang === "hu" ? "Szeretnél értesítést kapni, ha újra elérhető lesz? Messengeren megnyílik egy kész üzenet, csak el kell küldened, és szólunk, amint megvan." : "Would you like a message when it's back in stock? Messenger opens with the request already written, just send it and we'll let you know.")}</p>
       <div class="notify__btns">
-        <a class="btn btn--gold" href="${esc(href)}" target="_blank" rel="noopener" id="notifyYes">${lang === "hu" ? "Igen, értesítsetek" : "Yes, notify me"}</a>
+        <a class="btn btn--gold" href="${esc(href)}" target="_blank" rel="noopener" id="notifyYes">${want ? (lang === "hu" ? "Igen, kérek egyet" : "Yes, I want one") : (lang === "hu" ? "Igen, értesítsetek" : "Yes, notify me")}</a>
         <button class="btn btn--line" value="no">${lang === "hu" ? "Mégsem" : "No thanks"}</button>
       </div></form>`;
     dlg.querySelector("#notifyYes").onclick = () => setTimeout(() => dlg.close(), 50);
