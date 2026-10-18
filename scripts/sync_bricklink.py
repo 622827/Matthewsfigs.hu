@@ -6,7 +6,7 @@ Needs four secrets (env vars) from https://www.bricklink.com/v2/api/register_con
 Optional: BL_STORE (default MatthewHorseman), STORE_CURRENCY (default HUF).
 Only the Python standard library is used.
 """
-import base64, hashlib, hmac, json, os, secrets, sys, time, urllib.parse, urllib.request
+import base64, hashlib, hmac, html, json, os, secrets, sys, time, urllib.parse, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -85,7 +85,7 @@ def main():
             "id": r["inventory_id"],
             "type": it["type"],
             "no": it["no"],
-            "name": urllib.parse.unquote(it.get("name", "")).replace("&#39;", "'").replace("&amp;", "&"),
+            "name": html.unescape(urllib.parse.unquote(it.get("name", ""))),
             "color": r.get("color_name") if it["type"] == "PART" and r.get("color_id") else None,
             "cond": r.get("new_or_used", "N"),
             "qty": r.get("quantity", 0),

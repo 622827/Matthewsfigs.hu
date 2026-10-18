@@ -100,7 +100,17 @@
     root.querySelectorAll(".box3d:not([data-ready])").forEach(box => {
       box.dataset.ready = "1";
       const img = box.querySelector(".front");
-      const setArt = () => box.style.setProperty("--art", `url("${img.currentSrc || img.src}")`);
+      const setArt = () => {
+        box.style.setProperty("--art", `url("${img.currentSrc || img.src}")`);
+        // give the box the proportions of its real box art (portrait or landscape)
+        if (!box.classList.contains("flat") && img.naturalWidth) {
+          const r = img.naturalWidth / img.naturalHeight, small = matchMedia("(max-width:560px)").matches;
+          const W = small ? 104 : 132, H = small ? 92 : 116;
+          let w = W, h = W / r; if (h > H) { h = H; w = H * r; }
+          box.style.setProperty("--w", w.toFixed(1) + "px"); box.style.setProperty("--h", h.toFixed(1) + "px");
+          box.style.setProperty("--d", (Math.min(w, h) * 0.26).toFixed(1) + "px");
+        }
+      };
       img.addEventListener("load", setArt);
       img.addEventListener("error", () => {
         if (img.dataset.fb) { box.classList.add("noimg"); return; }
