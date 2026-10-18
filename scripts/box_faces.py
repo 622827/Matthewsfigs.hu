@@ -68,21 +68,57 @@ def hexagon(hull):
 
 
 def faces_from_hexagon(V):
-    """Return (G, quads) where quads are 3 lists of 4 points in cyclic order (Vk, Vk+1, Vk+2, G)."""
-    best = None
+    """Return (G, quads): G is the visible corner where front, side and top meet,
+    quads are the 3 visible faces as (Vk, Vk+1, Vk+2, G) in cyclic order."""
+    size = np.linalg.norm(V.max(axis=0) - V.min(axis=0))
+    cands = []
     for parity in (0, 1):
         ks = [parity, parity + 2, parity + 4]
-        cands = [V[k % 6] + V[(k + 2) % 6] - V[(k + 1) % 6] for k in ks]
-        G = np.mean(cands, axis=0)
-        err = max(np.linalg.norm(c - G) for c in cands)
+        pts = [V[k % 6] + V[(k + 2) % 6] - V[(k + 1) % 6] for k in ks]
+        G = np.mean(pts, axis=0)
+        err = max(np.linalg.norm(c - G) for c in pts)
         quads = [[V[k % 6], V[(k + 1) % 6], V[(k + 2) % 6], G] for k in ks]
-        if best is None or err < best[0]:
-            best = (err, G, quads)
-    err, G, quads = best
-    size = np.linalg.norm(V.max(axis=0) - V.min(axis=0))
-    if err > 0.08 * size:
+        cands.append((err, G, quads))
+    good = [c for c in cands if c[0] <= 0.12 * size]
+    if not good:
         return None
+    # Both alternating triples give a consistent inner point: the visible top-front corner
+    # and the hidden bottom-back corner. The camera looks from above, so take the higher one.
+    err, G0, quads = min(good, key=lambda c: c[1][1])
+    parity = next(p for p in (0, 1) if np.allclose(quads[0][0], V[p]))
+    G = refine_corner(V, parity, G0)
+    quads = [[q[0], q[1], q[2], G] for q in quads]
     return G, quads
+
+
+def _h(p):
+    return np.array([p[0], p[1], 1.0])
+
+
+def refine_corner(V, parity, G0):
+    """Perspective-correct position of the inner corner.
+
+    The edge from G to a neighbouring hull vertex Vk is parallel (in 3D) to the hull
+    edges Vk+1–Vk+2 and Vk-2–Vk-1, so it points at their vanishing point. G is where
+    the three such lines meet (least squares)."""
+    lines = []
+    for k in (parity, parity + 2, parity + 4):
+        l1 = np.cross(_h(V[(k + 1) % 6]), _h(V[(k + 2) % 6]))
+        l2 = np.cross(_h(V[(k - 2) % 6]), _h(V[(k - 1) % 6]))
+        vp = np.cross(l1, l2)
+        line = np.cross(_h(V[k % 6]), vp)
+        n = np.linalg.norm(line[:2])
+        if n < 1e-9:
+            return G0
+        lines.append(line / n)
+    A = np.array(lines)
+    _, _, vt = np.linalg.svd(A)
+    x = vt[-1]
+    if abs(x[2]) < 1e-9:
+        return G0
+    G = x[:2] / x[2]
+    size = np.linalg.norm(V.max(axis=0) - V.min(axis=0))
+    return G if np.linalg.norm(G - G0) < 0.08 * size else G0
 
 
 def area(q):
@@ -180,7 +216,7 @@ def analyse(img):
         "front": warp(img, fq, fw, fh),
         "side": warp(img, sq, dw, fh),
         "top": warp(img, tq, fw, dw),
-        "meta": {"w": 1.0, "h": round(H / W, 4), "d": round(D / W, 4), "side": "left" if side_is_left else "right"},
+        "meta": {"w": 1.0, "h": round(float(H / W), 4), "d": round(float(D / W), 4), "side": "left" if side_is_left else "right"},
     }
 
 

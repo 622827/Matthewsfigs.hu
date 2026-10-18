@@ -78,12 +78,16 @@
   };
   // 3D product box: sets get their original LEGO box art on a cuboid,
   // minifigures turn like on a display turntable.
+  let BOXES = {};   // assets/boxes/index.json: flattened faces cut from the box photos
   const box3d = i => {
-    const set = i.type === "SET";
-    const front = set ? `https://img.bricklink.com/ItemImage/ON/0/${encodeURIComponent(i.no)}.png` : i.img;
-    return `<div class="stage"><div class="box3d${set ? "" : " flat"}" data-fallback="${esc(i.img)}">
-      <img class="f front" loading="lazy" alt="" src="${esc(front)}">
-      <i class="f back"></i>${set ? `<i class="f r"></i><i class="f l"></i><i class="f t"></i><i class="f bt"></i>` : ""}
+    const m = i.type === "SET" ? BOXES[i.no] : null;
+    if (!m) return `<div class="stage"><div class="box3d flat"><img class="f front" loading="lazy" alt="" src="${esc(i.img)}"><i class="f back" style="--art:url('${esc(i.img)}')"></i></div></div>`;
+    const W = 134, H = 118;
+    let w = W, h = W * m.h; if (h > H) { h = H; w = H / m.h; }
+    const d = w * m.d, base = `assets/boxes/${encodeURIComponent(i.no)}`;
+    return `<div class="stage"><div class="box3d side-${m.side}" data-side="${m.side}" style="--w:${w.toFixed(1)}px;--h:${h.toFixed(1)}px;--d:${d.toFixed(1)}px;--front:url('${base}-front.jpg');--side:url('${base}-side.jpg');--top:url('${base}-top.jpg')">
+      <img class="f front" loading="lazy" alt="" src="${base}-front.jpg">
+      <i class="f back"></i><i class="f l"></i><i class="f r"></i><i class="f t"></i><i class="f bt"></i>
     </div></div>`;
   };
 
@@ -93,31 +97,16 @@
     const a = e.target._spin; if (!a || e.target._hover) return;
     e.isIntersecting ? a.play() : a.pause();
   }), { rootMargin: "100px" }) : null;
-  const rot = deg => `rotateX(-10deg) rotateY(${deg}deg)`;
-  const HOVER = "rotateX(-6deg) rotateY(-24deg)";
+  const rot = deg => `rotateX(-12deg) rotateY(${deg}deg)`;
+  const poseOf = box => (box.dataset.side === "right" ? -32 : 32);
 
   function initBoxes(root) {
     root.querySelectorAll(".box3d:not([data-ready])").forEach(box => {
       box.dataset.ready = "1";
       const img = box.querySelector(".front");
-      const setArt = () => {
-        box.style.setProperty("--art", `url("${img.currentSrc || img.src}")`);
-        // give the box the proportions of its real box art (portrait or landscape)
-        if (!box.classList.contains("flat") && img.naturalWidth) {
-          const r = img.naturalWidth / img.naturalHeight, small = matchMedia("(max-width:560px)").matches;
-          const W = small ? 104 : 132, H = small ? 92 : 116;
-          let w = W, h = W / r; if (h > H) { h = H; w = H * r; }
-          box.style.setProperty("--w", w.toFixed(1) + "px"); box.style.setProperty("--h", h.toFixed(1) + "px");
-          box.style.setProperty("--d", (Math.min(w, h) * 0.26).toFixed(1) + "px");
-        }
-      };
-      img.addEventListener("load", setArt);
-      img.addEventListener("error", () => {
-        if (img.dataset.fb) { box.classList.add("noimg"); return; }
-        img.dataset.fb = "1"; box.classList.add("flat"); img.src = box.dataset.fallback;
-      });
-      if (img.complete && img.naturalWidth) setArt();
-      if (reduced || !box.animate) { box.style.transform = HOVER; return; }
+      const pose = poseOf(box);
+      img.addEventListener("error", () => box.classList.add("noimg"));
+      if (reduced || !box.animate) { box.style.transform = `rotateX(-15deg) rotateY(${pose}deg)`; return; }
 
       const spin = box.animate([{ transform: rot(0) }, { transform: rot(360) }], { duration: SPIN_MS, iterations: Infinity });
       spin.currentTime = Math.random() * SPIN_MS;
@@ -130,10 +119,10 @@
         box._hover = true;
         angle = ((spin.currentTime % SPIN_MS) / SPIN_MS) * 360;
         spin.pause();
-        let target = -24;
+        let target = pose;
         target = angle + ((((target - angle) % 360) + 540) % 360 - 180);   // shortest way round
         if (hov) hov.cancel();
-        hov = box.animate([{ transform: rot(angle) }, { transform: `rotateX(-6deg) rotateY(${target}deg)` }],
+        hov = box.animate([{ transform: rot(angle) }, { transform: `rotateX(-15deg) rotateY(${target}deg)` }],
                           { duration: 650, easing: "cubic-bezier(.2,.8,.2,1)", fill: "forwards" });
       });
       card.addEventListener("mouseleave", () => {
@@ -147,7 +136,7 @@
 
   const card = i => `
       <a class="item" href="${esc(i.url)}" target="_blank" rel="noopener">
-        <div class="item__img"><img loading="lazy" src="${esc(i.img)}" alt="" onerror="this.style.opacity=0"></div>
+        <div class="item__img">${box3d(i)}</div>
         <div class="item__body">
           <span class="item__no">${esc(i.no)}${i.qty > 1 ? ` · ${i.qty} ${lang === "hu" ? "db" : "pcs"}` : ""}</span>
           <span class="item__name">${esc(i.name)}</span>
@@ -243,9 +232,12 @@
     PAGE_KIND === "catalog" ? renderCatalog(reset) : renderHome();
   }
 
-  fetch("data/inventory.json", { cache: "no-cache" })
-    .then(r => r.json())
-    .then(d => {
+  Promise.all([
+    fetch("data/inventory.json", { cache: "no-cache" }).then(r => r.json()),
+    fetch("assets/boxes/index.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({}))
+  ])
+    .then(([d, boxes]) => {
+      BOXES = boxes || {};
       const byItem = new Map();
       for (const i of d.items) {
         const k = i.type + ":" + i.no, m = byItem.get(k);
