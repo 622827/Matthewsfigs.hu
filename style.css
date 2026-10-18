@@ -215,4 +215,6 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .box3d.flat .front{object-fit:contain;transform:none}
 .box3d.flat .back{background:var(--art) center/contain no-repeat;filter:none;transform:rotateY(180deg)}
 .box3d.noimg{visibility:hidden}
+.box3d.still{transform:none}
+.box3d.still .back{display:none}
 @media (max-width:560px){ .stage{transform:scale(.8)} }

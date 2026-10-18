@@ -23,6 +23,26 @@ OUT = ROOT / "assets" / "boxes"
 INV = ROOT / "data" / "inventory.json"
 FRONT_PX = 420  # width of the front face image
 
+# Box photos the automatic detection can't read (cropped or shot without the top visible):
+# corners picked by hand on the 800px BrickLink photo. "h" and "d" are the box proportions.
+OVERRIDES = {
+    "75379-1": {"front": [[50, 28], [404, 12], [402, 548], [58, 598]],
+                "side": [[2, 18], [50, 28], [58, 598], [5, 492]],
+                "h": 1.6, "d": 0.3},
+}
+
+
+def from_override(img, o):
+    fw = FRONT_PX
+    fh = int(round(fw * o["h"]))
+    dw = int(round(fw * o["d"]))
+    front = warp(img, np.array(o["front"], float), fw, fh)
+    side = warp(img, np.array(o["side"], float), dw, fh)
+    # no top visible on the photo: use the side panel turned on its back
+    top = cv2.resize(cv2.rotate(side, cv2.ROTATE_90_CLOCKWISE), (fw, dw), interpolation=cv2.INTER_AREA)
+    return {"front": front, "side": side, "top": top,
+            "meta": {"w": 1.0, "h": o["h"], "d": o["d"], "side": "left"}}
+
 
 def fetch(no):
     url = f"https://img.bricklink.com/ItemImage/ON/0/{no}.png"
@@ -234,7 +254,10 @@ def main():
             continue
         img = fetch(no)
         WHY.clear()
-        res = analyse(img) if img is not None else fail("no-photo")
+        if img is not None and no in OVERRIDES:
+            res = from_override(img, OVERRIDES[no])
+        else:
+            res = analyse(img) if img is not None else fail("no-photo")
         if "--debug" in sys.argv and img is not None:
             dbg = OUT / "_debug"; dbg.mkdir(exist_ok=True)
             vis = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR).copy()

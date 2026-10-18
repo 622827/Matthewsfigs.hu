@@ -81,7 +81,7 @@
   let BOXES = {};   // assets/boxes/index.json: flattened faces cut from the box photos
   const box3d = i => {
     const m = i.type === "SET" ? BOXES[i.no] : null;
-    if (!m) return `<div class="stage"><div class="box3d flat"><img class="f front" loading="lazy" alt="" src="${esc(i.img)}"><i class="f back" style="--art:url('${esc(i.img)}')"></i></div></div>`;
+    if (!m) return `<div class="stage"><div class="box3d flat still"><img class="f front" loading="lazy" alt="" src="${esc(i.img)}"><i class="f back" style="--art:url('${esc(i.img)}')"></i></div></div>`;
     const W = 134, H = 118;
     let w = W, h = W * m.h; if (h > H) { h = H; w = H / m.h; }
     const d = w * m.d, base = `assets/boxes/${encodeURIComponent(i.no)}`;
@@ -91,48 +91,72 @@
     </div></div>`;
   };
 
+  // All boxes turn in step: their angle comes from one shared clock.
   const SPIN_MS = 9000;
   const reduced = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const now = () => document.timeline ? document.timeline.currentTime : performance.now();
+  const angleAt = t => ((t % SPIN_MS) / SPIN_MS) * 360;
+  const sync = a => { a.play(); a.startTime = 0; };               // jump back onto the shared clock
   const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => {
-    const a = e.target._spin; if (!a || e.target._hover) return;
-    e.isIntersecting ? a.play() : a.pause();
+    const a = e.target._spin; if (!a || e.target._hold) return;
+    e.isIntersecting ? sync(a) : a.pause();
   }), { rootMargin: "100px" }) : null;
-  const rot = deg => `rotateX(-12deg) rotateY(${deg}deg)`;
+  const rot = (deg, tilt = -12) => `rotateX(${tilt}deg) rotateY(${deg}deg)`;
   const poseOf = box => (box.dataset.side === "right" ? -32 : 32);
+  const near = (from, to) => from + ((((to - from) % 360) + 540) % 360 - 180);   // shortest way round
 
   function initBoxes(root) {
     root.querySelectorAll(".box3d:not([data-ready])").forEach(box => {
       box.dataset.ready = "1";
       const img = box.querySelector(".front");
-      const pose = poseOf(box);
       img.addEventListener("error", () => box.classList.add("noimg"));
-      if (reduced || !box.animate) { box.style.transform = `rotateX(-15deg) rotateY(${pose}deg)`; return; }
+      if (box.classList.contains("still")) return;                // poly / paper bags: plain picture
+      const pose = poseOf(box);
+      if (reduced || !box.animate) { box.style.transform = rot(pose, -15); return; }
 
       const spin = box.animate([{ transform: rot(0) }, { transform: rot(360) }], { duration: SPIN_MS, iterations: Infinity });
-      spin.currentTime = Math.random() * SPIN_MS;
+      spin.startTime = 0;
       box._spin = spin;
       if (io) io.observe(box);
 
       const card = box.closest(".item");
-      let hov = null, angle = 0;
-      card.addEventListener("mouseenter", () => {
-        box._hover = true;
-        angle = ((spin.currentTime % SPIN_MS) / SPIN_MS) * 360;
+      let hov = null;
+      const hold = () => {                                       // stop and turn to the angled pose
+        if (box._hold) return;
+        box._hold = true;
+        const from = angleAt(spin.currentTime);
         spin.pause();
-        let target = pose;
-        target = angle + ((((target - angle) % 360) + 540) % 360 - 180);   // shortest way round
         if (hov) hov.cancel();
-        hov = box.animate([{ transform: rot(angle) }, { transform: `rotateX(-15deg) rotateY(${target}deg)` }],
+        hov = box.animate([{ transform: rot(from) }, { transform: rot(near(from, pose), -15) }],
                           { duration: 650, easing: "cubic-bezier(.2,.8,.2,1)", fill: "forwards" });
+      };
+      const release = () => {                                    // glide back into step with the others
+        if (!box._hold) return;
+        box._hold = false;
+        const T = 700, start = near(pose, pose);
+        const to = angleAt(now() + T);
+        const end = start + ((((to - start) % 360) + 360) % 360);  // keep turning forwards
+        if (hov) hov.cancel();
+        hov = box.animate([{ transform: rot(pose, -15) }, { transform: rot(end) }], { duration: T, easing: "ease-in-out", fill: "forwards" });
+        hov.onfinish = () => { hov.cancel(); hov = null; sync(spin); };
+      };
+      card.addEventListener("pointerenter", e => { if (e.pointerType === "mouse") hold(); });
+      card.addEventListener("pointerleave", e => { if (e.pointerType === "mouse") release(); });
+      // phones: first tap stops the box, a second tap opens the product
+      card.addEventListener("click", e => {
+        if (matchMedia("(hover: hover)").matches) return;
+        if (!box._hold) {
+          e.preventDefault();
+          document.querySelectorAll(".box3d").forEach(b => b !== box && b._release && b._release());
+          hold();
+        }
       });
-      card.addEventListener("mouseleave", () => {
-        box._hover = false;
-        if (!hov) { spin.play(); return; }
-        hov.reverse();
-        hov.onfinish = () => { hov.cancel(); hov = null; spin.play(); };
-      });
+      box._release = release;
     });
   }
+  document.addEventListener("click", e => {
+    if (!e.target.closest(".item")) document.querySelectorAll(".box3d").forEach(b => b._release && b._release());
+  });
 
   const card = i => `
       <a class="item" href="${esc(i.url)}" target="_blank" rel="noopener">
