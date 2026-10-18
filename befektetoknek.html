@@ -162,6 +162,9 @@
     return JSON.parse(new TextDecoder().decode(pt));
   }
 
+  // Rule: the investor gets SHARE (e.g. 70%) of the profit made on THEIR capital.
+  // If Máté also put money in, the profit on Máté's part is entirely Máté's.
+  let SHARE = 0.7;
   function calc(d) {
     const s = { qty: 0, sold: 0, cost: 0, revAll: 0, rev: 0, costSold: 0 };
     for (const l of d.lines) {
@@ -171,33 +174,51 @@
     }
     s.profit = s.rev - s.costSold;          // realised, on the pieces sold
     s.profitAll = s.revAll - s.cost;        // if everything sells at the listed price
+    // investor's part of the capital
+    s.capKnown = !!(d.capital && d.capital.investor != null);
+    if (s.capKnown) {
+      s.capI = d.capital.investor;
+      s.capM = d.capital.mate || 0;
+      s.capShare = d.capitalPct ? d.capitalPct.investor : s.capI / (s.capI + s.capM);
+    }
+    s.share = d.profitShare ? d.profitShare.investor : SHARE;
+    if (s.capKnown) {
+      s.myProfit = s.profit * s.capShare * s.share;
+      s.myProfitAll = s.profitAll * s.capShare * s.share;
+      s.mateProfit = s.profit - s.myProfit;
+    }
     return s;
   }
 
   function render(data) {
     const me = data.investor;
+    if (data.share != null) SHARE = data.share;
     $("hello").textContent = `Szia ${me}!`;
     $("sub").textContent = `Közös ügyleteink a Matthew's Fig Supply Co.-val` + (data.updated ? ` · frissítve: ${new Date(data.updated).toLocaleDateString("hu-HU", { dateStyle: "long" })}` : "");
 
-    let capital = 0, myProfit = 0, open = 0, expected = 0;
+    let capital = 0, myProfit = 0, open = 0, expected = 0, missing = false;
     for (const d of data.deals) {
       const s = calc(d);
-      if (d.capital) capital += d.capital.investor;
-      if (d.profitShare) myProfit += s.profit * d.profitShare.investor;
-      if (d.status === "open") { open++; expected += d.profitShare ? s.profitAll * d.profitShare.investor : s.profitAll; }
+      if (s.capKnown) { capital += s.capI; myProfit += s.myProfit; }
+      if (d.status === "open") {
+        open++;
+        if (s.capKnown) expected += s.myProfitAll; else missing = true;
+      }
     }
     $("kpis").innerHTML = `
       <div><b class="num">${huf(capital)}</b><span>befektetett tőkéd</span></div>
-      <div><b class="num">${huf(myProfit)}</b><span>eddigi nyereséged</span></div>
+      <div><b class="num">${huf(myProfit)}</b><span>eddigi nyereséged (${pct(SHARE)})</span></div>
       <div><b class="num">${data.deals.length}</b><span>közös ügylet (${open} folyamatban)</span></div>
-      <div><b class="num">${huf(expected)}</b><span>várható nyereség a futó ügyletekből${data.deals.some(d => d.status === "open" && !d.profitShare) ? "*" : ""}</span></div>`;
+      <div><b class="num">${huf(expected)}</b><span>várható nyereséged a futó ügyletekből${missing ? "*" : ""}</span></div>`;
 
     const groups = [["open", "Folyamatban lévő beszerzések"], ["closed", "Lezárt ügyletek"]];
-    $("deals").innerHTML = groups.map(([st, title]) => {
-      const list = data.deals.filter(d => d.status === st);
-      return list.length ? `<h2>${title}</h2>` + list.map(d => deal(d, me)).join("") : "";
-    }).join("") + (data.deals.some(d => d.status === "open" && !d.profitShare)
-      ? `<p class="note">* Ahol a nyereség felosztása még nincs rögzítve, ott a teljes ügylet várható nyereségét mutatjuk.</p>` : "");
+    $("deals").innerHTML =
+      `<p class="note"><b>Elszámolás:</b> a befektetett tőkéd után keletkező nyereség ${pct(SHARE)}-a a tiéd, ${pct(1 - SHARE)}-a Mátéé. Ha egy ügyletbe Máté is tett tőkét, az ő részének nyeresége teljes egészében őt illeti. Példa: 100 000 Ft tőke, 150 000 Ft eladás → 50 000 Ft nyereség, ebből ${huf(50000 * SHARE)} a tiéd, és visszakapod a 100 000 Ft tőkét is.</p>` +
+      groups.map(([st, title]) => {
+        const list = data.deals.filter(d => d.status === st);
+        return list.length ? `<h2>${title}</h2>` + list.map(d => deal(d, me)).join("") : "";
+      }).join("") +
+      (missing ? `<p class="note">* Ahol a befektetett tőkéd még nincs rögzítve, az az ügylet nem szerepel a várható nyereségben.</p>` : "");
   }
 
   function deal(d, me) {
@@ -206,15 +227,18 @@
     const rows = d.lines.map(l => `<tr>
         <td class="num">${l.qty} db</td><td class="num">${huf(l.buy)}</td><td class="num">${huf(l.sell)}</td>
         <td class="num">${l.sold} db</td><td class="num">${huf(l.sold * l.sell)}</td></tr>`).join("");
-    const split = d.capital && d.profitShare ? `
+    const split = s.capKnown ? `
       <div class="split">
         <div><h4>Tőke</h4>
-          <p class="me"><span>${esc(me)}</span><span class="num">${huf(d.capital.investor)} · ${pct(d.capitalPct ? d.capitalPct.investor : d.capital.investor / (d.capital.investor + d.capital.mate))}</span></p>
-          <p><span>Máté</span><span class="num">${huf(d.capital.mate)} · ${pct(d.capitalPct ? d.capitalPct.mate : d.capital.mate / (d.capital.investor + d.capital.mate))}</span></p></div>
+          <p class="me"><span>${esc(me)}</span><span class="num">${huf(s.capI)} · ${pct(s.capShare)}</span></p>
+          ${s.capM ? `<p><span>Máté</span><span class="num">${huf(s.capM)} · ${pct(1 - s.capShare)}</span></p>` : ""}</div>
         <div><h4>Nyereség${open ? " (eddig)" : ""}</h4>
-          <p class="me"><span>${esc(me)} · ${pct(d.profitShare.investor)}</span><span class="num">${huf(s.profit * d.profitShare.investor)}</span></p>
-          <p><span>Máté · ${pct(d.profitShare.mate)}</span><span class="num">${huf(s.profit * d.profitShare.mate)}</span></p></div>
-      </div>` : `<p class="note">A tőke és a nyereség felosztása ennél az ügyletnél még nincs rögzítve.</p>`;
+          <p class="me"><span>${esc(me)} · ${pct(s.share)} a saját tőkéje után</span><span class="num">${huf(s.myProfit)}</span></p>
+          <p><span>Máté</span><span class="num">${huf(s.mateProfit)}</span></p>
+          ${open ? `<p><span>Várható nyereséged, ha minden elkel</span><span class="num">${huf(s.myProfitAll)}</span></p>`
+                 : `<p class="me"><span>Neked jár összesen (tőke + nyereség)</span><span class="num">${huf(s.capI + s.myProfit)}</span></p>`}
+        </div>
+      </div>` : `<p class="note">A befektetett tőkéd ennél az ügyletnél még nincs rögzítve, ezért a te részedet még nem tudjuk kiszámolni.</p>`;
     return `<article class="deal">
       <div class="deal__head">
         <img src="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(d.set)}-1.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
@@ -234,8 +258,8 @@
         <div class="sums">
           <div><span>Beszerzés összesen</span><b class="num">${huf(s.cost)}</b></div>
           <div><span>Bevétel eddig</span><b class="num">${huf(s.rev)}</b></div>
-          <div class="is-profit"><span>Nyereség${open ? " eddig" : ""}</span><b class="num">${huf(s.profit)}</b></div>
-          ${open ? `<div><span>Várható nyereség</span><b class="num">${huf(s.profitAll)}</b></div>` : ""}
+          <div class="is-profit"><span>Ügylet nyeresége${open ? " eddig" : ""}</span><b class="num">${huf(s.profit)}</b></div>
+          ${open ? `<div><span>Ügylet várható nyeresége</span><b class="num">${huf(s.profitAll)}</b></div>` : ""}
         </div>
         ${split}
       </div>

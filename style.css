@@ -189,3 +189,6 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .top .nav + .inv-btn{margin-left:0}
 @media (max-width:900px){ .inv-btn{padding:7px 10px;font-size:0;gap:0} .inv-btn::before{width:15px;height:15px} }
 .inv-btn[aria-label]{}
+.foot a.foot__inv{display:inline-block;text-decoration:none;background:var(--gold);color:var(--green);font-weight:700;padding:6px 14px;border-radius:999px;margin-top:4px}
+.foot a.foot__inv:hover{background:#ffd93a}
+.inv-btn,.inv-btn:hover{text-decoration:none}
