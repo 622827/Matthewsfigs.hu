@@ -67,6 +67,10 @@
   td{text-align:right;padding:10px;border-bottom:1px solid var(--line)}
   th:first-child,td:first-child{text-align:left}
   tfoot td{font-weight:700;border-bottom:0}
+  tfoot tr.extra td{font-weight:400;color:var(--muted);border-bottom:1px solid var(--line)}
+  .setcell{display:flex;align-items:center;gap:10px;min-width:220px}
+  .setcell img{width:44px;height:34px;object-fit:contain;flex:none}
+  .setcell small{display:block;font-size:11px;color:var(--muted);font-weight:700}
   .sums{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
   .sums div{background:var(--cream);border-radius:10px;padding:12px 14px}
   .sums span{display:block;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
@@ -172,6 +176,12 @@
       s.cost += l.qty * l.buy; s.revAll += l.qty * l.sell;
       s.rev += l.sold * l.sell; s.costSold += l.sold * l.buy;
     }
+    s.goods = s.cost;
+    s.extra = (d.extras || []).reduce((a, x) => a + x.amount, 0);   // shipping, fees…
+    s.cost += s.extra;
+    // extra costs are charged to the sold pieces in proportion to their purchase value
+    s.extraSold = s.goods ? s.extra * (s.costSold / s.goods) : 0;
+    s.costSold += s.extraSold;
     s.profit = s.rev - s.costSold;          // realised, on the pieces sold
     s.profitAll = s.revAll - s.cost;        // if everything sells at the listed price
     // investor's part of the capital
@@ -224,7 +234,9 @@
   function deal(d, me) {
     const s = calc(d);
     const open = d.status === "open";
+    const multi = d.lines.some(l => l.set);
     const rows = d.lines.map(l => `<tr>
+        ${multi ? `<td><div class="setcell"><img src="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(l.set)}-1.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><span><small>${esc(l.set)}</small>${esc(l.name || "")}</span></div></td>` : ""}
         <td class="num">${l.qty} db</td><td class="num">${huf(l.buy)}</td><td class="num">${huf(l.sell)}</td>
         <td class="num">${l.sold} db</td><td class="num">${huf(l.sold * l.sell)}</td></tr>`).join("");
     const split = s.capKnown ? `
@@ -241,8 +253,8 @@
       </div>` : `<p class="note">A befektetett tőkéd ennél az ügyletnél még nincs rögzítve, ezért a te részedet még nem tudjuk kiszámolni.</p>`;
     return `<article class="deal">
       <div class="deal__head">
-        <img src="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(d.set)}-1.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
-        <div class="deal__title"><small>${esc(d.set)}</small><b>${esc(d.name)}</b></div>
+        ${d.set ? `<img src="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(d.set)}-1.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">` : ""}
+        <div class="deal__title"><small>${esc(d.set || `${d.lines.length} féle szett`)}</small><b>${esc(d.name)}</b></div>
         <span class="pill ${open ? "pill--open" : "pill--closed"}">${open ? "Folyamatban" : "Lezárva"}</span>
       </div>
       <div class="deal__body">
@@ -251,9 +263,10 @@
           <span class="progress__label num">${s.sold} / ${s.qty} db eladva</span>
         </div>
         <div class="tbl"><table>
-          <thead><tr><th>Mennyiség</th><th>Vételi ár</th><th>Eladási ár</th><th>Eladva</th><th>Bevétel</th></tr></thead>
+          <thead><tr>${multi ? "<th>Szett</th>" : ""}<th>Mennyiség</th><th>Vételi ár</th><th>Eladási ár</th><th>Eladva</th><th>Bevétel</th></tr></thead>
           <tbody>${rows}</tbody>
-          <tfoot><tr><td class="num">${s.qty} db</td><td class="num">${huf(s.cost)}</td><td></td><td class="num">${s.sold} db</td><td class="num">${huf(s.rev)}</td></tr></tfoot>
+          <tfoot>${(d.extras || []).map(x => `<tr class="extra">${multi ? "<td></td>" : ""}<td>${esc(x.label)}</td><td class="num">${huf(x.amount)}</td><td></td><td></td><td></td></tr>`).join("")}
+            <tr>${multi ? "<td>Összesen</td>" : ""}<td class="num">${s.qty} db</td><td class="num">${huf(s.cost)}</td><td></td><td class="num">${s.sold} db</td><td class="num">${huf(s.rev)}</td></tr></tfoot>
         </table></div>
         <div class="sums">
           <div><span>Beszerzés összesen</span><b class="num">${huf(s.cost)}</b></div>
