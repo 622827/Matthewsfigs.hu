@@ -54,7 +54,16 @@ def image_url(item_type, no, color_id):
     return f"https://img.bricklink.com/ItemImage/{letter}N/{color}/{urllib.parse.quote(no)}.png"
 
 
+SECRETS = ("BL_CONSUMER_KEY", "BL_CONSUMER_SECRET", "BL_TOKEN", "BL_TOKEN_SECRET")
+
+
 def main():
+    missing = [k for k in SECRETS if not os.environ.get(k)]
+    if missing:
+        # No API keys yet: keep the current inventory.json and finish quietly.
+        print("::notice::BrickLink API-kulcsok még nincsenek beállítva "
+              f"({', '.join(missing)}); a készlet nem frissült.")
+        return
     rows = oauth_get(f"{API}/inventories")
     items = []
     parts_lots = parts_qty = 0
