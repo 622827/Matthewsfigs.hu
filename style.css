@@ -181,3 +181,11 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 }
 
 .price small{font-family:var(--body);font-size:12px;font-weight:600;color:var(--muted)}
+
+/* investor button in header */
+.inv-btn{display:inline-flex;align-items:center;gap:6px;text-decoration:none;font:700 14px var(--body);color:var(--green);background:var(--gold);padding:8px 14px;border-radius:999px;white-space:nowrap;box-shadow:0 3px 0 var(--gold-2)}
+.inv-btn::before{content:"";width:12px;height:12px;background:currentColor;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17 9V7a5 5 0 0 0-10 0v2H5v13h14V9h-2zm-8 0V7a3 3 0 0 1 6 0v2H9z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M17 9V7a5 5 0 0 0-10 0v2H5v13h14V9h-2zm-8 0V7a3 3 0 0 1 6 0v2H9z'/%3E%3C/svg%3E") center/contain no-repeat}
+.inv-btn:hover{background:#ffd93a}
+.top .nav + .inv-btn{margin-left:0}
+@media (max-width:900px){ .inv-btn{padding:7px 10px;font-size:0;gap:0} .inv-btn::before{width:15px;height:15px} }
+.inv-btn[aria-label]{}
