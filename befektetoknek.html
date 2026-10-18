@@ -43,10 +43,25 @@
   .kpis > div{min-width:0}
   .kpis b{display:block;font-family:var(--display);font-size:clamp(22px,2.6vw,30px);color:var(--green)}
   .kpis span{font-size:13px;font-weight:600;color:var(--green)}
-  .deals{padding:44px 0 72px;display:grid;gap:32px}
+  .deals{padding:44px 0 72px;display:grid;gap:18px}
+  .deals h2{margin-top:18px}
+  .deal-tools{display:flex;justify-content:flex-end;gap:8px;margin-bottom:-6px}
+  .deal-tools button{background:transparent;border:0;font:600 14px var(--body);color:var(--green);cursor:pointer;text-decoration:underline;text-underline-offset:3px}
   .deals h2{font-size:28px}
   .deal{background:#fff;border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden}
-  .deal__head{display:flex;gap:16px;align-items:center;padding:18px 22px;border-bottom:1.5px solid var(--line)}
+  .deal__head{display:flex;gap:16px;align-items:center;padding:18px 22px;cursor:pointer;list-style:none}
+  .deal__head::-webkit-details-marker{display:none}
+  .deal[open] > .deal__head{border-bottom:1.5px solid var(--line)}
+  .deal__head:hover{background:#fffdf4}
+  .deal__head:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+  .deal__peek{display:grid;justify-items:end;text-align:right;line-height:1.2}
+  .deal__peek span{font-size:13px;color:var(--muted)}
+  .deal__peek b{font-family:var(--display);font-size:20px;color:#1d6b35}
+  .deal__peek small{font-size:11px;color:var(--muted);font-weight:600}
+  .chev{width:12px;height:12px;border-right:2.5px solid var(--green);border-bottom:2.5px solid var(--green);transform:rotate(45deg);margin:0 4px 6px 4px;transition:transform .2s;flex:none}
+  .deal[open] .chev{transform:rotate(-135deg);margin-bottom:-4px}
+  @media (prefers-reduced-motion: reduce){ .chev{transition:none} }
+  @media (max-width:560px){ .deal__head{flex-wrap:wrap;gap:10px} .deal__title{flex-basis:calc(100% - 90px)} .deal__peek{justify-items:start;text-align:left;margin-right:auto} }
   .deal__head img{width:72px;height:56px;object-fit:contain;flex:none}
   .deal__title{flex:1;min-width:0}
   .deal__title small{display:block;font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.04em}
@@ -250,6 +265,7 @@
     $("kpis").parentElement.hidden = false;
     $("deals").innerHTML = (data.share == null ? "" :
       `<p class="note"><b>Elszámolás:</b> a befektetett tőkéd után keletkező nyereség ${pct(SHARE)}-a a tiéd, ${pct(1 - SHARE)}-a Mátéé. Ha egy ügyletbe Máté is tett tőkét, az ő részének nyeresége teljes egészében őt illeti. Példa: 100 000 Ft tőke, 150 000 Ft eladás → 50 000 Ft nyereség, ebből ${huf(50000 * SHARE)} a tiéd, és visszakapod a 100 000 Ft tőkét is.</p>`) +
+      `<div class="deal-tools"><button type="button" data-all="1">Mind kinyitása</button><button type="button" data-all="0">Mind becsukása</button></div>` +
       groups.map(([st, title]) => {
         const list = data.deals.filter(d => d.status === st);
         return list.length ? `<h2>${title}</h2>` + list.map(d => deal(d, me)).join("") : "";
@@ -277,12 +293,17 @@
                  : `<p class="me"><span>Neked jár összesen (tőke + nyereség)</span><span class="num">${huf(s.capI + s.myProfit)}</span></p>`}
         </div>
       </div>` : `<p class="note">A befektetett tőkéd ennél az ügyletnél még nincs rögzítve, ezért a te részedet még nem tudjuk kiszámolni.</p>`;
-    return `<article class="deal">
-      <div class="deal__head">
+    return `<details class="deal">
+      <summary class="deal__head">
         ${d.set ? `<img src="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(d.set)}-1.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">` : ""}
         <div class="deal__title"><small>${esc(d.set || `${d.lines.length} féle szett`)}</small><b>${esc(d.name)}</b></div>
+        <div class="deal__peek">
+          <span class="num">${s.sold}/${s.qty} db eladva</span>
+          ${s.capKnown ? `<b class="num">${huf(s.myProfit)}</b><small>nyereséged${open ? " eddig" : ""}</small>` : ""}
+        </div>
         <span class="pill ${open ? "pill--open" : "pill--closed"}">${open ? "Folyamatban" : "Lezárva"}</span>
-      </div>
+        <span class="chev" aria-hidden="true"></span>
+      </summary>
       <div class="deal__body">
         <div class="progress">
           <div class="progress__bar"><i style="width:${s.qty ? (s.sold / s.qty) * 100 : 0}%"></i></div>
@@ -302,7 +323,7 @@
         </div>
         ${split}
       </div>
-    </article>`;
+    </details>`;
   }
 
   $("pwToggle").onclick = () => {
@@ -332,6 +353,10 @@
     $("dash").hidden = true; $("lock").hidden = false; $("pw").focus();
   };
   $("back").onclick = () => showMasterList();
+  $("deals").addEventListener("click", e => {
+    const b = e.target.closest("[data-all]");
+    if (b) $("deals").querySelectorAll("details.deal").forEach(d => d.open = b.dataset.all === "1");
+  });
 
   // ---------- master view: pick an investor ----------
   let MASTER = null;   // [{name, data}]
