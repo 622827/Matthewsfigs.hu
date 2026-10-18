@@ -31,32 +31,36 @@ def fetch(no):
 
 def cutout(bgr):
     h, w = bgr.shape[:2]
-    # background = near-white pixels connected to the border (white armour inside the outline stays)
-    near_white = (bgr.min(axis=2) >= 246).astype(np.uint8)
-    pad = np.pad(near_white, 1, constant_values=1)
+    # background = pixels close to the photo's border colour, connected to the border
+    border = np.concatenate([bgr[0], bgr[-1], bgr[:, 0], bgr[:, -1]])
+    bgc = np.median(border, axis=0)
+    dist = np.abs(bgr.astype(np.int16) - bgc.astype(np.int16)).max(axis=2)
+    near_bg = (dist <= 16).astype(np.uint8)
+    pad = np.pad(near_bg, 1, constant_values=1) * 255
     mask = np.zeros((h + 4, w + 4), np.uint8)
-    flood = pad.copy() * 255
-    cv2.floodFill(flood, mask, (0, 0), 128, loDiff=0, upDiff=0, flags=4)
-    bg = (flood[1:-1, 1:-1] == 128)
-    fg = (~bg).astype(np.uint8) * 255
+    cv2.floodFill(pad, mask, (0, 0), 128, loDiff=0, upDiff=0, flags=4)
+    fg = (pad[1:-1, 1:-1] != 128).astype(np.uint8) * 255
     fg = cv2.morphologyEx(fg, cv2.MORPH_OPEN, np.ones((2, 2), np.uint8))
-    # keep the main blobs only (drop specks)
+    # keep only the figure itself: the biggest blob (drops spare heads / accessories shown beside it)
     n, lab, stats, _ = cv2.connectedComponentsWithStats(fg, 8)
     if n <= 1:
         return None
-    keep = np.zeros_like(fg)
-    big = stats[1:, cv2.CC_STAT_AREA].max()
-    for i in range(1, n):
-        if stats[i, cv2.CC_STAT_AREA] >= 0.01 * big:
-            keep[lab == i] = 255
-    # soft 1px edge
+    main_i = 1 + int(np.argmax(stats[1:, cv2.CC_STAT_AREA]))
+    keep = (lab == main_i).astype(np.uint8) * 255
+    keep = cv2.morphologyEx(keep, cv2.MORPH_CLOSE, np.ones((3, 3), np.uint8))
+    # fill holes inside the figure (e.g. white armour enclosed by outlines that touched the bg colour)
+    holes = keep.copy()
+    hm = np.zeros((h + 2, w + 2), np.uint8)
+    cv2.floodFill(holes, hm, (0, 0), 255)
+    keep = keep | cv2.bitwise_not(holes)
+    if keep.sum() / 255 < 0.05 * h * w:
+        return None
     alpha = cv2.GaussianBlur(keep, (3, 3), 0)
     ys, xs = np.where(keep > 0)
     y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
     rgba = np.dstack([bgr, alpha])[y0:y1, x0:x1]
     s = H_PX / rgba.shape[0]
-    rgba = cv2.resize(rgba, (max(1, int(round(rgba.shape[1] * s))), H_PX), interpolation=cv2.INTER_CUBIC)
-    return rgba
+    return cv2.resize(rgba, (max(1, int(round(rgba.shape[1] * s))), H_PX), interpolation=cv2.INTER_CUBIC)
 
 
 def main():
@@ -70,6 +74,9 @@ def main():
         if no in index and not force:
             continue
         img = fetch(no)
+        if img is not None and "--debug" in sys.argv:
+            (OUT / "_raw").mkdir(exist_ok=True)
+            cv2.imwrite(str(OUT / "_raw" / f"{no}.png"), img)
         res = cutout(img) if img is not None else None
         if res is None:
             index[no] = None

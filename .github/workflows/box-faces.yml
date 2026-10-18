@@ -53,13 +53,14 @@ jobs:
         run: |
           pip install --quiet opencv-python-headless numpy
           python scripts/box_faces.py ${{ inputs.force && '--force' || '' }} ${{ inputs.debug && '--debug' || '' }}
-          python scripts/fig_cutouts.py ${{ inputs.force && '--force' || '' }}
+          python scripts/fig_cutouts.py ${{ inputs.force && '--force' || '' }} ${{ inputs.debug && '--debug' || '' }}
       - name: Hibakereső képek
         if: inputs.debug
         run: |
           git config user.name "inventory-bot"
           git config user.email "actions@users.noreply.github.com"
-          mv assets/boxes/_debug /tmp/_debug
+          mkdir -p /tmp/_debug && mv assets/boxes/_debug/* /tmp/_debug/ 2>/dev/null || true
+          mkdir -p /tmp/_debug/figs && mv assets/figs/_raw/* /tmp/_debug/figs/ 2>/dev/null || true
           git stash -u -q || true
           git checkout --orphan box-debug
           git rm -rfq . && rm -rf ./*
