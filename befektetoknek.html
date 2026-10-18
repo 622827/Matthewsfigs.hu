@@ -81,6 +81,8 @@
   .split h4{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
   .split p{margin:2px 0;display:flex;justify-content:space-between;gap:10px}
   .split p.me{font-weight:700;color:var(--green)}
+  .empty-inv{background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:40px 28px;text-align:center;display:grid;justify-items:center;gap:12px}
+  .empty-inv p{max-width:52ch;color:var(--muted);margin:0}
   .note{font-size:14px;color:var(--muted);background:var(--cream);border-radius:10px;padding:12px 14px;margin:0}
   @media (max-width:760px){ .kpis{grid-template-columns:repeat(2,1fr)} .split{grid-template-columns:1fr} }
 </style>
@@ -222,8 +224,16 @@
       <div><b class="num">${huf(expected)}</b><span>várható nyereséged a futó ügyletekből${missing ? "*" : ""}</span></div>`;
 
     const groups = [["open", "Folyamatban lévő beszerzések"], ["closed", "Lezárt ügyletek"]];
-    $("deals").innerHTML =
-      `<p class="note"><b>Elszámolás:</b> a befektetett tőkéd után keletkező nyereség ${pct(SHARE)}-a a tiéd, ${pct(1 - SHARE)}-a Mátéé. Ha egy ügyletbe Máté is tett tőkét, az ő részének nyeresége teljes egészében őt illeti. Példa: 100 000 Ft tőke, 150 000 Ft eladás → 50 000 Ft nyereség, ebből ${huf(50000 * SHARE)} a tiéd, és visszakapod a 100 000 Ft tőkét is.</p>` +
+    if (!data.deals.length) {
+      $("kpis").parentElement.hidden = true;
+      $("deals").innerHTML = `<div class="empty-inv"><h2>Még nincs közös ügyletünk</h2>
+        <p>Amint elindul az első közös beszerzésünk, itt követheted nyomon: mit vettünk, mennyiért, mi kelt el, és mennyi a nyereséged.</p>
+        <a class="btn btn--gold" href="https://m.me/100091130775442" target="_blank" rel="noopener">Írj Máténak Messengeren</a></div>`;
+      return;
+    }
+    $("kpis").parentElement.hidden = false;
+    $("deals").innerHTML = (data.share == null ? "" :
+      `<p class="note"><b>Elszámolás:</b> a befektetett tőkéd után keletkező nyereség ${pct(SHARE)}-a a tiéd, ${pct(1 - SHARE)}-a Mátéé. Ha egy ügyletbe Máté is tett tőkét, az ő részének nyeresége teljes egészében őt illeti. Példa: 100 000 Ft tőke, 150 000 Ft eladás → 50 000 Ft nyereség, ebből ${huf(50000 * SHARE)} a tiéd, és visszakapod a 100 000 Ft tőkét is.</p>`) +
       groups.map(([st, title]) => {
         const list = data.deals.filter(d => d.status === st);
         return list.length ? `<h2>${title}</h2>` + list.map(d => deal(d, me)).join("") : "";
