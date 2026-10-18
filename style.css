@@ -264,3 +264,11 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .want{display:block;text-align:center;margin-top:10px;background:var(--green);color:var(--gold);font:800 14px var(--body);padding:9px 12px;border-radius:999px;cursor:pointer;box-shadow:0 3px 0 #0a2111;transition:transform .15s}
 .want:hover{transform:translateY(-1px)}
 .want:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+/* dark inner core: wherever two faces meet, a gap shows dark cardboard instead of the white page */
+.box3d .core{position:absolute;left:0;top:0;width:var(--w);height:var(--h);background:#1d1d1d}
+.box3d .core.cx{width:var(--d);left:calc((var(--w) - var(--d)) / 2);transform:rotateY(90deg)}
+.box3d .core.cy{height:var(--d);top:calc((var(--h) - var(--d)) / 2);transform:rotateX(90deg)}
+.box3d .core.cz{transform:none}
+.box3d .core{width:calc(var(--w) - 2px);height:calc(var(--h) - 2px);left:1px;top:1px}
+.box3d .core.cx{width:calc(var(--d) - 2px);left:calc((var(--w) - var(--d)) / 2 + 1px)}
+.box3d .core.cy{height:calc(var(--d) - 2px);top:calc((var(--h) - var(--d)) / 2 + 1px)}
