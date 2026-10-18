@@ -261,3 +261,6 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .box3d.fig .base--top{background:radial-gradient(circle at 50% 40%,#3d7049,#1a4426 72%);transform:rotateX(90deg) translateZ(3px);box-shadow:none}
 .lchip.is-empty{opacity:.4;cursor:default;transform:none}
 .lchip--clear{background:transparent;color:inherit;border-color:rgba(247,243,227,.45);font-weight:600}
+.want{display:block;text-align:center;margin-top:10px;background:var(--green);color:var(--gold);font:800 14px var(--body);padding:9px 12px;border-radius:999px;cursor:pointer;box-shadow:0 3px 0 #0a2111;transition:transform .15s}
+.want:hover{transform:translateY(-1px)}
+.want:focus-visible{outline:3px solid var(--gold);outline-offset:2px}

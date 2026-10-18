@@ -177,6 +177,20 @@
   const notifyLink = i => MESSENGER + "?text=" + encodeURIComponent(
     (lang === "hu" ? "Szia! Értesítést kérek, ha újra elérhető lesz: " : "Hi! Please let me know when this is back in stock: ") + `${shortNo(i)} ${i.name}`);
 
+  const wantLink = i => MESSENGER + "?text=" + encodeURIComponent(
+    (lang === "hu" ? "Szia! Szeretnék egyet ebből: " : "Hi! I'd like one of these: ") + `${shortNo(i)} ${i.name}`);
+  // "Szeretnék egyet!" button: straight to Facebook Messenger with the request typed in
+  const openWant = el => window.open(el.dataset.href, "_blank", "noopener");
+  document.addEventListener("click", e => {
+    const w = e.target.closest(".want");
+    if (!w) return;
+    e.preventDefault(); e.stopImmediatePropagation(); openWant(w);
+  }, true);
+  document.addEventListener("keydown", e => {
+    const w = e.target.closest && e.target.closest(".want");
+    if (w && (e.key === "Enter" || e.key === " ")) { e.preventDefault(); openWant(w); }
+  });
+
   // pre-order cards: ask first, then open Messenger with the request already typed in
   function askNotify(i, href) {
     let dlg = document.getElementById("notifyDlg");
@@ -218,6 +232,7 @@
           <span class="item__no">${esc(i.type === "SET" ? i.no.replace(/-1$/, "") : i.no)}${i.qty > 1 ? ` · ${i.qty} ${lang === "hu" ? "db" : "pcs"}` : ""}</span>
           <span class="item__name">${esc(i.name)}</span>
           <span class="badges">${labelsOf(i).map(l => `<span class="badge badge--${(LABELS._colors || {})[l] || "red"}">${esc(l)}</span>`).join("")}${i.preorder ? `<span class="badge badge--pre">${t("badge.pre")}</span>` : i.type === "SET" ? `<span class="badge">${t("badge.sealed")}</span>` : ""}</span>
+          ${i.preorder ? `<span class="want" role="button" tabindex="0" data-href="${esc(wantLink(i))}">${lang === "hu" ? "Szeretnék egyet!" : "I want one!"}</span>` : ""}
           <div class="item__foot">
             <span class="price">${i.from ? `<small>${lang === "hu" ? "" : "from "}</small>` : ""}${money(i.price)}${i.from && lang === "hu" ? "<small>-tól</small>" : ""}</span>
           </div>
