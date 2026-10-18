@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-18T08:12:13+00:00",
+ "updated": "2026-10-18T12:29:38+00:00",
  "store": "MatthewHorseman",
  "currency": "EUR",
- "total_lots": 732,
+ "total_lots": 729,
  "parts_lots": 536,
  "parts_qty": 4113,
  "items": [
@@ -501,19 +501,6 @@
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=537542453"
   },
   {
-   "id": 558781237,
-   "type": "SET",
-   "no": "30708-1",
-   "name": "Millennium Falcon - Mini paper bag / polybag",
-   "color": null,
-   "cond": "N",
-   "qty": 1,
-   "price": 0.99,
-   "note": "",
-   "img": "https://img.bricklink.com/ItemImage/SN/0/30708-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=558781237"
-  },
-  {
    "id": 565587289,
    "type": "MINIFIG",
    "no": "sw0759",
@@ -1006,19 +993,6 @@
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0494.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=539317712"
-  },
-  {
-   "id": 564316927,
-   "type": "MINIFIG",
-   "no": "sw0209",
-   "name": "Darth Vader &#40;Death Star Torso&#41;",
-   "color": null,
-   "cond": "U",
-   "qty": 1,
-   "price": 11.9,
-   "note": "Excellent condition.",
-   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0209.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564316927"
   },
   {
    "id": 547559131,
@@ -2384,19 +2358,6 @@
    "note": "10/10 - with enchanted crossbow",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min195.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704439"
-  },
-  {
-   "id": 545420520,
-   "type": "MINIFIG",
-   "no": "sw1202",
-   "name": "Astromech Droid, R2-D2 - Flat Silver Head, Dark Pink Dots, Large Receptor, Back Printing",
-   "color": null,
-   "cond": "N",
-   "qty": 1,
-   "price": 2.9,
-   "note": "Never assembled.",
-   "img": "https://img.bricklink.com/ItemImage/MN/0/sw1202.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=545420520"
   },
   {
    "id": 543105783,
