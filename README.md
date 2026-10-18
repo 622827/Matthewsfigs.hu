@@ -37,3 +37,11 @@ Addig a `data/inventory.json` a 2026. október 17-i készletet mutatja (szettek 
 
 ## Később: webshop
 A következő lépés lehet a saját kosár és fizetés (Stripe, PayPal, átutalás, utánvét, készpénz átvételkor). Ehhez a statikus oldal mellé egy kis háttérszolgáltatás kell, ami a rendeléseket kezeli és a BrickLink-készletet zárolja.
+
+## Címkék
+A szettek extra címkéi (Big gun, Army, Retired, Best price) a `data/labels.json` fájlban vannak:
+szettszám szerint (`"75158-1": ["Big gun"]`), névrész szerint (`_rules`, pl. minden „battle pack” → Army),
+a színeket a `_colors` adja (red, blue, gray, gold).
+
+## Előrendelhető
+Ami a BrickLinken elfogy, nem tűnik el az oldalról: „Pre-order” címkét kap, és a kártya Messengerre visz.

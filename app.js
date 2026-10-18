@@ -36,10 +36,10 @@
     "ord.bl":"BrickLink store","ord.msg":"Custom request on Messenger",
     "foot.contact":"Contact","foot.inv":"For investors","nav.inv":"Investors",
     "foot.legal":"LEGO® is a trademark of the LEGO Group, which does not sponsor, authorize or endorse this site.",
-    "badge.sealed":"Sealed","price.ask":"Ask",
+    "badge.sealed":"Sealed","badge.pre":"Pre-order","pre.hint":"Sold out right now – message us to order it","price.ask":"Ask",
     "parts.title":"Parts","parts.text":"We have {lots} lots ({qty} pieces) of parts in stock. Browse them with colour filters in our BrickLink store.","parts.cta":"Browse parts on BrickLink"
   };
-  const HU = {"cat.for":" erre","badge.sealed":"Bontatlan","price.ask":"Érdeklődj",
+  const HU = {"cat.for":" erre","badge.sealed":"Sealed","badge.pre":"Pre-order","pre.hint":"Jelenleg elfogyott – írj nekünk, és beszerezzük","price.ask":"Érdeklődj",
     "parts.title":"Alkatrészek","parts.text":"{lots} tétel ({qty} darab) alkatrész van raktáron. Színre és típusra szűrve a BrickLink boltunkban böngészheted őket.","parts.cta":"Alkatrészek a BrickLinken"};
 
   let lang = "hu";
@@ -78,7 +78,7 @@
   };
   // 3D product box: sets get their original LEGO box art on a cuboid,
   // minifigures turn like on a display turntable.
-  let BOXES = {};   // assets/boxes/index.json: flattened faces cut from the box photos
+  let BOXES = {}, LABELS = {};   // assets/boxes/index.json: flattened faces cut from the box photos
   const box3d = i => {
     const m = i.type === "SET" ? BOXES[i.no] : null;
     if (!m) return `<div class="stage"><div class="box3d flat still"><img class="f front" loading="lazy" alt="" src="${esc(i.img)}"><i class="f back" style="--art:url('${esc(i.img)}')"></i></div></div>`;
@@ -158,15 +158,22 @@
     if (!e.target.closest(".item")) document.querySelectorAll(".box3d").forEach(b => b._release && b._release());
   });
 
+  const MESSENGER = "https://m.me/100091130775442";
+  const labelsOf = i => {
+    if (i.type !== "SET") return [];
+    const out = [...(LABELS[i.no] || [])], n = i.name.toLowerCase();
+    for (const r of LABELS._rules || []) if (n.includes(r.contains) && !out.includes(r.label)) out.push(r.label);
+    return out;
+  };
   const card = i => `
-      <a class="item" href="${esc(i.url)}" target="_blank" rel="noopener">
+      <a class="item${i.preorder ? " item--pre" : ""}" href="${esc(i.preorder ? MESSENGER : i.url)}" target="_blank" rel="noopener"${i.preorder ? ` title="${t("pre.hint")}"` : ""}>
         <div class="item__img">${box3d(i)}</div>
         <div class="item__body">
-          <span class="item__no">${esc(i.no)}${i.qty > 1 ? ` · ${i.qty} ${lang === "hu" ? "db" : "pcs"}` : ""}</span>
+          <span class="item__no">${esc(i.type === "SET" ? i.no.replace(/-1$/, "") : i.no)}${i.qty > 1 ? ` · ${i.qty} ${lang === "hu" ? "db" : "pcs"}` : ""}</span>
           <span class="item__name">${esc(i.name)}</span>
+          <span class="badges">${labelsOf(i).map(l => `<span class="badge badge--${(LABELS._colors || {})[l] || "red"}">${esc(l)}</span>`).join("")}${i.preorder ? `<span class="badge badge--pre">${t("badge.pre")}</span>` : i.type === "SET" ? `<span class="badge">${t("badge.sealed")}</span>` : ""}</span>
           <div class="item__foot">
             <span class="price">${i.from ? `<small>${lang === "hu" ? "" : "from "}</small>` : ""}${money(i.price)}${i.from && lang === "hu" ? "<small>-tól</small>" : ""}</span>
-            ${i.type === "SET" ? `<span class="badge">${t("badge.sealed")}</span>` : ""}
           </div>
         </div>
       </a>`;
@@ -223,7 +230,8 @@
     const qv = $("search").value;
     const match = matcher(qv), sort = $("sort").value;
     let list = data.items.filter(i => i.type === TYPE && match(i));
-    list.sort(sort === "pa" ? (a, b) => a.price - b.price : sort === "na" ? (a, b) => a.name.localeCompare(b.name) : (a, b) => b.price - a.price);
+    const by = sort === "pa" ? (a, b) => a.price - b.price : sort === "na" ? (a, b) => a.name.localeCompare(b.name) : (a, b) => b.price - a.price;
+    list.sort((a, b) => (!!a.preorder - !!b.preorder) || by(a, b));
     $("grid").innerHTML = list.slice(0, shown).map(card).join("");
     initBoxes($("grid"));
     $("count").textContent = list.length;
@@ -258,13 +266,14 @@
 
   Promise.all([
     fetch("data/inventory.json", { cache: "no-cache" }).then(r => r.json()),
-    fetch("assets/boxes/index.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({}))
+    fetch("assets/boxes/index.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
+    fetch("data/labels.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({}))
   ])
-    .then(([d, boxes]) => {
-      BOXES = boxes || {};
+    .then(([d, boxes, labels]) => {
+      BOXES = boxes || {}; LABELS = labels || {};
       const byItem = new Map();
       for (const i of d.items) {
-        const k = i.type + ":" + i.no, m = byItem.get(k);
+        const k = i.type + ":" + i.no + (i.preorder ? ":pre" : ""), m = byItem.get(k);
         if (!m) { byItem.set(k, { ...i }); continue; }
         m.qty += i.qty;
         if (i.price !== m.price) m.from = true;

@@ -94,10 +94,25 @@ def main():
             "img": image_url(it["type"], it["no"], r.get("color_id", 0)),
             "url": f"https://www.bricklink.com/store.asp?p={STORE}&itemID={r['inventory_id']}",
         })
+    # Sold out items stay on the site as "pre-order" instead of disappearing.
+    old_items = []
+    if OUT.exists():
+        try:
+            old_items = json.loads(OUT.read_text(encoding="utf-8")).get("items", [])
+        except ValueError:
+            pass
+    in_stock = {(i["type"], i["no"]) for i in items}
+    kept = set()
+    for o in old_items:
+        key = (o["type"], o["no"])
+        if key in in_stock or key in kept:
+            continue
+        kept.add(key)
+        items.append({**o, "qty": 0, "preorder": True, "name": html.unescape(o["name"])})
     order = {"SET": 0, "MINIFIG": 1, "PART": 2}
-    items.sort(key=lambda i: (order.get(i["type"], 3), -(i["price"] or 0)))
+    items.sort(key=lambda i: (order.get(i["type"], 3), bool(i.get("preorder")), -(i["price"] or 0)))
     payload = {
-        "store": STORE, "currency": CURRENCY, "total_lots": len(items) + parts_lots,
+        "store": STORE, "currency": CURRENCY, "total_lots": sum(1 for i in items if not i.get("preorder")) + parts_lots,
         "parts_lots": parts_lots, "parts_qty": parts_qty, "items": items,
     }
     # Only touch the file when the stock really changed, so frequent runs

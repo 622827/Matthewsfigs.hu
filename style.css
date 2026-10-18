@@ -218,3 +218,15 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .box3d.still{transform:none}
 .box3d.still .back{display:none}
 @media (max-width:560px){ .stage{transform:scale(.8)} }
+
+.badge--pre{background:var(--gold);color:var(--green)}
+.item--pre .item__no::after{content:""}
+
+
+/* extra labels next to "Bontatlan", e.g. "Big gun" */
+.badges{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.badges:empty{display:none}
+.badge--red{background:#f8e4e1;color:#a3261b}
+.badge--blue{background:#e2ebf6;color:#1f4f8a}
+.badge--gray{background:#ece9df;color:#5b5a50}
+.badge--gold{background:#fff1b0;color:#6b5100}

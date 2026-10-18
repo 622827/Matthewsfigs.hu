@@ -1,0 +1,71 @@
+{
+  "_info": "Extra címkék. Szettszám szerint: \"75158-1\": [\"Big gun\"]. Névrész szerint: _rules. Szín: _colors (red, blue, gray, gold). Retired: Brickset kivezetési dátum alapján, 2026-10-18.",
+  "_colors": {
+    "Big gun": "red",
+    "Army": "blue",
+    "Retired": "gray",
+    "Best price": "gold"
+  },
+  "_rules": [
+    {
+      "contains": "battle pack",
+      "label": "Army"
+    }
+  ],
+  "75158-1": [
+    "Big gun",
+    "Retired"
+  ],
+  "75314-1": [
+    "Big gun",
+    "Retired"
+  ],
+  "75389-1": [
+    "Big gun"
+  ],
+  "75280-1": [
+    "Army",
+    "Retired"
+  ],
+  "75283-1": [
+    "Retired"
+  ],
+  "75333-1": [
+    "Retired"
+  ],
+  "75337-1": [
+    "Retired"
+  ],
+  "75342-1": [
+    "Best price",
+    "Retired"
+  ],
+  "75344-1": [
+    "Retired"
+  ],
+  "75345-1": [
+    "Best price",
+    "Retired"
+  ],
+  "75347-1": [
+    "Retired"
+  ],
+  "75383-1": [
+    "Retired"
+  ],
+  "75391-1": [
+    "Retired"
+  ],
+  "40686-1": [
+    "Retired"
+  ],
+  "40755-1": [
+    "Retired"
+  ],
+  "30708-1": [
+    "Retired"
+  ],
+  "75431-1": [
+    "Best price"
+  ]
+}
