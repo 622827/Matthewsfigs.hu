@@ -34,7 +34,7 @@
     "ord.s2t":"Order","ord.s2":"Check out on BrickLink, or message us on Messenger.",
     "ord.s3t":"Receive","ord.s3":"Careful packing, shipping or pickup in Budapest.",
     "ord.bl":"BrickLink store","ord.msg":"Custom request on Messenger",
-    "foot.contact":"Contact",
+    "foot.contact":"Contact","foot.inv":"For investors",
     "foot.legal":"LEGO® is a trademark of the LEGO Group, which does not sponsor, authorize or endorse this site.",
     "badge.sealed":"Sealed","price.ask":"Ask",
     "parts.title":"Parts","parts.text":"We have {lots} lots ({qty} pieces) of parts in stock. Browse them with colour filters in our BrickLink store.","parts.cta":"Browse parts on BrickLink"

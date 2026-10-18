@@ -1,2 +1,6 @@
 .DS_Store
 __pycache__/
+
+# Befektetői adatok nyílt forrása – SOHA ne kerüljön a repóba
+investors-src/
+*.plain.json

@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Befektetőknek – Matthew's Fig Supply Co.</title>
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<style>
+  [hidden]{display:none!important}
+  body{min-height:100vh;display:flex;flex-direction:column}
+  main{flex:1}
+  .num{font-variant-numeric:tabular-nums}
+
+  /* login */
+  .lock{display:grid;place-items:center;padding:72px 16px}
+  .lock__card{width:100%;max-width:420px;background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:36px 32px;text-align:center}
+  .lock__card img{margin:0 auto 18px;border-radius:50%}
+  .lock__card h1{font-size:34px;color:var(--green)}
+  .lock__card p{color:var(--muted);margin:10px 0 24px}
+  .pw{display:flex;border:1.5px solid var(--line);border-radius:12px;background:var(--cream);overflow:hidden}
+  .pw:focus-within{border-color:var(--gold);box-shadow:0 0 0 3px rgba(255,205,3,.35)}
+  .pw input{flex:1;min-width:0;border:0;background:transparent;font:17px var(--body);padding:13px 14px;color:var(--ink)}
+  .pw input:focus{outline:none}
+  .pw button{border:0;background:transparent;font:600 13px var(--body);color:var(--muted);padding:0 14px;cursor:pointer}
+  .lock .btn{width:100%;margin-top:14px}
+  .lock .btn[disabled]{opacity:.6;cursor:wait}
+  .err{color:#a3261b;font-size:14px;min-height:20px;margin:12px 0 0!important}
+
+  /* dashboard */
+  .dash-hero{background:var(--green);color:var(--cream);padding:44px 0 36px}
+  .dash-hero__in{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap}
+  .dash-hero h1{font-size:clamp(34px,5vw,52px);font-weight:800}
+  .dash-hero p{margin:8px 0 0;opacity:.85}
+  .logout{background:transparent;border:1.5px solid rgba(247,243,227,.5);color:var(--cream);font:600 14px var(--body);padding:8px 16px;border-radius:999px;cursor:pointer}
+  .logout:hover{border-color:var(--gold);color:var(--gold)}
+  .kpis-band{background:var(--gold)}
+  .kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;padding-block:22px}
+  .kpis > div{min-width:0}
+  .kpis b{display:block;font-family:var(--display);font-size:clamp(22px,2.6vw,30px);color:var(--green)}
+  .kpis span{font-size:13px;font-weight:600;color:var(--green)}
+  .deals{padding:44px 0 72px;display:grid;gap:32px}
+  .deals h2{font-size:28px}
+  .deal{background:#fff;border:1.5px solid var(--line);border-radius:var(--r);overflow:hidden}
+  .deal__head{display:flex;gap:16px;align-items:center;padding:18px 22px;border-bottom:1.5px solid var(--line)}
+  .deal__head img{width:72px;height:56px;object-fit:contain;flex:none}
+  .deal__title{flex:1;min-width:0}
+  .deal__title small{display:block;font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.04em}
+  .deal__title b{font-size:19px}
+  .pill{font-size:12px;font-weight:700;padding:5px 11px;border-radius:999px;white-space:nowrap}
+  .pill--open{background:var(--gold);color:var(--green)}
+  .pill--closed{background:#e4efe6;color:var(--green)}
+  .deal__body{padding:20px 22px;display:grid;gap:20px}
+  .deal__body > *{min-width:0}
+  .deals > *{min-width:0}
+  .progress{display:grid;gap:6px}
+  .progress__bar{height:10px;border-radius:999px;background:var(--cream);border:1px solid var(--line);overflow:hidden}
+  .progress__bar i{display:block;height:100%;background:var(--green);border-radius:999px}
+  .progress__label{font-size:14px;color:var(--muted)}
+  .tbl{overflow-x:auto}
+  table{width:100%;border-collapse:collapse;font-size:15px}
+  th{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted);font-weight:700;text-align:right;padding:8px 10px;border-bottom:1.5px solid var(--line)}
+  td{text-align:right;padding:10px;border-bottom:1px solid var(--line)}
+  th:first-child,td:first-child{text-align:left}
+  tfoot td{font-weight:700;border-bottom:0}
+  .sums{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+  .sums div{background:var(--cream);border-radius:10px;padding:12px 14px}
+  .sums span{display:block;font-size:12px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  .sums b{font-family:var(--display);font-size:21px;color:var(--green)}
+  .sums .is-profit b{color:#1d6b35}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .split > div{border:1.5px solid var(--line);border-radius:10px;padding:14px}
+  .split h4{margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  .split p{margin:2px 0;display:flex;justify-content:space-between;gap:10px}
+  .split p.me{font-weight:700;color:var(--green)}
+  .note{font-size:14px;color:var(--muted);background:var(--cream);border-radius:10px;padding:12px 14px;margin:0}
+  @media (max-width:760px){ .kpis{grid-template-columns:repeat(2,1fr)} .split{grid-template-columns:1fr} }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap top__in">
+    <a class="brand" href="index.html">
+      <img src="assets/logo.png" alt="" width="44" height="44">
+      <span>Matthew's <em>Fig Supply Co.</em></span>
+    </a>
+    <nav class="nav">
+      <a href="szettek.html" class="nav__main">Szettek</a>
+      <a href="figurak.html" class="nav__main">Figurák</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="lock" id="lock">
+    <form class="lock__card" id="lockForm" autocomplete="off">
+      <img src="assets/logo.png" alt="" width="84" height="84">
+      <h1>Befektetőknek</h1>
+      <p>Írd be a személyes jelszavadat, és megnyílik a közös ügyleteid áttekintése.</p>
+      <div class="pw">
+        <input id="pw" type="password" placeholder="Jelszó" aria-label="Jelszó" autocomplete="current-password" required>
+        <button type="button" id="pwToggle" aria-label="Jelszó mutatása">Mutat</button>
+      </div>
+      <button class="btn btn--gold" id="go" type="submit">Belépés</button>
+      <p class="err" id="err" role="alert"></p>
+    </form>
+  </section>
+
+  <div id="dash" hidden>
+    <section class="dash-hero">
+      <div class="wrap dash-hero__in">
+        <div>
+          <p class="kicker">Befektetői áttekintés</p>
+          <h1 id="hello">Szia!</h1>
+          <p id="sub"></p>
+        </div>
+        <button class="logout" id="logout" type="button">Kilépés</button>
+      </div>
+    </section>
+    <section class="kpis-band">
+      <div class="kpis wrap" id="kpis"></div>
+    </section>
+    <section class="wrap deals" id="deals"></section>
+  </div>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div><img src="assets/logo.png" alt="Matthew's Fig Supply Co." width="64" height="64"></div>
+    <div>
+      <h3>Kérdésed van?</h3>
+      <p>Írj Máténak Messengeren: <a href="https://m.me/100091130775442" target="_blank" rel="noopener">m.me/100091130775442</a></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const SALT = new TextEncoder().encode("matthewsfigs.hu/investors/v1");
+  const ROUNDS = 600000;
+  const $ = id => document.getElementById(id);
+  const huf = v => new Intl.NumberFormat("hu-HU", { style: "currency", currency: "HUF", maximumFractionDigits: 0 }).format(Math.round(v));
+  const pct = v => new Intl.NumberFormat("hu-HU", { style: "percent", maximumFractionDigits: 1 }).format(v);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
+  const b64 = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
+
+  async function unlock(password) {
+    const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(password.trim()), "PBKDF2", false, ["deriveBits"]);
+    const bits = new Uint8Array(await crypto.subtle.deriveBits({ name: "PBKDF2", salt: SALT, iterations: ROUNDS, hash: "SHA-256" }, base, 384));
+    const id = [...bits.slice(32)].map(b => b.toString(16).padStart(2, "0")).join("");
+    const res = await fetch(`data/i/${id}.json`, { cache: "no-cache" });
+    if (!res.ok) return null;
+    const blob = await res.json();
+    const key = await crypto.subtle.importKey("raw", bits.slice(0, 32), "AES-GCM", false, ["decrypt"]);
+    const pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64(blob.iv) }, key, b64(blob.ct));
+    return JSON.parse(new TextDecoder().decode(pt));
+  }
+
+  function calc(d) {
+    const s = { qty: 0, sold: 0, cost: 0, revAll: 0, rev: 0, costSold: 0 };
+    for (const l of d.lines) {
+      s.qty += l.qty; s.sold += l.sold;
+      s.cost += l.qty * l.buy; s.revAll += l.qty * l.sell;
+      s.rev += l.sold * l.sell; s.costSold += l.sold * l.buy;
+    }
+    s.profit = s.rev - s.costSold;          // realised, on the pieces sold
+    s.profitAll = s.revAll - s.cost;        // if everything sells at the listed price
+    return s;
+  }
+
+  function render(data) {
+    const me = data.investor;
+    $("hello").textContent = `Szia ${me}!`;
+    $("sub").textContent = `Közös ügyleteink a Matthew's Fig Supply Co.-val` + (data.updated ? ` · frissítve: ${new Date(data.updated).toLocaleDateString("hu-HU", { dateStyle: "long" })}` : "");
+
+    let capital = 0, myProfit = 0, open = 0, expected = 0;
+    for (const d of data.deals) {
+      const s = calc(d);
+      if (d.capital) capital += d.capital.investor;
+      if (d.profitShare) myProfit += s.profit * d.profitShare.investor;
+      if (d.status === "open") { open++; expected += d.profitShare ? s.profitAll * d.profitShare.investor : s.profitAll; }
+    }
+    $("kpis").innerHTML = `
+      <div><b class="num">${huf(capital)}</b><span>befektetett tőkéd</span></div>
+      <div><b class="num">${huf(myProfit)}</b><span>eddigi nyereséged</span></div>
+      <div><b class="num">${data.deals.length}</b><span>közös ügylet (${open} folyamatban)</span></div>
+      <div><b class="num">${huf(expected)}</b><span>várható nyereség a futó ügyletekből${data.deals.some(d => d.status === "open" && !d.profitShare) ? "*" : ""}</span></div>`;
+
+    const groups = [["open", "Folyamatban lévő beszerzések"], ["closed", "Lezárt ügyletek"]];
+    $("deals").innerHTML = groups.map(([st, title]) => {
+      const list = data.deals.filter(d => d.status === st);
+      return list.length ? `<h2>${title}</h2>` + list.map(d => deal(d, me)).join("") : "";
+    }).join("") + (data.deals.some(d => d.status === "open" && !d.profitShare)
+      ? `<p class="note">* Ahol a nyereség felosztása még nincs rögzítve, ott a teljes ügylet várható nyereségét mutatjuk.</p>` : "");
+  }
+
+  function deal(d, me) {
+    const s = calc(d);
+    const open = d.status === "open";
+    const rows = d.lines.map(l => `<tr>
+        <td class="num">${l.qty} db</td><td class="num">${huf(l.buy)}</td><td class="num">${huf(l.sell)}</td>
+        <td class="num">${l.sold} db</td><td class="num">${huf(l.sold * l.sell)}</td></tr>`).join("");
+    const split = d.capital && d.profitShare ? `
+      <div class="split">
+        <div><h4>Tőke</h4>
+          <p class="me"><span>${esc(me)}</span><span class="num">${huf(d.capital.investor)} · ${pct(d.capitalPct ? d.capitalPct.investor : d.capital.investor / (d.capital.investor + d.capital.mate))}</span></p>
+          <p><span>Máté</span><span class="num">${huf(d.capital.mate)} · ${pct(d.capitalPct ? d.capitalPct.mate : d.capital.mate / (d.capital.investor + d.capital.mate))}</span></p></div>
+        <div><h4>Nyereség${open ? " (eddig)" : ""}</h4>
+          <p class="me"><span>${esc(me)} · ${pct(d.profitShare.investor)}</span><span class="num">${huf(s.profit * d.profitShare.investor)}</span></p>
+          <p><span>Máté · ${pct(d.profitShare.mate)}</span><span class="num">${huf(s.profit * d.profitShare.mate)}</span></p></div>
+      </div>` : `<p class="note">A tőke és a nyereség felosztása ennél az ügyletnél még nincs rögzítve.</p>`;
+    return `<article class="deal">
+      <div class="deal__head">
+        <img src="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(d.set)}-1.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">
+        <div class="deal__title"><small>${esc(d.set)}</small><b>${esc(d.name)}</b></div>
+        <span class="pill ${open ? "pill--open" : "pill--closed"}">${open ? "Folyamatban" : "Lezárva"}</span>
+      </div>
+      <div class="deal__body">
+        <div class="progress">
+          <div class="progress__bar"><i style="width:${s.qty ? (s.sold / s.qty) * 100 : 0}%"></i></div>
+          <span class="progress__label num">${s.sold} / ${s.qty} db eladva</span>
+        </div>
+        <div class="tbl"><table>
+          <thead><tr><th>Mennyiség</th><th>Vételi ár</th><th>Eladási ár</th><th>Eladva</th><th>Bevétel</th></tr></thead>
+          <tbody>${rows}</tbody>
+          <tfoot><tr><td class="num">${s.qty} db</td><td class="num">${huf(s.cost)}</td><td></td><td class="num">${s.sold} db</td><td class="num">${huf(s.rev)}</td></tr></tfoot>
+        </table></div>
+        <div class="sums">
+          <div><span>Beszerzés összesen</span><b class="num">${huf(s.cost)}</b></div>
+          <div><span>Bevétel eddig</span><b class="num">${huf(s.rev)}</b></div>
+          <div class="is-profit"><span>Nyereség${open ? " eddig" : ""}</span><b class="num">${huf(s.profit)}</b></div>
+          ${open ? `<div><span>Várható nyereség</span><b class="num">${huf(s.profitAll)}</b></div>` : ""}
+        </div>
+        ${split}
+      </div>
+    </article>`;
+  }
+
+  $("pwToggle").onclick = () => {
+    const shown = $("pw").type === "text";
+    $("pw").type = shown ? "password" : "text";
+    $("pwToggle").textContent = shown ? "Mutat" : "Elrejt";
+  };
+  $("lockForm").addEventListener("submit", async e => {
+    e.preventDefault();
+    if (!window.crypto || !crypto.subtle) { $("err").textContent = "Ez az oldal csak biztonságos (https://) kapcsolaton nyitható meg."; return; }
+    $("go").disabled = true; $("go").textContent = "Ellenőrzés…"; $("err").textContent = "";
+    try {
+      const data = await unlock($("pw").value);
+      if (!data) { $("err").textContent = "Ehhez a jelszóhoz nem tartozik befektetői oldal. Figyelj a kis- és nagybetűkre."; return; }
+      render(data);
+      $("pw").value = "";
+      $("lock").hidden = true; $("dash").hidden = false; window.scrollTo(0, 0);
+    } catch (err) {
+      $("err").textContent = "Nem sikerült megnyitni az oldalt. Próbáld újra pár perc múlva.";
+    } finally {
+      $("go").disabled = false; $("go").textContent = "Belépés";
+    }
+  });
+  $("logout").onclick = () => { $("deals").innerHTML = $("kpis").innerHTML = ""; $("dash").hidden = true; $("lock").hidden = false; $("pw").focus(); };
+})();
+</script>
+</body>
+</html>
