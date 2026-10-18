@@ -99,16 +99,26 @@ def warp(img, quad_tl_tr_br_bl, w, h):
     return (bgr * a + 255 * (1 - a)).astype(np.uint8)  # flatten onto white
 
 
+WHY = {}
+
+
+def fail(reason):
+    WHY["last"] = reason
+    return None
+
+
 def analyse(img):
     hull = silhouette(img)
     if hull is None:
-        return None
+        return fail("no-silhouette")
+    WHY["hull"] = hull
     V = hexagon(hull)
     if V is None:
-        return None
+        return fail("not-hexagon")
+    WHY["hex"] = V
     res = faces_from_hexagon(V)
     if res is None:
-        return None
+        return fail("not-a-box")
     G, quads = res
     quads.sort(key=area, reverse=True)
     front = quads[0]
@@ -125,17 +135,17 @@ def analyse(img):
     for q in others:
         p = shared(q)
         if p is None:
-            return None
+            return fail("no-shared-edge")
         d = p - G
         if abs(d[1]) > abs(d[0]):
             side, Ev = q, p
         else:
             top, Ch = q, p
     if side is None or top is None:
-        return None
+        return fail("side/top-missing")
     opp = next(f for f in front if not (np.allclose(f, G) or np.allclose(f, Ev) or np.allclose(f, Ch)))
     if G[1] > Ev[1]:
-        return None  # bottom of the box visible instead of the top: not supported
+        return fail("bottom-visible")
 
     side_is_left = np.mean([p[0] for p in side], axis=0) < G[0]
 
@@ -161,7 +171,7 @@ def analyse(img):
     D_seen = (np.linalg.norm(sq[0] - sq[1]) + np.linalg.norm(sq[3] - sq[2])) / 2
     D = float(np.clip(D_seen * 1.7, 0.14 * W, 0.38 * W))
     if W < 80 or H < 60:
-        return None
+        return fail("too-small")
 
     fw = FRONT_PX
     fh = int(round(fw * H / W))
@@ -187,11 +197,21 @@ def main():
             skipped += 1
             continue
         img = fetch(no)
-        res = analyse(img) if img is not None else None
+        WHY.clear()
+        res = analyse(img) if img is not None else fail("no-photo")
+        if "--debug" in sys.argv and img is not None:
+            dbg = OUT / "_debug"; dbg.mkdir(exist_ok=True)
+            vis = cv2.cvtColor(img, cv2.COLOR_BGRA2BGR).copy()
+            if "hull" in WHY: cv2.polylines(vis, [WHY["hull"]], True, (0, 0, 255), 2)
+            if "hex" in WHY:
+                for x, y in WHY["hex"]: cv2.circle(vis, (int(x), int(y)), 7, (255, 0, 0), -1)
+            cv2.putText(vis, WHY.get("last", "ok"), (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0, 0, 255), 2)
+            cv2.imwrite(str(dbg / f"{no}.jpg"), vis, [cv2.IMWRITE_JPEG_QUALITY, 70])
+            cv2.imwrite(str(dbg / f"{no}-raw.png"), img)
         if not res:
             index[no] = None  # remember: no usable box photo, show the flat set picture
             failed += 1
-            print(f"  – {no}: nincs használható dobozfotó")
+            print(f"  – {no}: nincs használható dobozfotó ({WHY.get('last')})")
             continue
         for k in ("front", "side", "top"):
             cv2.imwrite(str(OUT / f"{no}-{k}.jpg"), res[k], [cv2.IMWRITE_JPEG_QUALITY, 86])

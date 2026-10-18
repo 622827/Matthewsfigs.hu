@@ -7,6 +7,10 @@ on:
         description: "Minden doboz újragenerálása"
         type: boolean
         default: false
+      debug:
+        description: "Hibakereső képek a box-debug ágra"
+        type: boolean
+        default: false
   workflow_run:
     workflows: ["BrickLink készlet szinkron"]
     types: [completed]
@@ -45,9 +49,21 @@ jobs:
         if: steps.need.outputs.run == 'true'
         run: |
           pip install --quiet opencv-python-headless numpy
-          python scripts/box_faces.py ${{ inputs.force && '--force' || '' }}
+          python scripts/box_faces.py ${{ inputs.force && '--force' || '' }} ${{ inputs.debug && '--debug' || '' }}
+      - name: Hibakereső képek
+        if: inputs.debug
+        run: |
+          git config user.name "inventory-bot"
+          git config user.email "actions@users.noreply.github.com"
+          mv assets/boxes/_debug /tmp/_debug
+          git stash -u -q || true
+          git checkout --orphan box-debug
+          git rm -rfq . && rm -rf ./*
+          cp -r /tmp/_debug/. .
+          git add -A && git commit -qm debug && git push -f origin box-debug
+          git checkout -q main && git stash pop -q || true
       - name: Mentés
-        if: steps.need.outputs.run == 'true'
+        if: steps.need.outputs.run == 'true' && !inputs.debug
         run: |
           git config user.name "inventory-bot"
           git config user.email "actions@users.noreply.github.com"
