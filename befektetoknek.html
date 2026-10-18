@@ -257,7 +257,7 @@
         <div><h4>Nyereség${open ? " (eddig)" : ""}</h4>
           <p class="me"><span>${esc(me)} · ${pct(s.share)} a saját tőkéje után</span><span class="num">${huf(s.myProfit)}</span></p>
           <p><span>Máté</span><span class="num">${huf(s.mateProfit)}</span></p>
-          ${open ? `<p><span>Várható nyereséged, ha minden elkel</span><span class="num">${huf(s.myProfitAll)}</span></p>`
+          ${open ? `<p><span>Várható nyereséged, amikor minden elkel</span><span class="num">${huf(s.myProfitAll)}</span></p>`
                  : `<p class="me"><span>Neked jár összesen (tőke + nyereség)</span><span class="num">${huf(s.capI + s.myProfit)}</span></p>`}
         </div>
       </div>` : `<p class="note">A befektetett tőkéd ennél az ügyletnél még nincs rögzítve, ezért a te részedet még nem tudjuk kiszámolni.</p>`;
