@@ -76,9 +76,68 @@
       style: "currency", currency: cur, maximumFractionDigits: cur === "HUF" ? 0 : 2
     }).format(v);
   };
+  // 3D product box: sets get their original LEGO box art on a cuboid,
+  // minifigures turn like on a display turntable.
+  const box3d = i => {
+    const set = i.type === "SET";
+    const front = set ? `https://img.bricklink.com/ItemImage/ON/0/${encodeURIComponent(i.no)}.png` : i.img;
+    return `<div class="stage"><div class="box3d${set ? "" : " flat"}" data-fallback="${esc(i.img)}">
+      <img class="f front" loading="lazy" alt="" src="${esc(front)}">
+      <i class="f back"></i>${set ? `<i class="f r"></i><i class="f l"></i><i class="f t"></i><i class="f bt"></i>` : ""}
+    </div></div>`;
+  };
+
+  const SPIN_MS = 9000;
+  const reduced = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const io = "IntersectionObserver" in window ? new IntersectionObserver(es => es.forEach(e => {
+    const a = e.target._spin; if (!a || e.target._hover) return;
+    e.isIntersecting ? a.play() : a.pause();
+  }), { rootMargin: "100px" }) : null;
+  const rot = deg => `rotateX(-10deg) rotateY(${deg}deg)`;
+  const HOVER = "rotateX(-6deg) rotateY(-24deg)";
+
+  function initBoxes(root) {
+    root.querySelectorAll(".box3d:not([data-ready])").forEach(box => {
+      box.dataset.ready = "1";
+      const img = box.querySelector(".front");
+      const setArt = () => box.style.setProperty("--art", `url("${img.currentSrc || img.src}")`);
+      img.addEventListener("load", setArt);
+      img.addEventListener("error", () => {
+        if (img.dataset.fb) { box.classList.add("noimg"); return; }
+        img.dataset.fb = "1"; box.classList.add("flat"); img.src = box.dataset.fallback;
+      });
+      if (img.complete && img.naturalWidth) setArt();
+      if (reduced || !box.animate) { box.style.transform = HOVER; return; }
+
+      const spin = box.animate([{ transform: rot(0) }, { transform: rot(360) }], { duration: SPIN_MS, iterations: Infinity });
+      spin.currentTime = Math.random() * SPIN_MS;
+      box._spin = spin;
+      if (io) io.observe(box);
+
+      const card = box.closest(".item");
+      let hov = null, angle = 0;
+      card.addEventListener("mouseenter", () => {
+        box._hover = true;
+        angle = ((spin.currentTime % SPIN_MS) / SPIN_MS) * 360;
+        spin.pause();
+        let target = -24;
+        target = angle + ((((target - angle) % 360) + 540) % 360 - 180);   // shortest way round
+        if (hov) hov.cancel();
+        hov = box.animate([{ transform: rot(angle) }, { transform: `rotateX(-6deg) rotateY(${target}deg)` }],
+                          { duration: 650, easing: "cubic-bezier(.2,.8,.2,1)", fill: "forwards" });
+      });
+      card.addEventListener("mouseleave", () => {
+        box._hover = false;
+        if (!hov) { spin.play(); return; }
+        hov.reverse();
+        hov.onfinish = () => { hov.cancel(); hov = null; spin.play(); };
+      });
+    });
+  }
+
   const card = i => `
       <a class="item" href="${esc(i.url)}" target="_blank" rel="noopener">
-        <div class="item__img"><img loading="lazy" src="${esc(i.img)}" alt="" onerror="this.style.opacity=0"></div>
+        <div class="item__img">${box3d(i)}</div>
         <div class="item__body">
           <span class="item__no">${esc(i.no)}${i.qty > 1 ? ` · ${i.qty} ${lang === "hu" ? "db" : "pcs"}` : ""}</span>
           <span class="item__name">${esc(i.name)}</span>
@@ -119,6 +178,7 @@
     document.querySelectorAll("[data-shelf]").forEach(g => {
       const list = data.items.filter(i => i.type === g.dataset.shelf).slice(0, 8);
       g.innerHTML = list.map(card).join("");
+      initBoxes(g);
     });
     document.querySelectorAll("[data-count]").forEach(el => {
       el.textContent = data.items.filter(i => i.type === el.dataset.count).length || el.textContent;
@@ -142,6 +202,7 @@
     let list = data.items.filter(i => i.type === TYPE && match(i));
     list.sort(sort === "pa" ? (a, b) => a.price - b.price : sort === "na" ? (a, b) => a.name.localeCompare(b.name) : (a, b) => b.price - a.price);
     $("grid").innerHTML = list.slice(0, shown).map(card).join("");
+    initBoxes($("grid"));
     $("count").textContent = list.length;
     $("qlabel").textContent = qv.trim() && !qv.includes("|") ? `${t("cat.for")}: „${qv.trim()}”` : "";
     $("empty").hidden = list.length > 0;

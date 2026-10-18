@@ -192,3 +192,24 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .foot a.foot__inv{display:inline-block;text-decoration:none;background:var(--gold);color:var(--green);font-weight:700;padding:6px 14px;border-radius:999px;margin-top:4px}
 .foot a.foot__inv:hover{background:#ffd93a}
 .inv-btn,.inv-btn:hover{text-decoration:none}
+
+/* 3D product boxes */
+.item__img{perspective:none}
+.stage{width:100%;height:100%;display:grid;place-items:center;perspective:640px}
+.box3d{--w:118px;--h:118px;--d:30px;position:relative;width:var(--w);height:var(--h);transform-style:preserve-3d;transform:rotateX(-10deg) rotateY(-24deg);will-change:transform}
+.box3d .f{position:absolute;left:0;top:0;width:var(--w);height:var(--h);backface-visibility:hidden;-webkit-backface-visibility:hidden;display:block}
+.box3d .front{object-fit:cover;transform:translateZ(calc(var(--d)/2));background:#fff;box-shadow:inset 0 0 0 1px rgba(0,0,0,.06)}
+.box3d .back{background:var(--art,#eee) center/cover;transform:rotateY(180deg) translateZ(calc(var(--d)/2));filter:brightness(.92)}
+.box3d .r,.box3d .l{width:var(--d);left:calc((var(--w) - var(--d))/2)}
+.box3d .r{background:linear-gradient(rgba(0,0,0,.12),rgba(0,0,0,.12)),var(--art,#ddd) right center/900% 100%;transform:rotateY(90deg) translateZ(calc(var(--w)/2))}
+.box3d .l{background:linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.18)),var(--art,#ddd) left center/900% 100%;transform:rotateY(-90deg) translateZ(calc(var(--w)/2))}
+.box3d .t,.box3d .bt{height:var(--d);top:calc((var(--h) - var(--d))/2)}
+.box3d .t{background:linear-gradient(rgba(255,255,255,.15),rgba(255,255,255,.15)),var(--art,#eee) center top/100% 900%;transform:rotateX(90deg) translateZ(calc(var(--h)/2))}
+.box3d .bt{background:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.25)),var(--art,#ccc) center bottom/100% 900%;transform:rotateX(-90deg) translateZ(calc(var(--h)/2))}
+/* flat turntable (minifigures, sets without box art) */
+.box3d.flat{--w:120px;--h:120px;--d:0px}
+.box3d.flat .front{object-fit:contain;background:transparent;box-shadow:none;transform:none}
+.box3d.flat .back{background:var(--art) center/contain no-repeat;filter:none;transform:rotateY(180deg)}
+.box3d.flat .r,.box3d.flat .l,.box3d.flat .t,.box3d.flat .bt{display:none}
+.box3d.noimg{visibility:hidden}
+@media (max-width:560px){ .box3d{--w:96px;--h:96px;--d:24px} .box3d.flat{--w:100px;--h:100px} }

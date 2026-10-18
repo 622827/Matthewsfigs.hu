@@ -54,6 +54,8 @@
   .deal[open] > .deal__head{border-bottom:1.5px solid var(--line)}
   .deal__head:hover{background:#fffdf4}
   .deal__head:focus-visible{outline:3px solid var(--gold);outline-offset:-3px}
+  .thumbs{display:flex;flex-wrap:wrap;gap:4px;max-width:430px;flex:0 1 auto}
+  .thumbs img{width:56px;height:44px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:8px;padding:2px}
   .deal__peek{display:grid;justify-items:end;text-align:right;line-height:1.2}
   .deal__peek span{font-size:13px;color:var(--muted)}
   .deal__peek b{font-family:var(--display);font-size:20px;color:#1d6b35}
@@ -61,7 +63,7 @@
   .chev{width:12px;height:12px;border-right:2.5px solid var(--green);border-bottom:2.5px solid var(--green);transform:rotate(45deg);margin:0 4px 6px 4px;transition:transform .2s;flex:none}
   .deal[open] .chev{transform:rotate(-135deg);margin-bottom:-4px}
   @media (prefers-reduced-motion: reduce){ .chev{transition:none} }
-  @media (max-width:560px){ .deal__head{flex-wrap:wrap;gap:10px} .deal__title{flex-basis:calc(100% - 90px)} .deal__peek{justify-items:start;text-align:left;margin-right:auto} }
+  @media (max-width:560px){ .thumbs{max-width:100%;order:5;flex-basis:100%} .thumbs img{width:44px;height:36px} .deal__head{flex-wrap:wrap;gap:10px} .deal__title{flex-basis:calc(100% - 90px)} .deal__peek{justify-items:start;text-align:left;margin-right:auto} }
   .deal__head img{width:72px;height:56px;object-fit:contain;flex:none}
   .deal__title{flex:1;min-width:0}
   .deal__title small{display:block;font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.04em}
@@ -295,7 +297,8 @@
       </div>` : `<p class="note">A befektetett tőkéd ennél az ügyletnél még nincs rögzítve, ezért a te részedet még nem tudjuk kiszámolni.</p>`;
     return `<details class="deal">
       <summary class="deal__head">
-        ${d.set ? `<img src="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(d.set)}-1.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">` : ""}
+        ${d.set ? `<img src="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(d.set)}-1.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">`
+          : `<div class="thumbs">${d.lines.filter(l => l.set).map(l => `<img src="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(l.set)}-1.png" alt="${esc(l.name || l.set)}" title="${esc(l.name || l.set)}" loading="lazy" onerror="this.style.display='none'">`).join("")}</div>`}
         <div class="deal__title"><small>${esc(d.set || `${d.lines.length} féle szett`)}</small><b>${esc(d.name)}</b></div>
         <div class="deal__peek">
           <span class="num">${s.sold}/${s.qty} db eladva</span>
