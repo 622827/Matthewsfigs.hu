@@ -272,21 +272,27 @@
   const PAGE = 24;
   let shown = PAGE;
   // clickable label filters (Big gun, Army builder, Best price, Retired, Pre-order)
-  let activeLabel = new URLSearchParams(location.search).get("label") || "";
+  // several labels can be on at once: an item must carry all of them
+  let activeLabels = (new URLSearchParams(location.search).get("label") || "").split(",").map(x => x.trim()).filter(Boolean);
   const allLabels = i => [...labelsOf(i), ...(i.preorder ? ["Pre-order"] : [])];
   function buildLabelChips() {
     const box = $("labelChips"); if (!box) return;
     const count = {};
     for (const i of data.items) if (i.type === TYPE) for (const l of allLabels(i)) count[l] = (count[l] || 0) + 1;
     const names = Object.keys(count).sort((a, b) => count[b] - count[a]);
+    // how many items would remain if this label were added to the current selection
+    const remaining = l => data.items.filter(i => i.type === TYPE && [...activeLabels, l].every(x => allLabels(i).includes(x))).length;
     if (!names.length) { box.hidden = true; return; }
     const color = l => l === "Pre-order" ? "pre" : ((LABELS._colors || {})[l] || "red");
     box.innerHTML = `<span class="chips__label">${lang === "hu" ? "Címkék:" : "Labels:"}</span>` + names.map(l =>
-      `<button type="button" class="lchip lchip--${color(l)}${activeLabel === l ? " is-on" : ""}" data-label="${esc(l)}" aria-pressed="${activeLabel === l}">${esc(l)} <b>${count[l]}</b></button>`).join("");
+      { const on = activeLabels.includes(l), n = on ? null : remaining(l);
+        return `<button type="button" class="lchip lchip--${color(l)}${on ? " is-on" : ""}${n === 0 ? " is-empty" : ""}" data-label="${esc(l)}" aria-pressed="${on}"${n === 0 ? " disabled" : ""}>${on ? "✓ " : ""}${esc(l)} <b>${on ? "" : n}</b></button>`; }).join("") +
+      (activeLabels.length ? `<button type="button" class="lchip lchip--clear" data-clear="1">${lang === "hu" ? "Szűrés törlése" : "Clear"}</button>` : "");
     box.hidden = false;
     box.querySelectorAll(".lchip").forEach(b => b.onclick = () => {
-      activeLabel = activeLabel === b.dataset.label ? "" : b.dataset.label;
-      const u = new URL(location.href); activeLabel ? u.searchParams.set("label", activeLabel) : u.searchParams.delete("label");
+      if (b.dataset.clear) activeLabels = [];
+      else { const l = b.dataset.label; activeLabels = activeLabels.includes(l) ? activeLabels.filter(x => x !== l) : [...activeLabels, l]; }
+      const u = new URL(location.href); activeLabels.length ? u.searchParams.set("label", activeLabels.join(",")) : u.searchParams.delete("label");
       history.replaceState(null, "", u);
       buildLabelChips(); renderCatalog(true);
     });
@@ -296,14 +302,13 @@
     if (reset) shown = PAGE;
     const qv = $("search").value;
     const match = matcher(qv), sort = $("sort").value;
-    const lab = activeLabel;
-    let list = data.items.filter(i => i.type === TYPE && match(i) && (!lab || allLabels(i).includes(lab)));
+    let list = data.items.filter(i => i.type === TYPE && match(i) && activeLabels.every(l => allLabels(i).includes(l)));
     const by = sort === "pa" ? (a, b) => a.price - b.price : sort === "na" ? (a, b) => a.name.localeCompare(b.name) : (a, b) => b.price - a.price;
     list.sort((a, b) => (!!a.preorder - !!b.preorder) || by(a, b));
     $("grid").innerHTML = list.slice(0, shown).map(card).join("");
     initBoxes($("grid"));
     $("count").textContent = list.length;
-    $("qlabel").textContent = (qv.trim() && !qv.includes("|") ? `${t("cat.for")}: „${qv.trim()}”` : "") + (activeLabel ? ` · ${activeLabel}` : "");
+    $("qlabel").textContent = (qv.trim() && !qv.includes("|") ? `${t("cat.for")}: „${qv.trim()}”` : "") + (activeLabels.length ? ` · ${activeLabels.join(" + ")}` : "");
     $("empty").hidden = list.length > 0;
     $("moreBtn").parentElement.hidden = list.length <= shown;
     document.querySelectorAll(".chip").forEach(c => c.classList.toggle("is-on", norm(c.dataset.q) === norm(qv)));

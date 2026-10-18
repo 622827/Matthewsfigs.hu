@@ -259,3 +259,5 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .box3d.fig .mid{filter:brightness(.22) saturate(.6);backface-visibility:visible;-webkit-backface-visibility:visible}
 .box3d.fig .base{position:absolute;left:50%;top:calc(var(--h) - 3px);width:78px;height:78px;margin-left:-39px;margin-top:-39px;border-radius:50%;background:radial-gradient(circle at 50% 45%,#2f5a3b,#12321b 70%);transform:rotateX(90deg) translateZ(-2px);box-shadow:0 0 0 2px #0a2111}
 .box3d.fig .base--top{background:radial-gradient(circle at 50% 40%,#3d7049,#1a4426 72%);transform:rotateX(90deg) translateZ(3px);box-shadow:none}
+.lchip.is-empty{opacity:.4;cursor:default;transform:none}
+.lchip--clear{background:transparent;color:inherit;border-color:rgba(247,243,227,.45);font-weight:600}
