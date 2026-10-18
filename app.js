@@ -147,7 +147,7 @@
 
   const card = i => `
       <a class="item" href="${esc(i.url)}" target="_blank" rel="noopener">
-        <div class="item__img">${box3d(i)}</div>
+        <div class="item__img"><img loading="lazy" src="${esc(i.img)}" alt="" onerror="this.style.opacity=0"></div>
         <div class="item__body">
           <span class="item__no">${esc(i.no)}${i.qty > 1 ? ` · ${i.qty} ${lang === "hu" ? "db" : "pcs"}` : ""}</span>
           <span class="item__name">${esc(i.name)}</span>
