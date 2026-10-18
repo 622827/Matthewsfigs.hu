@@ -230,3 +230,32 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .badge--blue{background:#e2ebf6;color:#1f4f8a}
 .badge--gray{background:#ece9df;color:#5b5a50}
 .badge--gold{background:#fff1b0;color:#6b5100}
+
+/* label filters on the catalog pages */
+.chips--labels{margin-top:14px}
+.lchip{font:700 13px var(--body);border:2px solid transparent;border-radius:999px;padding:6px 12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px;transition:transform .15s}
+.lchip b{font-weight:800;font-size:11px;opacity:.7}
+.lchip:hover{transform:translateY(-1px)}
+.lchip.is-on{border-color:var(--gold);box-shadow:0 0 0 2px var(--green) inset}
+.lchip--red{background:#f8e4e1;color:#a3261b}
+.lchip--blue{background:#e2ebf6;color:#1f4f8a}
+.lchip--gray{background:#ece9df;color:#5b5a50}
+.lchip--gold{background:#fff1b0;color:#6b5100}
+.lchip--pre{background:var(--gold);color:var(--green)}
+
+/* "notify me" dialog for pre-order items */
+.notify{border:0;border-radius:var(--r);padding:0;max-width:min(440px,calc(100vw - 32px));box-shadow:0 30px 80px -20px rgba(10,33,17,.6);background:var(--cream);color:var(--ink)}
+.notify::backdrop{background:rgba(10,33,17,.55)}
+.notify form{padding:28px;display:grid;gap:10px}
+.notify .kicker{color:var(--gold-ink);margin:0}
+.notify h3{font-size:24px;color:var(--green)}
+.notify p{margin:0;color:var(--muted)}
+.notify__btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+
+/* minifigure display stand */
+.box3d.fig .f{background:var(--art) center/100% 100% no-repeat;box-shadow:none;background-color:transparent}
+.box3d.fig .front{transform:translateZ(calc(var(--t) / 2));object-fit:fill}
+.box3d.fig .back{transform:rotateY(180deg) translateZ(calc(var(--t) / 2));filter:brightness(.8)}
+.box3d.fig .mid{filter:brightness(.22) saturate(.6);backface-visibility:visible;-webkit-backface-visibility:visible}
+.box3d.fig .base{position:absolute;left:50%;top:calc(var(--h) - 3px);width:78px;height:78px;margin-left:-39px;margin-top:-39px;border-radius:50%;background:radial-gradient(circle at 50% 45%,#2f5a3b,#12321b 70%);transform:rotateX(90deg) translateZ(-2px);box-shadow:0 0 0 2px #0a2111}
+.box3d.fig .base--top{background:radial-gradient(circle at 50% 40%,#3d7049,#1a4426 72%);transform:rotateX(90deg) translateZ(3px);box-shadow:none}

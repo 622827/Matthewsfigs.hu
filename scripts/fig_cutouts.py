@@ -2,7 +2,7 @@
 """Cut the minifigures out of their white BrickLink background (transparent PNG),
 for the "display stand" turntable on the site.
 
-Output: assets/figs/<no>.png and assets/figs/index.json {"sw0314": {"r": 0.62}}  (r = width / height)
+Output: assets/figs/<no>.webp and assets/figs/index.json {"sw0314": {"r": 0.62}}  (r = width / height)
 Only new figures are processed unless --force.
 Requires: pip install opencv-python-headless numpy
 """
@@ -15,7 +15,7 @@ import numpy as np
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets" / "figs"
 INV = ROOT / "data" / "inventory.json"
-H_PX = 360  # output height
+H_PX = 280  # output height
 
 
 def fetch(no):
@@ -48,12 +48,18 @@ def cutout(bgr):
     main_i = 1 + int(np.argmax(stats[1:, cv2.CC_STAT_AREA]))
     keep = (lab == main_i).astype(np.uint8) * 255
     keep = cv2.morphologyEx(keep, cv2.MORPH_CLOSE, np.ones((3, 3), np.uint8))
-    # fill holes inside the figure (e.g. white armour enclosed by outlines that touched the bg colour)
-    holes = keep.copy()
-    hm = np.zeros((h + 2, w + 2), np.uint8)
-    cv2.floodFill(holes, hm, (0, 0), 255)
-    keep = keep | cv2.bitwise_not(holes)
+    # background pockets enclosed by the figure (gap between arm and body, between the legs)
+    tight = ((dist <= 7) & (keep > 0)).astype(np.uint8)
+    m, plab, pst, _ = cv2.connectedComponentsWithStats(tight, 4)
+    for i in range(1, m):
+        if pst[i, cv2.CC_STAT_AREA] >= 40:
+            keep[plab == i] = 0
     if keep.sum() / 255 < 0.05 * h * w:
+        return None
+    # photo backgrounds that aren't plain (gradients, shadows) leave big background-coloured
+    # areas on the figure: such figures keep their normal still picture instead
+    kept = keep > 0
+    if (dist[kept] <= 22).mean() > 0.22:
         return None
     alpha = cv2.GaussianBlur(keep, (3, 3), 0)
     ys, xs = np.where(keep > 0)
@@ -82,7 +88,7 @@ def main():
             index[no] = None
             failed += 1
             continue
-        cv2.imwrite(str(OUT / f"{no}.png"), res, [cv2.IMWRITE_PNG_COMPRESSION, 9])
+        cv2.imwrite(str(OUT / f"{no}.webp"), res, [cv2.IMWRITE_WEBP_QUALITY, 82])
         index[no] = {"r": round(res.shape[1] / res.shape[0], 4)}
         ok += 1
     idx_path.write_text(json.dumps(index, indent=1, sort_keys=True))

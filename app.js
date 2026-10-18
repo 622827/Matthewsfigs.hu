@@ -78,8 +78,22 @@
   };
   // 3D product box: sets get their original LEGO box art on a cuboid,
   // minifigures turn like on a display turntable.
-  let BOXES = {}, LABELS = {};   // assets/boxes/index.json: flattened faces cut from the box photos
+  let BOXES = {}, LABELS = {}, FIGS = {};   // assets/boxes/index.json: flattened faces cut from the box photos
+  // minifigure "display stand": the cut-out figure with a little thickness, on a round base
+  const fig3d = (i, f) => {
+    const H = 116, w = Math.min(96, H * f.r), h = w / f.r, T = 12, N = 12;
+    const art = `assets/figs/${encodeURIComponent(i.no)}.webp`;
+    let mids = "";
+    for (let k = 1; k < N; k++) mids += `<i class="f mid" style="transform:translateZ(${(-T / 2 + (T * k) / N).toFixed(2)}px)"></i>`;
+    return `<div class="stage"><div class="box3d fig" data-side="left" style="--w:${w.toFixed(1)}px;--h:${h.toFixed(1)}px;--t:${T}px;--art:url('${art}')">
+      <i class="base"></i><i class="base base--top"></i>
+      <img class="f front" loading="lazy" alt="" src="${art}">
+      ${mids}<i class="f back"></i>
+    </div></div>`;
+  };
+
   const box3d = i => {
+    if (i.type === "MINIFIG" && FIGS[i.no]) return fig3d(i, FIGS[i.no]);
     const m = i.type === "SET" ? BOXES[i.no] : null;
     if (!m) return `<div class="stage"><div class="box3d flat still"><img class="f front" loading="lazy" alt="" src="${esc(i.img)}"><i class="f back" style="--art:url('${esc(i.img)}')"></i></div></div>`;
     const W = 134, H = 118;
@@ -159,6 +173,38 @@
   });
 
   const MESSENGER = "https://m.me/100091130775442";
+  const shortNo = i => (i.type === "SET" ? i.no.replace(/-1$/, "") : i.no);
+  const notifyLink = i => MESSENGER + "?text=" + encodeURIComponent(
+    (lang === "hu" ? "Szia! Értesítést kérek, ha újra elérhető lesz: " : "Hi! Please let me know when this is back in stock: ") + `${shortNo(i)} ${i.name}`);
+
+  // pre-order cards: ask first, then open Messenger with the request already typed in
+  function askNotify(i, href) {
+    let dlg = document.getElementById("notifyDlg");
+    if (!dlg) {
+      dlg = document.createElement("dialog"); dlg.id = "notifyDlg"; dlg.className = "notify";
+      document.body.appendChild(dlg);
+      dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+    }
+    dlg.innerHTML = `<form method="dialog">
+      <p class="kicker">${lang === "hu" ? "Jelenleg elfogyott" : "Sold out right now"}</p>
+      <h3>${esc(i.name)}</h3>
+      <p>${lang === "hu" ? "Szeretnél értesítést kapni, ha újra elérhető lesz? Messengeren megnyílik egy kész üzenet, csak el kell küldened, és szólunk, amint megvan." : "Would you like a message when it's back in stock? Messenger opens with the request already written, just send it and we'll let you know."}</p>
+      <div class="notify__btns">
+        <a class="btn btn--gold" href="${esc(href)}" target="_blank" rel="noopener" id="notifyYes">${lang === "hu" ? "Igen, értesítsetek" : "Yes, notify me"}</a>
+        <button class="btn btn--line" value="no">${lang === "hu" ? "Mégsem" : "No thanks"}</button>
+      </div></form>`;
+    dlg.querySelector("#notifyYes").onclick = () => setTimeout(() => dlg.close(), 50);
+    dlg.showModal ? dlg.showModal() : window.open(href, "_blank", "noopener");
+  }
+  document.addEventListener("click", e => {
+    const a = e.target.closest("a.item--pre");
+    if (!a) return;
+    const box = a.querySelector(".box3d");
+    if (box && !box._hold && !matchMedia("(hover: hover)").matches && box._spin) return;  // first tap only stops the box
+    e.preventDefault();
+    const i = data.items.find(x => x.preorder && x.no === a.dataset.pre);
+    if (i) askNotify(i, a.href);
+  });
   const labelsOf = i => {
     if (i.type !== "SET") return [];
     const out = [...(LABELS[i.no] || [])], n = i.name.toLowerCase();
@@ -166,7 +212,7 @@
     return out;
   };
   const card = i => `
-      <a class="item${i.preorder ? " item--pre" : ""}" href="${esc(i.preorder ? MESSENGER : i.url)}" target="_blank" rel="noopener"${i.preorder ? ` title="${t("pre.hint")}"` : ""}>
+      <a class="item${i.preorder ? " item--pre" : ""}" href="${esc(i.preorder ? notifyLink(i) : i.url)}" target="_blank" rel="noopener"${i.preorder ? ` data-pre="${esc(i.no)}" title="${t("pre.hint")}"` : ""}>
         <div class="item__img">${box3d(i)}</div>
         <div class="item__body">
           <span class="item__no">${esc(i.type === "SET" ? i.no.replace(/-1$/, "") : i.no)}${i.qty > 1 ? ` · ${i.qty} ${lang === "hu" ? "db" : "pcs"}` : ""}</span>
@@ -225,17 +271,39 @@
   // ---------- catalog pages ----------
   const PAGE = 24;
   let shown = PAGE;
+  // clickable label filters (Big gun, Army builder, Best price, Retired, Pre-order)
+  let activeLabel = new URLSearchParams(location.search).get("label") || "";
+  const allLabels = i => [...labelsOf(i), ...(i.preorder ? ["Pre-order"] : [])];
+  function buildLabelChips() {
+    const box = $("labelChips"); if (!box) return;
+    const count = {};
+    for (const i of data.items) if (i.type === TYPE) for (const l of allLabels(i)) count[l] = (count[l] || 0) + 1;
+    const names = Object.keys(count).sort((a, b) => count[b] - count[a]);
+    if (!names.length) { box.hidden = true; return; }
+    const color = l => l === "Pre-order" ? "pre" : ((LABELS._colors || {})[l] || "red");
+    box.innerHTML = `<span class="chips__label">${lang === "hu" ? "Címkék:" : "Labels:"}</span>` + names.map(l =>
+      `<button type="button" class="lchip lchip--${color(l)}${activeLabel === l ? " is-on" : ""}" data-label="${esc(l)}" aria-pressed="${activeLabel === l}">${esc(l)} <b>${count[l]}</b></button>`).join("");
+    box.hidden = false;
+    box.querySelectorAll(".lchip").forEach(b => b.onclick = () => {
+      activeLabel = activeLabel === b.dataset.label ? "" : b.dataset.label;
+      const u = new URL(location.href); activeLabel ? u.searchParams.set("label", activeLabel) : u.searchParams.delete("label");
+      history.replaceState(null, "", u);
+      buildLabelChips(); renderCatalog(true);
+    });
+  }
+
   function renderCatalog(reset) {
     if (reset) shown = PAGE;
     const qv = $("search").value;
     const match = matcher(qv), sort = $("sort").value;
-    let list = data.items.filter(i => i.type === TYPE && match(i));
+    const lab = activeLabel;
+    let list = data.items.filter(i => i.type === TYPE && match(i) && (!lab || allLabels(i).includes(lab)));
     const by = sort === "pa" ? (a, b) => a.price - b.price : sort === "na" ? (a, b) => a.name.localeCompare(b.name) : (a, b) => b.price - a.price;
     list.sort((a, b) => (!!a.preorder - !!b.preorder) || by(a, b));
     $("grid").innerHTML = list.slice(0, shown).map(card).join("");
     initBoxes($("grid"));
     $("count").textContent = list.length;
-    $("qlabel").textContent = qv.trim() && !qv.includes("|") ? `${t("cat.for")}: „${qv.trim()}”` : "";
+    $("qlabel").textContent = (qv.trim() && !qv.includes("|") ? `${t("cat.for")}: „${qv.trim()}”` : "") + (activeLabel ? ` · ${activeLabel}` : "");
     $("empty").hidden = list.length > 0;
     $("moreBtn").parentElement.hidden = list.length <= shown;
     document.querySelectorAll(".chip").forEach(c => c.classList.toggle("is-on", norm(c.dataset.q) === norm(qv)));
@@ -261,16 +329,17 @@
 
   function renderAll(reset) {
     if (!data.items.length) return;
-    PAGE_KIND === "catalog" ? renderCatalog(reset) : renderHome();
+    if (PAGE_KIND === "catalog") { buildLabelChips(); renderCatalog(reset); } else renderHome();
   }
 
   Promise.all([
     fetch("data/inventory.json", { cache: "no-cache" }).then(r => r.json()),
     fetch("assets/boxes/index.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
-    fetch("data/labels.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({}))
+    fetch("data/labels.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
+    fetch("assets/figs/index.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({}))
   ])
-    .then(([d, boxes, labels]) => {
-      BOXES = boxes || {}; LABELS = labels || {};
+    .then(([d, boxes, labels, figs]) => {
+      BOXES = boxes || {}; LABELS = labels || {}; FIGS = figs || {};
       const byItem = new Map();
       for (const i of d.items) {
         const k = i.type + ":" + i.no + (i.preorder ? ":pre" : ""), m = byItem.get(k);
