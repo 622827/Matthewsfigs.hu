@@ -193,21 +193,21 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .foot a.foot__inv:hover{background:#ffd93a}
 .inv-btn,.inv-btn:hover{text-decoration:none}
 
-/* 3D product boxes (faces cut from the real box photo) */
+/* 3D product boxes (faces cut from the real box photo).
+   Side/top/bottom faces are 2px larger than the box edge so they overlap the
+   front/back by 1px and no hairline gap shows at the corners. */
 .stage{width:100%;height:100%;display:grid;place-items:center;perspective:700px}
-.box3d{--w:120px;--h:100px;--d:26px;position:relative;width:var(--w);height:var(--h);transform-style:preserve-3d;transform:rotateX(-15deg) rotateY(32deg);will-change:transform}
-.box3d .f{position:absolute;left:0;top:0;width:var(--w);height:var(--h);display:block;backface-visibility:hidden;-webkit-backface-visibility:hidden;background-size:100% 100%;background-repeat:no-repeat}
-.box3d .front{transform:translateZ(calc(var(--d) / 2));object-fit:fill}
+.box3d{--w:120px;--h:100px;--d:26px;--o:1px;position:relative;width:var(--w);height:var(--h);transform-style:preserve-3d;transform:rotateX(-15deg) rotateY(32deg);will-change:transform}
+.box3d .f{position:absolute;left:0;top:0;width:var(--w);height:var(--h);display:block;backface-visibility:hidden;-webkit-backface-visibility:hidden;background-size:100% 100%;background-repeat:no-repeat;background-color:#2a2a2a}
+.box3d .front{transform:translateZ(calc(var(--d) / 2));background-image:var(--front)}
+.box3d:not(.flat) .f{box-shadow:inset 0 0 0 1px rgba(0,0,0,.28)}
 .box3d .back{background-image:var(--front);transform:rotateY(180deg) translateZ(calc(var(--d) / 2));filter:brightness(.82)}
-.box3d .l,.box3d .r{width:var(--d);left:calc((var(--w) - var(--d)) / 2)}
+.box3d .l,.box3d .r{width:calc(var(--d) + 2 * var(--o));height:calc(var(--h) + 2 * var(--o));left:calc((var(--w) - var(--d)) / 2 - var(--o));top:calc(-1 * var(--o));background-image:var(--side)}
 .box3d .l{transform:rotateY(-90deg) translateZ(calc(var(--w) / 2))}
-.box3d .r{transform:rotateY(90deg) translateZ(calc(var(--w) / 2)) scaleX(-1)}
-.box3d.side-left .l,.box3d.side-left .r{background-image:var(--side)}
-.box3d.side-right .r{transform:rotateY(90deg) translateZ(calc(var(--w) / 2))}
-.box3d.side-right .l{transform:rotateY(-90deg) translateZ(calc(var(--w) / 2)) scaleX(-1)}
-.box3d.side-right .l,.box3d.side-right .r{background-image:var(--side)}
-.box3d .r,.box3d.side-right .l{filter:brightness(.9)}
-.box3d .t,.box3d .bt{height:var(--d);top:calc((var(--h) - var(--d)) / 2);background-image:var(--top)}
+.box3d .r{transform:rotateY(90deg) translateZ(calc(var(--w) / 2)) scaleX(-1);filter:brightness(.9)}
+.box3d.side-right .r{transform:rotateY(90deg) translateZ(calc(var(--w) / 2));filter:none}
+.box3d.side-right .l{transform:rotateY(-90deg) translateZ(calc(var(--w) / 2)) scaleX(-1);filter:brightness(.9)}
+.box3d .t,.box3d .bt{width:calc(var(--w) + 2 * var(--o));height:calc(var(--d) + 2 * var(--o));left:calc(-1 * var(--o));top:calc((var(--h) - var(--d)) / 2 - var(--o));background-image:var(--top)}
 .box3d .t{transform:rotateX(90deg) translateZ(calc(var(--h) / 2))}
 .box3d .bt{transform:rotateX(-90deg) translateZ(calc(var(--h) / 2)) scaleY(-1);filter:brightness(.7)}
 /* flat turntable (minifigures, bags) */

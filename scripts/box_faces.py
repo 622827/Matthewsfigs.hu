@@ -145,14 +145,34 @@ def area(q):
     return abs(cv2.contourArea(np.array(q, np.float32)))
 
 
-def warp(img, quad_tl_tr_br_bl, w, h):
+def warp(img, quad_tl_tr_br_bl, w, h, inset=0.025):
+    """Perspective-correct one face. The face is cut slightly inside its edges
+    (inset) so no background or edge highlight ends up on the border."""
+    w, h = int(w), int(h)
+    mx, my = max(2.0, inset * w), max(2.0, inset * h)
     src = np.array(quad_tl_tr_br_bl, np.float32)
-    dst = np.array([[0, 0], [w - 1, 0], [w - 1, h - 1], [0, h - 1]], np.float32)
+    dst = np.array([[-mx, -my], [w - 1 + mx, -my], [w - 1 + mx, h - 1 + my], [-mx, h - 1 + my]], np.float32)
     M = cv2.getPerspectiveTransform(src, dst)
-    out = cv2.warpPerspective(img, M, (int(w), int(h)), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
+    out = cv2.warpPerspective(img, M, (w, h), flags=cv2.INTER_CUBIC, borderMode=cv2.BORDER_REPLICATE)
     bgr = out[:, :, :3].astype(np.float32)
     a = out[:, :, 3:4].astype(np.float32) / 255.0
-    return (bgr * a + 255 * (1 - a)).astype(np.uint8)  # flatten onto white
+    flat = (bgr * a + 255 * (1 - a)).astype(np.uint8)  # flatten onto white
+    return trim_white(flat)
+
+
+def trim_white(face, limit=0.08):
+    """Cut away near-white rows/columns that are left on the borders, then scale back."""
+    h, w = face.shape[:2]
+    g = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY).astype(np.float32)
+    whiteish = lambda v: (v > 225).mean() > 0.6
+    t, b, l, r = 0, h, 0, w
+    while t < h * limit and whiteish(g[t, l:r]): t += 1
+    while h - b < h * limit and whiteish(g[b - 1, l:r]): b -= 1
+    while l < w * limit and whiteish(g[t:b, l]): l += 1
+    while w - r < w * limit and whiteish(g[t:b, r - 1]): r -= 1
+    if (t, b, l, r) == (0, h, 0, w):
+        return face
+    return cv2.resize(face[t:b, l:r], (w, h), interpolation=cv2.INTER_CUBIC)
 
 
 WHY = {}

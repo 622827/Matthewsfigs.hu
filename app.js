@@ -86,7 +86,7 @@
     let w = W, h = W * m.h; if (h > H) { h = H; w = H / m.h; }
     const d = w * m.d, base = `assets/boxes/${encodeURIComponent(i.no)}`;
     return `<div class="stage"><div class="box3d side-${m.side}" data-side="${m.side}" style="--w:${w.toFixed(1)}px;--h:${h.toFixed(1)}px;--d:${d.toFixed(1)}px;--front:url('${base}-front.jpg');--side:url('${base}-side.jpg');--top:url('${base}-top.jpg')">
-      <img class="f front" loading="lazy" alt="" src="${base}-front.jpg">
+      <i class="f front" role="img" aria-label="${esc(i.name)}"></i>
       <i class="f back"></i><i class="f l"></i><i class="f r"></i><i class="f t"></i><i class="f bt"></i>
     </div></div>`;
   };
@@ -108,8 +108,8 @@
   function initBoxes(root) {
     root.querySelectorAll(".box3d:not([data-ready])").forEach(box => {
       box.dataset.ready = "1";
-      const img = box.querySelector(".front");
-      img.addEventListener("error", () => box.classList.add("noimg"));
+      const img = box.querySelector("img.front");
+      if (img) img.addEventListener("error", () => box.classList.add("noimg"));
       if (box.classList.contains("still")) return;                // poly / paper bags: plain picture
       const pose = poseOf(box);
       if (reduced || !box.animate) { box.style.transform = rot(pose, -15); return; }
