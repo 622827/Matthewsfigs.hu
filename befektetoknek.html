@@ -83,6 +83,18 @@
   .split p.me{font-weight:700;color:var(--green)}
   .empty-inv{background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:40px 28px;text-align:center;display:grid;justify-items:center;gap:12px}
   .empty-inv p{max-width:52ch;color:var(--muted);margin:0}
+  .dash-actions{display:flex;gap:8px;flex-wrap:wrap}
+  .master{padding:40px 0 72px}
+  .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+  .mcard{all:unset;box-sizing:border-box;cursor:pointer;background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:6px}
+  .mcard:hover,.mcard:focus-visible{border-color:var(--gold);box-shadow:0 8px 22px -14px rgba(18,50,27,.5)}
+  .mcard b{font-family:var(--display);font-size:24px;color:var(--green)}
+  .mcard > span{font-size:14px;color:var(--muted)}
+  .mcard dl{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:8px 0 4px}
+  .mcard dt{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+  .mcard dd{margin:0;font-weight:700;color:var(--green)}
+  .mcard i{font-style:normal;font-weight:700;color:var(--green);border-bottom:2px solid var(--gold);justify-self:start}
+  .mcard--err{cursor:default;border-color:#e2b4ae}
   .note{font-size:14px;color:var(--muted);background:var(--cream);border-radius:10px;padding:12px 14px;margin:0}
   @media (max-width:760px){ .kpis{grid-template-columns:repeat(2,1fr)} .split{grid-template-columns:1fr} }
 </style>
@@ -126,9 +138,13 @@
           <h1 id="hello">Szia!</h1>
           <p id="sub"></p>
         </div>
-        <button class="logout" id="logout" type="button">Kilépés</button>
+        <div class="dash-actions">
+          <button class="logout" id="back" type="button" hidden>← Befektetők</button>
+          <button class="logout" id="logout" type="button">Kilépés</button>
+        </div>
       </div>
     </section>
+    <section class="wrap master" id="master" hidden></section>
     <section class="kpis-band">
       <div class="kpis wrap" id="kpis"></div>
     </section>
@@ -301,7 +317,7 @@
     try {
       const data = await unlock($("pw").value);
       if (!data) { $("err").textContent = "Ehhez a jelszóhoz nem tartozik befektetői oldal. Figyelj a kis- és nagybetűkre."; return; }
-      render(data);
+      data.master ? await renderMaster(data) : render(data);
       $("pw").value = "";
       $("lock").hidden = true; $("dash").hidden = false; window.scrollTo(0, 0);
     } catch (err) {
@@ -310,7 +326,41 @@
       $("go").disabled = false; $("go").textContent = "Belépés";
     }
   });
-  $("logout").onclick = () => { $("deals").innerHTML = $("kpis").innerHTML = ""; $("dash").hidden = true; $("lock").hidden = false; $("pw").focus(); };
+  $("logout").onclick = () => {
+    $("deals").innerHTML = $("kpis").innerHTML = $("master").innerHTML = "";
+    MASTER = null; $("back").hidden = true; $("master").hidden = true;
+    $("dash").hidden = true; $("lock").hidden = false; $("pw").focus();
+  };
+  $("back").onclick = () => showMasterList();
+
+  // ---------- master view: pick an investor ----------
+  let MASTER = null;   // [{name, data}]
+  async function renderMaster(m) {
+    const loaded = await Promise.all(m.investors.map(async i => ({ name: i.name, data: await unlock(i.password).catch(() => null) })));
+    MASTER = loaded;
+    showMasterList();
+  }
+  function showMasterList() {
+    $("hello").textContent = "Befektetők";
+    $("sub").textContent = "Válaszd ki, kinek az oldalát szeretnéd megnézni.";
+    $("back").hidden = true;
+    $("kpis").parentElement.hidden = true; $("deals").hidden = true; $("deals").innerHTML = "";
+    $("master").hidden = false;
+    $("master").innerHTML = `<div class="mgrid">` + MASTER.map((x, n) => {
+      if (!x.data) return `<div class="mcard mcard--err"><b>${esc(x.name)}</b><span>Az oldal nem nyitható meg (hibás jelszó a listában).</span></div>`;
+      let cap = 0, prof = 0, open = 0;
+      for (const d of x.data.deals) { const s = calc(d); if (s.capKnown) { cap += s.capI; prof += s.myProfit; } if (d.status === "open") open++; }
+      return `<button class="mcard" type="button" data-n="${n}">
+        <b>${esc(x.name)}</b>
+        <span>${x.data.deals.length ? `${x.data.deals.length} ügylet · ${open} folyamatban` : "Még nincs ügylet"}</span>
+        <dl><div><dt>Tőke</dt><dd class="num">${huf(cap)}</dd></div><div><dt>Nyeresége eddig</dt><dd class="num">${huf(prof)}</dd></div></dl>
+        <i>Megnyitás →</i></button>`;
+    }).join("") + `</div>`;
+    $("master").querySelectorAll(".mcard[data-n]").forEach(b => b.onclick = () => {
+      $("master").hidden = true; $("deals").hidden = false; $("back").hidden = false;
+      render(MASTER[+b.dataset.n].data); window.scrollTo(0, 0);
+    });
+  }
 })();
 </script>
 </body>
