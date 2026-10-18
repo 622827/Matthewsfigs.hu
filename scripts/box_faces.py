@@ -157,20 +157,57 @@ def warp(img, quad_tl_tr_br_bl, w, h, inset=0.025):
     bgr = out[:, :, :3].astype(np.float32)
     a = out[:, :, 3:4].astype(np.float32) / 255.0
     flat = (bgr * a + 255 * (1 - a)).astype(np.uint8)  # flatten onto white
-    return trim_white(flat)
+    for _ in range(3):  # a line further in can surface after the first cut
+        trimmed = trim_white(flat)
+        if trimmed is flat:
+            break
+        flat = trimmed
+    return flat
 
 
-def trim_white(face, limit=0.08):
-    """Cut away near-white rows/columns that are left on the borders, then scale back."""
+def trim_white(face, band=0.12):
+    """Cut away white lines near the borders: background left at the edge and the
+    bright highlight along the box edges, which can sit a few pixels inside the face.
+    Within the outer 12 % of each side, everything up to the innermost white line is
+    removed, then the face is scaled back to its size."""
     h, w = face.shape[:2]
     g = cv2.cvtColor(face, cv2.COLOR_BGR2GRAY).astype(np.float32)
-    whiteish = lambda v: (v > 225).mean() > 0.6
-    t, b, l, r = 0, h, 0, w
-    while t < h * limit and whiteish(g[t, l:r]): t += 1
-    while h - b < h * limit and whiteish(g[b - 1, l:r]): b -= 1
-    while l < w * limit and whiteish(g[t:b, l]): l += 1
-    while w - r < w * limit and whiteish(g[t:b, r - 1]): r -= 1
-    if (t, b, l, r) == (0, h, 0, w):
+    white_row = (g > 228).mean(axis=1) > 0.85   # a highlight line runs along the whole edge
+    white_col = (g > 228).mean(axis=0) > 0.85
+    bh, bw = max(2, int(h * band)), max(2, int(w * band))
+
+    def thin_lines(flags, idxs, maxrun=5):
+        """indices that belong to thin white runs (lines), not to wide white artwork"""
+        out, run = [], []
+        for i in list(idxs) + [None]:
+            if i is not None and flags[i] and (not run or i == run[-1] + 1):
+                run.append(i); continue
+            if run and len(run) <= maxrun:
+                out += run
+            run = [i] if (i is not None and flags[i]) else []
+        return out
+
+    # pure white touching the border is leftover photo background: always cut it
+    bg_row = (g > 242).mean(axis=1) > 0.55
+    bg_col = (g > 242).mean(axis=0) > 0.55
+
+    def edge_run(flags, idxs):
+        out = []
+        for i in idxs:
+            if not flags[i]:
+                break
+            out.append(i)
+        return out
+
+    top = thin_lines(white_row, range(bh)) + edge_run(bg_row, range(bh))
+    bot = thin_lines(white_row, range(h - bh, h)) + edge_run(bg_row, range(h - 1, h - bh - 1, -1))
+    lef = thin_lines(white_col, range(bw)) + edge_run(bg_col, range(bw))
+    rig = thin_lines(white_col, range(w - bw, w)) + edge_run(bg_col, range(w - 1, w - bw - 1, -1))
+    t = max(top) + 2 if top else 0
+    b = min(bot) - 1 if bot else h
+    l = max(lef) + 2 if lef else 0
+    r = min(rig) - 1 if rig else w
+    if (t, b, l, r) == (0, h, 0, w) or b - t < h * 0.6 or r - l < w * 0.6:
         return face
     return cv2.resize(face[t:b, l:r], (w, h), interpolation=cv2.INTER_CUBIC)
 

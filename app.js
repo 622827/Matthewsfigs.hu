@@ -99,7 +99,7 @@
     const W = 134, H = 118;
     let w = W, h = W * m.h; if (h > H) { h = H; w = H / m.h; }
     const d = w * m.d, base = `assets/boxes/${encodeURIComponent(i.no)}`;
-    return `<div class="stage"><div class="box3d side-${m.side}" data-side="${m.side}" style="--w:${w.toFixed(1)}px;--h:${h.toFixed(1)}px;--d:${d.toFixed(1)}px;--front:url('${base}-front.jpg');--side:url('${base}-side.jpg');--top:url('${base}-top.jpg')">
+    return `<div class="stage"><div class="box3d side-${m.side}" data-side="${m.side}" style="--w:${w.toFixed(1)}px;--h:${h.toFixed(1)}px;--d:${d.toFixed(1)}px;--front:url('${base}-front.jpg?v=202610182231');--side:url('${base}-side.jpg?v=202610182231');--top:url('${base}-top.jpg?v=202610182231')">
       <i class="f front" role="img" aria-label="${esc(i.name)}"></i>
       <i class="f back"></i><i class="f l"></i><i class="f r"></i><i class="f t"></i><i class="f bt"></i>
     </div></div>`;
