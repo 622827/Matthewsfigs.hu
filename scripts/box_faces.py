@@ -32,6 +32,10 @@ OVERRIDES = {
 }
 
 
+def top_from_side(side, fw, dw):
+    return cv2.resize(cv2.rotate(side, cv2.ROTATE_90_CLOCKWISE), (fw, dw), interpolation=cv2.INTER_AREA)
+
+
 def from_override(img, o):
     fw = FRONT_PX
     fh = int(round(fw * o["h"]))
@@ -39,7 +43,7 @@ def from_override(img, o):
     front = warp(img, np.array(o["front"], float), fw, fh)
     side = warp(img, np.array(o["side"], float), dw, fh)
     # no top visible on the photo: use the side panel turned on its back
-    top = cv2.resize(cv2.rotate(side, cv2.ROTATE_90_CLOCKWISE), (fw, dw), interpolation=cv2.INTER_AREA)
+    top = top_from_side(side, fw, dw)
     return {"front": front, "side": side, "top": top,
             "meta": {"w": 1.0, "h": o["h"], "d": o["d"], "side": "left"}}
 
@@ -292,7 +296,9 @@ def analyse(img):
     return {
         "front": warp(img, fq, fw, fh),
         "side": warp(img, sq, dw, fh),
-        "top": warp(img, tq, fw, dw),
+        # the top is seen at a very flat angle on the photos, so its cut-out is the least
+        # reliable face; the side panel (same print family) turned on its back is used instead
+        "top": top_from_side(warp(img, sq, dw, fh), fw, dw),
         "meta": {"w": 1.0, "h": round(float(H / W), 4), "d": round(float(D / W), 4), "side": "left" if side_is_left else "right"},
     }
 
