@@ -224,7 +224,8 @@
     if (s.capKnown) {
       s.capI = d.capital.investor;
       s.capM = d.capital.mate || 0;
-      s.capShare = d.capitalPct ? d.capitalPct.investor : s.capI / (s.capI + s.capM);
+      s.noCap = !s.capI && !s.capM;
+      s.capShare = s.noCap ? 1 : d.capitalPct ? d.capitalPct.investor : s.capI / (s.capI + s.capM);
     }
     s.share = d.profitShare ? d.profitShare.investor : SHARE;
     if (s.capKnown) {
@@ -237,7 +238,7 @@
 
   function render(data) {
     const me = data.investor;
-    if (data.share != null) SHARE = data.share;
+    SHARE = data.share != null ? data.share : 0.7;
     $("hello").textContent = `Szia ${me}!`;
     $("sub").textContent = `Közös ügyleteink a Matthew's Fig Supply Co.-val` + (data.updated ? ` · frissítve: ${new Date(data.updated).toLocaleDateString("hu-HU", { dateStyle: "long" })}` : "");
 
@@ -252,7 +253,7 @@
     }
     $("kpis").innerHTML = `
       <div><b class="num">${huf(capital)}</b><span>befektetett tőkéd</span></div>
-      <div><b class="num">${huf(myProfit)}</b><span>eddigi nyereséged (${pct(SHARE)})</span></div>
+      <div><b class="num">${huf(myProfit)}</b><span>eddigi nyereséged${data.share != null ? ` (${pct(SHARE)})` : ""}</span></div>
       <div><b class="num">${data.deals.length}</b><span>közös ügylet (${open} folyamatban)</span></div>
       <div><b class="num">${huf(expected)}</b><span>várható nyereséged a futó ügyletekből${missing ? "*" : ""}</span></div>`;
 
@@ -275,22 +276,24 @@
       (missing ? `<p class="note">* Ahol a befektetett tőkéd még nincs rögzítve, az az ügylet nem szerepel a várható nyereségben.</p>` : "");
   }
 
+  const pic = l => l.fig ? `https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(l.set)}.png`
+                          : `https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(l.set)}-1.png`;
   function deal(d, me) {
     const s = calc(d);
     const open = d.status === "open";
     const multi = d.lines.some(l => l.set);
     const rows = d.lines.map(l => `<tr>
-        ${multi ? `<td><div class="setcell"><img src="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(l.set)}-1.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><span><small>${esc(l.set)}</small>${esc(l.name || "")}</span></div></td>` : ""}
+        ${multi ? `<td><div class="setcell"><img src="${pic(l)}" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><span><small>${esc(l.set)}</small>${esc(l.name || "")}</span></div></td>` : ""}
         <td class="num">${l.qty} db</td><td class="num">${huf(l.buy)}</td><td class="num">${huf(l.sell)}</td>
         <td class="num">${l.sold} db</td><td class="num">${huf(l.sold * l.sell)}</td></tr>`).join("");
     const split = s.capKnown ? `
       <div class="split">
         <div><h4>Tőke</h4>
-          <p class="me"><span>${esc(me)}</span><span class="num">${huf(s.capI)} · ${pct(s.capShare)}</span></p>
-          ${s.capM ? `<p><span>Máté</span><span class="num">${huf(s.capM)} · ${pct(1 - s.capShare)}</span></p>` : ""}</div>
+          ${s.noCap ? `<p class="me"><span>Befektetett tőke nélkül</span><span class="num">${huf(0)}</span></p><p><span>A nyereség ${pct(s.share)}-a a tiéd</span></p>` : `<p class="me"><span>${esc(me)}</span><span class="num">${huf(s.capI)} · ${pct(s.capShare)}</span></p>`}
+          ${s.capM && !s.noCap ? `<p><span>Máté</span><span class="num">${huf(s.capM)} · ${pct(1 - s.capShare)}</span></p>` : ""}</div>
         <div><h4>Nyereség${open ? " (eddig)" : ""}</h4>
-          <p class="me"><span>${esc(me)} · ${pct(s.share)} a saját tőkéje után</span><span class="num">${huf(s.myProfit)}</span></p>
-          <p><span>Máté</span><span class="num">${huf(s.mateProfit)}</span></p>
+          <p class="me"><span>${esc(me)} · ${pct(s.share)}${s.noCap ? "" : " a saját tőkéje után"}</span><span class="num">${huf(s.myProfit)}</span></p>
+          ${s.mateProfit > 0.5 ? `<p><span>Máté</span><span class="num">${huf(s.mateProfit)}</span></p>` : ""}
           ${open ? `<p><span>Várható nyereséged, amikor minden elkel</span><span class="num">${huf(s.myProfitAll)}</span></p>`
                  : `<p class="me"><span>Neked jár összesen (tőke + nyereség)</span><span class="num">${huf(s.capI + s.myProfit)}</span></p>`}
         </div>
@@ -298,8 +301,8 @@
     return `<details class="deal">
       <summary class="deal__head">
         ${d.set ? `<img src="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(d.set)}-1.png" alt="" loading="lazy" onerror="this.style.visibility='hidden'">`
-          : `<div class="thumbs">${d.lines.filter(l => l.set).map(l => `<img src="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(l.set)}-1.png" alt="${esc(l.name || l.set)}" title="${esc(l.name || l.set)}" loading="lazy" onerror="this.style.display='none'">`).join("")}</div>`}
-        <div class="deal__title"><small>${esc(d.set || `${d.lines.length} féle szett`)}</small><b>${esc(d.name)}</b></div>
+          : `<div class="thumbs">${d.lines.filter(l => l.set).map(l => `<img src="${pic(l)}" alt="${esc(l.name || l.set)}" title="${esc(l.name || l.set)}" loading="lazy" onerror="this.style.display='none'">`).join("")}</div>`}
+        <div class="deal__title"><small>${esc(d.set || `${d.lines.length} féle ${d.lines.every(l => l.fig) ? "figura" : "szett"}`)}</small><b>${esc(d.name)}</b></div>
         <div class="deal__peek">
           <span class="num">${s.sold}/${s.qty} db eladva</span>
           ${s.capKnown ? `<b class="num">${huf(s.myProfit)}</b><small>nyereséged${open ? " eddig" : ""}</small>` : ""}
