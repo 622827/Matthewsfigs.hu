@@ -1,5 +1,5 @@
 {
- "updated": "2026-10-20T12:01:40+00:00",
+ "updated": "2026-10-20T12:37:07+00:00",
  "store": "MatthewHorseman",
  "currency": "EUR",
  "total_lots": 729,
@@ -52,8 +52,8 @@
    "name": "The Dark Falcon",
    "color": null,
    "cond": "N",
-   "qty": 5,
-   "price": 150.9,
+   "qty": 6,
+   "price": 151.9,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75389-1.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564799171"
@@ -117,7 +117,7 @@
    "name": "Gingerbread AT-AT",
    "color": null,
    "cond": "N",
-   "qty": 2,
+   "qty": 4,
    "price": 59.99,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/40806-1.png",
