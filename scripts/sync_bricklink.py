@@ -64,7 +64,19 @@ def main():
         print("::notice::BrickLink API-kulcsok még nincsenek beállítva "
               f"({', '.join(missing)}); a készlet nem frissült.")
         return
-    rows = oauth_get(f"{API}/inventories")
+    # BrickLink is sometimes briefly unavailable (maintenance, timeouts): retry a few
+    # times, and if it still fails keep the current stock and finish without an error.
+    rows = None
+    for attempt in range(4):
+        try:
+            rows = oauth_get(f"{API}/inventories")
+            break
+        except (Exception, SystemExit) as e:
+            print(f"BrickLink próbálkozás {attempt + 1}/4 sikertelen: {e}")
+            time.sleep(15 * (attempt + 1))
+    if rows is None:
+        print("::warning::A BrickLink most nem elérhető; a készlet nem frissült, a következő futás újrapróbálja.")
+        return
     items = []
     parts_lots = parts_qty = 0
     for r in rows:

@@ -27,7 +27,7 @@ jobs:
     if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
         with:
           ref: main
       - name: Van új szett doboz nélkül?
@@ -44,7 +44,7 @@ jobs:
           missing += [i["no"] for i in inv["items"] if i["type"] == "MINIFIG" and i["no"] not in fidx]
           print("run=" + ("true" if missing or "${{ inputs.force }}" == "true" else "false"))
           PY
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         if: steps.need.outputs.run == 'true'
         with:
           python-version: "3.12"
