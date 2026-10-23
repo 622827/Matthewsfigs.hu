@@ -57,6 +57,23 @@
   .msg.is-err{color:#a3261b}
   @media (max-width:720px){ .add form{grid-template-columns:1fr} .kpis{grid-template-columns:repeat(2,1fr)} }
   .fx{border-width:2px}
+  .bl{display:grid;gap:10px}
+  .bo{border:1.5px solid var(--line);border-radius:14px;padding:14px 16px;display:grid;gap:8px;background:var(--cream)}
+  .bo.is-done{opacity:.7;background:#fff}
+  .bo__h{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline}
+  .bo__h b{font-size:17px}
+  .bo__h small{color:var(--muted);font-weight:600;font-size:13px}
+  .bo__items{font-size:14px;color:var(--muted);margin:0}
+  .bo__apm{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:14px}
+  .bo__apm label{display:flex;gap:6px;align-items:center;background:#fff;border:1.5px solid var(--line);border-radius:999px;padding:5px 12px;cursor:pointer;font-weight:600}
+  .bo__apm label:has(input:checked){border-color:var(--green);background:var(--green);color:var(--cream)}
+  .bo__apm input{accent-color:var(--gold)}
+  .bo__apm .why{font-weight:400;font-size:12px;opacity:.8}
+  .bo__acts{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+  .bo__acts .btn{padding:9px 16px;font-size:15px}
+  .bo__msg{font-size:14px;font-weight:600;color:var(--green);margin:0}
+  .bo__msg.is-err{color:#a3261b}
+  .bo__warn{font-size:13px;color:#7c1d14;margin:0}
   .add > *{min-width:0}
   .fx__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:12px 16px;max-width:760px}
   .fx__grid label{display:grid;gap:5px;font-size:14px;font-weight:700;color:var(--green)}
@@ -180,6 +197,12 @@
     <section class="band"><div class="wrap kpis" id="kpis"></div></section>
 
     <section class="wrap body">
+      <div class="add" id="blBox" hidden>
+        <h2>BrickLink rendelések</h2>
+        <p class="hint" id="blHint"></p>
+        <div class="bl" id="blList"></div>
+      </div>
+
       <div class="add fx" id="fx-box">
         <h2>Foxpost csomagcímke</h2>
         <div class="fx__grid">
@@ -196,6 +219,7 @@
           <label>Utánvét (Ft, nem kötelező)<input class="field" id="fx-cod" inputmode="numeric" autocomplete="off" placeholder="0"></label>
           <label class="fx__wide">Megjegyzés a listához (nem kötelező)<input class="field" id="fx-note" autocomplete="off" placeholder="pl. BrickLink #32838354 – 75342 tank"></label>
         </div>
+        <input type="hidden" id="fx-bl">
         <button class="btn btn--gold" type="button" id="fx-go">Csomagcímke létrehozása</button>
         <p class="msg" id="fx-msg" role="status"></p>
         <a class="btn btn--line" id="fx-dl" hidden download>Címke letöltése (PDF)</a>
@@ -421,6 +445,7 @@
       b.setAttribute("aria-pressed", b.dataset.f === FILTER);
     });
 
+    renderBL();
     const q = $("q").value.trim().toLowerCase().replace(/\s+/g, " ");
     let list = ps.filter(p => FILTER === "all" || (FILTER === "done" ? cat(p) === "done" : cat(p) !== "done"));
     if (q) list = list.filter(p => `${p.code} ${p.note}`.toLowerCase().includes(q));
@@ -564,6 +589,100 @@
     }
   };
 
+  // ---------- Foxpost automaták (nyilvános lista), közösen a címkéhez és a BrickLink-párosításhoz ----------
+  const nrmT = x => String(x || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+  let APM_P = null;
+  function apmList() {
+    return APM_P ||= fetch("https://cdn.foxpost.hu/foxplus.json").then(r => r.json()).then(l =>
+      l.filter(a => a.operator_id || a.place_id).map(a => {
+        const id = String(a.operator_id || a.place_id), nm = String(a.name || "").replace(/^FOXPOST\s*/i, "");
+        return { id, name: nm, addr: a.address || "", city: nrmT(a.city), zip: String(a.zip || ""),
+                 words: nrmT(`${nm} ${a.street || ""}`).split(" ").filter(w => w.length >= 4 && !STOP.has(w)),
+                 h: nrmT([nm, a.city, a.zip, a.street, a.address, id].join(" ")) };
+      }).sort((x, y) => x.addr < y.addr ? -1 : 1)).catch(e => { APM_P = null; throw e; });
+  }
+  const STOP = new Set(["foxpost", "box", "abox", "zbox", "budapest", "utca", "ut", "korut", "parkolo", "bejarat", "szint", "elott", "mellett", "uzlet", "hazban", "bevasarlokozpont", "kerulet"]);
+
+  // which locker did the buyer ask for? (their BrickLink messages / remarks, then their own postcode)
+  function guessApm(o, list) {
+    const own = new Set(["matthewhorseman", "matthew s fig supply co", ""]);
+    const txt = " " + nrmT([o.remarks, ...(o.msgs || []).filter(m => !own.has(nrmT(m.from)) && nrmT(m.from) !== "bricklink")
+      .map(m => `${m.subject} ${m.body}`)].join(" ")) + " ";
+    const res = [];
+    if (txt.trim()) for (const a of list) {
+      let sc = 0;
+      for (const w of a.words) if (txt.includes(" " + w)) sc += w.length >= 6 ? 2 : 1;
+      if (sc && a.city && txt.includes(" " + a.city.split(" ")[0])) sc += 2;
+      if (sc && a.zip && txt.includes(" " + a.zip + " ")) sc += 2;
+      if (txt.includes(" " + a.id.toLowerCase() + " ")) sc += 5;
+      if (sc >= 3) res.push({ a, sc, why: "üzenet alapján" });
+    }
+    res.sort((x, y) => y.sc - x.sc);
+    const top = res.slice(0, 3);
+    if (top.length < 3 && o.addrParts && o.addrParts.postal_code) {
+      for (const a of list) if (a.zip === String(o.addrParts.postal_code) && !top.some(t => t.a.id === a.id) && top.length < 3)
+        top.push({ a, sc: 0, why: "a vevő irányítószáma alapján" });
+    }
+    return top;
+  }
+
+  const FOX_METHOD = 372282;
+  const BLST = { PENDING: "Függőben", UPDATED: "Módosítva", PROCESSING: "Feldolgozás alatt", READY: "Kész", PAID: "Fizetve", PACKED: "Becsomagolva" };
+  function renderBL() {
+    const orders = (DATA && DATA.orders) || [], done = (DATA && DATA.blDone) || {};
+    $("blBox").hidden = !orders.length && !(DATA && DATA.blInfo);
+    if (!orders.length) {
+      $("blHint").textContent = DATA && DATA.blInfo && DATA.blInfo.at ? `Nincs feladásra váró BrickLink rendelés (ellenőrizve: ${ago(DATA.blInfo.at)}).` : "";
+      $("blList").innerHTML = ""; return;
+    }
+    $("blHint").textContent = "A nyitott rendelések félóránként frissülnek. A csomagautomatát a vevő üzenetéből próbáljuk kitalálni – ellenőrizd, mielőtt megnyomod a gombot.";
+    apmList().catch(() => []).then(list => {
+      $("blList").innerHTML = orders.map(o => {
+        const fox = !o.methodId || +o.methodId === FOX_METHOD || /foxpost/i.test(o.method || "");
+        const code = done[o.id] || ((DATA.packages || []).find(p => p.bl === o.id) || {}).code;
+        const items = (o.items || []).map(x => `${x.qty > 1 ? x.qty + "× " : ""}${x.type === "SET" ? String(x.no).replace(/-1$/, "") + " " : ""}${x.name || x.no}`).join(", ");
+        const g = fox && !code ? guessApm(o, list || []) : [];
+        const tel = window.__phone ? window.__phone(o.phone) : o.phone;
+        const warn = [];
+        if (fox && !code) {
+          if (!tel) warn.push("a telefonszám hiányzik vagy nem magyar mobilszám");
+          if (!o.email) warn.push("nincs e-mail cím");
+          if (!g.length) warn.push("az automatát nem találtuk – válaszd ki a Kitöltés gombbal");
+        }
+        const apms = g.map((x, n) => `<label><input type="radio" name="apm-${esc(o.id)}" value="${esc(x.a.id)}" ${n === 0 ? "checked" : ""}>${esc(x.a.name)} <span class="why">(${esc(x.why)})</span></label>`).join("");
+        return `<div class="bo ${code ? "is-done" : ""}" data-o="${esc(o.id)}">
+          <div class="bo__h"><b>${esc(o.name || o.buyer)}</b><small>BL #${esc(o.id)} · ${esc(fmt(o.date))} · ${esc(BLST[o.status] || o.status)}${o.total ? ` · ${esc(o.total)} ${esc(o.cur || "")}` : ""}</small></div>
+          ${items ? `<p class="bo__items">${esc(items)}</p>` : ""}
+          ${code ? `<p class="bo__msg">Címke kész: ${esc(code)}</p>`
+            : !fox ? `<p class="bo__warn">Nem Foxpost: ${esc(o.method)}</p>`
+            : `${apms ? `<div class="bo__apm">${apms}</div>` : ""}
+               ${warn.length ? `<p class="bo__warn">Figyelem: ${esc(warn.join("; "))}.</p>` : ""}
+               <div class="bo__acts">
+                 <button class="btn btn--gold" type="button" data-bl-go ${!tel || !o.email || !g.length ? "disabled" : ""}>Címke készítése</button>
+                 <button class="btn btn--line" type="button" data-bl-fill>Kitöltés az űrlapba</button>
+               </div>
+               <p class="bo__msg" role="status"></p>`}
+        </div>`;
+      }).join("");
+    });
+  }
+  $("blList").addEventListener("click", async e => {
+    const card = e.target.closest(".bo"); if (!card) return;
+    const o = (DATA.orders || []).find(x => x.id === card.dataset.o); if (!o) return;
+    const sel = card.querySelector("input[type=radio]:checked");
+    const list = await apmList().catch(() => []);
+    const apm = sel ? list.find(a => a.id === sel.value) : null;
+    if (e.target.closest("[data-bl-fill]")) { window.__fill(o, apm); return; }
+    const go = e.target.closest("[data-bl-go]"); if (!go || go.disabled) return;
+    const m = card.querySelector(".bo__msg");
+    const say = (t, bad) => { m.textContent = t; m.classList.toggle("is-err", !!bad); };
+    if (!apm) return say("Válassz automatát.", 1);
+    go.disabled = true;
+    const ok = await window.__createLabel({ nev: o.name || o.buyer, tel: window.__phone(o.phone), email: o.email, aut: apm.id,
+      size: "s", cod: 0, note: `BL #${o.id} – ${o.name || o.buyer}`, bl: o.id }, say, good => { if (good) renderBL(); else go.disabled = false; });
+    if (!ok) go.disabled = false;
+  });
+
   // ---------- Foxpost csomagcímke: a GitHub Action hozza létre a csomagot és a címkét ----------
   (() => {
     let busy = false, APM = null, apmLoading = false, apmSel = "";
@@ -577,13 +696,8 @@
     function loadApm() {
       if (APM || apmLoading) return; apmLoading = true;
       $("fx-list").innerHTML = '<div class="e">Automaták betöltése…</div>'; $("fx-list").hidden = false;
-      fetch("https://cdn.foxpost.hu/foxplus.json").then(r => r.json()).then(l => {
-        APM = l.filter(a => a.operator_id || a.place_id).map(a => {
-          const id = String(a.operator_id || a.place_id), nm = String(a.name || "").replace(/^FOXPOST\s*/i, "");
-          return { id, name: nm, addr: a.address || "", h: nrm([nm, a.city, a.zip, a.street, a.address, id].join(" ")) };
-        }).sort((x, y) => x.addr < y.addr ? -1 : 1);
-        apmLoading = false; showApm();
-      }).catch(() => { apmLoading = false; $("fx-list").innerHTML = '<div class="e">Az automatalista nem tölthető be.</div>'; });
+      apmList().then(l => { APM = l; apmLoading = false; showApm(); })
+        .catch(() => { apmLoading = false; $("fx-list").innerHTML = '<div class="e">Az automatalista nem tölthető be.</div>'; });
     }
     function showApm() {
       const box = $("fx-list"); if (!APM) return loadApm();
@@ -623,6 +737,44 @@
       const a = $("fx-dl"); a.href = u; a.download = `foxpost-${code}.pdf`; a.hidden = false; a.click();
     }
 
+    // one label job: dispatch → wait for the encrypted result → download the PDF
+    async function createLabel(jobIn, say, done) {
+      if (!token()) { openTok(); return false; }
+      const rid = [...crypto.getRandomValues(new Uint8Array(12))].map(b => b.toString(16).padStart(2, "0")).join("");
+      say("Csomag létrehozása… (kb. 1 perc)");
+      try { await dispatch({ create: [{ rid, ...jobIn }] }); }
+      catch (err) { say(errText(err) || "Nem sikerült elküldeni.", 1); done && done(false); return false; }
+      const t0 = Date.now();
+      const tick = async () => {
+        let d = null;
+        try { d = await job(rid); } catch {}
+        if (d) {
+          if (!d.ok) { say(d.error || "Nem sikerült a csomag létrehozása.", 1); done && done(false); return; }
+          say(`Kész. Csomagszám: ${d.code}` + (d.pdf ? " – a címke letöltődik." : ` – ${d.error}`), !d.pdf);
+          if (d.pdf) download(d.pdf, d.code);
+          if (jobIn.bl && DATA) (DATA.blDone ||= {})[jobIn.bl] = d.code;
+          PENDING.push(d.code); render(); awaitUpdate(DATA?.checked);
+          done && done(true, d);
+          return;
+        }
+        const s = Math.round((Date.now() - t0) / 1000);
+        if (s > 240) { say("Még nem jött válasz (4 perc). A csomag ettől még létrejöhetett a Foxpostnál – nézd meg ott, vagy frissítsd később ezt az oldalt, mielőtt újra próbálod.", 1); done && done(false); return; }
+        say(`Csomag létrehozása… ${s} mp`);
+        setTimeout(tick, 6000);
+      };
+      setTimeout(tick, 25000);
+      return true;
+    }
+    window.__createLabel = createLabel;
+    window.__fill = (o, apm) => {
+      $("fx-nev").value = o.name || ""; $("fx-tel").value = o.phone || ""; $("fx-mail").value = o.email || "";
+      $("fx-note").value = `BL #${o.id} – ${o.name || o.buyer}`; $("fx-bl").value = o.id;
+      if (apm) { apmSel = apm.id; $("fx-aut").value = `${apm.name} – ${apm.addr}`; } else { apmSel = ""; $("fx-aut").value = ""; }
+      $("fx-box").scrollIntoView({ behavior: "smooth", block: "start" });
+      setTimeout(() => (apm ? $("fx-go") : $("fx-aut")).focus({ preventScroll: true }), 400);
+    };
+    window.__phone = phone;
+
     $("fx-go").addEventListener("click", async () => {
       if (busy) return;
       $("fx-dl").hidden = true;
@@ -633,32 +785,13 @@
       if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return fxMsg("Az e-mail cím hibás.", 1);
       if (!aut) return fxMsg("Válassz csomagautomatát a legördülő listából.", 1);
       if (cod > 1000000) return fxMsg("Az utánvét legfeljebb 1 000 000 Ft lehet.", 1);
-      if (!token()) { openTok(); return; }
-      const rid = [...crypto.getRandomValues(new Uint8Array(12))].map(b => b.toString(16).padStart(2, "0")).join("");
-      busy = true; $("fx-go").disabled = true; fxMsg("Csomag létrehozása… (kb. 1 perc)");
-      try {
-        await dispatch({ create: [{ rid, nev, tel, email, aut, size: $("fx-size").value, cod: cod || 0, note: $("fx-note").value.trim() || nev }] });
-      } catch (err) { busy = false; $("fx-go").disabled = false; return fxMsg(errText(err) || "Nem sikerült elküldeni.", 1); }
-      const t0 = Date.now();
-      const tick = async () => {
-        let d = null;
-        try { d = await job(rid); } catch {}
-        if (d) {
-          busy = false; $("fx-go").disabled = false;
-          if (!d.ok) return fxMsg(d.error || "Nem sikerült a csomag létrehozása.", 1);
-          fxMsg(`Kész. Csomagszám: ${d.code}` + (d.pdf ? " – a címke letöltődik." : ` – ${d.error}`), !d.pdf);
-          if (d.pdf) download(d.pdf, d.code);
-          ["fx-nev", "fx-tel", "fx-mail", "fx-aut", "fx-cod", "fx-note"].forEach(id => $(id).value = ""); apmSel = "";
-          PENDING.push(d.code); render(); awaitUpdate(DATA?.checked);
-          return;
-        }
-        const s = Math.round((Date.now() - t0) / 1000);
-        if (s > 240) { busy = false; $("fx-go").disabled = false;
-          return fxMsg("Még nem jött válasz (4 perc). A csomag ettől még létrejöhetett a Foxpostnál – nézd meg ott, vagy frissítsd később ezt az oldalt, mielőtt újra próbálod.", 1); }
-        fxMsg(`Csomag létrehozása… ${s} mp`);
-        setTimeout(tick, 6000);
-      };
-      setTimeout(tick, 25000);
+      busy = true; $("fx-go").disabled = true;
+      const ok = await createLabel({ nev, tel, email, aut, size: $("fx-size").value, cod: cod || 0,
+        note: $("fx-note").value.trim() || nev, bl: $("fx-bl").value || undefined }, fxMsg, (good) => {
+        busy = false; $("fx-go").disabled = false;
+        if (good) { ["fx-nev", "fx-tel", "fx-mail", "fx-aut", "fx-cod", "fx-note", "fx-bl"].forEach(id => $(id).value = ""); apmSel = ""; renderBL(); }
+      });
+      if (!ok) { busy = false; $("fx-go").disabled = false; }
     });
   })();
 

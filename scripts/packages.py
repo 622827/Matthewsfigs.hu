@@ -341,48 +341,18 @@ def bl_sync(data):
         info["error"] = f"{type(e).__name__}: {str(e)[:200]}"
         print(f"BrickLink rendelések most nem érhetők el ({type(e).__name__}).")
         return
-    info.pop("error", None)
+    info.pop("error", None); info.pop("probe", None); info.pop("keys", None)
     cnt = {}
     for r in allrows:
         cnt[r.get("status")] = cnt.get(r.get("status"), 0) + 1
     info["statuses"], info["at"] = cnt, now().isoformat()
     rows = [r for r in allrows if r.get("status") in BL_OPEN.split(",")]
     # mezőnevek egy friss (akár már lezárt) rendelésből – a címkéhez szükséges adatok felderítéséhez
-    if allrows and not info.get("probe"):
-        pr = []
-        for r in allrows[:12]:
-            try:
-                dd = BL.oauth_get(f"{BL.API}/orders/{r['order_id']}")
-                sh = dd.get("shipping") or {}; ad = sh.get("address") or {}
-                txt = " ".join(str(ad.get(k) or "") for k in ("full", "address1", "address2", "city")).lower()
-                try:
-                    mm = BL.oauth_get(f"{BL.API}/orders/{r['order_id']}/messages")
-                except (Exception, SystemExit):
-                    mm = []
-                mtxt = " ".join(str(m.get("body") or "") + " " + str(m.get("subject") or "") for m in mm or []).lower()
-                pr.append({"status": dd.get("status"), "method": sh.get("method"), "method_id": sh.get("method_id"),
-                           "country": ad.get("country_code"), "hasPhone": bool(ad.get("phone_number")),
-                           "addrFoxpost": any(w in txt for w in ("foxpost", "box", "automata", "csomagautomata")),
-                           "msgCount": len(mm or []), "msgFoxpost": any(w in mtxt for w in ("foxpost", "automata", "box")),
-                           "msgKeys": sorted((mm or [{}])[0].keys()) if mm else []})
-            except (Exception, SystemExit):
-                pass
-        info["probe"] = pr
-    if allrows and not info.get("keys"):
-        try:
-            d0 = BL.oauth_get(f"{BL.API}/orders/{allrows[0]['order_id']}")
-            info["keys"] = {"order": sorted(d0.keys()), "shipping": sorted((d0.get("shipping") or {}).keys()),
-                            "address": sorted(((d0.get("shipping") or {}).get("address") or {}).keys())}
-        except (Exception, SystemExit):
-            pass
     old = {str(o["id"]): o for o in data.get("orders", [])}
     out = []
     for r in rows:
         oid = str(r.get("order_id"))
         prev = old.get(oid)
-        if prev and prev.get("status") == r.get("status") and prev.get("_v") == 2:
-            out.append(prev)
-            continue
         try:
             d = BL.oauth_get(f"{BL.API}/orders/{oid}")
             items = BL.oauth_get(f"{BL.API}/orders/{oid}/items")
@@ -411,11 +381,11 @@ def bl_sync(data):
             "total": (d.get("cost") or {}).get("disp_grandtotal") or (d.get("cost") or {}).get("grandtotal"),
             "cur": (d.get("cost") or {}).get("display_currency_code") or (d.get("cost") or {}).get("currency_code"),
             "msgs": [{"from": m.get("from"), "to": m.get("to"), "subject": (m.get("subject") or "")[:120],
-                      "body": (m.get("body") or "")[:800], "at": m.get("dateSent") or m.get("date_sent")}
-                     for m in (msgs or [])][:8],
+                      "body": re.sub(r"<[^>]+>", " ", m.get("body") or "")[:800], "at": m.get("dateSent") or m.get("date_sent")}
+                     for m in (msgs or [])][-12:],
             "items": [{"no": (x.get("item") or {}).get("no"), "name": (x.get("item") or {}).get("name"),
                        "type": (x.get("item") or {}).get("type"), "qty": x.get("quantity")} for x in flat][:40],
-            "_addrKeys": sorted(addr.keys()),
+            "methodId": ship.get("method_id"),
         })
     data["orders"] = sorted(out, key=lambda o: o.get("date") or "", reverse=True)
     print(f"BrickLink: {len(out)} nyitott rendelés.")
