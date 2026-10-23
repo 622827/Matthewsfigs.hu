@@ -334,11 +334,27 @@ def bl_sync(data):
         return
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import sync_bricklink as BL
+    info = data.setdefault("blInfo", {})
     try:
-        rows = BL.oauth_get(f"{BL.API}/orders", {"direction": "in", "status": BL_OPEN})
+        allrows = BL.oauth_get(f"{BL.API}/orders", {"direction": "in"})
     except (Exception, SystemExit) as e:
+        info["error"] = f"{type(e).__name__}: {str(e)[:200]}"
         print(f"BrickLink rendelések most nem érhetők el ({type(e).__name__}).")
         return
+    info.pop("error", None)
+    cnt = {}
+    for r in allrows:
+        cnt[r.get("status")] = cnt.get(r.get("status"), 0) + 1
+    info["statuses"], info["at"] = cnt, now().isoformat()
+    rows = [r for r in allrows if r.get("status") in BL_OPEN.split(",")]
+    # mezőnevek egy friss (akár már lezárt) rendelésből – a címkéhez szükséges adatok felderítéséhez
+    if allrows and not info.get("keys"):
+        try:
+            d0 = BL.oauth_get(f"{BL.API}/orders/{allrows[0]['order_id']}")
+            info["keys"] = {"order": sorted(d0.keys()), "shipping": sorted((d0.get("shipping") or {}).keys()),
+                            "address": sorted(((d0.get("shipping") or {}).get("address") or {}).keys())}
+        except (Exception, SystemExit):
+            pass
     old = {str(o["id"]): o for o in data.get("orders", [])}
     out = []
     for r in rows:
