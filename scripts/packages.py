@@ -26,6 +26,7 @@ from pathlib import Path
 from cryptography.hazmat.primitives.ciphers.aead import AESGCM
 
 SALT = b"matthewsfigs.hu/packages/v1"
+INBOX_SALT = b"matthewsfigs.hu/packages/inbox-v1"   # csak parancsok titkosítására (Gmail-import)
 ROUNDS = 600_000
 OUT = Path(__file__).resolve().parent.parent / "data" / "p"
 API = os.environ.get("FOXPOST_API", "https://webapi.foxpost.hu/api")
@@ -40,6 +41,10 @@ def now():
 def derive(password):
     raw = hashlib.pbkdf2_hmac("sha256", password.strip().encode(), SALT, ROUNDS, 48)
     return raw[:32], raw[32:].hex()
+
+
+def inbox_key(password):
+    return hashlib.pbkdf2_hmac("sha256", password.strip().encode(), INBOX_SALT, ROUNDS, 32)
 
 
 def seal(key, obj):
@@ -68,14 +73,17 @@ def norm(code):
     return re.sub(r"\s+", "", code or "").upper()
 
 
-def parse_cmd(key, raw):
+def parse_cmd(key, raw, ikey=None):
     raw = (raw or "").strip()
     if not raw:
         return {}
-    if raw.startswith("enc:"):
+    if raw[:4] in ("enc:", "inb:"):
         iv_b64, ct_b64 = raw[4:].split(".", 1)
-        pt = AESGCM(key).decrypt(base64.b64decode(iv_b64), base64.b64decode(ct_b64), None)
+        k = key if raw.startswith("enc:") else ikey
+        pt = AESGCM(k).decrypt(base64.b64decode(iv_b64), base64.b64decode(ct_b64), None)
         return json.loads(pt)
+    if os.environ.get("GITHUB_ACTIONS"):
+        sys.exit("Titkosítatlan parancs a nyilvános naplóban – elutasítva.")
     add = []
     for line in raw.replace(",", "\n").splitlines():
         code, _, note = line.partition("|")
@@ -181,12 +189,15 @@ def main():
         return
     key, fid = derive(pw)
     data = load(key, fid)
+    if len(sys.argv) > 1 and sys.argv[1] == "inboxkey":
+        print(inbox_key(pw).hex())
+        return
     if len(sys.argv) > 1 and sys.argv[1] == "show":
         print(json.dumps(data, ensure_ascii=False, indent=2))
         return
     old = json.dumps(data.get("packages"), sort_keys=True, ensure_ascii=False)
     old_checked = data.get("checked")
-    cmd = parse_cmd(key, os.environ.get("PKG_CMD"))
+    cmd = parse_cmd(key, os.environ.get("PKG_CMD"), inbox_key(pw))
     apply_cmd(data, cmd)
     refresh(data)
     # a "checked" mezőkön kívül változott-e valami?
