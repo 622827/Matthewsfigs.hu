@@ -1,0 +1,48 @@
+name: Foxpost csomagfigyelő
+
+concurrency:
+  group: packages
+  cancel-in-progress: false
+
+on:
+  schedule:
+    - cron: "17,47 * * * *"   # félóránként
+  workflow_dispatch:
+    inputs:
+      cmd:
+        description: "Csomag hozzáadása / törlése (a csomagoldal tölti ki)"
+        required: false
+        default: ""
+
+permissions:
+  contents: write
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -q cryptography
+      - name: Csomagok lekérdezése
+        env:
+          PKG_PASSWORD: ${{ secrets.PKG_PASSWORD }}
+          FOXPOST_USER: ${{ secrets.FOXPOST_USER }}
+          FOXPOST_PASS: ${{ secrets.FOXPOST_PASS }}
+          FOXPOST_APIKEY: ${{ secrets.FOXPOST_APIKEY }}
+          PKG_CMD: ${{ inputs.cmd }}
+        run: python scripts/packages.py
+      - name: Változás mentése
+        run: |
+          git config user.name "packages-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/p
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Csomagállapotok frissítése $(date -u +%F' '%H:%M)"
+          for i in 1 2 3 4; do
+            git pull -q --rebase origin main && git push -q && exit 0
+            sleep $((i*5))
+          done
+          exit 1
