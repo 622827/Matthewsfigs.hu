@@ -348,6 +348,26 @@ def bl_sync(data):
     info["statuses"], info["at"] = cnt, now().isoformat()
     rows = [r for r in allrows if r.get("status") in BL_OPEN.split(",")]
     # mezőnevek egy friss (akár már lezárt) rendelésből – a címkéhez szükséges adatok felderítéséhez
+    if allrows and not info.get("probe"):
+        pr = []
+        for r in allrows[:12]:
+            try:
+                dd = BL.oauth_get(f"{BL.API}/orders/{r['order_id']}")
+                sh = dd.get("shipping") or {}; ad = sh.get("address") or {}
+                txt = " ".join(str(ad.get(k) or "") for k in ("full", "address1", "address2", "city")).lower()
+                try:
+                    mm = BL.oauth_get(f"{BL.API}/orders/{r['order_id']}/messages")
+                except (Exception, SystemExit):
+                    mm = []
+                mtxt = " ".join(str(m.get("body") or "") + " " + str(m.get("subject") or "") for m in mm or []).lower()
+                pr.append({"status": dd.get("status"), "method": sh.get("method"), "method_id": sh.get("method_id"),
+                           "country": ad.get("country_code"), "hasPhone": bool(ad.get("phone_number")),
+                           "addrFoxpost": any(w in txt for w in ("foxpost", "box", "automata", "csomagautomata")),
+                           "msgCount": len(mm or []), "msgFoxpost": any(w in mtxt for w in ("foxpost", "automata", "box")),
+                           "msgKeys": sorted((mm or [{}])[0].keys()) if mm else []})
+            except (Exception, SystemExit):
+                pass
+        info["probe"] = pr
     if allrows and not info.get("keys"):
         try:
             d0 = BL.oauth_get(f"{BL.API}/orders/{allrows[0]['order_id']}")
