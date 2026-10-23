@@ -272,3 +272,5 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .box3d .core{width:calc(var(--w) - 2px);height:calc(var(--h) - 2px);left:1px;top:1px}
 .box3d .core.cx{width:calc(var(--d) - 2px);left:calc((var(--w) - var(--d)) / 2 + 1px)}
 .box3d .core.cy{height:calc(var(--d) - 2px);top:calc((var(--h) - var(--d)) / 2 + 1px)}
+.facts dd a{color:inherit;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:3px}
+.facts dd a:hover{color:var(--gold-ink)}
