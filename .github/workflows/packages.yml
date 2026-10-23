@@ -33,6 +33,7 @@ jobs:
           FOXPOST_PASS: ${{ secrets.FOXPOST_PASS }}
           FOXPOST_APIKEY: ${{ secrets.FOXPOST_APIKEY }}
           PKG_CMD: ${{ inputs.cmd }}
+          PKG_FORCE: ${{ github.event_name == 'workflow_dispatch' }}
         run: python scripts/packages.py
       - name: Változás mentése
         run: |

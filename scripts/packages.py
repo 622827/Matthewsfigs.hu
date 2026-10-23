@@ -31,7 +31,6 @@ OUT = Path(__file__).resolve().parent.parent / "data" / "p"
 API = os.environ.get("FOXPOST_API", "https://webapi.foxpost.hu/api")
 
 FINAL = {"RECEIVE", "HDRECEIVE", "RETURNDELIVERED", "BACKTOSENDER", "DESTROYED"}
-CODE_RE = re.compile(r"\b(CLFOX\d{10,20}|Z\s?\d{3}\s?\d{4}\s?\d{3}|\d{12,20})\b", re.I)
 
 
 def now():
@@ -195,7 +194,7 @@ def main():
                                   sort_keys=True, ensure_ascii=False)
     changed = strip(json.loads(old)) != strip(data["packages"])
     stale = not old_checked or datetime.fromisoformat(old_checked) < now() - timedelta(hours=3)
-    if changed or stale or cmd:
+    if changed or stale or cmd or os.environ.get("PKG_FORCE") == "true":
         save(key, fid, data)
         print("Mentve." if changed else "Mentve (időbélyeg).")
     else:
