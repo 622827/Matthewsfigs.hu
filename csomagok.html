@@ -116,6 +116,12 @@
   .pk__foot{display:flex;gap:14px;flex-wrap:wrap;align-items:center;font-size:14px}
   .pk__foot a{color:var(--green);font-weight:700}
   .pk__foot .del{margin-left:auto;color:#a3261b}
+  .pk__r{display:flex;align-items:center;gap:8px}
+  .trash{display:grid;place-items:center;width:34px;height:34px;border-radius:50%;border:1.5px solid var(--line);background:#fff;color:#a3261b;cursor:pointer;flex:none}
+  .trash:hover,.trash:focus-visible{background:#fbe3df;border-color:#e9a79f;outline:none}
+  .toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:var(--green);color:var(--cream);padding:12px 18px;border-radius:12px;font-weight:600;font-size:15px;box-shadow:0 12px 30px -10px rgba(0,0,0,.5);z-index:50;max-width:calc(100% - 32px)}
+  .toast.is-err{background:#a3261b;color:#fff}
+  .dlg .btn--red{background:#a3261b;color:#fff;border:0}
   .alert{background:#fbe3df;color:#7c1d14;border-radius:10px;padding:10px 12px;font-size:14px;margin:0}
   .empty{background:#fff;border:1.5px dashed var(--line);border-radius:var(--r);padding:36px 24px;text-align:center;color:var(--muted)}
 
@@ -219,6 +225,15 @@
     </section>
   </div>
 </main>
+
+<dialog id="delDlg">
+  <form method="dialog" class="dlg">
+    <h3>Csomag törlése</h3>
+    <p id="delTxt"></p>
+    <div class="row" id="delRow"></div>
+  </form>
+</dialog>
+<div class="toast" id="toast" role="status" hidden></div>
 
 <dialog id="tokDlg">
   <form method="dialog" class="dlg" id="tokForm">
@@ -425,7 +440,7 @@
     return `<details class="pk ${k === "problem" ? "is-problem" : ""}">
       <summary class="pk__head">
         <div class="pk__t"><b>${esc(p.note || p.code)}</b>${p.note ? `<small>${esc(p.code)}</small>` : ""}<span class="when">${esc(when)}</span></div>
-        <span class="chip c-${k}">${esc(label)}</span>
+        <span class="pk__r"><span class="chip c-${k}">${esc(label)}</span><button class="trash" type="button" data-del="${esc(p.code)}" aria-label="Csomag törlése" title="Csomag törlése"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 3h6l1 2h4v2H4V5h4l1-2Zm-3 6h12l-1 12H7L6 9Zm4 2v8h2v-8h-2Zm4 0v8h2v-8h-2Z"/></svg></button></span>
         <span class="chev" aria-hidden="true"></span>
         <div class="steps" aria-label="Állapot: ${step}/5">${steps}</div>
         <div class="steplbl"><span>Létrehozva</span><span>Feladva</span><span>Raktár / úton</span><span>Automatában</span><span>Átvéve</span></div>
@@ -437,7 +452,7 @@
           <a href="https://foxpost.hu/csomagkovetes?code=${encodeURIComponent(p.code)}" target="_blank" rel="noopener">Megnyitás a Foxposton ↗</a>
           <button class="linkbtn" type="button" data-copy="${esc(p.code)}">Csomagszám másolása</button>
           <button class="linkbtn" type="button" data-renote="${esc(p.code)}">Megjegyzés</button>
-          <button class="linkbtn del" type="button" data-del="${esc(p.code)}">Törlés a listából</button>
+          <button class="linkbtn del" type="button" data-del="${esc(p.code)}">Csomag törlése</button>
         </div>
         ${p.checked ? `<p class="hint">Lekérdezve: ${esc(ago(p.checked))}</p>` : ""}
       </div>
@@ -477,14 +492,56 @@
       catch (err) { say(errText(err), true); }
       return;
     }
-    if (del) {
-      if (!confirm(`Törlöd a listából: ${del.dataset.del}?`)) return;
-      try {
-        await dispatch({ remove: [del.dataset.del] });
-        DATA.packages = DATA.packages.filter(x => x.code !== del.dataset.del); render();
-        say("Törölve.");
-      } catch (err) { say(errText(err), true); }
-    }
+    if (del) { e.preventDefault(); e.stopPropagation(); askDelete(del.dataset.del); }
+  });
+
+  let toastT = null;
+  function toast(t, err) {
+    const el = $("toast"); el.textContent = t; el.classList.toggle("is-err", !!err); el.hidden = false;
+    clearTimeout(toastT); toastT = setTimeout(() => el.hidden = true, err ? 9000 : 5000);
+  }
+  function askDelete(code) {
+    const p = DATA.packages.find(x => x.code === code); if (!p) return;
+    const name = p.note ? `${p.note} (${code})` : code;
+    const canCancel = !p.status || p.status === "CREATE";   // még nem adtad át a Foxpostnak
+    $("delTxt").textContent = canCancel
+      ? `${name} – ezt a csomagot még nem adtad fel, ezért a Foxpostnál is sztornózható (a címke érvénytelen lesz). Vagy csak a listából veszed ki.`
+      : `${name} – a Foxpost már átvette, ezért ott nem törölhető; csak ebből a listából veszed ki.`;
+    $("delRow").innerHTML = `<button class="btn btn--line" value="cancel">Mégse</button>`
+      + `<button class="btn ${canCancel ? "btn--line" : "btn--red"}" value="list">Csak a listából</button>`
+      + (canCancel ? `<button class="btn btn--red" value="foxpost">Sztornózás a Foxpostnál is</button>` : "");
+    $("delDlg").dataset.code = code;
+    $("delDlg").returnValue = "";
+    $("delDlg").showModal();
+  }
+  $("delDlg").addEventListener("close", async () => {
+    const v = $("delDlg").returnValue, code = $("delDlg").dataset.code;
+    if (v !== "list" && v !== "foxpost") return;
+    const prev = DATA.packages.slice();
+    try {
+      if (v === "list") {
+        await dispatch({ remove: [code] });
+        DATA.packages = DATA.packages.filter(x => x.code !== code); render();
+        toast("Törölve a listából.");
+        return;
+      }
+      const rid = [...crypto.getRandomValues(new Uint8Array(12))].map(b => b.toString(16).padStart(2, "0")).join("");
+      await dispatch({ cancel: [{ code, rid }] });
+      DATA.packages = DATA.packages.filter(x => x.code !== code); render();
+      toast("Sztornózás a Foxpostnál… (kb. 1 perc)");
+      const t0 = Date.now();
+      const tick = async () => {
+        let d = null; try { d = await window.__job(rid); } catch {}
+        if (d) {
+          if (d.ok) toast("A csomagot a Foxpostnál is töröltük.");
+          else { DATA.packages = prev; render(); toast(d.error || "Nem sikerült a sztornózás.", 1); }
+          return;
+        }
+        if (Date.now() - t0 > 240000) return toast("Nem jött válasz – nézd meg a Foxpost felületén, törlődött-e.", 1);
+        setTimeout(tick, 6000);
+      };
+      setTimeout(tick, 25000);
+    } catch (err) { DATA.packages = prev; render(); toast(errText(err) || "Nem sikerült.", 1); }
   });
 
   $("refresh").onclick = async () => {
@@ -551,6 +608,7 @@
       const pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64(blob.iv) }, KEY, b64(blob.ct));
       return JSON.parse(new TextDecoder().decode(pt));
     }
+    window.__job = job;
     function download(pdfB64, code) {
       const u = URL.createObjectURL(new Blob([b64(pdfB64)], { type: "application/pdf" }));
       const a = $("fx-dl"); a.href = u; a.download = `foxpost-${code}.pdf`; a.hidden = false; a.click();

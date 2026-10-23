@@ -296,7 +296,26 @@ def create_parcels(key, data, jobs):
                 f.unlink()
 
 
-def main():
+def cancel_parcels(key, data, items):
+    """Még fel nem adott csomag sztornózása a Foxpostnál (DELETE /parcel/{barcode})."""
+    done = data.setdefault("jobs", {})
+    for it in items or []:
+        rid = re.sub(r"[^a-f0-9]", "", str(it.get("rid", "")))[:32]
+        code = norm(it.get("code"))
+        if not rid or not code or rid in done:
+            continue
+        if not creds():
+            write_job(key, rid, {"ok": False, "error": "Nincsenek Foxpost kulcsok a GitHubon."})
+            continue
+        st, res = api("DELETE", f"/parcel/{urllib.request.quote(code)}")
+        ok = st in (200, 202, 204)
+        if ok:
+            data["packages"] = [p for p in data["packages"] if p["code"] != code]
+        write_job(key, rid, {"ok": ok, "code": code,
+                             "error": None if ok else f"A Foxpost nem törölte ({st}): {errtext(res)}"})
+        done[rid] = {"ok": ok, "at": now().isoformat()}
+        print("Sztornó: " + ("sikeres." if ok else f"sikertelen ({st})."))
+
     pw = os.environ.get("PKG_PASSWORD", "").strip()
     if not pw:
         print("Nincs PKG_PASSWORD – kihagyva.")
@@ -314,6 +333,7 @@ def main():
     cmd = parse_cmd(key, os.environ.get("PKG_CMD"), inbox_key(pw))
     apply_cmd(data, cmd)
     create_parcels(key, data, cmd.get("create"))
+    cancel_parcels(key, data, cmd.get("cancel"))
     refresh(data)
     # a "checked" mezőkön kívül változott-e valami?
     strip = lambda ps: json.dumps([{k: v for k, v in p.items() if k != "checked"} for p in ps or []],
