@@ -230,7 +230,13 @@ def errtext(res):
             for y in x:
                 walk(y)
     walk(res)
-    return "; ".join(dict.fromkeys(o for o in out if o))[:400] or "ismeretlen hiba"
+    hu = {"recipientName": "név", "recipientPhone": "telefonszám", "recipientEmail": "e-mail",
+          "destination": "automata", "size": "méret", "cod": "utánvét", "INVALID_FORMAT": "hibás formátum",
+          "INVALID_APM_ID": "ismeretlen", "REQUIRED": "hiányzik", "TOO_LONG": "túl hosszú"}
+    txt = "; ".join(dict.fromkeys(o for o in out if o))[:400] or "ismeretlen hiba"
+    for k, v in hu.items():
+        txt = txt.replace(k, v)
+    return txt
 
 
 def write_job(key, rid, obj):

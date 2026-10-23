@@ -57,7 +57,8 @@
   .msg.is-err{color:#a3261b}
   @media (max-width:720px){ .add form{grid-template-columns:1fr} .kpis{grid-template-columns:repeat(2,1fr)} }
   .fx{border-width:2px}
-  .fx__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px 16px;max-width:760px}
+  .add > *{min-width:0}
+  .fx__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:12px 16px;max-width:760px}
   .fx__grid label{display:grid;gap:5px;font-size:14px;font-weight:700;color:var(--green)}
   .fx__grid .fx__wide{grid-column:1 / -1}
   .fx__aut{position:relative}
