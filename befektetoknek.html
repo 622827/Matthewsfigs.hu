@@ -386,7 +386,7 @@
         <span>${x.data.deals.length ? `${x.data.deals.length} ügylet · ${open} folyamatban` : "Még nincs ügylet"}</span>
         <dl><div><dt>Tőke</dt><dd class="num">${huf(cap)}</dd></div><div><dt>Nyeresége eddig</dt><dd class="num">${huf(prof)}</dd></div></dl>
         <i>Megnyitás →</i></button>`;
-    }).join("") + `</div>`;
+    }).join("") + `<a class="mcard" href="csomagok.html"><b>📦 Csomagok</b><span>Foxpost csomagcímke és csomagfigyelő</span><i>Megnyitás →</i></a></div>`;
     $("master").querySelectorAll(".mcard[data-n]").forEach(b => b.onclick = () => {
       $("master").hidden = true; $("deals").hidden = false; $("back").hidden = false;
       render(MASTER[+b.dataset.n].data); window.scrollTo(0, 0);
