@@ -11,7 +11,6 @@
     "about.kicker":"About us","about.title":"Who we are",
     "about.p1":"Matthew's Fig Supply Co. is a LEGO® set and minifigure shop based in Budapest. We buy sealed sets in bulk, so we can sell them below retail. We only sell sets sealed (MISB), and every figure is checked one by one.",
     "about.p2":"If something isn't in stock, we'll source it: a rare figure, a long-retired set or a whole wanted list. We ship within Hungary and abroad, and you can pick up your order in person in Budapest.",
-    "about.name":"The name? Csikós Máté translates to Matthew Horseman in English. \"Fig\" stands for minifigures, and the fig on the logo is a little pun.",
     "about.f1t":"What we sell","about.f1":"Sealed sets, minifigures, parts",
     "about.f2t":"Main theme","about.f2":"Star Wars, plus Minecraft and Castle",
     "about.f3t":"Where to buy","about.f3":"Our BrickLink store, Messenger or in person",
