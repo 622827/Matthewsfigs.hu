@@ -113,6 +113,12 @@ def apply_cmd(data, cmd):
         if norm(code) in pk:
             pk[norm(code)]["note"] = note
             changed = True
+    if isinstance(cmd.get("gh"), str):      # a csomagoldal GitHub kulcsa (titkosítva marad a listában)
+        if cmd["gh"].strip():
+            data["gh"] = cmd["gh"].strip()
+        else:
+            data.pop("gh", None)
+        changed = True
     rm = {norm(c) for c in cmd.get("remove", [])}
     if rm:
         before = len(data["packages"])

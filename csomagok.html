@@ -238,7 +238,7 @@
 <dialog id="tokDlg">
   <form method="dialog" class="dlg" id="tokForm">
     <h3>GitHub kulcs ehhez az eszközhöz</h3>
-    <p>Csomagot hozzáadni, törölni és azonnali frissítést kérni egy GitHub kulccsal lehet. Ezt egyszer kell beállítani eszközönként, és csak ebben a böngészőben marad meg.</p>
+    <p>A gombok (címke, hozzáadás, törlés, frissítés) egy GitHub kulccsal működnek. Ezt <b>csak egyszer</b> kell megadni: titkosítva elmentjük, és utána minden gépen és telefonon működik a jelszóval.</p>
     <ol>
       <li>Nyisd meg: <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com → új Fine-grained token</a></li>
       <li>Név: <b>csomagok</b>, lejárat: amit szeretnél (pl. 1 év).</li>
@@ -348,7 +348,8 @@
   }
 
   // ---------- GitHub dispatch ----------
-  const token = () => store.get("mf.ghtoken");
+  // the GitHub key is entered once; it is then kept inside the encrypted package list, so every device has it after login
+  const token = () => store.get("mf.ghtoken") || (DATA && DATA.gh) || null;
   async function dispatch(cmd) {
     const t = token();
     if (!t) { openTok(); throw new Error("notoken"); }
@@ -357,19 +358,27 @@
       headers: { "Authorization": `Bearer ${t}`, "Accept": "application/vnd.github+json", "X-GitHub-Api-Version": "2022-11-28" },
       body: JSON.stringify({ ref: "main", inputs: { cmd: cmd ? await sealCmd(cmd) : "" } }),
     });
-    if (res.status === 401 || res.status === 403) throw new Error("badtoken");
+    if (res.status === 401 || res.status === 403) { store.set("mf.ghtoken", null); throw new Error("badtoken"); }
     if (!res.ok) throw new Error("http" + res.status);
   }
   function tokHint() {
     $("tokHint").innerHTML = token()
-      ? `Ezen az eszközön be van állítva a GitHub kulcs. <button class="linkbtn" type="button" data-tok>Módosítás</button>`
-      : `Hozzáadáshoz egyszer be kell állítani egy GitHub kulcsot ezen az eszközön. <button class="linkbtn" type="button" data-tok>Beállítás</button>`;
+      ? `A GitHub kulcs be van állítva (minden eszközön működik). <button class="linkbtn" type="button" data-tok>Módosítás</button>`
+      : `A gombokhoz egyszer be kell állítani egy GitHub kulcsot – utána minden eszközön működik. <button class="linkbtn" type="button" data-tok>Beállítás</button>`;
   }
   function openTok() { $("tok").value = ""; $("tokClear").hidden = !token(); $("tokDlg").showModal(); }
-  $("tokDlg").addEventListener("close", () => {
-    const v = $("tokDlg").returnValue;
-    if (v === "ok" && $("tok").value.trim()) store.set("mf.ghtoken", $("tok").value.trim());
-    if (v === "clear") store.set("mf.ghtoken", null);
+  $("tokDlg").addEventListener("close", async () => {
+    const v = $("tokDlg").returnValue, t = $("tok").value.trim();
+    $("tok").value = "";
+    if (v === "ok" && t) {
+      store.set("mf.ghtoken", t);
+      try { await dispatch({ gh: t }); if (DATA) DATA.gh = t; toast("Kulcs elmentve – mostantól minden eszközön működnek a gombok."); }
+      catch (err) { store.set("mf.ghtoken", null); toast(err.message === "badtoken" ? "Ez a kulcs nem jó – ellenőrizd az Actions: Read and write jogot." : "Nem sikerült menteni.", 1); }
+    }
+    if (v === "clear") {
+      try { await dispatch({ gh: "" }); } catch {}
+      store.set("mf.ghtoken", null); if (DATA) DATA.gh = null;
+    }
     tokHint();
   });
   document.addEventListener("click", e => { if (e.target.closest("[data-tok]")) openTok(); });
