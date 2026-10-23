@@ -322,6 +322,8 @@ def cancel_parcels(key, data, items):
         done[rid] = {"ok": ok, "at": now().isoformat()}
         print("Sztornó: " + ("sikeres." if ok else f"sikertelen ({st})."))
 
+
+def main():
     pw = os.environ.get("PKG_PASSWORD", "").strip()
     if not pw:
         print("Nincs PKG_PASSWORD – kihagyva.")

@@ -668,6 +668,9 @@
     const d = await load();
     if (!d) return false;
     DATA = d; render(); tokHint();
+    // a kulcs ezen az eszközön megvan, de a közös listában még nincs → csendben elmentjük
+    const local = store.get("mf.ghtoken");
+    if (local && !d.gh) dispatch({ gh: local }).then(() => { DATA.gh = local; }).catch(() => {});
     $("lock").hidden = true; $("app").hidden = false;
     return true;
   }
