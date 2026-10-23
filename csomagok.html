@@ -56,6 +56,18 @@
   .msg{font-size:14px;margin:0;color:var(--green);font-weight:600}
   .msg.is-err{color:#a3261b}
   @media (max-width:720px){ .add form{grid-template-columns:1fr} .kpis{grid-template-columns:repeat(2,1fr)} }
+  .fx{border-width:2px}
+  .fx__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px 16px;max-width:760px}
+  .fx__grid label{display:grid;gap:5px;font-size:14px;font-weight:700;color:var(--green)}
+  .fx__grid .fx__wide{grid-column:1 / -1}
+  .fx__aut{position:relative}
+  select.field{appearance:auto}
+  .fx > .btn{justify-self:start}
+  #fx-list{position:absolute;left:0;right:0;top:100%;z-index:30;max-height:280px;overflow:auto;background:#fff;border:2px solid var(--line);border-radius:12px;margin-top:4px;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+  #fx-list .o{display:block;width:100%;text-align:left;font:inherit;font-weight:400;padding:8px 12px;border:0;background:none;color:var(--ink);cursor:pointer;border-bottom:1px solid var(--line)}
+  #fx-list .o:hover,#fx-list .o:focus-visible{background:var(--gold);color:var(--green)}
+  #fx-list .o small{display:block;opacity:.75}
+  #fx-list .e{padding:10px 12px;color:var(--muted);font-weight:400}
 
   .tools{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between}
   .tabs{display:flex;gap:6px;flex-wrap:wrap}
@@ -161,8 +173,29 @@
     <section class="band"><div class="wrap kpis" id="kpis"></div></section>
 
     <section class="wrap body">
+      <div class="add fx" id="fx-box">
+        <h2>Foxpost csomagcímke</h2>
+        <div class="fx__grid">
+          <label>Név<input class="field" id="fx-nev" autocomplete="off" placeholder="Címzett neve"></label>
+          <label>Telefonszám<input class="field" id="fx-tel" type="tel" autocomplete="off" placeholder="+36 30 123 4567"></label>
+          <label class="fx__aut">Csomagautomata
+            <input class="field" id="fx-aut" autocomplete="off" role="combobox" aria-expanded="false" aria-controls="fx-list" placeholder="Kattints, majd válassz vagy gépelj (név, város, cím)">
+            <div id="fx-list" role="listbox" hidden></div>
+          </label>
+          <label>E-mail<input class="field" id="fx-mail" type="email" autocomplete="off" placeholder="cim@pelda.hu"></label>
+          <label>Méret<select class="field" id="fx-size">
+            <option value="xs">XS – max. 8 cm magas</option><option value="s" selected>S – max. 19,5 cm</option>
+            <option value="m">M – max. 38 cm</option><option value="l">L – max. 60 cm</option><option value="xl">XL</option></select></label>
+          <label>Utánvét (Ft, nem kötelező)<input class="field" id="fx-cod" inputmode="numeric" autocomplete="off" placeholder="0"></label>
+          <label class="fx__wide">Megjegyzés a listához (nem kötelező)<input class="field" id="fx-note" autocomplete="off" placeholder="pl. BrickLink #32838354 – 75342 tank"></label>
+        </div>
+        <button class="btn btn--gold" type="button" id="fx-go">Csomagcímke létrehozása</button>
+        <p class="msg" id="fx-msg" role="status"></p>
+        <a class="btn btn--line" id="fx-dl" hidden download>Címke letöltése (PDF)</a>
+      </div>
+
       <div class="add">
-        <h2>Új csomag</h2>
+        <h2>Meglévő csomagszám hozzáadása</h2>
         <form id="addForm">
           <textarea class="field" id="code" placeholder="Csomagszám, pl. CLFOX1790…  (több is, soronként)" aria-label="Csomagszám" required></textarea>
           <input class="field" id="note" placeholder="Megjegyzés, pl. vevő neve / rendelés" aria-label="Megjegyzés">
@@ -194,7 +227,7 @@
       <li>Nyisd meg: <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">github.com → új Fine-grained token</a></li>
       <li>Név: <b>csomagok</b>, lejárat: amit szeretnél (pl. 1 év).</li>
       <li>Repository access: <b>Only select repositories → Matthewsfigs.hu</b></li>
-      <li>Permissions → Repository → <b>Actions: Read and write</b> (mást ne adj).</li>
+      <li>Permissions → Repository → <b>Actions: Read and write</b> és <b>Contents: Read-only</b> (mást ne adj).</li>
       <li>Generate token, majd másold be ide:</li>
     </ol>
     <input class="field" id="tok" type="password" placeholder="github_pat_…" aria-label="GitHub kulcs" autocomplete="off">
@@ -463,6 +496,103 @@
       $("refresh").disabled = false; $("refresh").textContent = "↻ Frissítés most";
     }
   };
+
+  // ---------- Foxpost csomagcímke: a GitHub Action hozza létre a csomagot és a címkét ----------
+  (() => {
+    let busy = false, APM = null, apmLoading = false, apmSel = "";
+    const fxMsg = (t, bad) => { $("fx-msg").textContent = t || ""; $("fx-msg").classList.toggle("is-err", !!bad); };
+    const phone = v => {
+      let d = String(v || "").replace(/[^\d+]/g, "");
+      if (d.startsWith("+36")) d = d.slice(1); else if (d.startsWith("06")) d = "36" + d.slice(2);
+      return /^36(20|30|31|70|50|51)\d{7}$/.test(d) ? "+" + d : "";
+    };
+    const nrm = x => String(x || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/[^a-z0-9 ]/g, " ").replace(/\s+/g, " ").trim();
+    function loadApm() {
+      if (APM || apmLoading) return; apmLoading = true;
+      $("fx-list").innerHTML = '<div class="e">Automaták betöltése…</div>'; $("fx-list").hidden = false;
+      fetch("https://cdn.foxpost.hu/foxplus.json").then(r => r.json()).then(l => {
+        APM = l.filter(a => a.operator_id || a.place_id).map(a => {
+          const id = String(a.operator_id || a.place_id), nm = String(a.name || "").replace(/^FOXPOST\s*/i, "");
+          return { id, name: nm, addr: a.address || "", h: nrm([nm, a.city, a.zip, a.street, a.address, id].join(" ")) };
+        }).sort((x, y) => x.addr < y.addr ? -1 : 1);
+        apmLoading = false; showApm();
+      }).catch(() => { apmLoading = false; $("fx-list").innerHTML = '<div class="e">Az automatalista nem tölthető be.</div>'; });
+    }
+    function showApm() {
+      const box = $("fx-list"); if (!APM) return loadApm();
+      const w = nrm($("fx-aut").value).split(" ").filter(Boolean), out = [];
+      for (const a of APM) { if (out.length >= 60) break; if (w.every(x => a.h.includes(x))) out.push(a); }
+      box.innerHTML = ""; box.hidden = false; $("fx-aut").setAttribute("aria-expanded", "true");
+      if (!out.length) { box.innerHTML = '<div class="e">Nincs találat.</div>'; return; }
+      for (const a of out) {
+        const b = document.createElement("button"); b.type = "button"; b.className = "o"; b.setAttribute("role", "option");
+        b.innerHTML = "<b></b><small></small>"; b.firstChild.textContent = a.name; b.lastChild.textContent = `${a.addr} · ${a.id}`;
+        b.addEventListener("mousedown", ev => ev.preventDefault());
+        b.addEventListener("click", () => { apmSel = a.id; $("fx-aut").value = `${a.name} – ${a.addr}`; closeApm(); });
+        box.appendChild(b);
+      }
+    }
+    function closeApm() { $("fx-list").hidden = true; $("fx-aut").setAttribute("aria-expanded", "false"); }
+    $("fx-aut").addEventListener("focus", showApm);
+    $("fx-aut").addEventListener("click", showApm);
+    $("fx-aut").addEventListener("input", () => { apmSel = ""; showApm(); });
+    $("fx-aut").addEventListener("blur", () => setTimeout(closeApm, 150));
+    $("fx-aut").addEventListener("keydown", ev => { if (ev.key === "Escape") closeApm(); });
+
+    // the Action writes data/p/j/<rid>.json (encrypted) – read it straight from GitHub, no Pages delay
+    async function job(rid) {
+      const url = `https://api.github.com/repos/${REPO}/contents/data/p/j/${rid}.json?ref=main&t=${Date.now()}`;
+      const h = { "Accept": "application/vnd.github.raw+json", "X-GitHub-Api-Version": "2022-11-28" };
+      let res = await fetch(url, { headers: token() ? { ...h, "Authorization": `Bearer ${token()}` } : h, cache: "no-store" });
+      if (res.status === 401 || res.status === 403) res = await fetch(url, { headers: h, cache: "no-store" });
+      if (!res.ok) return null;
+      const blob = await res.json();
+      const pt = await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64(blob.iv) }, KEY, b64(blob.ct));
+      return JSON.parse(new TextDecoder().decode(pt));
+    }
+    function download(pdfB64, code) {
+      const u = URL.createObjectURL(new Blob([b64(pdfB64)], { type: "application/pdf" }));
+      const a = $("fx-dl"); a.href = u; a.download = `foxpost-${code}.pdf`; a.hidden = false; a.click();
+    }
+
+    $("fx-go").addEventListener("click", async () => {
+      if (busy) return;
+      $("fx-dl").hidden = true;
+      const nev = $("fx-nev").value.trim(), tel = phone($("fx-tel").value), email = $("fx-mail").value.trim(), aut = apmSel;
+      const cod = parseInt($("fx-cod").value.replace(/\D/g, "") || "0", 10);
+      if (!nev) return fxMsg("Add meg a nevet.", 1);
+      if (!tel) return fxMsg("A telefonszám legyen magyar mobilszám (+36 20/30/31/50/51/70 …).", 1);
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return fxMsg("Az e-mail cím hibás.", 1);
+      if (!aut) return fxMsg("Válassz csomagautomatát a legördülő listából.", 1);
+      if (cod > 1000000) return fxMsg("Az utánvét legfeljebb 1 000 000 Ft lehet.", 1);
+      if (!token()) { openTok(); return; }
+      const rid = [...crypto.getRandomValues(new Uint8Array(12))].map(b => b.toString(16).padStart(2, "0")).join("");
+      busy = true; $("fx-go").disabled = true; fxMsg("Csomag létrehozása… (kb. 1 perc)");
+      try {
+        await dispatch({ create: [{ rid, nev, tel, email, aut, size: $("fx-size").value, cod: cod || 0, note: $("fx-note").value.trim() || nev }] });
+      } catch (err) { busy = false; $("fx-go").disabled = false; return fxMsg(errText(err) || "Nem sikerült elküldeni.", 1); }
+      const t0 = Date.now();
+      const tick = async () => {
+        let d = null;
+        try { d = await job(rid); } catch {}
+        if (d) {
+          busy = false; $("fx-go").disabled = false;
+          if (!d.ok) return fxMsg(d.error || "Nem sikerült a csomag létrehozása.", 1);
+          fxMsg(`Kész. Csomagszám: ${d.code}` + (d.pdf ? " – a címke letöltődik." : ` – ${d.error}`), !d.pdf);
+          if (d.pdf) download(d.pdf, d.code);
+          ["fx-nev", "fx-tel", "fx-mail", "fx-aut", "fx-cod", "fx-note"].forEach(id => $(id).value = ""); apmSel = "";
+          PENDING.push(d.code); render(); awaitUpdate(DATA?.checked);
+          return;
+        }
+        const s = Math.round((Date.now() - t0) / 1000);
+        if (s > 240) { busy = false; $("fx-go").disabled = false;
+          return fxMsg("Még nem jött válasz (4 perc). A csomag ettől még létrejöhetett a Foxpostnál – nézd meg ott, vagy frissítsd később ezt az oldalt, mielőtt újra próbálod.", 1); }
+        fxMsg(`Csomag létrehozása… ${s} mp`);
+        setTimeout(tick, 6000);
+      };
+      setTimeout(tick, 25000);
+    });
+  })();
 
   // ---------- login ----------
   async function open(bits) {

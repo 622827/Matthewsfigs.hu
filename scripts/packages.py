@@ -182,6 +182,114 @@ def refresh(data):
     print(f"Lekérdezve: {len(data['packages'])} csomag, {fails} hiba.")
 
 
+# ---------- csomag létrehozása + címke (a csomagoldal "Csomagcímke létrehozása" gombja) ----------
+JOBS = OUT / "j"
+
+
+def creds():
+    user, pw, apikey = (os.environ.get(k, "").strip() for k in ("FOXPOST_USER", "FOXPOST_PASS", "FOXPOST_APIKEY"))
+    if not (user and pw and apikey):
+        return None
+    return base64.b64encode(f"{user}:{pw}".encode()).decode(), apikey
+
+
+def api(method, path, body=None, pdf=False):
+    auth, apikey = creds()
+    req = urllib.request.Request(f"{API}{path}", method=method,
+                                 data=None if body is None else json.dumps(body).encode(),
+                                 headers={"Authorization": "Basic " + auth, "Api-key": apikey,
+                                          "Content-Type": "application/json",
+                                          "Accept": "application/pdf" if pdf else "application/json",
+                                          "User-Agent": "matthewsfigs.hu csomagfigyelo"})
+    try:
+        with urllib.request.urlopen(req, timeout=60) as r:
+            raw = r.read()
+            return r.status, raw if pdf else json.loads(raw or b"{}")
+    except urllib.error.HTTPError as e:
+        raw = e.read()[:2000]
+        try:
+            return e.code, json.loads(raw)
+        except Exception:
+            return e.code, {"_error": raw.decode("utf-8", "replace")}
+
+
+def errtext(res):
+    """Foxpost hibaüzenet(ek) emberi formában."""
+    out = []
+    def walk(x):
+        if isinstance(x, dict):
+            if x.get("message") or x.get("field"):
+                out.append(" ".join(str(v) for v in (x.get("field"), x.get("message")) if v))
+            for k in ("errors", "parcels", "fieldErrors"):
+                walk(x.get(k))
+            if x.get("error") and isinstance(x["error"], str):
+                out.append(x["error"])
+            if x.get("_error"):
+                out.append(str(x["_error"])[:200])
+        elif isinstance(x, list):
+            for y in x:
+                walk(y)
+    walk(res)
+    return "; ".join(dict.fromkeys(o for o in out if o))[:400] or "ismeretlen hiba"
+
+
+def write_job(key, rid, obj):
+    JOBS.mkdir(parents=True, exist_ok=True)
+    iv, ct = seal(key, obj)
+    (JOBS / f"{rid}.json").write_text(json.dumps(
+        {"v": 1, "iv": base64.b64encode(iv).decode(), "ct": base64.b64encode(ct).decode()}))
+
+
+def create_parcels(key, data, jobs):
+    done = data.setdefault("jobs", {})
+    for j in jobs or []:
+        rid = re.sub(r"[^a-f0-9]", "", str(j.get("rid", "")))[:32]
+        if not rid or rid in done:
+            continue
+        if not creds():
+            write_job(key, rid, {"ok": False, "error": "Nincsenek Foxpost kulcsok a GitHubon."})
+            continue
+        body = {"recipientName": j.get("nev", "")[:150], "recipientPhone": j.get("tel", ""),
+                "recipientEmail": j.get("email", ""), "destination": str(j.get("aut", "")),
+                "size": (j.get("size") or "s").lower(), "refCode": rid[:30]}
+        if j.get("cod"):
+            body["cod"] = int(j["cod"])
+        if j.get("comment"):
+            body["comment"] = str(j["comment"])[:50]
+        st, res = api("POST", "/parcel?isWeb=true", [body])
+        parcel = (res.get("parcels") or [{}])[0] if isinstance(res, dict) else {}
+        code = parcel.get("clFoxId") or parcel.get("barcode") or parcel.get("newBarcode")
+        if st not in (200, 201) or not code or res.get("valid") is False:
+            print(f"Csomag létrehozása sikertelen ({st}).")
+            write_job(key, rid, {"ok": False, "error": f"A Foxpost nem fogadta el: {errtext(res)}"})
+            done[rid] = {"ok": False, "at": now().isoformat()}
+            continue
+        code = norm(code)
+        note = j.get("note") or j.get("nev", "")
+        if not any(p["code"] == code for p in data["packages"]):
+            data["packages"].append({"code": code, "note": note, "src": "címke", "added": now().isoformat(),
+                                     "status": "CREATE"})
+        pdf = None
+        for _ in range(3):
+            pst, praw = api("POST", f"/label/{j.get('page') or 'A6'}", [code], pdf=True)
+            if pst == 200 and isinstance(praw, bytes) and praw[:4] == b"%PDF":
+                pdf = base64.b64encode(praw).decode()
+                break
+            time.sleep(3)
+        write_job(key, rid, {"ok": True, "code": code, "pdf": pdf,
+                             "error": None if pdf else "A csomag létrejött, de a címkét nem sikerült lekérni – a Foxpost felületén letöltheted."})
+        done[rid] = {"ok": True, "code": code, "at": now().isoformat()}
+        print("Csomag létrehozva" + (" + címke." if pdf else ", címke nélkül."))
+    # régi címkefájlok és naplóbejegyzések takarítása (2 nap)
+    lim = now() - timedelta(days=2)
+    for rid, v in list(done.items()):
+        if datetime.fromisoformat(v["at"]) < lim:
+            done.pop(rid)
+            f = JOBS / f"{rid}.json"
+            if f.exists():
+                f.unlink()
+
+
 def main():
     pw = os.environ.get("PKG_PASSWORD", "").strip()
     if not pw:
@@ -199,6 +307,7 @@ def main():
     old_checked = data.get("checked")
     cmd = parse_cmd(key, os.environ.get("PKG_CMD"), inbox_key(pw))
     apply_cmd(data, cmd)
+    create_parcels(key, data, cmd.get("create"))
     refresh(data)
     # a "checked" mezőkön kívül változott-e valami?
     strip = lambda ps: json.dumps([{k: v for k, v in p.items() if k != "checked"} for p in ps or []],
