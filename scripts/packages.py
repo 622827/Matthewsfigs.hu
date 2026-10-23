@@ -280,7 +280,9 @@ def create_parcels(key, data, jobs):
         note = j.get("note") or j.get("nev", "")
         if not any(p["code"] == code for p in data["packages"]):
             data["packages"].append({"code": code, "note": note, "src": "címke", "added": now().isoformat(),
-                                     "status": "CREATE"})
+                                     "status": "CREATE", **({"bl": str(j["bl"])} if j.get("bl") else {})})
+        if j.get("bl"):
+            data.setdefault("blDone", {})[str(j["bl"])] = code
         pdf = None
         for _ in range(3):
             pst, praw = api("POST", f"/label/{j.get('page') or 'A6'}", [code], pdf=True)
@@ -323,6 +325,66 @@ def cancel_parcels(key, data, items):
         print("Sztornó: " + ("sikeres." if ok else f"sikertelen ({st})."))
 
 
+# ---------- BrickLink: beérkezett, még fel nem adott rendelések a címkéhez ----------
+BL_OPEN = "PENDING,UPDATED,PROCESSING,READY,PAID,PACKED"
+
+
+def bl_sync(data):
+    if not all(os.environ.get(k) for k in ("BL_CONSUMER_KEY", "BL_CONSUMER_SECRET", "BL_TOKEN", "BL_TOKEN_SECRET")):
+        return
+    sys.path.insert(0, str(Path(__file__).resolve().parent))
+    import sync_bricklink as BL
+    try:
+        rows = BL.oauth_get(f"{BL.API}/orders", {"direction": "in", "status": BL_OPEN})
+    except (Exception, SystemExit) as e:
+        print(f"BrickLink rendelések most nem érhetők el ({type(e).__name__}).")
+        return
+    old = {str(o["id"]): o for o in data.get("orders", [])}
+    out = []
+    for r in rows:
+        oid = str(r.get("order_id"))
+        prev = old.get(oid)
+        if prev and prev.get("status") == r.get("status") and prev.get("_v") == 2:
+            out.append(prev)
+            continue
+        try:
+            d = BL.oauth_get(f"{BL.API}/orders/{oid}")
+            items = BL.oauth_get(f"{BL.API}/orders/{oid}/items")
+            try:
+                msgs = BL.oauth_get(f"{BL.API}/orders/{oid}/messages")
+            except (Exception, SystemExit):
+                msgs = []
+        except (Exception, SystemExit) as e:
+            print(f"Egy rendelés részletei nem érhetők el ({type(e).__name__}).")
+            if prev:
+                out.append(prev)
+            continue
+        ship = d.get("shipping") or {}
+        addr = ship.get("address") or {}
+        name = (addr.get("name") or {}).get("full") or d.get("buyer_name") or ""
+        flat = [x for batch in (items or []) for x in (batch if isinstance(batch, list) else [batch])]
+        out.append({
+            "_v": 2, "id": oid, "date": d.get("date_ordered"), "status": d.get("status"),
+            "buyer": d.get("buyer_name"), "name": name, "email": d.get("buyer_email") or "",
+            "phone": addr.get("phone_number") or addr.get("phone") or "",
+            "country": addr.get("country_code") or "", "addr": addr.get("full") or "",
+            "addrParts": {k: addr.get(k) for k in ("address1", "address2", "city", "postal_code") if addr.get(k)},
+            "method": ship.get("method") or "", "tracking": ship.get("tracking_no") or "",
+            "remarks": (d.get("remarks") or "")[:500],
+            "pay": (d.get("payment") or {}).get("status") or "",
+            "total": (d.get("cost") or {}).get("disp_grandtotal") or (d.get("cost") or {}).get("grandtotal"),
+            "cur": (d.get("cost") or {}).get("display_currency_code") or (d.get("cost") or {}).get("currency_code"),
+            "msgs": [{"from": m.get("from"), "to": m.get("to"), "subject": (m.get("subject") or "")[:120],
+                      "body": (m.get("body") or "")[:800], "at": m.get("dateSent") or m.get("date_sent")}
+                     for m in (msgs or [])][:8],
+            "items": [{"no": (x.get("item") or {}).get("no"), "name": (x.get("item") or {}).get("name"),
+                       "type": (x.get("item") or {}).get("type"), "qty": x.get("quantity")} for x in flat][:40],
+            "_addrKeys": sorted(addr.keys()),
+        })
+    data["orders"] = sorted(out, key=lambda o: o.get("date") or "", reverse=True)
+    print(f"BrickLink: {len(out)} nyitott rendelés.")
+
+
 def main():
     pw = os.environ.get("PKG_PASSWORD", "").strip()
     if not pw:
@@ -338,15 +400,17 @@ def main():
         return
     old = json.dumps(data.get("packages"), sort_keys=True, ensure_ascii=False)
     old_checked = data.get("checked")
+    old_orders = json.dumps(data.get("orders"), sort_keys=True)
     cmd = parse_cmd(key, os.environ.get("PKG_CMD"), inbox_key(pw))
     apply_cmd(data, cmd)
     create_parcels(key, data, cmd.get("create"))
     cancel_parcels(key, data, cmd.get("cancel"))
+    bl_sync(data)
     refresh(data)
     # a "checked" mezőkön kívül változott-e valami?
     strip = lambda ps: json.dumps([{k: v for k, v in p.items() if k != "checked"} for p in ps or []],
                                   sort_keys=True, ensure_ascii=False)
-    changed = strip(json.loads(old)) != strip(data["packages"])
+    changed = strip(json.loads(old)) != strip(data["packages"]) or old_orders != json.dumps(data.get("orders"), sort_keys=True)
     stale = not old_checked or datetime.fromisoformat(old_checked) < now() - timedelta(hours=3)
     if changed or stale or cmd or os.environ.get("PKG_FORCE") == "true":
         save(key, fid, data)

@@ -32,6 +32,10 @@ jobs:
           FOXPOST_USER: ${{ secrets.FOXPOST_USER }}
           FOXPOST_PASS: ${{ secrets.FOXPOST_PASS }}
           FOXPOST_APIKEY: ${{ secrets.FOXPOST_APIKEY }}
+          BL_CONSUMER_KEY: ${{ secrets.BL_CONSUMER_KEY }}
+          BL_CONSUMER_SECRET: ${{ secrets.BL_CONSUMER_SECRET }}
+          BL_TOKEN: ${{ secrets.BL_TOKEN }}
+          BL_TOKEN_SECRET: ${{ secrets.BL_TOKEN_SECRET }}
           PKG_CMD: ${{ inputs.cmd }}
           PKG_FORCE: ${{ github.event_name == 'workflow_dispatch' }}
         run: python scripts/packages.py
