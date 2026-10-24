@@ -1,10 +1,10 @@
 {
- "updated": "2026-10-22T12:07:24+00:00",
+ "updated": "2026-10-24T08:01:19+00:00",
  "store": "MatthewHorseman",
  "currency": "EUR",
- "total_lots": 741,
+ "total_lots": 739,
  "parts_lots": 537,
- "parts_qty": 4117,
+ "parts_qty": 4111,
  "items": [
   {
    "id": 565498056,
@@ -1594,19 +1594,6 @@
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=555623125"
   },
   {
-   "id": 543105947,
-   "type": "MINIFIG",
-   "no": "sw1274",
-   "name": "Boba Fett - Helmet, Jet Pack, Printed Arms and Legs, Rangefinder",
-   "color": null,
-   "cond": "N",
-   "qty": 1,
-   "price": 6.99,
-   "note": "Never assembled",
-   "img": "https://img.bricklink.com/ItemImage/MN/0/sw1274.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543105947"
-  },
-  {
    "id": 555623224,
    "type": "MINIFIG",
    "no": "sw1395",
@@ -1917,19 +1904,6 @@
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0188.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554534142"
-  },
-  {
-   "id": 566188050,
-   "type": "MINIFIG",
-   "no": "sw0532",
-   "name": "Chewbacca - Dark Brown, Medium Nougat Fur",
-   "color": null,
-   "cond": "N",
-   "qty": 1,
-   "price": 4.99,
-   "note": "Brand new.",
-   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0532.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566188050"
   },
   {
    "id": 554256033,
@@ -2698,6 +2672,20 @@
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0209.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564316927",
+   "preorder": true
+  },
+  {
+   "id": 543105947,
+   "type": "MINIFIG",
+   "no": "sw1274",
+   "name": "Boba Fett - Helmet, Jet Pack, Printed Arms and Legs, Rangefinder",
+   "color": null,
+   "cond": "N",
+   "qty": 0,
+   "price": 6.99,
+   "note": "Never assembled",
+   "img": "https://img.bricklink.com/ItemImage/MN/0/sw1274.png",
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543105947",
    "preorder": true
   },
   {
