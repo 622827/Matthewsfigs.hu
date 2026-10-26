@@ -274,3 +274,30 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .box3d .core.cy{height:calc(var(--d) - 2px);top:calc((var(--h) - var(--d)) / 2 + 1px)}
 .facts dd a{color:inherit;text-decoration:underline;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:3px}
 .facts dd a:hover{color:var(--gold-ink)}
+
+/* jogi oldalak (ÁSZF, adatkezelés, impresszum) */
+.doc{padding:48px 0 72px}
+.doc__in{max-width:860px}
+.doc h1{font-size:clamp(32px,5vw,48px);color:var(--green);margin:0 0 6px}
+.doc__date{color:var(--muted);margin:0 0 24px;font-size:14px}
+.doc__toc{background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:16px 22px;margin:0 0 28px}
+.doc__toc b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.doc__toc ul{margin:0;padding:0;list-style:none;columns:2;column-gap:28px}
+.doc__toc li{margin:3px 0;break-inside:avoid}
+.doc__toc a,.doc__body a{color:var(--green);font-weight:600;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:3px}
+.doc__body{line-height:1.65;font-size:16px}
+.doc__body h2{font-size:24px;color:var(--green);margin:34px 0 10px;scroll-margin-top:90px}
+.doc__body ul,.doc__body ol{padding-left:22px}
+.doc__body li{margin:6px 0}
+.doc__lead{font-size:17px}
+.doc__dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:16px 20px;margin:0 0 12px}
+.doc__dl dt{font-weight:700;color:var(--muted);font-size:14px}
+.doc__dl dd{margin:0}
+.doc__table{overflow-x:auto;margin:8px 0}
+.doc__table table{border-collapse:collapse;width:100%;font-size:14.5px;background:#fff;border:1.5px solid var(--line);border-radius:var(--r)}
+.doc__table th,.doc__table td{text-align:left;vertical-align:top;padding:10px 12px;border-bottom:1px solid var(--line)}
+.doc__table th{font-size:12px;letter-spacing:.05em;text-transform:uppercase;color:var(--muted)}
+.doc__form{background:#fff;border:1.5px dashed var(--line);border-radius:var(--r);padding:16px 20px}
+.doc__form p{margin:8px 0}
+.foot__legal{font-size:14px!important;opacity:.85}
+@media (max-width:640px){.doc__toc ul{columns:1}.doc__dl{grid-template-columns:1fr}.doc__dl dd{margin-bottom:6px}}

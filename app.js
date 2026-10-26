@@ -12,7 +12,7 @@
     "about.p1":"Matthew's Fig Supply Co. is a LEGO® set and minifigure shop based in Budapest. We buy sealed sets in bulk, so we can sell them below retail. We only sell sets sealed (MISB), and every figure is checked one by one.",
     "about.p2":"If something isn't in stock, we'll source it: a rare figure, a long-retired set or a whole wanted list. We ship within Hungary and abroad, and you can pick up your order in person in Budapest.",
     "about.f1t":"What we sell","about.f1":"Sealed sets, minifigures, parts",
-    "about.f2t":"Main themes","about.f2":"Star Wars – other themes we can mostly source for you on request or to order.",
+    "foot.aszf":"Terms (HU)","foot.privacy":"Privacy (HU)","foot.imprint":"Imprint","about.f2t":"Main themes","about.f2":"Star Wars – other themes we can mostly source for you on request or to order.",
     "about.f3t":"Where to buy","about.f3":"In our <a href=\"https://store.bricklink.com/MatthewHorseman\" target=\"_blank\" rel=\"noopener\">BrickLink store</a>, via Messenger on our <a href=\"https://www.facebook.com/profile.php?id=100091130775442\" target=\"_blank\" rel=\"noopener\">Facebook page</a>, or in person (<a href=\"tel:+36203133292\">+36&nbsp;20&nbsp;313&nbsp;3292</a>, Máté Csikós) – and soon right here in our webshop.",
     "about.f4t":"Based in","about.f5t":"Languages","about.f5":"Hungarian and English","nav.sourcing":"Sourcing","nav.order":"How to order","nav.contact":"Contact",
     "hero.kicker":"LEGO® sets · minifigures · parts",
