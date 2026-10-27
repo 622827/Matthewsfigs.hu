@@ -1,21 +1,32 @@
 #!/usr/bin/env python3
-"""Cut the minifigures out of their white BrickLink background (transparent PNG),
-for the "display stand" turntable on the site.
+"""Cut the minifigures out of their BrickLink photo (transparent WebP) for the display-plate cards.
 
-Output: assets/figs/<no>.webp and assets/figs/index.json {"sw0314": {"r": 0.62}}  (r = width / height)
-Only new figures are processed unless --force.
-Requires: pip install opencv-python-headless numpy
+Background removal uses BiRefNet (general), an open segmentation model run with onnxruntime,
+so shadows, grey gradients and photographed backgrounds are removed while white legs on a
+white background are kept.
+
+Output: assets/figs/<no>.webp and assets/figs/index.json
+        {"sw0314": {"r": 0.62, "fw": 0.48, "fx": 0.5}}
+        r = width / height, fw / fx = width and centre of the feet (fractions of the width)
+Only new figures are processed unless --force (or --only sw0001,sw0002).
+Requires: pip install onnxruntime numpy pillow opencv-python-headless
 """
-import json, sys, urllib.request
+import json, os, sys, urllib.request
 from pathlib import Path
 
 import cv2
 import numpy as np
+import onnxruntime as ort
+from PIL import Image
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "assets" / "figs"
 INV = ROOT / "data" / "inventory.json"
-H_PX = 280  # output height
+H_PX = 300  # output height
+MODEL_URL = "https://github.com/danielgatis/rembg/releases/download/v0.0.0/BiRefNet-general-epoch_244.onnx"
+MODEL = Path(os.environ.get("FIG_MODEL", Path.home() / ".cache" / "matthewsfigs" / "birefnet-general.onnx"))
+MEAN = np.array([0.485, 0.456, 0.406], np.float32)
+STD = np.array([0.229, 0.224, 0.225], np.float32)
 
 
 def fetch(no):
@@ -23,84 +34,102 @@ def fetch(no):
     req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 matthewsfigs.hu"})
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
-            data = np.frombuffer(r.read(), np.uint8)
+            return Image.open(__import__("io").BytesIO(r.read())).convert("RGB")
     except Exception:
         return None
-    return cv2.imdecode(data, cv2.IMREAD_COLOR)
 
 
-def cutout(bgr):
-    h, w = bgr.shape[:2]
-    # background = pixels close to the photo's border colour, connected to the border
-    border = np.concatenate([bgr[0], bgr[-1], bgr[:, 0], bgr[:, -1]])
-    bgc = np.median(border, axis=0)
-    dist = np.abs(bgr.astype(np.int16) - bgc.astype(np.int16)).max(axis=2)
-    near_bg = (dist <= 16).astype(np.uint8)
-    pad = np.pad(near_bg, 1, constant_values=1) * 255
-    mask = np.zeros((h + 4, w + 4), np.uint8)
-    cv2.floodFill(pad, mask, (0, 0), 128, loDiff=0, upDiff=0, flags=4)
-    fg = (pad[1:-1, 1:-1] != 128).astype(np.uint8) * 255
-    fg = cv2.morphologyEx(fg, cv2.MORPH_OPEN, np.ones((2, 2), np.uint8))
-    # keep only the figure itself: the biggest blob (drops spare heads / accessories shown beside it)
-    n, lab, stats, _ = cv2.connectedComponentsWithStats(fg, 8)
+def session():
+    if not MODEL.exists():
+        MODEL.parent.mkdir(parents=True, exist_ok=True)
+        print("Modell letöltése…")
+        urllib.request.urlretrieve(MODEL_URL, MODEL)
+    so = ort.SessionOptions()
+    return ort.InferenceSession(str(MODEL), so, providers=["CPUExecutionProvider"])
+
+
+def predict(sess, img):
+    """Soft foreground mask (0..255) for an RGB image, via a square, border-coloured canvas."""
+    w, h = img.size
+    s = max(w, h)
+    arr = np.array(img)
+    border = np.concatenate([arr[0], arr[-1], arr[:, 0], arr[:, -1]])
+    bgc = tuple(int(v) for v in np.median(border, axis=0))
+    sq = Image.new("RGB", (s, s), bgc)
+    ox, oy = (s - w) // 2, (s - h) // 2
+    sq.paste(img, (ox, oy))
+    x = (np.array(sq.resize((1024, 1024), Image.LANCZOS)).astype(np.float32) / 255.0 - MEAN) / STD
+    out = sess.run(None, {sess.get_inputs()[0].name: x.transpose(2, 0, 1)[None].astype(np.float32)})[0][0, 0]
+    out = 1 / (1 + np.exp(-out))
+    m = np.array(Image.fromarray((out * 255).clip(0, 255).astype(np.uint8)).resize((s, s), Image.LANCZOS))
+    return m[oy:oy + h, ox:ox + w]
+
+
+def clean(mask):
+    """Hard-ish alpha: keep the figure and parts attached to it, drop spare heads / specks in the corners."""
+    a = mask.astype(np.float32) / 255.0
+    a = np.clip((a - 0.25) / 0.5, 0, 1)                     # firm up the soft edge, drop faint haze
+    solid = (a > 0.5).astype(np.uint8)
+    n, lab, st, _ = cv2.connectedComponentsWithStats(solid, 8)
     if n <= 1:
         return None
-    main_i = 1 + int(np.argmax(stats[1:, cv2.CC_STAT_AREA]))
-    keep = (lab == main_i).astype(np.uint8) * 255
-    keep = cv2.morphologyEx(keep, cv2.MORPH_CLOSE, np.ones((3, 3), np.uint8))
-    # background pockets enclosed by the figure (gap between arm and body, between the legs)
-    tight = ((dist <= 7) & (keep > 0)).astype(np.uint8)
-    m, plab, pst, _ = cv2.connectedComponentsWithStats(tight, 4)
-    for i in range(1, m):
-        if pst[i, cv2.CC_STAT_AREA] >= 40:
-            keep[plab == i] = 0
-    if keep.sum() / 255 < 0.05 * h * w:
-        return None
-    # photo backgrounds that aren't plain (gradients, shadows) leave big background-coloured
-    # areas on the figure: such figures keep their normal still picture instead
-    kept = keep > 0
-    if (dist[kept] <= 22).mean() > 0.22:
-        return None
-    alpha = cv2.GaussianBlur(keep, (3, 3), 0)
-    ys, xs = np.where(keep > 0)
-    y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
-    rgba = np.dstack([bgr, alpha])[y0:y1, x0:x1]
-    s = H_PX / rgba.shape[0]
-    return cv2.resize(rgba, (max(1, int(round(rgba.shape[1] * s))), H_PX), interpolation=cv2.INTER_CUBIC)
+    big = 1 + int(np.argmax(st[1:, cv2.CC_STAT_AREA]))
+    bx, by, bw, bh = st[big, :4]
+    pad = 0.04 * max(bw, bh)
+    keep = np.zeros_like(solid)
+    for i in range(1, n):
+        x, y, w, h, area = st[i]
+        inside = x + w > bx - pad and x < bx + bw + pad and y + h > by - pad and y < by + bh + pad
+        if i == big or (inside and area >= 0.004 * st[big, cv2.CC_STAT_AREA]):
+            keep[lab == i] = 1
+    keep = cv2.dilate(keep, np.ones((3, 3), np.uint8))       # keep the antialiased rim
+    return (a * keep * 255).astype(np.uint8)
 
 
-def feet(rgba):
-    """Width and centre of the feet (bottom 6 % of the cut-out), as fractions of the image width."""
-    a = rgba[:, :, 3]
-    h, w = a.shape
-    cols = np.where((a[int(h * 0.94):] > 128).any(axis=0))[0]
+def feet(alpha):
+    h, w = alpha.shape
+    cols = np.where((alpha[int(h * 0.94):] > 128).any(axis=0))[0]
     if not len(cols):
         return {}
     x0, x1 = int(cols.min()), int(cols.max()) + 1
     return {"fw": round((x1 - x0) / w, 4), "fx": round((x0 + x1) / 2 / w, 4)}
 
 
+def cutout(sess, img):
+    alpha = clean(predict(sess, img))
+    if alpha is None or (alpha > 128).sum() < 0.04 * alpha.size:
+        return None
+    ys, xs = np.where(alpha > 20)
+    y0, y1, x0, x1 = ys.min(), ys.max() + 1, xs.min(), xs.max() + 1
+    rgba = np.dstack([np.array(img), alpha])[y0:y1, x0:x1]
+    s = H_PX / rgba.shape[0]
+    im = Image.fromarray(rgba, "RGBA").resize((max(1, round(rgba.shape[1] * s)), H_PX), Image.LANCZOS)
+    return im
+
+
 def main():
     force = "--force" in sys.argv
+    only = next((a.split("=", 1)[1].split(",") for a in sys.argv if a.startswith("--only=")), None)
     OUT.mkdir(parents=True, exist_ok=True)
     idx_path = OUT / "index.json"
     index = json.loads(idx_path.read_text()) if idx_path.exists() else {}
     figs = sorted({i["no"] for i in json.loads(INV.read_text())["items"] if i["type"] == "MINIFIG"})
+    todo = [n for n in figs if (only and n in only) or (not only and (force or n not in index))]
+    if not todo:
+        print("Nincs új figura.")
+        return
+    sess = session()
     ok = failed = 0
-    for no in figs:
-        if no in index and not force:
-            continue
+    for no in todo:
         img = fetch(no)
-        if img is not None and "--debug" in sys.argv:
-            (OUT / "_raw").mkdir(exist_ok=True)
-            cv2.imwrite(str(OUT / "_raw" / f"{no}.png"), img)
-        res = cutout(img) if img is not None else None
+        res = cutout(sess, img) if img is not None else None
         if res is None:
             index[no] = None
             failed += 1
             continue
-        cv2.imwrite(str(OUT / f"{no}.webp"), res, [cv2.IMWRITE_WEBP_QUALITY, 82])
-        index[no] = {"r": round(res.shape[1] / res.shape[0], 4), **feet(res)}
+        res.save(OUT / f"{no}.webp", "WEBP", quality=86, method=6)
+        a = np.array(res)[:, :, 3]
+        index[no] = {"r": round(res.width / res.height, 4), **feet(a)}
         ok += 1
     idx_path.write_text(json.dumps(index, indent=1, sort_keys=True))
     print(f"Kész: {ok} figura, {failed} sikertelen.")

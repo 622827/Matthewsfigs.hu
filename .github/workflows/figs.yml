@@ -1,0 +1,62 @@
+name: Minifigura-kivágások
+
+on:
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Minden figura újragenerálása"
+        type: boolean
+        default: false
+      only:
+        description: "Csak ezek (vesszővel), pl. sw0001,sw0002"
+        default: ""
+      branch:
+        description: "Mentés ide (main vagy egy előnézeti ág)"
+        default: "main"
+
+concurrency:
+  group: inventory-sync
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  figs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - uses: actions/cache@v4
+        with:
+          path: ~/.cache/matthewsfigs
+          key: birefnet-general-244
+      - name: Kivágás
+        env:
+          FORCE: ${{ inputs.force }}
+          ONLY: ${{ inputs.only }}
+        run: |
+          pip install --quiet onnxruntime numpy pillow opencv-python-headless
+          ARGS=""
+          [ "$FORCE" = "true" ] && ARGS="--force"
+          [ -n "$ONLY" ] && ARGS="--only=$ONLY"
+          python scripts/fig_cutouts.py $ARGS
+      - name: Mentés
+        env:
+          BRANCH: ${{ inputs.branch }}
+        run: |
+          git config user.name "inventory-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add assets/figs
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Minifigura-kivágások frissítése"
+          if [ "$BRANCH" = "main" ]; then
+            for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done; exit 1
+          else
+            git push -q -f origin "HEAD:refs/heads/$BRANCH"
+          fi

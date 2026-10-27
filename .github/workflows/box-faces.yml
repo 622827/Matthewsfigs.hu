@@ -48,12 +48,17 @@ jobs:
         if: steps.need.outputs.run == 'true'
         with:
           python-version: "3.12"
+      - uses: actions/cache@v4
+        if: steps.need.outputs.run == 'true'
+        with:
+          path: ~/.cache/matthewsfigs
+          key: birefnet-general-244
       - name: Dobozlapok készítése
         if: steps.need.outputs.run == 'true'
         run: |
-          pip install --quiet opencv-python-headless numpy
+          pip install --quiet opencv-python-headless numpy onnxruntime pillow
           python scripts/box_faces.py ${{ inputs.force && '--force' || '' }} ${{ inputs.debug && '--debug' || '' }}
-          python scripts/fig_cutouts.py ${{ inputs.force && '--force' || '' }} ${{ inputs.debug && '--debug' || '' }}
+          python scripts/fig_cutouts.py
       - name: Hibakereső képek
         if: inputs.debug
         run: |
