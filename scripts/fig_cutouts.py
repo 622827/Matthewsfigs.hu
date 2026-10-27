@@ -69,6 +69,17 @@ def cutout(bgr):
     return cv2.resize(rgba, (max(1, int(round(rgba.shape[1] * s))), H_PX), interpolation=cv2.INTER_CUBIC)
 
 
+def feet(rgba):
+    """Width and centre of the feet (bottom 6 % of the cut-out), as fractions of the image width."""
+    a = rgba[:, :, 3]
+    h, w = a.shape
+    cols = np.where((a[int(h * 0.94):] > 128).any(axis=0))[0]
+    if not len(cols):
+        return {}
+    x0, x1 = int(cols.min()), int(cols.max()) + 1
+    return {"fw": round((x1 - x0) / w, 4), "fx": round((x0 + x1) / 2 / w, 4)}
+
+
 def main():
     force = "--force" in sys.argv
     OUT.mkdir(parents=True, exist_ok=True)
@@ -89,7 +100,7 @@ def main():
             failed += 1
             continue
         cv2.imwrite(str(OUT / f"{no}.webp"), res, [cv2.IMWRITE_WEBP_QUALITY, 82])
-        index[no] = {"r": round(res.shape[1] / res.shape[0], 4)}
+        index[no] = {"r": round(res.shape[1] / res.shape[0], 4), **feet(res)}
         ok += 1
     idx_path.write_text(json.dumps(index, indent=1, sort_keys=True))
     print(f"Kész: {ok} figura, {failed} sikertelen.")

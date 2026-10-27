@@ -78,12 +78,20 @@
   // 3D product box: sets get their original LEGO box art on a cuboid,
   // minifigures turn like on a display turntable.
   let BOXES = {}, LABELS = {}, FIGS = {};   // assets/boxes/index.json: flattened faces cut from the box photos
-  // minifigure on a LEGO display plate: stands still, front view
+  // minifigure on a LEGO display plate: stands still, front view, feet on the two middle studs
+  // plate art (assets/figstand.svg, 120×44): front stud row base at y≈22.5, stud pitch 24.5 → 2 studs = 49 units
   const fig3d = (i, f) => {
-    const H = 122, w = Math.min(92, H * f.r), h = w / f.r;
+    const H = 118, w = Math.min(92, H * f.r), h = w / f.r;
+    let fw = f.fw, fx = f.fx;
+    if (!fw || fw * f.r < 0.28 || fw * f.r > 0.46) { fw = 0.38 / f.r; fx = 0.5; }   // capes, robes, odd crops
+    const foot = fw * w;                                   // px across both feet = 2 studs
+    const pw = Math.max(92, Math.min(150, foot * 120 / 49)), ph = pw * 44 / 120;
+    const lift = ph * (1 - 22.5 / 44);                     // plate surface under the feet
+    const left = pw / 2 - fx * w;                          // feet centred between the two middle studs
     const art = `assets/figs/${encodeURIComponent(i.no)}.webp`;
-    return `<div class="stage stage--fig"><div class="figstand" style="--w:${w.toFixed(1)}px;--h:${h.toFixed(1)}px">
+    return `<div class="stage stage--fig"><div class="figstand" style="--pw:${pw.toFixed(1)}px;--ph:${ph.toFixed(1)}px;--w:${w.toFixed(1)}px;--h:${h.toFixed(1)}px;--lift:${lift.toFixed(1)}px;--fl:${left.toFixed(1)}px;--foot:${foot.toFixed(1)}px">
       <img class="figstand__plate" src="assets/figstand.svg?v=2" alt="" aria-hidden="true">
+      <i class="figstand__shadow" aria-hidden="true"></i>
       <img class="figstand__fig" loading="lazy" alt="${esc(i.name)}" src="${art}">
     </div></div>`;
   };
