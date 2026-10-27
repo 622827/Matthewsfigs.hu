@@ -83,7 +83,7 @@
     const H = 122, w = Math.min(92, H * f.r), h = w / f.r;
     const art = `assets/figs/${encodeURIComponent(i.no)}.webp`;
     return `<div class="stage stage--fig"><div class="figstand" style="--w:${w.toFixed(1)}px;--h:${h.toFixed(1)}px">
-      <img class="figstand__plate" src="assets/figstand.svg?v=1" alt="" aria-hidden="true">
+      <img class="figstand__plate" src="assets/figstand.svg?v=2" alt="" aria-hidden="true">
       <img class="figstand__fig" loading="lazy" alt="${esc(i.name)}" src="${art}">
     </div></div>`;
   };
