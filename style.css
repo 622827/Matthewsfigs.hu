@@ -301,3 +301,11 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .doc__form p{margin:8px 0}
 .foot__legal{font-size:14px!important;opacity:.85}
 @media (max-width:640px){.doc__toc ul{columns:1}.doc__dl{grid-template-columns:1fr}.doc__dl dd{margin-bottom:6px}}
+
+/* minifigura: áll egy LEGO-lapon (nem forog) */
+.stage--fig{perspective:none}
+.figstand{position:relative;width:130px;height:calc(var(--h) + 30px);display:flex;justify-content:center}
+.figstand__plate{position:absolute;left:50%;bottom:0;width:124px;height:auto;transform:translateX(-50%);pointer-events:none}
+.figstand__fig{position:absolute;left:50%;bottom:26px;width:var(--w);height:var(--h);transform:translateX(-50%);transform-origin:50% 100%;filter:drop-shadow(0 2px 1.5px rgba(0,0,0,.35));transition:transform .25s ease}
+.item:hover .figstand__fig{transform:translateX(-50%) translateY(-3px)}
+@media (prefers-reduced-motion:reduce){.figstand__fig{transition:none}}

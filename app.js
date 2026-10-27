@@ -78,16 +78,13 @@
   // 3D product box: sets get their original LEGO box art on a cuboid,
   // minifigures turn like on a display turntable.
   let BOXES = {}, LABELS = {}, FIGS = {};   // assets/boxes/index.json: flattened faces cut from the box photos
-  // minifigure "display stand": the cut-out figure with a little thickness, on a round base
+  // minifigure on a LEGO display plate: stands still, front view
   const fig3d = (i, f) => {
-    const H = 116, w = Math.min(96, H * f.r), h = w / f.r, T = 12, N = 12;
+    const H = 122, w = Math.min(92, H * f.r), h = w / f.r;
     const art = `assets/figs/${encodeURIComponent(i.no)}.webp`;
-    let mids = "";
-    for (let k = 1; k < N; k++) mids += `<i class="f mid" style="transform:translateZ(${(-T / 2 + (T * k) / N).toFixed(2)}px)"></i>`;
-    return `<div class="stage"><div class="box3d fig" data-side="left" style="--w:${w.toFixed(1)}px;--h:${h.toFixed(1)}px;--t:${T}px;--art:url('${art}')">
-      <i class="base"></i><i class="base base--top"></i>
-      <img class="f front" loading="lazy" alt="" src="${art}">
-      ${mids}<i class="f back"></i>
+    return `<div class="stage stage--fig"><div class="figstand" style="--w:${w.toFixed(1)}px;--h:${h.toFixed(1)}px">
+      <img class="figstand__plate" src="assets/figstand.svg?v=1" alt="" aria-hidden="true">
+      <img class="figstand__fig" loading="lazy" alt="${esc(i.name)}" src="${art}">
     </div></div>`;
   };
 
