@@ -86,6 +86,43 @@ def clean(mask):
     return (a * keep * 255).astype(np.uint8)
 
 
+def tidy(alpha):
+    """Remove the spare head / small extra pieces BrickLink photos often show in a top corner."""
+    H, W = alpha.shape
+    solid = (alpha > 128).astype(np.uint8)
+    k = max(2, round(H * 0.012))
+    er = cv2.erode(solid, np.ones((k, k), np.uint8))          # break thin contacts to the figure
+    n, lab, st, cen = cv2.connectedComponentsWithStats(er, 8)
+    if n <= 2:
+        return alpha, 0
+    big = 1 + int(np.argmax(st[1:, cv2.CC_STAT_AREA]))
+    bx, by, bw, bh = st[big, :4]
+    drop = np.zeros_like(solid); nd = 0
+    for i in range(1, n):
+        if i == big: continue
+        x, y, w, h, area = st[i]; cx, cy = cen[i]
+        small = area < 0.2 * st[big, cv2.CC_STAT_AREA]
+        top = cy < by + 0.38 * bh
+        side = cx < bx + 0.22 * bw or cx > bx + 0.78 * bw
+        tiny = area < 0.002 * st[big, cv2.CC_STAT_AREA]
+        if (small and top and side) or tiny:
+            drop[lab == i] = 1; nd += 1
+    if not nd:
+        return alpha, 0
+    drop = cv2.dilate(drop, np.ones((k * 2 + 3, k * 2 + 3), np.uint8))
+    # only remove what isn't the main body (main body re-grown from the eroded core)
+    main = cv2.dilate((lab == big).astype(np.uint8), np.ones((k * 2 + 3, k * 2 + 3), np.uint8))
+    out = alpha.copy(); out[(drop == 1) & (main == 0)] = 0
+    # leftovers of the dropped piece that aren't connected to the figure any more
+    s2 = (out > 128).astype(np.uint8); n2, l2, st2, _ = cv2.connectedComponentsWithStats(s2, 8)
+    if n2 > 2:
+        b2 = 1 + int(np.argmax(st2[1:, cv2.CC_STAT_AREA]))
+        for j in range(1, n2):
+            if j != b2 and st2[j, cv2.CC_STAT_AREA] < 0.01 * st2[b2, cv2.CC_STAT_AREA]:
+                out[l2 == j] = 0
+    return out, nd
+
+
 def feet(alpha):
     h, w = alpha.shape
     cols = np.where((alpha[int(h * 0.94):] > 128).any(axis=0))[0]
@@ -97,6 +134,8 @@ def feet(alpha):
 
 def cutout(sess, img):
     alpha = clean(predict(sess, img))
+    if alpha is not None:
+        alpha, _ = tidy(alpha)
     if alpha is None or (alpha > 128).sum() < 0.04 * alpha.size:
         return None
     ys, xs = np.where(alpha > 20)

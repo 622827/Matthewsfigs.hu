@@ -88,7 +88,7 @@
     const pw = Math.max(92, Math.min(150, foot * 120 / 49)), ph = pw * 44 / 120;
     const lift = ph * (1 - 22.5 / 44);                     // plate surface under the feet
     const left = pw / 2 - fx * w;                          // feet centred between the two middle studs
-    const art = `assets/figs/${encodeURIComponent(i.no)}.webp`;
+    const art = `assets/figs/${encodeURIComponent(i.no)}.webp?v=20261027`;
     return `<div class="stage stage--fig"><div class="figstand" style="--pw:${pw.toFixed(1)}px;--ph:${ph.toFixed(1)}px;--w:${w.toFixed(1)}px;--h:${h.toFixed(1)}px;--lift:${lift.toFixed(1)}px;--fl:${left.toFixed(1)}px;--foot:${foot.toFixed(1)}px">
       <img class="figstand__plate" src="assets/figstand.svg?v=2" alt="" aria-hidden="true">
       <i class="figstand__shadow" aria-hidden="true"></i>
