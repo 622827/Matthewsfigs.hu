@@ -1,8 +1,8 @@
 {
- "updated": "2026-10-28T22:14:51+00:00",
+ "updated": "2026-10-30T19:21:43+00:00",
  "store": "MatthewHorseman",
  "currency": "EUR",
- "total_lots": 739,
+ "total_lots": 740,
  "parts_lots": 537,
  "parts_qty": 4111,
  "items": [
@@ -13,11 +13,24 @@
    "name": "Rebel Combat Frigate",
    "color": null,
    "cond": "N",
-   "qty": 1,
+   "qty": 2,
    "price": 605.0,
    "note": "Nice condition.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75158-1.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565498056"
+  },
+  {
+   "id": 568749919,
+   "type": "SET",
+   "no": "75020-1",
+   "name": "Jabba's Sail Barge",
+   "color": null,
+   "cond": "N",
+   "qty": 1,
+   "price": 390.0,
+   "note": "MISB",
+   "img": "https://img.bricklink.com/ItemImage/SN/0/75020-1.png",
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=568749919"
   },
   {
    "id": 565467239,
@@ -169,7 +182,7 @@
    "name": "501st Legion Clone Troopers",
    "color": null,
    "cond": "N",
-   "qty": 1,
+   "qty": 17,
    "price": 43.9,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75280-1.png",
