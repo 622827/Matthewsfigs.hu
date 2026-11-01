@@ -37,7 +37,7 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .kicker{color:var(--gold);font-weight:700;letter-spacing:.08em;text-transform:uppercase;font-size:13px;margin:0 0 14px}
 .hero h1{font-size:clamp(46px,7.5vw,92px);font-weight:800;max-width:12ch}
 .hero__lead{max-width:520px;font-size:19px;opacity:.92;margin:20px 0 30px}
-.hero__cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero__cta{display:flex;flex-wrap:wrap;gap:16px 12px}
 
 .btn{display:inline-block;text-decoration:none;font:700 16px var(--body);padding:13px 22px;border-radius:999px;cursor:pointer;border:2px solid transparent;transition:transform .15s,background .15s}
 .btn:hover{transform:translateY(-1px)}
@@ -135,7 +135,7 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 }
 @media (max-width:560px){
   body{font-size:16px}
-  .wrap{padding:0 16px}
+  .wrap{padding-left:16px;padding-right:16px}
   .brand span{font-size:16px}
   .hero{min-height:480px}
   .cards{grid-template-columns:1fr}
