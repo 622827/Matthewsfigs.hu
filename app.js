@@ -13,7 +13,7 @@
     "about.p2":"If something isn't in stock, we'll source it: a rare figure, a long-retired set or a whole wanted list. We ship within Hungary and abroad, and you can pick up your order in person in Budapest.",
     "about.f1t":"What we sell","about.f1":"Sealed sets, minifigures, parts",
     "foot.aszf":"Terms (HU)","foot.privacy":"Privacy (HU)","foot.imprint":"Imprint","about.f2t":"Main themes","about.f2":"Star Wars – other themes we can mostly source for you on request or to order.",
-    "about.f3t":"Where to buy","about.f3":"In our <a href=\"https://store.bricklink.com/MatthewHorseman\" target=\"_blank\" rel=\"noopener\">BrickLink store</a>, via Messenger on our <a href=\"https://www.facebook.com/profile.php?id=100091130775442\" target=\"_blank\" rel=\"noopener\">Facebook page</a>, or in person (<a href=\"tel:+36203133292\">+36&nbsp;20&nbsp;313&nbsp;3292</a>, Máté Csikós) – and soon right here in our webshop.",
+    "about.f3t":"Where to buy","about.f3":"Choose here on the website and order via Messenger on our <a href=\"https://www.facebook.com/profile.php?id=100091130775442\" target=\"_blank\" rel=\"noopener\">Facebook page</a>, or in person (<a href=\"tel:+36203133292\">+36&nbsp;20&nbsp;313&nbsp;3292</a>, Máté Csikós) – and soon right here in our webshop.",
     "about.f4t":"Based in","about.f5t":"Languages","about.f5":"Hungarian and English","nav.sourcing":"Sourcing","nav.order":"How to order","nav.contact":"Contact",
     "hero.kicker":"LEGO® sets · minifigures · parts",
     "hero.title":"If we don't have it,<br>we can get it.",
@@ -29,17 +29,17 @@
     "src.c3t":"Rare minifigures","src.c3":"Missing a character for your collection? Just send us a message.",
     "src.c4t":"Extra services","src.c4":"Part-outs, wanted list fulfilment and valuation.",
     "ord.title":"How to order",
-    "ord.s1t":"Pick","ord.s1":"Browse here or in our BrickLink store.",
-    "ord.s2t":"Order","ord.s2":"Check out on BrickLink, or message us on Messenger.",
+    "ord.s1t":"Pick","ord.s1":"Browse our range here on the website.",
+    "ord.s2t":"Order","ord.s2":"Click a product and we'll reserve it for you on Messenger.",
     "ord.s3t":"Receive","ord.s3":"Careful packing, shipping or pickup in Budapest.",
-    "ord.bl":"BrickLink store","ord.msg":"Custom request on Messenger",
+    "ord.bl":"Our range","ord.msg":"Custom request on Messenger",
     "foot.contact":"Contact","foot.inv":"For investors","nav.inv":"Investors",
     "foot.legal":"LEGO® is a trademark of the LEGO Group, which does not sponsor, authorize or endorse this site.",
     "badge.sealed":"Sealed","badge.pre":"Pre-order","pre.hint":"Sold out right now – message us to order it","price.ask":"Ask",
-    "parts.title":"Parts","parts.text":"We have {lots} lots ({qty} pieces) of parts in stock. Browse them with colour filters in our BrickLink store.","parts.cta":"Browse parts on BrickLink"
+    "parts.title":"Parts","parts.text":"We have {lots} lots ({qty} pieces) of parts in stock. Message us with what you're looking for.","parts.cta":"Ask about parts on Messenger"
   };
   const HU = {"cat.for":" erre","badge.sealed":"Sealed","badge.pre":"Pre-order","pre.hint":"Jelenleg elfogyott – írj nekünk, és beszerezzük","price.ask":"Érdeklődj",
-    "parts.title":"Alkatrészek","parts.text":"{lots} tétel ({qty} darab) alkatrész van raktáron. Színre és típusra szűrve a BrickLink boltunkban böngészheted őket.","parts.cta":"Alkatrészek a BrickLinken"};
+    "parts.title":"Alkatrészek","parts.text":"{lots} tétel ({qty} darab) alkatrész van raktáron. Írd meg Messengeren, mit keresel.","parts.cta":"Alkatrészt keresek"};
 
   let lang = "hu";
   try { lang = localStorage.getItem("mfs-lang") || (navigator.language.startsWith("hu") ? "hu" : "en"); } catch (e) {}
@@ -184,6 +184,11 @@
 
   const wantLink = i => MESSENGER + "?text=" + encodeURIComponent(
     (lang === "hu" ? "Szia! Szeretnék egyet ebből: " : "Hi! I'd like one of these: ") + `${shortNo(i)} ${i.name}`);
+  const partsLink = () => MESSENGER + "?text=" + encodeURIComponent(
+    lang === "hu" ? "Szia! Alkatrészt keresek: " : "Hi! I'm looking for parts: ");
+  // in-stock card: straight to Messenger with the item and its price typed in
+  const buyLink = i => MESSENGER + "?text=" + encodeURIComponent(
+    (lang === "hu" ? "Szia! Ezt szeretném megvenni: " : "Hi! I'd like to buy this: ") + `${shortNo(i)} ${i.name}` + (i.price ? ` (${money(i.price)})` : ""));
   // "Szeretnék egyet!" button: straight to Facebook Messenger with the request typed in
   const openWant = el => {
     const a = el.closest("a.item--pre");
@@ -238,7 +243,7 @@
     return out;
   };
   const card = i => `
-      <a class="item${i.preorder ? " item--pre" : ""}" href="${esc(i.preorder ? notifyLink(i) : i.url)}" target="_blank" rel="noopener"${i.preorder ? ` data-pre="${esc(i.no)}" title="${t("pre.hint")}"` : ""}>
+      <a class="item${i.preorder ? " item--pre" : ""}" href="${esc(i.preorder ? notifyLink(i) : buyLink(i))}" target="_blank" rel="noopener"${i.preorder ? ` data-pre="${esc(i.no)}" title="${t("pre.hint")}"` : ""}>
         <div class="item__img">${box3d(i)}</div>
         <div class="item__body">
           <span class="item__no">${esc(i.type === "SET" ? i.no.replace(/-1$/, "") : i.no)}${i.qty > 1 ? ` · ${i.qty} ${lang === "hu" ? "db" : "pcs"}` : ""}</span>
@@ -291,7 +296,7 @@
       const qty = (data.parts_qty || 0).toLocaleString(lang === "hu" ? "hu-HU" : "en-GB");
       p.innerHTML = `<h3>${t("parts.title")}</h3>
         <p>${t("parts.text").replace("{lots}", data.parts_lots || 0).replace("{qty}", qty)}</p>
-        <a class="btn btn--gold" href="https://store.bricklink.com/MatthewHorseman#/shop?o={%22itemType%22:%22P%22}" target="_blank" rel="noopener">${t("parts.cta")}</a>`;
+        <a class="btn btn--gold" href="${esc(partsLink())}" target="_blank" rel="noopener">${t("parts.cta")}</a>`;
     }
   }
 
@@ -378,7 +383,7 @@
         if (!m) { byItem.set(k, { ...i }); continue; }
         m.qty += i.qty;
         if (i.price !== m.price) m.from = true;
-        if (i.price < m.price) { m.price = i.price; m.url = i.url; }
+        if (i.price < m.price) m.price = i.price;
       }
       d.items = [...byItem.values()];
       data = d;
