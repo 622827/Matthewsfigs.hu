@@ -187,6 +187,10 @@
   });
 
   const MESSENGER = "https://m.me/100091130775442";
+  // "similar minifigures": words that say little (dropped), unit words (count most), very common words (count least)
+  const SIM_STOP = new Set(["phase", "with", "and", "the", "of", "in", "on", "minifigure", "only", "version", "printed", "large", "eyes", "head"]);
+  const SIM_UNIT = new Set(["legion", "battalion", "corps", "company", "guard", "squadron", "squad", "brigade", "division"]);
+  const SIM_LOW = new Set(["clone", "trooper", "droid", "battle", "pilot", "imperial", "rebel", "officer", "commander", "captain"]);
   const shortNo = i => (i.type === "SET" ? i.no.replace(/-1$/, "") : i.no);
   const notifyLink = i => MESSENGER + "?text=" + encodeURIComponent(
     (lang === "hu" ? "Szia! Értesítést kérek, ha újra elérhető lesz: " : "Hi! Please let me know when this is back in stock: ") + `${shortNo(i)} ${i.name}`);
@@ -469,6 +473,38 @@
                 : `<span class="pd-fig__btn" role="button" tabindex="0" data-buy="${esc(o.no)}">${lbl}</span>`)
               : `<span class="pd-fig__btn" role="button" tabindex="0" data-prefig="${esc(f.no)}" data-name="${esc(f.name)}">${lbl}</span>`; })()}
         </${tag}>`; }).join("")}</div></section>` : "";
+    // minifigure page: similar minifigures we sell (in stock or pre-order), e.g. every other 501st clone
+    const simTok = name => {
+      const main = String(name).split(" - ")[0].toLowerCase().replace(/[^a-z0-9 ]+/g, " ");
+      return [...new Set(main.split(/\s+/).filter(w => w.length > 1 && !SIM_STOP.has(w) && !/^\d$/.test(w)))];
+    };
+    const simW = w => /^\d+(st|nd|rd|th)$/.test(w) ? 4 : SIM_LOW.has(w) || SIM_UNIT.has(w) ? 1 : 2;
+    const pre = n => (String(n).match(/^[a-z]+/i) || [""])[0].toLowerCase();
+    const similar = set ? [] : (() => {
+      const mine = simTok(i.name);
+      return data.items.filter(o => o.type === "MINIFIG" && o.no !== i.no && pre(o.no) === pre(i.no))
+        .map(o => { const t = new Set(simTok(o.name)); return { o, sc: mine.reduce((a, w) => a + (t.has(w) ? simW(w) : 0), 0) }; })
+        .filter(x => x.sc >= 3)
+        .sort((a, b) => b.sc - a.sc || (!!a.o.preorder - !!b.o.preorder) || b.o.price - a.o.price)
+        .slice(0, 12).map(x => x.o);
+    })();
+    const simList = similar.length ? `<section class="pd-figsec pd-sim">
+      <h2>${hu ? "Hasonló figurák" : "Similar minifigures"}</h2>
+      <p class="co-muted">${hu ? "Ezeket is nálunk találod – raktárról rendelhetők vagy előrendelhetők." : "Also available here – in stock or to pre-order."}</p>
+      <div class="pd-figgrid">${similar.map(o => {
+        const img = FIGS[o.no] ? `assets/figs/${encodeURIComponent(o.no)}.webp?v=20261027` : `https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(o.no)}.png`;   // our clean cut-out when there is one
+        const btn = o.preorder
+          ? `<span class="pd-fig__btn is-pre" role="button" tabindex="0" data-prefig="${esc(o.no)}" data-name="${esc(o.name)}">${hu ? "Előrendelés" : "Pre-order"}</span>`
+          : shopOn() ? `<span class="pd-fig__btn" role="button" tabindex="0" data-add="${esc(o.no)}" data-name="${esc(o.no + " " + o.name)}">${hu ? "Kosárba" : "Add to cart"}</span>`
+          : `<span class="pd-fig__btn" role="button" tabindex="0" data-buy="${esc(o.no)}">${hu ? "Megrendelem" : "Order"}</span>`;
+        return `<a class="pd-fig" href="${esc(productUrl(o))}"${pv(img, o.no + " " + o.name, [stockInfo(o)])}>
+          <span class="pd-fig__no">${esc(o.no)}</span>${o.qty > 1 && !o.preorder ? `<span class="pd-fig__qty">${o.qty} db</span>` : ""}
+          <b class="pd-fig__name">${esc(o.name.split(" - ")[0])}</b>
+          <img src="${img}" alt="${esc(o.name)}" loading="lazy">
+          <span class="pd-fig__foot">${o.preorder ? `<span class="pd-fig__tag">${hu ? "Előrendelhető" : "Pre-order"}</span>` : "<span></span>"}
+            ${!o.preorder ? `<span class="pd-fig__price">${money(o.price)}</span>` : ""}</span>
+          ${btn}
+        </a>`; }).join("")}</div></section>` : "";
     // every release with the same name (Rebrickable list) + BrickLink market value
     const vers = D.versions && D.versions.length > 1 ? D.versions : null;
     const verList = vers ? `<section class="pd-vers">
@@ -504,7 +540,7 @@
           <div class="pd-media"><img id="pdMain" src="${esc(photos[0].src)}" alt="${esc(i.name)} – ${esc(photos[0].alt)}"></div>
           ${photos.length > 1 ? `<div class="pd-thumbs">${photos.map((p, k) => `<button type="button" class="pd-thumb${k ? "" : " is-on"}" data-src="${esc(p.src)}" data-alt="${esc(p.alt)}" aria-label="${esc(p.alt)}"><img src="${esc(p.src)}" alt="" loading="lazy"></button>`).join("")}</div>` : ""}
         </div>
-        ${figList || verList ? `<div class="pd-figs">${figList}${verList}</div>` : ""}
+        ${figList || verList || simList ? `<div class="pd-figs">${figList}${simList}${verList}</div>` : ""}
         <div class="pd-info">
           <p class="item__no">${esc(sn)} · ${set ? (hu ? "LEGO® szett" : "LEGO® set") : (hu ? "LEGO® minifigura" : "LEGO® minifigure")}</p>
           <h1>${esc(i.name)}</h1>
