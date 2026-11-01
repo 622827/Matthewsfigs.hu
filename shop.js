@@ -244,9 +244,11 @@
     const tt = totals(form);
     const itemRows = ls.map(l => {
       const i = l.item || { no: l.no, name: l.no, type: "" };
+      const href = l.item ? `termek.html?no=${encodeURIComponent(i.no)}` : "";   // back to the product page
+      const lk = (inner, cls) => href ? `<a class="${cls}" href="${esc(href)}">${inner}</a>` : inner;
       return `<li class="co-line${l.gone ? " is-gone" : ""}">
-        <img src="${esc(i.img || "")}" alt="" loading="lazy">
-        <div class="co-line__t"><span class="item__no">${esc(shortNo(i))}</span><b>${esc(i.name)}</b>
+        ${lk(`<img src="${esc(i.img || "")}" alt="" loading="lazy">`, "co-line__img")}
+        <div class="co-line__t"><span class="item__no">${esc(shortNo(i))}</span>${lk(`<b>${esc(i.name)}</b>`, "co-line__name")}
           ${l.gone ? `<span class="co-warn">${t("gone")}</span>` : `<span class="co-muted">${ft(l.unit)} / ${hu() ? "db" : "pc"}</span>`}</div>
         ${step === "cart" ? `<div class="co-qty"><button type="button" data-q="${esc(l.no)}" data-d="-1" aria-label="−">−</button><span>${l.qty}</span><button type="button" data-q="${esc(l.no)}" data-d="1" aria-label="+"${l.qty >= stockOf(l.no) ? " disabled" : ""}>+</button></div>
         <button type="button" class="co-rm" data-rm="${esc(l.no)}">${t("remove")}</button>` : `<span class="co-muted">${l.qty} ${hu() ? "db" : "pcs"}</span>`}
