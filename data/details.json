@@ -1,8 +1,18 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-01T21:08:08+00:00",
+ "updated": "2026-11-01T21:39:37+00:00",
  "items": {
   "40686-1": {
+   "bs_id": 48958,
+   "photos": [
+    "https://images.brickset.com/sets/images/40686-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40686-1/40686_box1_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40686-1/40686_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40686-1/40686_lifestyle.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": "2024-05-31",
    "type": "SET",
    "name": "Trade Federation Troop Carrier",
    "year": 2024,
@@ -29,19 +39,22 @@
      "sets": 2
     }
    ],
+   "ucs": false,
    "versions": [],
-   "bs_id": 48958,
-   "photos": [
-    "https://images.brickset.com/sets/images/40686-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/40686-1/40686_box1_v39.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/40686-1/40686_box5_v39.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/40686-1/40686_lifestyle.jpg"
-   ],
-   "retail_eur": null,
-   "launch": null,
-   "exit": "2024-05-31"
+   "figs_value_huf": 5656
   },
   "40755-1": {
+   "bs_id": 48961,
+   "photos": [
+    "https://images.brickset.com/sets/images/40755-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_box1_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_lifestyle_envr.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_lifestyle_envr_03.jpg"
+   ],
+   "retail_eur": 39.99,
+   "launch": "2024-09-18",
+   "exit": "2025-12-24",
    "type": "SET",
    "name": "Imperial Dropship vs. Rebel Scout Speeder",
    "year": 2024,
@@ -98,20 +111,23 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [],
-   "bs_id": 48961,
-   "photos": [
-    "https://images.brickset.com/sets/images/40755-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_box1_v39.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_box5_v39.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_lifestyle_envr.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_lifestyle_envr_03.jpg"
-   ],
-   "retail_eur": 39.99,
-   "launch": "2024-09-18",
-   "exit": "2025-12-24"
+   "figs_value_huf": 13485
   },
   "40806-1": {
+   "bs_id": 51283,
+   "photos": [
+    "https://images.brickset.com/sets/images/40806-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_box1_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_lifestyle_build.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_lifestyle_envr.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_lifestyle_envr_2.jpg"
+   ],
+   "retail_eur": 59.99,
+   "launch": "2025-09-02",
+   "exit": "2027-12-31",
    "type": "SET",
    "name": "Gingerbread AT-AT",
    "year": 2025,
@@ -132,21 +148,18 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [],
-   "bs_id": 51283,
-   "photos": [
-    "https://images.brickset.com/sets/images/40806-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_box1_v39.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_box5_v39.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_lifestyle_build.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_lifestyle_envr.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_lifestyle_envr_2.jpg"
-   ],
-   "retail_eur": 59.99,
-   "launch": "2025-09-02",
-   "exit": "2027-12-31"
+   "figs_value_huf": 10975
   },
   "472407-1": {
+   "bs_id": 50369,
+   "photos": [
+    "https://images.brickset.com/sets/images/472407-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null,
    "type": "SET",
    "name": "Sabine Wren paper bag",
    "year": 2024,
@@ -167,16 +180,24 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [],
-   "bs_id": 50369,
+   "figs_value_huf": 2839
+  },
+  "75020-1": {
+   "bs_id": 10227,
    "photos": [
-    "https://images.brickset.com/sets/images/472407-1.jpg"
+    "https://images.brickset.com/sets/images/75020-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_main.jpg"
    ],
    "retail_eur": null,
    "launch": null,
-   "exit": null
-  },
-  "75020-1": {
+   "exit": "2014-12-31",
+   "figs_value_huf": 85615,
    "type": "SET",
    "name": "Jabba's Sail Barge",
    "year": 2013,
@@ -227,44 +248,53 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [
     {
      "no": "6210-1",
      "name": "Jabba's Sail Barge",
      "year": 2006,
      "pieces": 782,
-     "img": "https://cdn.rebrickable.com/media/sets/6210-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/6210-1.jpg",
+     "figs": 8
     },
     {
      "no": "75020-1",
      "name": "Jabba's Sail Barge",
      "year": 2013,
      "pieces": 851,
-     "img": "https://cdn.rebrickable.com/media/sets/75020-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/75020-1.jpg",
+     "figs": 6
     },
     {
      "no": "75397-1",
      "name": "Jabba's Sail Barge",
      "year": 2024,
      "pieces": 3943,
-     "img": "https://cdn.rebrickable.com/media/sets/75397-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/75397-1.jpg",
+     "figs": 10
     }
-   ],
-   "bs_id": 10227,
-   "photos": [
-    "https://images.brickset.com/sets/images/75020-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt3.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt4.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_main.jpg"
-   ],
-   "retail_eur": null,
-   "launch": null,
-   "exit": "2014-12-31",
-   "figs_value_huf": 85615
+   ]
   },
   "75158-1": {
+   "bs_id": 26273,
+   "photos": [
+    "https://images.brickset.com/sets/images/75158-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt9.jpg"
+   ],
+   "retail_eur": 119.99,
+   "launch": "2016-07-31",
+   "exit": "2017-06-15",
+   "figs_value_huf": 148213,
    "type": "SET",
    "name": "Rebel Combat Frigate",
    "year": 2016,
@@ -309,27 +339,41 @@
      "sets": 1
     }
    ],
-   "versions": [],
-   "bs_id": 26273,
-   "photos": [
-    "https://images.brickset.com/sets/images/75158-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt10.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt3.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt4.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt5.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt6.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt7.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt8.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt9.jpg"
-   ],
-   "retail_eur": 119.99,
-   "launch": "2016-07-31",
-   "exit": "2017-06-15",
-   "figs_value_huf": 148213
+   "ucs": false,
+   "versions": []
   },
   "75280-1": {
+   "bs_id": 30188,
+   "photos": [
+    "https://images.brickset.com/sets/images/75280-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_1to1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt11.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt9.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_05.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_06.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Box3_v29.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Box6_v29.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_05.jpg"
+   ],
+   "retail_eur": 29.99,
+   "launch": "2020-08-28",
+   "exit": "2022-11-22",
+   "figs_value_huf": 7990,
    "type": "SET",
    "name": "501st Legion Clone Troopers",
    "year": 2020,
@@ -362,40 +406,35 @@
      "sets": 2
     }
    ],
-   "versions": [],
-   "bs_id": 30188,
-   "photos": [
-    "https://images.brickset.com/sets/images/75280-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_1to1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt10.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt11.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt3.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt4.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt5.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt6.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt8.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt9.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_01.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_02.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_03.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_04.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_05.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_06.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Box3_v29.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Box6_v29.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_01.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_02.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_03.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_04.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_05.jpg"
-   ],
-   "retail_eur": 29.99,
-   "launch": "2020-08-28",
-   "exit": "2022-11-22",
-   "figs_value_huf": 7990
+   "ucs": false,
+   "versions": []
   },
   "75283-1": {
+   "bs_id": 30553,
+   "photos": [
+    "https://images.brickset.com/sets/images/75283-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_1to1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_05.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_06.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Box3_v29.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Box6_v29.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_05.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_MF_Lineup_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_MF_Lineup_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_MF_Lineup_03.jpg"
+   ],
+   "retail_eur": 39.99,
+   "launch": "2020-10-04",
+   "exit": "2022-08-05",
+   "figs_value_huf": 9199,
    "type": "SET",
    "name": "Armored Assault Tank (AAT)",
    "year": 2020,
@@ -428,49 +467,47 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [
     {
      "no": "8018-1",
      "name": "Armored Assault Tank (AAT)",
      "year": 2009,
      "pieces": 407,
-     "img": "https://cdn.rebrickable.com/media/sets/8018-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/8018-1.jpg",
+     "figs": 7
     },
     {
      "no": "75283-1",
      "name": "Armored Assault Tank (AAT)",
      "year": 2020,
      "pieces": 286,
-     "img": "https://cdn.rebrickable.com/media/sets/75283-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/75283-1.jpg",
+     "figs": 4
     }
-   ],
-   "bs_id": 30553,
-   "photos": [
-    "https://images.brickset.com/sets/images/75283-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_1to1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_01.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_02.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_03.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_04.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_05.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_06.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Box3_v29.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Box6_v29.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_01.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_02.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_03.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_04.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_05.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_MF_Lineup_01.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_MF_Lineup_02.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_MF_Lineup_03.jpg"
-   ],
-   "retail_eur": 39.99,
-   "launch": "2020-10-04",
-   "exit": "2022-08-05",
-   "figs_value_huf": 9199
+   ]
   },
   "75314-1": {
+   "bs_id": 31236,
+   "photos": [
+    "https://images.brickset.com/sets/images/75314-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt11.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt12.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt13.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt9.jpg"
+   ],
+   "retail_eur": 99.99,
+   "launch": "2021-05-30",
+   "exit": "2022-11-30",
+   "figs_value_huf": 49502,
    "type": "SET",
    "name": "The Bad Batch Attack Shuttle",
    "year": 2021,
@@ -521,29 +558,26 @@
      "sets": 1
     }
    ],
-   "versions": [],
-   "bs_id": 31236,
-   "photos": [
-    "https://images.brickset.com/sets/images/75314-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt10.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt11.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt12.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt13.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt3.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt4.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt6.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt7.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt8.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt9.jpg"
-   ],
-   "retail_eur": 99.99,
-   "launch": "2021-05-30",
-   "exit": "2022-11-30",
-   "figs_value_huf": 49502
+   "ucs": false,
+   "versions": []
   },
   "75333-1": {
+   "bs_id": 32403,
+   "photos": [
+    "https://images.brickset.com/sets/images/75333-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt8.jpg"
+   ],
+   "retail_eur": 34.99,
+   "launch": "2022-05-30",
+   "exit": "2026-06-15",
+   "figs_value_huf": 5037,
    "type": "SET",
    "name": "Obi-Wan Kenobi's Jedi Starfighter",
    "year": 2022,
@@ -576,25 +610,28 @@
      "sets": 1
     }
    ],
-   "versions": [],
-   "bs_id": 32403,
-   "photos": [
-    "https://images.brickset.com/sets/images/75333-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt3.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt4.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt5.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt6.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt7.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt8.jpg"
-   ],
-   "retail_eur": 34.99,
-   "launch": "2022-05-30",
-   "exit": "2026-06-15",
-   "figs_value_huf": 5037
+   "ucs": false,
+   "versions": []
   },
   "75337-1": {
+   "bs_id": 32407,
+   "photos": [
+    "https://images.brickset.com/sets/images/75337-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt9.jpg"
+   ],
+   "retail_eur": 139.99,
+   "launch": "2022-08-04",
+   "exit": "2026-07-07",
+   "figs_value_huf": 22046,
    "type": "SET",
    "name": "AT-TE Walker",
    "year": 2022,
@@ -639,49 +676,53 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [
     {
      "no": "7675-1",
      "name": "AT-TE Walker",
      "year": 2008,
      "pieces": 810,
-     "img": "https://cdn.rebrickable.com/media/sets/7675-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/7675-1.jpg",
+     "figs": 6
     },
     {
      "no": "20009-1",
      "name": "AT-TE Walker",
      "year": 2009,
      "pieces": 94,
-     "img": "https://cdn.rebrickable.com/media/sets/20009-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/20009-1.jpg",
+     "figs": 0
     },
     {
      "no": "75337-1",
      "name": "AT-TE Walker",
      "year": 2022,
      "pieces": 1082,
-     "img": "https://cdn.rebrickable.com/media/sets/75337-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/75337-1.jpg",
+     "figs": 9
     }
-   ],
-   "bs_id": 32407,
-   "photos": [
-    "https://images.brickset.com/sets/images/75337-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt10.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt3.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt4.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt5.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt6.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt7.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt8.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt9.jpg"
-   ],
-   "retail_eur": 139.99,
-   "launch": "2022-08-04",
-   "exit": "2026-07-07",
-   "figs_value_huf": 22046
+   ]
   },
   "75342-1": {
+   "bs_id": 32399,
+   "photos": [
+    "https://images.brickset.com/sets/images/75342-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt9.jpg"
+   ],
+   "retail_eur": 44.99,
+   "launch": "2022-05-08",
+   "exit": "2024-01-03",
+   "figs_value_huf": 14049,
    "type": "SET",
    "name": "Republic Fighter Tank",
    "year": 2022,
@@ -720,56 +761,58 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [
     {
      "no": "7679-1",
      "name": "Republic Fighter Tank",
      "year": 2008,
      "pieces": 596,
-     "img": "https://cdn.rebrickable.com/media/sets/7679-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/7679-1.jpg",
+     "figs": 2
     },
     {
      "no": "75182-1",
      "name": "Republic Fighter Tank",
      "year": 2017,
      "pieces": 305,
-     "img": "https://cdn.rebrickable.com/media/sets/75182-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/75182-1.jpg",
+     "figs": 4
     },
     {
      "no": "75342-1",
      "name": "Republic Fighter Tank",
      "year": 2022,
      "pieces": 262,
-     "img": "https://cdn.rebrickable.com/media/sets/75342-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/75342-1.jpg",
+     "figs": 6
     },
     {
      "no": "912313-1",
      "name": "Republic Fighter Tank",
      "year": 2023,
      "pieces": 44,
-     "img": "https://cdn.rebrickable.com/media/sets/912313-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/912313-1.jpg",
+     "figs": 0
     }
-   ],
-   "bs_id": 32399,
-   "photos": [
-    "https://images.brickset.com/sets/images/75342-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt10.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt3.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt4.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt5.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt6.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt7.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt8.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt9.jpg"
-   ],
-   "retail_eur": 44.99,
-   "launch": "2022-05-08",
-   "exit": "2024-01-03",
-   "figs_value_huf": 14049
+   ]
   },
   "75344-1": {
+   "bs_id": 34368,
+   "photos": [
+    "https://images.brickset.com/sets/images/75344-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt7.jpg"
+   ],
+   "retail_eur": 9.99,
+   "launch": "2023-01-04",
+   "exit": "2024-12-10",
+   "figs_value_huf": 1590,
    "type": "SET",
    "name": "Boba Fett's Starship Microfighter",
    "year": 2023,
@@ -790,24 +833,25 @@
      "sets": 1
     }
    ],
-   "versions": [],
-   "bs_id": 34368,
-   "photos": [
-    "https://images.brickset.com/sets/images/75344-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt3.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt4.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt5.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt6.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt7.jpg"
-   ],
-   "retail_eur": 9.99,
-   "launch": "2023-01-04",
-   "exit": "2024-12-10",
-   "figs_value_huf": 1590
+   "ucs": false,
+   "versions": []
   },
   "75345-1": {
+   "bs_id": 34369,
+   "photos": [
+    "https://images.brickset.com/sets/images/75345-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt7.jpg"
+   ],
+   "retail_eur": 19.99,
+   "launch": "2023-01-04",
+   "exit": "2026-07-17",
+   "figs_value_huf": 4088,
    "type": "SET",
    "name": "501st Clone Troopers Battle Pack",
    "year": 2023,
@@ -840,24 +884,27 @@
      "sets": 2
     }
    ],
-   "versions": [],
-   "bs_id": 34369,
-   "photos": [
-    "https://images.brickset.com/sets/images/75345-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt3.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt4.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt5.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt6.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt7.jpg"
-   ],
-   "retail_eur": 19.99,
-   "launch": "2023-01-04",
-   "exit": "2026-07-17",
-   "figs_value_huf": 4088
+   "ucs": false,
+   "versions": []
   },
   "75347-1": {
+   "bs_id": 34370,
+   "photos": [
+    "https://images.brickset.com/sets/images/75347-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_boxprod_v39.jpg"
+   ],
+   "retail_eur": 64.99,
+   "launch": "2023-01-04",
+   "exit": "2026-08-19",
+   "figs_value_huf": 7352,
    "type": "SET",
    "name": "TIE Bomber",
    "year": 2023,
@@ -896,55 +943,59 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [
     {
      "no": "4479-1",
      "name": "TIE Bomber",
      "year": 2003,
      "pieces": 229,
-     "img": "https://cdn.rebrickable.com/media/sets/4479-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/4479-1.jpg",
+     "figs": 1
     },
     {
      "no": "911613-1",
      "name": "TIE Bomber",
      "year": 2016,
      "pieces": 26,
-     "img": "https://cdn.rebrickable.com/media/sets/911613-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/911613-1.jpg",
+     "figs": 0
     },
     {
      "no": "912171-1",
      "name": "TIE Bomber",
      "year": 2021,
      "pieces": 28,
-     "img": "https://cdn.rebrickable.com/media/sets/912171-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/912171-1.jpg",
+     "figs": 0
     },
     {
      "no": "75347-1",
      "name": "TIE Bomber",
      "year": 2023,
      "pieces": 625,
-     "img": "https://cdn.rebrickable.com/media/sets/75347-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/75347-1.jpg",
+     "figs": 4
     }
-   ],
-   "bs_id": 34370,
-   "photos": [
-    "https://images.brickset.com/sets/images/75347-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt3.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt4.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt5.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt6.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt7.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt8.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_boxprod_v39.jpg"
-   ],
-   "retail_eur": 64.99,
-   "launch": "2023-01-04",
-   "exit": "2026-08-19",
-   "figs_value_huf": 7352
+   ]
   },
   "75372-1": {
+   "bs_id": 48520,
+   "photos": [
+    "https://images.brickset.com/sets/images/75372-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt8.jpg"
+   ],
+   "retail_eur": 29.99,
+   "launch": "2023-12-06",
+   "exit": "2026-12-31",
+   "figs_value_huf": 7374,
    "type": "SET",
    "name": "Clone Trooper & Battle Droid Battle Pack",
    "year": 2024,
@@ -989,25 +1040,26 @@
      "sets": 4
     }
    ],
-   "versions": [],
-   "bs_id": 48520,
-   "photos": [
-    "https://images.brickset.com/sets/images/75372-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt3.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt4.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt5.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt6.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt7.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt8.jpg"
-   ],
-   "retail_eur": 29.99,
-   "launch": "2023-12-06",
-   "exit": "2026-12-31",
-   "figs_value_huf": 7374
+   "ucs": false,
+   "versions": []
   },
   "75379-1": {
+   "bs_id": 48524,
+   "photos": [
+    "https://images.brickset.com/sets/images/75379-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt8.jpg"
+   ],
+   "retail_eur": 99.99,
+   "launch": "2024-01-31",
+   "exit": "2027-12-31",
+   "figs_value_huf": 12151,
    "type": "SET",
    "name": "R2-D2",
    "year": 2024,
@@ -1034,61 +1086,66 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [
     {
      "no": "8009-1",
      "name": "R2-D2",
      "year": 2002,
      "pieces": 239,
-     "img": "https://cdn.rebrickable.com/media/sets/8009-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/8009-1.jpg",
+     "figs": 0
     },
     {
      "no": "10225-1",
      "name": "R2-D2",
      "year": 2012,
      "pieces": 2127,
-     "img": "https://cdn.rebrickable.com/media/sets/10225-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/10225-1.jpg",
+     "figs": 1
     },
     {
      "no": "30611-1",
      "name": "R2-D2",
      "year": 2017,
      "pieces": 70,
-     "img": "https://cdn.rebrickable.com/media/sets/30611-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/30611-1.jpg",
+     "figs": 0
     },
     {
      "no": "75308-1",
      "name": "R2-D2",
      "year": 2021,
      "pieces": 2314,
-     "img": "https://cdn.rebrickable.com/media/sets/75308-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/75308-1.jpg",
+     "figs": 1
     },
     {
      "no": "75379-1",
      "name": "R2-D2",
      "year": 2024,
      "pieces": 1050,
-     "img": "https://cdn.rebrickable.com/media/sets/75379-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/75379-1.jpg",
+     "figs": 2
     }
-   ],
-   "bs_id": 48524,
-   "photos": [
-    "https://images.brickset.com/sets/images/75379-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt3.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt4.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt5.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt6.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt7.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt8.jpg"
-   ],
-   "retail_eur": 99.99,
-   "launch": "2024-01-31",
-   "exit": "2027-12-31",
-   "figs_value_huf": 12151
+   ]
   },
   "75383-1": {
+   "bs_id": 48872,
+   "photos": [
+    "https://images.brickset.com/sets/images/75383-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_80296.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_boxprod_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_lifestyle.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_lifestyle_envr.jpg"
+   ],
+   "retail_eur": 69.99,
+   "launch": "2024-04-02",
+   "exit": "2025-11-27",
    "type": "SET",
    "name": "Darth Maul's Sith Infiltrator",
    "year": 2024,
@@ -1133,46 +1190,55 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [
     {
      "no": "7961-1",
      "name": "Darth Maul's Sith Infiltrator",
      "year": 2011,
      "pieces": 479,
-     "img": "https://cdn.rebrickable.com/media/sets/7961-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/7961-1.jpg",
+     "figs": 4
     },
     {
      "no": "912058-1",
      "name": "Darth Maul's Sith Infiltrator",
      "year": 2020,
      "pieces": 34,
-     "img": "https://cdn.rebrickable.com/media/sets/912058-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/912058-1.jpg",
+     "figs": 0
     },
     {
      "no": "75383-1",
      "name": "Darth Maul's Sith Infiltrator",
      "year": 2024,
      "pieces": 640,
-     "img": "https://cdn.rebrickable.com/media/sets/75383-1.jpg"
+     "img": "https://cdn.rebrickable.com/media/sets/75383-1.jpg",
+     "figs": 4
     }
    ],
-   "bs_id": 48872,
-   "photos": [
-    "https://images.brickset.com/sets/images/75383-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_80296.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_alt1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_alt2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_alt3.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_box5_v39.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_boxprod_v39.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_lifestyle.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_lifestyle_envr.jpg"
-   ],
-   "retail_eur": 69.99,
-   "launch": "2024-04-02",
-   "exit": "2025-11-27"
+   "figs_value_huf": 39102
   },
   "75389-1": {
+   "bs_id": 48876,
+   "photos": [
+    "https://images.brickset.com/sets/images/75389-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_boxprod_v39_sha.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_envr_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_envr_05.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_lineup_nobg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_pri_nobg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_sec01_nobg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_sec02_nobg.jpg"
+   ],
+   "retail_eur": 179.99,
+   "launch": "2024-06-26",
+   "exit": "2026-12-31",
    "type": "SET",
    "name": "The Dark Falcon",
    "year": 2024,
@@ -1223,28 +1289,28 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [],
-   "bs_id": 48876,
-   "photos": [
-    "https://images.brickset.com/sets/images/75389-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_box5_v39.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_boxprod_v39_sha.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons_02.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons_03.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons_04.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_envr_03.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_envr_05.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_lineup_nobg.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_pri_nobg.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_sec01_nobg.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_sec02_nobg.jpg"
-   ],
-   "retail_eur": 179.99,
-   "launch": "2024-06-26",
-   "exit": "2026-12-31"
+   "figs_value_huf": 27475
   },
   "75391-1": {
+   "bs_id": 48867,
+   "photos": [
+    "https://images.brickset.com/sets/images/75391-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_boxprod_v39_sha.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_build.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_cons.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_cons_2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_envr.jpg"
+   ],
+   "retail_eur": 12.99,
+   "launch": "2024-05-03",
+   "exit": "2026-07-15",
+   "figs_value_huf": 2385,
    "type": "SET",
    "name": "Captain Rex Y-Wing Microfighter",
    "year": 2024,
@@ -1265,26 +1331,25 @@
      "sets": 2
     }
    ],
-   "versions": [],
-   "bs_id": 48867,
-   "photos": [
-    "https://images.brickset.com/sets/images/75391-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_alt1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_alt2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_alt3.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_box5_v39.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_boxprod_v39_sha.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_build.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_cons.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_cons_2.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_envr.jpg"
-   ],
-   "retail_eur": 12.99,
-   "launch": "2024-05-03",
-   "exit": "2026-07-15",
-   "figs_value_huf": 2385
+   "ucs": false,
+   "versions": []
   },
   "75400-1": {
+   "bs_id": 51092,
+   "photos": [
+    "https://images.brickset.com/sets/images/75400-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_box5_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_boxprod_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_build_crop_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_cons_crop_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_cons3_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_envr_crop_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_web_sec01_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_web_sec02_nobg_en-gb.jpg"
+   ],
+   "retail_eur": 14.99,
+   "launch": "2025-05-03",
+   "exit": "2026-12-31",
    "type": "SET",
    "name": "Plo Koon's Jedi Starfighter Microfighter",
    "year": 2025,
@@ -1305,24 +1370,28 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [],
-   "bs_id": 51092,
-   "photos": [
-    "https://images.brickset.com/sets/images/75400-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_box5_v39_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_boxprod_v39_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_build_crop_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_cons_crop_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_cons3_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_envr_crop_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_web_sec01_nobg_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_web_sec02_nobg_en-gb.jpg"
-   ],
-   "retail_eur": 14.99,
-   "launch": "2025-05-03",
-   "exit": "2026-12-31"
+   "figs_value_huf": 2407
   },
   "75431-1": {
+   "bs_id": 51090,
+   "photos": [
+    "https://images.brickset.com/sets/images/75431-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_box5_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_boxprod_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_build_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_cons_2_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_cons_crop_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_cons_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_envr_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_web_lineup_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_web_sec01_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_web_sec02_nobg_en-gb.jpg"
+   ],
+   "retail_eur": 39.99,
+   "launch": "2025-07-04",
+   "exit": "2027-07-31",
    "type": "SET",
    "name": "327th Star Corps Clone Troopers Battle Pack",
    "year": 2025,
@@ -1361,26 +1430,29 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [],
-   "bs_id": 51090,
-   "photos": [
-    "https://images.brickset.com/sets/images/75431-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_box5_v39_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_boxprod_v39_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_build_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_cons_2_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_cons_crop_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_cons_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_envr_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_web_lineup_nobg_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_web_sec01_nobg_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_web_sec02_nobg_en-gb.jpg"
-   ],
-   "retail_eur": 39.99,
-   "launch": "2025-07-04",
-   "exit": "2027-07-31"
+   "figs_value_huf": 9755
   },
   "75435-1": {
+   "bs_id": 51104,
+   "photos": [
+    "https://images.brickset.com/sets/images/75435-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_box5_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_boxprod_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_build_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_cons_2_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_cons_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_envr_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_lineup_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec01_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec02_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec03_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec05_nobg_en-gb.jpg"
+   ],
+   "retail_eur": 149.99,
+   "launch": "2025-07-02",
+   "exit": "2027-12-31",
    "type": "SET",
    "name": "Battle of Felucia Separatist MTT",
    "year": 2025,
@@ -1425,27 +1497,28 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [],
-   "bs_id": 51104,
-   "photos": [
-    "https://images.brickset.com/sets/images/75435-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_box5_v39_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_boxprod_v39_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_build_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_cons_2_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_cons_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_envr_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_lineup_nobg_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec01_nobg_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec02_nobg_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec03_nobg_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec05_nobg_en-gb.jpg"
-   ],
-   "retail_eur": 149.99,
-   "launch": "2025-07-02",
-   "exit": "2027-12-31"
+   "figs_value_huf": 30175
   },
   "75436-1": {
+   "bs_id": 51838,
+   "photos": [
+    "https://images.brickset.com/sets/images/75436-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Box5_v39_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_boxprod_v39_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Build_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Cons_2_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Cons_3_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Envr_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_PRI_NOBG_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_SEC01_NOBG_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_SEC02_NOBG_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_SEC03_NOBG_en-gb.jpeg.jpg"
+   ],
+   "retail_eur": 9.99,
+   "launch": "2025-12-03",
+   "exit": "2026-10-26",
    "type": "SET",
    "name": "The Mandalorian & Grogu's Speeder Bike",
    "year": 2026,
@@ -1472,26 +1545,19 @@
      "sets": 1
     }
    ],
+   "ucs": false,
    "versions": [],
-   "bs_id": 51838,
-   "photos": [
-    "https://images.brickset.com/sets/images/75436-1.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Box5_v39_en-gb.jpeg.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_boxprod_v39_en-gb.jpeg.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Build_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Cons_2_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Cons_3_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Envr_en-gb.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_PRI_NOBG_en-gb.jpeg.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_SEC01_NOBG_en-gb.jpeg.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_SEC02_NOBG_en-gb.jpeg.jpg",
-    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_SEC03_NOBG_en-gb.jpeg.jpg"
-   ],
-   "retail_eur": 9.99,
-   "launch": "2025-12-03",
-   "exit": "2026-10-26"
+   "figs_value_huf": 2619
   },
   "911832-1": {
+   "bs_id": 27899,
+   "photos": [
+    "https://images.brickset.com/sets/images/SW911832-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null,
+   "figs_value_huf": 2337,
    "type": "SET",
    "name": "Imperial Shuttle Pilot foil pack",
    "year": 2018,
@@ -1512,17 +1578,18 @@
      "sets": 3
     }
    ],
-   "versions": [],
-   "bs_id": 27899,
+   "ucs": false,
+   "versions": []
+  },
+  "911943-1": {
+   "bs_id": 28964,
    "photos": [
-    "https://images.brickset.com/sets/images/SW911832-1.jpg"
+    "https://images.brickset.com/sets/images/SW911943-1.jpg"
    ],
    "retail_eur": null,
    "launch": null,
    "exit": null,
-   "figs_value_huf": 2337
-  },
-  "911943-1": {
+   "figs_value_huf": 1755,
    "type": "SET",
    "name": "Luke Skywalker foil pack #1",
    "year": 2019,
@@ -1543,17 +1610,17 @@
      "sets": 8
     }
    ],
-   "versions": [],
-   "bs_id": 28964,
+   "ucs": false,
+   "versions": []
+  },
+  "911953-1": {
+   "bs_id": 29660,
    "photos": [
-    "https://images.brickset.com/sets/images/SW911943-1.jpg"
+    "https://images.brickset.com/sets/images/911953-1.jpg"
    ],
    "retail_eur": null,
    "launch": null,
    "exit": null,
-   "figs_value_huf": 1755
-  },
-  "911953-1": {
    "type": "SET",
    "name": "First Order SF TIE Fighter - Mini foil pack",
    "year": 2019,
@@ -1567,16 +1634,18 @@
    "fetched": "2026-11-01",
    "pieces": 32,
    "minifigs": [],
-   "versions": [],
-   "bs_id": 29660,
+   "ucs": false,
+   "versions": []
+  },
+  "912169-1": {
+   "bs_id": 31498,
    "photos": [
-    "https://images.brickset.com/sets/images/911953-1.jpg"
+    "https://images.brickset.com/sets/images/912169-1.jpg"
    ],
    "retail_eur": null,
    "launch": null,
-   "exit": null
-  },
-  "912169-1": {
+   "exit": null,
+   "figs_value_huf": 3253,
    "type": "SET",
    "name": "Emperor Palpatine Foil Pack",
    "year": 2021,
@@ -1597,17 +1666,17 @@
      "sets": 2
     }
    ],
-   "versions": [],
-   "bs_id": 31498,
+   "ucs": false,
+   "versions": []
+  },
+  "912284-1": {
+   "bs_id": 33782,
    "photos": [
-    "https://images.brickset.com/sets/images/912169-1.jpg"
+    "https://images.brickset.com/sets/images/912284-1.jpg"
    ],
    "retail_eur": null,
    "launch": null,
    "exit": null,
-   "figs_value_huf": 3253
-  },
-  "912284-1": {
    "type": "SET",
    "name": "The Razor Crest - Mini foil pack",
    "year": 2022,
@@ -1621,16 +1690,18 @@
    "fetched": "2026-11-01",
    "pieces": 41,
    "minifigs": [],
-   "versions": [],
-   "bs_id": 33782,
+   "ucs": false,
+   "versions": []
+  },
+  "912285-1": {
+   "bs_id": 33760,
    "photos": [
-    "https://images.brickset.com/sets/images/912284-1.jpg"
+    "https://images.brickset.com/sets/images/912285-1.jpg"
    ],
    "retail_eur": null,
    "launch": null,
-   "exit": null
-  },
-  "912285-1": {
+   "exit": null,
+   "figs_value_huf": 2597,
    "type": "SET",
    "name": "Darth Maul foil pack",
    "year": 2022,
@@ -1651,17 +1722,17 @@
      "sets": 2
     }
    ],
-   "versions": [],
-   "bs_id": 33760,
+   "ucs": false,
+   "versions": []
+  },
+  "912287-1": {
+   "bs_id": 33965,
    "photos": [
-    "https://images.brickset.com/sets/images/912285-1.jpg"
+    "https://images.brickset.com/sets/images/912287-1.jpg"
    ],
    "retail_eur": null,
    "launch": null,
    "exit": null,
-   "figs_value_huf": 2597
-  },
-  "912287-1": {
    "type": "SET",
    "name": "Mandalorian Starfighter - Mini foil pack",
    "year": 2022,
@@ -1675,16 +1746,17 @@
    "fetched": "2026-11-01",
    "pieces": 31,
    "minifigs": [],
-   "versions": [],
-   "bs_id": 33965,
+   "ucs": false,
+   "versions": []
+  },
+  "912308-1": {
+   "bs_id": 47240,
    "photos": [
-    "https://images.brickset.com/sets/images/912287-1.jpg"
+    "https://images.brickset.com/sets/images/912308-1.jpg"
    ],
    "retail_eur": null,
    "launch": null,
-   "exit": null
-  },
-  "912308-1": {
+   "exit": null,
    "type": "SET",
    "name": "AT-TE - Mini paper bag",
    "year": 2023,
@@ -1698,16 +1770,18 @@
    "fetched": "2026-11-01",
    "pieces": 62,
    "minifigs": [],
-   "versions": [],
-   "bs_id": 47240,
+   "ucs": false,
+   "versions": []
+  },
+  "912310-1": {
+   "bs_id": 48338,
    "photos": [
-    "https://images.brickset.com/sets/images/912308-1.jpg"
+    "https://images.brickset.com/sets/images/912310-1.jpg"
    ],
    "retail_eur": null,
    "launch": null,
-   "exit": null
-  },
-  "912310-1": {
+   "exit": null,
+   "figs_value_huf": 2374,
    "type": "SET",
    "name": "C-3PO and Gonk Droid paper bag",
    "year": 2023,
@@ -1734,17 +1808,18 @@
      "sets": 1
     }
    ],
-   "versions": [],
-   "bs_id": 48338,
+   "ucs": false,
+   "versions": []
+  },
+  "912403-1": {
+   "bs_id": 49026,
    "photos": [
-    "https://images.brickset.com/sets/images/912310-1.jpg"
+    "https://images.brickset.com/sets/images/912403-1.jpg"
    ],
    "retail_eur": null,
    "launch": null,
    "exit": null,
-   "figs_value_huf": 2374
-  },
-  "912403-1": {
+   "figs_value_huf": 1484,
    "type": "SET",
    "name": "Coruscant Guard paper bag",
    "year": 2024,
@@ -1765,17 +1840,18 @@
      "sets": 5
     }
    ],
-   "versions": [],
-   "bs_id": 49026,
+   "ucs": false,
+   "versions": []
+  },
+  "912409-1": {
+   "bs_id": 50373,
    "photos": [
-    "https://images.brickset.com/sets/images/912403-1.jpg"
+    "https://images.brickset.com/sets/images/912409-1.jpg"
    ],
    "retail_eur": null,
    "launch": null,
    "exit": null,
-   "figs_value_huf": 1484
-  },
-  "912409-1": {
+   "figs_value_huf": 1183,
    "type": "SET",
    "name": "Clone Trooper paper bag",
    "year": 2024,
@@ -1796,17 +1872,18 @@
      "sets": 2
     }
    ],
-   "versions": [],
-   "bs_id": 50373,
+   "ucs": false,
+   "versions": []
+  },
+  "912410-1": {
+   "bs_id": 50407,
    "photos": [
-    "https://images.brickset.com/sets/images/912409-1.jpg"
+    "https://images.brickset.com/sets/images/912410-1.jpg"
    ],
    "retail_eur": null,
    "launch": null,
    "exit": null,
-   "figs_value_huf": 1183
-  },
-  "912410-1": {
+   "figs_value_huf": 1766,
    "type": "SET",
    "name": "TIE Pilot paper bag",
    "year": 2024,
@@ -1827,15 +1904,8 @@
      "sets": 3
     }
    ],
-   "versions": [],
-   "bs_id": 50407,
-   "photos": [
-    "https://images.brickset.com/sets/images/912410-1.jpg"
-   ],
-   "retail_eur": null,
-   "launch": null,
-   "exit": null,
-   "figs_value_huf": 1766
+   "ucs": false,
+   "versions": []
   },
   "912501-1": {
    "type": "SET",
@@ -1865,7 +1935,8 @@
    ],
    "retail_eur": null,
    "launch": null,
-   "exit": null
+   "exit": null,
+   "figs_value_huf": 1073
   },
   "912506-1": {
    "type": "SET",
@@ -1918,7 +1989,8 @@
    ],
    "retail_eur": null,
    "launch": null,
-   "exit": null
+   "exit": null,
+   "figs_value_huf": 1359
   },
   "L0002237-1": {
    "type": "SET",
@@ -1948,7 +2020,8 @@
    ],
    "retail_eur": null,
    "launch": null,
-   "exit": null
+   "exit": null,
+   "figs_value_huf": 3674
   },
   "L0002238-1": {
    "type": "SET",
@@ -1971,7 +2044,15 @@
      "sets": 2
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 52890,
+   "photos": [
+    "https://images.brickset.com/sets/images/L0002238-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null,
+   "figs_value_huf": 1762
   },
   "cas327": {
    "type": "MINIFIG",
@@ -4893,6 +4974,814 @@
      "name": "Duel on Mandalore"
     }
    ]
+  },
+  "sw1103": {
+   "type": "MINIFIG",
+   "name": "Snowtrooper, Printed Legs, Dark Tan Hands, Cheek Lines, Frown",
+   "year": 2020,
+   "category": "Star Wars",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75288-1",
+     "name": "AT-AT"
+    }
+   ]
+  },
+  "sw1105": {
+   "type": "MINIFIG",
+   "name": "AT-AT Driver - Dark Red Imperial Logo, Cheek Lines, Smile",
+   "year": 2020,
+   "category": "Star Wars",
+   "weight_g": 4.3,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75288-1",
+     "name": "AT-AT"
+    }
+   ]
+  },
+  "sw1107": {
+   "type": "MINIFIG",
+   "name": "Emperor Palpatine - Hood Basic, Orange Eyes",
+   "year": 2020,
+   "category": "Star Wars",
+   "weight_g": 4.1,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75291-1",
+     "name": "Death Star Final Duel"
+    },
+    {
+     "no": "912169-1",
+     "name": "Emperor Palpatine Foil Pack"
+    }
+   ]
+  },
+  "sw1161": {
+   "type": "MINIFIG",
+   "name": "Dark Trooper",
+   "year": 2021,
+   "category": "Star Wars",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75315-1",
+     "name": "Imperial Light Cruiser"
+    },
+    {
+     "no": "75324-1",
+     "name": "Dark Trooper Attack"
+    }
+   ]
+  },
+  "sw1179": {
+   "type": "MINIFIG",
+   "name": "Snowtrooper - Male, Printed Legs, Dark Tan Hands, Reddish Brown Head, Grimace",
+   "year": 2021,
+   "category": "Star Wars",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75313-1",
+     "name": "AT-AT - UCS"
+    },
+    {
+     "no": "75320-1",
+     "name": "Snowtrooper Battle Pack"
+    }
+   ]
+  },
+  "sw1202": {
+   "type": "MINIFIG",
+   "name": "Astromech Droid, R2-D2 - Flat Silver Head, Dark Pink Dots, Large Receptor, Back Printing",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 4.5,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75339-1",
+     "name": "Death Star Trash Compactor Diorama"
+    },
+    {
+     "no": "75355-1",
+     "name": "X-wing Starfighter - UCS"
+    },
+    {
+     "no": "75360-1",
+     "name": "Yoda's Jedi Starfighter"
+    },
+    {
+     "no": "75365-1",
+     "name": "Yavin 4 Rebel Base"
+    },
+    {
+     "no": "75379-1",
+     "name": "R2-D2"
+    },
+    {
+     "no": "75419-1",
+     "name": "Death Star - UCS"
+    }
+   ]
+  },
+  "sw1206": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper Commander, 187th Legion (Phase 2) - Nougat Head",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75342-1",
+     "name": "Republic Fighter Tank"
+    }
+   ]
+  },
+  "sw1207": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper, 187th Legion (Phase 2) - Nougat Head",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75342-1",
+     "name": "Republic Fighter Tank"
+    }
+   ]
+  },
+  "sw1212": {
+   "type": "MINIFIG",
+   "name": "The Mandalorian / Din Djarin / 'Mando' - Silver Beskar Armor, Jet Pack, Printed Head",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75325-1",
+     "name": "The Mandalorian's N-1 Starfighter"
+    }
+   ]
+  },
+  "sw1216": {
+   "type": "MINIFIG",
+   "name": "Taun We",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 3.82,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75333-1",
+     "name": "Obi-Wan Kenobi's Jedi Starfighter"
+    }
+   ]
+  },
+  "sw1220": {
+   "type": "MINIFIG",
+   "name": "Obi-Wan Kenobi - Reddish Brown Robe, Dark Orange Mid-Length Tousled with Center Part Hair",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 3.6,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75333-1",
+     "name": "Obi-Wan Kenobi's Jedi Starfighter"
+    }
+   ]
+  },
+  "sw1221": {
+   "type": "MINIFIG",
+   "name": "Astromech Droid, R4-P17 - Silver Band Around Dome, Dark Bluish Gray Rectangles",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 4.45,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75333-1",
+     "name": "Obi-Wan Kenobi's Jedi Starfighter"
+    }
+   ]
+  },
+  "sw1235": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper, 212th Attack Battalion (Phase 2) - White Arms, Dirt Stains, Nougat Head, Helmet with Holes",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 3.9,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75337-1",
+     "name": "AT-TE Walker"
+    },
+    {
+     "no": "75366-7",
+     "name": "Advent Calendar 2023, Star Wars (Day  6) - 212th Clone Trooper"
+    },
+    {
+     "no": "912303-1",
+     "name": "212th Clone Trooper paper bag"
+    }
+   ]
+  },
+  "sw1260": {
+   "type": "MINIFIG",
+   "name": "Imperial TIE Fighter / Interceptor Pilot - Female, Nougat Head",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 4.2,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75348-1",
+     "name": "Mandalorian Fang Fighter vs TIE Interceptor"
+    },
+    {
+     "no": "75393-1",
+     "name": "TIE Fighter & X-Wing Mash-up"
+    },
+    {
+     "no": "912410-1",
+     "name": "TIE Pilot paper bag"
+    }
+   ]
+  },
+  "sw1274": {
+   "type": "MINIFIG",
+   "name": "Boba Fett - Helmet, Jet Pack, Printed Arms and Legs, Rangefinder",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 4.2,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75369-1",
+     "name": "Boba Fett Mech"
+    },
+    {
+     "no": "75396-1",
+     "name": "Desert Skiff & Sarlacc Pit"
+    }
+   ]
+  },
+  "sw1275": {
+   "type": "MINIFIG",
+   "name": "Imperial Stormtrooper - Female, Dual Molded Helmet with Light Bluish Gray Panels on Back, Shoulder Belts, Nougat Head",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 4.3,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "40755-1",
+     "name": "Imperial Dropship vs. Rebel Scout Speeder"
+    },
+    {
+     "no": "75370-1",
+     "name": "Stormtrooper Mech"
+    },
+    {
+     "no": "912309-1",
+     "name": "Stormtrooper paper bag"
+    }
+   ]
+  },
+  "sw1278": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper, 501st Legion, 332nd Company (Phase 2) - Helmet with Holes and Togruta Markings",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 3.9,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75359-1",
+     "name": "332nd Ahsoka's Clone Trooper Battle Pack"
+    },
+    {
+     "no": "75449-1",
+     "name": "Siege of Mandalore Battle Pack"
+    },
+    {
+     "no": "L0002240-1",
+     "name": "332nd Clone Trooper paper bag"
+    }
+   ]
+  },
+  "sw1285": {
+   "type": "MINIFIG",
+   "name": "Rebel Fleet Trooper - Male, Vest with Pockets, Black Neck, Reddish Brown Eyebrows",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 4.1,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "40755-1",
+     "name": "Imperial Dropship vs. Rebel Scout Speeder"
+    },
+    {
+     "no": "75365-1",
+     "name": "Yavin 4 Rebel Base"
+    },
+    {
+     "no": "75387-1",
+     "name": "Boarding the Tantive IV"
+    },
+    {
+     "no": "75421-1",
+     "name": "Darth Vader's TIE Fighter"
+    }
+   ]
+  },
+  "sw1300": {
+   "type": "MINIFIG",
+   "name": "Ahsoka Tano (Adult) - Pearl Dark Gray Robe, Printed Arms",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 3.93,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "472518-1",
+     "name": "Ahsoka Tano paper bag"
+    },
+    {
+     "no": "75362-1",
+     "name": "Ahsoka Tano's T-6 Jedi Shuttle"
+    },
+    {
+     "no": "75395-11",
+     "name": "Advent Calendar 2024, Star Wars (Day 10) - Ahsoka Tano"
+    }
+   ]
+  },
+  "sw1305": {
+   "type": "MINIFIG",
+   "name": "Clone Shock Trooper, Coruscant Guard (Phase 2) - Nougat Head",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 3.9,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75354-1",
+     "name": "Coruscant Guard Gunship"
+    },
+    {
+     "no": "75372-1",
+     "name": "Clone Trooper & Battle Droid Battle Pack"
+    },
+    {
+     "no": "75448-1",
+     "name": "Clone Shock Trooper Mech"
+    },
+    {
+     "no": "912403-1",
+     "name": "Coruscant Guard paper bag"
+    },
+    {
+     "no": "912511-1",
+     "name": "Clone Shock Trooper paper bag"
+    }
+   ]
+  },
+  "sw1319": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper (Phase 2) - Nougat Head",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 3.9,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75372-1",
+     "name": "Clone Trooper & Battle Droid Battle Pack"
+    },
+    {
+     "no": "912409-1",
+     "name": "Clone Trooper paper bag"
+    }
+   ]
+  },
+  "sw1321": {
+   "type": "MINIFIG",
+   "name": "Super Battle Droid - Pearl Dark Gray, Narrow Head, Chest Light Indent",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 3.3,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75372-1",
+     "name": "Clone Trooper & Battle Droid Battle Pack"
+    },
+    {
+     "no": "75395-5",
+     "name": "Advent Calendar 2024, Star Wars (Day  4) - Super Battle Droid"
+    },
+    {
+     "no": "75418-21",
+     "name": "Advent Calendar 2025, Star Wars (Day 20) - Super Battle Droid"
+    },
+    {
+     "no": "75431-1",
+     "name": "327th Star Corps Clone Troopers Battle Pack"
+    }
+   ]
+  },
+  "sw1325": {
+   "type": "MINIFIG",
+   "name": "Darth Malak",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 3.56,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75379-1",
+     "name": "R2-D2"
+    }
+   ]
+  },
+  "sw1329": {
+   "type": "MINIFIG",
+   "name": "Clone ARC Trooper Fives, 501st Legion (Phase 2)",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 5.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75387-1",
+     "name": "Boarding the Tantive IV"
+    }
+   ]
+  },
+  "sw1338": {
+   "type": "MINIFIG",
+   "name": "Battle Droid Pilot - Blue Torso with Tan Insignia and Chest Badge, Angled Arm and Straight Arm",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 2.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "40686-1",
+     "name": "Trade Federation Troop Carrier"
+    },
+    {
+     "no": "75435-1",
+     "name": "Battle of Felucia Separatist MTT"
+    }
+   ]
+  },
+  "sw1364": {
+   "type": "MINIFIG",
+   "name": "Rey - Black Dress, Hood and Cape (Darth Rey)",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 4.01,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75389-1",
+     "name": "The Dark Falcon"
+    }
+   ]
+  },
+  "sw1366": {
+   "type": "MINIFIG",
+   "name": "Darth Dev (Darth Devastator) - Cape",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 3.85,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75389-1",
+     "name": "The Dark Falcon"
+    }
+   ]
+  },
+  "sw1367": {
+   "type": "MINIFIG",
+   "name": "Jar Jar Binks - Black Outfit, Printed Head with Dark Orange Top (Darth Jar Jar)",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 4.31,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75389-1",
+     "name": "The Dark Falcon"
+    }
+   ]
+  },
+  "sw1368": {
+   "type": "MINIFIG",
+   "name": "Bounty Hunter C-3PO",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 3.02,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75389-1",
+     "name": "The Dark Falcon"
+    }
+   ]
+  },
+  "sw1372": {
+   "type": "MINIFIG",
+   "name": "Nien Nunb",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 3.65,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75396-1",
+     "name": "Desert Skiff & Sarlacc Pit"
+    }
+   ]
+  },
+  "sw1391": {
+   "type": "MINIFIG",
+   "name": "Rebel Fleet Trooper - Male, Vest with Pockets, Black Neck, Dark Brown Eyebrows",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 4.1,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "40755-1",
+     "name": "Imperial Dropship vs. Rebel Scout Speeder"
+    }
+   ]
+  },
+  "sw1392": {
+   "type": "MINIFIG",
+   "name": "Rebel Fleet Trooper - Female, Vest with Pockets, Black Neck",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 4.1,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "40755-1",
+     "name": "Imperial Dropship vs. Rebel Scout Speeder"
+    }
+   ]
+  },
+  "sw1393": {
+   "type": "MINIFIG",
+   "name": "Astromech Droid, QT-KT",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 4.46,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "40755-1",
+     "name": "Imperial Dropship vs. Rebel Scout Speeder"
+    }
+   ]
+  },
+  "sw1395": {
+   "type": "MINIFIG",
+   "name": "Sabine Wren - Dark Brown Armor, Dark Purple Hair",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 3.6,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "472407-1",
+     "name": "Sabine Wren paper bag"
+    }
+   ]
+  },
+  "sw1402": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper Pilot (Phase 2) - Light Bluish Gray Arms, Nougat Head",
+   "year": 2025,
+   "category": "Star Wars",
+   "weight_g": 3.8,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75402-1",
+     "name": "ARC-170 Starfighter"
+    },
+    {
+     "no": "L0002233-1",
+     "name": "Phase 2 Clone Pilot paper bag"
+    }
+   ]
+  },
+  "sw1407": {
+   "type": "MINIFIG",
+   "name": "Boba Fett, Young - Bright Light Blue Shirt",
+   "year": 2025,
+   "category": "Star Wars",
+   "weight_g": 3.33,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75409-1",
+     "name": "Jango Fett's Firespray-Class Starship - UCS"
+    },
+    {
+     "no": "75433-1",
+     "name": "Jango Fett's Starship"
+    }
+   ]
+  },
+  "sw1422": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper, 327th Star Corps (Phase 2) - Nougat Head",
+   "year": 2025,
+   "category": "Star Wars",
+   "weight_g": 4.12,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75431-1",
+     "name": "327th Star Corps Clone Troopers Battle Pack"
+    },
+    {
+     "no": "L0002238-1",
+     "name": "327th Star Corps Clone Trooper paper bag"
+    }
+   ]
+  },
+  "sw1423": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper, 327th Star Corps (Phase 2) - Nougat Head, Rangefinder",
+   "year": 2025,
+   "category": "Star Wars",
+   "weight_g": 4.18,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75431-1",
+     "name": "327th Star Corps Clone Troopers Battle Pack"
+    }
+   ]
+  },
+  "sw1425": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper Pilot (Phase 1) - Yellow Markings, Nougat Head",
+   "year": 2025,
+   "category": "Star Wars",
+   "weight_g": 4.05,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75432-1",
+     "name": "V-19 Torrent Starfighter"
+    },
+    {
+     "no": "L0002231-1",
+     "name": "Phase 1 Clone Pilot paper bag"
+    }
+   ]
+  },
+  "sw1427": {
+   "type": "MINIFIG",
+   "name": "Commando Droid - Pearl Dark Gray",
+   "year": 2025,
+   "category": "Star Wars",
+   "weight_g": 1.98,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75435-1",
+     "name": "Battle of Felucia Separatist MTT"
+    },
+    {
+     "no": "L0002235-1",
+     "name": "Commando Droid paper bag"
+    }
+   ]
+  },
+  "sw1430": {
+   "type": "MINIFIG",
+   "name": "Galactic Marine Clone Trooper",
+   "year": 2025,
+   "category": "Star Wars",
+   "weight_g": 4.55,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75413-1",
+     "name": "Republic Juggernaut"
+    },
+    {
+     "no": "L0002237-1",
+     "name": "Galactic Marine paper bag"
+    }
+   ]
+  },
+  "sw1486": {
+   "type": "MINIFIG",
+   "name": "Mandalorian Super Commando - Printed Legs, Male",
+   "year": 2026,
+   "category": "Star Wars",
+   "weight_g": 4.1,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75449-1",
+     "name": "Siege of Mandalore Battle Pack"
+    }
+   ]
+  },
+  "sw1487": {
+   "type": "MINIFIG",
+   "name": "Mandalorian Super Commando - Printed Legs, Female",
+   "year": 2026,
+   "category": "Star Wars",
+   "weight_g": 4.1,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75449-1",
+     "name": "Siege of Mandalore Battle Pack"
+    }
+   ]
+  },
+  "sw1489": {
+   "type": "MINIFIG",
+   "name": "Cobb Vanth",
+   "year": 2026,
+   "category": "Star Wars",
+   "weight_g": 4.2,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75437-1",
+     "name": "Cobb Vanth's Speeder"
+    }
+   ]
   }
  },
  "figsets": {
@@ -5029,6 +5918,8 @@
   "sw1094": 2,
   "sw1096": 2,
   "sw1097": 1,
+  "sw1103": 1,
+  "sw1105": 1,
   "sw1107": 2,
   "sw1113": 12,
   "sw1148": 2,
@@ -5038,11 +5929,14 @@
   "sw1152": 1,
   "sw1153": 1,
   "sw1155": 2,
+  "sw1161": 2,
+  "sw1179": 2,
   "sw1201": 5,
   "sw1202": 6,
   "sw1205": 1,
   "sw1206": 1,
   "sw1207": 1,
+  "sw1212": 1,
   "sw1216": 1,
   "sw1220": 1,
   "sw1221": 1,
@@ -5059,8 +5953,11 @@
   "sw1251": 1,
   "sw1252": 1,
   "sw1260": 3,
+  "sw1274": 2,
   "sw1275": 3,
+  "sw1278": 3,
   "sw1285": 4,
+  "sw1300": 3,
   "sw1305": 5,
   "sw1314": 1,
   "sw1315": 2,
@@ -5070,6 +5967,7 @@
   "sw1325": 1,
   "sw1326": 5,
   "sw1327": 2,
+  "sw1329": 1,
   "sw1332": 1,
   "sw1333": 2,
   "sw1334a": 1,
@@ -5082,21 +5980,28 @@
   "sw1366": 1,
   "sw1367": 1,
   "sw1368": 1,
+  "sw1372": 1,
   "sw1391": 1,
   "sw1392": 1,
   "sw1393": 1,
   "sw1395": 1,
+  "sw1402": 2,
+  "sw1407": 2,
   "sw1414": 1,
   "sw1418": 1,
   "sw1421": 1,
   "sw1422": 2,
   "sw1423": 1,
+  "sw1425": 2,
   "sw1427": 2,
   "sw1428": 1,
   "sw1429": 1,
   "sw1430": 2,
   "sw1483": 1,
-  "sw1488": 1
+  "sw1486": 1,
+  "sw1487": 1,
+  "sw1488": 1,
+  "sw1489": 1
  },
  "figvalues": {
   "sw0001c": {
@@ -5396,6 +6301,146 @@
   },
   "sw1326": {
    "eur": 3.97,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1327": {
+   "eur": 4.53,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1332": {
+   "eur": 3.15,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1333": {
+   "eur": 5.65,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1334a": {
+   "eur": 69.06,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1335": {
+   "eur": 26.3,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1338": {
+   "eur": 3.34,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1344": {
+   "eur": 2.93,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1363": {
+   "eur": 31.55,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1364": {
+   "eur": 10.12,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1365": {
+   "eur": 6.03,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1366": {
+   "eur": 7.18,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1367": {
+   "eur": 12.87,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1368": {
+   "eur": 7.25,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1391": {
+   "eur": 3.08,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1392": {
+   "eur": 2.99,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1393": {
+   "eur": 15.19,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1395": {
+   "eur": 7.75,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1414": {
+   "eur": 6.57,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1418": {
+   "eur": 0.86,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1421": {
+   "eur": 3.3,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1422": {
+   "eur": 4.81,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1423": {
+   "eur": 5.3,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1427": {
+   "eur": 3.71,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1428": {
+   "eur": 17.93,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1429": {
+   "eur": 41.21,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1430": {
+   "eur": 10.03,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1483": {
+   "eur": 29.96,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1488": {
+   "eur": 4.51,
    "cond": "N",
    "at": "2026-11-01"
   }
