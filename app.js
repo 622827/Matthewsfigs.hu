@@ -426,7 +426,7 @@
     const verList = vers ? `<section class="pd-vers">
       <h2>${hu ? `Minden „${esc(i.name)}” kiadás` : `All ${esc(i.name)} sets`}</h2>
       <div class="pd-vers__wrap"><table class="pd-vers__t">
-        <thead><tr><th>${hu ? "Szett" : "Set"}</th><th>${hu ? "Év" : "Year"}</th><th>${hu ? "Elem" : "Pieces"}</th><th>${hu ? "Nálunk" : "With us"}</th></tr></thead>
+        <thead><tr><th>${hu ? "Szett" : "Set"}</th><th>${hu ? "Év" : "Year"}</th><th>${hu ? "Elem" : "Pieces"}</th><th>${hu ? "Figura" : "Minifigs"}</th><th>${hu ? "Nálunk" : "With us"}</th></tr></thead>
         <tbody>${vers.map(v => {
           const me = v.no === i.no, o = me ? i : ours(v.no), nm = `${esc(v.no.replace(/-1$/, ""))} ${esc(v.name)}`;
           // what the visitor can do with this release here: open our page, pre-order, or ask us to source it
@@ -436,7 +436,8 @@
             : `<button type="button" class="pd-vers__btn is-pre" data-source="${esc(v.no)}" data-name="${esc(v.name)}">${hu ? "Beszerezzük" : "We'll source it"}</button>`;
           return `<tr${me ? ' class="is-me"' : ""}>
             <td><span class="pd-vers__set"><img src="${esc(v.img)}" alt="" loading="lazy">${o && !me ? `<a href="${esc(productUrl(o))}">${nm}</a>` : `<span>${nm}</span>`}</span></td>
-            <td>${v.year || "–"}</td><td>${v.pieces ? nf(v.pieces) : "–"}</td><td>${act}</td></tr>`; }).join("")}</tbody></table></div>
+            <td>${v.year || "–"}</td><td>${v.pieces ? nf(v.pieces) : "–"}</td>
+            <td>${v.figs != null ? v.figs : (me && D.minifigs ? D.minifigs.reduce((s, f) => s + f.qty, 0) : "–")}</td><td>${act}</td></tr>`; }).join("")}</tbody></table></div>
       <p class="co-muted co-small">${hu ? "Ami nincs raktáron, azt egyedi rendelésre beszerezzük. Kiadások: Rebrickable." : "If it's not in stock, we can source it for you. Releases: Rebrickable."}</p></section>` : "";
     const setList = D.sets && D.sets.length ? `<h2>${hu ? "Ezekben a szettekben szerepelt" : "Appears in these sets"}</h2>
       <ul class="pd-list pd-cols">${D.sets.map(s => linkItem(s.no, s.name, 1)).join("")}</ul>` : "";

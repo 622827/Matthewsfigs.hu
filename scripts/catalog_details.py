@@ -77,6 +77,29 @@ def rb_sets():
     return _RB
 
 
+_RBFIGS = None
+
+
+def rb_fig_counts():
+    """Rebrickable: number of minifigures per set (main inventory version)."""
+    global _RBFIGS
+    if _RBFIGS is None:
+        _RBFIGS = {}
+        try:
+            def rows(name):
+                req = urllib.request.Request(f"https://cdn.rebrickable.com/media/downloads/{name}.csv.gz", headers={"User-Agent": "matthewsfigs.hu"})
+                with urllib.request.urlopen(req, timeout=60) as r:
+                    return list(csv.DictReader(io.TextIOWrapper(gzip.GzipFile(fileobj=io.BytesIO(r.read())), encoding="utf-8")))
+            inv = {r["id"]: r["set_num"] for r in rows("inventories") if r["version"] == "1"}
+            for r in rows("inventory_minifigs"):
+                s = inv.get(r["inventory_id"])
+                if s:
+                    _RBFIGS[s] = _RBFIGS.get(s, 0) + int(r["quantity"] or 0)
+        except Exception as e:
+            print(f"  ! Rebrickable minifigura-lista: {e}")
+    return _RBFIGS
+
+
 def norm_name(s):
     return re.sub(r"[^a-z0-9]+", " ", str(s).lower().replace("’", "'")).strip()
 
@@ -185,8 +208,10 @@ def fetch(item_type, no):
             d["minifigs"] = sorted(figs.values(), key=lambda f: f["no"])
         rb_sets()
         d["ucs"] = _RBTHEME.get(no) in UCS_THEMES
-        d["versions"] = [{"no": v["no"], "name": v["name"], "year": v["year"], "pieces": v["pieces"], "img": v["img"]}
-                         for v in versions_of(no, d["name"])]
+        vs = versions_of(no, d["name"])
+        figs_n = rb_fig_counts() if vs else {}
+        d["versions"] = [{"no": v["no"], "name": v["name"], "year": v["year"], "pieces": v["pieces"], "img": v["img"],
+                          "figs": figs_n.get(v["no"], 0)} for v in vs]
     elif item_type == "MINIFIG":
         sup = get(f"/items/MINIFIG/{seg}/supersets")
         if sup is not None:
@@ -238,7 +263,8 @@ def main():
 
     def stale(no):
         d = items.get(no)
-        if not d or (d.get("type") == "SET" and ("versions" not in d or "ucs" not in d)):
+        if not d or (d.get("type") == "SET" and ("versions" not in d or "ucs" not in d
+                                                 or any("figs" not in v for v in d["versions"]))):
             return True
         try:
             return (today - date.fromisoformat(d.get("fetched", "2000-01-01"))).days > STALE_DAYS
