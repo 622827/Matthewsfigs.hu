@@ -47,7 +47,9 @@ def _new_nofig():
     except Exception:
         return True
     inv = {i["no"] for i in json.loads(INV.read_text())["items"] if i["type"] == "SET"}
-    return any(n not in idx for n in inv if (det.get(n) or {}).get("minifigs"))
+    names = {i["no"]: i["name"].lower() for i in json.loads(INV.read_text())["items"]}
+    return any(n not in idx for n in inv if (det.get(n) or {}).get("minifigs")
+               and not any(b in names.get(n, "") for b in ("foil pack", "paper bag", "polybag")))
 
 
 def session():
@@ -184,6 +186,15 @@ def build_only(sess, no):
             keep[lab == i] = 1
     keep = cv2.dilate(keep, np.ones((3, 3), np.uint8))
     alpha = (a * keep * 255).astype(np.uint8)
+    # figures standing close to the model are joined to it only by a thin edge or shadow: erode, drop small pieces, regrow
+    H, W = alpha.shape
+    k = max(3, round(min(H, W) * 0.02))
+    core = cv2.erode((alpha > 128).astype(np.uint8), np.ones((k, k), np.uint8))
+    n2, l2, s2, _ = cv2.connectedComponentsWithStats(core, 8)
+    if n2 > 2:
+        b2 = 1 + int(np.argmax(s2[1:, cv2.CC_STAT_AREA]))
+        keep2 = np.isin(l2, [j for j in range(1, n2) if j == b2 or s2[j, cv2.CC_STAT_AREA] >= 0.25 * s2[b2, cv2.CC_STAT_AREA]]).astype(np.uint8)
+        alpha[cv2.dilate(keep2, np.ones((2 * k + 3, 2 * k + 3), np.uint8)) == 0] = 0
     ys, xs = np.where(alpha > 20)
     rgba = np.dstack([np.array(img), alpha])[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
     im = Image.fromarray(rgba, "RGBA")
@@ -201,7 +212,9 @@ def nofig_sets(sess, force=False, only=None):
     NOFIG.mkdir(parents=True, exist_ok=True)
     idx_path = NOFIG / "index.json"
     index = json.loads(idx_path.read_text()) if idx_path.exists() else {}
-    want = sorted(n for n in inv if (det.get(n) or {}).get("minifigs"))
+    names = {i["no"]: i["name"].lower() for i in json.loads(INV.read_text())["items"]}
+    bag = lambda n: any(b in names.get(n, "") for b in ("foil pack", "paper bag", "polybag"))   # the minifigure IS the product
+    want = sorted(n for n in inv if (det.get(n) or {}).get("minifigs") and not bag(n))
     todo = [n for n in want if (only and n in only) or (not only and (force or n not in index))]
     for no in todo:
         im = build_only(sess, no)

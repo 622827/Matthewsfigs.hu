@@ -449,13 +449,14 @@
     // rounded like every shop price (nearest 500 Ft − 20); shown only when the saving is real and the rest is still worth it
     const figTotal = (D.minifigs || []).reduce((s, f) => s + f.qty, 0);
     const shopRound = v => Math.max(500, Math.round(v / 500) * 500) - 20;
-    const noFig = set && !i.preorder && i.price && D.figs_value_huf > 0 ? shopRound(i.price - D.figs_value_huf) : 0;
+    const isBag = /foil pack|paper bag|polybag/i.test(i.name);   // there the minifigure is the product
+    const noFig = set && !isBag && !i.preorder && i.price && D.figs_value_huf > 0 ? shopRound(i.price - D.figs_value_huf) : 0;
     const showNoFig = noFig >= i.price * 0.3 && noFig <= i.price - 980;
     const noFigLink = MESSENGER + "?text=" + encodeURIComponent((hu ? "Szia! Csak a szettet kérem, minifigurák nélkül: " : "Hi! I'd like just the set, without the minifigures: ") + `${sn} ${i.name} (${money(noFig)})`);
     const setOnly = showNoFig ? `<div class="pd-setonly">
         <span class="pd-setonly__kicker">${hu ? "Minifigurák nélkül" : "Without the minifigures"}</span>
         <b class="pd-setonly__name">${esc(sn)} ${esc(i.name)} – ${hu ? "csak a szett" : "set only"}</b>
-        <img src="assets/nofig/${encodeURIComponent(i.no)}.webp?v=1" data-fallback="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(i.no)}.png" alt="${esc(i.name)} – ${hu ? "a megépített szett" : "the built set"}" loading="lazy">
+        <img src="assets/nofig/${encodeURIComponent(i.no)}.webp?v=2" data-fallback="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(i.no)}.png" alt="${esc(i.name)} – ${hu ? "a megépített szett" : "the built set"}" loading="lazy">
         <span class="pd-setonly__price"><b>${money(noFig)}</b><s>${money(i.price)}</s><em>${hu ? "−" + money(i.price - noFig) : "save " + money(i.price - noFig)}</em></span>
         <a class="pd-fig__btn pd-setonly__btn" href="${esc(noFigLink)}" target="_blank" rel="noopener">${hu ? "Csak a szettet kérem" : "Just the set, please"}</a>
         <p class="pd-setonly__note">${hu
