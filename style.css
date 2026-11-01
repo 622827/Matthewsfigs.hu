@@ -440,10 +440,10 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 @keyframes mfZoom{from{opacity:0;transform:scale(1.08)}to{opacity:1;transform:none}}
 @keyframes mfCard{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
 body>.top{animation:mfDrop .55s cubic-bezier(.22,1,.36,1) both}
-body>:not(.top):not(script):not(dialog):not(.shop-toast){animation:mfRise .7s cubic-bezier(.22,1,.36,1) both;animation-delay:.12s}
-body>:nth-child(3):not(script){animation-delay:.22s}
-body>:nth-child(4):not(script){animation-delay:.3s}
-body>:nth-child(n+5):not(script){animation-delay:.36s}
+body>:is(header,section,main,footer,nav,article,aside,.wrap):not(.top){animation:mfRise .7s cubic-bezier(.22,1,.36,1) both;animation-delay:.12s}
+body>:is(header,section,main,footer,nav,article,aside,.wrap):nth-child(3){animation-delay:.22s}
+body>:is(header,section,main,footer,nav,article,aside,.wrap):nth-child(4){animation-delay:.3s}
+body>:is(header,section,main,footer,nav,article,aside,.wrap):nth-child(n+5){animation-delay:.36s}
 .hero__img{animation:mfZoom 1.4s cubic-bezier(.22,1,.36,1) both}
 .hero__in>*,.cat-hero .wrap>*{animation:mfRise .7s cubic-bezier(.22,1,.36,1) both}
 .hero__in>:nth-child(1),.cat-hero .wrap>:nth-child(1){animation-delay:.25s}
@@ -495,3 +495,7 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 .pd-fig__price{font-family:var(--display);font-weight:800;color:var(--green);font-size:15px}
 @media (max-width:860px){.pd{grid-template-areas:"gal" "info" "figs";grid-template-rows:auto}}
 @media (max-width:560px){.pd-figgrid{grid-template-columns:repeat(2,1fr)}}
+.pd-fig__btn{margin-top:4px;width:100%;box-sizing:border-box;text-align:center;background:var(--gold);color:var(--green);font:700 13px var(--body);padding:7px 10px;border-radius:999px;box-shadow:0 2px 0 var(--gold-2);cursor:pointer}
+.pd-fig__btn:hover{background:#ffd93a}
+.pd-fig__btn.is-pre{background:transparent;box-shadow:none;border:1.5px solid var(--green);color:var(--green)}
+.pd-fig__btn.is-pre:hover{background:var(--green);color:var(--cream)}

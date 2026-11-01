@@ -351,6 +351,11 @@
           <img src="https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(f.no)}.png" alt="${esc(f.name)}" loading="lazy">
           <span class="pd-fig__foot">${f.sets === 1 ? `<span class="pd-fig__tag is-ex">${hu ? "Exkluzív" : "Exclusive"}</span>` : f.sets > 1 ? `<span class="pd-fig__tag">${f.sets} ${hu ? "szett" : "sets"}</span>` : "<span></span>"}
             ${o && !o.preorder ? `<span class="pd-fig__price">${money(o.price)}</span>` : ""}</span>
+          ${o && !o.preorder
+            ? (shopOn()
+              ? `<span class="pd-fig__btn" role="button" tabindex="0" data-add="${esc(o.no)}" data-name="${esc(o.no + " " + o.name)}">${hu ? "Kosárba" : "Add to cart"}</span>`
+              : `<span class="pd-fig__btn" role="button" tabindex="0" data-buy="${esc(o.no)}">${hu ? "Megrendelem" : "Order"}</span>`)
+            : `<span class="pd-fig__btn is-pre" role="button" tabindex="0" data-prefig="${esc(f.no)}" data-name="${esc(f.name)}">${hu ? "Előrendelés" : "Pre-order"}</span>`}
         </${tag}>`; }).join("")}</div></section>` : "";
     const setList = D.sets && D.sets.length ? `<h2>${hu ? "Ezekben a szettekben szerepelt" : "Appears in these sets"}</h2>
       <ul class="pd-list pd-cols">${D.sets.map(s => linkItem(s.no, s.name, 1)).join("")}</ul>` : "";
@@ -413,6 +418,17 @@
       b.querySelector("img").onerror = () => { b.remove(); const left = root.querySelectorAll(".pd-thumb"); if (left.length < 2) left.forEach(x => x.remove()); };
     });
     main.onerror = () => { const alt = root.querySelector(".pd-thumb:not(.is-on)"); if (alt && main.src !== alt.dataset.src) alt.click(); else if (i.img && main.src !== i.img) main.src = i.img; };
+    // minifigure card buttons: pre-order (Messenger) or order on Messenger while the shop is closed
+    root.querySelectorAll("[data-prefig],[data-buy]").forEach(b => {
+      const go = e => {
+        e.preventDefault(); e.stopPropagation();
+        if (b.dataset.buy) { const o = ours(b.dataset.buy); if (o) window.open(buyLink(o), "_blank", "noopener"); return; }
+        const it = ours(b.dataset.prefig) || { no: b.dataset.prefig, name: b.dataset.name, type: "MINIFIG", preorder: true };
+        askNotify(it, wantLink(it), "want");
+      };
+      b.addEventListener("click", go);
+      b.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(e); });
+    });
     const w = $("pdWant"), n = $("pdNotify");
     if (w) w.onclick = () => askNotify(i, wantLink(i), "want");
     if (n) n.onclick = () => askNotify(i, notifyLink(i));
