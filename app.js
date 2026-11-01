@@ -462,6 +462,7 @@
       if (d.updated && $("updated")) $("updated").textContent =
         new Date(d.updated).toLocaleString(lang === "hu" ? "hu-HU" : "en-GB", { dateStyle: "medium", timeStyle: "short" });
       renderAll(true);
+      setTimeout(() => document.documentElement.classList.add("mf-loaded"), 1200);
     })
     .catch(() => { const e = $("empty"); if (e) e.hidden = false; });
 

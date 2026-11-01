@@ -8,8 +8,7 @@
     "@keyframes mfPage{from{opacity:0}to{opacity:1}}@keyframes mfPageIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}" +
     "@keyframes mfRip{from{transform:translate(-50%,-50%) scale(0);opacity:.35}to{transform:translate(-50%,-50%) scale(1);opacity:0}}" +
     "@keyframes mfPop{0%{transform:scale(1)}40%{transform:scale(.94)}100%{transform:scale(1)}}" +
-    "body{animation:mfPage .35s ease backwards}" +
-    "body.mf-leave{opacity:0;transition:opacity .18s ease}" +
+        "body.mf-leave{opacity:0;transition:opacity .18s ease}" +
     "button,summary,[role=button],[role=tab],select,input[type=submit],.btn,.lchip,.chip-pop,.inv-btn,.foot__inv,.want{transition:transform .15s ease,filter .15s ease,box-shadow .2s ease,background-color .2s ease,border-color .2s ease,color .2s ease,opacity .2s ease}" +
     "button:not(:disabled):active,summary:active,[role=button]:active,[role=tab]:active,input[type=submit]:active,a.btn:active,a.inv-btn:active,a.foot__inv:active,a.want:active{transform:scale(.95)}" +
     "a{transition:color .2s ease,opacity .2s ease,background-color .2s ease}" +
@@ -25,7 +24,7 @@
     "button:not(:disabled):hover,summary:hover,[role=tab]:hover,a.btn:hover,a.inv-btn:hover{filter:brightness(1.07)}" +
     "input[type=checkbox],input[type=radio]{transition:transform .15s ease}" +
     "input[type=checkbox]:active,input[type=radio]:active{transform:scale(.8)}" +
-    "@media (prefers-reduced-motion:reduce){.mf-in,body,body.mf-leave,.mf-rip,.mf-pop,details>summary~*,dialog[open]{animation:none!important;transition:none!important}.mf-rip{display:none}}";
+    "@media (prefers-reduced-motion:reduce){.mf-in,body.mf-leave,.mf-rip,.mf-pop,details>summary~*,dialog[open]{animation:none!important;transition:none!important}.mf-rip{display:none}}";
   document.head.appendChild(st);
   if (rm) return;
 

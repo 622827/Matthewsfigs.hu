@@ -426,3 +426,42 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 @media (max-width:560px){.pd-dl{grid-template-columns:1fr}.pd-dl dd{margin-bottom:6px}}
 
 .co-safety{margin:10px 0 0}.co-safety .safety{font-size:13px;margin:0}
+
+/* betöltési animáció: a fejléc lecsúszik, a tartalom lépcsőzetesen beúszik, a termékkártyák egymás után jelennek meg.
+   A style.css a <head>-ben töltődik, így már az első kirajzolás animált (nincs felvillanás). */
+@keyframes mfDrop{from{transform:translateY(-100%)}to{transform:none}}
+@keyframes mfRise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes mfZoom{from{opacity:0;transform:scale(1.08)}to{opacity:1;transform:none}}
+@keyframes mfCard{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:none}}
+body>.top{animation:mfDrop .55s cubic-bezier(.22,1,.36,1) both}
+body>:not(.top):not(script):not(dialog):not(.shop-toast){animation:mfRise .7s cubic-bezier(.22,1,.36,1) both;animation-delay:.12s}
+body>:nth-child(3):not(script){animation-delay:.22s}
+body>:nth-child(4):not(script){animation-delay:.3s}
+body>:nth-child(n+5):not(script){animation-delay:.36s}
+.hero__img{animation:mfZoom 1.4s cubic-bezier(.22,1,.36,1) both}
+.hero__in>*,.cat-hero .wrap>*{animation:mfRise .7s cubic-bezier(.22,1,.36,1) both}
+.hero__in>:nth-child(1),.cat-hero .wrap>:nth-child(1){animation-delay:.25s}
+.hero__in>:nth-child(2),.cat-hero .wrap>:nth-child(2){animation-delay:.33s}
+.hero__in>:nth-child(3),.cat-hero .wrap>:nth-child(3){animation-delay:.41s}
+.hero__in>:nth-child(n+4),.cat-hero .wrap>:nth-child(n+4){animation-delay:.49s}
+html:not(.mf-loaded) .grid>.item{animation:mfCard .55s cubic-bezier(.22,1,.36,1) both}
+html:not(.mf-loaded) .grid>.item:nth-child(2){animation-delay:.05s}
+html:not(.mf-loaded) .grid>.item:nth-child(3){animation-delay:.1s}
+html:not(.mf-loaded) .grid>.item:nth-child(4){animation-delay:.15s}
+html:not(.mf-loaded) .grid>.item:nth-child(5){animation-delay:.2s}
+html:not(.mf-loaded) .grid>.item:nth-child(6){animation-delay:.25s}
+html:not(.mf-loaded) .grid>.item:nth-child(7){animation-delay:.3s}
+html:not(.mf-loaded) .grid>.item:nth-child(8){animation-delay:.35s}
+html:not(.mf-loaded) .grid>.item:nth-child(n+9){animation-delay:.4s}
+html:not(.mf-loaded) .pd-media,html:not(.mf-loaded) .pd-info{animation:mfRise .6s cubic-bezier(.22,1,.36,1) both}
+html:not(.mf-loaded) .pd-info{animation-delay:.1s}
+@media (prefers-reduced-motion:reduce){body>*,.hero__img,.hero__in>*,.cat-hero .wrap>*,.grid>.item,.pd-media,.pd-info{animation:none!important}}
+
+/* fejléc: a logó szövege soha ne csússzon rá a menüre – közepes szélességen a mellékes menüpontok eltűnnek */
+.brand{flex:none}
+.nav{min-width:0;white-space:nowrap}
+.top__in>*{flex-shrink:0}
+@media (max-width:1280px){.nav a[href$="#beszerzes"],.nav a[href$="#kapcsolat"]{display:none}}
+@media (max-width:1120px){.nav a:not(.nav__main){display:none}}
+@media (max-width:1000px){.brand span{display:none}}
+@media (max-width:560px){.top__in{gap:12px}.nav{gap:12px}}
