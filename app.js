@@ -613,6 +613,9 @@
           <span class="badges">${labels.map(l => `<span class="badge badge--${(LABELS._colors || {})[l] || "red"}">${esc(l)}</span>`).join("")}${i.preorder ? `<span class="badge badge--pre">${t("badge.pre")}</span>` : set ? `<span class="badge">${t("badge.sealed")}</span>` : ""}</span>
           ${i.price ? `<p class="pd-price">${i.from ? `<small>${hu ? "" : "from "}</small>` : ""}${money(i.price)}${i.from && hu ? "<small>-tól</small>" : ""}</p>` : ""}
           <p class="pd-stock${i.preorder ? " is-pre" : ""}">${stock}</p>
+          ${i.preorder ? `<p class="pd-oos">${hu
+            ? `${set ? "Ez a szett" : "Ez a figura"} most nincs raktáron, de ha leadod a jelzésed, 1–2 héten belül beszerezzük neked, és rögtön szólunk.`
+            : `This ${set ? "set" : "minifigure"} is out of stock right now, but if you let us know, we'll get it for you within 1–2 weeks and tell you straight away.`}</p>` : ""}
           <div class="pd-buy">${buy}</div>
           <h2>${hu ? "Leírás" : "Description"}</h2>
           ${officialDesc}
