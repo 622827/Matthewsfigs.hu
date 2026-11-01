@@ -51,6 +51,33 @@
     </div></div>`;
   };
 
+  // ---------- ajánlatok e-mailben (külön, önkéntes hozzájárulás minden e-mail mezőnél) ----------
+  const MKT = {
+    hu: ["Elsőként szeretném tudni, ha ritka figura, új szállítmány vagy akció érkezik – küldjetek róla e-mailt.",
+         "Szólhattok e-mailben a kedvezményekről és a frissen érkezett szettekről.",
+         "Kérem a nálatok elsőként elérhető ajánlatokat és akciókat e-mailben.",
+         "Ha jó áron jön valami, írjatok – kérem az akciós ajánlatokat e-mailben."],
+    en: ["Let me know first by e-mail when rare figures, new stock or deals arrive.",
+         "You may e-mail me about discounts and newly arrived sets.",
+         "Send me your early offers and deals by e-mail.",
+         "If something good comes in at a great price, e-mail me about it."]
+  };
+  const mktPick = Math.floor(Math.random() * MKT.hu.length);
+  const mktText = () => (hu() ? MKT.hu : MKT.en)[mktPick] + (hu() ? " Bármikor leiratkozhatok." : " I can unsubscribe at any time.");
+  const mktBox = checked => `<label class="co-check mkt" data-mkt hidden><input type="checkbox" name="mkt"${checked ? " checked" : ""}>
+    <span>${esc(mktText())} <a href="adatkezeles.html#celok" target="_blank">${hu() ? "Részletek" : "Details"}</a></span></label>`;
+  const validEmail = v => /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(String(v || "").trim());
+  // appears (with a short flash) as soon as a valid e-mail is typed
+  function wireMkt(scope, emailInput) {
+    const box = scope.querySelector("[data-mkt]"); if (!box || !emailInput) return;
+    const upd = () => {
+      if (validEmail(emailInput.value)) {
+        if (box.hidden) { box.hidden = false; box.classList.remove("flash"); void box.offsetWidth; box.classList.add("flash"); }
+      } else box.hidden = true;
+    };
+    emailInput.addEventListener("input", upd); upd();
+  }
+
   // ---------- kosár ----------
   const cart = () => store.get(LS_CART, {});
   const saveCart = c => { store.set(LS_CART, c); badge(); };
@@ -190,7 +217,7 @@
 
   let form = store.get(LS_FORM, { ship: "foxpost", pay: "card", sameBill: true });
   let step = "cart";
-  const saveForm = () => { const { regular, ...keep } = form; store.set(LS_FORM, keep); };
+  const saveForm = () => { const { regular, mkt, ...keep } = form; store.set(LS_FORM, keep); };
 
   function payOptions() {
     const all = ["card", "transfer", "cod", "onsite"];
@@ -243,6 +270,7 @@
               <label class="co-f co-wide">${t("name")} *<input class="field" name="name" autocomplete="name" required value="${esc(form.name)}"></label>
               <label class="co-f">${t("email")} *<input class="field" name="email" type="email" autocomplete="email" required value="${esc(form.email)}"></label>
               <label class="co-f">${t("phone")} *<input class="field" name="phone" type="tel" autocomplete="tel" required value="${esc(form.phone)}" placeholder="+36 …"></label>
+              <div class="co-wide">${mktBox(form.mkt)}</div>
             </div>
             <h3>${t("shipT")}</h3>${ship}
             <div class="co-apt"${form.ship === "foxpost" ? "" : " hidden"}>
@@ -285,6 +313,7 @@
               <div><h3>${t("payT")}</h3><p>${esc(lbl(CFG.payment[f.pay]))}<br><span class="co-muted co-small">${esc(t("payInfo")[f.pay])}</span></p></div>
             </div>
             ${f.note ? `<p><b>${t("note").replace(/ \(.*\)/, "")}:</b> ${esc(f.note)}</p>` : ""}
+            ${f.mkt ? `<p class="co-muted co-small">✓ ${hu() ? "Ajánlatokat is kérsz e-mailben." : "You also asked for offers by e-mail."}</p>` : ""}
             <p class="co-legal">${t("withdraw")}</p>
             <p class="co-safety">${safetyLine()}</p>
           </section>
@@ -309,6 +338,7 @@
     root.querySelectorAll("[data-q]").forEach(b => b.onclick = () => { const no = b.dataset.q; setQty(no, (cart()[no] || 0) + +b.dataset.d); renderCart(); });
     root.querySelectorAll("[data-rm]").forEach(b => b.onclick = () => { setQty(b.dataset.rm, 0); renderCart(); });
     const fm = document.getElementById("coForm");
+    wireMkt(fm, fm.querySelector("[name=email]"));
     fm.addEventListener("input", e => {
       const el = e.target; if (!el.name || el.name === "website") return;
       form[el.name] = el.type === "checkbox" ? el.checked : el.value; saveForm();
@@ -359,6 +389,7 @@
       ship: form.ship, pay: form.pay, regular: !!form.regular,
       apt: form.ship === "foxpost" ? { id: form.aptId, name: form.aptName } : null,
       customer: { name: form.name, email: form.email, phone: form.phone },
+      marketing: form.mkt ? { text: mktText(), at: new Date().toISOString() } : null,
       billing: { zip: form.zip, city: form.city, addr: form.addr, company: form.company || "", tax: form.tax || "" },
       note: form.note || "", totals: { sub: tt.sub, ship: tt.ship, cod: tt.cod, total: tt.total },
       accepted: { aszf: true, privacy: true, at: new Date().toISOString() }
@@ -387,7 +418,7 @@
   }
 
   window.MFShop = {
-    ready, enabled, safetyLine, safetyBlock, add, badge, endpoint: () => (CFG && CFG.endpoint) || "",
+    ready, enabled, safetyLine, safetyBlock, add, badge, mktBox, mktText, wireMkt, endpoint: () => (CFG && CFG.endpoint) || "",
     setLots(items) { LOTS = items || []; badge(); if (document.body.dataset.page === "cart") renderCart(); },
     rerender() { badge(); if (document.body.dataset.page === "cart") renderCart(); }
   };

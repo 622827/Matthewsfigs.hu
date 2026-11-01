@@ -104,6 +104,8 @@ function doPost(e) {
       lines.map(function (l) { return l.qty + ' × ' + l.no + ' ' + l.name + ' (' + l.price + ' Ft)'; }).join('\n'),
       sub, shipFee, codFee, total, order.note, o.accepted.at || new Date().toISOString(), en ? 'en' : 'hu']);
 
+    try { addMarketing_(cust.email, cust.name, 'rendelés: ' + orderNo, o.marketing, en); } catch (err) { console.error(err); }
+
     // ---- e-mailek ----
     sendConfirmation_(order);
     try {
@@ -119,6 +121,19 @@ function doPost(e) {
   } finally {
     try { lock.releaseLock(); } catch (e2) {}
   }
+}
+
+// ---------- ajánlatok e-mailben (önkéntes, külön hozzájárulás) ----------
+const SHEET_MKT = 'Ajánlatok e-mailben';
+/** A hozzájárulást a pontosan megjelenített szöveggel és időponttal mentjük (bizonyíthatóság, Grt. 6. §). */
+function addMarketing_(email, name, source, m, en) {
+  if (!m || !m.text || !email) return;
+  var ss = prop_('SHEET_ID') ? SpreadsheetApp.openById(prop_('SHEET_ID')) : SpreadsheetApp.getActiveSpreadsheet();
+  var sh = ss.getSheetByName(SHEET_MKT) || ss.insertSheet(SHEET_MKT);
+  if (sh.getLastRow() === 0) { sh.appendRow(['Időpont', 'Név', 'E-mail', 'Forrás', 'Hozzájárulás szövege', 'Nyelv', 'Állapot']); sh.setFrozenRows(1); }
+  var rows = sh.getDataRange().getValues();
+  for (var r = 1; r < rows.length; r++) if (rows[r][2] === email && rows[r][6] === 'aktív') return;
+  sh.appendRow([new Date(), name, email, source, str_(m.text, 300), en ? 'en' : 'hu', 'aktív']);
 }
 
 // ---------- „Értesítést kérek” (előrendelés e-mailben) ----------
@@ -141,6 +156,7 @@ function handleNotify_(o, en) {
   var sh = notifySheet_(), rows = sh.getDataRange().getValues();
   for (var r = 1; r < rows.length; r++) if (rows[r][1] === no && rows[r][4] === email && rows[r][6] === 'vár') return { ok: true, dup: true };
   sh.appendRow([new Date(), no, title, name, email, en ? 'en' : 'hu', 'vár', '']);
+  try { addMarketing_(email, name, 'értesítés: ' + no, o.marketing, en); } catch (err) { console.error(err); }
   cache.put('nl:' + email, '1', 10);
   var sn = no.replace(/-1$/, '');
   try {

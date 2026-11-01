@@ -513,3 +513,13 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 .notify__ok{color:var(--green)!important;font-weight:600}
 @media (max-width:480px){.notify__tiles{grid-template-columns:1fr}}
 .notify .co-err{color:#b3261e;margin:0}
+/* ajánlatok e-mailben – felvillanó, önkéntes jelölőnégyzet */
+.mkt{background:#fffbe8;border:1.5px dashed var(--gold);border-radius:10px;padding:10px 12px;margin:2px 0}
+.mkt.flash{animation:mkFlash 1.2s ease}
+@keyframes mkFlash{0%{opacity:0;transform:translateY(-4px);background:#ffe066}35%{opacity:1;transform:none;background:#ffe066}100%{background:#fffbe8}}
+.mkt a{color:var(--green);font-weight:600}
+@media (prefers-reduced-motion:reduce){.mkt.flash{animation:none}}
+/* nyelvváltó zászlóval */
+.lang{display:inline-flex;align-items:center;gap:7px;padding:5px 10px}
+.lang .flag{width:24px;height:16px;border-radius:3px;box-shadow:0 0 0 1px rgba(255,255,255,.35);flex:none;display:block}
+@media (max-width:560px){.lang span{display:none}.lang{padding:6px 8px}}

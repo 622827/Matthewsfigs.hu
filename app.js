@@ -54,11 +54,17 @@
   document.querySelectorAll("[data-i18n]").forEach(el => { HU[el.dataset.i18n] = el.innerHTML; });
   document.querySelectorAll("[data-i18n-ph]").forEach(el => { HU[el.dataset.i18nPh] = el.placeholder; });
 
+  const FLAG_HU = '<svg class="flag" viewBox="0 0 6 4" aria-hidden="true"><rect width="6" height="4" fill="#477050"/><rect width="6" height="2.667" fill="#fff"/><rect width="6" height="1.333" fill="#ce2939"/></svg>';
+  const FLAG_EN = '<svg class="flag" viewBox="0 0 60 30" aria-hidden="true"><clipPath id="fgs"><path d="M30 15h30v15zv15H0zH0V0zV0h30z"/></clipPath><path d="M0 0v30h60V0z" fill="#012169"/><path d="M0 0l60 30m0-30L0 30" stroke="#fff" stroke-width="6"/><path d="M0 0l60 30m0-30L0 30" clip-path="url(#fgs)" stroke="#C8102E" stroke-width="4"/><path d="M30 0v30M0 15h60" stroke="#fff" stroke-width="10"/><path d="M30 0v30M0 15h60" stroke="#C8102E" stroke-width="6"/></svg>';
   function applyLang() {
     document.documentElement.lang = lang;
     document.querySelectorAll("[data-i18n]").forEach(el => { el.innerHTML = t(el.dataset.i18n); });
     document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
-    $("langBtn").textContent = lang === "hu" ? "EN" : "HU";
+    // flag of the language you switch to
+    const b = $("langBtn");
+    b.innerHTML = (lang === "hu" ? FLAG_EN : FLAG_HU) + `<span>${lang === "hu" ? "EN" : "HU"}</span>`;
+    b.title = lang === "hu" ? "Switch to English" : "Váltás magyarra";
+    b.setAttribute("aria-label", b.title);
     renderAll(true);
     document.dispatchEvent(new Event("mfs:lang"));
   }
@@ -240,6 +246,7 @@
         <label class="co-f">${hu ? "Név" : "Name"}<input class="field" name="name" autocomplete="name" required></label>
         <label class="co-f">${hu ? "E-mail cím" : "E-mail"}<input class="field" name="email" type="email" autocomplete="email" required></label>
         <label class="co-check"><input type="checkbox" name="ok" required> <span>${hu ? 'Hozzájárulok, hogy erről a termékről e-mailben értesítsetek. <a href="adatkezeles.html" target="_blank">Adatkezelési tájékoztató</a>' : 'I agree to be notified by e-mail about this product. <a href="adatkezeles.html" target="_blank">Privacy notice</a> (HU)'}</span></label>
+        ${SHOP && SHOP.mktBox ? SHOP.mktBox(false) : ""}
         <input type="text" name="website" class="co-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <p class="co-err" id="nErr" hidden></p>
         <div class="notify__btns"><button class="btn btn--gold" id="nSend">${hu ? "Kérem az értesítést" : "Notify me"}</button>
@@ -247,22 +254,24 @@
       const fm = dlg.querySelector("#nForm"), err = dlg.querySelector("#nErr");
       dlg.querySelector("#nBack").onclick = choose;
       fm.addEventListener("input", () => { err.hidden = true; });
+      if (SHOP && SHOP.wireMkt) SHOP.wireMkt(fm, fm.email);
       fm.name.focus();
       fm.onsubmit = async e => {
         e.preventDefault();
         const name = fm.name.value.trim(), email = fm.email.value.trim();
+        const mkt = fm.mkt && fm.mkt.checked && SHOP ? { text: SHOP.mktText(), at: new Date().toISOString() } : null;
         if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { err.textContent = hu ? "Add meg a neved és egy érvényes e-mail címet." : "Please enter your name and a valid e-mail."; err.hidden = false; return; }
         if (!fm.ok.checked) { err.textContent = hu ? "Az értesítéshez a hozzájárulás szükséges." : "Please tick the consent box."; err.hidden = false; return; }
         const btn = dlg.querySelector("#nSend"); btn.disabled = true; btn.textContent = hu ? "Küldés…" : "Sending…";
         const endpoint = SHOP && SHOP.endpoint && SHOP.endpoint();
         try {
           if (endpoint) {
-            const r = await fetch(endpoint, { method: "POST", body: JSON.stringify({ type: "notify", lang, no: i.no, name: i.name, customer: { name, email }, website: fm.website.value, consent: true }) });
+            const r = await fetch(endpoint, { method: "POST", body: JSON.stringify({ type: "notify", lang, no: i.no, name: i.name, customer: { name, email }, website: fm.website.value, consent: true, marketing: mkt }) });
             const j = await r.json(); if (!j.ok) throw new Error(j.error || "");
           } else {
             // amíg a rendelésfogadó nincs beállítva: a vásárló levelezője nyílik meg az előre kitöltött kéréssel
             location.href = "mailto:csikos.mate.ovb@gmail.com?subject=" + encodeURIComponent((hu ? "Értesítést kérek: " : "Back-in-stock request: ") + sn + " " + i.name) +
-              "&body=" + encodeURIComponent((hu ? `Kérek értesítést, ha újra elérhető: ${sn} ${i.name}\nNév: ${name}\nE-mail: ${email}` : `Please notify me when this is back: ${sn} ${i.name}\nName: ${name}\nE-mail: ${email}`));
+              "&body=" + encodeURIComponent((hu ? `Kérek értesítést, ha újra elérhető: ${sn} ${i.name}\nNév: ${name}\nE-mail: ${email}` + (mkt ? `\nAjánlatokat is kérek e-mailben: igen („${mkt.text}”)` : "") : `Please notify me when this is back: ${sn} ${i.name}\nName: ${name}\nE-mail: ${email}` + (mkt ? `\nOffers by e-mail: yes ("${mkt.text}")` : "")));
           }
           dlg.innerHTML = `<div class="notify__in">${head}<p class="notify__ok">✓ ${endpoint
             ? (hu ? `Köszönjük, ${esc(name)}! Feljegyeztük, és e-mailben értesítünk (${esc(email)}), amint megérkezik.` : `Thanks, ${esc(name)}! We'll e-mail you (${esc(email)}) as soon as it arrives.`)
@@ -368,8 +377,7 @@
       ? (hu ? "Bontatlan, gyári állapotú (MISB – Mint In Sealed Box) szett. A doboz kisebb gyártási vagy szállítási nyomai előfordulhatnak." : "Brand new, factory sealed (MISB – Mint In Sealed Box). Minor factory or shipping marks on the box may occur.")
       : (hu ? "Eredeti LEGO® minifigura, egyenként átnézve. A képen a figura tájékoztató jellegű, a kiegészítők a BrickLink katalógus szerinti összeállításban." : "Genuine LEGO® minifigure, individually checked. The picture is for illustration; accessories as listed in the BrickLink catalogue.");
     const buy = i.preorder
-      ? `<button type="button" class="btn btn--gold" id="pdWant">${hu ? "Szeretnék egyet!" : "I want one!"}</button>
-         <button type="button" class="btn btn--line" id="pdNotify">${hu ? "Értesítést kérek" : "Notify me"}</button>`
+      ? `<button type="button" class="btn btn--gold" id="pdNotify">${hu ? "Értesítést kérek" : "Notify me"}</button>`
       : shopOn()
         ? `<button type="button" class="btn btn--gold" data-add="${esc(i.no)}" data-name="${esc(sn + " " + i.name)}">${hu ? "Kosárba" : "Add to cart"}</button>
            <a class="btn btn--line" href="kosar.html">${hu ? "Tovább a kosárhoz" : "Go to cart"}</a>`
@@ -427,7 +435,6 @@
           <p class="pd-price">${i.from ? `<small>${hu ? "" : "from "}</small>` : ""}${money(i.price)}${i.from && hu ? "<small>-tól</small>" : ""}</p>
           <p class="pd-stock${i.preorder ? " is-pre" : ""}">${stock}</p>
           <div class="pd-buy">${buy}</div>
-          <p class="pd-warn"><a href="#biztonsag">⚠ ${hu ? "3 éven aluliaknak nem adható – apró alkatrészek" : "Not for children under 3 – small parts"}</a></p>
           <h2>${hu ? "Leírás" : "Description"}</h2>
           <p>${cond}</p>
           <dl class="pd-dl">
