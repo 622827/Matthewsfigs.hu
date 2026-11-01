@@ -655,3 +655,6 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 .pd-more{grid-area:more;align-self:start;min-width:0}
 .pd-more h2{font-size:21px;color:var(--green);margin:28px 0 8px}
 @media (max-width:860px){.pd{grid-template-areas:"gal" "info" "figs" "more";grid-template-rows:auto}}
+.pd-official{margin:0 0 14px;padding:14px 16px;border-left:3px solid var(--gold,#f2c200);background:rgba(255,255,255,.55);border-radius:0 10px 10px 0}
+.pd-official__k{font-size:.78rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#a07c00;margin:0 0 6px}
+.pd-official p{margin:0 0 8px}.pd-official p:last-child{margin-bottom:0}

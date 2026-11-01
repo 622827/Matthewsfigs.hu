@@ -134,9 +134,29 @@ def bs(method, **params):
         return None
 
 
+def bs_desc(s):
+    """LEGO's official product text (Brickset extendedData.description) as plain paragraphs."""
+    raw = ((s.get("extendedData") or {}).get("description") or "").strip()
+    if not raw:
+        return ""
+    raw = re.sub(r"(?i)<br\s*/?>|</p>|</li>|</h\d>", "\n", raw)
+    raw = re.sub(r"(?i)<li[^>]*>", "• ", raw)
+    txt = html.unescape(re.sub(r"<[^>]+>", "", raw))
+    paras = [re.sub(r"[ \t]+", " ", x).strip() for x in txt.split("\n")]
+    return "\n".join(x for x in paras if x)
+
+
+def brickset_desc(no):
+    """Only the official description (for sets fetched before descriptions were stored). None on API error."""
+    j = bs("getSets", userHash="", params=json.dumps({"setNumber": no, "extendedData": 1}))
+    if j is None:
+        return None
+    return bs_desc(j["sets"][0]) if j.get("sets") else ""
+
+
 def brickset(no):
-    """Photos + retail price + dates for one set, or None if Brickset is unavailable."""
-    j = bs("getSets", userHash="", params=json.dumps({"setNumber": no}))
+    """Photos + retail price + dates + official description for one set, or None if Brickset is unavailable."""
+    j = bs("getSets", userHash="", params=json.dumps({"setNumber": no, "extendedData": 1}))
     if not j or not j.get("sets"):
         return None if j is None else {"bs_id": None}
     s = j["sets"][0]
@@ -147,7 +167,8 @@ def brickset(no):
     de = (s.get("LEGOCom") or {}).get("DE") or {}
     return {"bs_id": s.get("setID"), "photos": [p for p in photos if p][:24],
             "retail_eur": de.get("retailPrice"), "launch": (de.get("dateFirstAvailable") or "")[:10] or None,
-            "exit": (de.get("dateLastAvailable") or s.get("exitDate") or "")[:10] or None}
+            "exit": (de.get("dateLastAvailable") or s.get("exitDate") or "")[:10] or None,
+            "desc_en": bs_desc(s)}
 
 
 CATS = {}
@@ -331,7 +352,7 @@ def main():
     for no in todo:
         d = fetch(wanted[no], no)
         if d:
-            keep = {k: v for k, v in (items.get(no) or {}).items() if k in ("bs_id", "photos", "retail_eur", "launch", "exit", "figs_value_huf")}
+            keep = {k: v for k, v in (items.get(no) or {}).items() if k in ("bs_id", "photos", "retail_eur", "launch", "exit", "figs_value_huf", "desc_en", "gallery")}
             items[no] = {**keep, **d}     # Brickset data is fetched once; keep it on refresh
             changed = True
             print(f"  {no}: {d.get('year')} · {d.get('category')} · {d.get('pieces', '')}")
@@ -344,6 +365,17 @@ def main():
             if r is None:
                 break          # API-hiba vagy elfogyott a napi keret: a következő futás folytatja
             items[n].update(r)
+            changed = True
+        # official LEGO description for sets that were fetched before we stored it (same daily quota)
+        left = BS_MAX - len(bs_todo)
+        desc_todo = [n for n, d in items.items() if d.get("type") == "SET" and d.get("bs_id") and "desc_en" not in d and n in wanted][:max(0, left)]
+        if desc_todo:
+            print(f"Brickset leírás: {len(desc_todo)} szett.")
+        for n in desc_todo:
+            r = brickset_desc(n)
+            if r is None:
+                break
+            items[n]["desc_en"] = r
             changed = True
 
     figval = out.get("figvalues", {})
