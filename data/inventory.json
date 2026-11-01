@@ -1,7 +1,7 @@
 {
  "updated": "2026-10-30T19:21:43+00:00",
  "store": "MatthewHorseman",
- "currency": "EUR",
+ "currency": "HUF",
  "total_lots": 740,
  "parts_lots": 537,
  "parts_qty": 4111,
@@ -14,10 +14,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 605.0,
+   "price": 221480,
    "note": "Nice condition.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75158-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565498056"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565498056",
+   "eur": 605.0
   },
   {
    "id": 568749919,
@@ -27,10 +28,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 390.0,
+   "price": 142980,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75020-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=568749919"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=568749919",
+   "eur": 390.0
   },
   {
    "id": 565467239,
@@ -40,10 +42,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 216.99,
+   "price": 79480,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75314-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565467239"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565467239",
+   "eur": 216.99
   },
   {
    "id": 564798717,
@@ -53,10 +56,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 160.9,
+   "price": 58980,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75337-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564798717"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564798717",
+   "eur": 160.9
   },
   {
    "id": 564799171,
@@ -66,10 +70,11 @@
    "color": null,
    "cond": "N",
    "qty": 6,
-   "price": 143.9,
+   "price": 52480,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75389-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564799171"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564799171",
+   "eur": 143.9
   },
   {
    "id": 564798883,
@@ -79,10 +84,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 137.99,
+   "price": 50480,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75435-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564798883"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564798883",
+   "eur": 137.99
   },
   {
    "id": 564209277,
@@ -92,10 +98,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 83.9,
+   "price": 30480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75283-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564209277"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564209277",
+   "eur": 83.9
   },
   {
    "id": 564799132,
@@ -105,10 +112,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 81.99,
+   "price": 29980,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75379-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564799132"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564799132",
+   "eur": 81.99
   },
   {
    "id": 547026423,
@@ -118,10 +126,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 79.99,
+   "price": 29480,
    "note": "Sealed in box production code 609S5 (week 09 of 2025).",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75383-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547026423"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547026423",
+   "eur": 79.99
   },
   {
    "id": 547124946,
@@ -131,10 +140,11 @@
    "color": null,
    "cond": "N",
    "qty": 4,
-   "price": 59.99,
+   "price": 21980,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/40806-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547124946"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547124946",
+   "eur": 59.99
   },
   {
    "id": 558781496,
@@ -144,10 +154,11 @@
    "color": null,
    "cond": "N",
    "qty": 18,
-   "price": 56.99,
+   "price": 20980,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75342-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=558781496"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=558781496",
+   "eur": 56.99
   },
   {
    "id": 558781656,
@@ -157,10 +168,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 56.0,
+   "price": 20480,
    "note": "Sealed, box is 10/8",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75347-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=558781656"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=558781656",
+   "eur": 56.0
   },
   {
    "id": 535706236,
@@ -170,10 +182,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 49.9,
+   "price": 18480,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/40755-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=535706236"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=535706236",
+   "eur": 49.9
   },
   {
    "id": 553634319,
@@ -183,10 +196,11 @@
    "color": null,
    "cond": "N",
    "qty": 17,
-   "price": 43.9,
+   "price": 15980,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75280-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553634319"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553634319",
+   "eur": 43.9
   },
   {
    "id": 566194317,
@@ -196,10 +210,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 31.9,
+   "price": 11480,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75333-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566194317"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566194317",
+   "eur": 31.9
   },
   {
    "id": 541926700,
@@ -209,10 +224,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 26.99,
+   "price": 9980,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75431-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=541926700"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=541926700",
+   "eur": 26.99
   },
   {
    "id": 566189138,
@@ -222,10 +238,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 21.99,
+   "price": 7980,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75372-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566189138"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566189138",
+   "eur": 21.99
   },
   {
    "id": 566189121,
@@ -235,10 +252,11 @@
    "color": null,
    "cond": "N",
    "qty": 15,
-   "price": 20.9,
+   "price": 7480,
    "note": "MISB, never taken out of the lego brown box.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75345-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566189121"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566189121",
+   "eur": 20.9
   },
   {
    "id": 564798978,
@@ -248,10 +266,11 @@
    "color": null,
    "cond": "N",
    "qty": 11,
-   "price": 14.99,
+   "price": 5480,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75391-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564798978"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564798978",
+   "eur": 14.99
   },
   {
    "id": 566959878,
@@ -261,10 +280,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 14.99,
+   "price": 5480,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75400-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566959878"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566959878",
+   "eur": 14.99
   },
   {
    "id": 564798939,
@@ -274,10 +294,11 @@
    "color": null,
    "cond": "N",
    "qty": 7,
-   "price": 12.99,
+   "price": 4980,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75344-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564798939"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564798939",
+   "eur": 12.99
   },
   {
    "id": 543109212,
@@ -287,10 +308,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 10.99,
+   "price": 3980,
    "note": "10/10 sealed, brand new.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/911943-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543109212"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543109212",
+   "eur": 10.99
   },
   {
    "id": 543108784,
@@ -300,10 +322,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 9.99,
+   "price": 3480,
    "note": "10/10 sealed, brand new.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/912285-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543108784"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543108784",
+   "eur": 9.99
   },
   {
    "id": 564799400,
@@ -313,10 +336,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 9.99,
+   "price": 3480,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75436-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564799400"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564799400",
+   "eur": 9.99
   },
   {
    "id": 549960610,
@@ -326,10 +350,11 @@
    "color": null,
    "cond": "N",
    "qty": 4,
-   "price": 8.99,
+   "price": 3480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/SN/0/L0002237-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=549960610"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=549960610",
+   "eur": 8.99
   },
   {
    "id": 547560625,
@@ -339,10 +364,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 7.99,
+   "price": 2980,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/SN/0/911832-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547560625"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547560625",
+   "eur": 7.99
   },
   {
    "id": 542350003,
@@ -352,10 +378,11 @@
    "color": null,
    "cond": "N",
    "qty": 7,
-   "price": 7.99,
+   "price": 2980,
    "note": "10/10 Condition, never opened.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/912169-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=542350003"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=542350003",
+   "eur": 7.99
   },
   {
    "id": 538892419,
@@ -365,10 +392,11 @@
    "color": null,
    "cond": "N",
    "qty": 3,
-   "price": 6.99,
+   "price": 2480,
    "note": "10/10 Condition, never opened.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/912310-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538892419"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538892419",
+   "eur": 6.99
   },
   {
    "id": 548966286,
@@ -378,10 +406,11 @@
    "color": null,
    "cond": "N",
    "qty": 3,
-   "price": 6.99,
+   "price": 2480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/SN/0/472407-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=548966286"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=548966286",
+   "eur": 6.99
   },
   {
    "id": 538892829,
@@ -391,10 +420,11 @@
    "color": null,
    "cond": "N",
    "qty": 3,
-   "price": 6.49,
+   "price": 2480,
    "note": "10/10 Condition, never opened.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/L0002235-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538892829"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538892829",
+   "eur": 6.49
   },
   {
    "id": 548967305,
@@ -404,10 +434,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 6.0,
+   "price": 1980,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/SN/0/912287-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=548967305"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=548967305",
+   "eur": 6.0
   },
   {
    "id": 542069606,
@@ -417,10 +448,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 6.0,
+   "price": 1980,
    "note": "10/10 Condition, never opened.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/912308-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=542069606"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=542069606",
+   "eur": 6.0
   },
   {
    "id": 538892854,
@@ -430,10 +462,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 5.99,
+   "price": 1980,
    "note": "10/10 Condition, never opened.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/912410-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538892854"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538892854",
+   "eur": 5.99
   },
   {
    "id": 537542036,
@@ -443,10 +476,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 5.9,
+   "price": 1980,
    "note": "10/10 Condition, never opened.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/912403-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=537542036"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=537542036",
+   "eur": 5.9
   },
   {
    "id": 548966483,
@@ -456,10 +490,11 @@
    "color": null,
    "cond": "N",
    "qty": 3,
-   "price": 5.9,
+   "price": 1980,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/SN/0/912409-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=548966483"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=548966483",
+   "eur": 5.9
   },
   {
    "id": 537542437,
@@ -469,10 +504,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 5.9,
+   "price": 1980,
    "note": "10/10 Condition, never opened.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/912501-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=537542437"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=537542437",
+   "eur": 5.9
   },
   {
    "id": 545383365,
@@ -482,10 +518,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 5.9,
+   "price": 1980,
    "note": "10/10 sealed, brand new.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/L0002238-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=545383365"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=545383365",
+   "eur": 5.9
   },
   {
    "id": 548966875,
@@ -495,10 +532,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 4.99,
+   "price": 1980,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/SN/0/912284-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=548966875"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=548966875",
+   "eur": 4.99
   },
   {
    "id": 538892950,
@@ -508,10 +546,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 4.9,
+   "price": 1980,
    "note": "10/10 Condition, never opened.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/912506-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538892950"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538892950",
+   "eur": 4.9
   },
   {
    "id": 537542453,
@@ -521,10 +560,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 3.99,
+   "price": 1480,
    "note": "10/10 Condition, never opened.",
    "img": "https://img.bricklink.com/ItemImage/SN/0/911953-1.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=537542453"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=537542453",
+   "eur": 3.99
   },
   {
    "id": 564799642,
@@ -534,11 +574,12 @@
    "color": null,
    "cond": "N",
    "qty": 0,
-   "price": 54.99,
+   "price": 19980,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/40686-1.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564799642",
-   "preorder": true
+   "preorder": true,
+   "eur": 54.99
   },
   {
    "id": 565587289,
@@ -548,10 +589,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 419.9,
+   "price": 153980,
    "note": "Never assembled, straight out of the box.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0759.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565587289"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565587289",
+   "eur": 419.9
   },
   {
    "id": 559726159,
@@ -561,10 +603,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 89.99,
+   "price": 32980,
    "note": "Excellent condition, comes with it's gun!",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0059.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559726159"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559726159",
+   "eur": 89.99
   },
   {
    "id": 557200026,
@@ -574,10 +617,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 84.9,
+   "price": 30980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0314.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=557200026"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=557200026",
+   "eur": 84.9
   },
   {
    "id": 566911203,
@@ -587,10 +631,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 69.9,
+   "price": 25480,
    "note": "Comes with the two blue batarangs.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/colsh10.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911203"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911203",
+   "eur": 69.9
   },
   {
    "id": 559724269,
@@ -600,10 +645,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 49.99,
+   "price": 18480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0196.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559724269"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559724269",
+   "eur": 49.99
   },
   {
    "id": 559724866,
@@ -613,10 +659,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 49.99,
+   "price": 18480,
    "note": "Excellent condition, comes with lightsaber.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0480.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559724866"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559724866",
+   "eur": 49.99
   },
   {
    "id": 558050940,
@@ -626,10 +673,11 @@
    "color": null,
    "cond": "U",
    "qty": 2,
-   "price": 44.99,
+   "price": 16480,
    "note": "Excellent condition, comes with lightsaber.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0309.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=558050940"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=558050940",
+   "eur": 44.99
   },
   {
    "id": 564318429,
@@ -639,10 +687,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 44.9,
+   "price": 16480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0961.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564318429"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564318429",
+   "eur": 44.9
   },
   {
    "id": 566188065,
@@ -652,10 +701,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 42.9,
+   "price": 15480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0904.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566188065"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566188065",
+   "eur": 42.9
   },
   {
    "id": 566911894,
@@ -665,10 +715,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 40.99,
+   "price": 14980,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sh0176.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911894"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911894",
+   "eur": 40.99
   },
   {
    "id": 566188490,
@@ -678,10 +729,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 35.99,
+   "price": 12980,
    "note": "Comes with lightsaber.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1325.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566188490"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566188490",
+   "eur": 35.99
   },
   {
    "id": 566188096,
@@ -691,10 +743,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 29.99,
+   "price": 10980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0439.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566188096"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566188096",
+   "eur": 29.99
   },
   {
    "id": 565584568,
@@ -704,10 +757,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 29.99,
+   "price": 10980,
    "note": "Never assembled.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0468.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565584568"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565584568",
+   "eur": 29.99
   },
   {
    "id": 564168361,
@@ -717,10 +771,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 29.9,
+   "price": 10980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0377.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564168361"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564168361",
+   "eur": 29.9
   },
   {
    "id": 566911926,
@@ -730,10 +785,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 29.9,
+   "price": 10980,
    "note": "Beautiful condition, comes with cape.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sh0178.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911926"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911926",
+   "eur": 29.9
   },
   {
    "id": 557994176,
@@ -743,10 +799,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 25.99,
+   "price": 9480,
    "note": "Excellent condition, comes with lightsaber.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0284.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=557994176"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=557994176",
+   "eur": 25.99
   },
   {
    "id": 557994691,
@@ -756,10 +813,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 24.99,
+   "price": 8980,
    "note": "10/10, beautiful condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0285.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=557994691"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=557994691",
+   "eur": 24.99
   },
   {
    "id": 547560713,
@@ -769,10 +827,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 24.99,
+   "price": 8980,
    "note": "Never assembled.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0782.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547560713"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547560713",
+   "eur": 24.99
   },
   {
    "id": 559725913,
@@ -782,10 +841,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 23.99,
+   "price": 8980,
    "note": "Excellent condition, comes with lightsaber.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0316.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559725913"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559725913",
+   "eur": 23.99
   },
   {
    "id": 541925527,
@@ -795,10 +855,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 22.99,
+   "price": 8480,
    "note": "Never assembled",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1372.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=541925527"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=541925527",
+   "eur": 22.99
   },
   {
    "id": 557996412,
@@ -808,10 +869,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 19.99,
+   "price": 7480,
    "note": "Comes with lightsaber.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0392.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=557996412"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=557996412",
+   "eur": 19.99
   },
   {
    "id": 553324809,
@@ -821,10 +883,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 19.9,
+   "price": 7480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0576.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553324809"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553324809",
+   "eur": 19.9
   },
   {
    "id": 554552940,
@@ -834,10 +897,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 15.99,
+   "price": 5980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0453.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554552940"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554552940",
+   "eur": 15.99
   },
   {
    "id": 565585925,
@@ -847,10 +911,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 15.99,
+   "price": 5980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1367.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565585925"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565585925",
+   "eur": 15.99
   },
   {
    "id": 541925817,
@@ -860,10 +925,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 15.9,
+   "price": 5980,
    "note": "Never assembled.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1329.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=541925817"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=541925817",
+   "eur": 15.9
   },
   {
    "id": 558106124,
@@ -873,10 +939,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 14.99,
+   "price": 5480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0279.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=558106124"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=558106124",
+   "eur": 14.99
   },
   {
    "id": 561019186,
@@ -886,10 +953,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 14.99,
+   "price": 5480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0364.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=561019186"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=561019186",
+   "eur": 14.99
   },
   {
    "id": 559257970,
@@ -899,10 +967,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 14.99,
+   "price": 5480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0523.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559257970"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559257970",
+   "eur": 14.99
   },
   {
    "id": 566911370,
@@ -912,10 +981,11 @@
    "color": null,
    "cond": "U",
    "qty": 2,
-   "price": 14.99,
+   "price": 5480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sh0168.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911370"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911370",
+   "eur": 14.99
   },
   {
    "id": 538926423,
@@ -925,10 +995,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 14.99,
+   "price": 5480,
    "note": "Never assembled, comes with 25th anniversary stand.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1393.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926423"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926423",
+   "eur": 14.99
   },
   {
    "id": 553321626,
@@ -938,10 +1009,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 14.9,
+   "price": 5480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0396.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553321626"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553321626",
+   "eur": 14.9
   },
   {
    "id": 564317228,
@@ -951,10 +1023,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 14.9,
+   "price": 5480,
    "note": "Excellent condition, comes with lightsaber.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0636.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564317228"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564317228",
+   "eur": 14.9
   },
   {
    "id": 559222783,
@@ -964,10 +1037,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 13.99,
+   "price": 4980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0518.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559222783"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559222783",
+   "eur": 13.99
   },
   {
    "id": 539317474,
@@ -977,10 +1051,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 13.99,
+   "price": 4980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0645.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=539317474"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=539317474",
+   "eur": 13.99
   },
   {
    "id": 565586094,
@@ -990,10 +1065,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 13.99,
+   "price": 4980,
    "note": "Excellent condition, comes with lightsaber.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1364.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565586094"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565586094",
+   "eur": 13.99
   },
   {
    "id": 553323377,
@@ -1003,10 +1079,11 @@
    "color": null,
    "cond": "U",
    "qty": 4,
-   "price": 13.9,
+   "price": 4980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0519.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553323377"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553323377",
+   "eur": 13.9
   },
   {
    "id": 559724242,
@@ -1016,10 +1093,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 12.99,
+   "price": 4980,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0378.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559724242"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559724242",
+   "eur": 12.99
   },
   {
    "id": 547560023,
@@ -1029,10 +1107,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 12.99,
+   "price": 4980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0491.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547560023"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547560023",
+   "eur": 12.99
   },
   {
    "id": 547560773,
@@ -1042,10 +1121,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 12.99,
+   "price": 4980,
    "note": "Excellent condition, comes with lightsaber.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0911.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547560773"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547560773",
+   "eur": 12.99
   },
   {
    "id": 564169079,
@@ -1055,10 +1135,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 11.99,
+   "price": 4480,
    "note": "Excellent condition, comes with lightsaber.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0226.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564169079"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564169079",
+   "eur": 11.99
   },
   {
    "id": 539317712,
@@ -1068,10 +1149,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 11.99,
+   "price": 4480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0494.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=539317712"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=539317712",
+   "eur": 11.99
   },
   {
    "id": 566911708,
@@ -1081,10 +1163,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 11.9,
+   "price": 4480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sh0169.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911708"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911708",
+   "eur": 11.9
   },
   {
    "id": 547559131,
@@ -1094,10 +1177,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 11.9,
+   "price": 4480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0939.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547559131"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547559131",
+   "eur": 11.9
   },
   {
    "id": 559724597,
@@ -1107,10 +1191,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 11.9,
+   "price": 4480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1207.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559724597"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559724597",
+   "eur": 11.9
   },
   {
    "id": 554255775,
@@ -1120,10 +1205,11 @@
    "color": null,
    "cond": "U",
    "qty": 2,
-   "price": 10.99,
+   "price": 3980,
    "note": "Comes with lightsaber.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0198.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554255775"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554255775",
+   "eur": 10.99
   },
   {
    "id": 559255327,
@@ -1133,10 +1219,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 10.99,
+   "price": 3980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0522.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559255327"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559255327",
+   "eur": 10.99
   },
   {
    "id": 559725199,
@@ -1146,10 +1233,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 10.99,
+   "price": 3980,
    "note": "Excellent condition",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0630.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559725199"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559725199",
+   "eur": 10.99
   },
   {
    "id": 565585171,
@@ -1159,10 +1247,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 10.99,
+   "price": 3980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1206.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565585171"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565585171",
+   "eur": 10.99
   },
   {
    "id": 553324552,
@@ -1172,10 +1261,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 10.9,
+   "price": 3980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0337.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553324552"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553324552",
+   "eur": 10.9
   },
   {
    "id": 553322568,
@@ -1185,10 +1275,11 @@
    "color": null,
    "cond": "U",
    "qty": 3,
-   "price": 10.9,
+   "price": 3980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0605.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553322568"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553322568",
+   "eur": 10.9
   },
   {
    "id": 547949335,
@@ -1198,10 +1289,11 @@
    "color": null,
    "cond": "U",
    "qty": 2,
-   "price": 9.99,
+   "price": 3480,
    "note": "Comes with lightsaber.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0055.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547949335"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547949335",
+   "eur": 9.99
   },
   {
    "id": 537972086,
@@ -1211,10 +1303,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 9.99,
+   "price": 3480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0216s.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=537972086"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=537972086",
+   "eur": 9.99
   },
   {
    "id": 565585944,
@@ -1224,10 +1317,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 9.99,
+   "price": 3480,
    "note": "Excellent condition, comes with lightsaber.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1366.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565585944"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565585944",
+   "eur": 9.99
   },
   {
    "id": 564238990,
@@ -1237,10 +1331,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 9.99,
+   "price": 3480,
    "note": "Brand new.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1489.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564238990"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564238990",
+   "eur": 9.99
   },
   {
    "id": 553324510,
@@ -1250,10 +1345,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 9.9,
+   "price": 3480,
    "note": "Comes with lightsaber",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0319.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553324510"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553324510",
+   "eur": 9.9
   },
   {
    "id": 564238403,
@@ -1263,10 +1359,11 @@
    "color": null,
    "cond": "U",
    "qty": 2,
-   "price": 9.9,
+   "price": 3480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0541.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564238403"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564238403",
+   "eur": 9.9
   },
   {
    "id": 549964525,
@@ -1276,10 +1373,11 @@
    "color": null,
    "cond": "N",
    "qty": 14,
-   "price": 9.9,
+   "price": 3480,
    "note": "Never assembled, comes with blaster and backpack.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1430.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=549964525"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=549964525",
+   "eur": 9.9
   },
   {
    "id": 566911602,
@@ -1289,10 +1387,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 8.99,
+   "price": 3480,
    "note": "Comes with weapons.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/njo0025.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911602"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911602",
+   "eur": 8.99
   },
   {
    "id": 562253194,
@@ -1302,10 +1401,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 8.99,
+   "price": 3480,
    "note": "Comes with blaster.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0438.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562253194"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562253194",
+   "eur": 8.99
   },
   {
    "id": 564169136,
@@ -1315,10 +1415,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 8.99,
+   "price": 3480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0613.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564169136"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564169136",
+   "eur": 8.99
   },
   {
    "id": 547560358,
@@ -1328,10 +1429,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 8.99,
+   "price": 3480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0834.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547560358"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547560358",
+   "eur": 8.99
   },
   {
    "id": 543106563,
@@ -1341,10 +1443,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 8.99,
+   "price": 3480,
    "note": "Never assembled",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1368.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543106563"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543106563",
+   "eur": 8.99
   },
   {
    "id": 565585708,
@@ -1354,10 +1457,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 8.99,
+   "price": 3480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1402.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565585708"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565585708",
+   "eur": 8.99
   },
   {
    "id": 565585735,
@@ -1367,10 +1471,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 8.99,
+   "price": 3480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1425.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565585735"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565585735",
+   "eur": 8.99
   },
   {
    "id": 562253159,
@@ -1380,10 +1485,11 @@
    "color": null,
    "cond": "U",
    "qty": 3,
-   "price": 8.9,
+   "price": 3480,
    "note": "Comes with blaster.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0297.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562253159"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562253159",
+   "eur": 8.9
   },
   {
    "id": 562252242,
@@ -1393,10 +1499,11 @@
    "color": null,
    "cond": "U",
    "qty": 4,
-   "price": 8.9,
+   "price": 3480,
    "note": "Comes with blaster.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0298.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562252242"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562252242",
+   "eur": 8.9
   },
   {
    "id": 554253946,
@@ -1406,10 +1513,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 8.9,
+   "price": 3480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0909.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554253946"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554253946",
+   "eur": 8.9
   },
   {
    "id": 564237817,
@@ -1419,10 +1527,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 8.9,
+   "price": 3480,
    "note": "Brand new.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1300.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564237817"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564237817",
+   "eur": 8.9
   },
   {
    "id": 566911577,
@@ -1432,10 +1541,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 7.99,
+   "price": 2980,
    "note": "10/8",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0375.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911577"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911577",
+   "eur": 7.99
   },
   {
    "id": 564169039,
@@ -1445,10 +1555,11 @@
    "color": null,
    "cond": "N",
    "qty": 4,
-   "price": 7.99,
+   "price": 2980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1235.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564169039"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564169039",
+   "eur": 7.99
   },
   {
    "id": 547704452,
@@ -1458,10 +1569,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 7.99,
+   "price": 2980,
    "note": "10/10 - with flag and crossbow",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min196.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704452"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704452",
+   "eur": 7.99
   },
   {
    "id": 553322948,
@@ -1471,10 +1583,11 @@
    "color": null,
    "cond": "U",
    "qty": 5,
-   "price": 7.9,
+   "price": 2980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0910.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553322948"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553322948",
+   "eur": 7.9
   },
   {
    "id": 562251399,
@@ -1484,10 +1597,11 @@
    "color": null,
    "cond": "U",
    "qty": 23,
-   "price": 7.49,
+   "price": 2480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0025.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562251399"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562251399",
+   "eur": 7.49
   },
   {
    "id": 543467382,
@@ -1497,10 +1611,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 7.49,
+   "price": 2480,
    "note": "Never assembled",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1161.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543467382"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543467382",
+   "eur": 7.49
   },
   {
    "id": 564169003,
@@ -1510,10 +1625,11 @@
    "color": null,
    "cond": "U",
    "qty": 3,
-   "price": 6.99,
+   "price": 2480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0299.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564169003"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564169003",
+   "eur": 6.99
   },
   {
    "id": 554552591,
@@ -1523,10 +1639,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 6.99,
+   "price": 2480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0437.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554552591"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554552591",
+   "eur": 6.99
   },
   {
    "id": 563662385,
@@ -1536,10 +1653,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 6.99,
+   "price": 2480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0467.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=563662385"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=563662385",
+   "eur": 6.99
   },
   {
    "id": 564169149,
@@ -1549,10 +1667,11 @@
    "color": null,
    "cond": "U",
    "qty": 3,
-   "price": 6.99,
+   "price": 2480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0614.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564169149"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564169149",
+   "eur": 6.99
   },
   {
    "id": 566911472,
@@ -1562,10 +1681,11 @@
    "color": null,
    "cond": "U",
    "qty": 2,
-   "price": 6.99,
+   "price": 2480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sh0167.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911472"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566911472",
+   "eur": 6.99
   },
   {
    "id": 555623184,
@@ -1575,10 +1695,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 6.99,
+   "price": 2480,
    "note": "Brand new, sealed",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0802.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=555623184"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=555623184",
+   "eur": 6.99
   },
   {
    "id": 547560047,
@@ -1588,10 +1709,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 6.99,
+   "price": 2480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0808.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547560047"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547560047",
+   "eur": 6.99
   },
   {
    "id": 555623125,
@@ -1601,10 +1723,11 @@
    "color": null,
    "cond": "N",
    "qty": 4,
-   "price": 6.99,
+   "price": 2480,
    "note": "Brand new, sealed",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1107.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=555623125"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=555623125",
+   "eur": 6.99
   },
   {
    "id": 555623224,
@@ -1614,10 +1737,11 @@
    "color": null,
    "cond": "N",
    "qty": 3,
-   "price": 6.99,
+   "price": 2480,
    "note": "Brand new, sealed",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1395.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=555623224"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=555623224",
+   "eur": 6.99
   },
   {
    "id": 551460872,
@@ -1627,10 +1751,11 @@
    "color": null,
    "cond": "N",
    "qty": 3,
-   "price": 6.99,
+   "price": 2480,
    "note": "Never assembled",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1423.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=551460872"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=551460872",
+   "eur": 6.99
   },
   {
    "id": 562251627,
@@ -1640,10 +1765,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 6.9,
+   "price": 2480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0242.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562251627"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562251627",
+   "eur": 6.9
   },
   {
    "id": 554252171,
@@ -1653,10 +1779,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 6.9,
+   "price": 2480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0119.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554252171"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554252171",
+   "eur": 6.9
   },
   {
    "id": 554255322,
@@ -1666,10 +1793,11 @@
    "color": null,
    "cond": "U",
    "qty": 2,
-   "price": 6.9,
+   "price": 2480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0442.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554255322"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554255322",
+   "eur": 6.9
   },
   {
    "id": 564237548,
@@ -1679,10 +1807,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 6.9,
+   "price": 2480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0830.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564237548"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564237548",
+   "eur": 6.9
   },
   {
    "id": 562974735,
@@ -1692,10 +1821,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 6.9,
+   "price": 2480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1096.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562974735"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562974735",
+   "eur": 6.9
   },
   {
    "id": 564029980,
@@ -1705,10 +1835,11 @@
    "color": null,
    "cond": "U",
    "qty": 3,
-   "price": 6.9,
+   "price": 2480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1216.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564029980"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564029980",
+   "eur": 6.9
   },
   {
    "id": 562974726,
@@ -1718,10 +1849,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 6.9,
+   "price": 2480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1300.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562974726"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562974726",
+   "eur": 6.9
   },
   {
    "id": 562974752,
@@ -1731,10 +1863,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 6.9,
+   "price": 2480,
    "note": "Never assembled.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1407.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562974752"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562974752",
+   "eur": 6.9
   },
   {
    "id": 554552289,
@@ -1744,10 +1877,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 6.49,
+   "price": 2480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0514.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554552289"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554552289",
+   "eur": 6.49
   },
   {
    "id": 553322750,
@@ -1757,10 +1891,11 @@
    "color": null,
    "cond": "U",
    "qty": 4,
-   "price": 6.49,
+   "price": 2480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1093.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553322750"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553322750",
+   "eur": 6.49
   },
   {
    "id": 555623272,
@@ -1770,10 +1905,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 6.49,
+   "price": 2480,
    "note": "Brand new, slealed, comes with blaster.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1427.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=555623272"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=555623272",
+   "eur": 6.49
   },
   {
    "id": 562974965,
@@ -1783,10 +1919,11 @@
    "color": null,
    "cond": "U",
    "qty": 3,
-   "price": 6.2,
+   "price": 2480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1422.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562974965"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562974965",
+   "eur": 6.2
   },
   {
    "id": 564209499,
@@ -1796,10 +1933,11 @@
    "color": null,
    "cond": "U",
    "qty": 2,
-   "price": 5.99,
+   "price": 1980,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0620.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564209499"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564209499",
+   "eur": 5.99
   },
   {
    "id": 547561228,
@@ -1809,10 +1947,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 5.99,
+   "price": 1980,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0704.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547561228"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547561228",
+   "eur": 5.99
   },
   {
    "id": 555636695,
@@ -1822,10 +1961,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 5.99,
+   "price": 1980,
    "note": "Brand new, sealed.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1260.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=555636695"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=555636695",
+   "eur": 5.99
   },
   {
    "id": 538926434,
@@ -1835,10 +1975,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 5.99,
+   "price": 1980,
    "note": "Never assembled, comes with blaster",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1275.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926434"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926434",
+   "eur": 5.99
   },
   {
    "id": 553324534,
@@ -1848,10 +1989,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 5.9,
+   "price": 1980,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0569.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553324534"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553324534",
+   "eur": 5.9
   },
   {
    "id": 559723177,
@@ -1861,10 +2003,11 @@
    "color": null,
    "cond": "U",
    "qty": 4,
-   "price": 5.9,
+   "price": 1980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0691.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559723177"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559723177",
+   "eur": 5.9
   },
   {
    "id": 553322881,
@@ -1874,10 +2017,11 @@
    "color": null,
    "cond": "N",
    "qty": 10,
-   "price": 5.9,
+   "price": 1980,
    "note": "Brand new.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1305.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553322881"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553322881",
+   "eur": 5.9
   },
   {
    "id": 543467988,
@@ -1887,10 +2031,11 @@
    "color": null,
    "cond": "U",
    "qty": 2,
-   "price": 5.7,
+   "price": 1980,
    "note": "Mint condition",
    "img": "https://img.bricklink.com/ItemImage/MN/0/cas329.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543467988"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543467988",
+   "eur": 5.7
   },
   {
    "id": 543467675,
@@ -1900,10 +2045,11 @@
    "color": null,
    "cond": "U",
    "qty": 2,
-   "price": 5.49,
+   "price": 1980,
    "note": "Mint condition",
    "img": "https://img.bricklink.com/ItemImage/MN/0/cas327.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543467675"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543467675",
+   "eur": 5.49
   },
   {
    "id": 554534142,
@@ -1913,10 +2059,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 4.99,
+   "price": 1980,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0188.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554534142"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554534142",
+   "eur": 4.99
   },
   {
    "id": 554256033,
@@ -1926,10 +2073,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 4.99,
+   "price": 1980,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0544.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554256033"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554256033",
+   "eur": 4.99
   },
   {
    "id": 547704480,
@@ -1939,10 +2087,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 4.99,
+   "price": 1980,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min018.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704480"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704480",
+   "eur": 4.99
   },
   {
    "id": 547704636,
@@ -1952,10 +2101,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 4.99,
+   "price": 1980,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min021.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704636"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704636",
+   "eur": 4.99
   },
   {
    "id": 547704592,
@@ -1965,10 +2115,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 4.99,
+   "price": 1980,
    "note": "10/10 - with stone sword",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min025.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704592"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704592",
+   "eur": 4.99
   },
   {
    "id": 539317222,
@@ -1978,10 +2129,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 4.99,
+   "price": 1980,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1105.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=539317222"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=539317222",
+   "eur": 4.99
   },
   {
    "id": 565585794,
@@ -1991,10 +2143,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 4.99,
+   "price": 1980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1220.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565585794"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565585794",
+   "eur": 4.99
   },
   {
    "id": 535203776,
@@ -2004,10 +2157,11 @@
    "color": null,
    "cond": "U",
    "qty": 2,
-   "price": 4.99,
+   "price": 1980,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1338.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=535203776"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=535203776",
+   "eur": 4.99
   },
   {
    "id": 553321572,
@@ -2017,10 +2171,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 4.9,
+   "price": 1980,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0456.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553321572"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553321572",
+   "eur": 4.9
   },
   {
    "id": 564029832,
@@ -2030,10 +2185,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 4.9,
+   "price": 1980,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0581.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564029832"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564029832",
+   "eur": 4.9
   },
   {
    "id": 553323695,
@@ -2043,10 +2199,11 @@
    "color": null,
    "cond": "U",
    "qty": 12,
-   "price": 4.9,
+   "price": 1980,
    "note": "10/10, comes with blaster",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1094.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553323695"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553323695",
+   "eur": 4.9
   },
   {
    "id": 559723262,
@@ -2056,10 +2213,11 @@
    "color": null,
    "cond": "U",
    "qty": 2,
-   "price": 4.49,
+   "price": 1480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0713.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559723262"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559723262",
+   "eur": 4.49
   },
   {
    "id": 564318170,
@@ -2069,10 +2227,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 4.49,
+   "price": 1480,
    "note": "Brand new.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1487.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564318170"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564318170",
+   "eur": 4.49
   },
   {
    "id": 564318226,
@@ -2082,10 +2241,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 4.49,
+   "price": 1480,
    "note": "Brand new.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1486.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564318226"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564318226",
+   "eur": 4.49
   },
   {
    "id": 543467754,
@@ -2095,10 +2255,11 @@
    "color": null,
    "cond": "U",
    "qty": 4,
-   "price": 4.29,
+   "price": 1480,
    "note": "Mint condition",
    "img": "https://img.bricklink.com/ItemImage/MN/0/cas328.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543467754"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543467754",
+   "eur": 4.29
   },
   {
    "id": 562974843,
@@ -2108,10 +2269,11 @@
    "color": null,
    "cond": "N",
    "qty": 6,
-   "price": 4.2,
+   "price": 1480,
    "note": "Band new.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1319.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562974843"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=562974843",
+   "eur": 4.2
   },
   {
    "id": 557795529,
@@ -2121,10 +2283,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 4.0,
+   "price": 1480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0259.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=557795529"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=557795529",
+   "eur": 4.0
   },
   {
    "id": 538926444,
@@ -2134,10 +2297,11 @@
    "color": null,
    "cond": "U",
    "qty": 2,
-   "price": 4.0,
+   "price": 1480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0260.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926444"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926444",
+   "eur": 4.0
   },
   {
    "id": 553324149,
@@ -2147,10 +2311,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 4.0,
+   "price": 1480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0291.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553324149"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553324149",
+   "eur": 4.0
   },
   {
    "id": 554255919,
@@ -2160,10 +2325,11 @@
    "color": null,
    "cond": "U",
    "qty": 3,
-   "price": 4.0,
+   "price": 1480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0399.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554255919"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554255919",
+   "eur": 4.0
   },
   {
    "id": 559724198,
@@ -2173,10 +2339,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 3.99,
+   "price": 1480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0011a.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559724198"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559724198",
+   "eur": 3.99
   },
   {
    "id": 554255482,
@@ -2186,10 +2353,11 @@
    "color": null,
    "cond": "U",
    "qty": 2,
-   "price": 3.99,
+   "price": 1480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0252.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554255482"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554255482",
+   "eur": 3.99
   },
   {
    "id": 538926437,
@@ -2199,10 +2367,11 @@
    "color": null,
    "cond": "U",
    "qty": 5,
-   "price": 3.99,
+   "price": 1480,
    "note": "10/10, comes with blaster",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0296.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926437"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926437",
+   "eur": 3.99
   },
   {
    "id": 543108859,
@@ -2212,10 +2381,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 3.99,
+   "price": 1480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0268a.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543108859"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543108859",
+   "eur": 3.99
   },
   {
    "id": 566913019,
@@ -2225,10 +2395,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 3.99,
+   "price": 1480,
    "note": "Comes with shield.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sh0177.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566913019"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566913019",
+   "eur": 3.99
   },
   {
    "id": 539317810,
@@ -2238,10 +2409,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 3.99,
+   "price": 1480,
    "note": "10/10, comes with blaster",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1103.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=539317810"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=539317810",
+   "eur": 3.99
   },
   {
    "id": 540402059,
@@ -2251,10 +2423,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 3.99,
+   "price": 1480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1212.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=540402059"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=540402059",
+   "eur": 3.99
   },
   {
    "id": 565585810,
@@ -2264,10 +2437,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 3.99,
+   "price": 1480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1221.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565585810"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=565585810",
+   "eur": 3.99
   },
   {
    "id": 564238874,
@@ -2277,10 +2451,11 @@
    "color": null,
    "cond": "N",
    "qty": 4,
-   "price": 3.99,
+   "price": 1480,
    "note": "Brand new.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1278.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564238874"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564238874",
+   "eur": 3.99
   },
   {
    "id": 547704380,
@@ -2290,10 +2465,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 3.99,
+   "price": 1480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min198.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704380"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704380",
+   "eur": 3.99
   },
   {
    "id": 547704461,
@@ -2303,10 +2479,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 3.99,
+   "price": 1480,
    "note": "10/10 - with iron axe",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min194.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704461"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704461",
+   "eur": 3.99
   },
   {
    "id": 564317254,
@@ -2316,10 +2493,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 3.9,
+   "price": 1480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0005a.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564317254"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564317254",
+   "eur": 3.9
   },
   {
    "id": 566912207,
@@ -2329,10 +2507,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 3.9,
+   "price": 1480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sh0186.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566912207"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566912207",
+   "eur": 3.9
   },
   {
    "id": 538926441,
@@ -2342,10 +2521,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 3.79,
+   "price": 1480,
    "note": "10/10 Never assembled, comes with blaster",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1285.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926441"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926441",
+   "eur": 3.79
   },
   {
    "id": 538926440,
@@ -2355,10 +2535,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 3.79,
+   "price": 1480,
    "note": "10/10 Never assembled, comes with blaster",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1391.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926440"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926440",
+   "eur": 3.79
   },
   {
    "id": 538926439,
@@ -2368,10 +2549,11 @@
    "color": null,
    "cond": "N",
    "qty": 2,
-   "price": 3.79,
+   "price": 1480,
    "note": "10/10 Never assembled, comes with blaster",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1392.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926439"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926439",
+   "eur": 3.79
   },
   {
    "id": 564029850,
@@ -2381,10 +2563,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 3.49,
+   "price": 1480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0261.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564029850"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564029850",
+   "eur": 3.49
   },
   {
    "id": 536551724,
@@ -2394,10 +2577,11 @@
    "color": null,
    "cond": "U",
    "qty": 5,
-   "price": 2.99,
+   "price": 980,
    "note": "10/10, comes with blaster",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0115.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=536551724"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=536551724",
+   "eur": 2.99
   },
   {
    "id": 559049047,
@@ -2407,10 +2591,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 2.99,
+   "price": 980,
    "note": "Excellent condition, comes with crossbow.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0532.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559049047"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559049047",
+   "eur": 2.99
   },
   {
    "id": 547704603,
@@ -2420,10 +2605,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 2.99,
+   "price": 980,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min010.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704603"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704603",
+   "eur": 2.99
   },
   {
    "id": 547704392,
@@ -2433,10 +2619,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 2.99,
+   "price": 980,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min012.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704392"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704392",
+   "eur": 2.99
   },
   {
    "id": 553321451,
@@ -2446,10 +2633,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 2.99,
+   "price": 980,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0527a.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553321451"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553321451",
+   "eur": 2.99
   },
   {
    "id": 539317797,
@@ -2459,10 +2647,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 2.99,
+   "price": 980,
    "note": "10/10, comes with blaster",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1179.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=539317797"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=539317797",
+   "eur": 2.99
   },
   {
    "id": 547704191,
@@ -2472,10 +2661,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 2.99,
+   "price": 980,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min158.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704191"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704191",
+   "eur": 2.99
   },
   {
    "id": 547704439,
@@ -2485,10 +2675,11 @@
    "color": null,
    "cond": "N",
    "qty": 1,
-   "price": 2.99,
+   "price": 980,
    "note": "10/10 - with enchanted crossbow",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min195.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704439"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704439",
+   "eur": 2.99
   },
   {
    "id": 543105783,
@@ -2498,10 +2689,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 1.99,
+   "price": 480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0217.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543105783"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543105783",
+   "eur": 1.99
   },
   {
    "id": 553321342,
@@ -2511,10 +2703,11 @@
    "color": null,
    "cond": "U",
    "qty": 4,
-   "price": 1.99,
+   "price": 480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0222.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553321342"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=553321342",
+   "eur": 1.99
   },
   {
    "id": 547704557,
@@ -2524,10 +2717,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 1.99,
+   "price": 480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min009.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704557"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704557",
+   "eur": 1.99
   },
   {
    "id": 547704616,
@@ -2537,10 +2731,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 1.99,
+   "price": 480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min010.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704616"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704616",
+   "eur": 1.99
   },
   {
    "id": 547559304,
@@ -2550,10 +2745,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 1.99,
+   "price": 480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0527a.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547559304"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547559304",
+   "eur": 1.99
   },
   {
    "id": 564205933,
@@ -2563,10 +2759,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 1.99,
+   "price": 480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min057.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564205933"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564205933",
+   "eur": 1.99
   },
   {
    "id": 543122253,
@@ -2576,10 +2773,11 @@
    "color": null,
    "cond": "N",
    "qty": 10,
-   "price": 1.99,
+   "price": 480,
    "note": "Never assembled",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1321.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543122253"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543122253",
+   "eur": 1.99
   },
   {
    "id": 547704572,
@@ -2589,10 +2787,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 1.99,
+   "price": 480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min200.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704572"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704572",
+   "eur": 1.99
   },
   {
    "id": 536603229,
@@ -2602,10 +2801,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 1.49,
+   "price": 480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0001b.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=536603229"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=536603229",
+   "eur": 1.49
   },
   {
    "id": 535202161,
@@ -2615,10 +2815,11 @@
    "color": null,
    "cond": "U",
    "qty": 6,
-   "price": 1.49,
+   "price": 480,
    "note": "10/10, comes with blaster",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0001c.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=535202161"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=535202161",
+   "eur": 1.49
   },
   {
    "id": 538926422,
@@ -2628,10 +2829,11 @@
    "color": null,
    "cond": "U",
    "qty": 3,
-   "price": 1.09,
+   "price": 480,
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0229.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926422"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=538926422",
+   "eur": 1.09
   },
   {
    "id": 536129930,
@@ -2641,10 +2843,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 0.99,
+   "price": 480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/MN/0/gen001.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=536129930"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=536129930",
+   "eur": 0.99
   },
   {
    "id": 566912406,
@@ -2654,10 +2857,11 @@
    "color": null,
    "cond": "U",
    "qty": 1,
-   "price": 0.9,
+   "price": 480,
    "note": "10/6, no marks only fading.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0217.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566912406"
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=566912406",
+   "eur": 0.9
   },
   {
    "id": 563717918,
@@ -2667,11 +2871,12 @@
    "color": null,
    "cond": "U",
    "qty": 0,
-   "price": 169.0,
+   "price": 61980,
    "note": "The paint on one of the eyes is slightly worn, and there are also two small dents on the back of the head. These are not visible when the headpiece is attached.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0387.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=563717918",
-   "preorder": true
+   "preorder": true,
+   "eur": 169.0
   },
   {
    "id": 564316927,
@@ -2681,11 +2886,12 @@
    "color": null,
    "cond": "U",
    "qty": 0,
-   "price": 11.9,
+   "price": 4480,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0209.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564316927",
-   "preorder": true
+   "preorder": true,
+   "eur": 11.9
   },
   {
    "id": 543105947,
@@ -2695,11 +2901,12 @@
    "color": null,
    "cond": "N",
    "qty": 0,
-   "price": 6.99,
+   "price": 2480,
    "note": "Never assembled",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1274.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543105947",
-   "preorder": true
+   "preorder": true,
+   "eur": 6.99
   },
   {
    "id": 545420520,
@@ -2709,11 +2916,12 @@
    "color": null,
    "cond": "N",
    "qty": 0,
-   "price": 2.9,
+   "price": 980,
    "note": "Never assembled.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1202.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=545420520",
-   "preorder": true
+   "preorder": true,
+   "eur": 2.9
   }
  ]
 }

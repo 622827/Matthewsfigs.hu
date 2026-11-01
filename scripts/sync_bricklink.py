@@ -3,12 +3,16 @@
 
 Needs four secrets (env vars) from https://www.bricklink.com/v2/api/register_consumer.page :
   BL_CONSUMER_KEY, BL_CONSUMER_SECRET, BL_TOKEN, BL_TOKEN_SECRET
-Optional: BL_STORE (default MatthewHorseman), STORE_CURRENCY (default HUF).
+Optional: BL_STORE (default MatthewHorseman), STORE_CURRENCY (BrickLink store currency, default EUR).
+The site shows fixed forint prices from data/prices_huf.json (see huf_prices.py).
 Only the Python standard library is used.
 """
 import base64, hashlib, hmac, html, json, os, secrets, sys, time, urllib.parse, urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import huf_prices
 
 API = "https://api.bricklink.com/api/store/v1"
 STORE = os.environ.get("BL_STORE", "MatthewHorseman")
@@ -121,10 +125,14 @@ def main():
             continue
         kept.add(key)
         items.append({**o, "qty": 0, "preorder": True, "name": html.unescape(o["name"])})
+    # Fixed forint prices: BrickLink EUR is kept in "eur", "price" is the frozen HUF price.
+    prices = huf_prices.load()
+    if huf_prices.apply(items, prices):
+        huf_prices.save(prices)
     order = {"SET": 0, "MINIFIG": 1, "PART": 2}
     items.sort(key=lambda i: (order.get(i["type"], 3), bool(i.get("preorder")), -(i["price"] or 0)))
     payload = {
-        "store": STORE, "currency": CURRENCY, "total_lots": sum(1 for i in items if not i.get("preorder")) + parts_lots,
+        "store": STORE, "currency": "HUF", "bl_currency": CURRENCY, "total_lots": sum(1 for i in items if not i.get("preorder")) + parts_lots,
         "parts_lots": parts_lots, "parts_qty": parts_qty, "items": items,
     }
     # Only touch the file when the stock really changed, so frequent runs

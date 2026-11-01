@@ -32,6 +32,6 @@ jobs:
         run: |
           git config user.name "inventory-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/inventory.json
+          git add data/inventory.json data/prices_huf.json
           git diff --cached --quiet || git commit -m "Készlet frissítése $(date -u +%F' '%H:%M)"
           git push
