@@ -35,6 +35,7 @@ jobs:
           BL_CONSUMER_SECRET: ${{ secrets.BL_CONSUMER_SECRET }}
           BL_TOKEN: ${{ secrets.BL_TOKEN }}
           BL_TOKEN_SECRET: ${{ secrets.BL_TOKEN_SECRET }}
+          BRICKSET_API_KEY: ${{ secrets.BRICKSET_API_KEY }}
         run: python scripts/catalog_details.py
       - name: Változás mentése
         run: |

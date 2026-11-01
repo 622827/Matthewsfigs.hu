@@ -544,3 +544,4 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 .pd-qty input{width:44px;border:0;text-align:center;font:700 17px var(--body);background:none;-moz-appearance:textfield}
 .pd-qty input::-webkit-outer-spin-button,.pd-qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
 .pd-buy{align-items:center}
+.pd-thumbs{flex-wrap:wrap}

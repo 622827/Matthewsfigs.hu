@@ -96,6 +96,44 @@ def market_value(no):
     return None
 
 
+# Brickset API (ingyenes kulcs: brickset.com/tools/webservices/requestkey → GitHub Secret BRICKSET_API_KEY):
+# hivatalos kiegészítő fotók, eredeti bolti ár (DE, EUR), megjelenés és kivezetés dátuma
+BS_KEY = os.environ.get("BRICKSET_API_KEY", "")
+BS_API = "https://brickset.com/api/v3.asmx/"
+BS_MAX = int(os.environ.get("BRICKSET_MAX", "40"))    # getSets napi kerete szűk: futásonként legfeljebb ennyi szett
+
+
+def bs(method, **params):
+    q = urllib.parse.urlencode({"apiKey": BS_KEY, **params})
+    try:
+        req = urllib.request.Request(BS_API + method + "?" + q, headers={"User-Agent": "matthewsfigs.hu"})
+        with urllib.request.urlopen(req, timeout=40) as r:
+            j = json.load(r)
+        if j.get("status") != "success":
+            print(f"  ! Brickset {method}: {j.get('message')}")
+            return None
+        return j
+    except Exception as e:
+        print(f"  ! Brickset {method}: {e}")
+        return None
+
+
+def brickset(no):
+    """Photos + retail price + dates for one set, or None if Brickset is unavailable."""
+    j = bs("getSets", userHash="", params=json.dumps({"setNumber": no}))
+    if not j or not j.get("sets"):
+        return None if j is None else {"bs_id": None}
+    s = j["sets"][0]
+    photos = [s.get("image", {}).get("imageURL")]
+    if s.get("additionalImageCount"):
+        a = bs("getAdditionalImages", setID=s["setID"])
+        photos += [im.get("imageURL") for im in (a or {}).get("additionalImages", [])]
+    de = (s.get("LEGOCom") or {}).get("DE") or {}
+    return {"bs_id": s.get("setID"), "photos": [p for p in photos if p][:24],
+            "retail_eur": de.get("retailPrice"), "launch": (de.get("dateFirstAvailable") or "")[:10] or None,
+            "exit": (de.get("dateLastAvailable") or s.get("exitDate") or "")[:10] or None}
+
+
 CATS = {}
 FIGSETS = {}   # minifig no -> number of sets it appears in (persisted in details.json "figsets")
 
@@ -200,6 +238,17 @@ def main():
             items[no] = d
             changed = True
             print(f"  {no}: {d.get('year')} · {d.get('category')} · {d.get('pieces', '')}")
+    # Brickset: fotók, bolti ár, dátumok (csak ha van kulcs; egyszer szettenként)
+    if BS_KEY:
+        bs_todo = [n for n, d in items.items() if d.get("type") == "SET" and "bs_id" not in d and n in wanted][:BS_MAX]
+        print(f"Brickset: {len(bs_todo)} szett.")
+        for n in bs_todo:
+            r = brickset(n)
+            if r is None:
+                break          # API-hiba vagy elfogyott a napi keret: a következő futás folytatja
+            items[n].update(r)
+            changed = True
+
     # piaci érték (BrickLink árkalauz) minden szett-kiadáshoz, kéthetente frissítve
     values = out.get("values", {})
     need = sorted({v["no"] for d in items.values() for v in d.get("versions", [])})

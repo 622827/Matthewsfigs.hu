@@ -437,7 +437,8 @@
     // static product photos (no spinning model here): box + built set for sets, catalogue photo for minifigures
     const IMG = "https://img.bricklink.com/ItemImage/", enc = encodeURIComponent(i.no);
     const photos = set
-      ? [{ src: `${IMG}ON/0/${enc}.png`, alt: hu ? "doboz" : "box" }, { src: `${IMG}SN/0/${enc}.png`, alt: hu ? "a megépített szett" : "built set" }]
+      ? [{ src: `${IMG}ON/0/${enc}.png`, alt: hu ? "doboz" : "box" }, { src: `${IMG}SN/0/${enc}.png`, alt: hu ? "a megépített szett" : "built set" },
+         ...(D.photos || []).slice(1).map((src, k) => ({ src, alt: (hu ? "fotó " : "photo ") + (k + 3) }))]   // Brickset official images
       : [{ src: i.img || `${IMG}MN/0/${enc}.png`, alt: hu ? "minifigura" : "minifigure" }];
     root.innerHTML = `
       <nav class="pd-crumbs"><a href="index.html">${hu ? "Főoldal" : "Home"}</a> › <a href="${back}">${set ? (hu ? "Szettek" : "Sets") : (hu ? "Figurák" : "Minifigures")}</a> › <span>${esc(sn)}</span></nav>
@@ -467,6 +468,8 @@
             ${row(hu ? "Állapot" : "Condition", set ? (hu ? "Új, bontatlan (MISB)" : "New, sealed (MISB)") : (hu ? "Átnézett, eredeti LEGO®" : "Checked, genuine LEGO®"))}
             ${row(hu ? "Megjegyzés" : "Note", note && note !== "MISB" ? esc(note) : "")}
             ${row(hu ? "Készlet" : "Stock", stock)}
+            ${row(hu ? "Eredeti bolti ár" : "Original retail price", D.retail_eur ? new Intl.NumberFormat(hu ? "hu-HU" : "en-GB", { style: "currency", currency: "EUR" }).format(D.retail_eur) + (hu ? " (LEGO Németország)" : " (LEGO Germany)") : "")}
+            ${row(hu ? "Kivezetés" : "Retired", D.exit ? new Date(D.exit).toLocaleDateString(hu ? "hu-HU" : "en-GB", { year: "numeric", month: "long" }) : "")}
             ${row(set ? (hu ? "Doboz mérete" : "Box size") : (hu ? "Méret" : "Size"), set ? dims : "")}
             ${row(hu ? "Súly" : "Weight", set ? weight : "")}
             ${row(hu ? "Gyártó" : "Manufacturer", "LEGO A/S, Aastvej 1, 7190 Billund, " + (hu ? "Dánia" : "Denmark") + " · www.lego.com/service")}
