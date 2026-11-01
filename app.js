@@ -364,12 +364,12 @@
   // ---------- home page ----------
   function renderHome() {
     document.querySelectorAll("[data-shelf]").forEach(g => {
-      const list = data.items.filter(i => i.type === g.dataset.shelf).slice(0, 8);
+      const list = data.items.filter(i => i.type === g.dataset.shelf && !(i.type === "MINIFIG" && i.preorder)).slice(0, 8);
       g.innerHTML = list.map(card).join("");
       initBoxes(g);
     });
     document.querySelectorAll("[data-count]").forEach(el => {
-      el.textContent = data.items.filter(i => i.type === el.dataset.count).length || el.textContent;
+      el.textContent = data.items.filter(i => i.type === el.dataset.count && !(i.type === "MINIFIG" && i.preorder)).length || el.textContent;
     });
     const p = $("partsPanel");
     if (p) {
@@ -691,6 +691,8 @@
   }
 
   // ---------- catalog pages ----------
+  // the minifigure list shows only what is in stock now; sold-out minifigures keep their own page (pre-order from there)
+  const listedNow = i => i.type === TYPE && !(TYPE === "MINIFIG" && i.preorder);
   const PAGE = 24;
   let shown = PAGE;
   // clickable label filters (Big gun, Army builder, Best price, Retired, Pre-order)
@@ -700,10 +702,10 @@
   function buildLabelChips() {
     const box = $("labelChips"); if (!box) return;
     const count = {};
-    for (const i of data.items) if (i.type === TYPE) for (const l of allLabels(i)) count[l] = (count[l] || 0) + 1;
+    for (const i of data.items) if (listedNow(i)) for (const l of allLabels(i)) count[l] = (count[l] || 0) + 1;
     const names = Object.keys(count).sort((a, b) => count[b] - count[a]);
     // how many items would remain if this label were added to the current selection
-    const remaining = l => data.items.filter(i => i.type === TYPE && [...activeLabels, l].every(x => allLabels(i).includes(x))).length;
+    const remaining = l => data.items.filter(i => listedNow(i) && [...activeLabels, l].every(x => allLabels(i).includes(x))).length;
     if (!names.length) { box.hidden = true; return; }
     const color = l => l === "Pre-order" ? "pre" : ((LABELS._colors || {})[l] || "red");
     box.innerHTML = `<span class="chips__label">${lang === "hu" ? "Címkék:" : "Labels:"}</span>` + names.map(l =>
@@ -724,7 +726,7 @@
     if (reset) shown = PAGE;
     const qv = $("search").value;
     const match = matcher(qv), sort = $("sort").value;
-    let list = data.items.filter(i => i.type === TYPE && match(i) && activeLabels.every(l => allLabels(i).includes(l)));
+    let list = data.items.filter(i => listedNow(i) && match(i) && activeLabels.every(l => allLabels(i).includes(l)));
     const by = sort === "pa" ? (a, b) => a.price - b.price : sort === "na" ? (a, b) => a.name.localeCompare(b.name) : (a, b) => b.price - a.price;
     list.sort((a, b) => (!!a.preorder - !!b.preorder) || by(a, b));
     $("grid").innerHTML = list.slice(0, shown).map(card).join("");
