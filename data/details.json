@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-01T19:37:52+00:00",
+ "updated": "2026-11-01T21:08:08+00:00",
  "items": {
   "40686-1": {
    "type": "SET",
@@ -29,7 +29,17 @@
      "sets": 2
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 48958,
+   "photos": [
+    "https://images.brickset.com/sets/images/40686-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40686-1/40686_box1_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40686-1/40686_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40686-1/40686_lifestyle.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": "2024-05-31"
   },
   "40755-1": {
    "type": "SET",
@@ -88,7 +98,18 @@
      "sets": 1
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 48961,
+   "photos": [
+    "https://images.brickset.com/sets/images/40755-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_box1_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_lifestyle_envr.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_lifestyle_envr_03.jpg"
+   ],
+   "retail_eur": 39.99,
+   "launch": "2024-09-18",
+   "exit": "2025-12-24"
   },
   "40806-1": {
    "type": "SET",
@@ -111,7 +132,19 @@
      "sets": 1
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 51283,
+   "photos": [
+    "https://images.brickset.com/sets/images/40806-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_box1_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_lifestyle_build.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_lifestyle_envr.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_lifestyle_envr_2.jpg"
+   ],
+   "retail_eur": 59.99,
+   "launch": "2025-09-02",
+   "exit": "2027-12-31"
   },
   "472407-1": {
    "type": "SET",
@@ -134,7 +167,14 @@
      "sets": 1
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 50369,
+   "photos": [
+    "https://images.brickset.com/sets/images/472407-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null
   },
   "75020-1": {
    "type": "SET",
@@ -209,7 +249,20 @@
      "pieces": 3943,
      "img": "https://cdn.rebrickable.com/media/sets/75397-1.jpg"
     }
-   ]
+   ],
+   "bs_id": 10227,
+   "photos": [
+    "https://images.brickset.com/sets/images/75020-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_main.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": "2014-12-31",
+   "figs_value_huf": 85615
   },
   "75158-1": {
    "type": "SET",
@@ -256,7 +309,25 @@
      "sets": 1
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 26273,
+   "photos": [
+    "https://images.brickset.com/sets/images/75158-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt9.jpg"
+   ],
+   "retail_eur": 119.99,
+   "launch": "2016-07-31",
+   "exit": "2017-06-15",
+   "figs_value_huf": 148213
   },
   "75280-1": {
    "type": "SET",
@@ -291,7 +362,38 @@
      "sets": 2
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 30188,
+   "photos": [
+    "https://images.brickset.com/sets/images/75280-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_1to1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt11.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt9.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_05.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_06.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Box3_v29.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Box6_v29.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_05.jpg"
+   ],
+   "retail_eur": 29.99,
+   "launch": "2020-08-28",
+   "exit": "2022-11-22",
+   "figs_value_huf": 7990
   },
   "75283-1": {
    "type": "SET",
@@ -341,7 +443,32 @@
      "pieces": 286,
      "img": "https://cdn.rebrickable.com/media/sets/75283-1.jpg"
     }
-   ]
+   ],
+   "bs_id": 30553,
+   "photos": [
+    "https://images.brickset.com/sets/images/75283-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_1to1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_05.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_06.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Box3_v29.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Box6_v29.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_05.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_MF_Lineup_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_MF_Lineup_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_MF_Lineup_03.jpg"
+   ],
+   "retail_eur": 39.99,
+   "launch": "2020-10-04",
+   "exit": "2022-08-05",
+   "figs_value_huf": 9199
   },
   "75314-1": {
    "type": "SET",
@@ -394,7 +521,27 @@
      "sets": 1
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 31236,
+   "photos": [
+    "https://images.brickset.com/sets/images/75314-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt11.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt12.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt13.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt9.jpg"
+   ],
+   "retail_eur": 99.99,
+   "launch": "2021-05-30",
+   "exit": "2022-11-30",
+   "figs_value_huf": 49502
   },
   "75333-1": {
    "type": "SET",
@@ -429,7 +576,23 @@
      "sets": 1
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 32403,
+   "photos": [
+    "https://images.brickset.com/sets/images/75333-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt8.jpg"
+   ],
+   "retail_eur": 34.99,
+   "launch": "2022-05-30",
+   "exit": "2026-06-15",
+   "figs_value_huf": 5037
   },
   "75337-1": {
    "type": "SET",
@@ -498,7 +661,25 @@
      "pieces": 1082,
      "img": "https://cdn.rebrickable.com/media/sets/75337-1.jpg"
     }
-   ]
+   ],
+   "bs_id": 32407,
+   "photos": [
+    "https://images.brickset.com/sets/images/75337-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt9.jpg"
+   ],
+   "retail_eur": 139.99,
+   "launch": "2022-08-04",
+   "exit": "2026-07-07",
+   "figs_value_huf": 22046
   },
   "75342-1": {
    "type": "SET",
@@ -568,7 +749,25 @@
      "pieces": 44,
      "img": "https://cdn.rebrickable.com/media/sets/912313-1.jpg"
     }
-   ]
+   ],
+   "bs_id": 32399,
+   "photos": [
+    "https://images.brickset.com/sets/images/75342-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt9.jpg"
+   ],
+   "retail_eur": 44.99,
+   "launch": "2022-05-08",
+   "exit": "2024-01-03",
+   "figs_value_huf": 14049
   },
   "75344-1": {
    "type": "SET",
@@ -591,7 +790,22 @@
      "sets": 1
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 34368,
+   "photos": [
+    "https://images.brickset.com/sets/images/75344-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt7.jpg"
+   ],
+   "retail_eur": 9.99,
+   "launch": "2023-01-04",
+   "exit": "2024-12-10",
+   "figs_value_huf": 1590
   },
   "75345-1": {
    "type": "SET",
@@ -626,7 +840,22 @@
      "sets": 2
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 34369,
+   "photos": [
+    "https://images.brickset.com/sets/images/75345-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt7.jpg"
+   ],
+   "retail_eur": 19.99,
+   "launch": "2023-01-04",
+   "exit": "2026-07-17",
+   "figs_value_huf": 4088
   },
   "75347-1": {
    "type": "SET",
@@ -696,7 +925,24 @@
      "pieces": 625,
      "img": "https://cdn.rebrickable.com/media/sets/75347-1.jpg"
     }
-   ]
+   ],
+   "bs_id": 34370,
+   "photos": [
+    "https://images.brickset.com/sets/images/75347-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_boxprod_v39.jpg"
+   ],
+   "retail_eur": 64.99,
+   "launch": "2023-01-04",
+   "exit": "2026-08-19",
+   "figs_value_huf": 7352
   },
   "75372-1": {
    "type": "SET",
@@ -743,7 +989,23 @@
      "sets": 4
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 48520,
+   "photos": [
+    "https://images.brickset.com/sets/images/75372-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt8.jpg"
+   ],
+   "retail_eur": 29.99,
+   "launch": "2023-12-06",
+   "exit": "2026-12-31",
+   "figs_value_huf": 7374
   },
   "75379-1": {
    "type": "SET",
@@ -808,7 +1070,23 @@
      "pieces": 1050,
      "img": "https://cdn.rebrickable.com/media/sets/75379-1.jpg"
     }
-   ]
+   ],
+   "bs_id": 48524,
+   "photos": [
+    "https://images.brickset.com/sets/images/75379-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt8.jpg"
+   ],
+   "retail_eur": 99.99,
+   "launch": "2024-01-31",
+   "exit": "2027-12-31",
+   "figs_value_huf": 12151
   },
   "75383-1": {
    "type": "SET",
@@ -877,7 +1155,22 @@
      "pieces": 640,
      "img": "https://cdn.rebrickable.com/media/sets/75383-1.jpg"
     }
-   ]
+   ],
+   "bs_id": 48872,
+   "photos": [
+    "https://images.brickset.com/sets/images/75383-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_80296.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_boxprod_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_lifestyle.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_lifestyle_envr.jpg"
+   ],
+   "retail_eur": 69.99,
+   "launch": "2024-04-02",
+   "exit": "2025-11-27"
   },
   "75389-1": {
    "type": "SET",
@@ -930,7 +1223,26 @@
      "sets": 1
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 48876,
+   "photos": [
+    "https://images.brickset.com/sets/images/75389-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_boxprod_v39_sha.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_envr_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_envr_05.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_lineup_nobg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_pri_nobg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_sec01_nobg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_sec02_nobg.jpg"
+   ],
+   "retail_eur": 179.99,
+   "launch": "2024-06-26",
+   "exit": "2026-12-31"
   },
   "75391-1": {
    "type": "SET",
@@ -953,7 +1265,24 @@
      "sets": 2
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 48867,
+   "photos": [
+    "https://images.brickset.com/sets/images/75391-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_boxprod_v39_sha.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_build.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_cons.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_cons_2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_envr.jpg"
+   ],
+   "retail_eur": 12.99,
+   "launch": "2024-05-03",
+   "exit": "2026-07-15",
+   "figs_value_huf": 2385
   },
   "75400-1": {
    "type": "SET",
@@ -976,7 +1305,22 @@
      "sets": 1
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 51092,
+   "photos": [
+    "https://images.brickset.com/sets/images/75400-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_box5_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_boxprod_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_build_crop_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_cons_crop_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_cons3_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_envr_crop_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_web_sec01_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_web_sec02_nobg_en-gb.jpg"
+   ],
+   "retail_eur": 14.99,
+   "launch": "2025-05-03",
+   "exit": "2026-12-31"
   },
   "75431-1": {
    "type": "SET",
@@ -1017,7 +1361,24 @@
      "sets": 1
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 51090,
+   "photos": [
+    "https://images.brickset.com/sets/images/75431-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_box5_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_boxprod_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_build_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_cons_2_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_cons_crop_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_cons_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_envr_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_web_lineup_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_web_sec01_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_web_sec02_nobg_en-gb.jpg"
+   ],
+   "retail_eur": 39.99,
+   "launch": "2025-07-04",
+   "exit": "2027-07-31"
   },
   "75435-1": {
    "type": "SET",
@@ -1064,7 +1425,25 @@
      "sets": 1
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 51104,
+   "photos": [
+    "https://images.brickset.com/sets/images/75435-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_box5_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_boxprod_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_build_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_cons_2_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_cons_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_envr_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_lineup_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec01_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec02_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec03_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec05_nobg_en-gb.jpg"
+   ],
+   "retail_eur": 149.99,
+   "launch": "2025-07-02",
+   "exit": "2027-12-31"
   },
   "75436-1": {
    "type": "SET",
@@ -1093,7 +1472,24 @@
      "sets": 1
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 51838,
+   "photos": [
+    "https://images.brickset.com/sets/images/75436-1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Box5_v39_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_boxprod_v39_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Build_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Cons_2_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Cons_3_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Envr_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_PRI_NOBG_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_SEC01_NOBG_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_SEC02_NOBG_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_SEC03_NOBG_en-gb.jpeg.jpg"
+   ],
+   "retail_eur": 9.99,
+   "launch": "2025-12-03",
+   "exit": "2026-10-26"
   },
   "911832-1": {
    "type": "SET",
@@ -1116,7 +1512,15 @@
      "sets": 3
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 27899,
+   "photos": [
+    "https://images.brickset.com/sets/images/SW911832-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null,
+   "figs_value_huf": 2337
   },
   "911943-1": {
    "type": "SET",
@@ -1139,7 +1543,15 @@
      "sets": 8
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 28964,
+   "photos": [
+    "https://images.brickset.com/sets/images/SW911943-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null,
+   "figs_value_huf": 1755
   },
   "911953-1": {
    "type": "SET",
@@ -1155,7 +1567,14 @@
    "fetched": "2026-11-01",
    "pieces": 32,
    "minifigs": [],
-   "versions": []
+   "versions": [],
+   "bs_id": 29660,
+   "photos": [
+    "https://images.brickset.com/sets/images/911953-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null
   },
   "912169-1": {
    "type": "SET",
@@ -1178,7 +1597,15 @@
      "sets": 2
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 31498,
+   "photos": [
+    "https://images.brickset.com/sets/images/912169-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null,
+   "figs_value_huf": 3253
   },
   "912284-1": {
    "type": "SET",
@@ -1194,7 +1621,14 @@
    "fetched": "2026-11-01",
    "pieces": 41,
    "minifigs": [],
-   "versions": []
+   "versions": [],
+   "bs_id": 33782,
+   "photos": [
+    "https://images.brickset.com/sets/images/912284-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null
   },
   "912285-1": {
    "type": "SET",
@@ -1217,7 +1651,15 @@
      "sets": 2
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 33760,
+   "photos": [
+    "https://images.brickset.com/sets/images/912285-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null,
+   "figs_value_huf": 2597
   },
   "912287-1": {
    "type": "SET",
@@ -1233,7 +1675,14 @@
    "fetched": "2026-11-01",
    "pieces": 31,
    "minifigs": [],
-   "versions": []
+   "versions": [],
+   "bs_id": 33965,
+   "photos": [
+    "https://images.brickset.com/sets/images/912287-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null
   },
   "912308-1": {
    "type": "SET",
@@ -1249,7 +1698,14 @@
    "fetched": "2026-11-01",
    "pieces": 62,
    "minifigs": [],
-   "versions": []
+   "versions": [],
+   "bs_id": 47240,
+   "photos": [
+    "https://images.brickset.com/sets/images/912308-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null
   },
   "912310-1": {
    "type": "SET",
@@ -1278,7 +1734,15 @@
      "sets": 1
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 48338,
+   "photos": [
+    "https://images.brickset.com/sets/images/912310-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null,
+   "figs_value_huf": 2374
   },
   "912403-1": {
    "type": "SET",
@@ -1301,7 +1765,15 @@
      "sets": 5
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 49026,
+   "photos": [
+    "https://images.brickset.com/sets/images/912403-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null,
+   "figs_value_huf": 1484
   },
   "912409-1": {
    "type": "SET",
@@ -1324,7 +1796,15 @@
      "sets": 2
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 50373,
+   "photos": [
+    "https://images.brickset.com/sets/images/912409-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null,
+   "figs_value_huf": 1183
   },
   "912410-1": {
    "type": "SET",
@@ -1347,7 +1827,15 @@
      "sets": 3
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 50407,
+   "photos": [
+    "https://images.brickset.com/sets/images/912410-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null,
+   "figs_value_huf": 1766
   },
   "912501-1": {
    "type": "SET",
@@ -1370,7 +1858,14 @@
      "sets": 2
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 50939,
+   "photos": [
+    "https://images.brickset.com/sets/images/912501-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null
   },
   "912506-1": {
    "type": "SET",
@@ -1386,7 +1881,14 @@
    "fetched": "2026-11-01",
    "pieces": null,
    "minifigs": [],
-   "versions": []
+   "versions": [],
+   "bs_id": 51477,
+   "photos": [
+    "https://images.brickset.com/sets/images/912506-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null
   },
   "L0002235-1": {
    "type": "SET",
@@ -1409,7 +1911,14 @@
      "sets": 2
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 52745,
+   "photos": [
+    "https://images.brickset.com/sets/images/L0002235-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null
   },
   "L0002237-1": {
    "type": "SET",
@@ -1432,7 +1941,14 @@
      "sets": 2
     }
    ],
-   "versions": []
+   "versions": [],
+   "bs_id": 52947,
+   "photos": [
+    "https://images.brickset.com/sets/images/L0002237-1.jpg"
+   ],
+   "retail_eur": null,
+   "launch": null,
+   "exit": null
   },
   "L0002238-1": {
    "type": "SET",
@@ -2893,6 +3409,1490 @@
      "name": "Collectible Display Set 5 - San Diego Comic-Con 2009 Exclusive"
     }
    ]
+  },
+  "sw0216s": {
+   "type": "MINIFIG",
+   "name": "EV-A4-D with Sticker",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 5.08,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "8095-1",
+     "name": "General Grievous' Starfighter"
+    }
+   ]
+  },
+  "sw0217": {
+   "type": "MINIFIG",
+   "name": "Astromech Droid, R2-D2, Light Bluish Gray Head",
+   "year": 2008,
+   "category": "Star Wars",
+   "weight_g": 5.2,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "10188-1",
+     "name": "Death Star - UCS"
+    },
+    {
+     "no": "10198-1",
+     "name": "Tantive IV"
+    },
+    {
+     "no": "10225-1",
+     "name": "R2-D2 - UCS"
+    },
+    {
+     "no": "10240-1",
+     "name": "Red Five X-wing Starfighter - UCS"
+    },
+    {
+     "no": "7877-1",
+     "name": "Naboo Starfighter"
+    },
+    {
+     "no": "8038-1",
+     "name": "The Battle of Endor"
+    },
+    {
+     "no": "8092-1",
+     "name": "Luke's Landspeeder"
+    },
+    {
+     "no": "9490-1",
+     "name": "Droid Escape"
+    },
+    {
+     "no": "9493-1",
+     "name": "X-wing Starfighter"
+    },
+    {
+     "no": "9494-1",
+     "name": "Anakin's Jedi Interceptor"
+    }
+   ]
+  },
+  "sw0222": {
+   "type": "MINIFIG",
+   "name": "Assassin Droid - Black (Elite)",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 2.42,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7930-1",
+     "name": "Bounty Hunter Assault Gunship"
+    },
+    {
+     "no": "8015-1",
+     "name": "Assassin Droids Battle Pack"
+    },
+    {
+     "no": "8128-1",
+     "name": "Cad Bane's Speeder"
+    }
+   ]
+  },
+  "sw0226": {
+   "type": "MINIFIG",
+   "name": "Nahdar Vebb",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 3.86,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "8095-1",
+     "name": "General Grievous' Starfighter"
+    }
+   ]
+  },
+  "sw0229": {
+   "type": "MINIFIG",
+   "name": "Assassin Droid - Metallic Silver",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 2.46,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "8015-1",
+     "name": "Assassin Droids Battle Pack"
+    }
+   ]
+  },
+  "sw0242": {
+   "type": "MINIFIG",
+   "name": "Nute Gunray - Dark Red Outfit, Dark Bluish Gray Headgear",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7958-3",
+     "name": "Advent Calendar 2011, Star Wars (Day  2) - Nute Gunray"
+    },
+    {
+     "no": "8036-1",
+     "name": "Separatist Shuttle"
+    }
+   ]
+  },
+  "sw0252": {
+   "type": "MINIFIG",
+   "name": "Hoth Rebel - Light Nougat Head, White Visor Snow Goggles",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 4.39,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7749-1",
+     "name": "Echo Base"
+    }
+   ]
+  },
+  "sw0259": {
+   "type": "MINIFIG",
+   "name": "Hoth Rebel Trooper (Orange Chin Dimple)",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 4.55,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "8083-1",
+     "name": "Rebel Trooper Battle Pack"
+    }
+   ]
+  },
+  "sw0260": {
+   "type": "MINIFIG",
+   "name": "Zev Senesca",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 3.56,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "8083-1",
+     "name": "Rebel Trooper Battle Pack"
+    },
+    {
+     "no": "8089-1",
+     "name": "Hoth Wampa Cave"
+    }
+   ]
+  },
+  "sw0261": {
+   "type": "MINIFIG",
+   "name": "Imperial Officer with Battle Armor (Captain / Commandant / Commander) - Dark Bluish Gray Legs, Smirk",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 3.68,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "8084-1",
+     "name": "Snowtrooper Battle Pack"
+    }
+   ]
+  },
+  "sw0268a": {
+   "type": "MINIFIG",
+   "name": "Imperial TIE Fighter Pilot - Black Head, Balaclava",
+   "year": 2012,
+   "category": "Star Wars",
+   "weight_g": 4.3,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "9492-1",
+     "name": "TIE Fighter"
+    },
+    {
+     "no": "9676-1",
+     "name": "TIE Interceptor & Death Star"
+    }
+   ]
+  },
+  "sw0279": {
+   "type": "MINIFIG",
+   "name": "Boba Fett - Reddish Brown Pauldron, Helmet, Jet Pack",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 4.21,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "8097-1",
+     "name": "Slave I"
+    }
+   ]
+  },
+  "sw0284": {
+   "type": "MINIFIG",
+   "name": "Aayla Secura - Large Eyes",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 4.44,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "8098-1",
+     "name": "Clone Turbo Tank"
+    }
+   ]
+  },
+  "sw0285": {
+   "type": "MINIFIG",
+   "name": "Cad Bane - Blue Head, Dark Bluish Gray Legs",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 4.4,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "8098-1",
+     "name": "Clone Turbo Tank"
+    },
+    {
+     "no": "8128-1",
+     "name": "Cad Bane's Speeder"
+    }
+   ]
+  },
+  "sw0291": {
+   "type": "MINIFIG",
+   "name": "Hoth Rebel Trooper (Black Chin Dimple)",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 4.6,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75014-1",
+     "name": "Battle Of Hoth"
+    },
+    {
+     "no": "8129-1",
+     "name": "AT-AT Walker"
+    }
+   ]
+  },
+  "sw0296": {
+   "type": "MINIFIG",
+   "name": "Mandalorian Death Watch Warrior",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 4.08,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7914-1",
+     "name": "Mandalorian Battle Pack"
+    },
+    {
+     "no": "9525-1",
+     "name": "Pre Vizsla's Mandalorian Fighter"
+    }
+   ]
+  },
+  "sw0297": {
+   "type": "MINIFIG",
+   "name": "Clone ARF Trooper Razor / Stak, 91st Mobile Reconnaissance Corps Lightning Squadron (Phase 1) - Large Eyes",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 4.26,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7913-1",
+     "name": "Clone Trooper Battle Pack"
+    }
+   ]
+  },
+  "sw0298": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper, Horn Company (Phase 1) - Sand Green and Lime Markings, Large Eyes",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 3.75,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7913-1",
+     "name": "Clone Trooper Battle Pack"
+    }
+   ]
+  },
+  "sw0299": {
+   "type": "MINIFIG",
+   "name": "Clone Bomb Squad Trooper (Phase 1) - Large Eyes",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 3.69,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7913-1",
+     "name": "Clone Trooper Battle Pack"
+    }
+   ]
+  },
+  "sw0309": {
+   "type": "MINIFIG",
+   "name": "Shaak Ti",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 4.46,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7931-1",
+     "name": "T-6 Jedi Shuttle"
+    }
+   ]
+  },
+  "sw0314": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper Captain Rex, 501st Legion (Phase 1) - Dark Bluish Gray Rangefinder, Pauldron, and Kama, Large Eyes",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 5.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7869-1",
+     "name": "Battle for Geonosis"
+    }
+   ]
+  },
+  "sw0316": {
+   "type": "MINIFIG",
+   "name": "Savage Opress",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 3.95,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7957-1",
+     "name": "Sith Nightspeeder"
+    }
+   ]
+  },
+  "sw0319": {
+   "type": "MINIFIG",
+   "name": "Ki-Adi-Mundi - Plain Legs",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 3.5,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7959-1",
+     "name": "Geonosian Starfighter"
+    }
+   ]
+  },
+  "sw0337": {
+   "type": "MINIFIG",
+   "name": "Princess Leia - White Dress, Simple Belt, Large Eyelashes",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 3.7,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7965-1",
+     "name": "Millennium Falcon"
+    }
+   ]
+  },
+  "sw0364": {
+   "type": "MINIFIG",
+   "name": "Sandtrooper - Orange Pauldron, Survival Backpack, Dirt Stains, Balaclava Head Print and Helmet with Dotted Mouth Pattern",
+   "year": 2012,
+   "category": "Star Wars",
+   "weight_g": 7.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "9490-1",
+     "name": "Droid Escape"
+    }
+   ]
+  },
+  "sw0375": {
+   "type": "MINIFIG",
+   "name": "Astromech Droid, R5-J2",
+   "year": 2012,
+   "category": "Star Wars",
+   "weight_g": 4.59,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "9492-1",
+     "name": "TIE Fighter"
+    }
+   ]
+  },
+  "sw0377": {
+   "type": "MINIFIG",
+   "name": "Clone ARC Trooper Hammer, Rancor Battalion (Phase 2) - Dark Red Cloth Pauldron, Black Cloth Kama, Large Eyes",
+   "year": 2012,
+   "category": "Star Wars",
+   "weight_g": 5.8,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "9488-1",
+     "name": "Elite Clone Trooper & Commando Droid Battle Pack"
+    }
+   ]
+  },
+  "sw0378": {
+   "type": "MINIFIG",
+   "name": "Clone ARF Trooper, Rancor Battalion (Phase 1) - Large Eyes",
+   "year": 2012,
+   "category": "Star Wars",
+   "weight_g": 3.8,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "9488-1",
+     "name": "Elite Clone Trooper & Commando Droid Battle Pack"
+    }
+   ]
+  },
+  "sw0387": {
+   "type": "MINIFIG",
+   "name": "Queen Amidala",
+   "year": 2012,
+   "category": "Star Wars",
+   "weight_g": 6.75,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "9499-1",
+     "name": "Gungan Sub"
+    }
+   ]
+  },
+  "sw0392": {
+   "type": "MINIFIG",
+   "name": "Even Piell",
+   "year": 2012,
+   "category": "Star Wars",
+   "weight_g": 3.5,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "9498-1",
+     "name": "Saesee Tiin's Jedi Starfighter"
+    }
+   ]
+  },
+  "sw0396": {
+   "type": "MINIFIG",
+   "name": "Boba Fett - Head Beard Stubble",
+   "year": 2012,
+   "category": "Star Wars",
+   "weight_g": 5.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "9496-1",
+     "name": "Desert Skiff"
+    }
+   ]
+  },
+  "sw0399": {
+   "type": "MINIFIG",
+   "name": "Rebel Pilot X-wing",
+   "year": 2012,
+   "category": "Star Wars",
+   "weight_g": 3.52,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "9677-1",
+     "name": "X-wing Starfighter & Yavin 4"
+    }
+   ]
+  },
+  "sw0437": {
+   "type": "MINIFIG",
+   "name": "Rebel Pilot A-wing (Open Helmet, Dark Green Jumpsuit, Frown / Scared) (Arvel Crynyd)",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 3.8,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75003-1",
+     "name": "A-wing Starfighter"
+    }
+   ]
+  },
+  "sw0438": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper Sergeant (Phase 1) - Scowl",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 3.7,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75000-1",
+     "name": "Clone Troopers vs. Droidekas"
+    }
+   ]
+  },
+  "sw0439": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper Pilot, 501st Legion (Phase 2) - Large Eyes",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 3.87,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75004-1",
+     "name": "Z-95 Headhunter"
+    }
+   ]
+  },
+  "sw0442": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper (Phase 1) - Scowl",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 3.75,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75000-1",
+     "name": "Clone Troopers vs. Droidekas"
+    },
+    {
+     "no": "75007-1",
+     "name": "Republic Assault Ship & Planet Coruscant"
+    },
+    {
+     "no": "75015-1",
+     "name": "Corporate Alliance Tank Droid"
+    },
+    {
+     "no": "75016-1",
+     "name": "Homing Spider Droid"
+    },
+    {
+     "no": "75023-11",
+     "name": "Advent Calendar 2013, Star Wars (Day 10) - Clone Trooper"
+    }
+   ]
+  },
+  "sw0453": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper, 212th Attack Battalion (Phase 2) - Bright Light Orange Arms, Large Eyes",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 3.9,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75013-1",
+     "name": "Umbaran MHC (Mobile Heavy Cannon)"
+    }
+   ]
+  },
+  "sw0456": {
+   "type": "MINIFIG",
+   "name": "Astromech Droid, R4-P17 - Black Full Rectangles",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 5.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75006-1",
+     "name": "Jedi Starfighter & Planet Kamino"
+    }
+   ]
+  },
+  "sw0467": {
+   "type": "MINIFIG",
+   "name": "Battle Droid - Dark Orange, Angled Arm and Straight Arm",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 2.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75019-1",
+     "name": "AT-TE"
+    },
+    {
+     "no": "75077-1",
+     "name": "Homing Spider Droid"
+    }
+   ]
+  },
+  "sw0468": {
+   "type": "MINIFIG",
+   "name": "Jango Fett - Light Nougat Head, Smile",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 4.2,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75015-1",
+     "name": "Corporate Alliance Tank Droid"
+    }
+   ]
+  },
+  "sw0480": {
+   "type": "MINIFIG",
+   "name": "Coleman Trebor",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 3.3,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75019-1",
+     "name": "AT-TE"
+    }
+   ]
+  },
+  "sw0491": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper Pilot (Phase 1) - Bright Light Orange Markings, Scowl",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 3.75,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75021-1",
+     "name": "Republic Gunship"
+    }
+   ]
+  },
+  "sw0494": {
+   "type": "MINIFIG",
+   "name": "Mandalorian Super Commando - Large Sand Blue Eyes",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 4.15,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75022-1",
+     "name": "Mandalorian Speeder"
+    }
+   ]
+  },
+  "sw0514": {
+   "type": "MINIFIG",
+   "name": "Boba Fett, Young - Dark Azure Shirt",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 3.21,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75023-23",
+     "name": "Advent Calendar 2013, Star Wars (Day 22) - Young Boba Fett"
+    }
+   ]
+  },
+  "sw0518": {
+   "type": "MINIFIG",
+   "name": "Clone Scout Trooper, 41st Elite Corps (Phase 2) - Kashyyyk Camouflage, Scowl",
+   "year": 2014,
+   "category": "Star Wars",
+   "weight_g": 4.2,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75035-1",
+     "name": "Kashyyyk Troopers"
+    },
+    {
+     "no": "75042-1",
+     "name": "Droid Gunship"
+    },
+    {
+     "no": "75151-1",
+     "name": "Clone Turbo Tank"
+    }
+   ]
+  },
+  "sw0519": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper, 41st Elite Corps (Phase 2) - Kashyyyk Camouflage, Scowl",
+   "year": 2014,
+   "category": "Star Wars",
+   "weight_g": 3.9,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75035-1",
+     "name": "Kashyyyk Troopers"
+    },
+    {
+     "no": "75142-1",
+     "name": "Homing Spider Droid"
+    }
+   ]
+  },
+  "sw0522": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper, 212th Attack Battalion (Phase 2) - Orange Arms, Dirt Stains, Scowl",
+   "year": 2014,
+   "category": "Star Wars",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75036-1",
+     "name": "Utapau Troopers"
+    }
+   ]
+  },
+  "sw0523": {
+   "type": "MINIFIG",
+   "name": "Clone Airborne Trooper, 212th Attack Battalion (Phase 2) - Orange Arm, Dirt Stains, Light Bluish Gray Cloth Kama, Scowl",
+   "year": 2014,
+   "category": "Star Wars",
+   "weight_g": 4.2,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75036-1",
+     "name": "Utapau Troopers"
+    }
+   ]
+  },
+  "sw0527a": {
+   "type": "MINIFIG",
+   "name": "Astromech Droid, R2-D2 - Flat Silver Head, Lavender Dots and Small Receptor",
+   "year": 2014,
+   "category": "Star Wars",
+   "weight_g": 5.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "4002019-1",
+     "name": "2019 Employee Exclusive - Christmas X-wing"
+    },
+    {
+     "no": "75059-1",
+     "name": "Sandcrawler - UCS"
+    },
+    {
+     "no": "75092-1",
+     "name": "Naboo Starfighter"
+    },
+    {
+     "no": "75096-1",
+     "name": "Sith Infiltrator"
+    },
+    {
+     "no": "75136-1",
+     "name": "Droid Escape Pod"
+    },
+    {
+     "no": "75159-1",
+     "name": "Death Star - UCS"
+    },
+    {
+     "no": "75168-1",
+     "name": "Yoda's Jedi Starfighter"
+    },
+    {
+     "no": "75214-1",
+     "name": "Anakin's Jedi Starfighter"
+    },
+    {
+     "no": "75218-1",
+     "name": "X-Wing Starfighter"
+    },
+    {
+     "no": "75221-1",
+     "name": "Imperial Landing Craft"
+    },
+    {
+     "no": "75222-1",
+     "name": "Betrayal at Cloud City"
+    },
+    {
+     "no": "75228-1",
+     "name": "Escape Pod vs. Dewback Microfighters"
+    },
+    {
+     "no": "75235-1",
+     "name": "X-wing Starfighter Trench Run"
+    },
+    {
+     "no": "75244-1",
+     "name": "Tantive IV"
+    },
+    {
+     "no": "75257-1",
+     "name": "Millennium Falcon"
+    },
+    {
+     "no": "75522-1",
+     "name": "Mini Boost Droid Commander polybag"
+    },
+    {
+     "no": "912057-1",
+     "name": "R2-D2 + MSE-6 foil pack"
+    }
+   ]
+  },
+  "sw0532": {
+   "type": "MINIFIG",
+   "name": "Chewbacca - Dark Brown, Medium Nougat Fur",
+   "year": 2014,
+   "category": "Star Wars",
+   "weight_g": 5.05,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "40658-1",
+     "name": "Millennium Falcon Holiday Diorama"
+    },
+    {
+     "no": "75042-1",
+     "name": "Droid Gunship"
+    },
+    {
+     "no": "75094-1",
+     "name": "Imperial Shuttle Tydirium"
+    },
+    {
+     "no": "75105-1",
+     "name": "Millennium Falcon"
+    },
+    {
+     "no": "75159-1",
+     "name": "Death Star - UCS"
+    },
+    {
+     "no": "75174-1",
+     "name": "Desert Skiff Escape"
+    },
+    {
+     "no": "75180-1",
+     "name": "Rathtar Escape"
+    },
+    {
+     "no": "75192-1",
+     "name": "Millennium Falcon - UCS {2nd edition}"
+    },
+    {
+     "no": "75193-1",
+     "name": "Millennium Falcon Microfighter"
+    },
+    {
+     "no": "75222-1",
+     "name": "Betrayal at Cloud City"
+    },
+    {
+     "no": "75234-1",
+     "name": "AT-AP Walker"
+    },
+    {
+     "no": "75245-8",
+     "name": "Advent Calendar 2019, Star Wars (Day  7) - Chewbacca"
+    },
+    {
+     "no": "75257-1",
+     "name": "Millennium Falcon"
+    },
+    {
+     "no": "75290-1",
+     "name": "Mos Eisley Cantina"
+    },
+    {
+     "no": "75339-1",
+     "name": "Death Star Trash Compactor Diorama"
+    },
+    {
+     "no": "75365-1",
+     "name": "Yavin 4 Rebel Base"
+    },
+    {
+     "no": "75371-1",
+     "name": "Chewbacca"
+    },
+    {
+     "no": "75396-1",
+     "name": "Desert Skiff & Sarlacc Pit"
+    },
+    {
+     "no": "75419-1",
+     "name": "Death Star - UCS"
+    },
+    {
+     "no": "912404-1",
+     "name": "Chewbacca paper bag"
+    }
+   ]
+  },
+  "sw0541": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper (Phase 2) - Light Nougat Head",
+   "year": 2014,
+   "category": "Star Wars",
+   "weight_g": 3.9,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75028-1",
+     "name": "Clone Turbo Tank"
+    }
+   ]
+  },
+  "sw0544": {
+   "type": "MINIFIG",
+   "name": "Rebel Pilot X-wing (Theron Nett)",
+   "year": 2014,
+   "category": "Star Wars",
+   "weight_g": 3.54,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75032-1",
+     "name": "X-Wing Fighter"
+    }
+   ]
+  },
+  "sw0569": {
+   "type": "MINIFIG",
+   "name": "Luke Skywalker (Pilot, Printed Legs, Cheek Lines)",
+   "year": 2014,
+   "category": "Star Wars",
+   "weight_g": 3.54,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75049-1",
+     "name": "Snowspeeder"
+    }
+   ]
+  },
+  "sw0576": {
+   "type": "MINIFIG",
+   "name": "Hera Syndulla - Dark Tan Arms",
+   "year": 2014,
+   "category": "Star Wars",
+   "weight_g": 4.6,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75053-1",
+     "name": "The Ghost"
+    },
+    {
+     "no": "75127-1",
+     "name": "The Ghost"
+    }
+   ]
+  },
+  "sw0581": {
+   "type": "MINIFIG",
+   "name": "AT-AT Driver - Dark Red Imperial Logo, Grimacing",
+   "year": 2014,
+   "category": "Star Wars",
+   "weight_g": 4.3,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75054-1",
+     "name": "AT-AT"
+    },
+    {
+     "no": "75075-1",
+     "name": "AT-AT"
+    }
+   ]
+  },
+  "sw0605": {
+   "type": "MINIFIG",
+   "name": "Clone Airborne Trooper (Phase 2) - Geonosis Camouflage, Smirk",
+   "year": 2015,
+   "category": "Star Wars",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75089-1",
+     "name": "Geonosis Troopers"
+    }
+   ]
+  },
+  "sw0613": {
+   "type": "MINIFIG",
+   "name": "Senate Commando Captain - Printed Legs",
+   "year": 2015,
+   "category": "Star Wars",
+   "weight_g": 3.8,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75088-1",
+     "name": "Senate Commando Troopers"
+    }
+   ]
+  },
+  "sw0614": {
+   "type": "MINIFIG",
+   "name": "Senate Commando - Printed Legs",
+   "year": 2015,
+   "category": "Star Wars",
+   "weight_g": 3.8,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75088-1",
+     "name": "Senate Commando Troopers"
+    }
+   ]
+  },
+  "sw0620": {
+   "type": "MINIFIG",
+   "name": "Tusken Raider - Dark Tan Head with Spikes, Crossed Belts, Printed Legs",
+   "year": 2015,
+   "category": "Star Wars",
+   "weight_g": 3.69,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75081-1",
+     "name": "T-16 Skyhopper"
+    },
+    {
+     "no": "75173-1",
+     "name": "Luke's Landspeeder"
+    },
+    {
+     "no": "75198-1",
+     "name": "Tatooine Battle Pack"
+    }
+   ]
+  },
+  "sw0630": {
+   "type": "MINIFIG",
+   "name": "Imperial Stormtrooper Sergeant",
+   "year": 2015,
+   "category": "Star Wars",
+   "weight_g": 4.1,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "5002938-1",
+     "name": "Stormtrooper Sergeant polybag"
+    }
+   ]
+  },
+  "sw0636": {
+   "type": "MINIFIG",
+   "name": "Darth Vader (Type 2 Helmet)",
+   "year": 2015,
+   "category": "Star Wars",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75093-1",
+     "name": "Death Star Final Duel"
+    }
+   ]
+  },
+  "sw0645": {
+   "type": "MINIFIG",
+   "name": "Endor Rebel Trooper - Olive Green",
+   "year": 2015,
+   "category": "Star Wars",
+   "weight_g": 3.76,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75094-1",
+     "name": "Imperial Shuttle Tydirium"
+    }
+   ]
+  },
+  "sw0691": {
+   "type": "MINIFIG",
+   "name": "Imperial Jet Pack Trooper (Jumptrooper)",
+   "year": 2016,
+   "category": "Star Wars",
+   "weight_g": 5.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75134-1",
+     "name": "Galactic Empire Battle Pack"
+    }
+   ]
+  },
+  "sw0704": {
+   "type": "MINIFIG",
+   "name": "Obi-Wan Kenobi (Headset)",
+   "year": 2016,
+   "category": "Star Wars",
+   "weight_g": 3.5,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75135-1",
+     "name": "Obi-Wan's Jedi Interceptor"
+    }
+   ]
+  },
+  "sw0713": {
+   "type": "MINIFIG",
+   "name": "Wookiee - Reddish Brown with Dark Tan Fur, Printed Legs, Plain Arms",
+   "year": 2016,
+   "category": "Star Wars",
+   "weight_g": 5.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75129-1",
+     "name": "Wookiee Gunship"
+    }
+   ]
+  },
+  "sw0759": {
+   "type": "MINIFIG",
+   "name": "Ahsoka Tano (Adult) - Dark Bluish Gray Vest, Tan Tunic, Plain Arms, Dark Brown Legs",
+   "year": 2016,
+   "category": "Star Wars",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75158-1",
+     "name": "Rebel Combat Frigate"
+    }
+   ]
+  },
+  "sw0782": {
+   "type": "MINIFIG",
+   "name": "K-2SO Droid - Dark Bluish Gray and Silver Chest Panel",
+   "year": 2016,
+   "category": "Star Wars",
+   "weight_g": 2.5,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75156-1",
+     "name": "Krennic's Imperial Shuttle"
+    }
+   ]
+  },
+  "sw0802": {
+   "type": "MINIFIG",
+   "name": "Imperial Shuttle Pilot - Light Nougat Head with Headset, Imperial Officer Cap",
+   "year": 2017,
+   "category": "Star Wars",
+   "weight_g": 3.6,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75163-1",
+     "name": "Krennic's Imperial Shuttle Microfighter"
+    },
+    {
+     "no": "75221-1",
+     "name": "Imperial Landing Craft"
+    },
+    {
+     "no": "911832-1",
+     "name": "Imperial Shuttle Pilot foil pack"
+    }
+   ]
+  },
+  "sw0808": {
+   "type": "MINIFIG",
+   "name": "Darth Maul - Horns, Printed Legs, Open Mouth",
+   "year": 2017,
+   "category": "Star Wars",
+   "weight_g": 3.1,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75169-1",
+     "name": "Duel on Naboo"
+    },
+    {
+     "no": "75224-1",
+     "name": "Sith Infiltrator Microfighter"
+    }
+   ]
+  },
+  "sw0830": {
+   "type": "MINIFIG",
+   "name": "4-LOM - Plain Arms",
+   "year": 2017,
+   "category": "Star Wars",
+   "weight_g": 3.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75167-1",
+     "name": "Bounty Hunter Speeder Bike Battle Pack"
+    },
+    {
+     "no": "75243-1",
+     "name": "Slave I - 20th Anniversary Edition"
+    }
+   ]
+  },
+  "sw0834": {
+   "type": "MINIFIG",
+   "name": "Darth Vader (Light Nougat Head, Plain Arms)",
+   "year": 2017,
+   "category": "Star Wars",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "5005376-1",
+     "name": "Darth Vader Pod polybag"
+    },
+    {
+     "no": "75183-1",
+     "name": "Darth Vader Transformation"
+    }
+   ]
+  },
+  "sw0904": {
+   "type": "MINIFIG",
+   "name": "Captain Phasma (Pointed Mouth Pattern)",
+   "year": 2018,
+   "category": "Star Wars",
+   "weight_g": 4.2,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75201-1",
+     "name": "First Order AT-ST"
+    }
+   ]
+  },
+  "sw0909": {
+   "type": "MINIFIG",
+   "name": "Barriss Offee - Dark Blue Cape and Hood, Black Skirt",
+   "year": 2018,
+   "category": "Star Wars",
+   "weight_g": 4.2,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75206-1",
+     "name": "Jedi and Clone Troopers Battle Pack"
+    }
+   ]
+  },
+  "sw0910": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper (Phase 1) - Printed Legs, Scowl",
+   "year": 2018,
+   "category": "Star Wars",
+   "weight_g": 3.6,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75206-1",
+     "name": "Jedi and Clone Troopers Battle Pack"
+    }
+   ]
+  },
+  "sw0911": {
+   "type": "MINIFIG",
+   "name": "Ki-Adi-Mundi - Printed Legs, Nougat Eye Shadow",
+   "year": 2018,
+   "category": "Star Wars",
+   "weight_g": 3.6,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75206-1",
+     "name": "Jedi and Clone Troopers Battle Pack"
+    }
+   ]
+  },
+  "sw0939": {
+   "type": "MINIFIG",
+   "name": "Anakin Skywalker (Black Legs, Headset)",
+   "year": 2018,
+   "category": "Star Wars",
+   "weight_g": 3.6,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75214-1",
+     "name": "Anakin's Jedi Starfighter"
+    }
+   ]
+  },
+  "sw0961": {
+   "type": "MINIFIG",
+   "name": "Sandtrooper Squad Leader (Captain) - Orange Pauldron, Ammo Pouch, Dirt Stains, Survival Backpack",
+   "year": 2018,
+   "category": "Star Wars",
+   "weight_g": 5.7,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75221-1",
+     "name": "Imperial Landing Craft"
+    }
+   ]
+  },
+  "sw1093": {
+   "type": "MINIFIG",
+   "name": "Clone Jet Trooper, 501st Legion (Phase 2) - Nougat Head",
+   "year": 2020,
+   "category": "Star Wars",
+   "weight_g": 4.4,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75280-1",
+     "name": "501st Legion Clone Troopers"
+    }
+   ]
+  },
+  "sw1094": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper, 501st Legion (Phase 2) - White Arms, Nougat Head",
+   "year": 2020,
+   "category": "Star Wars",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75280-1",
+     "name": "501st Legion Clone Troopers"
+    },
+    {
+     "no": "912281-1",
+     "name": "Clone Trooper foil pack"
+    }
+   ]
+  },
+  "sw1096": {
+   "type": "MINIFIG",
+   "name": "Ahsoka Tano (Adult) - Dark Blue Jumpsuit",
+   "year": 2020,
+   "category": "Star Wars",
+   "weight_g": 4.7,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "75283-1",
+     "name": "Armored Assault Tank (AAT)"
+    },
+    {
+     "no": "75310-1",
+     "name": "Duel on Mandalore"
+    }
+   ]
   }
  },
  "figsets": {
@@ -2936,19 +4936,94 @@
   "sw0196": 1,
   "sw0198": 2,
   "sw0209": 3,
+  "sw0216s": 1,
+  "sw0217": 10,
   "sw0217a": 1,
+  "sw0222": 3,
+  "sw0226": 1,
+  "sw0229": 1,
+  "sw0242": 2,
+  "sw0252": 1,
+  "sw0259": 1,
+  "sw0260": 2,
+  "sw0261": 1,
+  "sw0268a": 2,
+  "sw0279": 1,
+  "sw0284": 1,
+  "sw0285": 2,
+  "sw0291": 2,
+  "sw0296": 2,
+  "sw0297": 1,
+  "sw0298": 1,
+  "sw0299": 1,
+  "sw0309": 1,
+  "sw0314": 1,
+  "sw0316": 1,
+  "sw0319": 1,
+  "sw0337": 1,
+  "sw0364": 1,
+  "sw0375": 1,
+  "sw0377": 1,
+  "sw0378": 1,
+  "sw0387": 1,
+  "sw0392": 1,
+  "sw0396": 1,
+  "sw0399": 1,
   "sw0402": 2,
+  "sw0437": 1,
+  "sw0438": 1,
+  "sw0439": 1,
+  "sw0442": 5,
+  "sw0453": 1,
+  "sw0456": 1,
+  "sw0467": 2,
+  "sw0468": 1,
+  "sw0480": 1,
   "sw0483": 1,
   "sw0485": 1,
   "sw0486": 2,
   "sw0487": 1,
+  "sw0491": 1,
+  "sw0494": 1,
+  "sw0514": 1,
+  "sw0518": 3,
+  "sw0519": 2,
+  "sw0522": 1,
+  "sw0523": 1,
+  "sw0527a": 17,
+  "sw0532": 20,
+  "sw0541": 1,
+  "sw0544": 1,
   "sw0565": 4,
+  "sw0569": 1,
   "sw0574": 2,
+  "sw0576": 2,
+  "sw0581": 2,
+  "sw0605": 1,
+  "sw0613": 1,
+  "sw0614": 1,
+  "sw0620": 3,
   "sw0625": 2,
+  "sw0630": 1,
+  "sw0636": 1,
+  "sw0645": 1,
+  "sw0691": 1,
+  "sw0704": 1,
+  "sw0713": 1,
   "sw0758": 1,
   "sw0759": 1,
   "sw0778": 8,
+  "sw0782": 1,
   "sw0802": 3,
+  "sw0808": 2,
+  "sw0830": 2,
+  "sw0834": 2,
+  "sw0904": 1,
+  "sw0909": 1,
+  "sw0910": 1,
+  "sw0911": 1,
+  "sw0939": 1,
+  "sw0961": 1,
   "sw0996": 3,
   "sw1093": 1,
   "sw1094": 2,
@@ -3023,101 +5098,305 @@
   "sw1483": 1,
   "sw1488": 1
  },
- "values": {
-  "10225-1": {
-   "huf": 67010,
+ "figvalues": {
+  "sw0001c": {
+   "eur": 1.46,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "20009-1": {
-   "huf": 11838,
+  "sw0001d": {
+   "eur": 1.48,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "30611-1": {
-   "huf": 6565,
+  "sw0217a": {
+   "eur": 8.06,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "4479-1": {
-   "huf": 61206,
+  "sw0402": {
+   "eur": 39.24,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "6210-1": {
-   "huf": 203644,
+  "sw0483": {
+   "eur": 52.65,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "75020-1": {
-   "huf": 106545,
+  "sw0485": {
+   "eur": 85.08,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "75182-1": {
-   "huf": 29363,
+  "sw0486": {
+   "eur": 35.97,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "75283-1": {
-   "huf": 18261,
+  "sw0487": {
+   "eur": 12.71,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "75308-1": {
-   "huf": 59523,
+  "sw0565": {
+   "eur": 7.92,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "75337-1": {
-   "huf": 38769,
+  "sw0574": {
+   "eur": 15.61,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "75342-1": {
-   "huf": 14546,
+  "sw0625": {
+   "eur": 38.78,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "75347-1": {
-   "huf": 13972,
+  "sw0758": {
+   "eur": 59.33,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "75379-1": {
-   "huf": 21914,
+  "sw0759": {
+   "eur": 282.95,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "75383-1": {
-   "huf": 24203,
+  "sw0778": {
+   "eur": 4.79,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "75397-1": {
-   "huf": 152427,
+  "sw0802": {
+   "eur": 6.38,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "7675-1": {
-   "huf": 177020,
+  "sw0996": {
+   "eur": 4.48,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "7679-1": {
-   "huf": 106180,
+  "sw1093": {
+   "eur": 5.21,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "7961-1": {
-   "huf": 44003,
+  "sw1094": {
+   "eur": 4.56,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "8009-1": {
-   "huf": 12562,
+  "sw1096": {
+   "eur": 7.96,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "8018-1": {
-   "huf": 76708,
+  "sw1097": {
+   "eur": 8.19,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "911613-1": {
-   "huf": 1452,
+  "sw1107": {
+   "eur": 8.88,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "912058-1": {
-   "huf": 1241,
+  "sw1113": {
+   "eur": 2.64,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "912171-1": {
-   "huf": 966,
+  "sw1148": {
+   "eur": 12.33,
+   "cond": "N",
    "at": "2026-11-01"
   },
-  "912313-1": {
-   "huf": 1097,
+  "sw1149": {
+   "eur": 30.9,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1150": {
+   "eur": 37.39,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1151": {
+   "eur": 25.63,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1152": {
+   "eur": 25.84,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1153": {
+   "eur": 3.04,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1155": {
+   "eur": 7.09,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1201": {
+   "eur": 4.75,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1202": {
+   "eur": 4.02,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1205": {
+   "eur": 6.73,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1206": {
+   "eur": 9.18,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1207": {
+   "eur": 9.76,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1216": {
+   "eur": 5.77,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1220": {
+   "eur": 4.87,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1221": {
+   "eur": 3.11,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1233": {
+   "eur": 20.72,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1234": {
+   "eur": 5.53,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1235": {
+   "eur": 6.47,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1236": {
+   "eur": 10.14,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1245": {
+   "eur": 4.34,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1246": {
+   "eur": 2.88,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1247": {
+   "eur": 2.72,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1248": {
+   "eur": 2.84,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1249": {
+   "eur": 6.68,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1250": {
+   "eur": 5.79,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1251": {
+   "eur": 4.88,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1252": {
+   "eur": 2.72,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1260": {
+   "eur": 4.82,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1275": {
+   "eur": 4.44,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1285": {
+   "eur": 2.61,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1305": {
+   "eur": 4.05,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1314": {
+   "eur": 1.73,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1315": {
+   "eur": 6.51,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1319": {
+   "eur": 3.23,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1320": {
+   "eur": 1.31,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1321": {
+   "eur": 1.2,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1325": {
+   "eur": 29.15,
+   "cond": "N",
+   "at": "2026-11-01"
+  },
+  "sw1326": {
+   "eur": 3.97,
+   "cond": "N",
    "at": "2026-11-01"
   }
  }
