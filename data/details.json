@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-01T22:44:37+00:00",
+ "updated": "2026-11-01T23:07:52+00:00",
  "items": {
   "40686-1": {
    "bs_id": 48958,
@@ -2500,7 +2500,8 @@
    ],
    "ucs": false,
    "versions": [],
-   "desc_en": ""
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "cas327": {
    "type": "MINIFIG",
