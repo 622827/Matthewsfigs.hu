@@ -245,7 +245,7 @@ def fetch(item_type, no):
                     i = e.get("item", {})
                     if i.get("type") == "SET":
                         sets[i["no"]] = {"no": i["no"], "name": clean(i.get("name"))}
-            d["sets"] = sorted(sets.values(), key=lambda s: s["no"])[:30]
+            d["sets"] = sorted(sets.values(), key=lambda s: s["no"])[:80]
             FIGSETS[no] = len(sets)
     return d
 
@@ -337,12 +337,18 @@ def main():
     for i in inv.get("items", []):
         if i.get("type") in ("SET", "MINIFIG"):
             wanted[i["no"]] = i["type"]
+    # minifigures that come in our sets but aren't listed on their own also get a page (app.js setFig): fetch their set list too
+    for n, t in list(wanted.items()):
+        if t == "SET":
+            for f in (items.get(n) or {}).get("minifigs") or []:
+                wanted.setdefault(f["no"], "MINIFIG")
     today = date.today()
 
     def stale(no):
         d = items.get(no)
         if not d or (d.get("type") == "SET" and ("versions" not in d or "ucs" not in d
-                                                 or any("figs" not in v for v in d["versions"]))):
+                                                 or any("figs" not in v for v in d["versions"]))) \
+                or (d.get("type") == "MINIFIG" and len(d.get("sets") or []) == 30):   # list was cut at 30 before
             return True
         try:
             return (today - date.fromisoformat(d.get("fetched", "2000-01-01"))).days > STALE_DAYS
