@@ -46,6 +46,7 @@ function doPost(e) {
   try {
     lock.waitLock(20000);
     if (o.type === 'notify') return out_(handleNotify_(o, en));
+    if (o.type === 'request') return out_(handleRequest_(o, en));
     // ---- adatok ellenőrzése ----
     var c = o.customer || {}, b = o.billing || {};
     var cust = { name: str_(c.name, 120), email: str_(c.email, 160).toLowerCase(), phone: str_(c.phone, 40) };
@@ -145,6 +146,35 @@ function notifySheet_() {
   var sh = ss.getSheetByName(SHEET_NOTIFY) || ss.insertSheet(SHEET_NOTIFY);
   if (sh.getLastRow() === 0) { sh.appendRow(NHEAD); sh.setFrozenRows(1); }
   return sh;
+}
+
+/** Figura-rendelés a főoldali „Mi kell a seregedbe?” ablakból: név + e-mail + telefon + figuralista. */
+function handleRequest_(o, en) {
+  var c = o.customer || {}, name = str_(c.name, 120), email = str_(c.email, 160).toLowerCase(), phone = str_(c.phone, 40);
+  if (!name || !phone || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return { ok: false, error: en ? 'Missing name, e-mail or phone.' : 'Hiányzó név, e-mail vagy telefonszám.' };
+  var lines = (o.lines || []).slice(0, 80).map(function (l) {
+    return { no: str_(l.no, 40), name: str_(l.name, 200), qty: Math.max(1, Math.min(999, Math.floor(Number(l.qty)) || 1)), price: Number(l.price) > 0 ? Number(l.price) : null };
+  }).filter(function (l) { return l.name; });
+  if (!lines.length) return { ok: false, error: en ? 'The list is empty.' : 'Üres a lista.' };
+  var cache = CacheService.getScriptCache();
+  if (cache.get('rq:' + email)) return { ok: true, dup: true };
+  var text = lines.map(function (l) { return l.qty + ' × ' + (l.no ? l.no + ' ' : '') + l.name + (l.price ? ' (' + ft_(l.price) + '/db)' : ' (árajánlat)'); }).join('\n');
+  var known = lines.reduce(function (s, l) { return s + (l.price ? l.price * l.qty : 0); }, 0);
+  var ss = prop_('SHEET_ID') ? SpreadsheetApp.openById(prop_('SHEET_ID')) : SpreadsheetApp.getActiveSpreadsheet();
+  var sh = ss.getSheetByName('Figura-rendelések') || ss.insertSheet('Figura-rendelések');
+  if (sh.getLastRow() === 0) { sh.appendRow(['Időpont', 'Név', 'E-mail', 'Telefon', 'Figurák', 'Raktári érték (Ft)', 'Megjegyzés', 'Nyelv', 'Állapot']); sh.setFrozenRows(1); }
+  sh.appendRow([new Date(), name, email, "'" + phone, text, known, str_(o.note, 500), en ? 'en' : 'hu', 'új']);
+  cache.put('rq:' + email, '1', 30);
+  try {
+    GmailApp.sendEmail(email, en ? 'We received your minifigure order' : 'Megkaptuk a figura-rendelésed',
+      (en ? 'Hi ' + name + ',\n\nThanks! We received your list:\n\n' + text + '\n\nWe will get back to you soon with availability and a quote. Nothing is charged until you confirm.\n\nMatthew\'s Fig Supply Co.'
+          : 'Kedves ' + name + '!\n\nKöszönjük, megkaptuk a listádat:\n\n' + text + '\n\nHamarosan jelentkezünk az elérhetőséggel és az árajánlattal. Amíg nem hagyod jóvá, semmit nem rendelünk meg és nem számlázunk.\n\nMatthew\'s Fig Supply Co.'),
+      { name: "Matthew's Fig Supply Co.", replyTo: prop_('OWNER_EMAIL', SELLER.email) });
+    GmailApp.sendEmail(prop_('OWNER_EMAIL', SELLER.email), 'Figura-rendelés: ' + name + (known ? ' – raktárról ' + ft_(known) : ''),
+      name + '\n' + email + '\n' + phone + '\n\n' + text + (o.note ? '\n\nMegjegyzés: ' + str_(o.note, 500) : '') + '\n\nTáblázat: ' + ss.getUrl(),
+      { replyTo: email });
+  } catch (err) { console.error(err); }
+  return { ok: true };
 }
 
 function handleNotify_(o, en) {
