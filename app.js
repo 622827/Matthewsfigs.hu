@@ -497,7 +497,7 @@
       paras = paras.map(x => x.trim()).filter(Boolean);
       while (paras.length && paras[paras.length - 1].length < 45) paras.pop();   // a heading left without its paragraph
       if (!paras.length) return "";
-      return `<div class="pd-official"><p class="pd-official__k">${hu ? "A LEGO hivatalos leírása" : "LEGO's official description"}</p>${paras.map(x => `<p>${esc(x)}</p>`).join("")}</div>`;
+      return `<div class="pd-official">${paras.map(x => `<p>${esc(x)}</p>`).join("")}</div>`;
     })();
     // BrickLink catalogue facts (data/details.json, scripts/catalog_details.py)
     const D = DETAILS[i.no] || {};
