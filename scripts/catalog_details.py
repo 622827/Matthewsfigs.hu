@@ -43,8 +43,6 @@ def num(v):
 
 
 REBRICKABLE_SETS = "https://cdn.rebrickable.com/media/downloads/sets.csv.gz"   # nyilvános, szabadon letölthető adatbázis
-VALUE_DAYS = 14          # a piaci értéket kéthetente frissítjük
-MAX_VALUES = int(os.environ.get("DETAILS_MAX_VALUES", "60"))
 _RB = None
 
 
@@ -82,18 +80,6 @@ def versions_of(no, name):
     if len(same) < 2 or not any(v["no"] == no for v in same):
         return []
     return sorted(same, key=lambda v: (v["year"] or 0, v["no"]))
-
-
-def market_value(no):
-    """BrickLink price guide: average sold price, new, last 6 months, in HUF (falls back to current listings)."""
-    seg = urllib.parse.quote(no)
-    for guide in ("sold", "stock"):
-        p = get(f"/items/SET/{seg}/price", {"guide_type": guide, "new_or_used": "N", "currency_code": "HUF"})
-        if p:
-            v = num(p.get("qty_avg_price")) or num(p.get("avg_price"))
-            if v:
-                return round(v)
-    return None
 
 
 # Brickset API (ingyenes kulcs: brickset.com/tools/webservices/requestkey → GitHub Secret BRICKSET_API_KEY):
@@ -249,13 +235,6 @@ def main():
             items[n].update(r)
             changed = True
 
-    # piaci érték (BrickLink árkalauz) minden szett-kiadáshoz, kéthetente frissítve
-    values = out.get("values", {})
-    need = sorted({v["no"] for d in items.values() for v in d.get("versions", [])})
-    old = [n for n in need if not values.get(n) or (today - date.fromisoformat(values[n].get("at", "2000-01-01"))).days > VALUE_DAYS]
-    for n in old[:MAX_VALUES]:
-        values[n] = {"huf": market_value(n), "at": today.isoformat()}
-        changed = True
     if not changed:
         print("Nincs új katalógusadat.")
         return
@@ -264,7 +243,6 @@ def main():
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "items": dict(sorted(items.items())),
         "figsets": dict(sorted(FIGSETS.items())),
-        "values": dict(sorted(values.items())),
     }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"Mentve: {OUT}")
 

@@ -425,15 +425,18 @@
     const verList = vers ? `<section class="pd-vers">
       <h2>${hu ? `Minden „${esc(i.name)}” kiadás` : `All ${esc(i.name)} sets`}</h2>
       <div class="pd-vers__wrap"><table class="pd-vers__t">
-        <thead><tr><th>${hu ? "Szett" : "Set"}</th><th>${hu ? "Év" : "Year"}</th><th>${hu ? "Elem" : "Pieces"}</th><th>${hu ? "Piaci érték*" : "Value*"}</th><th>${hu ? "Ft / elem" : "Per piece"}</th></tr></thead>
+        <thead><tr><th>${hu ? "Szett" : "Set"}</th><th>${hu ? "Év" : "Year"}</th><th>${hu ? "Elem" : "Pieces"}</th><th>${hu ? "Nálunk" : "With us"}</th></tr></thead>
         <tbody>${vers.map(v => {
-          const o = v.no === i.no ? null : ours(v.no), me = v.no === i.no, val = (VALUES[v.no] || {}).huf;
-          const nm = `${esc(v.no.replace(/-1$/, ""))} ${esc(v.name)}`;
+          const me = v.no === i.no, o = me ? i : ours(v.no), nm = `${esc(v.no.replace(/-1$/, ""))} ${esc(v.name)}`;
+          // what the visitor can do with this release here: open our page, pre-order, or ask us to source it
+          const act = me ? `<span class="pd-vers__here">${hu ? "Ezt nézed" : "You're here"}</span>`
+            : o && !o.preorder ? `<a class="pd-vers__btn" href="${esc(productUrl(o))}">${money(o.price)} →</a>`
+            : o ? `<a class="pd-vers__btn is-pre" href="${esc(productUrl(o))}">${hu ? "Előrendelés" : "Pre-order"} →</a>`
+            : `<button type="button" class="pd-vers__btn is-pre" data-source="${esc(v.no)}" data-name="${esc(v.name)}">${hu ? "Beszerezzük" : "We'll source it"}</button>`;
           return `<tr${me ? ' class="is-me"' : ""}>
-            <td><span class="pd-vers__set"><img src="${esc(v.img)}" alt="" loading="lazy">${o ? `<a href="${esc(productUrl(o))}">${nm}</a>` : `<span>${nm}</span>`}${o && !o.preorder ? `<small>${hu ? "Nálunk" : "Ours"}: ${money(o.price)}</small>` : ""}</span></td>
-            <td>${v.year || "–"}</td><td>${v.pieces ? nf(v.pieces) : "–"}</td>
-            <td>${val ? money(val) : "–"}</td><td>${val && v.pieces ? money(Math.round(val / v.pieces)) : "–"}</td></tr>`; }).join("")}</tbody></table></div>
-      <p class="co-muted co-small">* ${hu ? "BrickLink átlagos eladási ár, új állapot, elmúlt 6 hónap. Kiadások: Rebrickable." : "BrickLink average sold price, new, last 6 months. Releases: Rebrickable."}</p></section>` : "";
+            <td><span class="pd-vers__set"><img src="${esc(v.img)}" alt="" loading="lazy">${o && !me ? `<a href="${esc(productUrl(o))}">${nm}</a>` : `<span>${nm}</span>`}</span></td>
+            <td>${v.year || "–"}</td><td>${v.pieces ? nf(v.pieces) : "–"}</td><td>${act}</td></tr>`; }).join("")}</tbody></table></div>
+      <p class="co-muted co-small">${hu ? "Ami nincs raktáron, azt egyedi rendelésre beszerezzük. Kiadások: Rebrickable." : "If it's not in stock, we can source it for you. Releases: Rebrickable."}</p></section>` : "";
     const setList = D.sets && D.sets.length ? `<h2>${hu ? "Ezekben a szettekben szerepelt" : "Appears in these sets"}</h2>
       <ul class="pd-list pd-cols">${D.sets.map(s => linkItem(s.no, s.name, 1)).join("")}</ul>` : "";
     // static product photos (no spinning model here): box + built set for sets, catalogue photo for minifigures
@@ -507,6 +510,11 @@
       };
       b.addEventListener("click", go);
       b.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(e); });
+    });
+    // other releases we don't stock: "we'll source it" opens the pre-order dialog
+    root.querySelectorAll("[data-source]").forEach(btn => btn.onclick = () => {
+      const it = { no: btn.dataset.source, name: btn.dataset.name, type: "SET", preorder: true };
+      askNotify(it, wantLink(it), "want");
     });
     // quantity stepper (max = stock); the Messenger link follows the chosen quantity
     const qIn = $("pdQty");
