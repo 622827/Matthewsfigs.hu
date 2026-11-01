@@ -523,3 +523,18 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 .lang{display:inline-flex;align-items:center;gap:7px;padding:5px 10px}
 .lang .flag{width:24px;height:16px;border-radius:3px;box-shadow:0 0 0 1px rgba(255,255,255,.35);flex:none;display:block}
 @media (max-width:560px){.lang span{display:none}.lang{padding:6px 8px}}
+.pd-figs{display:grid;gap:28px}
+.pd-figsec h2,.pd-vers h2{font-size:22px;color:var(--green);margin:8px 0 4px}
+.pd-figsec>p{margin:0 0 14px;font-size:15px}
+.pd-vers__wrap{overflow-x:auto;background:#fff;border:1.5px solid var(--line);border-radius:var(--r);margin-top:10px}
+.pd-vers__t{width:100%;border-collapse:collapse;font-size:15px}
+.pd-vers__t th{text-align:right;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--muted);padding:10px 12px;border-bottom:1.5px solid var(--line);white-space:nowrap}
+.pd-vers__t th:first-child,.pd-vers__t td:first-child{text-align:left}
+.pd-vers__t td{text-align:right;padding:10px 12px;border-bottom:1px solid var(--line);white-space:nowrap}
+.pd-vers__t tr:last-child td{border-bottom:0}
+.pd-vers__t tr.is-me td{font-weight:700;background:#fffbe8}
+.pd-vers__set{display:grid;grid-template-columns:52px auto;column-gap:10px;align-items:center;white-space:normal;min-width:180px}
+.pd-vers__set img{width:52px;height:38px;object-fit:contain;grid-row:span 2}
+.pd-vers__set a{color:var(--green);font-weight:600}
+.pd-vers__set small{color:var(--muted);font-weight:600;font-size:12px}
+.pd>*,.pd-figs,.pd-vers{min-width:0}

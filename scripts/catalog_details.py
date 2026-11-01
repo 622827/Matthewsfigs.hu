@@ -8,7 +8,7 @@ tényadatokat tölt le minden szetthez és minifigurához:
 Csak a hiányzó vagy 90 napnál régebbi tételeket kéri le, futásonként legfeljebb MAX_ITEMS-et,
 így bőven belefér a BrickLink napi API-keretébe. Hiba esetén a meglévő adatok maradnak.
 """
-import html, json, os, sys, urllib.parse
+import csv, gzip, html, io, json, os, re, sys, urllib.parse, urllib.request
 from datetime import date, datetime, timezone
 from pathlib import Path
 
@@ -22,9 +22,9 @@ MAX_ITEMS = int(os.environ.get("DETAILS_MAX", "80"))
 STALE_DAYS = 90
 
 
-def get(path):
+def get(path, params=None):
     try:
-        return oauth_get(API + path)
+        return oauth_get(API + path, params)   # query params must go here: they are part of the OAuth signature
     except (Exception, SystemExit) as e:   # oauth_get exits on API errors
         print(f"  ! {path}: {e}")
         return None
@@ -40,6 +40,60 @@ def num(v):
         return f if f > 0 else None
     except (TypeError, ValueError):
         return None
+
+
+REBRICKABLE_SETS = "https://cdn.rebrickable.com/media/downloads/sets.csv.gz"   # nyilvános, szabadon letölthető adatbázis
+VALUE_DAYS = 14          # a piaci értéket kéthetente frissítjük
+MAX_VALUES = int(os.environ.get("DETAILS_MAX_VALUES", "60"))
+_RB = None
+
+
+def rb_sets():
+    """Rebrickable set list: normalized name -> [{no, name, year, pieces, img}] (only real sets, 20+ pieces)."""
+    global _RB
+    if _RB is None:
+        _RB = {}
+        try:
+            req = urllib.request.Request(REBRICKABLE_SETS, headers={"User-Agent": "matthewsfigs.hu"})
+            with urllib.request.urlopen(req, timeout=60) as r:
+                rows = csv.DictReader(io.TextIOWrapper(gzip.GzipFile(fileobj=io.BytesIO(r.read())), encoding="utf-8"))
+                for row in rows:
+                    try:
+                        pcs = int(row["num_parts"] or 0)
+                    except ValueError:
+                        pcs = 0
+                    if pcs < 20:
+                        continue
+                    _RB.setdefault(norm_name(row["name"]), []).append({
+                        "no": row["set_num"], "name": row["name"], "year": int(row["year"] or 0) or None,
+                        "pieces": pcs, "img": row["img_url"]})
+        except Exception as e:
+            print(f"  ! Rebrickable-lista: {e}")
+    return _RB
+
+
+def norm_name(s):
+    return re.sub(r"[^a-z0-9]+", " ", str(s).lower().replace("’", "'")).strip()
+
+
+def versions_of(no, name):
+    """Other releases with the same name (e.g. 6210 / 75020 / 75397 Jabba's Sail Barge)."""
+    same = rb_sets().get(norm_name(name), [])
+    if len(same) < 2 or not any(v["no"] == no for v in same):
+        return []
+    return sorted(same, key=lambda v: (v["year"] or 0, v["no"]))
+
+
+def market_value(no):
+    """BrickLink price guide: average sold price, new, last 6 months, in HUF (falls back to current listings)."""
+    seg = urllib.parse.quote(no)
+    for guide in ("sold", "stock"):
+        p = get(f"/items/SET/{seg}/price", {"guide_type": guide, "new_or_used": "N", "currency_code": "HUF"})
+        if p:
+            v = num(p.get("qty_avg_price")) or num(p.get("avg_price"))
+            if v:
+                return round(v)
+    return None
 
 
 CATS = {}
@@ -98,6 +152,8 @@ def fetch(item_type, no):
             for f in figs.values():
                 f["sets"] = fig_set_count(f["no"])   # 1 = exclusive to this set
             d["minifigs"] = sorted(figs.values(), key=lambda f: f["no"])
+        d["versions"] = [{"no": v["no"], "name": v["name"], "year": v["year"], "pieces": v["pieces"], "img": v["img"]}
+                         for v in versions_of(no, d["name"])]
     elif item_type == "MINIFIG":
         sup = get(f"/items/MINIFIG/{seg}/supersets")
         if sup is not None:
@@ -128,7 +184,7 @@ def main():
 
     def stale(no):
         d = items.get(no)
-        if not d:
+        if not d or (d.get("type") == "SET" and "versions" not in d):
             return True
         try:
             return (today - date.fromisoformat(d.get("fetched", "2000-01-01"))).days > STALE_DAYS
@@ -144,6 +200,13 @@ def main():
             items[no] = d
             changed = True
             print(f"  {no}: {d.get('year')} · {d.get('category')} · {d.get('pieces', '')}")
+    # piaci érték (BrickLink árkalauz) minden szett-kiadáshoz, kéthetente frissítve
+    values = out.get("values", {})
+    need = sorted({v["no"] for d in items.values() for v in d.get("versions", [])})
+    old = [n for n in need if not values.get(n) or (today - date.fromisoformat(values[n].get("at", "2000-01-01"))).days > VALUE_DAYS]
+    for n in old[:MAX_VALUES]:
+        values[n] = {"huf": market_value(n), "at": today.isoformat()}
+        changed = True
     if not changed:
         print("Nincs új katalógusadat.")
         return
@@ -152,6 +215,7 @@ def main():
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "items": dict(sorted(items.items())),
         "figsets": dict(sorted(FIGSETS.items())),
+        "values": dict(sorted(values.items())),
     }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"Mentve: {OUT}")
 

@@ -86,7 +86,7 @@
   };
   // 3D product box: sets get their original LEGO box art on a cuboid,
   // minifigures turn like on a display turntable.
-  let BOXES = {}, LABELS = {}, FIGS = {}, DETAILS = {};   // assets/boxes/index.json: flattened faces cut from the box photos
+  let BOXES = {}, LABELS = {}, FIGS = {}, DETAILS = {}, VALUES = {};   // assets/boxes/index.json: flattened faces cut from the box photos
   // minifigure on a LEGO display plate: stands still, front view, feet on the two middle studs
   // plate art (assets/figstand.svg, 120×44): front stud row base at y≈22.5, stud pitch 24.5 → 2 studs = 49 units
   const fig3d = (i, f) => {
@@ -396,7 +396,7 @@
     // minifigure cards under the photos (like a catalogue): number, name, picture, how many sets / exclusive, our price
     const figTotal = (D.minifigs || []).reduce((s, f) => s + f.qty, 0);
     const excl = (D.minifigs || []).filter(f => f.sets === 1).length;
-    const figList = D.minifigs && D.minifigs.length ? `<section class="pd-figs">
+    const figList = D.minifigs && D.minifigs.length ? `<section class="pd-figsec">
       <h2>${esc(i.name)} – ${hu ? "minifigurák" : "minifigures"}</h2>
       <p class="co-muted">${hu ? `A szett ${figTotal} minifigurát tartalmaz.` : `This set contains ${figTotal} minifigure${figTotal > 1 ? "s" : ""}.`}${excl ? (hu ? ` Ebből ${excl} csak ebben a szettben szerepel.` : ` ${excl} of them ${excl > 1 ? "are" : "is"} exclusive to this set.`) : ""}</p>
       <div class="pd-figgrid">${D.minifigs.map(f => {
@@ -413,6 +413,20 @@
               : `<span class="pd-fig__btn" role="button" tabindex="0" data-buy="${esc(o.no)}">${hu ? "Megrendelem" : "Order"}</span>`)
             : `<span class="pd-fig__btn is-pre" role="button" tabindex="0" data-prefig="${esc(f.no)}" data-name="${esc(f.name)}">${hu ? "Előrendelés" : "Pre-order"}</span>`}
         </${tag}>`; }).join("")}</div></section>` : "";
+    // every release with the same name (Rebrickable list) + BrickLink market value
+    const vers = D.versions && D.versions.length > 1 ? D.versions : null;
+    const verList = vers ? `<section class="pd-vers">
+      <h2>${hu ? `Minden „${esc(i.name)}” kiadás` : `All ${esc(i.name)} sets`}</h2>
+      <div class="pd-vers__wrap"><table class="pd-vers__t">
+        <thead><tr><th>${hu ? "Szett" : "Set"}</th><th>${hu ? "Év" : "Year"}</th><th>${hu ? "Elem" : "Pieces"}</th><th>${hu ? "Piaci érték*" : "Value*"}</th><th>${hu ? "Ft / elem" : "Per piece"}</th></tr></thead>
+        <tbody>${vers.map(v => {
+          const o = v.no === i.no ? null : ours(v.no), me = v.no === i.no, val = (VALUES[v.no] || {}).huf;
+          const nm = `${esc(v.no.replace(/-1$/, ""))} ${esc(v.name)}`;
+          return `<tr${me ? ' class="is-me"' : ""}>
+            <td><span class="pd-vers__set"><img src="${esc(v.img)}" alt="" loading="lazy">${o ? `<a href="${esc(productUrl(o))}">${nm}</a>` : `<span>${nm}</span>`}${o && !o.preorder ? `<small>${hu ? "Nálunk" : "Ours"}: ${money(o.price)}</small>` : ""}</span></td>
+            <td>${v.year || "–"}</td><td>${v.pieces ? nf(v.pieces) : "–"}</td>
+            <td>${val ? money(val) : "–"}</td><td>${val && v.pieces ? money(Math.round(val / v.pieces)) : "–"}</td></tr>`; }).join("")}</tbody></table></div>
+      <p class="co-muted co-small">* ${hu ? "BrickLink átlagos eladási ár, új állapot, elmúlt 6 hónap. Kiadások: Rebrickable." : "BrickLink average sold price, new, last 6 months. Releases: Rebrickable."}</p></section>` : "";
     const setList = D.sets && D.sets.length ? `<h2>${hu ? "Ezekben a szettekben szerepelt" : "Appears in these sets"}</h2>
       <ul class="pd-list pd-cols">${D.sets.map(s => linkItem(s.no, s.name, 1)).join("")}</ul>` : "";
     // static product photos (no spinning model here): box + built set for sets, catalogue photo for minifigures
@@ -427,7 +441,7 @@
           <div class="pd-media"><img id="pdMain" src="${esc(photos[0].src)}" alt="${esc(i.name)} – ${esc(photos[0].alt)}"></div>
           ${photos.length > 1 ? `<div class="pd-thumbs">${photos.map((p, k) => `<button type="button" class="pd-thumb${k ? "" : " is-on"}" data-src="${esc(p.src)}" data-alt="${esc(p.alt)}" aria-label="${esc(p.alt)}"><img src="${esc(p.src)}" alt="" loading="lazy"></button>`).join("")}</div>` : ""}
         </div>
-        ${figList}
+        ${figList || verList ? `<div class="pd-figs">${figList}${verList}</div>` : ""}
         <div class="pd-info">
           <p class="item__no">${esc(sn)} · ${set ? (hu ? "LEGO® szett" : "LEGO® set") : (hu ? "LEGO® minifigura" : "LEGO® minifigure")}</p>
           <h1>${esc(i.name)}</h1>
@@ -569,7 +583,7 @@
     PAGE_KIND === "product" ? fetch("data/details.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})) : null
   ])
     .then(([d, boxes, labels, figs, , details]) => {
-      BOXES = boxes || {}; LABELS = labels || {}; FIGS = figs || {}; DETAILS = (details && details.items) || {};
+      BOXES = boxes || {}; LABELS = labels || {}; FIGS = figs || {}; DETAILS = (details && details.items) || {}; VALUES = (details && details.values) || {};
       if (window.MFShop) window.MFShop.setLots(d.items.map(i => ({ ...i })));
       const byItem = new Map();
       for (const i of d.items) {
