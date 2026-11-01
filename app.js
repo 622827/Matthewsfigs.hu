@@ -256,7 +256,7 @@
         <p>${want ? (hu ? "Szeretnél egyet ebből? Válaszd ki, hogyan jelezzük, amikor megérkezik:" : "Would you like one? Choose how we let you know when it arrives:")
                   : (hu ? "Hogyan értesítsünk, amikor újra elérhető lesz?" : "How should we let you know when it's back in stock?")}</p>
         <div class="notify__tiles">
-          <button type="button" class="ntile" id="nMail"><span class="ntile__ic" aria-hidden="true">✉️</span><b>${hu ? "E-mailes értesítést kérek" : "Notify me by e-mail"}</b><span>${hu ? "Megadod a neved és az e-mail címed, és automatikusan írunk, amint megérkezik." : "Leave your name and e-mail and we'll write automatically as soon as it arrives."}</span></button>
+          <button type="button" class="ntile" id="nMail"><span class="ntile__ic" aria-hidden="true">✉️</span><b>${hu ? "E-mailes értesítést kérek" : "Notify me by e-mail"}</b><span>${hu ? "Add meg a neved és az e-mail címed, és amint megérkezik, automatikusan szólunk." : "Enter your name and e-mail, and we'll let you know automatically as soon as it arrives."}</span></button>
           <a class="ntile" id="nMsg" href="${esc(href)}" target="_blank" rel="noopener"><span class="ntile__ic" aria-hidden="true">💬</span><b>${hu ? "Messengeren írjatok, ha megjött" : "Message me on Messenger when it arrives"}</b><span>${hu ? "Facebook Messengerre irányítunk egy előre megírt üzenettel – csak el kell küldened." : "We open Facebook Messenger with a ready-made message – just send it."}</span></a>
         </div>
         <button type="button" class="notify__close" id="nClose">${hu ? "Mégsem" : "No thanks"}</button></div>`;
