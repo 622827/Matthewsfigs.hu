@@ -397,3 +397,30 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .co-empty,.co-done{text-align:center;display:grid;gap:12px;justify-items:center;padding:40px 22px}
 @media (max-width:900px){.co-grid{grid-template-columns:1fr}.co-side{position:static}}
 @media (max-width:560px){.co-fields,.co-review{grid-template-columns:1fr}.co-line{grid-template-columns:48px minmax(0,1fr) auto;row-gap:6px}.co-line img{width:48px}.co-line .co-qty{grid-column:2}.co-line .co-rm{grid-column:3;justify-self:end}.co-line__p{grid-column:3;grid-row:1}}
+
+/* termékoldal (termek.html) */
+.pd-page{padding:28px 0 72px}
+.pd-crumbs{font-size:14px;color:var(--muted);margin-bottom:18px}
+.pd-crumbs a{color:var(--green);font-weight:600}
+.pd{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.05fr);gap:40px;align-items:start}
+.pd-media{background:#fff;border:1.5px solid var(--line);border-radius:var(--r);aspect-ratio:1/1;display:grid;place-items:center;overflow:hidden;position:sticky;top:90px}
+.pd-media .stage{transform:scale(2.3)}
+.pd-media .stage--fig{transform:scale(2.6)}
+.pd-info h1{font-size:clamp(28px,4vw,42px);color:var(--green);margin:4px 0 10px;line-height:1.1}
+.pd-info h2{font-size:21px;color:var(--green);margin:28px 0 8px}
+.pd-price{font-family:var(--display);font-weight:800;font-size:34px;color:var(--green);margin:16px 0 2px}
+.pd-price small{font-family:var(--body);font-size:15px;color:var(--muted);font-weight:600}
+.pd-stock{margin:0 0 16px;font-weight:600;color:#1d6b35}
+.pd-stock.is-pre{color:var(--gold-ink)}
+.pd-buy{display:flex;flex-wrap:wrap;gap:10px}
+.pd-dl{display:grid;grid-template-columns:max-content 1fr;gap:6px 18px;background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:14px 18px;margin:12px 0 0}
+.pd-dl dt{font-weight:700;color:var(--muted);font-size:14px}
+.pd-dl dd{margin:0}
+.pd-list{padding-left:20px;margin:0}
+.pd-list li{margin:5px 0}
+.pd-list a{color:var(--green);font-weight:600}
+.pd-tm{font-size:12px;color:var(--muted);margin-top:24px}
+.pd-missing{text-align:center;padding:60px 0}
+.add-btn{cursor:pointer}
+@media (max-width:860px){.pd{grid-template-columns:1fr;gap:22px}.pd-media{position:static;aspect-ratio:4/3}.pd-media .stage{transform:scale(1.7)}.pd-media .stage--fig{transform:scale(1.9)}}
+@media (max-width:560px){.pd-dl{grid-template-columns:1fr}.pd-dl dd{margin-bottom:6px}}

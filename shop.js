@@ -101,8 +101,6 @@
     const a = e.target.closest("[data-add]");
     if (!a || !enabled()) return;
     e.preventDefault();
-    const box = a.querySelector && a.querySelector(".box3d");
-    if (box && !box._hold && !matchMedia("(hover: hover)").matches && box._spin && !e.target.closest(".add-btn")) return;
     const name = a.dataset.name || a.dataset.add;
     if (add(a.dataset.add)) toast(`<b>${esc(name)}</b> ${hu() ? "a kosárba került." : "added to cart."}`, true);
   });
@@ -389,7 +387,7 @@
   }
 
   window.MFShop = {
-    ready, enabled, safetyLine, add, badge,
+    ready, enabled, safetyLine, safetyBlock, add, badge,
     setLots(items) { LOTS = items || []; badge(); if (document.body.dataset.page === "cart") renderCart(); },
     rerender() { badge(); if (document.body.dataset.page === "cart") renderCart(); }
   };

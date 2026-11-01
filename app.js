@@ -141,7 +141,7 @@
       box._spin = spin;
       if (io) io.observe(box);
 
-      const card = box.closest(".item");
+      const card = box.closest(".item, .pd-media");
       let hov = null;
       const hold = () => {                                       // stop and turn to the angled pose
         if (box._hold) return;
@@ -230,15 +230,6 @@
     dlg.querySelector("#notifyYes").onclick = () => setTimeout(() => dlg.close(), 50);
     dlg.showModal ? dlg.showModal() : window.open(href, "_blank", "noopener");
   }
-  document.addEventListener("click", e => {
-    const a = e.target.closest("a.item--pre");
-    if (!a) return;
-    const box = a.querySelector(".box3d");
-    if (box && !box._hold && !matchMedia("(hover: hover)").matches && box._spin) return;  // first tap only stops the box
-    e.preventDefault();
-    const i = data.items.find(x => x.preorder && x.no === a.dataset.pre);
-    if (i) askNotify(i, a.href);
-  });
   const labelsOf = i => {
     if (i.type !== "SET") return [];
     const out = [...(LABELS[i.no] || [])], n = i.name.toLowerCase();
@@ -247,9 +238,8 @@
   };
   const SHOP = window.MFShop;
   const shopOn = () => !!(SHOP && SHOP.enabled());
-  const cardLink = i => i.preorder ? ` href="${esc(notifyLink(i))}" target="_blank" rel="noopener" data-pre="${esc(i.no)}" title="${t("pre.hint")}"`
-    : shopOn() ? ` href="kosar.html" data-add="${esc(i.no)}" data-name="${esc(shortNo(i) + " " + i.name)}"`
-    : ` href="${esc(buyLink(i))}" target="_blank" rel="noopener"`;
+  const productUrl = i => `termek.html?no=${encodeURIComponent(i.no)}`;
+  const cardLink = i => ` href="${esc(productUrl(i))}"` + (i.preorder ? ` data-pre="${esc(i.no)}" title="${t("pre.hint")}"` : "");
   const card = i => `
       <a class="item${i.preorder ? " item--pre" : ""}"${cardLink(i)}>
         <div class="item__img">${box3d(i)}</div>
@@ -260,9 +250,8 @@
           ${i.preorder ? `<span class="want" role="button" tabindex="0" data-href="${esc(wantLink(i))}">${lang === "hu" ? "Szeretnék egyet!" : "I want one!"}</span>` : ""}
           <div class="item__foot">
             <span class="price">${i.from ? `<small>${lang === "hu" ? "" : "from "}</small>` : ""}${money(i.price)}${i.from && lang === "hu" ? "<small>-tól</small>" : ""}</span>
-            ${!i.preorder && shopOn() ? `<span class="add-btn" role="button">${lang === "hu" ? "Kosárba" : "Add to cart"}</span>` : ""}
+            ${!i.preorder && shopOn() ? `<span class="add-btn" role="button" tabindex="0" data-add="${esc(i.no)}" data-name="${esc(shortNo(i) + " " + i.name)}">${lang === "hu" ? "Kosárba" : "Add to cart"}</span>` : ""}
           </div>
-          ${SHOP ? SHOP.safetyLine() : ""}
         </div>
       </a>`;
 
@@ -308,6 +297,74 @@
         <p>${t("parts.text").replace("{lots}", data.parts_lots || 0).replace("{qty}", qty)}</p>
         <a class="btn btn--gold" href="${esc(partsLink())}" target="_blank" rel="noopener">${t("parts.cta")}</a>`;
     }
+  }
+
+  // ---------- product page (termek.html?no=…) ----------
+  function renderProduct() {
+    const root = $("product"); if (!root) return;
+    const no = new URLSearchParams(location.search).get("no") || "";
+    const i = data.items.find(x => x.no === no && !x.preorder) || data.items.find(x => x.no === no);
+    const hu = lang === "hu";
+    if (!i) {
+      root.innerHTML = `<div class="pd-missing"><h1>${hu ? "Ez a termék most nem érhető el" : "This product is not available"}</h1>
+        <p><a class="btn btn--gold" href="szettek.html">${hu ? "Szettek" : "Sets"}</a> <a class="btn btn--line" href="figurak.html">${hu ? "Figurák" : "Minifigures"}</a></p></div>`;
+      return;
+    }
+    const set = i.type === "SET", sn = shortNo(i), labels = labelsOf(i);
+    document.title = `${sn} ${i.name} – Matthew's Fig Supply Co.`;
+    const back = set ? "szettek.html" : "figurak.html";
+    const note = (i.note || "").trim();
+    const stock = i.preorder ? (hu ? "Jelenleg elfogyott – előrendelhető" : "Sold out – available to pre-order")
+      : (hu ? `Raktáron: ${i.qty} db` : `In stock: ${i.qty}`);
+    const cond = set
+      ? (hu ? "Bontatlan, gyári állapotú (MISB – Mint In Sealed Box) szett. A doboz kisebb gyártási vagy szállítási nyomai előfordulhatnak." : "Brand new, factory sealed (MISB – Mint In Sealed Box). Minor factory or shipping marks on the box may occur.")
+      : (hu ? "Eredeti LEGO® minifigura, egyenként átnézve. A képen a figura tájékoztató jellegű, a kiegészítők a BrickLink katalógus szerinti összeállításban." : "Genuine LEGO® minifigure, individually checked. The picture is for illustration; accessories as listed in the BrickLink catalogue.");
+    const buy = i.preorder
+      ? `<button type="button" class="btn btn--gold" id="pdWant">${hu ? "Szeretnék egyet!" : "I want one!"}</button>
+         <button type="button" class="btn btn--line" id="pdNotify">${hu ? "Értesítést kérek" : "Notify me"}</button>`
+      : shopOn()
+        ? `<button type="button" class="btn btn--gold" data-add="${esc(i.no)}" data-name="${esc(sn + " " + i.name)}">${hu ? "Kosárba" : "Add to cart"}</button>
+           <a class="btn btn--line" href="kosar.html">${hu ? "Tovább a kosárhoz" : "Go to cart"}</a>`
+        : `<a class="btn btn--gold" href="${esc(buyLink(i))}" target="_blank" rel="noopener">${hu ? "Megrendelem Messengeren" : "Order on Messenger"}</a>`;
+    const row = (k, v) => v ? `<dt>${k}</dt><dd>${v}</dd>` : "";
+    root.innerHTML = `
+      <nav class="pd-crumbs"><a href="index.html">${hu ? "Főoldal" : "Home"}</a> › <a href="${back}">${set ? (hu ? "Szettek" : "Sets") : (hu ? "Figurák" : "Minifigures")}</a> › <span>${esc(sn)}</span></nav>
+      <div class="pd">
+        <div class="pd-media${i.preorder ? " item--pre" : ""}">${box3d(i)}</div>
+        <div class="pd-info">
+          <p class="item__no">${esc(sn)} · ${set ? (hu ? "LEGO® szett" : "LEGO® set") : (hu ? "LEGO® minifigura" : "LEGO® minifigure")}</p>
+          <h1>${esc(i.name)}</h1>
+          <span class="badges">${labels.map(l => `<span class="badge badge--${(LABELS._colors || {})[l] || "red"}">${esc(l)}</span>`).join("")}${i.preorder ? `<span class="badge badge--pre">${t("badge.pre")}</span>` : set ? `<span class="badge">${t("badge.sealed")}</span>` : ""}</span>
+          <p class="pd-price">${i.from ? `<small>${hu ? "" : "from "}</small>` : ""}${money(i.price)}${i.from && hu ? "<small>-tól</small>" : ""}</p>
+          <p class="pd-stock${i.preorder ? " is-pre" : ""}">${stock}</p>
+          <div class="pd-buy">${buy}</div>
+          ${SHOP && SHOP.safetyBlock ? SHOP.safetyBlock() : ""}
+          <h2>${hu ? "Leírás" : "Description"}</h2>
+          <p>${cond}</p>
+          <dl class="pd-dl">
+            ${row(hu ? "Cikkszám" : "Item number", esc(sn) + (set ? ` <span class="co-muted">(BrickLink: ${esc(i.no)})</span>` : ""))}
+            ${row(hu ? "Megnevezés" : "Name", esc(i.name))}
+            ${row(hu ? "Típus" : "Type", set ? (hu ? "Szett" : "Set") : (hu ? "Minifigura" : "Minifigure"))}
+            ${row(hu ? "Állapot" : "Condition", set ? (hu ? "Új, bontatlan (MISB)" : "New, sealed (MISB)") : (hu ? "Átnézett, eredeti LEGO®" : "Checked, genuine LEGO®"))}
+            ${row(hu ? "Megjegyzés" : "Note", note && note !== "MISB" ? esc(note) : "")}
+            ${row(hu ? "Készlet" : "Stock", stock)}
+            ${row(hu ? "Gyártó" : "Manufacturer", "LEGO A/S, Aastvej 1, 7190 Billund, " + (hu ? "Dánia" : "Denmark") + " · www.lego.com/service")}
+            ${row(hu ? "Korosztály" : "Age", hu ? "3 éven felülieknek" : "Ages 3+")}
+          </dl>
+          <h2>${hu ? "Szállítás és fizetés" : "Delivery and payment"}</h2>
+          <ul class="pd-list">
+            <li>${hu ? "Foxpost csomagautomatába vagy személyes átvétellel Budapesten (1111 Budapest, Bartók Béla út 10–12.)." : "To a Foxpost parcel locker or pickup in Budapest (1111 Budapest, Bartók Béla út 10–12)."}</li>
+            <li>${hu ? "Fizetés bankkártyával, átutalással, törzsvásárlóknak utánvéttel, személyes átvételnél készpénzzel vagy kártyával." : "Pay by card, bank transfer, cash on delivery for regular customers, or cash/card on pickup."}</li>
+            <li>${hu ? "Gondos csomagolás, a doboz védelmére figyelve; feladás általában 1–3 munkanapon belül." : "Careful packing to protect the box; usually shipped within 1–3 working days."}</li>
+            <li>${hu ? 'Fogyasztóként 14 napon belül indoklás nélkül elállhatsz a vásárlástól. Részletek az <a href="aszf.html">ÁSZF</a>-ben.' : 'As a consumer you may withdraw within 14 days without giving a reason. Details in our <a href="aszf.html">Terms</a> (HU).'}</li>
+          </ul>
+          <p class="pd-tm">${t("foot.legal") !== "foot.legal" ? t("foot.legal") : ""}</p>
+        </div>
+      </div>`;
+    initBoxes(root);
+    const w = $("pdWant"), n = $("pdNotify");
+    if (w) w.onclick = () => askNotify(i, wantLink(i), "want");
+    if (n) n.onclick = () => askNotify(i, notifyLink(i));
   }
 
   // ---------- catalog pages ----------
@@ -376,7 +433,9 @@
 
   function renderAll(reset) {
     if (!data.items.length) return;
-    if (PAGE_KIND === "catalog") { buildLabelChips(); renderCatalog(reset); } else renderHome();
+    if (PAGE_KIND === "catalog") { buildLabelChips(); renderCatalog(reset); }
+    else if (PAGE_KIND === "product") renderProduct();
+    else renderHome();
   }
 
   Promise.all([
