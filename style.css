@@ -681,3 +681,9 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 .pd-mosaic__nav span{font-weight:700;font-size:13px;color:var(--muted)}
 .pd-mosaic__more{margin-top:12px}
 @media (max-width:560px){.pd-mosaic{gap:8px}.pd-mosaic .pd-fig{padding:8px 6px}.pd-mosaic .pd-fig img{height:70px}.pd-mosaic .pd-fig__name{font-size:12px}.pd-mosaic .pd-fig__btn{font-size:11px;padding:6px 4px}.pd-mosaic__nav{flex-direction:column;gap:6px}.pd-mosaic__nav button{width:36px;height:36px;font-size:20px}}
+.pd-mosaic{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+.pd-mosaic .pd-fig{min-width:0;overflow:hidden}
+.pd-mosaic .pd-fig__name,.pd-mosaic .pd-fig__no{max-width:100%;overflow-wrap:anywhere;word-break:break-word}
+.pd-mosaic .pd-fig__foot{max-width:100%;flex-wrap:wrap;justify-content:center}
+.pd-mosaic .pd-fig__tag{white-space:normal}
+@media (max-width:560px){.pd-figgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pd-fig{min-width:0}.pd-fig__name{overflow-wrap:anywhere}}
