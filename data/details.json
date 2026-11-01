@@ -1,0 +1,3124 @@
+{
+ "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
+ "updated": "2026-11-01T19:37:52+00:00",
+ "items": {
+  "40686-1": {
+   "type": "SET",
+   "name": "Trade Federation Troop Carrier",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 303.0,
+   "dims_cm": [
+    26.0,
+    18.9,
+    4.5
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 234,
+   "minifigs": [
+    {
+     "no": "sw0001c",
+     "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+     "qty": 6,
+     "sets": 36
+    },
+    {
+     "no": "sw1338",
+     "name": "Battle Droid Pilot - Blue Torso with Tan Insignia and Chest Badge, Angled Arm and Straight Arm",
+     "qty": 2,
+     "sets": 2
+    }
+   ],
+   "versions": []
+  },
+  "40755-1": {
+   "type": "SET",
+   "name": "Imperial Dropship vs. Rebel Scout Speeder",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 494.0,
+   "dims_cm": [
+    35.3,
+    19.0,
+    5.7
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 366,
+   "minifigs": [
+    {
+     "no": "sw1275",
+     "name": "Imperial Stormtrooper - Female, Dual Molded Helmet with Light Bluish Gray Panels on Back, Shoulder Belts, Nougat Head",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw1285",
+     "name": "Rebel Fleet Trooper - Male, Vest with Pockets, Black Neck, Reddish Brown Eyebrows",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "sw1326",
+     "name": "Imperial Stormtrooper - Female, Dual Molded Helmet with Light Bluish Gray Panels on Back, Shoulder Belts, Medium Brown Head",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sw1327",
+     "name": "Imperial Stormtrooper - Male, Dual Molded Helmet with Light Bluish Gray Panels on Back, Shoulder Belts, Light Nougat Head",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1391",
+     "name": "Rebel Fleet Trooper - Male, Vest with Pockets, Black Neck, Dark Brown Eyebrows",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1392",
+     "name": "Rebel Fleet Trooper - Female, Vest with Pockets, Black Neck",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1393",
+     "name": "Astromech Droid, QT-KT",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": []
+  },
+  "40806-1": {
+   "type": "SET",
+   "name": "Gingerbread AT-AT",
+   "year": 2025,
+   "category": "Star Wars",
+   "weight_g": 716.0,
+   "dims_cm": [
+    28.0,
+    26.2,
+    7.5
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 721,
+   "minifigs": [
+    {
+     "no": "sw1483",
+     "name": "Darth Vader - Gingerbread",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": []
+  },
+  "472407-1": {
+   "type": "SET",
+   "name": "Sabine Wren paper bag",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 9.0,
+   "dims_cm": [
+    12.0,
+    15.0,
+    2.0
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 4,
+   "minifigs": [
+    {
+     "no": "sw1395",
+     "name": "Sabine Wren - Dark Brown Armor, Dark Purple Hair",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": []
+  },
+  "75020-1": {
+   "type": "SET",
+   "name": "Jabba's Sail Barge",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 1587.0,
+   "dims_cm": [
+    48.0,
+    37.8,
+    7.1
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 848,
+   "minifigs": [
+    {
+     "no": "sw0217a",
+     "name": "Astromech Droid, R2-D2 - Dark Tan Serving Tray, Light Bluish Gray Head",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0402",
+     "name": "Jabba the Hutt - Olive Green, Tan Face, Dark Tan Wrinkles",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0483",
+     "name": "Ree-Yees",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0485",
+     "name": "Princess Leia - Jabba Slave Outfit, Dark Brown Long Braid, Neck Bracket",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0486",
+     "name": "Max Rebo",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0487",
+     "name": "Weequay Skiff Guard (Pagetti Rook)",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": [
+    {
+     "no": "6210-1",
+     "name": "Jabba's Sail Barge",
+     "year": 2006,
+     "pieces": 782,
+     "img": "https://cdn.rebrickable.com/media/sets/6210-1.jpg"
+    },
+    {
+     "no": "75020-1",
+     "name": "Jabba's Sail Barge",
+     "year": 2013,
+     "pieces": 851,
+     "img": "https://cdn.rebrickable.com/media/sets/75020-1.jpg"
+    },
+    {
+     "no": "75397-1",
+     "name": "Jabba's Sail Barge",
+     "year": 2024,
+     "pieces": 3943,
+     "img": "https://cdn.rebrickable.com/media/sets/75397-1.jpg"
+    }
+   ]
+  },
+  "75158-1": {
+   "type": "SET",
+   "name": "Rebel Combat Frigate",
+   "year": 2016,
+   "category": "Star Wars",
+   "weight_g": 1465.0,
+   "dims_cm": [
+    48.0,
+    37.5,
+    8.0
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 941,
+   "minifigs": [
+    {
+     "no": "sw0565",
+     "name": "Astromech Droid, C1-10P (Chopper) - Light Bluish Gray Body",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "sw0574",
+     "name": "Ezra Bridger - Dark Tan Vest, Hair",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0625",
+     "name": "Agent Alexsandr Kallus - Helmet",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0758",
+     "name": "Commander Sato",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0759",
+     "name": "Ahsoka Tano (Adult) - Dark Bluish Gray Vest, Tan Tunic, Plain Arms, Dark Brown Legs",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": []
+  },
+  "75280-1": {
+   "type": "SET",
+   "name": "501st Legion Clone Troopers",
+   "year": 2020,
+   "category": "Star Wars",
+   "weight_g": 305.0,
+   "dims_cm": [
+    26.0,
+    19.0,
+    4.5
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 272,
+   "minifigs": [
+    {
+     "no": "sw0001c",
+     "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+     "qty": 2,
+     "sets": 36
+    },
+    {
+     "no": "sw1093",
+     "name": "Clone Jet Trooper, 501st Legion (Phase 2) - Nougat Head",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1094",
+     "name": "Clone Trooper, 501st Legion (Phase 2) - White Arms, Nougat Head",
+     "qty": 3,
+     "sets": 2
+    }
+   ],
+   "versions": []
+  },
+  "75283-1": {
+   "type": "SET",
+   "name": "Armored Assault Tank (AAT)",
+   "year": 2020,
+   "category": "Star Wars",
+   "weight_g": 445.0,
+   "dims_cm": [
+    35.1,
+    19.0,
+    5.7
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 279,
+   "minifigs": [
+    {
+     "no": "sw0996",
+     "name": "Battle Droid - Tan, Olive Green Torso, Printed Head (Kashyyyk / AAT Driver Battle Droid)",
+     "qty": 2,
+     "sets": 3
+    },
+    {
+     "no": "sw1096",
+     "name": "Ahsoka Tano (Adult) - Dark Blue Jumpsuit",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1097",
+     "name": "Clone Trooper, 501st Legion, 332nd Company (Phase 2) - Togruta Helmet Markings",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": [
+    {
+     "no": "8018-1",
+     "name": "Armored Assault Tank (AAT)",
+     "year": 2009,
+     "pieces": 407,
+     "img": "https://cdn.rebrickable.com/media/sets/8018-1.jpg"
+    },
+    {
+     "no": "75283-1",
+     "name": "Armored Assault Tank (AAT)",
+     "year": 2020,
+     "pieces": 286,
+     "img": "https://cdn.rebrickable.com/media/sets/75283-1.jpg"
+    }
+   ]
+  },
+  "75314-1": {
+   "type": "SET",
+   "name": "The Bad Batch Attack Shuttle",
+   "year": 2021,
+   "category": "Star Wars",
+   "weight_g": 1180.0,
+   "dims_cm": [
+    35.4,
+    37.8,
+    7.0
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 954,
+   "minifigs": [
+    {
+     "no": "sw1148",
+     "name": "Clone Commando Sergeant Hunter, Experimental Unit Clone Force 99",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1149",
+     "name": "Clone Commando Wrecker, Experimental Unit Clone Force 99",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1150",
+     "name": "Clone Commando Tech, Experimental Unit Clone Force 99",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1151",
+     "name": "Clone ARC Trooper Corporal Echo, Experimental Unit Clone Force 99",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1152",
+     "name": "Clone Commando Commander Crosshair, Imperial Elite Squad",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1153",
+     "name": "Gonk Droid (GNK Power Droid), Experimental Unit Clone Force 99 - Dark Bluish Gray, Black Feet (Gonky)",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": []
+  },
+  "75333-1": {
+   "type": "SET",
+   "name": "Obi-Wan Kenobi's Jedi Starfighter",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 389.0,
+   "dims_cm": [
+    26.2,
+    19.1,
+    6.1
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 280,
+   "minifigs": [
+    {
+     "no": "sw1216",
+     "name": "Taun We",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1220",
+     "name": "Obi-Wan Kenobi - Reddish Brown Robe, Dark Orange Mid-Length Tousled with Center Part Hair",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1221",
+     "name": "Astromech Droid, R4-P17 - Silver Band Around Dome, Dark Bluish Gray Rectangles",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": []
+  },
+  "75337-1": {
+   "type": "SET",
+   "name": "AT-TE Walker",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 1557.0,
+   "dims_cm": [
+    48.0,
+    37.8,
+    7.05
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 1044,
+   "minifigs": [
+    {
+     "no": "sw0001c",
+     "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+     "qty": 3,
+     "sets": 36
+    },
+    {
+     "no": "sw1233",
+     "name": "Clone Trooper Commander Cody, 212th Attack Battalion (Phase 2) - Orange Visor, Nougat Head, Helmet with Holes, Printed Legs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1234",
+     "name": "Dwarf Spider Droid - Dark Bluish Gray Dome, Black Cone 1 x 1",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1235",
+     "name": "Clone Trooper, 212th Attack Battalion (Phase 2) - White Arms, Dirt Stains, Nougat Head, Helmet with Holes",
+     "qty": 3,
+     "sets": 3
+    },
+    {
+     "no": "sw1236",
+     "name": "Clone Trooper Gunner (Phase 2) - Dirt Stains, Nougat Head, Helmet with Holes",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": [
+    {
+     "no": "7675-1",
+     "name": "AT-TE Walker",
+     "year": 2008,
+     "pieces": 810,
+     "img": "https://cdn.rebrickable.com/media/sets/7675-1.jpg"
+    },
+    {
+     "no": "20009-1",
+     "name": "AT-TE Walker",
+     "year": 2009,
+     "pieces": 94,
+     "img": "https://cdn.rebrickable.com/media/sets/20009-1.jpg"
+    },
+    {
+     "no": "75337-1",
+     "name": "AT-TE Walker",
+     "year": 2022,
+     "pieces": 1082,
+     "img": "https://cdn.rebrickable.com/media/sets/75337-1.jpg"
+    }
+   ]
+  },
+  "75342-1": {
+   "type": "SET",
+   "name": "Republic Fighter Tank",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 496.0,
+   "dims_cm": [
+    35.5,
+    19.0,
+    6.0
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 246,
+   "minifigs": [
+    {
+     "no": "sw0001c",
+     "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+     "qty": 2,
+     "sets": 36
+    },
+    {
+     "no": "sw1205",
+     "name": "Mace Windu (Dark Tan Legs, Open Mouth, Printed Arms)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1206",
+     "name": "Clone Trooper Commander, 187th Legion (Phase 2) - Nougat Head",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1207",
+     "name": "Clone Trooper, 187th Legion (Phase 2) - Nougat Head",
+     "qty": 2,
+     "sets": 1
+    }
+   ],
+   "versions": [
+    {
+     "no": "7679-1",
+     "name": "Republic Fighter Tank",
+     "year": 2008,
+     "pieces": 596,
+     "img": "https://cdn.rebrickable.com/media/sets/7679-1.jpg"
+    },
+    {
+     "no": "75182-1",
+     "name": "Republic Fighter Tank",
+     "year": 2017,
+     "pieces": 305,
+     "img": "https://cdn.rebrickable.com/media/sets/75182-1.jpg"
+    },
+    {
+     "no": "75342-1",
+     "name": "Republic Fighter Tank",
+     "year": 2022,
+     "pieces": 262,
+     "img": "https://cdn.rebrickable.com/media/sets/75342-1.jpg"
+    },
+    {
+     "no": "912313-1",
+     "name": "Republic Fighter Tank",
+     "year": 2023,
+     "pieces": 44,
+     "img": "https://cdn.rebrickable.com/media/sets/912313-1.jpg"
+    }
+   ]
+  },
+  "75344-1": {
+   "type": "SET",
+   "name": "Boba Fett's Starship Microfighter",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 100.0,
+   "dims_cm": [
+    14.0,
+    12.0,
+    4.5
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 84,
+   "minifigs": [
+    {
+     "no": "sw1245",
+     "name": "Boba Fett - Repainted Beskar Armor, Jet Pack",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": []
+  },
+  "75345-1": {
+   "type": "SET",
+   "name": "501st Clone Troopers Battle Pack",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 127.0,
+   "dims_cm": [
+    19.0,
+    14.0,
+    4.5
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 111,
+   "minifigs": [
+    {
+     "no": "sw1246",
+     "name": "Clone Trooper Officer, 501st Legion (Phase 2) - White Arms, Blue Rangefinder, Nougat Head, Helmet with Holes",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1247",
+     "name": "Clone Heavy Trooper, 501st Legion (Phase 2) - White Arms, Blue Visor, Backpack, Nougat Head, Helmet with Holes",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "sw1248",
+     "name": "Clone Trooper Specialist, 501st Legion (Phase 2) - Blue Arms, Macrobinoculars, Nougat Head, Helmet with Holes",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "versions": []
+  },
+  "75347-1": {
+   "type": "SET",
+   "name": "TIE Bomber",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 790.0,
+   "dims_cm": [
+    38.0,
+    26.0,
+    7.0
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 614,
+   "minifigs": [
+    {
+     "no": "sw1249",
+     "name": "Darth Vader - Printed Arms, Spongy Cape, White Head with Frown",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "sw1250",
+     "name": "Vice Admiral Sloane",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1251",
+     "name": "Imperial TIE Bomber Pilot - Light Nougat Head",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1252",
+     "name": "Gonk Droid (GNK Power Droid), Light Bluish Gray Body and Feet, Imperial Logo",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": [
+    {
+     "no": "4479-1",
+     "name": "TIE Bomber",
+     "year": 2003,
+     "pieces": 229,
+     "img": "https://cdn.rebrickable.com/media/sets/4479-1.jpg"
+    },
+    {
+     "no": "911613-1",
+     "name": "TIE Bomber",
+     "year": 2016,
+     "pieces": 26,
+     "img": "https://cdn.rebrickable.com/media/sets/911613-1.jpg"
+    },
+    {
+     "no": "912171-1",
+     "name": "TIE Bomber",
+     "year": 2021,
+     "pieces": 28,
+     "img": "https://cdn.rebrickable.com/media/sets/912171-1.jpg"
+    },
+    {
+     "no": "75347-1",
+     "name": "TIE Bomber",
+     "year": 2023,
+     "pieces": 625,
+     "img": "https://cdn.rebrickable.com/media/sets/75347-1.jpg"
+    }
+   ]
+  },
+  "75372-1": {
+   "type": "SET",
+   "name": "Clone Trooper & Battle Droid Battle Pack",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 218.0,
+   "dims_cm": [
+    20.3,
+    19.1,
+    4.6
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 193,
+   "minifigs": [
+    {
+     "no": "sw0001d",
+     "name": "Battle Droid - Tan, Straight Arms",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1305",
+     "name": "Clone Shock Trooper, Coruscant Guard (Phase 2) - Nougat Head",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sw1319",
+     "name": "Clone Trooper (Phase 2) - Nougat Head",
+     "qty": 3,
+     "sets": 2
+    },
+    {
+     "no": "sw1320",
+     "name": "Battle Droid - Tan, Angled Arms, Light Bluish Gray Clip on Back",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1321",
+     "name": "Super Battle Droid - Pearl Dark Gray, Narrow Head, Chest Light Indent",
+     "qty": 3,
+     "sets": 4
+    }
+   ],
+   "versions": []
+  },
+  "75379-1": {
+   "type": "SET",
+   "name": "R2-D2",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 1320.0,
+   "dims_cm": [
+    26.2,
+    38.1,
+    9.3
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 1079,
+   "minifigs": [
+    {
+     "no": "sw1202",
+     "name": "Astromech Droid, R2-D2 - Flat Silver Head, Dark Pink Dots, Large Receptor, Back Printing",
+     "qty": 1,
+     "sets": 6
+    },
+    {
+     "no": "sw1325",
+     "name": "Darth Malak",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": [
+    {
+     "no": "8009-1",
+     "name": "R2-D2",
+     "year": 2002,
+     "pieces": 239,
+     "img": "https://cdn.rebrickable.com/media/sets/8009-1.jpg"
+    },
+    {
+     "no": "10225-1",
+     "name": "R2-D2",
+     "year": 2012,
+     "pieces": 2127,
+     "img": "https://cdn.rebrickable.com/media/sets/10225-1.jpg"
+    },
+    {
+     "no": "30611-1",
+     "name": "R2-D2",
+     "year": 2017,
+     "pieces": 70,
+     "img": "https://cdn.rebrickable.com/media/sets/30611-1.jpg"
+    },
+    {
+     "no": "75308-1",
+     "name": "R2-D2",
+     "year": 2021,
+     "pieces": 2314,
+     "img": "https://cdn.rebrickable.com/media/sets/75308-1.jpg"
+    },
+    {
+     "no": "75379-1",
+     "name": "R2-D2",
+     "year": 2024,
+     "pieces": 1050,
+     "img": "https://cdn.rebrickable.com/media/sets/75379-1.jpg"
+    }
+   ]
+  },
+  "75383-1": {
+   "type": "SET",
+   "name": "Darth Maul's Sith Infiltrator",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 788.5,
+   "dims_cm": [
+    35.3,
+    19.0,
+    9.0
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 631,
+   "minifigs": [
+    {
+     "no": "sw1332",
+     "name": "Anakin Skywalker - Short Legs, Thick Messy Hair",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1333",
+     "name": "Darth Maul - Horns, Printed Legs, Closed Mouth",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1334a",
+     "name": "Qui-Gon Jinn - Dark Brown Legs, Poncho, Reddish Brown Beard",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1335",
+     "name": "Saw Gerrera",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1418",
+     "name": "DRK-1 Dark Eye Probe Droid - Black, Round Tiles",
+     "qty": 3,
+     "sets": 1
+    }
+   ],
+   "versions": [
+    {
+     "no": "7961-1",
+     "name": "Darth Maul's Sith Infiltrator",
+     "year": 2011,
+     "pieces": 479,
+     "img": "https://cdn.rebrickable.com/media/sets/7961-1.jpg"
+    },
+    {
+     "no": "912058-1",
+     "name": "Darth Maul's Sith Infiltrator",
+     "year": 2020,
+     "pieces": 34,
+     "img": "https://cdn.rebrickable.com/media/sets/912058-1.jpg"
+    },
+    {
+     "no": "75383-1",
+     "name": "Darth Maul's Sith Infiltrator",
+     "year": 2024,
+     "pieces": 640,
+     "img": "https://cdn.rebrickable.com/media/sets/75383-1.jpg"
+    }
+   ]
+  },
+  "75389-1": {
+   "type": "SET",
+   "name": "The Dark Falcon",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 2530.0,
+   "dims_cm": [
+    47.6,
+    37.3,
+    11.0
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 1594,
+   "minifigs": [
+    {
+     "no": "sw1363",
+     "name": "Jedi Vader",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1364",
+     "name": "Rey - Black Dress, Hood and Cape (Darth Rey)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1365",
+     "name": "Beach Luke",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1366",
+     "name": "Darth Dev (Darth Devastator) - Cape",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1367",
+     "name": "Jar Jar Binks - Black Outfit, Printed Head with Dark Orange Top (Darth Jar Jar)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1368",
+     "name": "Bounty Hunter C-3PO",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": []
+  },
+  "75391-1": {
+   "type": "SET",
+   "name": "Captain Rex Y-Wing Microfighter",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 112.0,
+   "dims_cm": [
+    14.1,
+    12.2,
+    4.6
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 109,
+   "minifigs": [
+    {
+     "no": "sw1315",
+     "name": "Clone Trooper Captain Rex, 501st Legion (Phase 2) - Blue Cloth Pauldron, Rangefinder, Printed White Arms",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "versions": []
+  },
+  "75400-1": {
+   "type": "SET",
+   "name": "Plo Koon's Jedi Starfighter Microfighter",
+   "year": 2025,
+   "category": "Star Wars",
+   "weight_g": 113.0,
+   "dims_cm": [
+    14.0,
+    12.0,
+    4.6
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 93,
+   "minifigs": [
+    {
+     "no": "sw1414",
+     "name": "Plo Koon - Dark Brown Robe, Tan Shirt, Printed Legs",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": []
+  },
+  "75431-1": {
+   "type": "SET",
+   "name": "327th Star Corps Clone Troopers Battle Pack",
+   "year": 2025,
+   "category": "Star Wars",
+   "weight_g": 257.0,
+   "dims_cm": [
+    20.0,
+    19.0,
+    4.6
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 187,
+   "minifigs": [
+    {
+     "no": "sw1321",
+     "name": "Super Battle Droid - Pearl Dark Gray, Narrow Head, Chest Light Indent",
+     "qty": 3,
+     "sets": 4
+    },
+    {
+     "no": "sw1421",
+     "name": "Dwarf Spider Droid - Light Bluish Gray Dome, Lightsaber Hilt",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1422",
+     "name": "Clone Trooper, 327th Star Corps (Phase 2) - Nougat Head",
+     "qty": 3,
+     "sets": 2
+    },
+    {
+     "no": "sw1423",
+     "name": "Clone Trooper, 327th Star Corps (Phase 2) - Nougat Head, Rangefinder",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": []
+  },
+  "75435-1": {
+   "type": "SET",
+   "name": "Battle of Felucia Separatist MTT",
+   "year": 2025,
+   "category": "Star Wars",
+   "weight_g": 1531.0,
+   "dims_cm": [
+    53.5,
+    27.8,
+    7.4
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 956,
+   "minifigs": [
+    {
+     "no": "sw0001c",
+     "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+     "qty": 6,
+     "sets": 36
+    },
+    {
+     "no": "sw1338",
+     "name": "Battle Droid Pilot - Blue Torso with Tan Insignia and Chest Badge, Angled Arm and Straight Arm",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1427",
+     "name": "Commando Droid - Pearl Dark Gray",
+     "qty": 3,
+     "sets": 2
+    },
+    {
+     "no": "sw1428",
+     "name": "Aayla Secura - Nougat Lips",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1429",
+     "name": "Clone Trooper Commander Bly",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": []
+  },
+  "75436-1": {
+   "type": "SET",
+   "name": "The Mandalorian & Grogu's Speeder Bike",
+   "year": 2026,
+   "category": "Star Wars",
+   "weight_g": 79.0,
+   "dims_cm": [
+    14.0,
+    12.0,
+    4.5
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 57,
+   "minifigs": [
+    {
+     "no": "sw1113",
+     "name": "Din Grogu / The Child / 'Baby Yoda'",
+     "qty": 1,
+     "sets": 12
+    },
+    {
+     "no": "sw1488",
+     "name": "The Mandalorian / Din Djarin / 'Mando' - Silver Beskar Armor, Cape, Printed Head",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": []
+  },
+  "911832-1": {
+   "type": "SET",
+   "name": "Imperial Shuttle Pilot foil pack",
+   "year": 2018,
+   "category": "Star Wars",
+   "weight_g": 4.9,
+   "dims_cm": [
+    10.0,
+    14.0,
+    1.0
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 1,
+   "minifigs": [
+    {
+     "no": "sw0802",
+     "name": "Imperial Shuttle Pilot - Light Nougat Head with Headset, Imperial Officer Cap",
+     "qty": 1,
+     "sets": 3
+    }
+   ],
+   "versions": []
+  },
+  "911943-1": {
+   "type": "SET",
+   "name": "Luke Skywalker foil pack #1",
+   "year": 2019,
+   "category": "Star Wars",
+   "weight_g": 6.5,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.0
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 2,
+   "minifigs": [
+    {
+     "no": "sw0778",
+     "name": "Luke Skywalker (Tatooine, White Legs, Stern / Smile Face Print)",
+     "qty": 1,
+     "sets": 8
+    }
+   ],
+   "versions": []
+  },
+  "911953-1": {
+   "type": "SET",
+   "name": "First Order SF TIE Fighter - Mini foil pack",
+   "year": 2019,
+   "category": "Star Wars",
+   "weight_g": 23.7,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.5
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 32,
+   "minifigs": [],
+   "versions": []
+  },
+  "912169-1": {
+   "type": "SET",
+   "name": "Emperor Palpatine Foil Pack",
+   "year": 2021,
+   "category": "Star Wars",
+   "weight_g": 6.0,
+   "dims_cm": [
+    14.2,
+    9.9,
+    1.6
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 2,
+   "minifigs": [
+    {
+     "no": "sw1107",
+     "name": "Emperor Palpatine - Hood Basic, Orange Eyes",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "versions": []
+  },
+  "912284-1": {
+   "type": "SET",
+   "name": "The Razor Crest - Mini foil pack",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 33.0,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.5
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 41,
+   "minifigs": [],
+   "versions": []
+  },
+  "912285-1": {
+   "type": "SET",
+   "name": "Darth Maul foil pack",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 7.0,
+   "dims_cm": [
+    11.9,
+    14.5,
+    1.0
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 3,
+   "minifigs": [
+    {
+     "no": "sw1155",
+     "name": "Darth Maul - Printed Legs with Silver Armor",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "versions": []
+  },
+  "912287-1": {
+   "type": "SET",
+   "name": "Mandalorian Starfighter - Mini foil pack",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 31.0,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.5
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 31,
+   "minifigs": [],
+   "versions": []
+  },
+  "912308-1": {
+   "type": "SET",
+   "name": "AT-TE - Mini paper bag",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 28.4,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.2
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 62,
+   "minifigs": [],
+   "versions": []
+  },
+  "912310-1": {
+   "type": "SET",
+   "name": "C-3PO and Gonk Droid paper bag",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 10.92,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.1
+   ],
+   "fetched": "2026-11-01",
+   "pieces": null,
+   "minifigs": [
+    {
+     "no": "sw1201",
+     "name": "C-3PO - Printed Legs, Toes and Arms, Bright Light Yellow Eyes",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sw1314",
+     "name": "Gonk Droid (GNK Power Droid) - Dark Bluish Gray Body with Dark Red Control Panel, Black Feet",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "versions": []
+  },
+  "912403-1": {
+   "type": "SET",
+   "name": "Coruscant Guard paper bag",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 8.0,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.5
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 1,
+   "minifigs": [
+    {
+     "no": "sw1305",
+     "name": "Clone Shock Trooper, Coruscant Guard (Phase 2) - Nougat Head",
+     "qty": 1,
+     "sets": 5
+    }
+   ],
+   "versions": []
+  },
+  "912409-1": {
+   "type": "SET",
+   "name": "Clone Trooper paper bag",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 8.0,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.5
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 1,
+   "minifigs": [
+    {
+     "no": "sw1319",
+     "name": "Clone Trooper (Phase 2) - Nougat Head",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "versions": []
+  },
+  "912410-1": {
+   "type": "SET",
+   "name": "TIE Pilot paper bag",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 8.06,
+   "dims_cm": [
+    11.5,
+    16.5,
+    1.2
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 1,
+   "minifigs": [
+    {
+     "no": "sw1260",
+     "name": "Imperial TIE Fighter / Interceptor Pilot - Female, Nougat Head",
+     "qty": 1,
+     "sets": 3
+    }
+   ],
+   "versions": []
+  },
+  "912501-1": {
+   "type": "SET",
+   "name": "Mandalorian Nite Owl paper bag",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 9.0,
+   "dims_cm": [
+    12.0,
+    14.0,
+    1.5
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 8,
+   "minifigs": [
+    {
+     "no": "sw1344",
+     "name": "Mandalorian Nite Owl",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "versions": []
+  },
+  "912506-1": {
+   "type": "SET",
+   "name": "TIE Defender - Mini paper bag",
+   "year": 2025,
+   "category": "Star Wars",
+   "weight_g": 16.7,
+   "dims_cm": [
+    12.0,
+    14.5,
+    1.0
+   ],
+   "fetched": "2026-11-01",
+   "pieces": null,
+   "minifigs": [],
+   "versions": []
+  },
+  "L0002235-1": {
+   "type": "SET",
+   "name": "Commando Droid paper bag",
+   "year": 2026,
+   "category": "Star Wars",
+   "weight_g": 6.0,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.0
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 1,
+   "minifigs": [
+    {
+     "no": "sw1427",
+     "name": "Commando Droid - Pearl Dark Gray",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "versions": []
+  },
+  "L0002237-1": {
+   "type": "SET",
+   "name": "Galactic Marine paper bag",
+   "year": 2026,
+   "category": "Star Wars",
+   "weight_g": 8.3,
+   "dims_cm": [
+    12.0,
+    14.0,
+    1.5
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 1,
+   "minifigs": [
+    {
+     "no": "sw1430",
+     "name": "Galactic Marine Clone Trooper",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "versions": []
+  },
+  "L0002238-1": {
+   "type": "SET",
+   "name": "327th Star Corps Clone Trooper paper bag",
+   "year": 2026,
+   "category": "Star Wars",
+   "weight_g": 8.0,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.6
+   ],
+   "fetched": "2026-11-01",
+   "pieces": 1,
+   "minifigs": [
+    {
+     "no": "sw1422",
+     "name": "Clone Trooper, 327th Star Corps (Phase 2) - Nougat Head",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "versions": []
+  },
+  "cas327": {
+   "type": "MINIFIG",
+   "name": "Fantasy Era - Skeleton Warrior 1, Black",
+   "year": 2007,
+   "category": "Castle",
+   "weight_g": 1.95,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7079-1",
+     "name": "Drawbridge Defense"
+    },
+    {
+     "no": "7091-1",
+     "name": "Knights' Catapult Defense"
+    },
+    {
+     "no": "7092-1",
+     "name": "Skeletons' Prison Carriage"
+    },
+    {
+     "no": "7094-1",
+     "name": "King's Castle Siege"
+    },
+    {
+     "no": "7979-7",
+     "name": "Advent Calendar 2008, Castle  (Day 6) - Black Skeleton with Crossbow"
+    },
+    {
+     "no": "852001-1",
+     "name": "Chess"
+    },
+    {
+     "no": "852272-1",
+     "name": "Battle Pack Skeletons blister pack"
+    }
+   ]
+  },
+  "cas328": {
+   "type": "MINIFIG",
+   "name": "Fantasy Era - Skeleton Warrior 2, White",
+   "year": 2007,
+   "category": "Castle",
+   "weight_g": 2.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "5372-1",
+     "name": "Skeleton Chariot"
+    },
+    {
+     "no": "7029-1",
+     "name": "Skeleton Ship Attack"
+    },
+    {
+     "no": "7079-1",
+     "name": "Drawbridge Defense"
+    },
+    {
+     "no": "7090-1",
+     "name": "Crossbow Attack"
+    },
+    {
+     "no": "7093-1",
+     "name": "Skeleton Tower"
+    },
+    {
+     "no": "7094-1",
+     "name": "King's Castle Siege"
+    },
+    {
+     "no": "7979-5",
+     "name": "Advent Calendar 2008, Castle  (Day 4) - White Skeleton with Flail"
+    },
+    {
+     "no": "852272-1",
+     "name": "Battle Pack Skeletons blister pack"
+    },
+    {
+     "no": "852293-1",
+     "name": "Giant Chess"
+    }
+   ]
+  },
+  "cas329": {
+   "type": "MINIFIG",
+   "name": "Fantasy Era - Skeleton Warrior 3, White, Speckled Helmet",
+   "year": 2007,
+   "category": "Castle",
+   "weight_g": 2.8,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7091-1",
+     "name": "Knights' Catapult Defense"
+    },
+    {
+     "no": "7092-1",
+     "name": "Skeletons' Prison Carriage"
+    }
+   ]
+  },
+  "colsh10": {
+   "type": "MINIFIG",
+   "name": "Batman, DC Super Heroes (Minifigure Only without Stand and Accessories)",
+   "year": 2020,
+   "category": "Collectible Minifigures",
+   "weight_g": 4.11,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "colsh-10",
+     "name": "Batman, DC Super Heroes (Complete Set with Stand and Accessories)"
+    }
+   ]
+  },
+  "gen001": {
+   "type": "MINIFIG",
+   "name": "Skeleton - Standard Skull, Floppy Arms",
+   "year": 1995,
+   "category": "Castle",
+   "weight_g": 2.08,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "10066-1",
+     "name": "Castle Accessories"
+    },
+    {
+     "no": "10217-1",
+     "name": "Diagon Alley"
+    },
+    {
+     "no": "1382-1",
+     "name": "Scary Laboratory"
+    },
+    {
+     "no": "1383-1",
+     "name": "Curse of the Pharaoh"
+    },
+    {
+     "no": "1411-1",
+     "name": "Pirate's Treasure Hunt - Quaker Oats Promotional polybag"
+    },
+    {
+     "no": "1782-1",
+     "name": "Discovery Station"
+    },
+    {
+     "no": "2879-1",
+     "name": "Desert Expedition"
+    },
+    {
+     "no": "4072-1",
+     "name": "Skeleton polybag"
+    },
+    {
+     "no": "45110-1",
+     "name": "BuildToExpress Set"
+    },
+    {
+     "no": "5000644-1",
+     "name": "{Monster Fighters Promotional Pack} polybag"
+    },
+    {
+     "no": "5383-1",
+     "name": "Castle Accessories"
+    },
+    {
+     "no": "5909-1",
+     "name": "Treasure Raiders set with Mummy Storage Container"
+    },
+    {
+     "no": "5936-1",
+     "name": "Spider's Secret / Señor Gomez's Expedition"
+    },
+    {
+     "no": "5948-1",
+     "name": "Desert Expedition"
+    },
+    {
+     "no": "5976-1",
+     "name": "River Expedition"
+    },
+    {
+     "no": "5986-1",
+     "name": "Amazon Ancient Ruins"
+    },
+    {
+     "no": "5988-1",
+     "name": "Pharaoh's Forbidden Ruins"
+    },
+    {
+     "no": "6036-1",
+     "name": "Skeleton Surprise"
+    },
+    {
+     "no": "6046-1",
+     "name": "Hemlock Stronghold"
+    },
+    {
+     "no": "6078-1",
+     "name": "Royal Drawbridge"
+    },
+    {
+     "no": "6079-1",
+     "name": "Dark Forest Fortress"
+    },
+    {
+     "no": "6087-1",
+     "name": "Witch's Magic Manor"
+    },
+    {
+     "no": "6090-1",
+     "name": "Royal Knight's Castle"
+    },
+    {
+     "no": "6091-1",
+     "name": "King Leo's Castle"
+    },
+    {
+     "no": "6097-1",
+     "name": "Night Lord's Castle"
+    },
+    {
+     "no": "6098-1",
+     "name": "King Leo's Castle"
+    },
+    {
+     "no": "6254-1",
+     "name": "Rocky Reef"
+    },
+    {
+     "no": "6296-1",
+     "name": "Shipwreck Island"
+    },
+    {
+     "no": "6494-1",
+     "name": "Mystic Mountain Time Lab"
+    },
+    {
+     "no": "6560-1",
+     "name": "Diving Expedition Explorer"
+    }
+   ]
+  },
+  "min009": {
+   "type": "MINIFIG",
+   "name": "Steve (Light Nougat) - Dark Purple Legs",
+   "year": 2014,
+   "category": "Minecraft",
+   "weight_g": 3.42,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "21113-1",
+     "name": "The Cave"
+    },
+    {
+     "no": "21114-1",
+     "name": "The Farm"
+    },
+    {
+     "no": "21115-1",
+     "name": "The First Night"
+    },
+    {
+     "no": "21116-1",
+     "name": "Crafting Box"
+    },
+    {
+     "no": "21119-1",
+     "name": "The Dungeon"
+    },
+    {
+     "no": "21120-1",
+     "name": "The Snow Hideout"
+    },
+    {
+     "no": "21128-1",
+     "name": "The Village"
+    },
+    {
+     "no": "21136-1",
+     "name": "The Ocean Monument"
+    },
+    {
+     "no": "21138-1",
+     "name": "The Melon Farm"
+    },
+    {
+     "no": "21144-1",
+     "name": "The Farm Cottage"
+    },
+    {
+     "no": "21146-1",
+     "name": "The Skeleton Attack"
+    },
+    {
+     "no": "21147-1",
+     "name": "The Bedrock Adventures"
+    },
+    {
+     "no": "21153-1",
+     "name": "The Wool Farm"
+    },
+    {
+     "no": "21155-1",
+     "name": "The Creeper Mine"
+    },
+    {
+     "no": "21166-1",
+     "name": "The \"Abandoned\" Mine"
+    },
+    {
+     "no": "21167-1",
+     "name": "The Trading Post"
+    },
+    {
+     "no": "21169-1",
+     "name": "The First Adventure"
+    },
+    {
+     "no": "21177-1",
+     "name": "The Creeper Ambush"
+    },
+    {
+     "no": "21248-1",
+     "name": "The Pumpkin Farm"
+    },
+    {
+     "no": "21249-1",
+     "name": "The Crafting Box 4.0"
+    },
+    {
+     "no": "30331-1",
+     "name": "The Nether Duel polybag"
+    },
+    {
+     "no": "30393-1",
+     "name": "Steve and Creeper Set polybag"
+    },
+    {
+     "no": "30647-1",
+     "name": "The Dripstone Cavern polybag"
+    },
+    {
+     "no": "30672-1",
+     "name": "Steve and Baby Panda polybag"
+    },
+    {
+     "no": "662101-1",
+     "name": "Steve, Zombie and Pig foil pack"
+    },
+    {
+     "no": "662205-1",
+     "name": "Steve with Drowned foil pack"
+    },
+    {
+     "no": "662207-1",
+     "name": "Steve with Spider foil pack"
+    },
+    {
+     "no": "662317-1",
+     "name": "Steve with Diamond Armor paper bag"
+    }
+   ]
+  },
+  "min010": {
+   "type": "MINIFIG",
+   "name": "Zombie - Dark Purple Legs",
+   "year": 2014,
+   "category": "Minecraft",
+   "weight_g": 3.42,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "21113-1",
+     "name": "The Cave"
+    },
+    {
+     "no": "21118-1",
+     "name": "The Mine"
+    },
+    {
+     "no": "21119-1",
+     "name": "The Dungeon"
+    },
+    {
+     "no": "21123-1",
+     "name": "The Iron Golem"
+    },
+    {
+     "no": "21128-1",
+     "name": "The Village"
+    },
+    {
+     "no": "21134-1",
+     "name": "The Waterfall Base"
+    },
+    {
+     "no": "21141-1",
+     "name": "The Zombie Cave"
+    },
+    {
+     "no": "21147-1",
+     "name": "The Bedrock Adventures"
+    },
+    {
+     "no": "21161-1",
+     "name": "The Crafting Box 3.0"
+    },
+    {
+     "no": "21166-1",
+     "name": "The \"Abandoned\" Mine"
+    },
+    {
+     "no": "21174-1",
+     "name": "The Modern Treehouse"
+    },
+    {
+     "no": "21181-1",
+     "name": "The Rabbit Ranch"
+    },
+    {
+     "no": "21186-1",
+     "name": "The Ice Castle"
+    },
+    {
+     "no": "21240-1",
+     "name": "The Swamp Adventure"
+    },
+    {
+     "no": "21256-1",
+     "name": "The Frog House"
+    },
+    {
+     "no": "21260-1",
+     "name": "The Cherry Blossom Garden"
+    },
+    {
+     "no": "21275-1",
+     "name": "The TNT Jungle House"
+    },
+    {
+     "no": "21587-1",
+     "name": "Zombie Dungeon"
+    },
+    {
+     "no": "662101-1",
+     "name": "Steve, Zombie and Pig foil pack"
+    },
+    {
+     "no": "662304-1",
+     "name": "Ninja, Zombie and TNT Launcher paper bag"
+    },
+    {
+     "no": "662403-1",
+     "name": "Zombie with Burning Baby Zombie and TNT paper bag"
+    },
+    {
+     "no": "662510-1",
+     "name": "Hero with Zombie and TNT Launcher paper bag"
+    }
+   ]
+  },
+  "min012": {
+   "type": "MINIFIG",
+   "name": "Creeper",
+   "year": 2014,
+   "category": "Minecraft",
+   "weight_g": 3.78,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "21115-1",
+     "name": "The First Night"
+    },
+    {
+     "no": "21118-1",
+     "name": "The Mine"
+    },
+    {
+     "no": "21120-1",
+     "name": "The Snow Hideout"
+    },
+    {
+     "no": "21125-1",
+     "name": "The Jungle Tree House"
+    },
+    {
+     "no": "21128-1",
+     "name": "The Village"
+    },
+    {
+     "no": "21129-1",
+     "name": "The Mushroom Island"
+    },
+    {
+     "no": "21135-1",
+     "name": "The Crafting Box 2.0"
+    },
+    {
+     "no": "21138-1",
+     "name": "The Melon Farm"
+    },
+    {
+     "no": "21147-1",
+     "name": "The Bedrock Adventures"
+    },
+    {
+     "no": "21155-1",
+     "name": "The Creeper Mine"
+    },
+    {
+     "no": "21161-1",
+     "name": "The Crafting Box 3.0"
+    },
+    {
+     "no": "21170-1",
+     "name": "The Pig House"
+    },
+    {
+     "no": "21184-1",
+     "name": "The Bakery"
+    },
+    {
+     "no": "21243-1",
+     "name": "The Frozen Peaks"
+    },
+    {
+     "no": "21244-1",
+     "name": "The Sword Outpost"
+    },
+    {
+     "no": "21249-1",
+     "name": "The Crafting Box 4.0"
+    },
+    {
+     "no": "21263-1",
+     "name": "The Badlands Mineshaft"
+    },
+    {
+     "no": "21275-1",
+     "name": "The TNT Jungle House"
+    },
+    {
+     "no": "21280-5",
+     "name": "Advent Calendar 2025, Minecraft (Day  4) - Creeper and Sweet Berry Bush"
+    },
+    {
+     "no": "21583-1",
+     "name": "Steve's Taiga Adventure"
+    },
+    {
+     "no": "21586-1",
+     "name": "The Pale Garden"
+    },
+    {
+     "no": "21593-1",
+     "name": "First Night Adventure"
+    },
+    {
+     "no": "30393-1",
+     "name": "Steve and Creeper Set polybag"
+    },
+    {
+     "no": "30647-1",
+     "name": "The Dripstone Cavern polybag"
+    },
+    {
+     "no": "662204-1",
+     "name": "Miner and Creeper foil pack"
+    },
+    {
+     "no": "662302-1",
+     "name": "Cave Explorer, Creeper and Slime foil pack"
+    },
+    {
+     "no": "662502-1",
+     "name": "Steve with Creeper and TNT paper bag"
+    },
+    {
+     "no": "662508-1",
+     "name": "Diamond Hero with Creeper and Slime paper bag"
+    },
+    {
+     "no": "L0002247-1",
+     "name": "Realm Raider with Creeper and TNT Launcher paper bag"
+    }
+   ]
+  },
+  "min018": {
+   "type": "MINIFIG",
+   "name": "Skeleton, Minecraft - Flat Silver Helmet and Armor",
+   "year": 2015,
+   "category": "Minecraft",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "21121-1",
+     "name": "The Desert Outpost"
+    }
+   ]
+  },
+  "min021": {
+   "type": "MINIFIG",
+   "name": "Zombie Pigman",
+   "year": 2015,
+   "category": "Minecraft",
+   "weight_g": 3.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "21122-1",
+     "name": "The Nether Fortress"
+    },
+    {
+     "no": "21130-1",
+     "name": "The Nether Railway"
+    },
+    {
+     "no": "21139-1",
+     "name": "The Nether Fight"
+    }
+   ]
+  },
+  "min025": {
+   "type": "MINIFIG",
+   "name": "Wither Skeleton - Straight Arms",
+   "year": 2016,
+   "category": "Minecraft",
+   "weight_g": 2.67,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "21126-1",
+     "name": "The Wither"
+    },
+    {
+     "no": "21139-1",
+     "name": "The Nether Fight"
+    },
+    {
+     "no": "21154-1",
+     "name": "The Blaze Bridge"
+    },
+    {
+     "no": "21172-1",
+     "name": "The Ruined Portal"
+    },
+    {
+     "no": "21266-1",
+     "name": "The Nether Lava Battle"
+    },
+    {
+     "no": "21590-1",
+     "name": "Wither Battle"
+    },
+    {
+     "no": "662506-1",
+     "name": "Wither Skeleton and Ender Explorer with TNT paper bag"
+    }
+   ]
+  },
+  "min057": {
+   "type": "MINIFIG",
+   "name": "Baby Zombie - Printed Torso",
+   "year": 2018,
+   "category": "Minecraft",
+   "weight_g": 1.04,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "21141-1",
+     "name": "The Zombie Cave"
+    }
+   ]
+  },
+  "min158": {
+   "type": "MINIFIG",
+   "name": "Alex - Reddish Brown Legs, Pearl Gold Helmet",
+   "year": 2023,
+   "category": "Minecraft",
+   "weight_g": 4.22,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "21252-1",
+     "name": "The Armory"
+    }
+   ]
+  },
+  "min194": {
+   "type": "MINIFIG",
+   "name": "Illager (Vindicator) - Narrow Eyes",
+   "year": 2025,
+   "category": "Minecraft",
+   "weight_g": 3.56,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "21267-1",
+     "name": "The Illager Desert Patrol"
+    },
+    {
+     "no": "21278-1",
+     "name": "The Pillager Outpost and Ravager"
+    }
+   ]
+  },
+  "min195": {
+   "type": "MINIFIG",
+   "name": "Illager (Pillager) - Narrow Eyes",
+   "year": 2025,
+   "category": "Minecraft",
+   "weight_g": 3.56,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "21267-1",
+     "name": "The Illager Desert Patrol"
+    }
+   ]
+  },
+  "min196": {
+   "type": "MINIFIG",
+   "name": "Illager (Pillager) - Narrow Eyes, Dark Bluish Gray Neck Bracket and Tile with Clip, Ominous Banner",
+   "year": 2025,
+   "category": "Minecraft",
+   "weight_g": 5.25,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "21267-1",
+     "name": "The Illager Desert Patrol"
+    }
+   ]
+  },
+  "min198": {
+   "type": "MINIFIG",
+   "name": "Blaze - Trans-Black Cone Stand",
+   "year": 2025,
+   "category": "Minecraft",
+   "weight_g": 4.95,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "21266-1",
+     "name": "The Nether Lava Battle"
+    },
+    {
+     "no": "L0002248-1",
+     "name": "Hero with Blaze paper bag"
+    }
+   ]
+  },
+  "min200": {
+   "type": "MINIFIG",
+   "name": "Steve (Light Nougat) - Pearl Dark Gray Legs",
+   "year": 2024,
+   "category": "Minecraft",
+   "weight_g": 3.43,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "662411-1",
+     "name": "Steve in the Diamond Mine paper bag"
+    }
+   ]
+  },
+  "njo0025": {
+   "type": "MINIFIG",
+   "name": "Nuckal (Skulkin) - Horizontal Grip Hands",
+   "year": 2011,
+   "category": "NINJAGO",
+   "weight_g": 4.5,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "2173-1",
+     "name": "Nuckal blister pack"
+    }
+   ]
+  },
+  "sh0167": {
+   "type": "MINIFIG",
+   "name": "Iron Man - Mark 43 Armor",
+   "year": 2015,
+   "category": "Super Heroes",
+   "weight_g": 4.6,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "76031-1",
+     "name": "The Hulk Buster Smash"
+    },
+    {
+     "no": "76032-1",
+     "name": "The Avengers Quinjet City Chase"
+    },
+    {
+     "no": "76038-1",
+     "name": "Attack on Avengers Tower"
+    }
+   ]
+  },
+  "sh0168": {
+   "type": "MINIFIG",
+   "name": "Iron Legion - Trans-Neon Orange Head, Helmet with Visor",
+   "year": 2015,
+   "category": "Super Heroes",
+   "weight_g": 4.7,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "76038-1",
+     "name": "Attack on Avengers Tower"
+    }
+   ]
+  },
+  "sh0169": {
+   "type": "MINIFIG",
+   "name": "Ultron MK1 - Trans-Clear Head",
+   "year": 2015,
+   "category": "Super Heroes",
+   "weight_g": 3.8,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "76038-1",
+     "name": "Attack on Avengers Tower"
+    }
+   ]
+  },
+  "sh0176": {
+   "type": "MINIFIG",
+   "name": "Ultimate Ultron - Foot Repulsors",
+   "year": 2015,
+   "category": "Super Heroes",
+   "weight_g": 4.6,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "76032-1",
+     "name": "The Avengers Quinjet City Chase"
+    },
+    {
+     "no": "comcon048-1",
+     "name": "Throne of Ultron - San Diego Comic-Con 2015 Exclusive"
+    }
+   ]
+  },
+  "sh0177": {
+   "type": "MINIFIG",
+   "name": "Captain America - Dark Blue Suit with Reddish Brown Belt and Harness, Reddish Brown Hands, Mask",
+   "year": 2015,
+   "category": "Super Heroes",
+   "weight_g": 3.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "30447-1",
+     "name": "Captain America's Motorcycle polybag"
+    },
+    {
+     "no": "76032-1",
+     "name": "The Avengers Quinjet City Chase"
+    },
+    {
+     "no": "76041-1",
+     "name": "The Hydra Fortress Smash"
+    },
+    {
+     "no": "76051-1",
+     "name": "Super Hero Airport Battle"
+    },
+    {
+     "no": "76067-1",
+     "name": "Tanker Truck Takedown"
+    }
+   ]
+  },
+  "sh0178": {
+   "type": "MINIFIG",
+   "name": "Vision - Sand Green, Dark Azure Spot on Forehead",
+   "year": 2015,
+   "category": "Super Heroes",
+   "weight_g": 3.25,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "76032-1",
+     "name": "The Avengers Quinjet City Chase"
+    }
+   ]
+  },
+  "sh0186": {
+   "type": "MINIFIG",
+   "name": "Black Widow - Black Jumpsuit, Dark Orange Short Hair, Printed Legs, Dark Azure Trim",
+   "year": 2015,
+   "category": "Super Heroes",
+   "weight_g": 4.05,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "76032-1",
+     "name": "The Avengers Quinjet City Chase"
+    },
+    {
+     "no": "76042-1",
+     "name": "The SHIELD Helicarrier"
+    },
+    {
+     "no": "76050-1",
+     "name": "Crossbones' Hazard Heist"
+    }
+   ]
+  },
+  "sw0001b": {
+   "type": "MINIFIG",
+   "name": "Battle Droid - Tan, Angled Arms",
+   "year": 1999,
+   "category": "Star Wars",
+   "weight_g": 2.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "30004-1",
+     "name": "Battle Droid on STAP - Mini polybag"
+    },
+    {
+     "no": "30058-1",
+     "name": "STAP - Mini polybag"
+    },
+    {
+     "no": "7126-1",
+     "name": "Battle Droid Carrier"
+    },
+    {
+     "no": "7141-1",
+     "name": "Naboo Fighter"
+    },
+    {
+     "no": "7155-1",
+     "name": "Trade Federation AAT"
+    },
+    {
+     "no": "7184-1",
+     "name": "Trade Federation MTT"
+    },
+    {
+     "no": "7258-1",
+     "name": "Wookiee Attack"
+    },
+    {
+     "no": "7261-1",
+     "name": "Clone Turbo Tank (with Light-Up Mace Windu, Trans-Light Purple Lightsaber Blade)"
+    },
+    {
+     "no": "7261-2",
+     "name": "Clone Turbo Tank (with Non-Light-Up Mace Windu)"
+    },
+    {
+     "no": "75037-1",
+     "name": "Battle on Saleucami"
+    },
+    {
+     "no": "75058-1",
+     "name": "MTT"
+    },
+    {
+     "no": "7654-1",
+     "name": "Droids Battle Pack"
+    },
+    {
+     "no": "7675-1",
+     "name": "AT-TE Walker"
+    },
+    {
+     "no": "7678-1",
+     "name": "Droid Gunship"
+    },
+    {
+     "no": "7868-1",
+     "name": "Mace Windu's Jedi Starfighter"
+    },
+    {
+     "no": "8018-1",
+     "name": "Armored Assault Tank (AAT)"
+    }
+   ]
+  },
+  "sw0001c": {
+   "type": "MINIFIG",
+   "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+   "year": 2007,
+   "category": "Star Wars",
+   "weight_g": 2.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "40686-1",
+     "name": "Trade Federation Troop Carrier"
+    },
+    {
+     "no": "75023-14",
+     "name": "Advent Calendar 2013, Star Wars (Day 13) - Battle Droid"
+    },
+    {
+     "no": "75037-1",
+     "name": "Battle on Saleucami"
+    },
+    {
+     "no": "75042-1",
+     "name": "Droid Gunship"
+    },
+    {
+     "no": "75043-1",
+     "name": "AT-AP"
+    },
+    {
+     "no": "75044-1",
+     "name": "Droid Tri-Fighter"
+    },
+    {
+     "no": "75058-1",
+     "name": "MTT"
+    },
+    {
+     "no": "75080-1",
+     "name": "AAT"
+    },
+    {
+     "no": "75086-1",
+     "name": "Battle Droid Troop Carrier"
+    },
+    {
+     "no": "75091-1",
+     "name": "Flash Speeder"
+    },
+    {
+     "no": "75092-1",
+     "name": "Naboo Starfighter"
+    },
+    {
+     "no": "75142-1",
+     "name": "Homing Spider Droid"
+    },
+    {
+     "no": "75146-14",
+     "name": "Advent Calendar 2016, Star Wars (Day 13) - Battle Droid"
+    },
+    {
+     "no": "75151-1",
+     "name": "Clone Turbo Tank"
+    },
+    {
+     "no": "75182-1",
+     "name": "Republic Fighter Tank"
+    },
+    {
+     "no": "75213-9",
+     "name": "Advent Calendar 2018, Star Wars (Day  8) - Battle Droid"
+    },
+    {
+     "no": "75245-16",
+     "name": "Advent Calendar 2019, Star Wars (Day 15) - Battle Droid"
+    },
+    {
+     "no": "75261-1",
+     "name": "Clone Scout Walker – 20th Anniversary Edition"
+    },
+    {
+     "no": "75279-15",
+     "name": "Advent Calendar 2020, Star Wars (Day 14) - Battle Droid"
+    },
+    {
+     "no": "75280-1",
+     "name": "501st Legion Clone Troopers"
+    },
+    {
+     "no": "75337-1",
+     "name": "AT-TE Walker"
+    },
+    {
+     "no": "75340-6",
+     "name": "Advent Calendar 2022, Star Wars (Day  5) - Battle Droid"
+    },
+    {
+     "no": "75342-1",
+     "name": "Republic Fighter Tank"
+    },
+    {
+     "no": "75366-9",
+     "name": "Advent Calendar 2023, Star Wars (Day  8) - B-1 Battle Droid"
+    },
+    {
+     "no": "75413-1",
+     "name": "Republic Juggernaut"
+    },
+    {
+     "no": "75435-1",
+     "name": "Battle of Felucia Separatist MTT"
+    },
+    {
+     "no": "7662-1",
+     "name": "Trade Federation MTT"
+    },
+    {
+     "no": "7670-1",
+     "name": "Hailfire Droid & Spider Droid"
+    },
+    {
+     "no": "7670-2",
+     "name": "Hailfire Droid & Spider Droid, Clone Wars White Box"
+    },
+    {
+     "no": "7681-1",
+     "name": "Separatist Spider Droid"
+    }
+   ]
+  },
+  "sw0005a": {
+   "type": "MINIFIG",
+   "name": "Imperial Scout Trooper - Plain Black Head, Dark Bluish Gray Torso Print",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 3.93,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7956-1",
+     "name": "Ewok Attack"
+    },
+    {
+     "no": "8038-1",
+     "name": "The Battle of Endor"
+    }
+   ]
+  },
+  "sw0011a": {
+   "type": "MINIFIG",
+   "name": "Chewbacca - Reddish Brown",
+   "year": 2004,
+   "category": "Star Wars",
+   "weight_g": 4.67,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "10179-1",
+     "name": "Millennium Falcon - UCS"
+    },
+    {
+     "no": "10188-1",
+     "name": "Death Star - UCS"
+    },
+    {
+     "no": "10236-1",
+     "name": "Ewok Village - UCS"
+    },
+    {
+     "no": "4504-1",
+     "name": "Millennium Falcon (Redesign), Blue box"
+    },
+    {
+     "no": "4504-2",
+     "name": "Millennium Falcon (Redesign), Original Trilogy Edition box"
+    },
+    {
+     "no": "6212-1",
+     "name": "X-wing Fighter"
+    },
+    {
+     "no": "7260-1",
+     "name": "Wookiee Catamaran"
+    },
+    {
+     "no": "7879-1",
+     "name": "Hoth Echo Base"
+    },
+    {
+     "no": "7958-7",
+     "name": "Advent Calendar 2011, Star Wars (Day  6) - Chewbacca"
+    },
+    {
+     "no": "7965-1",
+     "name": "Millennium Falcon"
+    },
+    {
+     "no": "8038-1",
+     "name": "The Battle of Endor"
+    },
+    {
+     "no": "9516-1",
+     "name": "Jabba's Palace"
+    },
+    {
+     "no": "comcon008-1",
+     "name": "Collectible Display Set 3 - San Diego Comic-Con 2009 Exclusive"
+    }
+   ]
+  },
+  "sw0025": {
+   "type": "MINIFIG",
+   "name": "Padmé Naberrie (Amidala) - Yellow Head {Padme}",
+   "year": 1999,
+   "category": "Star Wars",
+   "weight_g": 4.0,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7131-1",
+     "name": "Anakin's Podracer"
+    },
+    {
+     "no": "7171-1",
+     "name": "Mos Espa Podrace"
+    }
+   ]
+  },
+  "sw0055": {
+   "type": "MINIFIG",
+   "name": "Obi-Wan Kenobi (Young with Dark Orange Hair and Headset)",
+   "year": 2002,
+   "category": "Star Wars",
+   "weight_g": 3.5,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7143-1",
+     "name": "Jedi Starfighter"
+    }
+   ]
+  },
+  "sw0059": {
+   "type": "MINIFIG",
+   "name": "Zam Wesell",
+   "year": 2002,
+   "category": "Star Wars",
+   "weight_g": 3.8,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7133-1",
+     "name": "Bounty Hunter Pursuit"
+    }
+   ]
+  },
+  "sw0115": {
+   "type": "MINIFIG",
+   "name": "Snowtrooper, Light Bluish Gray Hips, White Hands (Hoth Stormtrooper)",
+   "year": 2004,
+   "category": "Star Wars",
+   "weight_g": 4.36,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "10178-1",
+     "name": "Motorized Walking AT-AT"
+    },
+    {
+     "no": "4504-1",
+     "name": "Millennium Falcon (Redesign), Blue box"
+    },
+    {
+     "no": "4504-2",
+     "name": "Millennium Falcon (Redesign), Original Trilogy Edition box"
+    },
+    {
+     "no": "7666-1",
+     "name": "Hoth Rebel Base - Limited Edition"
+    },
+    {
+     "no": "7749-1",
+     "name": "Echo Base"
+    },
+    {
+     "no": "7879-1",
+     "name": "Hoth Echo Base"
+    },
+    {
+     "no": "8084-1",
+     "name": "Snowtrooper Battle Pack"
+    },
+    {
+     "no": "8129-1",
+     "name": "AT-AT Walker"
+    },
+    {
+     "no": "comcon007-1",
+     "name": "Collectible Display Set 5 - San Diego Comic-Con 2009 Exclusive"
+    }
+   ]
+  },
+  "sw0119": {
+   "type": "MINIFIG",
+   "name": "Astromech Droid, R7-D4",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 4.63,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "8093-1",
+     "name": "Plo Koon's Jedi Starfighter"
+    }
+   ]
+  },
+  "sw0188": {
+   "type": "MINIFIG",
+   "name": "Imperial Stormtrooper - Black Head, Dotted Mouth Helmet",
+   "year": 2007,
+   "category": "Star Wars",
+   "weight_g": 4.11,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "10188-1",
+     "name": "Death Star - UCS"
+    },
+    {
+     "no": "10212-1",
+     "name": "Imperial Shuttle - UCS"
+    },
+    {
+     "no": "30005-1",
+     "name": "Imperial Speeder Bike - Mini polybag"
+    },
+    {
+     "no": "7659-1",
+     "name": "Imperial Landing Craft"
+    },
+    {
+     "no": "7667-1",
+     "name": "Imperial Dropship"
+    },
+    {
+     "no": "8087-1",
+     "name": "TIE Defender"
+    }
+   ]
+  },
+  "sw0196": {
+   "type": "MINIFIG",
+   "name": "Clone Trooper Commander Cody, 212th Attack Battalion (Phase 1) - Dark Bluish Gray Visor, Pauldron, and Kama, Large Eyes",
+   "year": 2008,
+   "category": "Star Wars",
+   "weight_g": 5.2,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7676-1",
+     "name": "Republic Attack Gunship"
+    }
+   ]
+  },
+  "sw0198": {
+   "type": "MINIFIG",
+   "name": "Plo Koon - Dark Brown Robe, Tan Shirt, Plain Legs",
+   "year": 2008,
+   "category": "Star Wars",
+   "weight_g": 3.39,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "7676-1",
+     "name": "Republic Attack Gunship"
+    },
+    {
+     "no": "8093-1",
+     "name": "Plo Koon's Jedi Starfighter"
+    }
+   ]
+  },
+  "sw0209": {
+   "type": "MINIFIG",
+   "name": "Darth Vader (Death Star Torso)",
+   "year": 2008,
+   "category": "Star Wars",
+   "weight_g": 4.6,
+   "dims_cm": null,
+   "fetched": "2026-11-01",
+   "sets": [
+    {
+     "no": "10188-1",
+     "name": "Death Star - UCS"
+    },
+    {
+     "no": "8017-1",
+     "name": "Darth Vader's TIE Fighter"
+    },
+    {
+     "no": "comcon007-1",
+     "name": "Collectible Display Set 5 - San Diego Comic-Con 2009 Exclusive"
+    }
+   ]
+  }
+ },
+ "figsets": {
+  "cas327": 7,
+  "cas328": 9,
+  "cas329": 2,
+  "colsh10": 1,
+  "gen001": 47,
+  "min009": 28,
+  "min010": 22,
+  "min012": 29,
+  "min018": 1,
+  "min021": 3,
+  "min025": 7,
+  "min057": 1,
+  "min158": 1,
+  "min194": 2,
+  "min195": 1,
+  "min196": 1,
+  "min198": 2,
+  "min200": 1,
+  "njo0025": 1,
+  "sh0167": 3,
+  "sh0168": 1,
+  "sh0169": 1,
+  "sh0176": 2,
+  "sh0177": 5,
+  "sh0178": 1,
+  "sh0186": 3,
+  "sw0001b": 16,
+  "sw0001c": 36,
+  "sw0001d": 2,
+  "sw0005a": 2,
+  "sw0011a": 13,
+  "sw0025": 2,
+  "sw0055": 1,
+  "sw0059": 1,
+  "sw0115": 9,
+  "sw0119": 1,
+  "sw0188": 6,
+  "sw0196": 1,
+  "sw0198": 2,
+  "sw0209": 3,
+  "sw0217a": 1,
+  "sw0402": 2,
+  "sw0483": 1,
+  "sw0485": 1,
+  "sw0486": 2,
+  "sw0487": 1,
+  "sw0565": 4,
+  "sw0574": 2,
+  "sw0625": 2,
+  "sw0758": 1,
+  "sw0759": 1,
+  "sw0778": 8,
+  "sw0802": 3,
+  "sw0996": 3,
+  "sw1093": 1,
+  "sw1094": 2,
+  "sw1096": 2,
+  "sw1097": 1,
+  "sw1107": 2,
+  "sw1113": 12,
+  "sw1148": 2,
+  "sw1149": 1,
+  "sw1150": 1,
+  "sw1151": 1,
+  "sw1152": 1,
+  "sw1153": 1,
+  "sw1155": 2,
+  "sw1201": 5,
+  "sw1202": 6,
+  "sw1205": 1,
+  "sw1206": 1,
+  "sw1207": 1,
+  "sw1216": 1,
+  "sw1220": 1,
+  "sw1221": 1,
+  "sw1233": 1,
+  "sw1234": 1,
+  "sw1235": 3,
+  "sw1236": 1,
+  "sw1245": 1,
+  "sw1246": 1,
+  "sw1247": 1,
+  "sw1248": 2,
+  "sw1249": 4,
+  "sw1250": 1,
+  "sw1251": 1,
+  "sw1252": 1,
+  "sw1260": 3,
+  "sw1275": 3,
+  "sw1285": 4,
+  "sw1305": 5,
+  "sw1314": 1,
+  "sw1315": 2,
+  "sw1319": 2,
+  "sw1320": 1,
+  "sw1321": 4,
+  "sw1325": 1,
+  "sw1326": 5,
+  "sw1327": 2,
+  "sw1332": 1,
+  "sw1333": 2,
+  "sw1334a": 1,
+  "sw1335": 1,
+  "sw1338": 2,
+  "sw1344": 2,
+  "sw1363": 1,
+  "sw1364": 1,
+  "sw1365": 1,
+  "sw1366": 1,
+  "sw1367": 1,
+  "sw1368": 1,
+  "sw1391": 1,
+  "sw1392": 1,
+  "sw1393": 1,
+  "sw1395": 1,
+  "sw1414": 1,
+  "sw1418": 1,
+  "sw1421": 1,
+  "sw1422": 2,
+  "sw1423": 1,
+  "sw1427": 2,
+  "sw1428": 1,
+  "sw1429": 1,
+  "sw1430": 2,
+  "sw1483": 1,
+  "sw1488": 1
+ },
+ "values": {
+  "10225-1": {
+   "huf": 67010,
+   "at": "2026-11-01"
+  },
+  "20009-1": {
+   "huf": 11838,
+   "at": "2026-11-01"
+  },
+  "30611-1": {
+   "huf": 6565,
+   "at": "2026-11-01"
+  },
+  "4479-1": {
+   "huf": 61206,
+   "at": "2026-11-01"
+  },
+  "6210-1": {
+   "huf": 203644,
+   "at": "2026-11-01"
+  },
+  "75020-1": {
+   "huf": 106545,
+   "at": "2026-11-01"
+  },
+  "75182-1": {
+   "huf": 29363,
+   "at": "2026-11-01"
+  },
+  "75283-1": {
+   "huf": 18261,
+   "at": "2026-11-01"
+  },
+  "75308-1": {
+   "huf": 59523,
+   "at": "2026-11-01"
+  },
+  "75337-1": {
+   "huf": 38769,
+   "at": "2026-11-01"
+  },
+  "75342-1": {
+   "huf": 14546,
+   "at": "2026-11-01"
+  },
+  "75347-1": {
+   "huf": 13972,
+   "at": "2026-11-01"
+  },
+  "75379-1": {
+   "huf": 21914,
+   "at": "2026-11-01"
+  },
+  "75383-1": {
+   "huf": 24203,
+   "at": "2026-11-01"
+  },
+  "75397-1": {
+   "huf": 152427,
+   "at": "2026-11-01"
+  },
+  "7675-1": {
+   "huf": 177020,
+   "at": "2026-11-01"
+  },
+  "7679-1": {
+   "huf": 106180,
+   "at": "2026-11-01"
+  },
+  "7961-1": {
+   "huf": 44003,
+   "at": "2026-11-01"
+  },
+  "8009-1": {
+   "huf": 12562,
+   "at": "2026-11-01"
+  },
+  "8018-1": {
+   "huf": 76708,
+   "at": "2026-11-01"
+  },
+  "911613-1": {
+   "huf": 1452,
+   "at": "2026-11-01"
+  },
+  "912058-1": {
+   "huf": 1241,
+   "at": "2026-11-01"
+  },
+  "912171-1": {
+   "huf": 966,
+   "at": "2026-11-01"
+  },
+  "912313-1": {
+   "huf": 1097,
+   "at": "2026-11-01"
+  }
+ }
+}
