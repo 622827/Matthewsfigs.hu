@@ -123,6 +123,40 @@
     el.classList.add("is-on"); clearTimeout(toastT); toastT = setTimeout(() => el.classList.remove("is-on"), 3200);
   }
 
+  // "add to cart" animation: the product's picture flies up into the cart button, which then bumps
+  function flyToCart(from) {
+    const card = from.closest(".item, .pd-fig, .pd-setonly, .pd, .co-line, .ord-row") || document;
+    let src = card.querySelector(".pd-media img, .figstand__fig, .item__img img:not(.figstand__plate), .item__img canvas, img:not(.figstand__plate)") || null;
+    const box = !src && card.querySelector(".box3d[style]");   // 3D set box: its front face is a CSS background
+    if (box) {
+      const m = /url\(['"]?([^'")]+)/.exec(box.style.getPropertyValue("--front"));
+      if (m) { src = new Image(); src.src = m[1]; src.getBoundingClientRect = () => box.getBoundingClientRect(); }
+    }
+    const cart = document.getElementById("cartBtn");
+    if (!src || !cart || matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const r = src.getBoundingClientRect(), c = cart.getBoundingClientRect();
+    if (!r.width || !r.height) return;
+    let ghost;
+    if (src.tagName === "CANVAS") { ghost = document.createElement("img"); try { ghost.src = src.toDataURL(); } catch (e) { return; } }
+    else { ghost = src.cloneNode(); ghost.removeAttribute("id"); ghost.removeAttribute("loading"); }
+    const size = Math.min(160, Math.max(r.width, r.height));
+    const x0 = r.left + r.width / 2 - size / 2, y0 = r.top + r.height / 2 - size / 2;
+    Object.assign(ghost.style, { position: "fixed", left: x0 + "px", top: y0 + "px", width: size + "px", height: size + "px",
+      objectFit: "contain", zIndex: 9999, pointerEvents: "none", borderRadius: "12px", margin: 0, maxWidth: "none",
+      filter: "drop-shadow(0 8px 16px rgba(0,0,0,.25))", willChange: "transform, opacity" });
+    document.body.appendChild(ghost);
+    const dx = c.left + c.width / 2 - (x0 + size / 2), dy = c.top + c.height / 2 - (y0 + size / 2);
+    const anim = ghost.animate([
+      { transform: "translate(0,0) scale(1)", opacity: 1 },
+      { transform: `translate(${dx * 0.35}px, ${dy * 0.35 - 60}px) scale(.75)`, opacity: 1, offset: 0.35 },
+      { transform: `translate(${dx}px, ${dy}px) scale(.12)`, opacity: 0.6 }
+    ], { duration: 750, easing: "cubic-bezier(.45,.05,.4,1)" });
+    anim.onfinish = () => {
+      ghost.remove();
+      cart.animate([{ transform: "scale(1)" }, { transform: "scale(1.22)" }, { transform: "scale(.94)" }, { transform: "scale(1)" }], { duration: 420, easing: "ease-out" });
+    };
+  }
+
   // card hook (app.js): in-stock cards add to the cart when the shop is on
   document.addEventListener("click", e => {
     const a = e.target.closest("[data-add]");
@@ -131,7 +165,7 @@
     const name = a.dataset.name || a.dataset.add;
     const qEl = a.dataset.qtyFrom && document.querySelector(a.dataset.qtyFrom);
     const n = Math.max(1, parseInt(qEl && qEl.value, 10) || 1);
-    if (add(a.dataset.add, n)) toast(`<b>${n > 1 ? n + " × " : ""}${esc(name)}</b> ${hu() ? "a kosárba került." : "added to cart."}`, true);
+    if (add(a.dataset.add, n)) flyToCart(a), toast(`<b>${n > 1 ? n + " × " : ""}${esc(name)}</b> ${hu() ? "a kosárba került." : "added to cart."}`, true);
   });
 
   // ---------- pénztár (kosar.html) ----------

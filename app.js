@@ -323,6 +323,10 @@
   const SHOP = window.MFShop;
   const shopOn = () => !!(SHOP && SHOP.enabled());
   const productUrl = i => `termek.html?no=${encodeURIComponent(i.no)}`;
+  // new / used label for minifigures in stock (BrickLink lot condition); none for pre-orders
+  const condLabel = i => !i || i.preorder || i.type !== "MINIFIG" || !i.cond ? "" : lang === "hu"
+    ? (i.cond === "N" ? "Új" : i.cond === "U" ? "Használt" : "Új / használt") : (i.cond === "N" ? "New" : i.cond === "U" ? "Used" : "New / used");
+  const condBadge = i => condLabel(i) ? `<span class="badge badge--cond is-${i.cond === "N" ? "new" : "used"}">${condLabel(i)}</span>` : "";
   const cardLink = i => ` href="${esc(productUrl(i))}"` + (i.preorder ? ` data-pre="${esc(i.no)}" title="${t("pre.hint")}"` : "");
   const card = i => `
       <a class="item${i.preorder ? " item--pre" : ""}"${cardLink(i)}>
@@ -330,7 +334,7 @@
         <div class="item__body">
           <span class="item__no">${esc(i.type === "SET" ? i.no.replace(/-1$/, "") : i.no)}</span>
           <span class="item__name">${esc(i.name)}</span>
-          <span class="badges">${labelsOf(i).map(l => `<span class="badge badge--${(LABELS._colors || {})[l] || "red"}">${esc(l)}</span>`).join("")}${i.preorder ? `<span class="badge badge--pre">${t("badge.pre")}</span>` : i.type === "SET" ? `<span class="badge">${t("badge.sealed")}</span>` : ""}</span>
+          <span class="badges">${labelsOf(i).map(l => `<span class="badge badge--${(LABELS._colors || {})[l] || "red"}">${esc(l)}</span>`).join("")}${i.preorder ? `<span class="badge badge--pre">${t("badge.pre")}</span>` : i.type === "SET" ? `<span class="badge">${t("badge.sealed")}</span>` : condBadge(i)}</span>
           ${i.preorder ? `<span class="want" role="button" tabindex="0" data-href="${esc(wantLink(i))}">${lang === "hu" ? "Szeretnék egyet!" : "I want one!"}</span>` : ""}
           <div class="item__foot">
             <span class="price">${i.from ? `<small>${lang === "hu" ? "" : "from "}</small>` : ""}${money(i.price)}${i.from && lang === "hu" ? "<small>-tól</small>" : ""}</span>
@@ -421,6 +425,36 @@
     return { no, name, type: "MINIFIG", qty: 0, price, preorder: true, img: `https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(no)}.png`, virtual: true };
   }
 
+  // which film / series a set comes from: Brickset subtheme + titles named in LEGO's official description
+  const FILMS = [
+    [/episode i\b|phantom menace/i, "I. rész – Baljós árnyak", "Episode I – The Phantom Menace"],
+    [/episode ii\b|attack of the clones/i, "II. rész – A klónok támadása", "Episode II – Attack of the Clones"],
+    [/episode iii\b|revenge of the sith/i, "III. rész – A Sith-ek bosszúja", "Episode III – Revenge of the Sith"],
+    [/episode iv\b|a new hope/i, "IV. rész – Egy új remény", "Episode IV – A New Hope"],
+    [/episode v\b|empire strikes back/i, "V. rész – A Birodalom visszavág", "Episode V – The Empire Strikes Back"],
+    [/episode vi\b|return of the jedi/i, "VI. rész – A Jedi visszatér", "Episode VI – Return of the Jedi"],
+    [/episode vii\b|force awakens/i, "VII. rész – Az ébredő Erő", "Episode VII – The Force Awakens"],
+    [/episode viii\b|last jedi/i, "VIII. rész – Az utolsó Jedik", "Episode VIII – The Last Jedi"],
+    [/episode ix\b|rise of skywalker/i, "IX. rész – Skywalker kora", "Episode IX – The Rise of Skywalker"],
+    [/rogue one/i, "Zsivány Egyes", "Rogue One"],
+    [/^solo$|solo: a star wars story/i, "Solo: Egy Star Wars-történet", "Solo: A Star Wars Story"],
+    [/clone wars/i, "A klónok háborúja (sorozat)", "The Clone Wars (series)"],
+    [/\brebels\b/i, "Lázadók (sorozat)", "Rebels (series)"],
+    [/book of boba fett/i, "Boba Fett könyve (sorozat)", "The Book of Boba Fett (series)"],
+    [/the mandalorian/i, "The Mandalorian (sorozat)", "The Mandalorian (series)"],
+    [/bad batch/i, "A rossz osztag (sorozat)", "The Bad Batch (series)"],
+    [/\bandor\b/i, "Andor (sorozat)", "Andor (series)"],
+    [/\bahsoka\b(?= series| \(series)|^ahsoka$/i, "Ahsoka (sorozat)", "Ahsoka (series)"],
+    [/obi-wan kenobi( series|$)/i, "Obi-Wan Kenobi (sorozat)", "Obi-Wan Kenobi (series)"],
+    [/rebuild the galaxy/i, "Rebuild the Galaxy (sorozat)", "Rebuild the Galaxy (series)"],
+  ];
+  const filmsOf = D => {
+    const sub = String(D.subtheme || ""), txt = String(D.desc_en || "").replace(/\b(clone trooper|clone commander)s?\b/gi, "");
+    const hits = [];
+    for (const src of [sub, txt]) for (const f of FILMS) { const m = src.match(f[0]); if (m && !hits.some(h => h.f === f)) hits.push({ f, at: (src === sub ? -1 : m.index) }); }
+    return hits.sort((a, b) => a.at - b.at).map(h => h.f);
+  };
+
   // ---------- product page (termek.html?no=…) ----------
   function renderProduct() {
     const root = $("product"); if (!root) return;
@@ -440,7 +474,7 @@
       : (hu ? "Raktáron" : "In stock");
     const cond = set
       ? (hu ? "Bontatlan, gyári állapotú (MISB – Mint In Sealed Box) szett. A doboz kisebb gyártási vagy szállítási nyomai előfordulhatnak." : "Brand new, factory sealed (MISB – Mint In Sealed Box). Minor factory or shipping marks on the box may occur.")
-      : (hu ? "Eredeti LEGO® minifigura, egyenként átnézve. A képen a figura tájékoztató jellegű, a kiegészítők a BrickLink katalógus szerinti összeállításban." : "Genuine LEGO® minifigure, individually checked. The picture is for illustration; accessories as listed in the BrickLink catalogue.");
+      : (hu ? "Eredeti LEGO® minifigura, egyenként átnézve. A kép tájékoztató jellegű." : "Genuine LEGO® minifigure, individually checked. The picture is for illustration.");
     const buy = i.preorder
       ? `<button type="button" class="btn btn--gold" id="pdNotify">${hu ? "Értesítést kérek" : "Notify me"}</button>`
       : (i.qty > 1 ? `<div class="pd-qty" role="group" aria-label="${hu ? "Mennyiség" : "Quantity"}">
@@ -514,7 +548,7 @@
           <b class="pd-fig__name">${esc(f.name.split(" - ")[0])}</b>
           <img src="https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(f.no)}.png" alt="${esc(f.name)}" loading="lazy">
           <span class="pd-fig__foot">${f.sets === 1 ? `<span class="pd-fig__tag is-ex">${hu ? "Exkluzív" : "Exclusive"}</span>` : f.sets > 1 ? `<span class="pd-fig__tag">${f.sets} ${hu ? "szett" : "sets"}</span>` : "<span></span>"}
-            ${o && !o.preorder ? `<span class="pd-fig__price">${money(o.price)}</span>` : ""}</span>
+            ${o && !o.preorder ? `${condLabel(o) ? `<span class="pd-fig__tag is-cond">${condLabel(o)}</span>` : ""}<span class="pd-fig__price">${money(o.price)}</span>` : ""}</span>
           ${(() => {   // one button: in stock → cart (or Messenger order until the shop opens), otherwise → pre-order dialog
             const lbl = hu ? "Csak a figurát kérem" : "Just the minifigure";
             return o && !o.preorder
@@ -568,7 +602,7 @@
           <span class="pd-fig__no">${esc(o.no)}</span>
           <b class="pd-fig__name">${esc(o.name.split(" - ")[0])}</b>
           <img src="${img}" alt="${esc(o.name)}" loading="lazy">
-          <span class="pd-fig__foot">${o.preorder ? `<span class="pd-fig__tag">${hu ? "Előrendelhető" : "Pre-order"}</span>` : "<span></span>"}
+          <span class="pd-fig__foot">${o.preorder ? `<span class="pd-fig__tag">${hu ? "Előrendelhető" : "Pre-order"}</span>` : `<span class="pd-fig__tags"><span class="pd-fig__tag is-in">${hu ? "Raktáron" : "In stock"}</span>${condLabel(o) ? `<span class="pd-fig__tag is-cond">${condLabel(o)}</span>` : ""}</span>`}
             ${!o.preorder ? `<span class="pd-fig__price">${money(o.price)}</span>` : ""}</span>
           ${btn}
         </a>`; }).join("")}</div></section>` : "";
@@ -592,8 +626,25 @@
             <td>${v.year || "–"}</td><td>${v.pieces ? nf(v.pieces) : "–"}</td>
             <td>${v.figs != null ? v.figs : (me && D.minifigs ? D.minifigs.reduce((s, f) => s + f.qty, 0) : "–")}</td><td>${act}</td></tr>`; }).join("")}</tbody></table></div>
       <p class="co-muted co-small">${hu ? "Ami nincs raktáron, azt egyedi rendelésre beszerezzük. Kiadások: Rebrickable." : "If it's not in stock, we can source it for you. Releases: Rebrickable."}</p></section>` : "";
-    const setList = D.sets && D.sets.length ? `<h2>${hu ? "Ezekben a szettekben szerepelt" : "Appears in these sets"}</h2>
-      <ul class="pd-list pd-cols">${D.sets.map(s => linkItem(s.no, s.name, 1)).join("")}</ul>` : "";
+    // minifigure page: the sets it comes in, as cards (picture, price, stock) under the minifigure
+    const setList = !set && D.sets && D.sets.length ? `<section class="pd-figsec pd-insets">
+      <h2>${hu ? "Ezekben a szettekben szerepel" : "Appears in these sets"}</h2>
+      <div class="pd-figgrid">${D.sets.map(s => {
+        const o = ours(s.no), sno = s.no.replace(/-1$/, ""), nm = s.name || (o && o.name) || sno;
+        const img = `https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(s.no)}.png`;
+        const tag = o ? "a" : "div";
+        const btn = !o ? `<span class="pd-fig__btn is-pre" role="button" tabindex="0" data-source="${esc(s.no)}" data-name="${esc(nm)}">${hu ? "Beszerezzük" : "We'll source it"}</span>`
+          : o.preorder ? `<span class="pd-fig__btn is-pre" role="button" tabindex="0" data-prefig="${esc(o.no)}" data-name="${esc(o.name)}">${hu ? "Előrendelés" : "Pre-order"}</span>`
+          : shopOn() ? `<span class="pd-fig__btn" role="button" tabindex="0" data-add="${esc(o.no)}" data-name="${esc(sno + " " + o.name)}">${hu ? "Kosárba" : "Add to cart"}</span>`
+          : `<span class="pd-fig__btn" role="button" tabindex="0" data-buy="${esc(o.no)}">${hu ? "Megrendelem" : "Order"}</span>`;
+        return `<${tag} class="pd-fig"${o ? ` href="${esc(productUrl(o))}"` : ""}${pv(img, sno + " " + nm, [stockInfo(o)])}>
+          <span class="pd-fig__no">${esc(sno)}</span>
+          <b class="pd-fig__name">${esc(nm)}</b>
+          <img src="${img}" alt="${esc(nm)}" loading="lazy">
+          <span class="pd-fig__foot">${o && !o.preorder ? `<span class="pd-fig__tag is-in">${hu ? "Raktáron" : "In stock"}</span><span class="pd-fig__price">${money(o.price)}</span>`
+            : o ? `<span class="pd-fig__tag">${hu ? "Előrendelhető" : "Pre-order"}</span>` : `<span class="pd-fig__tag">${hu ? "Nincs raktáron" : "Not in stock"}</span>`}</span>
+          ${btn}
+        </${tag}>`; }).join("")}</div></section>` : "";
     // static product photos (no spinning model here): box + built set for sets, catalogue photo for minifigures
     const IMG = "https://img.bricklink.com/ItemImage/", enc = encodeURIComponent(i.no);
     const photos = set
@@ -609,11 +660,11 @@
           <div class="pd-media"><img id="pdMain" src="${esc(photos[0].src)}" alt="${esc(i.name)} – ${esc(photos[0].alt)}"></div>
           ${photos.length > 1 ? `<div class="pd-thumbs">${photos.map((p, k) => `<button type="button" class="pd-thumb${k ? "" : " is-on"}" data-src="${esc(p.src)}" data-alt="${esc(p.alt)}" aria-label="${esc(p.alt)}"><img src="${esc(p.src)}" alt="" loading="lazy"></button>`).join("")}</div>` : ""}
         </div>
-        ${figList || verList || simList ? `<div class="pd-figs">${figList}${simList}${verList}</div>` : ""}
+        ${figList || verList || simList || setList ? `<div class="pd-figs">${figList}${setList}${simList}${verList}</div>` : ""}
         <div class="pd-info">
           <p class="item__no">${esc(sn)} · ${set ? (hu ? "LEGO® szett" : "LEGO® set") : (hu ? "LEGO® minifigura" : "LEGO® minifigure")}</p>
           <h1>${esc(i.name)}</h1>
-          <span class="badges">${labels.map(l => `<span class="badge badge--${(LABELS._colors || {})[l] || "red"}">${esc(l)}</span>`).join("")}${i.preorder ? `<span class="badge badge--pre">${t("badge.pre")}</span>` : set ? `<span class="badge">${t("badge.sealed")}</span>` : ""}</span>
+          <span class="badges">${labels.map(l => `<span class="badge badge--${(LABELS._colors || {})[l] || "red"}">${esc(l)}</span>`).join("")}${i.preorder ? `<span class="badge badge--pre">${t("badge.pre")}</span>` : set ? `<span class="badge">${t("badge.sealed")}</span>` : condBadge(i)}</span>
           ${i.price ? `<p class="pd-price">${i.from ? `<small>${hu ? "" : "from "}</small>` : ""}${money(i.price)}${i.from && hu ? "<small>-tól</small>" : ""}</p>` : ""}
           <p class="pd-stock${i.preorder ? " is-pre" : ""}">${stock}</p>
           ${i.preorder ? `<p class="pd-oos">${hu
@@ -624,15 +675,15 @@
           ${officialDesc}
           <p>${cond}</p>
           <dl class="pd-dl">
-            ${row(hu ? "Cikkszám" : "Item number", esc(sn) + (set ? ` <span class="co-muted">(BrickLink: ${esc(i.no)})</span>` : ""))}
+            ${row(hu ? "Cikkszám" : "Item number", esc(sn))}
             ${row(hu ? "Megnevezés" : "Name", esc(i.name))}
             ${row(hu ? "Típus" : "Type", set ? (hu ? "Szett" : "Set") : (hu ? "Minifigura" : "Minifigure"))}
             ${row(hu ? "Téma" : "Theme", D.category ? esc(D.category) : "")}
+            ${row(hu ? "Film / sorozat" : "Film / series", set ? filmsOf(D).map(f => esc(hu ? f[1] : f[2])).join("<br>") : "")}
             ${row(hu ? "Megjelenés éve" : "Year released", D.year ? esc(D.year) : "")}
             ${row(hu ? "Elemszám" : "Pieces", D.pieces ? nf(D.pieces) + (hu ? " db" : "") : "")}
             ${row(hu ? "Minifigurák" : "Minifigures", D.minifigs && D.minifigs.length ? D.minifigs.reduce((s, f) => s + f.qty, 0) + (hu ? " db" : "") : "")}
-            ${row(hu ? "Állapot" : "Condition", set ? (hu ? "Új, bontatlan (MISB)" : "New, sealed (MISB)") : (hu ? "Átnézett, eredeti LEGO®" : "Checked, genuine LEGO®"))}
-            ${row(hu ? "Megjegyzés" : "Note", note && note !== "MISB" ? esc(note) : "")}
+            ${row(hu ? "Állapot" : "Condition", set ? (hu ? "Új, bontatlan (MISB)" : "New, sealed (MISB)") : (condLabel(i) ? condLabel(i) + (hu ? ", átnézett, eredeti LEGO®" : ", checked, genuine LEGO®") : (hu ? "Átnézett, eredeti LEGO®" : "Checked, genuine LEGO®")))}
             ${row(hu ? "Készlet" : "Stock", stock)}
             ${row(hu ? "Eredeti bolti ár" : "Original retail price", D.retail_eur ? new Intl.NumberFormat(hu ? "hu-HU" : "en-GB", { style: "currency", currency: "EUR" }).format(D.retail_eur) + (hu ? " (LEGO Németország)" : " (LEGO Germany)") : "")}
             ${row(hu ? "Kivezetés" : "Retired", D.exit ? new Date(D.exit).toLocaleDateString(hu ? "hu-HU" : "en-GB", { year: "numeric", month: "long" }) : "")}
@@ -641,7 +692,6 @@
             ${row(hu ? "Gyártó" : "Manufacturer", "LEGO A/S, Aastvej 1, 7190 Billund, " + (hu ? "Dánia" : "Denmark") + " · www.lego.com/service")}
             ${row(hu ? "Korosztály" : "Age", hu ? "3 éven felülieknek" : "Ages 3+")}
           </dl>
-          ${setList}
           <p class="pd-tm">${t("foot.legal") !== "foot.legal" ? t("foot.legal") : ""}</p>
         </div>
         <div class="pd-more">
@@ -789,6 +839,7 @@
         const k = i.type + ":" + i.no + (i.preorder ? ":pre" : ""), m = byItem.get(k);
         if (!m) { byItem.set(k, { ...i }); continue; }
         m.qty += i.qty;
+        if (i.cond !== m.cond) m.cond = "NU";
         if (i.price !== m.price) m.from = true;
         if (i.price < m.price) m.price = i.price;
       }

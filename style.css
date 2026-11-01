@@ -667,3 +667,8 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 .vinted__ic{flex:none;width:56px;height:56px;border-radius:14px;background:#09848a;display:grid;place-items:center;box-shadow:0 2px 6px rgba(9,132,138,.3)}
 .vinted__txt{flex:1}
 @media (max-width:640px){.vinted{display:grid;grid-template-columns:56px 1fr;align-items:start}.vinted__btn{grid-column:1/-1}}
+.pd-fig__tag.is-in{background:#e3f4e6;color:#1d6b33}
+.badge--cond.is-new{background:#e3f4e6;color:#1d6b33}
+.badge--cond.is-used{background:#fff1dc;color:#8a5200}
+.pd-fig__tags{display:inline-flex;gap:4px;flex-wrap:wrap}
+.pd-fig__tag.is-cond{background:#fff1dc;color:#8a5200}

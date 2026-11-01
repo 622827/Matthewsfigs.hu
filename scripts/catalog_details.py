@@ -146,12 +146,15 @@ def bs_desc(s):
     return "\n".join(x for x in paras if x)
 
 
-def brickset_desc(no):
-    """Only the official description (for sets fetched before descriptions were stored). None on API error."""
+def brickset_extra(no):
+    """Official description + subtheme (film / series) for sets fetched before these were stored. None on API error."""
     j = bs("getSets", userHash="", params=json.dumps({"setNumber": no, "extendedData": 1}))
     if j is None:
         return None
-    return bs_desc(j["sets"][0]) if j.get("sets") else ""
+    if not j.get("sets"):
+        return {"desc_en": "", "subtheme": ""}
+    s = j["sets"][0]
+    return {"desc_en": bs_desc(s), "subtheme": s.get("subtheme") or ""}
 
 
 def brickset(no):
@@ -168,7 +171,7 @@ def brickset(no):
     return {"bs_id": s.get("setID"), "photos": [p for p in photos if p][:24],
             "retail_eur": de.get("retailPrice"), "launch": (de.get("dateFirstAvailable") or "")[:10] or None,
             "exit": (de.get("dateLastAvailable") or s.get("exitDate") or "")[:10] or None,
-            "desc_en": bs_desc(s)}
+            "desc_en": bs_desc(s), "subtheme": s.get("subtheme") or ""}
 
 
 CATS = {}
@@ -352,7 +355,7 @@ def main():
     for no in todo:
         d = fetch(wanted[no], no)
         if d:
-            keep = {k: v for k, v in (items.get(no) or {}).items() if k in ("bs_id", "photos", "retail_eur", "launch", "exit", "figs_value_huf", "desc_en", "gallery")}
+            keep = {k: v for k, v in (items.get(no) or {}).items() if k in ("bs_id", "photos", "retail_eur", "launch", "exit", "figs_value_huf", "desc_en", "subtheme", "gallery")}
             items[no] = {**keep, **d}     # Brickset data is fetched once; keep it on refresh
             changed = True
             print(f"  {no}: {d.get('year')} · {d.get('category')} · {d.get('pieces', '')}")
@@ -368,14 +371,14 @@ def main():
             changed = True
         # official LEGO description for sets that were fetched before we stored it (same daily quota)
         left = BS_MAX - len(bs_todo)
-        desc_todo = [n for n, d in items.items() if d.get("type") == "SET" and d.get("bs_id") and "desc_en" not in d and n in wanted][:max(0, left)]
+        desc_todo = [n for n, d in items.items() if d.get("type") == "SET" and d.get("bs_id") and "subtheme" not in d and n in wanted][:max(0, left)]
         if desc_todo:
-            print(f"Brickset leírás: {len(desc_todo)} szett.")
+            print(f"Brickset leírás és altéma: {len(desc_todo)} szett.")
         for n in desc_todo:
-            r = brickset_desc(n)
+            r = brickset_extra(n)
             if r is None:
                 break
-            items[n]["desc_en"] = r
+            items[n].update(r)
             changed = True
 
     figval = out.get("figvalues", {})
