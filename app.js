@@ -80,7 +80,7 @@
   };
   // 3D product box: sets get their original LEGO box art on a cuboid,
   // minifigures turn like on a display turntable.
-  let BOXES = {}, LABELS = {}, FIGS = {};   // assets/boxes/index.json: flattened faces cut from the box photos
+  let BOXES = {}, LABELS = {}, FIGS = {}, DETAILS = {};   // assets/boxes/index.json: flattened faces cut from the box photos
   // minifigure on a LEGO display plate: stands still, front view, feet on the two middle studs
   // plate art (assets/figstand.svg, 120×44): front stud row base at y≈22.5, stud pitch 24.5 → 2 studs = 49 units
   const fig3d = (i, f) => {
@@ -327,6 +327,33 @@
            <a class="btn btn--line" href="kosar.html">${hu ? "Tovább a kosárhoz" : "Go to cart"}</a>`
         : `<a class="btn btn--gold" href="${esc(buyLink(i))}" target="_blank" rel="noopener">${hu ? "Megrendelem Messengeren" : "Order on Messenger"}</a>`;
     const row = (k, v) => v ? `<dt>${k}</dt><dd>${v}</dd>` : "";
+    // BrickLink catalogue facts (data/details.json, scripts/catalog_details.py)
+    const D = DETAILS[i.no] || {};
+    const nf = v => Number(v).toLocaleString(hu ? "hu-HU" : "en-GB", { maximumFractionDigits: 1 });
+    const dims = D.dims_cm && D.dims_cm.length === 3 ? D.dims_cm.map(nf).join(" × ") + " cm" : "";
+    const weight = D.weight_g ? (D.weight_g >= 1000 ? nf(D.weight_g / 1000) + " kg" : nf(D.weight_g) + " g") : "";
+    const ours = no => data.items.find(x => x.no === no);
+    const linkItem = (no, name, qty) => {
+      const o = ours(no), label = `${esc(no.replace(/-1$/, ""))} ${esc(name)}`;
+      return `<li>${qty > 1 ? `${qty} × ` : ""}${o ? `<a href="${esc(productUrl(o))}">${label}</a>` : label}</li>`;
+    };
+    // minifigure cards under the photos (like a catalogue): number, name, picture, how many sets / exclusive, our price
+    const figTotal = (D.minifigs || []).reduce((s, f) => s + f.qty, 0);
+    const excl = (D.minifigs || []).filter(f => f.sets === 1).length;
+    const figList = D.minifigs && D.minifigs.length ? `<section class="pd-figs">
+      <h2>${esc(i.name)} – ${hu ? "minifigurák" : "minifigures"}</h2>
+      <p class="co-muted">${hu ? `A szett ${figTotal} minifigurát tartalmaz.` : `This set contains ${figTotal} minifigure${figTotal > 1 ? "s" : ""}.`}${excl ? (hu ? ` Ebből ${excl} csak ebben a szettben szerepel.` : ` ${excl} of them ${excl > 1 ? "are" : "is"} exclusive to this set.`) : ""}</p>
+      <div class="pd-figgrid">${D.minifigs.map(f => {
+        const o = ours(f.no), tag = o ? "a" : "div";
+        return `<${tag} class="pd-fig"${o ? ` href="${esc(productUrl(o))}"` : ""}>
+          <span class="pd-fig__no">${esc(f.no)}</span>${f.qty > 1 ? `<span class="pd-fig__qty">${f.qty}×</span>` : ""}
+          <b class="pd-fig__name">${esc(f.name.split(" - ")[0])}</b>
+          <img src="https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(f.no)}.png" alt="${esc(f.name)}" loading="lazy">
+          <span class="pd-fig__foot">${f.sets === 1 ? `<span class="pd-fig__tag is-ex">${hu ? "Exkluzív" : "Exclusive"}</span>` : f.sets > 1 ? `<span class="pd-fig__tag">${f.sets} ${hu ? "szett" : "sets"}</span>` : "<span></span>"}
+            ${o && !o.preorder ? `<span class="pd-fig__price">${money(o.price)}</span>` : ""}</span>
+        </${tag}>`; }).join("")}</div></section>` : "";
+    const setList = D.sets && D.sets.length ? `<h2>${hu ? "Ezekben a szettekben szerepelt" : "Appears in these sets"}</h2>
+      <ul class="pd-list pd-cols">${D.sets.map(s => linkItem(s.no, s.name, 1)).join("")}</ul>` : "";
     // static product photos (no spinning model here): box + built set for sets, catalogue photo for minifigures
     const IMG = "https://img.bricklink.com/ItemImage/", enc = encodeURIComponent(i.no);
     const photos = set
@@ -339,6 +366,7 @@
           <div class="pd-media"><img id="pdMain" src="${esc(photos[0].src)}" alt="${esc(i.name)} – ${esc(photos[0].alt)}"></div>
           ${photos.length > 1 ? `<div class="pd-thumbs">${photos.map((p, k) => `<button type="button" class="pd-thumb${k ? "" : " is-on"}" data-src="${esc(p.src)}" data-alt="${esc(p.alt)}" aria-label="${esc(p.alt)}"><img src="${esc(p.src)}" alt="" loading="lazy"></button>`).join("")}</div>` : ""}
         </div>
+        ${figList}
         <div class="pd-info">
           <p class="item__no">${esc(sn)} · ${set ? (hu ? "LEGO® szett" : "LEGO® set") : (hu ? "LEGO® minifigura" : "LEGO® minifigure")}</p>
           <h1>${esc(i.name)}</h1>
@@ -353,12 +381,19 @@
             ${row(hu ? "Cikkszám" : "Item number", esc(sn) + (set ? ` <span class="co-muted">(BrickLink: ${esc(i.no)})</span>` : ""))}
             ${row(hu ? "Megnevezés" : "Name", esc(i.name))}
             ${row(hu ? "Típus" : "Type", set ? (hu ? "Szett" : "Set") : (hu ? "Minifigura" : "Minifigure"))}
+            ${row(hu ? "Téma" : "Theme", D.category ? esc(D.category) : "")}
+            ${row(hu ? "Megjelenés éve" : "Year released", D.year ? esc(D.year) : "")}
+            ${row(hu ? "Elemszám" : "Pieces", D.pieces ? nf(D.pieces) + (hu ? " db" : "") : "")}
+            ${row(hu ? "Minifigurák" : "Minifigures", D.minifigs && D.minifigs.length ? D.minifigs.reduce((s, f) => s + f.qty, 0) + (hu ? " db" : "") : "")}
             ${row(hu ? "Állapot" : "Condition", set ? (hu ? "Új, bontatlan (MISB)" : "New, sealed (MISB)") : (hu ? "Átnézett, eredeti LEGO®" : "Checked, genuine LEGO®"))}
             ${row(hu ? "Megjegyzés" : "Note", note && note !== "MISB" ? esc(note) : "")}
             ${row(hu ? "Készlet" : "Stock", stock)}
+            ${row(set ? (hu ? "Doboz mérete" : "Box size") : (hu ? "Méret" : "Size"), set ? dims : "")}
+            ${row(hu ? "Súly" : "Weight", set ? weight : "")}
             ${row(hu ? "Gyártó" : "Manufacturer", "LEGO A/S, Aastvej 1, 7190 Billund, " + (hu ? "Dánia" : "Denmark") + " · www.lego.com/service")}
             ${row(hu ? "Korosztály" : "Age", hu ? "3 éven felülieknek" : "Ages 3+")}
           </dl>
+          ${setList}
           <h2>${hu ? "Szállítás és fizetés" : "Delivery and payment"}</h2>
           <ul class="pd-list">
             <li>${hu ? "Foxpost csomagautomatába vagy személyes átvétellel Budapesten (1111 Budapest, Bartók Béla út 10–12.)." : "To a Foxpost parcel locker or pickup in Budapest (1111 Budapest, Bartók Béla út 10–12)."}</li>
@@ -459,10 +494,11 @@
     fetch("assets/boxes/index.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
     fetch("data/labels.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
     fetch("assets/figs/index.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
-    window.MFShop ? window.MFShop.ready : null
+    window.MFShop ? window.MFShop.ready : null,
+    PAGE_KIND === "product" ? fetch("data/details.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})) : null
   ])
-    .then(([d, boxes, labels, figs]) => {
-      BOXES = boxes || {}; LABELS = labels || {}; FIGS = figs || {};
+    .then(([d, boxes, labels, figs, , details]) => {
+      BOXES = boxes || {}; LABELS = labels || {}; FIGS = figs || {}; DETAILS = (details && details.items) || {};
       if (window.MFShop) window.MFShop.setLots(d.items.map(i => ({ ...i })));
       const byItem = new Map();
       for (const i of d.items) {
