@@ -628,8 +628,8 @@
       <p class="co-muted co-small">${hu ? "Ami nincs raktáron, azt egyedi rendelésre beszerezzük. Kiadások: Rebrickable." : "If it's not in stock, we can source it for you. Releases: Rebrickable."}</p></section>` : "";
     // minifigure page: the sets it comes in, as cards (picture, price, stock) under the minifigure
     const setList = !set && D.sets && D.sets.length ? `<section class="pd-figsec pd-insets">
-      <h2>${hu ? "Ezekben a szettekben szerepel" : "Appears in these sets"}</h2>
-      <div class="pd-figgrid">${D.sets.map(s => {
+      <h2>${hu ? "Ezekben a szettekben szerepel" : "Appears in these sets"} <span class="co-muted">(${D.sets.length})</span></h2>
+      <div class="pd-figgrid pd-mosaic" id="pdInsets">${D.sets.map(s => {
         const o = ours(s.no), sno = s.no.replace(/-1$/, ""), nm = s.name || (o && o.name) || sno;
         const img = `https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(s.no)}.png`;
         const tag = o ? "a" : "div";
@@ -644,7 +644,8 @@
           <span class="pd-fig__foot">${o && !o.preorder ? `<span class="pd-fig__tag is-in">${hu ? "Raktáron" : "In stock"}</span><span class="pd-fig__price">${money(o.price)}</span>`
             : o ? `<span class="pd-fig__tag">${hu ? "Előrendelhető" : "Pre-order"}</span>` : `<span class="pd-fig__tag">${hu ? "Nincs raktáron" : "Not in stock"}</span>`}</span>
           ${btn}
-        </${tag}>`; }).join("")}</div></section>` : "";
+        </${tag}>`; }).join("")}<div class="pd-mosaic__nav" hidden><button type="button" data-pg="-1" aria-label="${hu ? "Előző" : "Previous"}">‹</button><span></span><button type="button" data-pg="1" aria-label="${hu ? "Következő" : "Next"}">›</button></div></div>
+      ${D.sets.length > 3 ? `<button type="button" class="btn btn--line pd-mosaic__more" id="pdInsetsMore">${hu ? `Mind a ${D.sets.length} szett mutatása` : `Show all ${D.sets.length} sets`}</button>` : ""}</section>` : "";
     // static product photos (no spinning model here): box + built set for sets, catalogue photo for minifigures
     const IMG = "https://img.bricklink.com/ItemImage/", enc = encodeURIComponent(i.no);
     const photos = set
@@ -725,6 +726,24 @@
       b.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(e); });
     });
     // set-only tile: the built set with the standing minifigures cut away (assets/nofig/<no>.webp, scripts/fig_cutouts.py) if there is one, else the catalogue photo
+    // sets the minifigure comes in: closed = first 3; open = 3×3 mosaic, 9 per page – with more, the 9th tile pages (‹ 1/3 ›)
+    const mos = $("pdInsets");
+    if (mos) {
+      const cards = [...mos.querySelectorAll(".pd-fig")], nav = mos.querySelector(".pd-mosaic__nav"), more = $("pdInsetsMore");
+      let open = cards.length <= 3, page = 0;
+      const per = cards.length > 9 ? 8 : 9, pages = Math.ceil(cards.length / per);
+      const draw = () => {
+        cards.forEach((c, k) => c.hidden = open ? (k < page * per || k >= (page + 1) * per) : k >= 3);
+        nav.hidden = !open || pages < 2;
+        nav.querySelector("span").textContent = `${page + 1} / ${pages}`;
+        nav.querySelector('[data-pg="-1"]').disabled = page === 0;
+        nav.querySelector('[data-pg="1"]').disabled = page >= pages - 1;
+        if (more) more.textContent = open ? (hu ? "Kevesebb" : "Show less") : (hu ? `Mind a ${cards.length} szett mutatása` : `Show all ${cards.length} sets`);
+      };
+      nav.querySelectorAll("[data-pg]").forEach(b => b.onclick = () => { page = Math.max(0, Math.min(pages - 1, page + +b.dataset.pg)); draw(); });
+      if (more) more.onclick = () => { open = !open; page = 0; draw(); if (!open) mos.scrollIntoView({ block: "nearest", behavior: "smooth" }); };
+      draw();
+    }
     root.querySelectorAll(".pd-setonly img[data-fallback]").forEach(im => im.onerror = () => { if (im.src !== im.dataset.fallback) im.src = im.dataset.fallback; else im.remove(); });
     initPreview(root);
     // other releases we don't stock: "we'll source it" opens the pre-order dialog

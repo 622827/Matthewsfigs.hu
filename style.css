@@ -672,3 +672,12 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 .badge--cond.is-used{background:#fff1dc;color:#8a5200}
 .pd-fig__tags{display:inline-flex;gap:4px;flex-wrap:wrap}
 .pd-fig__tag.is-cond{background:#fff1dc;color:#8a5200}
+.pd-mosaic{grid-template-columns:repeat(3,1fr)!important}
+.pd-mosaic .pd-fig[hidden]{display:none}
+.pd-mosaic__nav{display:flex;align-items:center;justify-content:center;gap:10px;border:1.5px dashed var(--line);border-radius:var(--r);background:#fffdf6;min-height:120px}
+.pd-mosaic__nav[hidden]{display:none}
+.pd-mosaic__nav button{width:44px;height:44px;border-radius:50%;border:0;background:var(--gold);color:var(--green);font:700 24px/1 var(--body);box-shadow:0 2px 0 var(--gold-2);cursor:pointer}
+.pd-mosaic__nav button:disabled{opacity:.35;cursor:default}
+.pd-mosaic__nav span{font-weight:700;font-size:13px;color:var(--muted)}
+.pd-mosaic__more{margin-top:12px}
+@media (max-width:560px){.pd-mosaic{gap:8px}.pd-mosaic .pd-fig{padding:8px 6px}.pd-mosaic .pd-fig img{height:70px}.pd-mosaic .pd-fig__name{font-size:12px}.pd-mosaic .pd-fig__btn{font-size:11px;padding:6px 4px}.pd-mosaic__nav{flex-direction:column;gap:6px}.pd-mosaic__nav button{width:36px;height:36px;font-size:20px}}
