@@ -269,7 +269,7 @@
         <p>${hu ? "Add meg a neved és az e-mail címed, és értesítünk, amint újra raktáron lesz." : "Enter your name and e-mail and we'll let you know as soon as it's back in stock."}</p>
         <label class="co-f">${hu ? "Név" : "Name"}<input class="field" name="name" autocomplete="name" required></label>
         <label class="co-f">${hu ? "E-mail cím" : "E-mail"}<input class="field" name="email" type="email" autocomplete="email" required></label>
-        <label class="co-check"><input type="checkbox" name="ok" required> <span>${hu ? 'Hozzájárulok, hogy erről a termékről e-mailben értesítsetek. <a href="adatkezeles.html" target="_blank">Adatkezelési tájékoztató</a>' : 'I agree to be notified by e-mail about this product. <a href="adatkezeles.html" target="_blank">Privacy notice</a> (HU)'}</span></label>
+        <p class="co-muted co-small">${hu ? 'Csak erről a termékről írunk. <a href="adatkezeles.html" target="_blank">Adatkezelési tájékoztató</a>' : 'We only write to you about this product. <a href="adatkezeles.html" target="_blank">Privacy notice</a> (HU)'}</p>
         ${SHOP && SHOP.mktBox ? SHOP.mktBox(false) : ""}
         <input type="text" name="website" class="co-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
         <p class="co-err" id="nErr" hidden></p>
@@ -285,7 +285,6 @@
         const name = fm.name.value.trim(), email = fm.email.value.trim();
         const mkt = fm.mkt && fm.mkt.checked && SHOP ? { text: SHOP.mktText(), at: new Date().toISOString() } : null;
         if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { err.textContent = hu ? "Add meg a neved és egy érvényes e-mail címet." : "Please enter your name and a valid e-mail."; err.hidden = false; return; }
-        if (!fm.ok.checked) { err.textContent = hu ? "Az értesítéshez a hozzájárulás szükséges." : "Please tick the consent box."; err.hidden = false; return; }
         const btn = dlg.querySelector("#nSend"); btn.disabled = true; btn.textContent = hu ? "Küldés…" : "Sending…";
         const endpoint = SHOP && SHOP.endpoint && SHOP.endpoint();
         try {
