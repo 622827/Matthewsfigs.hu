@@ -593,3 +593,17 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 .btn--green{background:var(--green);color:var(--gold);box-shadow:0 4px 0 var(--green-2)}
 .btn--green:hover{background:#1a4426}
 @media (max-width:760px){.army__cards{grid-template-columns:1fr}}
+
+/* Rólunk – megújítva: rövid bevezető, négy erősség, elérhetőség-sáv */
+.about__head{max-width:68ch;margin-bottom:28px}
+.about__head h2{margin:0 0 14px;font-size:clamp(32px,4.6vw,48px)}
+.about__lead{font-size:19px;line-height:1.55;margin:0;color:var(--ink)}
+.about__cards{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.about__cards li{background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:20px;display:grid;align-content:start;gap:8px}
+.about__ic{font-size:26px;line-height:1}
+.about__cards b{font-family:var(--display);font-size:19px;color:var(--green);line-height:1.2}
+.about__cards span{font-size:15px;line-height:1.5;color:var(--muted)}
+.about__cards a,.about__strip a{color:var(--green);font-weight:700;text-decoration-color:var(--gold);text-decoration-thickness:2px;text-underline-offset:3px}
+.about__strip{margin:22px 0 0;padding:14px 18px;border-left:4px solid var(--gold);background:#fff;border-radius:0 12px 12px 0;font-size:15px;line-height:1.6}
+@media (max-width:960px){.about__cards{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:560px){.about__cards{grid-template-columns:1fr}}

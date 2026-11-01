@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=202611012125">
+<link rel="stylesheet" href="style.css?v=202611012150">
 </head>
 <body data-page="home">
 
@@ -78,20 +78,19 @@
 </section>
 
 <section class="about" id="rolunk">
-  <div class="wrap about__in">
-    <div class="about__text">
+  <div class="wrap">
+    <div class="about__head">
       <p class="kicker kicker--dark" data-i18n="about.kicker">Rólunk</p>
-      <h2 data-i18n="about.title">Kik vagyunk?</h2>
-      <p data-i18n="about.p1">A Matthew's Fig Supply Co. budapesti LEGO® szett- és minifigura-kereskedés. Nagy tételben szerzünk be bontatlan szetteket, ezért a bolti ár alatt tudjuk adni őket. Szetteket kizárólag bontatlanul (MISB) árulunk, a figurákat pedig egyenként átnézzük.</p>
-      <p data-i18n="about.p2">Ha valami nincs raktáron, beszerezzük: legyen az egy ritka figura, egy rég kifutott szett vagy egy teljes kívánságlista. Itthon és külföldre is szállítunk, Budapesten pedig személyesen is átveheted a rendelésed.</p>
+      <h2 data-i18n="about.title">Gyűjtőktől gyűjtőknek</h2>
+      <p class="about__lead" data-i18n="about.lead">A Matthew's Fig Supply Co. Csikós Máté budapesti LEGO® Star Wars-boltja. Ott kezdünk, ahol a bolti polc véget ér: nagy tételben hozzuk a bontatlan szetteket, és felkutatjuk azt is, ami már rég nincs a boltokban.</p>
     </div>
-    <dl class="facts">
-      <div><dt data-i18n="about.f1t">Mit árulunk</dt><dd data-i18n="about.f1">Bontatlan szettek, minifigurák, alkatrészek</dd></div>
-      <div><dt data-i18n="about.f2t">Fő témáink</dt><dd data-i18n="about.f2">Star Wars – más témát főleg egyedi kérésre vagy rendelésre tudunk neked szerezni.</dd></div>
-      <div><dt data-i18n="about.f3t">Hol vásárolhatsz</dt><dd data-i18n="about.f3">Válaszd ki itt a weboldalon, és rendeld meg <a href="https://www.facebook.com/profile.php?id=100091130775442" target="_blank" rel="noopener">Facebook oldalunkon</a> keresztül Messengeren vagy személyesen (<a href="tel:+36203133292">+36&nbsp;20&nbsp;313&nbsp;3292</a>, Csikós Máté), illetve hamarosan itt a webshopban is.</dd></div>
-      <div><dt data-i18n="about.f4t">Honnan</dt><dd>Budapest, Bartók Béla út 10–12.</dd></div>
-      <div><dt data-i18n="about.f5t">Nyelvek</dt><dd data-i18n="about.f5">Magyar és angol</dd></div>
-    </dl>
+    <ul class="about__cards">
+      <li><span class="about__ic" aria-hidden="true">📦</span><b data-i18n="about.c1t">Bontatlan szettek, bolti ár alatt</b><span data-i18n="about.c1">Nagy tételben vásárolunk, ezért a szetteket a bolti ár alatt adjuk – mindig bontatlanul (MISB).</span></li>
+      <li><span class="about__ic" aria-hidden="true">🪖</span><b data-i18n="about.c2t">Hadsereg-építőknek</b><span data-i18n="about.c2">Tíz klón, egy szakasz droid, egy hiányzó Jedi? 10 000 Ft felett azonnal beszerezzük. <a href="#hadsereg">Részletek</a></span></li>
+      <li><span class="about__ic" aria-hidden="true">🔍</span><b data-i18n="about.c3t">Ami elfogyott, felkutatjuk</b><span data-i18n="about.c3">Kifutott szett, ritka figura vagy egy teljes kívánságlista – pár héten belül megszerezzük.</span></li>
+      <li><span class="about__ic" aria-hidden="true">🧑‍🚀</span><b data-i18n="about.c4t">Egyenként átnézve</b><span data-i18n="about.c4">A figurákat egyesével ellenőrizzük, és gondosan csomagolva küldjük Foxpost-automatába vagy itthonra.</span></li>
+    </ul>
+    <p class="about__strip" data-i18n="about.strip"><b>Csikós Máté</b> · <a href="tel:+36203133292">+36&nbsp;20&nbsp;313&nbsp;3292</a> · Budapest, Bartók Béla út 10–12. (személyes átvétel) · <a href="https://m.me/100091130775442" target="_blank" rel="noopener">Messenger</a> · Fő témánk a Star Wars, mást egyedi kérésre szerzünk be.</p>
   </div>
 </section>
 
@@ -186,7 +185,7 @@
 </footer>
 
 <script src="shop.js?v=202611012105"></script>
-<script src="app.js?v=202611012140"></script>
+<script src="app.js?v=202611012150"></script>
 <script src="anim.js?v=202611011859" defer></script>
 </body>
 </html>
