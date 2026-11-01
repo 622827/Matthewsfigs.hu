@@ -196,8 +196,9 @@
   const partsLink = () => MESSENGER + "?text=" + encodeURIComponent(
     lang === "hu" ? "Szia! Alkatrészt keresek: " : "Hi! I'm looking for parts: ");
   // in-stock card: straight to Messenger with the item and its price typed in
-  const buyLink = i => MESSENGER + "?text=" + encodeURIComponent(
-    (lang === "hu" ? "Szia! Ezt szeretném megvenni: " : "Hi! I'd like to buy this: ") + `${shortNo(i)} ${i.name}` + (i.price ? ` (${money(i.price)})` : ""));
+  const buyLink = (i, qty = 1) => MESSENGER + "?text=" + encodeURIComponent(
+    (lang === "hu" ? "Szia! Ezt szeretném megvenni: " : "Hi! I'd like to buy this: ") + (qty > 1 ? `${qty} db ` : "") + `${shortNo(i)} ${i.name}` +
+    (i.price ? ` (${qty > 1 ? `${qty} × ` : ""}${money(i.price)})` : ""));
   // "Szeretnék egyet!" button: straight to Facebook Messenger with the request typed in
   const openWant = el => {
     const a = el.closest("a.item--pre");
@@ -378,10 +379,14 @@
       : (hu ? "Eredeti LEGO® minifigura, egyenként átnézve. A képen a figura tájékoztató jellegű, a kiegészítők a BrickLink katalógus szerinti összeállításban." : "Genuine LEGO® minifigure, individually checked. The picture is for illustration; accessories as listed in the BrickLink catalogue.");
     const buy = i.preorder
       ? `<button type="button" class="btn btn--gold" id="pdNotify">${hu ? "Értesítést kérek" : "Notify me"}</button>`
-      : shopOn()
-        ? `<button type="button" class="btn btn--gold" data-add="${esc(i.no)}" data-name="${esc(sn + " " + i.name)}">${hu ? "Kosárba" : "Add to cart"}</button>
+      : (i.qty > 1 ? `<div class="pd-qty" role="group" aria-label="${hu ? "Mennyiség" : "Quantity"}">
+            <button type="button" data-step="-1" aria-label="−">−</button>
+            <input id="pdQty" type="number" inputmode="numeric" min="1" max="${i.qty}" value="1" aria-label="${hu ? "Mennyiség" : "Quantity"}">
+            <button type="button" data-step="1" aria-label="+">+</button></div>` : "") +
+        (shopOn()
+        ? `<button type="button" class="btn btn--gold" data-add="${esc(i.no)}" data-qty-from="#pdQty" data-name="${esc(sn + " " + i.name)}">${hu ? "Kosárba" : "Add to cart"}</button>
            <a class="btn btn--line" href="kosar.html">${hu ? "Tovább a kosárhoz" : "Go to cart"}</a>`
-        : `<a class="btn btn--gold" href="${esc(buyLink(i))}" target="_blank" rel="noopener">${hu ? "Megrendelem Messengeren" : "Order on Messenger"}</a>`;
+        : `<a class="btn btn--gold" id="pdBuy" href="${esc(buyLink(i))}" target="_blank" rel="noopener">${hu ? "Megrendelem Messengeren" : "Order on Messenger"}</a>`);
     const row = (k, v) => v ? `<dt>${k}</dt><dd>${v}</dd>` : "";
     // BrickLink catalogue facts (data/details.json, scripts/catalog_details.py)
     const D = DETAILS[i.no] || {};
@@ -498,6 +503,15 @@
       b.addEventListener("click", go);
       b.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(e); });
     });
+    // quantity stepper (max = stock); the Messenger link follows the chosen quantity
+    const qIn = $("pdQty");
+    if (qIn) {
+      const clamp = () => { qIn.value = Math.max(1, Math.min(i.qty, parseInt(qIn.value, 10) || 1)); const b = $("pdBuy"); if (b) b.href = buyLink(i, +qIn.value);
+        root.querySelectorAll(".pd-qty [data-step]").forEach(s => s.disabled = (+s.dataset.step < 0 ? +qIn.value <= 1 : +qIn.value >= i.qty)); };
+      root.querySelectorAll(".pd-qty [data-step]").forEach(s => s.onclick = () => { qIn.value = (+qIn.value || 1) + +s.dataset.step; clamp(); });
+      qIn.addEventListener("change", clamp); qIn.addEventListener("input", () => { if (qIn.value !== "") clamp(); });
+      clamp();
+    }
     const w = $("pdWant"), n = $("pdNotify");
     if (w) w.onclick = () => askNotify(i, wantLink(i), "want");
     if (n) n.onclick = () => askNotify(i, notifyLink(i));

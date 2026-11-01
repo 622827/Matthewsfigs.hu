@@ -92,7 +92,7 @@
   const count = () => Object.values(cart()).reduce((s, n) => s + n, 0);
   function add(no, n = 1) {
     const c = cart(), max = LOTS.length ? stockOf(no) : 99, cur = c[no] || 0;
-    if (cur + n > max) { toast(hu() ? `Ebből csak ${max} db van raktáron.` : `Only ${max} in stock.`); return false; }
+    if (cur + n > max) { toast(cur ? (hu() ? `Ebből csak ${max} db van raktáron, és ${cur} db már a kosaradban van.` : `Only ${max} in stock and ${cur} already in your cart.`) : (hu() ? `Ebből csak ${max} db van raktáron.` : `Only ${max} in stock.`)); return false; }
     c[no] = cur + n; saveCart(c); return true;
   }
   function setQty(no, n) {
@@ -129,7 +129,9 @@
     if (!a || !enabled()) return;
     e.preventDefault();
     const name = a.dataset.name || a.dataset.add;
-    if (add(a.dataset.add)) toast(`<b>${esc(name)}</b> ${hu() ? "a kosárba került." : "added to cart."}`, true);
+    const qEl = a.dataset.qtyFrom && document.querySelector(a.dataset.qtyFrom);
+    const n = Math.max(1, parseInt(qEl && qEl.value, 10) || 1);
+    if (add(a.dataset.add, n)) toast(`<b>${n > 1 ? n + " × " : ""}${esc(name)}</b> ${hu() ? "a kosárba került." : "added to cart."}`, true);
   });
 
   // ---------- pénztár (kosar.html) ----------

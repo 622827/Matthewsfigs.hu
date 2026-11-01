@@ -538,3 +538,9 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 .pd-vers__set a{color:var(--green);font-weight:600}
 .pd-vers__set small{color:var(--muted);font-weight:600;font-size:12px}
 .pd>*,.pd-figs,.pd-vers{min-width:0}
+.pd-qty{display:inline-flex;align-items:center;border:1.5px solid var(--line);border-radius:999px;background:#fff;height:48px}
+.pd-qty button{width:42px;height:100%;border:0;background:none;font:700 20px var(--body);color:var(--green);cursor:pointer}
+.pd-qty button:disabled{opacity:.3;cursor:default}
+.pd-qty input{width:44px;border:0;text-align:center;font:700 17px var(--body);background:none;-moz-appearance:textfield}
+.pd-qty input::-webkit-outer-spin-button,.pd-qty input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.pd-buy{align-items:center}
