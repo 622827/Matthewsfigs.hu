@@ -12,7 +12,13 @@
     "about.p1":"Matthew's Fig Supply Co. is a LEGO® set and minifigure shop based in Budapest. We buy sealed sets in bulk, so we can sell them below retail. We only sell sets sealed (MISB), and every figure is checked one by one.",
     "about.p2":"If something isn't in stock, we'll source it: a rare figure, a long-retired set or a whole wanted list. We ship within Hungary and abroad, and you can pick up your order in person in Budapest.",
     "about.f1t":"What we sell","about.f1":"Sealed sets, minifigures, parts",
-    "foot.aszf":"Terms (HU)","foot.privacy":"Privacy (HU)","foot.imprint":"Imprint","about.f2t":"Main themes","about.f2":"Star Wars – other themes we can mostly source for you on request or to order.",
+    "foot.aszf":"Terms (HU)","foot.privacy":"Privacy (HU)","foot.imprint":"Imprint","army.kicker":"Army builder","army.title":"Building an army? We'll bring it together.",
+    "army.lead":"We're an army-builder shop. If you need lots of one kind of minifigure – clones, droids, stormtroopers – or your squad is missing a Jedi, we order it for you right away, even if it's not in stock.",
+    "army.c1t":"Over 10,000 Ft: right away","army.c1":"For orders over 10,000 Ft we immediately track down and order the missing minifigures, in small or large quantities.",
+    "army.c2t":"Lots of clones, lots of droids, one Jedi","army.c2":"A full squad, a mixed army or a single character – we put any line-up together.",
+    "army.c3t":"No price listed? We'll quote","army.c3":"If a minifigure isn't in our range, we send you a quote first and only order it once you approve.",
+    "army.cta":"Tell us what your army needs","army.sets":"Army builder sets",
+    "about.f2t":"Main themes","about.f2":"Star Wars – other themes we can mostly source for you on request or to order.",
     "about.f3t":"Where to buy","about.f3":"Choose here on the website and order via Messenger on our <a href=\"https://www.facebook.com/profile.php?id=100091130775442\" target=\"_blank\" rel=\"noopener\">Facebook page</a>, or in person (<a href=\"tel:+36203133292\">+36&nbsp;20&nbsp;313&nbsp;3292</a>, Máté Csikós) – and soon right here in our webshop.",
     "about.f4t":"Based in","about.f5t":"Languages","about.f5":"Hungarian and English","nav.sourcing":"Sourcing","nav.order":"How to order","nav.contact":"Contact",
     "hero.kicker":"LEGO® sets · minifigures · parts",
@@ -190,6 +196,11 @@
   // "similar minifigures": words that say little (dropped), unit words (count most), very common words (count least)
   const SIM_STOP = new Set(["phase", "with", "and", "the", "of", "in", "on", "minifigure", "only", "version", "printed", "large", "eyes", "head"]);
   const SIM_UNIT = new Set(["legion", "battalion", "corps", "company", "guard", "squadron", "squad", "brigade", "division"]);
+  // words that describe a kind of figure, not a character: what is left after removing them is the character's name
+  const SIM_GENERIC = new Set(("clone trooper troopers arc arf pilot commander captain sergeant lieutenant general admiral airborne jet scout shock bomb squad marine galactic " +
+    "imperial stormtrooper snowtrooper sandtrooper scout officer battle droid droids super assassin astromech rebel fleet male female elite heavy gunner crew guard royal " +
+    "tie fighter interceptor wing death dark first order at driver skeleton zombie baby warrior knight soldier jedi sith padawan master darth lord young adult " +
+    "minifigure standard fantasy era printed legs torso arms head hair helmet cape plain black white").split(" "));
   const SIM_LOW = new Set(["clone", "trooper", "droid", "battle", "pilot", "imperial", "rebel", "officer", "commander", "captain"]);
   const shortNo = i => (i.type === "SET" ? i.no.replace(/-1$/, "") : i.no);
   const notifyLink = i => MESSENGER + "?text=" + encodeURIComponent(
@@ -480,10 +491,18 @@
     };
     const simW = w => /^\d+(st|nd|rd|th)$/.test(w) ? 4 : SIM_LOW.has(w) || SIM_UNIT.has(w) ? 1 : 2;
     const pre = n => (String(n).match(/^[a-z]+/i) || [""])[0].toLowerCase();
+    // a named character (Rex, Cody, Ahsoka Tano…) only shows the other versions of the same character
+    const nameTok = name => String(name).split(" - ")[0].replace(/\([^)]*\)/g, " ").split(",")[0].toLowerCase()
+      .replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filter(w => w.length > 1 && !SIM_GENERIC.has(w) && !/^\d/.test(w));
+    const baseOf = name => String(name).split(" - ")[0].replace(/\([^)]*\)/g, " ").split(",")[0].toLowerCase().replace(/\s+/g, " ").trim();   // "battle droid", "clone trooper"
     const similar = set ? [] : (() => {
-      const mine = simTok(i.name);
+      const mine = simTok(i.name), myName = nameTok(i.name), myBase = baseOf(i.name);
+      if (myName.length) {
+        return data.items.filter(o => o.type === "MINIFIG" && o.no !== i.no && nameTok(o.name).some(w => myName.includes(w)))
+          .sort((a, b) => (!!a.preorder - !!b.preorder) || b.price - a.price).slice(0, 12);
+      }
       return data.items.filter(o => o.type === "MINIFIG" && o.no !== i.no && pre(o.no) === pre(i.no))
-        .map(o => { const t = new Set(simTok(o.name)); return { o, sc: mine.reduce((a, w) => a + (t.has(w) ? simW(w) : 0), 0) }; })
+        .map(o => { const t = new Set(simTok(o.name)); return { o, sc: mine.reduce((a, w) => a + (t.has(w) ? simW(w) : 0), 0) + (baseOf(o.name) === myBase ? 3 : 0) }; })
         .filter(x => x.sc >= 3)
         .sort((a, b) => b.sc - a.sc || (!!a.o.preorder - !!b.o.preorder) || b.o.price - a.o.price)
         .slice(0, 12).map(x => x.o);
