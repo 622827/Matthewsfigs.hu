@@ -101,7 +101,7 @@
   };
   // 3D product box: sets get their original LEGO box art on a cuboid,
   // minifigures turn like on a display turntable.
-  let BOXES = {}, LABELS = {}, FIGS = {}, DETAILS = {}, VALUES = {}, FIGVALUES = {}, AUTOLABELS = {};   // assets/boxes/index.json: flattened faces cut from the box photos
+  let BOXES = {}, LABELS = {}, FIGS = {}, DETAILS = {}, VALUES = {}, FIGVALUES = {}, DESC_HU = {}, AUTOLABELS = {};   // assets/boxes/index.json: flattened faces cut from the box photos
   // minifigure on a LEGO display plate: stands still, front view, feet on the two middle studs
   // plate art (assets/figstand.svg, 120×44): front stud row base at y≈22.5, stud pitch 24.5 → 2 studs = 49 units
   const fig3d = (i, f) => {
@@ -452,18 +452,18 @@
            <a class="btn btn--line" href="kosar.html">${hu ? "Tovább a kosárhoz" : "Go to cart"}</a>`
         : `<a class="btn btn--gold" id="pdBuy" href="${esc(buyLink(i))}" target="_blank" rel="noopener">${hu ? "Megrendelem Messengeren" : "Order on Messenger"}</a>`);
     const row = (k, v) => v ? `<dt>${k}</dt><dd>${v}</dd>` : "";
-    // LEGO's official product text (Brickset, English only), shown as it is – we don't write or translate it
+    // LEGO's official product text: Hungarian translation (data/desc_hu.json) on the Hungarian page, the English original
+    // (Brickset, data/details.json desc_en) on the English one – only the introduction, without the bullet list and app/brand boilerplate
     const officialDesc = (() => {
-      const txt = set && (DETAILS[i.no] || {}).desc_en;
-      if (!txt) return "";
-      const out = []; let ul = [];
-      const flush = () => { if (ul.length) { out.push(`<ul class="pd-list">${ul.join("")}</ul>`); ul = []; } };
-      for (const line of txt.split("\n")) {
-        if (/^[•·-]\s*/.test(line)) ul.push(`<li>${esc(line.replace(/^[•·-]\s*/, ""))}</li>`);
-        else { flush(); out.push(`<p>${esc(line)}</p>`); }
-      }
-      flush();
-      return `<div class="pd-official" lang="en"><p class="pd-official__k">${hu ? "A LEGO hivatalos leírása (angolul)" : "LEGO's official description"}</p>${out.join("")}</div>`;
+      if (!set) return "";
+      let paras;
+      if (hu) paras = (DESC_HU[i.no] || "").split("\n");
+      else paras = String((DETAILS[i.no] || {}).desc_en || "").split("\n").map(l => l.split("•")[0].trim())
+        .filter(l => l && !/LEGO (Builder|Building Instructions) app|LEGO Group has been|sold separately|^Thinking of buying/i.test(l) && (l.length > 45 || /[.!?…]$/.test(l)));
+      paras = paras.map(x => x.trim()).filter(Boolean);
+      while (paras.length && paras[paras.length - 1].length < 45) paras.pop();   // a heading left without its paragraph
+      if (!paras.length) return "";
+      return `<div class="pd-official"><p class="pd-official__k">${hu ? "A LEGO hivatalos leírása" : "LEGO's official description"}</p>${paras.map(x => `<p>${esc(x)}</p>`).join("")}</div>`;
     })();
     // BrickLink catalogue facts (data/details.json, scripts/catalog_details.py)
     const D = DETAILS[i.no] || {};
@@ -776,9 +776,11 @@
     fetch("assets/figs/index.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
     window.MFShop ? window.MFShop.ready : null,
     PAGE_KIND === "product" ? fetch("data/details.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})) : null,
-    fetch("data/autolabels.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({}))
+    fetch("data/autolabels.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
+    PAGE_KIND === "product" ? fetch("data/desc_hu.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})) : null
   ])
-    .then(([d, boxes, labels, figs, , details, auto]) => {
+    .then(([d, boxes, labels, figs, , details, auto, deschu]) => {
+      DESC_HU = deschu || {};
       AUTOLABELS = (auto && auto.labels) || {};
       BOXES = boxes || {}; LABELS = labels || {}; FIGS = figs || {}; DETAILS = (details && details.items) || {}; VALUES = (details && details.values) || {}; FIGVALUES = (details && details.figvalues) || {};
       if (window.MFShop) window.MFShop.setLots(d.items.map(i => ({ ...i })));
