@@ -327,10 +327,18 @@
            <a class="btn btn--line" href="kosar.html">${hu ? "Tovább a kosárhoz" : "Go to cart"}</a>`
         : `<a class="btn btn--gold" href="${esc(buyLink(i))}" target="_blank" rel="noopener">${hu ? "Megrendelem Messengeren" : "Order on Messenger"}</a>`;
     const row = (k, v) => v ? `<dt>${k}</dt><dd>${v}</dd>` : "";
+    // static product photos (no spinning model here): box + built set for sets, catalogue photo for minifigures
+    const IMG = "https://img.bricklink.com/ItemImage/", enc = encodeURIComponent(i.no);
+    const photos = set
+      ? [{ src: `${IMG}ON/0/${enc}.png`, alt: hu ? "doboz" : "box" }, { src: `${IMG}SN/0/${enc}.png`, alt: hu ? "a megépített szett" : "built set" }]
+      : [{ src: i.img || `${IMG}MN/0/${enc}.png`, alt: hu ? "minifigura" : "minifigure" }];
     root.innerHTML = `
       <nav class="pd-crumbs"><a href="index.html">${hu ? "Főoldal" : "Home"}</a> › <a href="${back}">${set ? (hu ? "Szettek" : "Sets") : (hu ? "Figurák" : "Minifigures")}</a> › <span>${esc(sn)}</span></nav>
       <div class="pd">
-        <div class="pd-media${i.preorder ? " item--pre" : ""}">${box3d(i)}</div>
+        <div class="pd-gallery">
+          <div class="pd-media"><img id="pdMain" src="${esc(photos[0].src)}" alt="${esc(i.name)} – ${esc(photos[0].alt)}"></div>
+          ${photos.length > 1 ? `<div class="pd-thumbs">${photos.map((p, k) => `<button type="button" class="pd-thumb${k ? "" : " is-on"}" data-src="${esc(p.src)}" data-alt="${esc(p.alt)}" aria-label="${esc(p.alt)}"><img src="${esc(p.src)}" alt="" loading="lazy"></button>`).join("")}</div>` : ""}
+        </div>
         <div class="pd-info">
           <p class="item__no">${esc(sn)} · ${set ? (hu ? "LEGO® szett" : "LEGO® set") : (hu ? "LEGO® minifigura" : "LEGO® minifigure")}</p>
           <h1>${esc(i.name)}</h1>
@@ -338,7 +346,7 @@
           <p class="pd-price">${i.from ? `<small>${hu ? "" : "from "}</small>` : ""}${money(i.price)}${i.from && hu ? "<small>-tól</small>" : ""}</p>
           <p class="pd-stock${i.preorder ? " is-pre" : ""}">${stock}</p>
           <div class="pd-buy">${buy}</div>
-          ${SHOP && SHOP.safetyBlock ? SHOP.safetyBlock() : ""}
+          <p class="pd-warn"><a href="#biztonsag">⚠ ${hu ? "3 éven aluliaknak nem adható – apró alkatrészek" : "Not for children under 3 – small parts"}</a></p>
           <h2>${hu ? "Leírás" : "Description"}</h2>
           <p>${cond}</p>
           <dl class="pd-dl">
@@ -358,10 +366,18 @@
             <li>${hu ? "Gondos csomagolás, a doboz védelmére figyelve; feladás általában 1–3 munkanapon belül." : "Careful packing to protect the box; usually shipped within 1–3 working days."}</li>
             <li>${hu ? 'Fogyasztóként 14 napon belül indoklás nélkül elállhatsz a vásárlástól. Részletek az <a href="aszf.html">ÁSZF</a>-ben.' : 'As a consumer you may withdraw within 14 days without giving a reason. Details in our <a href="aszf.html">Terms</a> (HU).'}</li>
           </ul>
+          <h2 id="biztonsag">${hu ? "Termékbiztonság" : "Product safety"}</h2>
+          ${SHOP && SHOP.safetyBlock ? SHOP.safetyBlock() : ""}
           <p class="pd-tm">${t("foot.legal") !== "foot.legal" ? t("foot.legal") : ""}</p>
         </div>
       </div>`;
-    initBoxes(root);
+    // gallery: thumbnails switch the big photo; photos that don't exist are dropped
+    const main = $("pdMain");
+    root.querySelectorAll(".pd-thumb").forEach(b => {
+      b.onclick = () => { main.src = b.dataset.src; main.alt = i.name + " – " + b.dataset.alt; root.querySelectorAll(".pd-thumb").forEach(x => x.classList.toggle("is-on", x === b)); };
+      b.querySelector("img").onerror = () => { b.remove(); const left = root.querySelectorAll(".pd-thumb"); if (left.length < 2) left.forEach(x => x.remove()); };
+    });
+    main.onerror = () => { const alt = root.querySelector(".pd-thumb:not(.is-on)"); if (alt && main.src !== alt.dataset.src) alt.click(); else if (i.img && main.src !== i.img) main.src = i.img; };
     const w = $("pdWant"), n = $("pdNotify");
     if (w) w.onclick = () => askNotify(i, wantLink(i), "want");
     if (n) n.onclick = () => askNotify(i, notifyLink(i));
