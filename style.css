@@ -649,3 +649,9 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 @media (max-width:520px){.rq__choose{grid-template-columns:1fr}.rq__lines li{grid-template-columns:34px minmax(0,1fr) auto}.rq__rm{grid-column:3;grid-row:1}.rq__qty{grid-column:2}}
 .cat-hero__req{margin:10px 0 0;font-size:15px}
 .cat-hero__req a{color:var(--gold);font-weight:700;text-decoration-thickness:2px;text-underline-offset:3px}
+
+/* termékoldal: szállítás + termékbiztonság külön blokkban; mobilon a legvégén (a biztonság legalul) */
+.pd{grid-template-areas:"gal info" "figs info" "figs more";grid-template-rows:auto auto 1fr}
+.pd-more{grid-area:more;align-self:start;min-width:0}
+.pd-more h2{font-size:21px;color:var(--green);margin:28px 0 8px}
+@media (max-width:860px){.pd{grid-template-areas:"gal" "info" "figs" "more";grid-template-rows:auto}}

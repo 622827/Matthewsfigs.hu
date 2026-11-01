@@ -50,10 +50,10 @@
     "foot.contact":"Contact","foot.inv":"For investors","nav.inv":"Investors",
     "foot.legal":"LEGO® is a trademark of the LEGO Group, which does not sponsor, authorize or endorse this site.",
     "badge.sealed":"Sealed","badge.pre":"Pre-order","pre.hint":"Sold out right now – message us to order it","price.ask":"Ask",
-    "parts.title":"Parts","parts.text":"We have {lots} lots ({qty} pieces) of parts in stock. Message us with what you're looking for.","parts.cta":"Ask about parts on Messenger"
+    "parts.title":"Parts","parts.text":"We have {lots} lots of parts in stock. Message us with what you're looking for.","parts.cta":"Ask about parts on Messenger"
   };
   const HU = {"cat.for":" erre","badge.sealed":"Sealed","badge.pre":"Pre-order","pre.hint":"Jelenleg elfogyott – írj nekünk, és beszerezzük","price.ask":"Érdeklődj",
-    "parts.title":"Alkatrészek","parts.text":"{lots} tétel ({qty} darab) alkatrész van raktáron. Írd meg Messengeren, mit keresel.","parts.cta":"Alkatrészt keresek"};
+    "parts.title":"Alkatrészek","parts.text":"{lots} tétel alkatrész van raktáron. Írd meg Messengeren, mit keresel.","parts.cta":"Alkatrészt keresek"};
 
   let lang = "hu";
   try { lang = localStorage.getItem("mfs-lang") || (navigator.language.startsWith("hu") ? "hu" : "en"); } catch (e) {}
@@ -326,7 +326,7 @@
       <a class="item${i.preorder ? " item--pre" : ""}"${cardLink(i)}>
         <div class="item__img">${box3d(i)}</div>
         <div class="item__body">
-          <span class="item__no">${esc(i.type === "SET" ? i.no.replace(/-1$/, "") : i.no)}${i.qty > 1 ? ` · ${i.qty} ${lang === "hu" ? "db" : "pcs"}` : ""}</span>
+          <span class="item__no">${esc(i.type === "SET" ? i.no.replace(/-1$/, "") : i.no)}</span>
           <span class="item__name">${esc(i.name)}</span>
           <span class="badges">${labelsOf(i).map(l => `<span class="badge badge--${(LABELS._colors || {})[l] || "red"}">${esc(l)}</span>`).join("")}${i.preorder ? `<span class="badge badge--pre">${t("badge.pre")}</span>` : i.type === "SET" ? `<span class="badge">${t("badge.sealed")}</span>` : ""}</span>
           ${i.preorder ? `<span class="want" role="button" tabindex="0" data-href="${esc(wantLink(i))}">${lang === "hu" ? "Szeretnék egyet!" : "I want one!"}</span>` : ""}
@@ -420,7 +420,7 @@
     const back = set ? "szettek.html" : "figurak.html";
     const note = (i.note || "").trim();
     const stock = i.preorder ? (hu ? "Jelenleg elfogyott – előrendelhető" : "Sold out – available to pre-order")
-      : (hu ? `Raktáron: ${i.qty} db` : `In stock: ${i.qty}`);
+      : (hu ? "Raktáron" : "In stock");
     const cond = set
       ? (hu ? "Bontatlan, gyári állapotú (MISB – Mint In Sealed Box) szett. A doboz kisebb gyártási vagy szállítási nyomai előfordulhatnak." : "Brand new, factory sealed (MISB – Mint In Sealed Box). Minor factory or shipping marks on the box may occur.")
       : (hu ? "Eredeti LEGO® minifigura, egyenként átnézve. A képen a figura tájékoztató jellegű, a kiegészítők a BrickLink katalógus szerinti összeállításban." : "Genuine LEGO® minifigure, individually checked. The picture is for illustration; accessories as listed in the BrickLink catalogue.");
@@ -442,7 +442,7 @@
     const weight = D.weight_g ? (D.weight_g >= 1000 ? nf(D.weight_g / 1000) + " kg" : nf(D.weight_g) + " g") : "";
     const ours = no => data.items.find(x => x.no === no);
     // hover preview: bigger picture + a few facts (data-pv-*)
-    const stockInfo = o => o ? (o.preorder ? (hu ? "Nálunk: előrendelhető" : "With us: pre-order") : (hu ? `Nálunk: ${money(o.price)} · ${o.qty} db` : `With us: ${money(o.price)} · ${o.qty} in stock`))
+    const stockInfo = o => o ? (o.preorder ? (hu ? "Nálunk: előrendelhető" : "With us: pre-order") : (hu ? `Nálunk: ${money(o.price)} · raktáron` : `With us: ${money(o.price)} · in stock`))
                              : (hu ? "Nálunk nincs raktáron – beszerezzük" : "Not in stock – we can source it");
     const pv = (img, title, lines) => ` data-pv-img="${esc(img)}" data-pv-t="${esc(title)}" data-pv-i="${esc(lines.filter(Boolean).join("\n"))}"`;
     const linkItem = (no, name, qty) => {
@@ -466,8 +466,8 @@
         <span class="pd-setonly__price"><b>${money(noFig)}</b><s>${money(i.price)}</s><em>${hu ? "−" + money(i.price - noFig) : "save " + money(i.price - noFig)}</em></span>
         <a class="pd-fig__btn pd-setonly__btn" href="${esc(noFigLink)}" target="_blank" rel="noopener">${hu ? "Csak a szettet kérem" : "Just the set, please"}</a>
         <p class="pd-setonly__note">${hu
-          ? `Ilyenkor a bontatlan szettet gondosan felbontjuk, a ${figTotal} minifigurát kivesszük, és csak a szettet adjuk el – ezért olcsóbb. A szett így már nem bontatlan (nem MISB). Az ár a szett ára mínusz a minifigurák piaci értéke (BrickLink eladási átlagár).`
-          : `We carefully open the sealed set, take out the ${figTotal} minifigure${figTotal > 1 ? "s" : ""} and sell you the rest – that's why it's cheaper. The set is then no longer sealed (not MISB). Price = set price minus the minifigures' market value (BrickLink average sale price).`}</p>
+          ? `Ilyenkor a bontatlan szettet gondosan felbontjuk, a ${figTotal} minifigurát kivesszük, és csak a szettet adjuk el. Így az ára természetesen sokkal kedvezőbb, mint a figurákkal együtt.`
+          : `We carefully open the sealed set, take out the ${figTotal} minifigure${figTotal > 1 ? "s" : ""} and sell you just the set – so of course it costs much less than with the minifigures.`}</p>
       </div>` : "";
     // minifigure cards under the photos (like a catalogue): number, name, picture, how many sets / exclusive, our price
     const excl = (D.minifigs || []).filter(f => f.sets === 1).length;
@@ -535,7 +535,7 @@
           : shopOn() ? `<span class="pd-fig__btn" role="button" tabindex="0" data-add="${esc(o.no)}" data-name="${esc(o.no + " " + o.name)}">${hu ? "Kosárba" : "Add to cart"}</span>`
           : `<span class="pd-fig__btn" role="button" tabindex="0" data-buy="${esc(o.no)}">${hu ? "Megrendelem" : "Order"}</span>`;
         return `<a class="pd-fig" href="${esc(productUrl(o))}"${pv(img, o.no + " " + o.name, [stockInfo(o)])}>
-          <span class="pd-fig__no">${esc(o.no)}</span>${o.qty > 1 && !o.preorder ? `<span class="pd-fig__qty">${o.qty} db</span>` : ""}
+          <span class="pd-fig__no">${esc(o.no)}</span>
           <b class="pd-fig__name">${esc(o.name.split(" - ")[0])}</b>
           <img src="${img}" alt="${esc(o.name)}" loading="lazy">
           <span class="pd-fig__foot">${o.preorder ? `<span class="pd-fig__tag">${hu ? "Előrendelhető" : "Pre-order"}</span>` : "<span></span>"}
@@ -567,8 +567,10 @@
     // static product photos (no spinning model here): box + built set for sets, catalogue photo for minifigures
     const IMG = "https://img.bricklink.com/ItemImage/", enc = encodeURIComponent(i.no);
     const photos = set
-      ? [{ src: `${IMG}ON/0/${enc}.png`, alt: hu ? "doboz" : "box" }, { src: `${IMG}SN/0/${enc}.png`, alt: hu ? "a megépített szett" : "built set" },
-         ...(D.photos || []).slice(1).map((src, k) => ({ src, alt: (hu ? "fotó " : "photo ") + (k + 3) }))]   // Brickset official images
+      ? (D.gallery && D.gallery.length   // de-duplicated by scripts/photo_dedup.py (the same picture often comes from BrickLink and Brickset)
+        ? D.gallery.map((src, k) => ({ src, alt: k === 0 ? (hu ? "doboz" : "box") : k === 1 ? (hu ? "a megépített szett" : "built set") : (hu ? "fotó " : "photo ") + (k + 1) }))
+        : [{ src: `${IMG}ON/0/${enc}.png`, alt: hu ? "doboz" : "box" }, { src: `${IMG}SN/0/${enc}.png`, alt: hu ? "a megépített szett" : "built set" },
+           ...(D.photos || []).slice(1).map((src, k) => ({ src, alt: (hu ? "fotó " : "photo ") + (k + 3) }))])   // Brickset official images
       : [{ src: i.img || `${IMG}MN/0/${enc}.png`, alt: hu ? "minifigura" : "minifigure" }];
     root.innerHTML = `
       <nav class="pd-crumbs"><a href="index.html">${hu ? "Főoldal" : "Home"}</a> › <a href="${back}">${set ? (hu ? "Szettek" : "Sets") : (hu ? "Figurák" : "Minifigures")}</a> › <span>${esc(sn)}</span></nav>
@@ -606,6 +608,9 @@
             ${row(hu ? "Korosztály" : "Age", hu ? "3 éven felülieknek" : "Ages 3+")}
           </dl>
           ${setList}
+          <p class="pd-tm">${t("foot.legal") !== "foot.legal" ? t("foot.legal") : ""}</p>
+        </div>
+        <div class="pd-more">
           <h2>${hu ? "Szállítás és fizetés" : "Delivery and payment"}</h2>
           <ul class="pd-list">
             <li>${hu ? "Foxpost csomagautomatába vagy személyes átvétellel Budapesten (1111 Budapest, Bartók Béla út 10–12.)." : "To a Foxpost parcel locker or pickup in Budapest (1111 Budapest, Bartók Béla út 10–12)."}</li>
@@ -615,7 +620,6 @@
           </ul>
           <h2 id="biztonsag">${hu ? "Termékbiztonság" : "Product safety"}</h2>
           ${SHOP && SHOP.safetyBlock ? SHOP.safetyBlock() : ""}
-          <p class="pd-tm">${t("foot.legal") !== "foot.legal" ? t("foot.legal") : ""}</p>
         </div>
       </div>`;
     // gallery: thumbnails switch the big photo; photos that don't exist are dropped

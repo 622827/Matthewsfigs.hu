@@ -37,6 +37,11 @@ jobs:
           BL_TOKEN_SECRET: ${{ secrets.BL_TOKEN_SECRET }}
           BRICKSET_API_KEY: ${{ secrets.BRICKSET_API_KEY }}
         run: python scripts/catalog_details.py
+      - name: Duplikált galériaképek kiszűrése
+        continue-on-error: true
+        run: |
+          pip install --quiet pillow
+          python scripts/photo_dedup.py
       - name: Változás mentése
         run: |
           git config user.name "inventory-bot"

@@ -41,7 +41,13 @@
    ],
    "ucs": false,
    "versions": [],
-   "figs_value_huf": 5656
+   "figs_value_huf": 5656,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/40686-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/40686-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/40686-1/40686_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40686-1/40686_lifestyle.jpg"
+   ]
   },
   "40755-1": {
    "bs_id": 48961,
@@ -113,7 +119,14 @@
    ],
    "ucs": false,
    "versions": [],
-   "figs_value_huf": 13485
+   "figs_value_huf": 13485,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/40755-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/40755-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_lifestyle_envr.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40755-1/40755_lifestyle_envr_03.jpg"
+   ]
   },
   "40806-1": {
    "bs_id": 51283,
@@ -150,7 +163,15 @@
    ],
    "ucs": false,
    "versions": [],
-   "figs_value_huf": 10975
+   "figs_value_huf": 10975,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/40806-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/40806-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_lifestyle_build.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_lifestyle_envr.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/40806-1/40806_lifestyle_envr_2.jpg"
+   ]
   },
   "472407-1": {
    "bs_id": 50369,
@@ -182,7 +203,11 @@
    ],
    "ucs": false,
    "versions": [],
-   "figs_value_huf": 2839
+   "figs_value_huf": 2839,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/472407-1.png",
+    "https://images.brickset.com/sets/images/472407-1.jpg"
+   ]
   },
   "75020-1": {
    "bs_id": 10227,
@@ -274,6 +299,13 @@
      "img": "https://cdn.rebrickable.com/media/sets/75397-1.jpg",
      "figs": 10
     }
+   ],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75020-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75020-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75020-1/75020_alt4.jpg"
    ]
   },
   "75158-1": {
@@ -340,7 +372,20 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75158-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75158-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75158-1/75158_alt9.jpg"
+   ]
   },
   "75280-1": {
    "bs_id": 30188,
@@ -407,7 +452,34 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75280-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75280-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_1to1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt11.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_alt9.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_05.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Back_06.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Box3_v29.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Box6_v29.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75280-1/75280_Front_05.jpg"
+   ]
   },
   "75283-1": {
    "bs_id": 30553,
@@ -485,6 +557,27 @@
      "img": "https://cdn.rebrickable.com/media/sets/75283-1.jpg",
      "figs": 4
     }
+   ],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75283-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75283-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_1to1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_05.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Back_06.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Box3_v29.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Box6_v29.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_Front_05.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_MF_Lineup_01.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_MF_Lineup_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75283-1/75283_MF_Lineup_03.jpg"
    ]
   },
   "75314-1": {
@@ -559,7 +652,22 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75314-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75314-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt11.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt12.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt13.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75314-1/75314_alt9.jpg"
+   ]
   },
   "75333-1": {
    "bs_id": 32403,
@@ -611,7 +719,18 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75333-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75333-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75333-1/75333_alt8.jpg"
+   ]
   },
   "75337-1": {
    "bs_id": 32407,
@@ -702,6 +821,19 @@
      "img": "https://cdn.rebrickable.com/media/sets/75337-1.jpg",
      "figs": 9
     }
+   ],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75337-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75337-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75337-1/75337_alt9.jpg"
    ]
   },
   "75342-1": {
@@ -795,6 +927,19 @@
      "img": "https://cdn.rebrickable.com/media/sets/912313-1.jpg",
      "figs": 0
     }
+   ],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75342-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75342-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt10.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75342-1/75342_alt9.jpg"
    ]
   },
   "75344-1": {
@@ -834,7 +979,17 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75344-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75344-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75344-1/75344_alt7.jpg"
+   ]
   },
   "75345-1": {
    "bs_id": 34369,
@@ -885,7 +1040,17 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75345-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75345-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75345-1/75345_alt7.jpg"
+   ]
   },
   "75347-1": {
    "bs_id": 34370,
@@ -977,6 +1142,18 @@
      "img": "https://cdn.rebrickable.com/media/sets/75347-1.jpg",
      "figs": 4
     }
+   ],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75347-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75347-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_alt8.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75347-1/75347_boxprod_v39.jpg"
    ]
   },
   "75372-1": {
@@ -1041,7 +1218,19 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75372-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75372-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75372-1/75372_alt8.jpg"
+   ]
   },
   "75379-1": {
    "bs_id": 48524,
@@ -1128,6 +1317,18 @@
      "img": "https://cdn.rebrickable.com/media/sets/75379-1.jpg",
      "figs": 2
     }
+   ],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75379-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75379-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt4.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt5.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt6.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt7.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75379-1/75379_alt8.jpg"
    ]
   },
   "75383-1": {
@@ -1217,7 +1418,19 @@
      "figs": 4
     }
    ],
-   "figs_value_huf": 39102
+   "figs_value_huf": 39102,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75383-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75383-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_80296.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_boxprod_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_lifestyle.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75383-1/75383_lifestyle_envr.jpg"
+   ]
   },
   "75389-1": {
    "bs_id": 48876,
@@ -1291,7 +1504,23 @@
    ],
    "ucs": false,
    "versions": [],
-   "figs_value_huf": 27475
+   "figs_value_huf": 27475,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75389-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75389-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_boxprod_v39_sha.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons_02.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_cons_04.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_envr_03.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_lifestyle_envr_05.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_lineup_nobg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_pri_nobg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_sec01_nobg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75389-1/75389_web_sec02_nobg.jpg"
+   ]
   },
   "75391-1": {
    "bs_id": 48867,
@@ -1332,7 +1561,20 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75391-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75391-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_alt1.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_alt2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_alt3.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_box5_v39.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_boxprod_v39_sha.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_build.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_cons.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_cons_2.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75391-1/75391_lifestyle_envr.jpg"
+   ]
   },
   "75400-1": {
    "bs_id": 51092,
@@ -1372,7 +1614,19 @@
    ],
    "ucs": false,
    "versions": [],
-   "figs_value_huf": 2407
+   "figs_value_huf": 2407,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75400-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75400-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_box5_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_boxprod_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_build_crop_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_cons_crop_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_cons3_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_lifestyle_envr_crop_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_web_sec01_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75400-1/75400_web_sec02_nobg_en-gb.jpg"
+   ]
   },
   "75431-1": {
    "bs_id": 51090,
@@ -1432,7 +1686,21 @@
    ],
    "ucs": false,
    "versions": [],
-   "figs_value_huf": 9755
+   "figs_value_huf": 9755,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75431-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75431-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_box5_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_boxprod_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_build_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_cons_2_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_cons_crop_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_cons_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_lifestyle_envr_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_web_lineup_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_web_sec01_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75431-1/75431_web_sec02_nobg_en-gb.jpg"
+   ]
   },
   "75435-1": {
    "bs_id": 51104,
@@ -1499,7 +1767,22 @@
    ],
    "ucs": false,
    "versions": [],
-   "figs_value_huf": 30175
+   "figs_value_huf": 30175,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75435-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75435-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_box5_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_boxprod_v39_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_build_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_cons_2_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_cons_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_lifestyle_envr_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_lineup_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec01_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec02_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec03_nobg_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75435-1/75435_web_sec05_nobg_en-gb.jpg"
+   ]
   },
   "75436-1": {
    "bs_id": 51838,
@@ -1547,7 +1830,21 @@
    ],
    "ucs": false,
    "versions": [],
-   "figs_value_huf": 2619
+   "figs_value_huf": 2619,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75436-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75436-1.png",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Box5_v39_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_boxprod_v39_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Build_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Cons_2_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Cons_3_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_Lifestyle_Envr_en-gb.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_PRI_NOBG_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_SEC01_NOBG_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_SEC02_NOBG_en-gb.jpeg.jpg",
+    "https://images.brickset.com/sets/AdditionalImages/75436-1/75436_WEB_SEC03_NOBG_en-gb.jpeg.jpg"
+   ]
   },
   "911832-1": {
    "bs_id": 27899,
@@ -1579,7 +1876,12 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/911832-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/911832-1.png",
+    "https://images.brickset.com/sets/images/SW911832-1.jpg"
+   ]
   },
   "911943-1": {
    "bs_id": 28964,
@@ -1611,7 +1913,11 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/911943-1.png",
+    "https://images.brickset.com/sets/images/SW911943-1.jpg"
+   ]
   },
   "911953-1": {
    "bs_id": 29660,
@@ -1635,7 +1941,11 @@
    "pieces": 32,
    "minifigs": [],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/911953-1.png",
+    "https://images.brickset.com/sets/images/911953-1.jpg"
+   ]
   },
   "912169-1": {
    "bs_id": 31498,
@@ -1667,7 +1977,11 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912169-1.png",
+    "https://images.brickset.com/sets/images/912169-1.jpg"
+   ]
   },
   "912284-1": {
    "bs_id": 33782,
@@ -1691,7 +2005,11 @@
    "pieces": 41,
    "minifigs": [],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/912284-1.png",
+    "https://images.brickset.com/sets/images/912284-1.jpg"
+   ]
   },
   "912285-1": {
    "bs_id": 33760,
@@ -1723,7 +2041,11 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912285-1.png",
+    "https://images.brickset.com/sets/images/912285-1.jpg"
+   ]
   },
   "912287-1": {
    "bs_id": 33965,
@@ -1747,7 +2069,11 @@
    "pieces": 31,
    "minifigs": [],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/912287-1.png",
+    "https://images.brickset.com/sets/images/912287-1.jpg"
+   ]
   },
   "912308-1": {
    "bs_id": 47240,
@@ -1771,7 +2097,11 @@
    "pieces": 62,
    "minifigs": [],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912308-1.png",
+    "https://images.brickset.com/sets/images/912308-1.jpg"
+   ]
   },
   "912310-1": {
    "bs_id": 48338,
@@ -1809,7 +2139,11 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912310-1.png",
+    "https://images.brickset.com/sets/images/912310-1.jpg"
+   ]
   },
   "912403-1": {
    "bs_id": 49026,
@@ -1841,7 +2175,11 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912403-1.png",
+    "https://images.brickset.com/sets/images/912403-1.jpg"
+   ]
   },
   "912409-1": {
    "bs_id": 50373,
@@ -1873,7 +2211,11 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912409-1.png",
+    "https://images.brickset.com/sets/images/912409-1.jpg"
+   ]
   },
   "912410-1": {
    "bs_id": 50407,
@@ -1905,7 +2247,11 @@
     }
    ],
    "ucs": false,
-   "versions": []
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912410-1.png",
+    "https://images.brickset.com/sets/images/912410-1.jpg"
+   ]
   },
   "912501-1": {
    "type": "SET",
@@ -1936,7 +2282,10 @@
    "retail_eur": null,
    "launch": null,
    "exit": null,
-   "figs_value_huf": 1073
+   "figs_value_huf": 1073,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912501-1.png"
+   ]
   },
   "912506-1": {
    "type": "SET",
@@ -1959,7 +2308,10 @@
    ],
    "retail_eur": null,
    "launch": null,
-   "exit": null
+   "exit": null,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912506-1.png"
+   ]
   },
   "L0002235-1": {
    "type": "SET",
@@ -1990,7 +2342,10 @@
    "retail_eur": null,
    "launch": null,
    "exit": null,
-   "figs_value_huf": 1359
+   "figs_value_huf": 1359,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/L0002235-1.png"
+   ]
   },
   "L0002237-1": {
    "type": "SET",
@@ -2021,7 +2376,11 @@
    "retail_eur": null,
    "launch": null,
    "exit": null,
-   "figs_value_huf": 3674
+   "figs_value_huf": 3674,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/L0002237-1.png",
+    "https://images.brickset.com/sets/images/L0002237-1.jpg"
+   ]
   },
   "L0002238-1": {
    "type": "SET",
@@ -2052,7 +2411,10 @@
    "retail_eur": null,
    "launch": null,
    "exit": null,
-   "figs_value_huf": 1762
+   "figs_value_huf": 1762,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/L0002238-1.png"
+   ]
   },
   "cas327": {
    "type": "MINIFIG",

@@ -36,7 +36,7 @@
     return { list, endpoint: (shop && shop.endpoint) || "" };
   });
 
-  const status = o => o.price != null ? T(`Raktáron: ${o.qty} db · ${ft(o.price)}`, `In stock: ${o.qty} · ${ft(o.price)}`)
+  const status = o => o.price != null ? T(`Raktáron · ${ft(o.price)}`, `In stock · ${ft(o.price)}`)
     : T("Nincs raktáron – beszerezzük, árajánlatot adunk", "Not in stock – we'll source it and quote");
 
   let dlg, st;

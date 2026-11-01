@@ -92,7 +92,7 @@
   const count = () => Object.values(cart()).reduce((s, n) => s + n, 0);
   function add(no, n = 1) {
     const c = cart(), max = LOTS.length ? stockOf(no) : 99, cur = c[no] || 0;
-    if (cur + n > max) { toast(cur ? (hu() ? `Ebből csak ${max} db van raktáron, és ${cur} db már a kosaradban van.` : `Only ${max} in stock and ${cur} already in your cart.`) : (hu() ? `Ebből csak ${max} db van raktáron.` : `Only ${max} in stock.`)); return false; }
+    if (cur + n > max) { toast(hu() ? "Ebből ennyit tudunk raktárról adni. Ha több kell, írj nekünk, és beszerezzük." : "That's all we have in stock. Need more? Message us and we'll source it."); return false; }
     c[no] = cur + n; saveCart(c); return true;
   }
   function setQty(no, n) {
