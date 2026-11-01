@@ -311,3 +311,16 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .item:hover .figstand__fig{transform:translateY(-16px);filter:drop-shadow(0 10px 8px rgba(0,0,0,.25))}
 .item:hover .figstand__shadow{transform:scale(.7);opacity:.55}
 @media (prefers-reduced-motion:reduce){.figstand__fig,.figstand__shadow{transition:none}}
+
+/* főoldali hírsáv (webshop-indulás) */
+.news{background:var(--gold);color:var(--green);border-bottom:4px solid var(--gold-2)}
+.news__in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:26px;padding-bottom:26px}
+.news__tag{display:inline-block;margin:0 0 8px;padding:3px 10px;border-radius:999px;background:var(--green);color:var(--gold);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.news h2{font-size:clamp(26px,3.6vw,40px);font-weight:800;margin:0 0 6px;line-height:1.1}
+.news p{margin:0;font-size:17px;max-width:640px}
+.news__pay{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 0;padding:0}
+.news__pay li{background:rgba(255,255,255,.55);border:1.5px solid rgba(18,50,27,.18);border-radius:999px;padding:6px 14px;font-weight:600;font-size:15px}
+.news__date{flex:none;text-align:center;background:var(--green);color:var(--cream);border-radius:var(--r);padding:16px 22px;box-shadow:0 4px 0 var(--green-2)}
+.news__date span{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--gold)}
+.news__date b{display:block;font:800 30px var(--display);white-space:nowrap}
+@media (max-width:700px){.news__in{flex-direction:column;align-items:flex-start;gap:16px}.news__date{align-self:stretch}}

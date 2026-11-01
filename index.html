@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=202610270940">
+<link rel="stylesheet" href="style.css?v=202611011814">
 </head>
 <body data-page="home">
 
@@ -34,6 +34,25 @@
     <button class="lang" id="langBtn" aria-label="Nyelv / Language">EN</button>
   </div>
 </header>
+
+<section class="news" id="hirek" aria-labelledby="newsTitle">
+  <div class="wrap news__in">
+    <div class="news__text">
+      <p class="news__tag" data-i18n="news.tag">Friss hír</p>
+      <h2 id="newsTitle" data-i18n="news.title">Január 5-től indul a webshopunk!</h2>
+      <p data-i18n="news.lead">Hamarosan közvetlenül itt, a weboldalon is rendelhetsz, így nem kell külön írnod nekünk Facebookon.</p>
+      <ul class="news__pay">
+        <li data-i18n="news.p1">💳 Bankkártyás fizetés</li>
+        <li data-i18n="news.p2">🏦 Banki átutalás</li>
+        <li data-i18n="news.p3">📦 Utánvét törzsvásárlóknak</li>
+      </ul>
+    </div>
+    <div class="news__date">
+      <span data-i18n="news.when">Várható indulás</span>
+      <b data-i18n="news.date">január 5.</b>
+    </div>
+  </div>
+</section>
 
 <section class="hero">
   <img class="hero__img" src="assets/hero.jpg" alt="">
@@ -147,7 +166,7 @@
   </div>
 </footer>
 
-<script src="app.js?v=202611011808"></script>
+<script src="app.js?v=202611011814"></script>
 <script src="anim.js?v=202610231530" defer></script>
 </body>
 </html>
