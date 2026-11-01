@@ -412,11 +412,13 @@
           <img src="https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(f.no)}.png" alt="${esc(f.name)}" loading="lazy">
           <span class="pd-fig__foot">${f.sets === 1 ? `<span class="pd-fig__tag is-ex">${hu ? "Exkluzív" : "Exclusive"}</span>` : f.sets > 1 ? `<span class="pd-fig__tag">${f.sets} ${hu ? "szett" : "sets"}</span>` : "<span></span>"}
             ${o && !o.preorder ? `<span class="pd-fig__price">${money(o.price)}</span>` : ""}</span>
-          ${o && !o.preorder
-            ? (shopOn()
-              ? `<span class="pd-fig__btn" role="button" tabindex="0" data-add="${esc(o.no)}" data-name="${esc(o.no + " " + o.name)}">${hu ? "Kosárba" : "Add to cart"}</span>`
-              : `<span class="pd-fig__btn" role="button" tabindex="0" data-buy="${esc(o.no)}">${hu ? "Megrendelem" : "Order"}</span>`)
-            : `<span class="pd-fig__btn is-pre" role="button" tabindex="0" data-prefig="${esc(f.no)}" data-name="${esc(f.name)}">${hu ? "Előrendelés" : "Pre-order"}</span>`}
+          ${(() => {   // one button: in stock → cart (or Messenger order until the shop opens), otherwise → pre-order dialog
+            const lbl = hu ? "Csak a figurát kérem" : "Just the minifigure";
+            return o && !o.preorder
+              ? (shopOn()
+                ? `<span class="pd-fig__btn" role="button" tabindex="0" data-add="${esc(o.no)}" data-name="${esc(o.no + " " + o.name)}">${lbl}</span>`
+                : `<span class="pd-fig__btn" role="button" tabindex="0" data-buy="${esc(o.no)}">${lbl}</span>`)
+              : `<span class="pd-fig__btn" role="button" tabindex="0" data-prefig="${esc(f.no)}" data-name="${esc(f.name)}">${lbl}</span>`; })()}
         </${tag}>`; }).join("")}</div></section>` : "";
     // every release with the same name (Rebrickable list) + BrickLink market value
     const vers = D.versions && D.versions.length > 1 ? D.versions : null;
