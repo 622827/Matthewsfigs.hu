@@ -42,6 +42,10 @@ jobs:
           fp = "assets/figs/index.json"
           fidx = json.load(open(fp)) if os.path.exists(fp) else {}
           missing += [i["no"] for i in inv["items"] if i["type"] == "MINIFIG" and i["no"] not in fidx]
+          dp, np_ = "data/details.json", "assets/nofig/index.json"
+          det = json.load(open(dp)).get("items", {}) if os.path.exists(dp) else {}
+          nidx = json.load(open(np_)) if os.path.exists(np_) else {}
+          missing += [i["no"] for i in inv["items"] if i["type"] == "SET" and (det.get(i["no"]) or {}).get("minifigs") and i["no"] not in nidx]
           print("run=" + ("true" if missing or "${{ inputs.force }}" == "true" else "false"))
           PY
       - uses: actions/setup-python@v6
@@ -77,6 +81,6 @@ jobs:
         run: |
           git config user.name "inventory-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add assets/boxes assets/figs
+          git add assets/boxes assets/figs assets/nofig
           git diff --cached --quiet || git commit -m "3D dobozlapok frissítése"
           git push

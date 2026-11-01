@@ -427,13 +427,30 @@
       const img = `https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(no)}.png`;
       return `<li${pv(img, no.replace(/-1$/, "") + " " + name, [stockInfo(o)])}>${qty > 1 ? `${qty} × ` : ""}${o ? `<a href="${esc(productUrl(o))}">${label}</a>` : label}</li>`;
     };
-    // minifigure cards under the photos (like a catalogue): number, name, picture, how many sets / exclusive, our price
+    // "set only" tile: we open the sealed set, take the minifigures out and sell the rest cheaper.
+    // price = set price − market value of its minifigures (BrickLink sold average, data/details.json figs_value_huf),
+    // rounded like every shop price (nearest 500 Ft − 20); shown only when the saving is real and the rest is still worth it
     const figTotal = (D.minifigs || []).reduce((s, f) => s + f.qty, 0);
+    const shopRound = v => Math.max(500, Math.round(v / 500) * 500) - 20;
+    const noFig = set && !i.preorder && i.price && D.figs_value_huf > 0 ? shopRound(i.price - D.figs_value_huf) : 0;
+    const showNoFig = noFig >= i.price * 0.3 && noFig <= i.price - 980;
+    const noFigLink = MESSENGER + "?text=" + encodeURIComponent((hu ? "Szia! Csak a szettet kérem, minifigurák nélkül: " : "Hi! I'd like just the set, without the minifigures: ") + `${sn} ${i.name} (${money(noFig)})`);
+    const setOnly = showNoFig ? `<div class="pd-setonly">
+        <span class="pd-setonly__kicker">${hu ? "Minifigurák nélkül" : "Without the minifigures"}</span>
+        <b class="pd-setonly__name">${esc(sn)} ${esc(i.name)} – ${hu ? "csak a szett" : "set only"}</b>
+        <img src="assets/nofig/${encodeURIComponent(i.no)}.webp?v=1" data-fallback="https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(i.no)}.png" alt="${esc(i.name)} – ${hu ? "a megépített szett" : "the built set"}" loading="lazy">
+        <span class="pd-setonly__price"><b>${money(noFig)}</b><s>${money(i.price)}</s><em>${hu ? "−" + money(i.price - noFig) : "save " + money(i.price - noFig)}</em></span>
+        <a class="pd-fig__btn pd-setonly__btn" href="${esc(noFigLink)}" target="_blank" rel="noopener">${hu ? "Csak a szettet kérem" : "Just the set, please"}</a>
+        <p class="pd-setonly__note">${hu
+          ? `Ilyenkor a bontatlan szettet gondosan felbontjuk, a ${figTotal} minifigurát kivesszük, és csak a szettet adjuk el – ezért olcsóbb. A szett így már nem bontatlan (nem MISB). Az ár a szett ára mínusz a minifigurák piaci értéke (BrickLink eladási átlagár).`
+          : `We carefully open the sealed set, take out the ${figTotal} minifigure${figTotal > 1 ? "s" : ""} and sell you the rest – that's why it's cheaper. The set is then no longer sealed (not MISB). Price = set price minus the minifigures' market value (BrickLink average sale price).`}</p>
+      </div>` : "";
+    // minifigure cards under the photos (like a catalogue): number, name, picture, how many sets / exclusive, our price
     const excl = (D.minifigs || []).filter(f => f.sets === 1).length;
     const figList = D.minifigs && D.minifigs.length ? `<section class="pd-figsec">
       <h2>${esc(i.name)} – ${hu ? "minifigurák" : "minifigures"}</h2>
       <p class="co-muted">${hu ? `A szett ${figTotal} minifigurát tartalmaz.` : `This set contains ${figTotal} minifigure${figTotal > 1 ? "s" : ""}.`}${excl ? (hu ? ` Ebből ${excl} csak ebben a szettben szerepel.` : ` ${excl} of them ${excl > 1 ? "are" : "is"} exclusive to this set.`) : ""}</p>
-      <div class="pd-figgrid">${D.minifigs.map(f => {
+      <div class="pd-figgrid">${setOnly}${D.minifigs.map(f => {
         const o = ours(f.no), tag = o ? "a" : "div";
         const figImg = `https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(f.no)}.png`;
         return `<${tag} class="pd-fig"${o ? ` href="${esc(productUrl(o))}"` : ""}${pv(figImg, f.no + " " + f.name, [
@@ -546,6 +563,8 @@
       b.addEventListener("click", go);
       b.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(e); });
     });
+    // set-only tile: the built set with the standing minifigures cut away (assets/nofig/<no>.webp, scripts/fig_cutouts.py) if there is one, else the catalogue photo
+    root.querySelectorAll(".pd-setonly img[data-fallback]").forEach(im => im.onerror = () => { if (im.src !== im.dataset.fallback) im.src = im.dataset.fallback; else im.remove(); });
     initPreview(root);
     // other releases we don't stock: "we'll source it" opens the pre-order dialog
     root.querySelectorAll("[data-source]").forEach(btn => btn.onclick = () => {

@@ -226,6 +226,60 @@ def fetch(item_type, no):
     return d
 
 
+FIGVAL_MAX = int(os.environ.get("FIGVAL_MAX", "60"))   # price-guide calls per run
+FIGVAL_DAYS = 30
+PRICES = ROOT / "data" / "prices_huf.json"
+
+
+def fig_value(no):
+    """Average BrickLink sale price of a minifigure in the last 6 months, EUR (new; used as fallback)."""
+    for cond in ("N", "U"):
+        r = get(f"/items/MINIFIG/{urllib.parse.quote(no)}/price",
+                {"guide_type": "sold", "new_or_used": cond, "currency_code": "EUR"})
+        if r is None:
+            return None, None
+        v = num(r.get("qty_avg_price")) or num(r.get("avg_price"))
+        if v:
+            return round(v, 2), cond
+    return 0.0, None
+
+
+def update_fig_values(items, wanted, figval, today):
+    """Refresh the market value of the minifigures of the sets we sell (oldest first, FIGVAL_MAX per run)
+    and store, per set, what its minifigures are worth in HUF (for the 'set only, no minifigures' price)."""
+    need = sorted({f["no"] for n, d in items.items() if n in wanted and d.get("type") == "SET" for f in d.get("minifigs") or []})
+    def old(no):
+        try:
+            return (today - date.fromisoformat(figval.get(no, {}).get("at", "2000-01-01"))).days > FIGVAL_DAYS
+        except ValueError:
+            return True
+    todo = [n for n in sorted(need, key=lambda n: figval.get(n, {}).get("at", "")) if old(n)][:FIGVAL_MAX]
+    changed = False
+    for no in todo:
+        v, cond = fig_value(no)
+        if v is None:
+            break                        # API problem: try again next run
+        figval[no] = {"eur": v, "cond": cond, "at": today.isoformat()}
+        changed = True
+    rate = 366.33
+    try:
+        rate = json.loads(PRICES.read_text(encoding="utf-8")).get("rate", rate)
+    except Exception:
+        pass
+    for n, d in items.items():
+        if d.get("type") != "SET" or not d.get("minifigs"):
+            continue
+        figs = d["minifigs"]
+        if all(f["no"] in figval for f in figs):
+            huf = round(sum(f["qty"] * figval[f["no"]]["eur"] for f in figs) * rate)
+            if d.get("figs_value_huf") != huf:
+                d["figs_value_huf"] = huf
+                changed = True
+    if todo:
+        print(f"Figuraértékek: {len(todo)} frissítve.")
+    return changed
+
+
 def write_autolabels(items, wanted, today):
     """Automatic labels for the shop: UCS (Rebrickable theme) and Retired (Brickset exit date passed)."""
     auto = {}
@@ -277,7 +331,7 @@ def main():
     for no in todo:
         d = fetch(wanted[no], no)
         if d:
-            keep = {k: v for k, v in (items.get(no) or {}).items() if k in ("bs_id", "photos", "retail_eur", "launch", "exit")}
+            keep = {k: v for k, v in (items.get(no) or {}).items() if k in ("bs_id", "photos", "retail_eur", "launch", "exit", "figs_value_huf")}
             items[no] = {**keep, **d}     # Brickset data is fetched once; keep it on refresh
             changed = True
             print(f"  {no}: {d.get('year')} · {d.get('category')} · {d.get('pieces', '')}")
@@ -292,6 +346,8 @@ def main():
             items[n].update(r)
             changed = True
 
+    figval = out.get("figvalues", {})
+    changed = update_fig_values(items, wanted, figval, today) or changed
     write_autolabels(items, wanted, today)
     if not changed:
         print("Nincs új katalógusadat.")
@@ -301,6 +357,7 @@ def main():
         "updated": datetime.now(timezone.utc).isoformat(timespec="seconds"),
         "items": dict(sorted(items.items())),
         "figsets": dict(sorted(FIGSETS.items())),
+        "figvalues": dict(sorted(figval.items())),
     }, ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
     print(f"Mentve: {OUT}")
 

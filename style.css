@@ -558,3 +558,16 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 .pv b{color:var(--green);font-size:15px;line-height:1.3}
 .pv span{font-size:13px;color:var(--muted);line-height:1.35}
 .pv span:last-child{color:var(--green);font-weight:600}
+
+/* „csak a szett, minifigurák nélkül” csempe: 2×2-es helyet foglal a figurák között */
+.pd-setonly{grid-column:span 2;grid-row:span 2;display:flex;flex-direction:column;gap:8px;background:#fff;border:2px solid var(--gold);border-radius:var(--r);padding:16px 16px 14px;color:var(--ink);box-shadow:0 10px 24px -18px rgba(18,50,27,.45)}
+.pd-setonly__kicker{align-self:flex-start;background:var(--gold);color:var(--green);font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
+.pd-setonly__name{font-size:16px;line-height:1.25}
+.pd-setonly img{flex:1;min-height:150px;max-height:230px;width:100%;object-fit:contain}
+.pd-setonly__price{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px}
+.pd-setonly__price b{font-family:var(--display);font-weight:800;font-size:24px;color:var(--green)}
+.pd-setonly__price s{color:var(--muted);font-size:14px}
+.pd-setonly__price em{font-style:normal;font-size:12px;font-weight:700;color:#1d6b35;background:#e4efe6;border-radius:6px;padding:2px 7px}
+.pd-setonly__btn{display:block;text-decoration:none;font-size:14px;padding:9px 12px}
+.pd-setonly__note{margin:0;font-size:12.5px;line-height:1.45;color:var(--muted)}
+@media (max-width:560px){.pd-setonly{grid-row:auto}}

@@ -39,6 +39,17 @@ def fetch(no):
         return None
 
 
+def _new_nofig():
+    """Is there a set with minifigures that has no figure-less photo yet?"""
+    try:
+        det = json.loads(DETAILS.read_text()).get("items", {})
+        idx = json.loads((ROOT / "assets" / "nofig" / "index.json").read_text())
+    except Exception:
+        return True
+    inv = {i["no"] for i in json.loads(INV.read_text())["items"] if i["type"] == "SET"}
+    return any(n not in idx for n in inv if (det.get(n) or {}).get("minifigs"))
+
+
 def session():
     if not MODEL.exists():
         MODEL.parent.mkdir(parents=True, exist_ok=True)
@@ -146,6 +157,64 @@ def cutout(sess, img):
     return im
 
 
+NOFIG = ROOT / "assets" / "nofig"
+DETAILS = ROOT / "data" / "details.json"
+
+
+def build_only(sess, no):
+    """The built set alone: BrickLink's built-set photo (SN) minus the minifigures standing beside it.
+    Background removed, then only the biggest piece (the model) and parts of comparable size are kept."""
+    url = f"https://img.bricklink.com/ItemImage/SN/0/{no}.png"
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0 matthewsfigs.hu"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            img = Image.open(__import__("io").BytesIO(r.read())).convert("RGB")
+    except Exception:
+        return None
+    a = predict(sess, img).astype(np.float32) / 255.0
+    a = np.clip((a - 0.25) / 0.5, 0, 1)
+    solid = (a > 0.5).astype(np.uint8)
+    n, lab, st, _ = cv2.connectedComponentsWithStats(solid, 8)
+    if n <= 1:
+        return None
+    big = 1 + int(np.argmax(st[1:, cv2.CC_STAT_AREA]))
+    keep = np.zeros_like(solid)
+    for i in range(1, n):
+        if i == big or st[i, cv2.CC_STAT_AREA] >= 0.35 * st[big, cv2.CC_STAT_AREA]:
+            keep[lab == i] = 1
+    keep = cv2.dilate(keep, np.ones((3, 3), np.uint8))
+    alpha = (a * keep * 255).astype(np.uint8)
+    ys, xs = np.where(alpha > 20)
+    rgba = np.dstack([np.array(img), alpha])[ys.min():ys.max() + 1, xs.min():xs.max() + 1]
+    im = Image.fromarray(rgba, "RGBA")
+    if im.width > 640:
+        im = im.resize((640, round(im.height * 640 / im.width)), Image.LANCZOS)
+    return im
+
+
+def nofig_sets(sess, force=False, only=None):
+    """assets/nofig/<no>.webp for every set we sell that contains minifigures (for the 'set only' tile)."""
+    if not DETAILS.exists():
+        return
+    det = json.loads(DETAILS.read_text()).get("items", {})
+    inv = {i["no"] for i in json.loads(INV.read_text())["items"] if i["type"] == "SET"}
+    NOFIG.mkdir(parents=True, exist_ok=True)
+    idx_path = NOFIG / "index.json"
+    index = json.loads(idx_path.read_text()) if idx_path.exists() else {}
+    want = sorted(n for n in inv if (det.get(n) or {}).get("minifigs"))
+    todo = [n for n in want if (only and n in only) or (not only and (force or n not in index))]
+    for no in todo:
+        im = build_only(sess, no)
+        if im is None:
+            index[no] = None
+            continue
+        im.save(NOFIG / f"{no}.webp", "WEBP", quality=86, method=6)
+        index[no] = {"r": round(im.width / im.height, 4)}
+    idx_path.write_text(json.dumps(index, indent=1, sort_keys=True))
+    if todo:
+        print(f"Szett figurák nélkül: {len(todo)} kép.")
+
+
 def main():
     force = "--force" in sys.argv
     only = next((a.split("=", 1)[1].split(",") for a in sys.argv if a.startswith("--only=")), None)
@@ -154,10 +223,14 @@ def main():
     index = json.loads(idx_path.read_text()) if idx_path.exists() else {}
     figs = sorted({i["no"] for i in json.loads(INV.read_text())["items"] if i["type"] == "MINIFIG"})
     todo = [n for n in figs if (only and n in only) or (not only and (force or n not in index))]
+    sess = None
+    if todo or force or only or _new_nofig() or "--force-sets" in sys.argv:
+        sess = session()
+        nofig_sets(sess, force="--force-sets" in sys.argv or force, only=only)
     if not todo:
         print("Nincs új figura.")
         return
-    sess = session()
+    sess = sess or session()
     ok = failed = 0
     for no in todo:
         img = fetch(no)
