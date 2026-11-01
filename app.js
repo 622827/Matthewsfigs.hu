@@ -98,7 +98,7 @@
   };
   // 3D product box: sets get their original LEGO box art on a cuboid,
   // minifigures turn like on a display turntable.
-  let BOXES = {}, LABELS = {}, FIGS = {}, DETAILS = {}, VALUES = {}, AUTOLABELS = {};   // assets/boxes/index.json: flattened faces cut from the box photos
+  let BOXES = {}, LABELS = {}, FIGS = {}, DETAILS = {}, VALUES = {}, FIGVALUES = {}, AUTOLABELS = {};   // assets/boxes/index.json: flattened faces cut from the box photos
   // minifigure on a LEGO display plate: stands still, front view, feet on the two middle studs
   // plate art (assets/figstand.svg, 120×44): front stud row base at y≈22.5, stud pitch 24.5 → 2 studs = 49 units
   const fig3d = (i, f) => {
@@ -403,11 +403,26 @@
     });
   }
 
+  // a minifigure we don't list but that comes in one of our sets: its own page as a pre-order item,
+  // priced like our listings (BrickLink sold average × 1.2, at the shop rate, ending in 480/980)
+  const FIG_RATE = 366.33, FIG_MARKUP = 1.2;
+  function setFig(no) {
+    if (!no) return null;
+    const sets = [];
+    let name = "";
+    for (const [sno, d] of Object.entries(DETAILS)) for (const f of d.minifigs || []) if (f.no === no) { name = name || f.name; sets.push({ no: sno, name: d.name || (data.items.find(x => x.no === sno) || {}).name || sno }); }
+    if (!name) return null;
+    if (!DETAILS[no]) DETAILS[no] = { sets };
+    else if (!DETAILS[no].sets) DETAILS[no].sets = sets;
+    const v = FIGVALUES[no], price = v && v.eur ? Math.max(500, Math.round(v.eur * FIG_MARKUP * FIG_RATE / 500) * 500) - 20 : 0;
+    return { no, name, type: "MINIFIG", qty: 0, price, preorder: true, img: `https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(no)}.png`, virtual: true };
+  }
+
   // ---------- product page (termek.html?no=…) ----------
   function renderProduct() {
     const root = $("product"); if (!root) return;
     const no = new URLSearchParams(location.search).get("no") || "";
-    const i = data.items.find(x => x.no === no && !x.preorder) || data.items.find(x => x.no === no);
+    const i = data.items.find(x => x.no === no && !x.preorder) || data.items.find(x => x.no === no) || setFig(no);
     const hu = lang === "hu";
     if (!i) {
       root.innerHTML = `<div class="pd-missing"><h1>${hu ? "Ez a termék most nem érhető el" : "This product is not available"}</h1>
@@ -474,9 +489,9 @@
       <h2>${esc(i.name)} – ${hu ? "minifigurák" : "minifigures"}</h2>
       <p class="co-muted">${hu ? `A szett ${figTotal} minifigurát tartalmaz.` : `This set contains ${figTotal} minifigure${figTotal > 1 ? "s" : ""}.`}${excl ? (hu ? ` Ebből ${excl} csak ebben a szettben szerepel.` : ` ${excl} of them ${excl > 1 ? "are" : "is"} exclusive to this set.`) : ""}</p>
       <div class="pd-figgrid">${setOnly}${D.minifigs.map(f => {
-        const o = ours(f.no), tag = o ? "a" : "div";
+        const o = ours(f.no), tag = "a";
         const figImg = `https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(f.no)}.png`;
-        return `<${tag} class="pd-fig"${o ? ` href="${esc(productUrl(o))}"` : ""}${pv(figImg, f.no + " " + f.name, [
+        return `<${tag} class="pd-fig" href="${esc(productUrl(o || f))}"${pv(figImg, f.no + " " + f.name, [
           f.sets === 1 ? (hu ? "Exkluzív: csak ebben a szettben" : "Exclusive to this set") : f.sets > 1 ? (hu ? `${f.sets} szettben szerepel` : `Appears in ${f.sets} sets`) : "",
           f.qty > 1 ? (hu ? `${f.qty} db van a szettben` : `${f.qty} in this set`) : "", stockInfo(o)])}>
           <span class="pd-fig__no">${esc(f.no)}</span>${f.qty > 1 ? `<span class="pd-fig__qty">${f.qty}×</span>` : ""}
@@ -583,7 +598,7 @@
           <p class="item__no">${esc(sn)} · ${set ? (hu ? "LEGO® szett" : "LEGO® set") : (hu ? "LEGO® minifigura" : "LEGO® minifigure")}</p>
           <h1>${esc(i.name)}</h1>
           <span class="badges">${labels.map(l => `<span class="badge badge--${(LABELS._colors || {})[l] || "red"}">${esc(l)}</span>`).join("")}${i.preorder ? `<span class="badge badge--pre">${t("badge.pre")}</span>` : set ? `<span class="badge">${t("badge.sealed")}</span>` : ""}</span>
-          <p class="pd-price">${i.from ? `<small>${hu ? "" : "from "}</small>` : ""}${money(i.price)}${i.from && hu ? "<small>-tól</small>" : ""}</p>
+          ${i.price ? `<p class="pd-price">${i.from ? `<small>${hu ? "" : "from "}</small>` : ""}${money(i.price)}${i.from && hu ? "<small>-tól</small>" : ""}</p>` : ""}
           <p class="pd-stock${i.preorder ? " is-pre" : ""}">${stock}</p>
           <div class="pd-buy">${buy}</div>
           <h2>${hu ? "Leírás" : "Description"}</h2>
@@ -743,7 +758,7 @@
   ])
     .then(([d, boxes, labels, figs, , details, auto]) => {
       AUTOLABELS = (auto && auto.labels) || {};
-      BOXES = boxes || {}; LABELS = labels || {}; FIGS = figs || {}; DETAILS = (details && details.items) || {}; VALUES = (details && details.values) || {};
+      BOXES = boxes || {}; LABELS = labels || {}; FIGS = figs || {}; DETAILS = (details && details.items) || {}; VALUES = (details && details.values) || {}; FIGVALUES = (details && details.figvalues) || {};
       if (window.MFShop) window.MFShop.setLots(d.items.map(i => ({ ...i })));
       const byItem = new Map();
       for (const i of d.items) {
