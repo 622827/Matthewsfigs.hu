@@ -499,3 +499,17 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 .pd-fig__btn:hover{background:#ffd93a}
 .pd-fig__btn.is-pre{background:transparent;box-shadow:none;border:1.5px solid var(--green);color:var(--green)}
 .pd-fig__btn.is-pre:hover{background:var(--green);color:var(--cream)}
+/* előrendelési ablak: két csempe */
+.notify{max-width:min(560px,calc(100vw - 32px))}
+.notify__in{padding:26px;display:grid;gap:12px}
+.notify__tiles{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px}
+.ntile{display:flex;flex-direction:column;align-items:flex-start;gap:6px;text-align:left;background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:16px;cursor:pointer;font:inherit;color:var(--ink);text-decoration:none;transition:border-color .15s,transform .15s,box-shadow .15s}
+.ntile:hover,.ntile:focus-visible{border-color:var(--gold);transform:translateY(-2px);box-shadow:0 10px 24px -14px rgba(18,50,27,.45)}
+.ntile__ic{font-size:26px;line-height:1}
+.ntile b{color:var(--green);font-size:16px;line-height:1.25}
+.ntile span:last-child{font-size:13.5px;color:var(--muted);line-height:1.4}
+.notify__close{justify-self:center;background:none;border:0;color:var(--muted);text-decoration:underline;cursor:pointer;font:600 14px var(--body)}
+.notify .field{width:100%;box-sizing:border-box;font:16px var(--body);padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;background:#fff}
+.notify__ok{color:var(--green)!important;font-weight:600}
+@media (max-width:480px){.notify__tiles{grid-template-columns:1fr}}
+.notify .co-err{color:#b3261e;margin:0}

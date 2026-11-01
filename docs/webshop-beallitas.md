@@ -23,6 +23,22 @@ A kosár és a pénztár kész (`kosar.html`, `shop.js`). Rendelést akkor tud f
    - Hozzáférés: **Bárki**
 7. Másold ki a kapott webalkalmazás-URL-t (`https://script.google.com/macros/s/…/exec`).
 
+### Értesítés, ha újra kapható (előrendelés e-mailben)
+
+Ugyanez a szkript fogadja az előrendelési ablak „E-mailes értesítést kérek” kéréseit. Ezek a táblázat **Értesítések** lapjára kerülnek.
+
+Hogy a kért termék újbóli megérkezésekor automatikusan menjen az e-mail, egyszer be kell állítani egy időzítőt:
+
+1. Az Apps Script bal oldali menüjében nyisd meg az **Eseményindítók** (óra ikon) oldalt.
+2. **Eseményindító hozzáadása**:
+   - függvény: `checkRestock`
+   - esemény forrása: **Idővezérelt**
+   - típus: **Óránkénti időzítő**
+
+A szkript az egy évnél régebbi, teljesítetlen kéréseket lezárja, és törli belőlük az e-mail címet.
+
+Amíg a rendelésfogadó nincs beállítva, az e-mailes kérés a vásárló levelezőprogramjából, előre kitöltött levélként érkezik hozzád.
+
 ## 2. Bekötés a weboldalba
 
 A `data/shop.json` fájlban:

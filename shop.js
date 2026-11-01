@@ -387,7 +387,7 @@
   }
 
   window.MFShop = {
-    ready, enabled, safetyLine, safetyBlock, add, badge,
+    ready, enabled, safetyLine, safetyBlock, add, badge, endpoint: () => (CFG && CFG.endpoint) || "",
     setLots(items) { LOTS = items || []; badge(); if (document.body.dataset.page === "cart") renderCart(); },
     rerender() { badge(); if (document.body.dataset.page === "cart") renderCart(); }
   };

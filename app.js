@@ -209,25 +209,73 @@
   });
 
   // pre-order cards: ask first, then open Messenger with the request already typed in
+  // pre-order dialog: two tiles – e-mail notification (name + e-mail) or just a Messenger message
   function askNotify(i, href, mode = "notify") {
-    const want = mode === "want";
+    const hu = lang === "hu", want = mode === "want";
     let dlg = document.getElementById("notifyDlg");
     if (!dlg) {
       dlg = document.createElement("dialog"); dlg.id = "notifyDlg"; dlg.className = "notify";
       document.body.appendChild(dlg);
       dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
     }
-    dlg.innerHTML = `<form method="dialog">
-      <p class="kicker">${lang === "hu" ? "Jelenleg elfogyott" : "Sold out right now"}</p>
-      <h3>${esc(i.name)}</h3>
-      <p>${want
-        ? (lang === "hu" ? "Szeretnél egyet ebből? A Facebook-oldalunkra irányítunk, ahol egy előre megírt üzenet automatikusan jelzi nekünk, hogy elsőként neked szóljunk, amikor megérkezik. Csak el kell küldened." : "Would you like one? We'll take you to our Facebook page, where a ready-made message automatically tells us to let you know first when it arrives. Just send it.")
-        : (lang === "hu" ? "Szeretnél értesítést kapni, ha újra elérhető lesz? A Facebook-oldalunkra irányítunk, ahol egy előre megírt üzenet automatikusan jelzi nekünk, hogy elsőként neked szóljunk, amikor megérkezik. Csak el kell küldened." : "Would you like to hear when it's back in stock? We'll take you to our Facebook page, where a ready-made message automatically tells us to let you know first when it arrives. Just send it.")}</p>
-      <div class="notify__btns">
-        <a class="btn btn--gold" href="${esc(href)}" target="_blank" rel="noopener" id="notifyYes">${want ? (lang === "hu" ? "Igen, kérek egyet" : "Yes, I want one") : (lang === "hu" ? "Igen, értesítsetek" : "Yes, notify me")}</a>
-        <button class="btn btn--line" value="no">${lang === "hu" ? "Mégsem" : "No thanks"}</button>
-      </div></form>`;
-    dlg.querySelector("#notifyYes").onclick = () => setTimeout(() => dlg.close(), 50);
+    const sn = i.type === "SET" ? i.no.replace(/-1$/, "") : i.no;
+    const head = `<p class="kicker">${hu ? "Jelenleg elfogyott" : "Sold out right now"}</p>
+      <h3>${esc(sn)} ${esc(i.name)}</h3>`;
+    const choose = () => {
+      dlg.innerHTML = `<div class="notify__in">${head}
+        <p>${want ? (hu ? "Szeretnél egyet ebből? Válaszd ki, hogyan jelezzük, amikor megérkezik:" : "Would you like one? Choose how we let you know when it arrives:")
+                  : (hu ? "Hogyan értesítsünk, amikor újra elérhető lesz?" : "How should we let you know when it's back in stock?")}</p>
+        <div class="notify__tiles">
+          <button type="button" class="ntile" id="nMail"><span class="ntile__ic" aria-hidden="true">✉️</span><b>${hu ? "E-mailes értesítést kérek" : "Notify me by e-mail"}</b><span>${hu ? "Megadod a neved és az e-mail címed, és automatikusan írunk, amint megérkezik." : "Leave your name and e-mail and we'll write automatically as soon as it arrives."}</span></button>
+          <a class="ntile" id="nMsg" href="${esc(href)}" target="_blank" rel="noopener"><span class="ntile__ic" aria-hidden="true">💬</span><b>${hu ? "Csak jelzem, hogy kérnék" : "Just let you know I want one"}</b><span>${hu ? "Facebook Messengerre irányítunk egy előre megírt üzenettel – csak el kell küldened." : "We open Facebook Messenger with a ready-made message – just send it."}</span></a>
+        </div>
+        <button type="button" class="notify__close" id="nClose">${hu ? "Mégsem" : "No thanks"}</button></div>`;
+      dlg.querySelector("#nMsg").onclick = () => setTimeout(() => dlg.close(), 50);
+      dlg.querySelector("#nClose").onclick = () => dlg.close();
+      dlg.querySelector("#nMail").onclick = mailForm;
+    };
+    const mailForm = () => {
+      dlg.innerHTML = `<form class="notify__in" id="nForm" novalidate>${head}
+        <p>${hu ? "Add meg a neved és az e-mail címed, és értesítünk, amint újra raktáron lesz." : "Enter your name and e-mail and we'll let you know as soon as it's back in stock."}</p>
+        <label class="co-f">${hu ? "Név" : "Name"}<input class="field" name="name" autocomplete="name" required></label>
+        <label class="co-f">${hu ? "E-mail cím" : "E-mail"}<input class="field" name="email" type="email" autocomplete="email" required></label>
+        <label class="co-check"><input type="checkbox" name="ok" required> <span>${hu ? 'Hozzájárulok, hogy erről a termékről e-mailben értesítsetek. <a href="adatkezeles.html" target="_blank">Adatkezelési tájékoztató</a>' : 'I agree to be notified by e-mail about this product. <a href="adatkezeles.html" target="_blank">Privacy notice</a> (HU)'}</span></label>
+        <input type="text" name="website" class="co-hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <p class="co-err" id="nErr" hidden></p>
+        <div class="notify__btns"><button class="btn btn--gold" id="nSend">${hu ? "Kérem az értesítést" : "Notify me"}</button>
+          <button type="button" class="btn btn--line" id="nBack">${hu ? "Vissza" : "Back"}</button></div></form>`;
+      const fm = dlg.querySelector("#nForm"), err = dlg.querySelector("#nErr");
+      dlg.querySelector("#nBack").onclick = choose;
+      fm.addEventListener("input", () => { err.hidden = true; });
+      fm.name.focus();
+      fm.onsubmit = async e => {
+        e.preventDefault();
+        const name = fm.name.value.trim(), email = fm.email.value.trim();
+        if (!name || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { err.textContent = hu ? "Add meg a neved és egy érvényes e-mail címet." : "Please enter your name and a valid e-mail."; err.hidden = false; return; }
+        if (!fm.ok.checked) { err.textContent = hu ? "Az értesítéshez a hozzájárulás szükséges." : "Please tick the consent box."; err.hidden = false; return; }
+        const btn = dlg.querySelector("#nSend"); btn.disabled = true; btn.textContent = hu ? "Küldés…" : "Sending…";
+        const endpoint = SHOP && SHOP.endpoint && SHOP.endpoint();
+        try {
+          if (endpoint) {
+            const r = await fetch(endpoint, { method: "POST", body: JSON.stringify({ type: "notify", lang, no: i.no, name: i.name, customer: { name, email }, website: fm.website.value, consent: true }) });
+            const j = await r.json(); if (!j.ok) throw new Error(j.error || "");
+          } else {
+            // amíg a rendelésfogadó nincs beállítva: a vásárló levelezője nyílik meg az előre kitöltött kéréssel
+            location.href = "mailto:csikos.mate.ovb@gmail.com?subject=" + encodeURIComponent((hu ? "Értesítést kérek: " : "Back-in-stock request: ") + sn + " " + i.name) +
+              "&body=" + encodeURIComponent((hu ? `Kérek értesítést, ha újra elérhető: ${sn} ${i.name}\nNév: ${name}\nE-mail: ${email}` : `Please notify me when this is back: ${sn} ${i.name}\nName: ${name}\nE-mail: ${email}`));
+          }
+          dlg.innerHTML = `<div class="notify__in">${head}<p class="notify__ok">✓ ${endpoint
+            ? (hu ? `Köszönjük, ${esc(name)}! Feljegyeztük, és e-mailben értesítünk (${esc(email)}), amint megérkezik.` : `Thanks, ${esc(name)}! We'll e-mail you (${esc(email)}) as soon as it arrives.`)
+            : (hu ? "Megnyitottuk a levelezőprogramodat az előre kitöltött kéréssel – küldd el, és értesítünk." : "We opened your e-mail app with the request filled in – send it and we'll let you know.")}</p>
+            <div class="notify__btns"><button type="button" class="btn btn--gold" id="nOk">OK</button></div></div>`;
+          dlg.querySelector("#nOk").onclick = () => dlg.close();
+        } catch (ex) {
+          err.textContent = (ex.message ? ex.message + " – " : "") + (hu ? "Nem sikerült elküldeni, próbáld újra, vagy válaszd a Messengert." : "Couldn't send it – try again or use Messenger.");
+          err.hidden = false; btn.disabled = false; btn.textContent = hu ? "Kérem az értesítést" : "Notify me";
+        }
+      };
+    };
+    choose();
     dlg.showModal ? dlg.showModal() : window.open(href, "_blank", "noopener");
   }
   const labelsOf = i => {

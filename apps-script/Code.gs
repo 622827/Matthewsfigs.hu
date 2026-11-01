@@ -45,6 +45,7 @@ function doPost(e) {
   var lock = LockService.getScriptLock();
   try {
     lock.waitLock(20000);
+    if (o.type === 'notify') return out_(handleNotify_(o, en));
     // ---- adatok ellenőrzése ----
     var c = o.customer || {}, b = o.billing || {};
     var cust = { name: str_(c.name, 120), email: str_(c.email, 160).toLowerCase(), phone: str_(c.phone, 40) };
@@ -117,6 +118,64 @@ function doPost(e) {
     return out_({ ok: false, error: msg('Szerverhiba, kérjük próbáld újra.', 'Server error, please try again.') });
   } finally {
     try { lock.releaseLock(); } catch (e2) {}
+  }
+}
+
+// ---------- „Értesítést kérek” (előrendelés e-mailben) ----------
+const SHEET_NOTIFY = 'Értesítések';
+const NHEAD = ['Időpont', 'Termék', 'Terméknév', 'Név', 'E-mail', 'Nyelv', 'Állapot', 'Értesítve'];
+
+function notifySheet_() {
+  var ss = prop_('SHEET_ID') ? SpreadsheetApp.openById(prop_('SHEET_ID')) : SpreadsheetApp.getActiveSpreadsheet();
+  var sh = ss.getSheetByName(SHEET_NOTIFY) || ss.insertSheet(SHEET_NOTIFY);
+  if (sh.getLastRow() === 0) { sh.appendRow(NHEAD); sh.setFrozenRows(1); }
+  return sh;
+}
+
+function handleNotify_(o, en) {
+  var c = o.customer || {}, name = str_(c.name, 120), email = str_(c.email, 160).toLowerCase(), no = str_(o.no, 40), title = str_(o.name, 200);
+  if (!name || !no || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return { ok: false, error: en ? 'Missing name or e-mail.' : 'Hiányzó név vagy e-mail.' };
+  if (!o.consent) return { ok: false, error: en ? 'Consent is required.' : 'A hozzájárulás szükséges.' };
+  var cache = CacheService.getScriptCache();
+  if (cache.get('nl:' + email)) return { ok: false, error: en ? 'Please wait a few seconds.' : 'Kérjük, várj pár másodpercet.' };
+  var sh = notifySheet_(), rows = sh.getDataRange().getValues();
+  for (var r = 1; r < rows.length; r++) if (rows[r][1] === no && rows[r][4] === email && rows[r][6] === 'vár') return { ok: true, dup: true };
+  sh.appendRow([new Date(), no, title, name, email, en ? 'en' : 'hu', 'vár', '']);
+  cache.put('nl:' + email, '1', 10);
+  var sn = no.replace(/-1$/, '');
+  try {
+    GmailApp.sendEmail(email, (en ? 'We will let you know: ' : 'Értesítünk: ') + sn + ' ' + title,
+      en ? 'Hi ' + name + ',\n\nThanks! We will e-mail you as soon as ' + sn + ' ' + title + ' is back in stock at ' + SITE + '.\n\nIf you no longer want this, just reply to this e-mail.\n\nMatthew\'s Fig Supply Co.'
+         : 'Kedves ' + name + '!\n\nKöszönjük! E-mailben értesítünk, amint a(z) ' + sn + ' ' + title + ' újra elérhető lesz a ' + SITE + ' oldalon.\n\nHa már nem kéred, csak válaszolj erre a levélre, és töröljük a kérésedet.\n\nMatthew\'s Fig Supply Co.',
+      { name: "Matthew's Fig Supply Co.", replyTo: prop_('OWNER_EMAIL', SELLER.email) });
+    GmailApp.sendEmail(prop_('OWNER_EMAIL', SELLER.email), 'Értesítést kértek: ' + sn + ' ' + title, name + ' <' + email + '> értesítést kér, ha újra elérhető: ' + sn + ' ' + title + '.');
+  } catch (err) { console.error(err); }
+  return { ok: true };
+}
+
+/**
+ * Óránként futtasd (Eseményindítók → Idővezérelt → óránként): ha egy kért termék újra raktáron van
+ * a weboldalon, e-mailt küld a jelentkezőknek. Az egy évnél régebbi, teljesítetlen kéréseket lezárja,
+ * és törli belőlük az e-mail címet (adattakarékosság).
+ */
+function checkRestock() {
+  var inv = JSON.parse(UrlFetchApp.fetch(SITE + '/data/inventory.json?t=' + Date.now()).getContentText());
+  var inStock = {};
+  inv.items.forEach(function (i) { if (!i.preorder && i.qty > 0) inStock[i.no] = i; });
+  var sh = notifySheet_(), rows = sh.getDataRange().getValues(), now = new Date();
+  for (var r = 1; r < rows.length; r++) {
+    var row = rows[r]; if (row[6] !== 'vár') continue;
+    var no = row[1], en = row[5] === 'en', item = inStock[no];
+    if (item) {
+      var sn = String(no).replace(/-1$/, ''), url = SITE + '/termek.html?no=' + encodeURIComponent(no);
+      GmailApp.sendEmail(row[4], (en ? 'Back in stock: ' : 'Újra kapható: ') + sn + ' ' + row[2],
+        (en ? 'Hi ' + row[3] + ',\n\nGood news: ' + sn + ' ' + row[2] + ' is back in stock (' + item.qty + ' pcs).\n' + url + '\n\nFirst come, first served.\n\nMatthew\'s Fig Supply Co.'
+            : 'Kedves ' + row[3] + '!\n\nJó hír: a(z) ' + sn + ' ' + row[2] + ' újra kapható (' + item.qty + ' db).\n' + url + '\n\nAki előbb rendel, azé.\n\nMatthew\'s Fig Supply Co.'),
+        { name: "Matthew's Fig Supply Co.", replyTo: prop_('OWNER_EMAIL', SELLER.email) });
+      sh.getRange(r + 1, 7, 1, 2).setValues([['értesítve', now]]);
+    } else if (now - new Date(row[0]) > 365 * 864e5) {
+      sh.getRange(r + 1, 5, 1, 4).setValues([['(törölve)', row[5], 'lejárt', now]]);
+    }
   }
 }
 
