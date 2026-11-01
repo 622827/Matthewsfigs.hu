@@ -358,6 +358,29 @@
     }
   }
 
+  // floating preview card for list items (desktop: follows the pointer; touch devices: none)
+  function initPreview(root) {
+    if (!matchMedia("(hover: hover)").matches) return;
+    let card = document.getElementById("pvCard");
+    if (!card) { card = document.createElement("div"); card.id = "pvCard"; card.className = "pv"; card.setAttribute("aria-hidden", "true"); document.body.appendChild(card); }
+    const place = e => {
+      const w = card.offsetWidth, h = card.offsetHeight, m = 18;
+      let x = e.clientX + m, y = e.clientY + m;
+      if (x + w > innerWidth - 8) x = e.clientX - w - m;
+      if (y + h > innerHeight - 8) y = Math.max(8, innerHeight - h - 8);
+      card.style.transform = `translate(${Math.round(x)}px,${Math.round(y)}px)`;
+    };
+    root.querySelectorAll("[data-pv-img]").forEach(el => {
+      el.addEventListener("mouseenter", e => {
+        card.innerHTML = `<img src="${esc(el.dataset.pvImg)}" alt=""><b>${esc(el.dataset.pvT)}</b>${el.dataset.pvI.split("\n").map(l => `<span>${esc(l)}</span>`).join("")}`;
+        card.classList.add("is-on"); place(e);
+        const img = card.querySelector("img"); img.onload = () => place(e); img.onerror = () => img.remove();
+      });
+      el.addEventListener("mousemove", place);
+      el.addEventListener("mouseleave", () => card.classList.remove("is-on"));
+    });
+  }
+
   // ---------- product page (termek.html?no=…) ----------
   function renderProduct() {
     const root = $("product"); if (!root) return;
@@ -395,9 +418,14 @@
     const dims = D.dims_cm && D.dims_cm.length === 3 ? D.dims_cm.map(nf).join(" × ") + " cm" : "";
     const weight = D.weight_g ? (D.weight_g >= 1000 ? nf(D.weight_g / 1000) + " kg" : nf(D.weight_g) + " g") : "";
     const ours = no => data.items.find(x => x.no === no);
+    // hover preview: bigger picture + a few facts (data-pv-*)
+    const stockInfo = o => o ? (o.preorder ? (hu ? "Nálunk: előrendelhető" : "With us: pre-order") : (hu ? `Nálunk: ${money(o.price)} · ${o.qty} db` : `With us: ${money(o.price)} · ${o.qty} in stock`))
+                             : (hu ? "Nálunk nincs raktáron – beszerezzük" : "Not in stock – we can source it");
+    const pv = (img, title, lines) => ` data-pv-img="${esc(img)}" data-pv-t="${esc(title)}" data-pv-i="${esc(lines.filter(Boolean).join("\n"))}"`;
     const linkItem = (no, name, qty) => {
       const o = ours(no), label = `${esc(no.replace(/-1$/, ""))} ${esc(name)}`;
-      return `<li>${qty > 1 ? `${qty} × ` : ""}${o ? `<a href="${esc(productUrl(o))}">${label}</a>` : label}</li>`;
+      const img = `https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(no)}.png`;
+      return `<li${pv(img, no.replace(/-1$/, "") + " " + name, [stockInfo(o)])}>${qty > 1 ? `${qty} × ` : ""}${o ? `<a href="${esc(productUrl(o))}">${label}</a>` : label}</li>`;
     };
     // minifigure cards under the photos (like a catalogue): number, name, picture, how many sets / exclusive, our price
     const figTotal = (D.minifigs || []).reduce((s, f) => s + f.qty, 0);
@@ -407,7 +435,10 @@
       <p class="co-muted">${hu ? `A szett ${figTotal} minifigurát tartalmaz.` : `This set contains ${figTotal} minifigure${figTotal > 1 ? "s" : ""}.`}${excl ? (hu ? ` Ebből ${excl} csak ebben a szettben szerepel.` : ` ${excl} of them ${excl > 1 ? "are" : "is"} exclusive to this set.`) : ""}</p>
       <div class="pd-figgrid">${D.minifigs.map(f => {
         const o = ours(f.no), tag = o ? "a" : "div";
-        return `<${tag} class="pd-fig"${o ? ` href="${esc(productUrl(o))}"` : ""}>
+        const figImg = `https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(f.no)}.png`;
+        return `<${tag} class="pd-fig"${o ? ` href="${esc(productUrl(o))}"` : ""}${pv(figImg, f.no + " " + f.name, [
+          f.sets === 1 ? (hu ? "Exkluzív: csak ebben a szettben" : "Exclusive to this set") : f.sets > 1 ? (hu ? `${f.sets} szettben szerepel` : `Appears in ${f.sets} sets`) : "",
+          f.qty > 1 ? (hu ? `${f.qty} db van a szettben` : `${f.qty} in this set`) : "", stockInfo(o)])}>
           <span class="pd-fig__no">${esc(f.no)}</span>${f.qty > 1 ? `<span class="pd-fig__qty">${f.qty}×</span>` : ""}
           <b class="pd-fig__name">${esc(f.name.split(" - ")[0])}</b>
           <img src="https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(f.no)}.png" alt="${esc(f.name)}" loading="lazy">
@@ -434,7 +465,9 @@
             : o && !o.preorder ? `<a class="pd-vers__btn" href="${esc(productUrl(o))}">${money(o.price)} →</a>`
             : o ? `<a class="pd-vers__btn is-pre" href="${esc(productUrl(o))}">${hu ? "Előrendelés" : "Pre-order"} →</a>`
             : `<button type="button" class="pd-vers__btn is-pre" data-source="${esc(v.no)}" data-name="${esc(v.name)}">${hu ? "Beszerezzük" : "We'll source it"}</button>`;
-          return `<tr${me ? ' class="is-me"' : ""}>
+          return `<tr${me ? ' class="is-me"' : ""}${pv(v.img, v.no.replace(/-1$/, "") + " " + v.name, [
+            [v.year, v.pieces ? nf(v.pieces) + (hu ? " elem" : " pieces") : "", v.figs ? v.figs + (hu ? " minifigura" : " minifigures") : ""].filter(Boolean).join(" · "),
+            me ? (hu ? "Ezt a szettet nézed" : "You're looking at this set") : stockInfo(o)])}>
             <td><span class="pd-vers__set"><img src="${esc(v.img)}" alt="" loading="lazy">${o && !me ? `<a href="${esc(productUrl(o))}">${nm}</a>` : `<span>${nm}</span>`}</span></td>
             <td>${v.year || "–"}</td><td>${v.pieces ? nf(v.pieces) : "–"}</td>
             <td>${v.figs != null ? v.figs : (me && D.minifigs ? D.minifigs.reduce((s, f) => s + f.qty, 0) : "–")}</td><td>${act}</td></tr>`; }).join("")}</tbody></table></div>
@@ -513,6 +546,7 @@
       b.addEventListener("click", go);
       b.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") go(e); });
     });
+    initPreview(root);
     // other releases we don't stock: "we'll source it" opens the pre-order dialog
     root.querySelectorAll("[data-source]").forEach(btn => btn.onclick = () => {
       const it = { no: btn.dataset.source, name: btn.dataset.name, type: "SET", preorder: true };
