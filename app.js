@@ -201,6 +201,8 @@
     "imperial stormtrooper snowtrooper sandtrooper scout officer battle droid droids super assassin astromech rebel fleet male female elite heavy gunner crew guard royal " +
     "tie fighter interceptor wing death dark first order at driver skeleton zombie baby warrior knight soldier jedi sith padawan master darth lord young adult " +
     "minifigure standard fantasy era printed legs torso arms head hair helmet cape plain black white").split(" "));
+  const SIM_NAMED_UNITS = ["coruscant guard", "rancor battalion", "horn company", "lightning squadron", "bad batch", "clone force 99", "shadow"];
+  const SIM_CAMO = ["kashyyyk", "geonosis", "utapau", "felucia", "umbara", "mygeeto", "kamino", "hoth", "endor", "tatooine", "mandalore", "camouflage", "dirt stains"];
   const SIM_LOW = new Set(["clone", "trooper", "droid", "battle", "pilot", "imperial", "rebel", "officer", "commander", "captain"]);
   const shortNo = i => (i.type === "SET" ? i.no.replace(/-1$/, "") : i.no);
   const notifyLink = i => MESSENGER + "?text=" + encodeURIComponent(
@@ -494,6 +496,11 @@
     // a named character (Rex, Cody, Ahsoka Tano…) only shows the other versions of the same character
     const nameTok = name => String(name).split(" - ")[0].replace(/\([^)]*\)/g, " ").split(",")[0].toLowerCase()
       .replace(/[^a-z0-9 ]+/g, " ").split(/\s+/).filter(w => w.length > 1 && !SIM_GENERIC.has(w) && !/^\d/.test(w));
+    const traits = name => {
+      const n = String(name).toLowerCase();
+      return { unit: [...(n.match(/\b\d+(st|nd|rd|th)\b/g) || []), ...SIM_NAMED_UNITS.filter(u => n.includes(u))],
+               camo: SIM_CAMO.filter(c => n.includes(c)) };
+    };
     const baseOf = name => String(name).split(" - ")[0].replace(/\([^)]*\)/g, " ").split(",")[0].toLowerCase().replace(/\s+/g, " ").trim();   // "battle droid", "clone trooper"
     const similar = set ? [] : (() => {
       const mine = simTok(i.name), myName = nameTok(i.name), myBase = baseOf(i.name);
@@ -501,7 +508,11 @@
         return data.items.filter(o => o.type === "MINIFIG" && o.no !== i.no && nameTok(o.name).some(w => myName.includes(w)))
           .sort((a, b) => (!!a.preorder - !!b.preorder) || b.price - a.price).slice(0, 12);
       }
-      return data.items.filter(o => o.type === "MINIFIG" && o.no !== i.no && pre(o.no) === pre(i.no))
+      // distinguishing traits must match: the unit (501st, 41st, Coruscant Guard…) and the camouflage / planet (Kashyyyk…)
+      const my = traits(i.name);
+      const fits = o => { const t = traits(o.name);
+        return (!my.unit.length || my.unit.some(u => t.unit.includes(u))) && my.camo.every(c => t.camo.includes(c)); };
+      return data.items.filter(o => o.type === "MINIFIG" && o.no !== i.no && pre(o.no) === pre(i.no) && fits(o))
         .map(o => { const t = new Set(simTok(o.name)); return { o, sc: mine.reduce((a, w) => a + (t.has(w) ? simW(w) : 0), 0) + (baseOf(o.name) === myBase ? 3 : 0) }; })
         .filter(x => x.sc >= 3)
         .sort((a, b) => b.sc - a.sc || (!!a.o.preorder - !!b.o.preorder) || b.o.price - a.o.price)
