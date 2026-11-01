@@ -424,3 +424,5 @@ h2{font-size:clamp(30px,4vw,44px);color:var(--green)}
 .add-btn{cursor:pointer}
 @media (max-width:860px){.pd{grid-template-columns:1fr;gap:22px}.pd-media{position:static;aspect-ratio:4/3}.pd-media .stage{transform:scale(1.7)}.pd-media .stage--fig{transform:scale(1.9)}}
 @media (max-width:560px){.pd-dl{grid-template-columns:1fr}.pd-dl dd{margin-bottom:6px}}
+
+.co-safety{margin:10px 0 0}.co-safety .safety{font-size:13px;margin:0}

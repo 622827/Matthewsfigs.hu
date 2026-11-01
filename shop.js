@@ -236,7 +236,7 @@
       root.innerHTML = banner + `
       <div class="co-grid">
         <div class="co-main">
-          <section class="co-card"><h2>${t("cart")}</h2><ul class="co-lines">${itemRows}</ul>${safetyBlock()}</section>
+          <section class="co-card"><h2>${t("cart")}</h2><ul class="co-lines">${itemRows}</ul></section>
           <form class="co-card co-form" id="coForm" novalidate>
             <h2>${t("data")}</h2>
             <div class="co-fields">
@@ -286,7 +286,7 @@
             </div>
             ${f.note ? `<p><b>${t("note").replace(/ \(.*\)/, "")}:</b> ${esc(f.note)}</p>` : ""}
             <p class="co-legal">${t("withdraw")}</p>
-            ${safetyBlock()}
+            <p class="co-safety">${safetyLine()}</p>
           </section>
         </div>
         <aside class="co-card co-side">${sum}
