@@ -43,6 +43,9 @@ def num(v):
 
 
 REBRICKABLE_SETS = "https://cdn.rebrickable.com/media/downloads/sets.csv.gz"   # nyilvános, szabadon letölthető adatbázis
+UCS_THEMES = {171}       # Rebrickable: Ultimate Collector Series
+AUTO = ROOT / "data" / "autolabels.json"
+_RBTHEME = {}
 _RB = None
 
 
@@ -60,6 +63,10 @@ def rb_sets():
                         pcs = int(row["num_parts"] or 0)
                     except ValueError:
                         pcs = 0
+                    try:
+                        _RBTHEME[row["set_num"]] = int(row["theme_id"] or 0)
+                    except ValueError:
+                        pass
                     if pcs < 20:
                         continue
                     _RB.setdefault(norm_name(row["name"]), []).append({
@@ -176,6 +183,8 @@ def fetch(item_type, no):
             for f in figs.values():
                 f["sets"] = fig_set_count(f["no"])   # 1 = exclusive to this set
             d["minifigs"] = sorted(figs.values(), key=lambda f: f["no"])
+        rb_sets()
+        d["ucs"] = _RBTHEME.get(no) in UCS_THEMES
         d["versions"] = [{"no": v["no"], "name": v["name"], "year": v["year"], "pieces": v["pieces"], "img": v["img"]}
                          for v in versions_of(no, d["name"])]
     elif item_type == "MINIFIG":
@@ -190,6 +199,27 @@ def fetch(item_type, no):
             d["sets"] = sorted(sets.values(), key=lambda s: s["no"])[:30]
             FIGSETS[no] = len(sets)
     return d
+
+
+def write_autolabels(items, wanted, today):
+    """Automatic labels for the shop: UCS (Rebrickable theme) and Retired (Brickset exit date passed)."""
+    auto = {}
+    for n, t in sorted(wanted.items()):
+        d = items.get(n) or {}
+        if t != "SET":
+            continue
+        out = []
+        if d.get("ucs"):
+            out.append("UCS")
+        if d.get("exit") and d["exit"] < today.isoformat():
+            out.append("Retired")
+        if out:
+            auto[n] = out
+    text = json.dumps({"_info": "Automatikus címkék (scripts/catalog_details.py): UCS a Rebrickable témája, Retired a Brickset kivezetési dátuma alapján.",
+                       "labels": auto}, ensure_ascii=False, indent=1) + "\n"
+    if not AUTO.exists() or AUTO.read_text(encoding="utf-8") != text:
+        AUTO.write_text(text, encoding="utf-8")
+        print(f"Automatikus címkék: {len(auto)} szett.")
 
 
 def main():
@@ -208,7 +238,7 @@ def main():
 
     def stale(no):
         d = items.get(no)
-        if not d or (d.get("type") == "SET" and "versions" not in d):
+        if not d or (d.get("type") == "SET" and ("versions" not in d or "ucs" not in d)):
             return True
         try:
             return (today - date.fromisoformat(d.get("fetched", "2000-01-01"))).days > STALE_DAYS
@@ -221,7 +251,8 @@ def main():
     for no in todo:
         d = fetch(wanted[no], no)
         if d:
-            items[no] = d
+            keep = {k: v for k, v in (items.get(no) or {}).items() if k in ("bs_id", "photos", "retail_eur", "launch", "exit")}
+            items[no] = {**keep, **d}     # Brickset data is fetched once; keep it on refresh
             changed = True
             print(f"  {no}: {d.get('year')} · {d.get('category')} · {d.get('pieces', '')}")
     # Brickset: fotók, bolti ár, dátumok (csak ha van kulcs; egyszer szettenként)
@@ -235,6 +266,7 @@ def main():
             items[n].update(r)
             changed = True
 
+    write_autolabels(items, wanted, today)
     if not changed:
         print("Nincs új katalógusadat.")
         return

@@ -550,3 +550,4 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 .pd-vers__btn:hover{filter:brightness(1.05)}
 .pd-vers__btn.is-pre:hover{background:var(--green);color:var(--cream)}
 .pd-vers__here{font-size:12px;font-weight:700;color:var(--gold-ink);text-transform:uppercase;letter-spacing:.04em}
+.badge--purple,.lchip--purple{background:#ece3fa;color:#5a2d9c}

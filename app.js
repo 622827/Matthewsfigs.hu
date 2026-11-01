@@ -86,7 +86,7 @@
   };
   // 3D product box: sets get their original LEGO box art on a cuboid,
   // minifigures turn like on a display turntable.
-  let BOXES = {}, LABELS = {}, FIGS = {}, DETAILS = {}, VALUES = {};   // assets/boxes/index.json: flattened faces cut from the box photos
+  let BOXES = {}, LABELS = {}, FIGS = {}, DETAILS = {}, VALUES = {}, AUTOLABELS = {};   // assets/boxes/index.json: flattened faces cut from the box photos
   // minifigure on a LEGO display plate: stands still, front view, feet on the two middle studs
   // plate art (assets/figstand.svg, 120×44): front stud row base at y≈22.5, stud pitch 24.5 → 2 studs = 49 units
   const fig3d = (i, f) => {
@@ -291,6 +291,7 @@
   const labelsOf = i => {
     if (i.type !== "SET") return [];
     const out = [...(LABELS[i.no] || [])], n = i.name.toLowerCase();
+    for (const l of AUTOLABELS[i.no] || []) if (!out.includes(l)) out.push(l);   // UCS, Retired (automatic)
     for (const r of LABELS._rules || []) if (n.includes(r.contains) && !out.includes(r.label)) out.push(r.label);
     return out;
   };
@@ -607,9 +608,11 @@
     fetch("data/labels.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
     fetch("assets/figs/index.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
     window.MFShop ? window.MFShop.ready : null,
-    PAGE_KIND === "product" ? fetch("data/details.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})) : null
+    PAGE_KIND === "product" ? fetch("data/details.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})) : null,
+    fetch("data/autolabels.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({}))
   ])
-    .then(([d, boxes, labels, figs, , details]) => {
+    .then(([d, boxes, labels, figs, , details, auto]) => {
+      AUTOLABELS = (auto && auto.labels) || {};
       BOXES = boxes || {}; LABELS = labels || {}; FIGS = figs || {}; DETAILS = (details && details.items) || {}; VALUES = (details && details.values) || {};
       if (window.MFShop) window.MFShop.setLots(d.items.map(i => ({ ...i })));
       const byItem = new Map();

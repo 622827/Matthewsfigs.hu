@@ -1,10 +1,11 @@
 {
-  "_info": "Extra címkék. Szettszám szerint: \"75158-1\": [\"Big gun\"]. Névrész szerint: _rules. Szín: _colors (red, blue, gray, gold). Retired: Brickset kivezetési dátum alapján, 2026-10-18.",
+  "_info": "Extra címkék. Szettszám szerint: \"75158-1\": [\"Big gun\"]. Névrész szerint: _rules. Szín: _colors (red, blue, gray, gold, purple). Automatikus (UCS, Retired): data/autolabels.json. Retired: Brickset kivezetési dátum alapján, 2026-10-18.",
   "_colors": {
     "Big gun": "red",
     "Retired": "gray",
     "Best price": "gold",
-    "Army builder": "blue"
+    "Army builder": "blue",
+    "UCS": "purple"
   },
   "_rules": [
     {
