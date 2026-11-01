@@ -1,0 +1,23 @@
+{
+ "_info": "Webshop beállítások. open: true = élesben megy (addig csak ?shop=preview előnézettel látszik). endpoint: a Google Apps Script web app URL-je (docs/webshop-beallitas.md). Díjak forintban.",
+ "open": false,
+ "launch": "2027-01-05",
+ "endpoint": "",
+ "shipping": {
+  "foxpost": { "fee": 1490, "label_hu": "Foxpost csomagautomata", "label_en": "Foxpost parcel locker" },
+  "pickup": { "fee": 0, "label_hu": "Személyes átvétel – 1111 Budapest, Bartók Béla út 10–12. (előre egyeztetett időpontban)", "label_en": "Pickup – 1111 Budapest, Bartók Béla út 10–12 (by appointment)" }
+ },
+ "cod_fee": 0,
+ "payment": {
+  "card": { "label_hu": "Bankkártya, Apple Pay, Google Pay (Stripe)", "label_en": "Card, Apple Pay, Google Pay (Stripe)" },
+  "transfer": { "label_hu": "Banki átutalás", "label_en": "Bank transfer" },
+  "cod": { "label_hu": "Utánvét (csak törzsvásárlóknak, Foxpost-automatánál)", "label_en": "Cash on delivery (regular customers only, Foxpost locker)" },
+  "onsite": { "label_hu": "Készpénz vagy kártya átvételkor", "label_en": "Cash or card on pickup" }
+ },
+ "manufacturer": {
+  "name": "LEGO A/S",
+  "address": "Aastvej 1, 7190 Billund, Dánia",
+  "address_en": "Aastvej 1, 7190 Billund, Denmark",
+  "web": "www.lego.com/service"
+ }
+}

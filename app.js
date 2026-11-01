@@ -32,7 +32,7 @@
     "ord.s1t":"Pick","ord.s1":"Browse our range here on the website.",
     "ord.s2t":"Order","ord.s2":"Click a product and we'll reserve it for you on Messenger.",
     "ord.s3t":"Receive","ord.s3":"Careful packing, shipping or pickup in Budapest.",
-    "ord.bl":"Our range",
+    "ord.bl":"Our range","co.kicker":"Webshop","co.title":"Cart & checkout",
     "news.tag":"Latest news","news.title":"Our webshop launches on 5 January!","news.lead":"Soon you can order directly here on the website – no need to message us on Facebook.",
     "news.p1":"💳 Card payment","news.p2":"🏦 Bank transfer","news.p3":"📦 Cash on delivery for regular customers","news.when":"Expected launch","news.date":"5 January","ord.msg":"Custom request on Messenger",
     "foot.contact":"Contact","foot.inv":"For investors","nav.inv":"Investors",
@@ -60,6 +60,7 @@
     document.querySelectorAll("[data-i18n-ph]").forEach(el => { el.placeholder = t(el.dataset.i18nPh); });
     $("langBtn").textContent = lang === "hu" ? "EN" : "HU";
     renderAll(true);
+    document.dispatchEvent(new Event("mfs:lang"));
   }
   $("langBtn").onclick = () => {
     lang = lang === "hu" ? "en" : "hu";
@@ -244,8 +245,13 @@
     for (const r of LABELS._rules || []) if (n.includes(r.contains) && !out.includes(r.label)) out.push(r.label);
     return out;
   };
+  const SHOP = window.MFShop;
+  const shopOn = () => !!(SHOP && SHOP.enabled());
+  const cardLink = i => i.preorder ? ` href="${esc(notifyLink(i))}" target="_blank" rel="noopener" data-pre="${esc(i.no)}" title="${t("pre.hint")}"`
+    : shopOn() ? ` href="kosar.html" data-add="${esc(i.no)}" data-name="${esc(shortNo(i) + " " + i.name)}"`
+    : ` href="${esc(buyLink(i))}" target="_blank" rel="noopener"`;
   const card = i => `
-      <a class="item${i.preorder ? " item--pre" : ""}" href="${esc(i.preorder ? notifyLink(i) : buyLink(i))}" target="_blank" rel="noopener"${i.preorder ? ` data-pre="${esc(i.no)}" title="${t("pre.hint")}"` : ""}>
+      <a class="item${i.preorder ? " item--pre" : ""}"${cardLink(i)}>
         <div class="item__img">${box3d(i)}</div>
         <div class="item__body">
           <span class="item__no">${esc(i.type === "SET" ? i.no.replace(/-1$/, "") : i.no)}${i.qty > 1 ? ` · ${i.qty} ${lang === "hu" ? "db" : "pcs"}` : ""}</span>
@@ -254,7 +260,9 @@
           ${i.preorder ? `<span class="want" role="button" tabindex="0" data-href="${esc(wantLink(i))}">${lang === "hu" ? "Szeretnék egyet!" : "I want one!"}</span>` : ""}
           <div class="item__foot">
             <span class="price">${i.from ? `<small>${lang === "hu" ? "" : "from "}</small>` : ""}${money(i.price)}${i.from && lang === "hu" ? "<small>-tól</small>" : ""}</span>
+            ${!i.preorder && shopOn() ? `<span class="add-btn" role="button">${lang === "hu" ? "Kosárba" : "Add to cart"}</span>` : ""}
           </div>
+          ${SHOP ? SHOP.safetyLine() : ""}
         </div>
       </a>`;
 
@@ -375,10 +383,12 @@
     fetch("data/inventory.json", { cache: "no-cache" }).then(r => r.json()),
     fetch("assets/boxes/index.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
     fetch("data/labels.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
-    fetch("assets/figs/index.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({}))
+    fetch("assets/figs/index.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
+    window.MFShop ? window.MFShop.ready : null
   ])
     .then(([d, boxes, labels, figs]) => {
       BOXES = boxes || {}; LABELS = labels || {}; FIGS = figs || {};
+      if (window.MFShop) window.MFShop.setLots(d.items.map(i => ({ ...i })));
       const byItem = new Map();
       for (const i of d.items) {
         const k = i.type + ":" + i.no + (i.preorder ? ":pre" : ""), m = byItem.get(k);

@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=202611011814">
+<link rel="stylesheet" href="style.css?v=202611011842">
 </head>
 <body data-page="doc">
 
@@ -53,7 +53,7 @@
 <table>
   <thead><tr><th>Cél</th><th>Adatok</th><th>Jogalap</th><th>Meddig</th></tr></thead>
   <tbody>
-    <tr><td><b>Rendelés teljesítése</b> (visszaigazolás, kapcsolattartás, kiszállítás)</td><td>név, e-mail, telefonszám, szállítási cím vagy Foxpost-automata, rendelt termékek, rendelés üzenetei</td><td>szerződés teljesítése – GDPR 6. cikk (1) b)</td><td>a szerződés megszűnésétől számított 5 évig (polgári jogi elévülés)</td></tr>
+    <tr><td><b>Rendelés teljesítése</b> (visszaigazolás, kapcsolattartás, kiszállítás)</td><td>név, e-mail, telefonszám, szállítási cím vagy Foxpost-automata, számlázási adatok, választott szállítási és fizetési mód, rendelt termékek, az ÁSZF elfogadásának időpontja, rendelés üzenetei</td><td>szerződés teljesítése – GDPR 6. cikk (1) b)</td><td>a szerződés megszűnésétől számított 5 évig (polgári jogi elévülés)</td></tr>
     <tr><td><b>Számlázás</b></td><td>név, számlázási cím, (cégnél) adószám, vásárolt termékek, összeg</td><td>jogi kötelezettség – GDPR 6. cikk (1) c), Áfa tv., Számv. tv. 169. §</td><td>8 évig</td></tr>
     <tr><td><b>Fizetés</b></td><td>a fizetés azonosítója, összege, időpontja; a kártyaadatokat kizárólag a Stripe kezeli, mi nem látjuk</td><td>szerződés teljesítése, jogi kötelezettség</td><td>8 évig (számviteli bizonylat)</td></tr>
     <tr><td><b>Kérdés, előrendelés, egyedi beszerzés</b> (Messenger, e-mail, telefon)</td><td>név, elérhetőség, a kért termék, az üzenetek tartalma</td><td>szerződés megkötését megelőző lépések – GDPR 6. cikk (1) b)</td><td>az ügy lezárásától számított 1 évig, szerződés esetén 5 évig</td></tr>
@@ -72,7 +72,8 @@
   <li><b>Könyvelő</b> – a számviteli kötelezettségek teljesítése.</li>
   <li><b>BrickLink</b> (BrickLink Limited, a LEGO csoport tagja) – a BrickLink boltunkban leadott rendelések adatai a BrickLinknél is megtalálhatók, a BrickLink feltételei szerint.</li>
   <li><b>Meta Platforms Ireland Ltd.</b> – ha Facebookon / Messengeren keresel minket, az üzenetek a Meta rendszerében is tárolódnak.</li>
-  <li><b>Tárhely és technikai szolgáltatók</b> – GitHub, Inc. (USA, a weboldal tárhelye), Google (Gmail, Google Fonts betűtípusok), amelyek az EU–USA adatvédelmi keretrendszer és/vagy általános szerződési feltételek alapján kezelik az adatokat.</li>
+  <li><b>Google</b> (Google Ireland Ltd., Írország / Google LLC, USA) – a webshopban leadott rendeléseket a Google Apps Script szolgáltatásán keresztül fogadjuk, saját Google-táblázatunkban (Google Sheets) tároljuk, és Gmailből küldjük a visszaigazoló e-maileket. <b>A rendelési adatok nem kerülnek a weboldal nyilvános tárhelyére.</b></li>
+  <li><b>Tárhely és technikai szolgáltatók</b> – GitHub, Inc. (USA, a weboldal tárhelye), Google (Gmail, Google Fonts betűtípusok), Foxpost (a pénztárban megjelenő csomagautomata-lista), amelyek az EU–USA adatvédelmi keretrendszer és/vagy általános szerződési feltételek alapján kezelik az adatokat.</li>
   <li>Hatóságok részére csak jogszabályi kötelezettség alapján adunk ki adatot.</li>
 </ul>
 <p>A csomagkövető és a rendeléskezelő felületünkön tárolt vásárlói adatokat titkosítva (AES-256) tároljuk; azokhoz csak mi férünk hozzá jelszóval.</p>
@@ -80,7 +81,8 @@
 <h2 id="weboldal">4. A weboldal használata, sütik</h2>
 <ul>
   <li>A matthewsfigs.hu <b>nem használ követő vagy hirdetési sütiket</b>, és nem futtat látogatottságmérőt.</li>
-  <li>A böngésződ helyi tárhelyén (localStorage / sessionStorage) csak kényelmi beállításokat tárolunk, pl. a választott nyelvet. Ezek nem jutnak el hozzánk.</li>
+  <li>A böngésződ helyi tárhelyén (localStorage / sessionStorage) csak kényelmi adatokat tárolunk: a választott nyelvet, a kosár tartalmát és a pénztárban megadott adatokat, hogy ne vesszenek el. Ezek a te böngésződben maradnak, és csak a megrendelés elküldésekor jutnak el hozzánk. A böngésző adatainak törlésével bármikor törölheted őket.</li>
+  <li>A pénztárban a Foxpost-automaták listáját a FOXPOST szerveréről (cdn.foxpost.hu) töltjük be, amely ennek során technikailag látja az IP-címedet.</li>
   <li>A weboldal megnyitásakor a böngésződ a tárhelyszolgáltató (GitHub) és a betűtípus-szolgáltató (Google Fonts) szerverével kapcsolatba lép, amely technikailag látja az IP-címedet. Ezek a szolgáltatók saját tájékoztatójuk szerint kezelik ezeket a naplóadatokat.</li>
   <li>A Facebookra és Messengerre mutató hivatkozások külső oldalakra visznek, ahol azok saját adatkezelési szabályai érvényesek.</li>
 </ul>
