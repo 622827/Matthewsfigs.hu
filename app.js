@@ -17,7 +17,7 @@
     "vinted.t":"You'll find us on Vinted too",
     "vinted.p":"There we list every set a little higher on purpose, because a lot of people haggle. A tip 😉: offer the price you see in our web shop and mention you came from the web shop – we'll accept it automatically. If buying on Vinted feels safer to you, you're welcome there too.",
     "vinted.cta":"Our Vinted shop →",
-    "about.strip":"<b>Máté Csikós</b> · <a href=\"tel:+36203133292\">+36&nbsp;20&nbsp;313&nbsp;3292</a> · Budapest, Bartók Béla út 10–12. (pickup) · <a href=\"https://m.me/100091130775442\" target=\"_blank\" rel=\"noopener\">Messenger</a> · Our main theme is Star Wars; anything else we source on request.",
+    "about.strip":"<b>Máté Csikós</b> (owner) · <a href=\"tel:+36203133292\">+36&nbsp;20&nbsp;313&nbsp;3292</a> · Budapest, Bartók Béla út 10–12. (pickup) · <a href=\"https://m.me/100091130775442\" target=\"_blank\" rel=\"noopener\">Messenger</a> · Our main theme is Star Wars; anything else we source on request.",
     "about.p1":"Matthew's Fig Supply Co. is a LEGO® set and minifigure shop based in Budapest. We buy sealed sets in bulk, so we can sell them below retail. We only sell sets sealed (MISB), and every figure is checked one by one.",
     "about.p2":"If something isn't in stock, we'll source it: a rare figure, a long-retired set or a whole wanted list. We ship within Hungary and abroad, and you can pick up your order in person in Budapest.",
     "about.f1t":"What we sell","about.f1":"Sealed sets, minifigures, parts",
