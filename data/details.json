@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-02T14:12:56+00:00",
+ "updated": "2026-11-02T15:26:28+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -70,7 +70,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/10066-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/10066-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Castle"
   },
   "10178-1": {
    "type": "SET",
@@ -117,7 +119,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/10178-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/10178-1.png"
-   ]
+   ],
+   "desc_en": "Behold the power of the Empire! For the first time ever, the ultimate Motorized Walking AT-AT is ready to crush the Rebel Alliance at your command. Thanks to the Power Functions System, the mighty All-Terrain Armored Transport really walks forward or backward into battle! Features an opening cockpit and rotating laser cannons! Motorized Walking AT-AT really walks and its head moves up and down! Handle on top allows for easy transport! Stands over 12\" (30cm) tall and over 14\" (36cm) long Includes AT-AT Pilot, General Veers, Snowtrooper and Luke Skywalker with grappling line and lightsaber! Includes battery box and motor Requires 6 AA (1.5V) batteries, not included.",
+   "subtheme": "Episode V"
   },
   "10179-1": {
    "type": "SET",
@@ -170,7 +174,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/10179-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/10179-1.png"
-   ]
+   ],
+   "desc_en": "This is it - the biggest, most spectacular LEGO Star Wars model ever! Straight out of the classic Star Wars movies comes the Ultimate Collector's Millennium Falcon , Han Solo's famous smuggling starship. Every detail of the modified Corellian Engineering Corporation YT-1300 freighter is here, all constructed to scale with LEGO minifigures. At almost 3 feet (90cm) long, it's the ultimate centerpiece to any Star Wars collection! With over 5,000 pieces, this is the biggest LEGO set ever made! Model is built completely to minifigure scale - minifigures can sit inside and man the controls! Landing gear provides a stable base for model to stand on! Ship is over 33\" long, 22\" wide and 8\" tall! (84cm long x 56cm wide x 21cm tall) Radar dish rotates and elevates and boarding ramp extends! Top and bottom quad-laser turrets rotate for realistic play! Cockpit top can be removed to access minifigures! Includes 5 minifigures: Han Solo, Chewbacca, Obi-Wan Kenobi, Luke Skywalker and Princess Leia Organa! This special set also includes a display card with detailed ship specifications!",
+   "subtheme": "Ultimate Collector Series"
   },
   "10188-1": {
    "type": "SET",
@@ -318,7 +324,10 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/10188-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/10188-1.png"
-   ]
+   ],
+   "desc_en": "Battle inside the Death Star™!\nRecreate the action and adventure of the Star Wars™ movies with the ultimate Death Star playset! This amazingly detailed battle station features an incredible array of minifigure-scale scenes, moving parts, characters and accessories from Episodes IV and VI on its multiple decks, including the Death Star control room, rotating turbolaser turrets, hangar bay with TIE Advanced starfighter, tractor beam controls, Emperor’s throne room, detention block, firing laser cannon, Imperial conference chamber, droid maintenance facility, and the powerful Death Star superlaser…plus much more! Swing across the chasm with Luke and Leia, face danger in the crushing trash compactor, and duel with Darth Vader for the fate of the galaxy!\n• Includes 24 minifigures and droids, plus all-new Dianoga™ trash compactor monster!\n• Includes 6 new and exclusive minifigures and droids only found in this set: Luke Skywalker™ (Stormtrooper™ outfit), Han Solo™ (Stormtrooper outfit), Assassin Droid™, Interrogation Droid, Death Star Droid and 2 Death Star Troopers™!\n• Also includes Luke Skywalker, Han Solo, Obi-Wan Kenobi™, C-3PO™, R2-D2™, Princess Leia™, Chewbacca™, Luke Skywalker (Jedi Knight), Darth Vader™, Grand Moff Tarkin™, Emperor Palpatine™, 2 Stormtroopers, 2 Emperor's Royal Guards™, R2-Q5™, and mouse droid!.\n• Movie-authentic Death Star environments include the Superlaser control room and target monitor, Imperial conference chamber, TIE Advanced hangar bay with moving launch rack, Emperor's throne room, droid maintenance room, detention block, trash compactor, and much more!\n• Rescue Princess Leia from the detention block cell, then escape through the secret hatch to the trash compactor below!\n• Reenact the final duel between Luke Skywalker and Darth Vader in the Emperor's Throne Room!\n• Death Star measures 16” (41cm) tall and 16½” (42cm) wide!\n• TIE Advanced measures 3½\" (9cm) wide!",
+   "subtheme": "Ultimate Collector Series",
+   "figs_value_huf": 110511
   },
   "10198-1": {
    "type": "SET",
@@ -403,7 +412,10 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/10198-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/10198-1.png"
-   ]
+   ],
+   "desc_en": "The Star Wars\" saga begins!",
+   "subtheme": "Episode IV",
+   "figs_value_huf": 30343
   },
   "10212-1": {
    "type": "SET",
@@ -455,7 +467,10 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/10212-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/10212-1.png"
-   ]
+   ],
+   "desc_en": "Now you can build this iconic Star Wars™ vehicle in true minifigure scale for the first time!\nThe elegant Lambda-class Imperial Shuttle™ transports the Empire's elite and the occasional secret strike team of Rebel commandos all across the galaxy. Now you can build this huge and iconic Star Wars™ vehicle in true minifigure scale for the first time ever! The Imperial Shuttle is authentically detailed with rotating double laser wing cannons and a four-seat cockpit. This Ultimate Collector's model features an opening canopy, detachable landing gear, a stand for display in flight or landing modes, a labeled display plaque, and gear-driven folding wings with removable activation keys. Completed model measures 28\" (71 cm) tall on stand and 22\" (57 cm) wide with wings deployed. Includes 5 minifigures: Darth Vader™, Shuttle Pilot, Imperial Officer, Stormtrooper and Luke Skywalker™.\n• Includes 5 minifigures: Darth Vader™, Shuttle Pilot, Imperial Officer, Stormtrooper™ and Luke Skywalker™.\n• Features rotating double laser wing cannons!\n• Open the cockpit roof to access the interior and seat the minifigures inside!\n• Wings fold up and down by turning 2 keys on rear of model!\n• Model can be displayed on landing gear or landing gear can be removed to display in flying mode!\n• Includes display stand, name plate and label sheet!\n• Measures 28\" (71 cm) tall on stand and 22\" (57 cm) wide with wings deployed!",
+   "subtheme": "Ultimate Collector Series",
+   "figs_value_huf": 32248
   },
   "10217-1": {
    "type": "SET",
@@ -569,7 +584,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/10217-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/10217-1.png"
-   ]
+   ],
+   "desc_en": "Expand your very own wizarding world of Harry Potter™!\nNo need to pass through the Leaky Cauldron. Now even Muggles can shop in Diagon Alley™ by building this fantastically magical set that includes 3 extensively detailed buildings and 11 minifigures! Join Harry Potter™, Ron Weasley and Hermione Granger as they shop for their Hogwarts™ school supplies. Visit Ollivander's, Borgin and Burke's, and Gringott's Bank. Each Diagon Alley building is realistically detailed. Ollivander's offers an extensive selection of wands, storage shelves and a step ladder that allows Ollivander to gather wands from the top floor. The front desk has an \"exploding\" function for those inconvenient times when a spell goes awry. Borgin and Burke's includes a scary skeleton, glow-in-the-dark elements, a fireplace attached to the Floo Network and a Vanishing Cabinet that Dark wizards might use to sneak in. Gringott's Bank is an impressive two-story building with double doors, and can be opened completely into a large building or closed to create a smaller building. The bank's interior features a removable vault, along with the Philosopher's Stone, a clerk's desk, a chandelier and 'wonky' support pillars. Includes 11 minifigures: Harry Potter, Ron Weasley and Hermione Granger, each with magic wand; Rubeus Hagrid, equipped with his umbrella; Fred and George Weasley; 2 Gringott's goblins; Mr. Ollivander; Lucius Malfoy (in Death Eater disguise); Fenrir Greyback; and 4 new, decorated owls.\n• Ollivander's measures 8\" (20 cm) high x 5\" (13 cm) wide!\n• Borgin and Burke's measures 8\" (20 cm) high x 7\" (18 cm) wide!\n• Gringott's Bank measures 8\" (21 cm) high x 4\" (10 cm) wide when closed, 8\" high x 9\" (23 cm) wide when opened wide!\n• Completed model (depending space allocated between parts) measures 24\" (60 cm) long x 12\" (30 cm) deep x 8\" (21 cm) high",
+   "subtheme": "General"
   },
   "10225-1": {
    "type": "SET",
@@ -712,7 +729,10 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/10236-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/10236-1.png"
-   ]
+   ],
+   "desc_en": "Recreate classic scenes at the Ewok Village!\nTravel to Endor™ and visit the treetop home of the Ewoks. Just like in Star Wars™: Episode VI Return of the Jedi, this recreation of the Ewoks’ forest dwelling is packed with cool functions, including the tree-trunk hideout, secret Lightsaber stash, spider web, net traps, slide, catapults and an elevating throne. Use the rammer function to take out the Scout Trooper’s speeder - just like in the movie! Realistic details include rope walkways, vine and leaf elements, kitchen, food storage area, bedroom and a planning room. The Ewok Village set is the perfect addition to your LEGO® Star Wars collection. Includes R2-D2™and 16 minifigures with weapons: Luke Skywalker™, Princess Leia™, Han Solo™, Chewbacca™, C-3PO™, 2 Rebel soldiers, 5 Ewoks™ (including Wicket™, Teebo™, Chief Chirpa™ and Logray™), 2 Scout Troopers and 2 Stormtroopers™.\n• Includes R2-D2™ and 16 minifigures: Luke Skywalker™, Princess Leia™, Han Solo™, Chewbacca™, C-3PO™, 2 Rebel soldiers, 5 Ewoks™, 2 Scout™ Troopers™ and 2 Stormtroopers™\n• Features tree-trunk hideout and secret Lightsaber stash, spider web and net traps, slide, catapults, elevating throne, speeder rammer function, kitchen, food storage area, bedroom and a planning room\n• Speeder also included\n• Weapons include a Lightsaber, 3 blaster pistols, 2 blasters, 2 blaster rifles, 2 spears, bow and a crossbow\n• Also includes 2 staffs\n• Collect hard-to-find Endor Princess Leia, C-3PO, Luke, Han Solo and Wicket Ewok minifigures!\n• Fend off the advancing Imperial forces\n• Amaze the Ewoks with the elevating throne!\n• Avoid the spider web and net traps!\n• Destroy the speeder with the rammer function!\n• Take refuge in the tree-trunk hideout\n• Shoot down the slide and join the battle\n• Fire rocks at the enemy with the catapults!\n• Measures over 1\" (35cm) high, 21\" (55cm) wide and 13\" (35cm) deep",
+   "subtheme": "Ultimate Collector Series",
+   "figs_value_huf": 109694
   },
   "10240-1": {
    "type": "SET",
@@ -741,7 +761,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/10240-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/10240-1.png"
-   ]
+   ],
+   "desc_en": "Build the ultimate LEGO® Star Wars™ X-wing Starfighter!\nCollect and create the most highly detailed LEGO® Star Wars™ X-wing Starfighter ever produced. This iconic starfighter is featured in many of the most exciting Star Wars battle scenes, including the decisive battle scene above planet Yavin™. Recreate the moment when Luke Skywalker’s X-wing delivered the proton torpedo that led to the destruction of the Imperial Death Star! This realistically detailed model features opening wings and cockpit, a special display stand, data sheet label and R2-D2.\n• Includes R2-D2 atromech droid\n• Features highly authentic detailing, and opening wings and cockpit\n• Measures over 10\" (26cm) high, 20\" (52cm) long and 18\" (46cm) wide\n• Includes display stand and data sheet label!",
+   "subtheme": "Ultimate Collector Series"
   },
   "1382-1": {
    "type": "SET",
@@ -799,7 +821,9 @@
    "figs_value_huf": 25735,
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/1382-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Horror"
   },
   "1383-1": {
    "type": "SET",
@@ -1455,6 +1479,1031 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/21126-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/21126-1.png"
+   ]
+  },
+  "21128-1": {
+   "type": "SET",
+   "name": "The Village",
+   "year": 2016,
+   "category": "Minecraft",
+   "weight_g": 2949.0,
+   "dims_cm": [
+    58.0,
+    37.5,
+    11.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 1572,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min017",
+     "name": "Alex - Reddish Brown Legs",
+     "qty": 1,
+     "sets": 24
+    },
+    {
+     "no": "min027",
+     "name": "Enderman - Reddish Brown Block with Bright Green Top",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "min028",
+     "name": "Villager (Farmer)",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "min029",
+     "name": "Villager (Librarian) - White Torso",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min030",
+     "name": "Zombie Villager - Dark Azure Torso",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min093",
+     "name": "Iron Golem - Tow Ball Arm Attachments",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 31563,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21128-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21128-1.png"
+   ]
+  },
+  "21129-1": {
+   "type": "SET",
+   "name": "The Mushroom Island",
+   "year": 2017,
+   "category": "Minecraft",
+   "weight_g": 468.0,
+   "dims_cm": [
+    26.2,
+    19.1,
+    7.2
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 249,
+   "minifigs": [
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min017",
+     "name": "Alex - Reddish Brown Legs",
+     "qty": 1,
+     "sets": 24
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1066,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21129-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21129-1.png"
+   ]
+  },
+  "21130-1": {
+   "type": "SET",
+   "name": "The Nether Railway",
+   "year": 2017,
+   "category": "Minecraft",
+   "weight_g": 582.0,
+   "dims_cm": [
+    35.4,
+    19.1,
+    7.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 394,
+   "minifigs": [
+    {
+     "no": "min021",
+     "name": "Zombie Pigman",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "min042",
+     "name": "Steve (Light Nougat) - Medium Azure Legs and Armor",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2370,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21130-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21130-1.png"
+   ]
+  },
+  "21134-1": {
+   "type": "SET",
+   "name": "The Waterfall Base",
+   "year": 2017,
+   "category": "Minecraft",
+   "weight_g": 1280.0,
+   "dims_cm": [
+    54.0,
+    28.2,
+    7.8
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 726,
+   "minifigs": [
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min047",
+     "name": "Alex - Pearl Gold Legs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min048",
+     "name": "Steve (Light Nougat) - Flat Silver Legs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min049",
+     "name": "Enderman - Reddish Brown Block with Green Top",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 5696,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21134-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21134-1.png"
+   ]
+  },
+  "21135-1": {
+   "type": "SET",
+   "name": "The Crafting Box 2.0",
+   "year": 2017,
+   "category": "Minecraft",
+   "weight_g": 1434.0,
+   "dims_cm": [
+    48.0,
+    28.2,
+    7.4
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 728,
+   "minifigs": [
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min056",
+     "name": "Steve (Light Nougat) - Dark Orange Legs",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1004,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21135-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21135-1.png"
+   ]
+  },
+  "21136-1": {
+   "type": "SET",
+   "name": "The Ocean Monument",
+   "year": 2017,
+   "category": "Minecraft",
+   "weight_g": 2044.0,
+   "dims_cm": [
+    48.0,
+    37.8,
+    9.4
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 1135,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min055",
+     "name": "Alex - Reddish Brown Legs, Medium Lavender Helmet and Armor",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 3242,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21136-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21136-1.png"
+   ]
+  },
+  "21138-1": {
+   "type": "SET",
+   "name": "The Melon Farm",
+   "year": 2018,
+   "category": "Minecraft",
+   "weight_g": 134.7,
+   "dims_cm": [
+    19.0,
+    14.0,
+    4.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 63,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min028",
+     "name": "Villager (Farmer)",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 4799,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21138-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21138-1.png"
+   ]
+  },
+  "21139-1": {
+   "type": "SET",
+   "name": "The Nether Fight",
+   "year": 2018,
+   "category": "Minecraft",
+   "weight_g": 149.0,
+   "dims_cm": [
+    19.0,
+    14.0,
+    4.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 76,
+   "minifigs": [
+    {
+     "no": "min021",
+     "name": "Zombie Pigman",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "min025",
+     "name": "Wither Skeleton - Straight Arms",
+     "qty": 1,
+     "sets": 7
+    },
+    {
+     "no": "min059",
+     "name": "Alex - Flat Silver Legs and Armor",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 3890,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21139-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21139-1.png"
+   ]
+  },
+  "21141-1": {
+   "type": "SET",
+   "name": "The Zombie Cave",
+   "year": 2018,
+   "category": "Minecraft",
+   "weight_g": 385.0,
+   "dims_cm": [
+    26.0,
+    19.0,
+    6.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 244,
+   "minifigs": [
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min016",
+     "name": "Steve (Light Nougat) - Dark Purple Legs, Flat Silver Helmet",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "min057",
+     "name": "Baby Zombie - Printed Torso",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2553,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21141-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21141-1.png"
+   ]
+  },
+  "21144-1": {
+   "type": "SET",
+   "name": "The Farm Cottage",
+   "year": 2018,
+   "category": "Minecraft",
+   "weight_g": 997.0,
+   "dims_cm": [
+    38.0,
+    25.9,
+    9.2
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 557,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min011",
+     "name": "Skeleton, Minecraft",
+     "qty": 1,
+     "sets": 26
+    },
+    {
+     "no": "min017",
+     "name": "Alex - Reddish Brown Legs",
+     "qty": 1,
+     "sets": 24
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1736,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21144-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21144-1.png"
+   ]
+  },
+  "21146-1": {
+   "type": "SET",
+   "name": "The Skeleton Attack",
+   "year": 2018,
+   "category": "Minecraft",
+   "weight_g": 751.0,
+   "dims_cm": [
+    28.0,
+    26.0,
+    7.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 452,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min011",
+     "name": "Skeleton, Minecraft",
+     "qty": 2,
+     "sets": 26
+    },
+    {
+     "no": "min065",
+     "name": "Skeleton, Minecraft - Medium Lavender Helmet",
+     "qty": 1,
+     "sets": 7
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2253,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21146-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21146-1.png"
+   ]
+  },
+  "21147-1": {
+   "type": "SET",
+   "name": "The Bedrock Adventures",
+   "year": 2018,
+   "category": "Minecraft",
+   "weight_g": 1203.0,
+   "dims_cm": [
+    53.4,
+    27.9,
+    7.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 656,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min059",
+     "name": "Alex - Flat Silver Legs and Armor",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 3293,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21147-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21147-1.png"
+   ]
+  },
+  "21153-1": {
+   "type": "SET",
+   "name": "The Wool Farm",
+   "year": 2019,
+   "category": "Minecraft",
+   "weight_g": 448.0,
+   "dims_cm": [
+    26.2,
+    19.1,
+    9.1
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 265,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 769,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21153-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21153-1.png"
+   ]
+  },
+  "21154-1": {
+   "type": "SET",
+   "name": "The Blaze Bridge",
+   "year": 2019,
+   "category": "Minecraft",
+   "weight_g": 597.0,
+   "dims_cm": [
+    35.4,
+    19.1,
+    7.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 350,
+   "minifigs": [
+    {
+     "no": "min025",
+     "name": "Wither Skeleton - Straight Arms",
+     "qty": 1,
+     "sets": 7
+    },
+    {
+     "no": "min070",
+     "name": "Alex - Medium Azure Legs and Armor",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min071",
+     "name": "Blaze - Trans-Brown Cone Stand",
+     "qty": 2,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 3026,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21154-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21154-1.png"
+   ]
+  },
+  "21155-1": {
+   "type": "SET",
+   "name": "The Creeper Mine",
+   "year": 2019,
+   "category": "Minecraft",
+   "weight_g": 1409.0,
+   "dims_cm": [
+    54.0,
+    28.2,
+    9.1
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 839,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min072",
+     "name": "Blacksmith",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min073",
+     "name": "Husk - Reddish Brown Legs",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 8136,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21155-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21155-1.png"
+   ]
+  },
+  "21161-1": {
+   "type": "SET",
+   "name": "The Crafting Box 3.0",
+   "year": 2020,
+   "category": "Minecraft",
+   "weight_g": 1235.0,
+   "dims_cm": [
+    48.0,
+    28.2,
+    7.4
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 571,
+   "minifigs": [
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min013",
+     "name": "Steve (Light Nougat) - Dark Purple Legs, Flat Silver Helmet and Armor",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "min017",
+     "name": "Alex - Reddish Brown Legs",
+     "qty": 1,
+     "sets": 24
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 3099,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21161-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21161-1.png"
+   ]
+  },
+  "21166-1": {
+   "type": "SET",
+   "name": "The \"Abandoned\" Mine",
+   "year": 2020,
+   "category": "Minecraft",
+   "weight_g": 422.0,
+   "dims_cm": [
+    20.0,
+    26.0,
+    6.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 253,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1333,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21166-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21166-1.png"
+   ]
+  },
+  "21167-1": {
+   "type": "SET",
+   "name": "The Trading Post",
+   "year": 2020,
+   "category": "Minecraft",
+   "weight_g": 351.0,
+   "dims_cm": [
+    25.9,
+    18.8,
+    5.9
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 201,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min011",
+     "name": "Skeleton, Minecraft",
+     "qty": 1,
+     "sets": 26
+    },
+    {
+     "no": "min087",
+     "name": "Wandering Trader",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2700,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21167-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21167-1.png"
+   ]
+  },
+  "21169-1": {
+   "type": "SET",
+   "name": "The First Adventure",
+   "year": 2021,
+   "category": "Minecraft",
+   "weight_g": 941.0,
+   "dims_cm": [
+    26.2,
+    38.2,
+    7.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 546,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min011",
+     "name": "Skeleton, Minecraft",
+     "qty": 2,
+     "sets": 26
+    },
+    {
+     "no": "min017",
+     "name": "Alex - Reddish Brown Legs",
+     "qty": 1,
+     "sets": 24
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2209,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21169-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21169-1.png"
+   ]
+  },
+  "21170-1": {
+   "type": "SET",
+   "name": "The Pig House",
+   "year": 2021,
+   "category": "Minecraft",
+   "weight_g": 881.0,
+   "dims_cm": [
+    26.2,
+    22.2,
+    12.4
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 496,
+   "minifigs": [
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min017",
+     "name": "Alex - Reddish Brown Legs",
+     "qty": 1,
+     "sets": 24
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1066,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21170-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21170-1.png"
+   ]
+  },
+  "21172-1": {
+   "type": "SET",
+   "name": "The Ruined Portal",
+   "year": 2021,
+   "category": "Minecraft",
+   "weight_g": 598.0,
+   "dims_cm": [
+    26.2,
+    22.2,
+    7.6
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 321,
+   "minifigs": [
+    {
+     "no": "min025",
+     "name": "Wither Skeleton - Straight Arms",
+     "qty": 1,
+     "sets": 7
+    },
+    {
+     "no": "min098",
+     "name": "Steve (Light Nougat) - Pearl Dark Gray Legs, Helmet and Armor",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2982,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21172-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21172-1.png"
+   ]
+  },
+  "21174-1": {
+   "type": "SET",
+   "name": "The Modern Treehouse",
+   "year": 2021,
+   "category": "Minecraft",
+   "weight_g": 1824.0,
+   "dims_cm": [
+    48.0,
+    37.8,
+    9.4
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 919,
+   "minifigs": [
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min052",
+     "name": "Creeper, Charged Creeper",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "min106",
+     "name": "Panda Skin",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min107",
+     "name": "Ocelot Skin",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 7411,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21174-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21174-1.png"
+   ]
+  },
+  "21177-1": {
+   "type": "SET",
+   "name": "The Creeper Ambush",
+   "year": 2022,
+   "category": "Minecraft",
+   "weight_g": 103.0,
+   "dims_cm": [
+    14.1,
+    12.2,
+    4.6
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 71,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min108",
+     "name": "Creeper, Exploding Creeper",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2370,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21177-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21177-1.png"
+   ]
+  },
+  "21181-1": {
+   "type": "SET",
+   "name": "The Rabbit Ranch",
+   "year": 2022,
+   "category": "Minecraft",
+   "weight_g": 559.0,
+   "dims_cm": [
+    35.4,
+    19.1,
+    5.9
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 358,
+   "minifigs": [
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min111",
+     "name": "Tamer",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1344,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21181-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21181-1.png"
+   ]
+  },
+  "21184-1": {
+   "type": "SET",
+   "name": "The Bakery",
+   "year": 2022,
+   "category": "Minecraft",
+   "weight_g": 314.0,
+   "dims_cm": [
+    26.0,
+    19.0,
+    4.6
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 153,
+   "minifigs": [
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min115",
+     "name": "Villager (Farmer) - Snow Biome Outfit, Yellow Hat",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min116",
+     "name": "Baker",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 3246,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21184-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21184-1.png"
    ]
   },
   "30611-1": {
@@ -9673,8 +10722,33 @@
   "min023": 1,
   "min025": 7,
   "min026": 1,
+  "min027": 2,
+  "min028": 2,
+  "min029": 1,
+  "min030": 1,
+  "min042": 1,
+  "min047": 1,
+  "min048": 1,
+  "min049": 2,
+  "min052": 4,
+  "min055": 1,
+  "min056": 2,
   "min057": 1,
+  "min059": 2,
+  "min065": 7,
+  "min070": 1,
+  "min071": 1,
+  "min072": 1,
+  "min073": 1,
+  "min087": 1,
   "min093": 2,
+  "min098": 1,
+  "min106": 1,
+  "min107": 1,
+  "min108": 1,
+  "min111": 1,
+  "min115": 1,
+  "min116": 1,
   "min154": 1,
   "min158": 1,
   "min194": 2,
@@ -10135,9 +11209,139 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "min027": {
+   "eur": 4.1,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min028": {
+   "eur": 9.44,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min029": {
+   "eur": 45.58,
+   "cond": "U",
+   "at": "2026-11-02"
+  },
+  "min030": {
+   "eur": 15.23,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min042": {
+   "eur": 2.05,
+   "cond": "U",
+   "at": "2026-11-02"
+  },
+  "min047": {
+   "eur": 3.06,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min048": {
+   "eur": 2.13,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min049": {
+   "eur": 8.82,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min052": {
+   "eur": 8.18,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min055": {
+   "eur": 6.75,
+   "cond": "U",
+   "at": "2026-11-02"
+  },
+  "min056": {
+   "eur": 1.18,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min057": {
+   "eur": 3.02,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min059": {
+   "eur": 3.79,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min065": {
+   "eur": 1.47,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min070": {
+   "eur": 3.17,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min071": {
+   "eur": 1.34,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min072": {
+   "eur": 3.86,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min073": {
+   "eur": 14.69,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min087": {
+   "eur": 3.98,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
   "min093": {
    "eur": 5.26,
    "cond": "U",
+   "at": "2026-11-02"
+  },
+  "min098": {
+   "eur": 5.73,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min106": {
+   "eur": 5.43,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min107": {
+   "eur": 5.08,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min108": {
+   "eur": 4.37,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min111": {
+   "eur": 2.13,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min115": {
+   "eur": 5.54,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min116": {
+   "eur": 1.76,
+   "cond": "N",
    "at": "2026-11-02"
   },
   "min154": {
@@ -10350,6 +11554,36 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "sw0209": {
+   "eur": 17.45,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0210": {
+   "eur": 16.11,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0211": {
+   "eur": 6.63,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0212": {
+   "eur": 20.58,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0213": {
+   "eur": 9.12,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0215": {
+   "eur": 20.15,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
   "sw0217": {
    "eur": 3.51,
    "cond": "N",
@@ -10367,6 +11601,36 @@
   },
   "sw0230": {
    "eur": 7.04,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0236": {
+   "eur": 12.45,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0256": {
+   "eur": 59.17,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0277": {
+   "eur": 16.89,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0292": {
+   "eur": 15.07,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0293": {
+   "eur": 17.58,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0294": {
+   "eur": 31.53,
    "cond": "N",
    "at": "2026-11-02"
   },
@@ -10390,10 +11654,35 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "sw0338": {
+   "eur": 11.13,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0365": {
+   "eur": 6.37,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0366": {
+   "eur": 7.36,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0367": {
+   "eur": 7.06,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
   "sw0402": {
    "eur": 39.24,
    "cond": "N",
    "at": "2026-11-01"
+  },
+  "sw0451": {
+   "eur": 6.44,
+   "cond": "N",
+   "at": "2026-11-02"
   },
   "sw0483": {
    "eur": 52.65,
@@ -10414,6 +11703,46 @@
    "eur": 12.71,
    "cond": "N",
    "at": "2026-11-01"
+  },
+  "sw0504": {
+   "eur": 73.02,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0505": {
+   "eur": 9.12,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0508": {
+   "eur": 10.19,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0509": {
+   "eur": 24.46,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0510": {
+   "eur": 71.62,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0511": {
+   "eur": 15.87,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0512": {
+   "eur": 12.97,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0513": {
+   "eur": 10.06,
+   "cond": "N",
+   "at": "2026-11-02"
   },
   "sw0565": {
    "eur": 7.92,

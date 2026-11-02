@@ -1,7 +1,7 @@
 {
  "_info": "Raktári figurák, amelyek nincsenek a hálóban BrickLink-számmal (scripts/catalog_graph.py).",
  "checked": "2026-11-02",
- "count": 12,
+ "count": 11,
  "missing": [
   {
    "no": "sw0314",
@@ -15,12 +15,12 @@
      "Captain Rex, Helmet Rangefinder"
     ],
     [
-     "fig-003707",
-     "Luminara Unduli, Black Hat"
-    ],
-    [
      "fig-014064",
      "Super Battle Droid, Pearl Titanium, Blaster Arm"
+    ],
+    [
+     "fig-003707",
+     "Luminara Unduli, Black Hat"
     ]
    ]
   },
@@ -44,8 +44,8 @@
      "K-2SO"
     ],
     [
-     "fig-004210",
-     "Director Orson Callan Krennic"
+     "fig-004209",
+     "Bodhi Rook"
     ],
     [
      "fig-004212",
@@ -86,8 +86,8 @@
      "Luke Skywalker, Dark Bluish Gray Robes, Tan Hair, Single Sided Head"
     ],
     [
-     "fig-003886",
-     "Lando Calrissian, Skiff Guard Disguise, Dark Brown Helmet, Tan Legs"
+     "fig-003885",
+     "Kithaba"
     ]
    ]
   },
@@ -103,12 +103,12 @@
      "Darth Vader, White Skin, 50231 Cape, Robe Hem on Legs"
     ],
     [
-     "fig-002684",
-     "Emperor Palpatine, Tan Skin (50231 Cape)"
-    ],
-    [
      "fig-002681",
      "Royal Guard, Dark Red Hands, 50231 Cape"
+    ],
+    [
+     "fig-002530",
+     "Luke Skywalker, Final Duel Outfit, Short Dark Tan Hair"
     ]
    ]
   },
@@ -119,28 +119,6 @@
     "75023-23"
    ],
    "candidates": []
-  },
-  {
-   "no": "cas329",
-   "name": "Fantasy Era - Skeleton Warrior 3, White, Speckled Helmet",
-   "sets": [
-    "7091-1",
-    "7092-1"
-   ],
-   "candidates": [
-    [
-     "fig-009932",
-     "Skeleton, Red Eyes, Speckle Black-Silver Helmet"
-    ],
-    [
-     "fig-009933",
-     "Knight, Black, Armor, Helmet with Grille, Cheek Lines"
-    ],
-    [
-     "fig-009934",
-     "Knight, Dark Blue, Helmet, Angry"
-    ]
-   ]
   },
   {
    "no": "sw0569",
@@ -192,12 +170,12 @@
    ],
    "candidates": [
     [
-     "fig-017326",
-     "Mandalorian, Light Nougat Head"
-    ],
-    [
      "fig-017325",
      "Mandalorian, Umber Brown Head"
+    ],
+    [
+     "fig-017326",
+     "Mandalorian, Light Nougat Head"
     ]
    ]
   },
@@ -209,12 +187,12 @@
    ],
    "candidates": [
     [
-     "fig-017326",
-     "Mandalorian, Light Nougat Head"
-    ],
-    [
      "fig-017325",
      "Mandalorian, Umber Brown Head"
+    ],
+    [
+     "fig-017326",
+     "Mandalorian, Light Nougat Head"
     ]
    ]
   }
