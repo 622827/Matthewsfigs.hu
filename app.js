@@ -432,6 +432,11 @@
       if (!DETAILS[no]) DETAILS[no] = { year: v.year, pieces: v.pieces, versions: d.versions };
       return { no, name: v.name, type: "SET", qty: 0, price: null, preorder: true, img: v.img, virtual: true, sourced: true };
     }
+    // a set one of our minifigures comes in ("appears in these sets")
+    for (const d of Object.values(DETAILS)) for (const s of d.sets || []) if (s.no === no) {
+      return { no, name: DETAILS[no]?.name || s.name || no, type: "SET", qty: 0, price: null, preorder: true,
+               img: `https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(no)}.png`, virtual: true, sourced: true };
+    }
     return null;
   }
 
@@ -645,12 +650,12 @@
       <div class="pd-figgrid pd-mosaic" id="pdInsets">${D.sets.map(s => {
         const o = ours(s.no), sno = s.no.replace(/-1$/, ""), nm = s.name || (o && o.name) || sno;
         const img = `https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(s.no)}.png`;
-        const tag = o ? "a" : "div";
+        const tag = "a";
         const btn = !o ? `<span class="pd-fig__btn is-pre" role="button" tabindex="0" data-source="${esc(s.no)}" data-name="${esc(nm)}">${hu ? "Beszerezzük" : "We'll source it"}</span>`
           : o.preorder ? `<span class="pd-fig__btn is-pre" role="button" tabindex="0" data-prefig="${esc(o.no)}" data-name="${esc(o.name)}">${hu ? "Előrendelés" : "Pre-order"}</span>`
           : shopOn() ? `<span class="pd-fig__btn" role="button" tabindex="0" data-add="${esc(o.no)}" data-name="${esc(sno + " " + o.name)}">${hu ? "Kosárba" : "Add to cart"}</span>`
           : `<span class="pd-fig__btn" role="button" tabindex="0" data-buy="${esc(o.no)}">${hu ? "Megrendelem" : "Order"}</span>`;
-        return `<${tag} class="pd-fig"${o ? ` href="${esc(productUrl(o))}"` : ""}${pv(img, sno + " " + nm, [stockInfo(o)])}>
+        return `<${tag} class="pd-fig" href="${esc(productUrl(o || s))}"${pv(img, sno + " " + nm, [stockInfo(o)])}>
           <span class="pd-fig__no">${esc(sno)}</span>
           <b class="pd-fig__name">${esc(nm)}</b>
           <img src="${img}" alt="${esc(nm)}" loading="lazy">
@@ -760,7 +765,8 @@
     root.querySelectorAll(".pd-setonly img[data-fallback]").forEach(im => im.onerror = () => { if (im.src !== im.dataset.fallback) im.src = im.dataset.fallback; else im.remove(); });
     initPreview(root);
     // other releases we don't stock: "we'll source it" opens the pre-order dialog
-    root.querySelectorAll("[data-source]").forEach(btn => btn.onclick = () => {
+    root.querySelectorAll("[data-source]").forEach(btn => btn.onclick = e => {
+      e.preventDefault(); e.stopPropagation();   // the button sits inside a link card
       const it = { no: btn.dataset.source, name: btn.dataset.name, type: "SET", preorder: true };
       askNotify(it, wantLink(it), "want");
     });
