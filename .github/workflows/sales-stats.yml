@@ -1,0 +1,37 @@
+name: Eladási összesítő
+
+on:
+  workflow_dispatch: {}
+
+concurrency:
+  group: packages
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -q cryptography
+      - name: Összesítés
+        env:
+          PKG_PASSWORD: ${{ secrets.PKG_PASSWORD }}
+          BL_CONSUMER_KEY: ${{ secrets.BL_CONSUMER_KEY }}
+          BL_CONSUMER_SECRET: ${{ secrets.BL_CONSUMER_SECRET }}
+          BL_TOKEN: ${{ secrets.BL_TOKEN }}
+          BL_TOKEN_SECRET: ${{ secrets.BL_TOKEN_SECRET }}
+        run: python scripts/sales_stats.py
+      - name: Mentés
+        run: |
+          git config user.name "inventory-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/p/s
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Eladási összesítő (titkosítva)"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done; exit 1
