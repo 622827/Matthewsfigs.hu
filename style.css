@@ -687,3 +687,7 @@ a.pd-fig:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 
 .pd-mosaic .pd-fig__foot{max-width:100%;flex-wrap:wrap;justify-content:center}
 .pd-mosaic .pd-fig__tag{white-space:normal}
 @media (max-width:560px){.pd-figgrid{grid-template-columns:repeat(2,minmax(0,1fr))}.pd-fig{min-width:0}.pd-fig__name{overflow-wrap:anywhere}}
+/* figurakártya alja: a címkék és az ár ne lógjanak ki, szűk kártyán új sorba törnek */
+.pd-fig{min-width:0;overflow:hidden}
+.pd-fig__foot{flex-wrap:wrap;justify-content:center;row-gap:6px}
+.pd-fig__tag,.pd-mosaic .pd-fig__tag,.pd-fig__price{white-space:nowrap}
