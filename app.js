@@ -446,6 +446,26 @@
       D.sets = figIn(no).sort().map(s => ({ no: s, name: GRAPH.sets[s][0] })).slice(0, 60);
     }
   }
+  // sets whose name contains this one's (or the other way round), e.g. MTT ↔ Trade Federation MTT, from the web
+  const GENERIC = new Set(["the", "and", "of", "set", "pack", "battle", "star", "wars", "lego", "mini", "microfighter", "microfighters", "edition"]);
+  const WEAK = new Set(["clone", "droid", "droids", "trooper", "troopers", "jedi", "sith", "imperial", "rebel", "republic", "separatist", "starfighter", "fighter", "ship", "command", "station"]);
+  const nameWords = s => String(s).toLowerCase().replace(/[’']/g, "").split(/[^a-z0-9-]+/).filter(w => w && !GENERIC.has(w));
+  function graphSimilarSets(no, name) {
+    const mine = nameWords(name); if (!mine.length) return null;
+    const out = [];
+    for (const [n, g] of Object.entries(GRAPH.sets)) {
+      const w = nameWords(g[0]); if (!w.length || (g[2] || 0) < 20) continue;
+      const [a, b] = mine.length <= w.length ? [mine, w] : [w, mine];
+      if (a.length === 1 && WEAK.has(a[0]) && n !== no) continue;   // "Clone Wars Pack" is not like every clone set
+      if (a.every(x => b.includes(x)) || n === no)
+        out.push({ no: n, name: g[0], year: g[1], pieces: g[2], figs: (g[3] || []).reduce((s, f) => s + f[1], 0),
+                   img: `https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(n)}.png` });
+    }
+    if (out.length < 2 || !out.some(v => v.no === no)) return null;
+    const me = out.find(v => v.no === no), rest = out.filter(v => v.no !== no).sort((x, y) => (y.year || 0) - (x.year || 0)).slice(0, 11);
+    return [...rest, me].sort((x, y) => (x.year || 0) - (y.year || 0));
+  }
+
   function graphItem(no) {
     if (GRAPH.sets[no]) return { no, name: GRAPH.sets[no][0], type: "SET", qty: 0, price: null, preorder: true,
       img: `https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(no)}.png`, virtual: true, sourced: true };
@@ -653,9 +673,10 @@
           ${btn}
         </a>`; }).join("")}</div></section>` : "";
     // every release with the same name (Rebrickable list) + BrickLink market value
-    const vers = D.versions && D.versions.length > 1 ? D.versions : null;
+    const simSets = !(D.versions && D.versions.length > 1) && set ? graphSimilarSets(i.no, i.name) : null;
+    const vers = D.versions && D.versions.length > 1 ? D.versions : simSets;
     const verList = vers ? `<section class="pd-vers">
-      <h2>${hu ? `Minden „${esc(i.name)}” kiadás` : `All ${esc(i.name)} sets`}</h2>
+      <h2>${simSets ? (hu ? "Hasonló szettek" : "Similar sets") : hu ? `Minden „${esc(i.name)}” kiadás` : `All ${esc(i.name)} sets`}</h2>
       <div class="pd-vers__wrap"><table class="pd-vers__t">
         <thead><tr><th>${hu ? "Szett" : "Set"}</th><th>${hu ? "Év" : "Year"}</th><th>${hu ? "Elem" : "Pieces"}</th><th>${hu ? "Figura" : "Minifigs"}</th><th>${hu ? "Nálunk" : "With us"}</th></tr></thead>
         <tbody>${vers.map(v => {
