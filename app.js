@@ -422,10 +422,37 @@
     if (!DETAILS[no]) DETAILS[no] = { sets };
     else if (!DETAILS[no].sets) DETAILS[no].sets = sets;
     const v = FIGVALUES[no], price = v && v.eur ? Math.max(500, Math.round(v.eur * FIG_MARKUP * FIG_RATE / 500) * 500) - 20 : 0;
-    return { no, name, type: "MINIFIG", qty: 0, price, preorder: true, img: `https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(no)}.png`, virtual: true };
+    return { no, name, type: "MINIFIG", qty: 0, price, preorder: true, img: figImgUrl(no), virtual: true };
   }
 
   // another release of one of our sets (from the "all releases" table): its own page, to be sourced on request
+  // ---------- the whole set ↔ minifigure web (data/graph.json, scripts/catalog_graph.py) ----------
+  let GRAPH = { sets: {}, figs: {} }, FIG_IN = null;
+  const figImgUrl = no => String(no).startsWith("fig-") ? `https://cdn.rebrickable.com/media/sets/${encodeURIComponent(no)}.jpg`
+                                                        : `https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(no)}.png`;
+  const figIn = no => {        // minifigure -> sets it comes in (inverted once)
+    if (!FIG_IN) { FIG_IN = {}; for (const [s, v] of Object.entries(GRAPH.sets)) for (const [f] of v[3] || []) (FIG_IN[f] ||= []).push(s); }
+    return FIG_IN[no] || [];
+  };
+  // fill in what the catalogue data doesn't have yet (minifigure list of a set, sets of a minifigure, year, pieces)
+  function graphFill(no) {
+    const g = GRAPH.sets[no], D = DETAILS[no] || (DETAILS[no] = {});
+    if (g) {
+      if (!D.minifigs && g[3] && g[3].length) D.minifigs = g[3].map(([f, q]) => ({ no: f, name: GRAPH.figs[f] || f, qty: q, sets: figIn(f).length || null }));
+      if (!D.year && g[1]) D.year = g[1];
+      if (!D.pieces && g[2]) D.pieces = g[2];
+      if (!D.name) D.name = g[0];
+    } else if (GRAPH.figs[no] && !(D.sets && D.sets.length)) {
+      D.sets = figIn(no).sort().map(s => ({ no: s, name: GRAPH.sets[s][0] })).slice(0, 60);
+    }
+  }
+  function graphItem(no) {
+    if (GRAPH.sets[no]) return { no, name: GRAPH.sets[no][0], type: "SET", qty: 0, price: null, preorder: true,
+      img: `https://img.bricklink.com/ItemImage/SN/0/${encodeURIComponent(no)}.png`, virtual: true, sourced: true };
+    if (GRAPH.figs[no]) return { no, name: GRAPH.figs[no], type: "MINIFIG", qty: 0, price: null, preorder: true, img: figImgUrl(no), virtual: true, sourced: true };
+    return null;
+  }
+
   function verSet(no) {
     if (!no) return null;
     for (const d of Object.values(DETAILS)) for (const v of d.versions || []) if (v.no === no) {
@@ -474,7 +501,7 @@
   function renderProduct() {
     const root = $("product"); if (!root) return;
     const no = new URLSearchParams(location.search).get("no") || "";
-    const i = data.items.find(x => x.no === no && !x.preorder) || data.items.find(x => x.no === no) || setFig(no) || verSet(no);
+    const i = data.items.find(x => x.no === no && !x.preorder) || data.items.find(x => x.no === no) || setFig(no) || verSet(no) || graphItem(no);
     const hu = lang === "hu";
     if (!i) {
       root.innerHTML = `<div class="pd-missing"><h1>${hu ? "Ez a termék most nem érhető el" : "This product is not available"}</h1>
@@ -516,6 +543,7 @@
       return `<div class="pd-official">${paras.map(x => `<p>${esc(x)}</p>`).join("")}</div>`;
     })();
     // BrickLink catalogue facts (data/details.json, scripts/catalog_details.py)
+    graphFill(i.no);
     const D = DETAILS[i.no] || {};
     const nf = v => Number(v).toLocaleString(hu ? "hu-HU" : "en-GB", { maximumFractionDigits: 1 });
     const dims = D.dims_cm && D.dims_cm.length === 3 ? D.dims_cm.map(nf).join(" × ") + " cm" : "";
@@ -558,13 +586,13 @@
       <p class="co-muted">${hu ? `A szett ${figTotal} minifigurát tartalmaz.` : `This set contains ${figTotal} minifigure${figTotal > 1 ? "s" : ""}.`}${excl ? (hu ? ` Ebből ${excl} csak ebben a szettben szerepel.` : ` ${excl} of them ${excl > 1 ? "are" : "is"} exclusive to this set.`) : ""}</p>
       <div class="pd-figgrid">${setOnly}${D.minifigs.map(f => {
         const o = ours(f.no), tag = "a";
-        const figImg = `https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(f.no)}.png`;
+        const figImg = `${figImgUrl(f.no)}`;
         return `<${tag} class="pd-fig" href="${esc(productUrl(o || f))}"${pv(figImg, f.no + " " + f.name, [
           f.sets === 1 ? (hu ? "Exkluzív: csak ebben a szettben" : "Exclusive to this set") : f.sets > 1 ? (hu ? `${f.sets} szettben szerepel` : `Appears in ${f.sets} sets`) : "",
           f.qty > 1 ? (hu ? `${f.qty} db van a szettben` : `${f.qty} in this set`) : "", stockInfo(o)])}>
           <span class="pd-fig__no">${esc(f.no)}</span>${f.qty > 1 ? `<span class="pd-fig__qty">${f.qty}×</span>` : ""}
           <b class="pd-fig__name">${esc(f.name.split(" - ")[0])}</b>
-          <img src="https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(f.no)}.png" alt="${esc(f.name)}" loading="lazy">
+          <img src="${figImgUrl(f.no)}" alt="${esc(f.name)}" loading="lazy">
           <span class="pd-fig__foot">${f.sets === 1 ? `<span class="pd-fig__tag is-ex">${hu ? "Exkluzív" : "Exclusive"}</span>` : f.sets > 1 ? `<span class="pd-fig__tag">${f.sets} ${hu ? "szett" : "sets"}</span>` : "<span></span>"}
             ${o && !o.preorder ? `${condLabel(o) ? `<span class="pd-fig__tag is-cond">${condLabel(o)}</span>` : ""}<span class="pd-fig__price">${money(o.price)}</span>` : ""}</span>
           ${(() => {   // one button: in stock → cart (or Messenger order until the shop opens), otherwise → pre-order dialog
@@ -611,7 +639,7 @@
       <h2>${hu ? "Hasonló figurák" : "Similar minifigures"}</h2>
       <p class="co-muted">${hu ? "Ezeket is nálunk találod – raktárról rendelhetők vagy előrendelhetők." : "Also available here – in stock or to pre-order."}</p>
       <div class="pd-figgrid">${similar.map(o => {
-        const img = FIGS[o.no] ? `assets/figs/${encodeURIComponent(o.no)}.webp?v=20261027` : `https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(o.no)}.png`;   // our clean cut-out when there is one
+        const img = FIGS[o.no] ? `assets/figs/${encodeURIComponent(o.no)}.webp?v=20261027` : `${figImgUrl(o.no)}`;   // our clean cut-out when there is one
         const btn = o.preorder
           ? `<span class="pd-fig__btn is-pre" role="button" tabindex="0" data-prefig="${esc(o.no)}" data-name="${esc(o.name)}">${hu ? "Előrendelés" : "Pre-order"}</span>`
           : shopOn() ? `<span class="pd-fig__btn" role="button" tabindex="0" data-add="${esc(o.no)}" data-name="${esc(o.no + " " + o.name)}">${hu ? "Kosárba" : "Add to cart"}</span>`
@@ -865,10 +893,12 @@
     window.MFShop ? window.MFShop.ready : null,
     PAGE_KIND === "product" ? fetch("data/details.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})) : null,
     fetch("data/autolabels.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})),
-    PAGE_KIND === "product" ? fetch("data/desc_hu.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})) : null
+    PAGE_KIND === "product" ? fetch("data/desc_hu.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})) : null,
+    PAGE_KIND === "product" ? fetch("data/graph.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})) : null
   ])
-    .then(([d, boxes, labels, figs, , details, auto, deschu]) => {
+    .then(([d, boxes, labels, figs, , details, auto, deschu, graph]) => {
       DESC_HU = deschu || {};
+      GRAPH = { sets: (graph && graph.sets) || {}, figs: (graph && graph.figs) || {} };
       AUTOLABELS = (auto && auto.labels) || {};
       BOXES = boxes || {}; LABELS = labels || {}; FIGS = figs || {}; DETAILS = (details && details.items) || {}; VALUES = (details && details.values) || {}; FIGVALUES = (details && details.figvalues) || {};
       if (window.MFShop) window.MFShop.setLots(d.items.map(i => ({ ...i })));
