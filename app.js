@@ -425,6 +425,16 @@
     return { no, name, type: "MINIFIG", qty: 0, price, preorder: true, img: `https://img.bricklink.com/ItemImage/MN/0/${encodeURIComponent(no)}.png`, virtual: true };
   }
 
+  // another release of one of our sets (from the "all releases" table): its own page, to be sourced on request
+  function verSet(no) {
+    if (!no) return null;
+    for (const d of Object.values(DETAILS)) for (const v of d.versions || []) if (v.no === no) {
+      if (!DETAILS[no]) DETAILS[no] = { year: v.year, pieces: v.pieces, versions: d.versions };
+      return { no, name: v.name, type: "SET", qty: 0, price: null, preorder: true, img: v.img, virtual: true, sourced: true };
+    }
+    return null;
+  }
+
   // which film / series a set comes from: Brickset subtheme + titles named in LEGO's official description
   const FILMS = [
     [/episode i\b|phantom menace/i, "I. rész – Baljós árnyak", "Episode I – The Phantom Menace"],
@@ -459,7 +469,7 @@
   function renderProduct() {
     const root = $("product"); if (!root) return;
     const no = new URLSearchParams(location.search).get("no") || "";
-    const i = data.items.find(x => x.no === no && !x.preorder) || data.items.find(x => x.no === no) || setFig(no);
+    const i = data.items.find(x => x.no === no && !x.preorder) || data.items.find(x => x.no === no) || setFig(no) || verSet(no);
     const hu = lang === "hu";
     if (!i) {
       root.innerHTML = `<div class="pd-missing"><h1>${hu ? "Ez a termék most nem érhető el" : "This product is not available"}</h1>
@@ -470,7 +480,8 @@
     document.title = `${sn} ${i.name} – Matthew's Fig Supply Co.`;
     const back = set ? "szettek.html" : "figurak.html";
     const note = (i.note || "").trim();
-    const stock = i.preorder ? (hu ? "Jelenleg elfogyott – előrendelhető" : "Sold out – available to pre-order")
+    const stock = i.sourced ? (hu ? "Nincs raktáron – egyedi rendelésre beszerezzük" : "Not in stock – we can source it for you")
+      : i.preorder ? (hu ? "Jelenleg elfogyott – előrendelhető" : "Sold out – available to pre-order")
       : (hu ? "Raktáron" : "In stock");
     const cond = set
       ? (hu ? "Bontatlan, gyári állapotú (MISB – Mint In Sealed Box) szett. A doboz kisebb gyártási vagy szállítási nyomai előfordulhatnak." : "Brand new, factory sealed (MISB – Mint In Sealed Box). Minor factory or shipping marks on the box may occur.")
@@ -624,7 +635,7 @@
           return `<tr${me ? ' class="is-me"' : ""}${pv(v.img, v.no.replace(/-1$/, "") + " " + v.name, [
             [v.year, v.pieces ? nf(v.pieces) + (hu ? " elem" : " pieces") : "", v.figs ? v.figs + (hu ? " minifigura" : " minifigures") : ""].filter(Boolean).join(" · "),
             me ? (hu ? "Ezt a szettet nézed" : "You're looking at this set") : stockInfo(o)])}>
-            <td><span class="pd-vers__set"><img src="${esc(v.img)}" alt="" loading="lazy">${o && !me ? `<a href="${esc(productUrl(o))}">${nm}</a>` : `<span>${nm}</span>`}</span></td>
+            <td><span class="pd-vers__set"><img src="${esc(v.img)}" alt="" loading="lazy">${!me ? `<a href="${esc(productUrl(o || v))}">${nm}</a>` : `<span>${nm}</span>`}</span></td>
             <td>${v.year || "–"}</td><td>${v.pieces ? nf(v.pieces) : "–"}</td>
             <td>${v.figs != null ? v.figs : (me && D.minifigs ? D.minifigs.reduce((s, f) => s + f.qty, 0) : "–")}</td><td>${act}</td></tr>`; }).join("")}</tbody></table></div>
       <p class="co-muted co-small">${hu ? "Ami nincs raktáron, azt egyedi rendelésre beszerezzük. Kiadások: Rebrickable." : "If it's not in stock, we can source it for you. Releases: Rebrickable."}</p></section>` : "";
