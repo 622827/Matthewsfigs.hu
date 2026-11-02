@@ -1,7 +1,576 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-02T11:50:42+00:00",
+ "updated": "2026-11-02T14:12:56+00:00",
  "items": {
+  "10066-1": {
+   "type": "SET",
+   "name": "Castle Accessories",
+   "year": 2002,
+   "category": "Bulk Bricks",
+   "weight_g": 22.0,
+   "dims_cm": [
+    13.6,
+    13.9,
+    1.4
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 31,
+   "minifigs": [
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 1,
+     "sets": 47
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "5138-1",
+     "name": "Castle Accessories",
+     "year": 1994,
+     "pieces": 39,
+     "img": "https://cdn.rebrickable.com/media/sets/5138-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "5135-1",
+     "name": "Castle Accessories",
+     "year": 1995,
+     "pieces": 34,
+     "img": "https://cdn.rebrickable.com/media/sets/5135-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "5135-2",
+     "name": "Castle Accessories",
+     "year": 1996,
+     "pieces": 39,
+     "img": "https://cdn.rebrickable.com/media/sets/5135-2.jpg",
+     "figs": 0
+    },
+    {
+     "no": "5383-1",
+     "name": "Castle Accessories",
+     "year": 1998,
+     "pieces": 36,
+     "img": "https://cdn.rebrickable.com/media/sets/5383-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "10066-1",
+     "name": "Castle Accessories",
+     "year": 2002,
+     "pieces": 41,
+     "img": "https://cdn.rebrickable.com/media/sets/10066-1.jpg",
+     "figs": 1
+    }
+   ],
+   "figs_value_huf": 1898,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/10066-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/10066-1.png"
+   ]
+  },
+  "10178-1": {
+   "type": "SET",
+   "name": "Motorized Walking AT-AT",
+   "year": 2007,
+   "category": "Star Wars",
+   "weight_g": 1730.0,
+   "dims_cm": [
+    57.0,
+    38.0,
+    7.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 1132,
+   "minifigs": [
+    {
+     "no": "sw0090",
+     "name": "Luke Skywalker - Pilot Suit, Simple Torso and Helmet, Light Nougat Head",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0115",
+     "name": "Snowtrooper, Light Bluish Gray Hips, White Hands (Hoth Stormtrooper)",
+     "qty": 1,
+     "sets": 9
+    },
+    {
+     "no": "sw0177",
+     "name": "AT-AT Driver - Red Imperial Logo, Bluish Grays, Black Head, Stormtrooper Helmet",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0178",
+     "name": "General Maximillian Veers - Officer Uniform, Dark Bluish Gray Helmet",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": true,
+   "versions": [],
+   "figs_value_huf": 18331,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/10178-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/10178-1.png"
+   ]
+  },
+  "10179-1": {
+   "type": "SET",
+   "name": "Millennium Falcon - UCS",
+   "year": 2007,
+   "category": "Star Wars",
+   "weight_g": 10214.9,
+   "dims_cm": [
+    64.39,
+    47.63,
+    19.69
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 5201,
+   "minifigs": [
+    {
+     "no": "sw0011a",
+     "name": "Chewbacca - Reddish Brown",
+     "qty": 1,
+     "sets": 13
+    },
+    {
+     "no": "sw0174",
+     "name": "Obi-Wan Kenobi - Old, Light Bluish Gray Hair and Beard, Black Eyes",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0175",
+     "name": "Princess Leia - White Dress, Simple Belt, Small Eyes, Textured Hair",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0176",
+     "name": "Luke Skywalker - Tatooine, Light Nougat, Long Hair, White Tunic, Tan Legs",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0179",
+     "name": "Han Solo - Black Vest over Tan Shirt, Reddish Brown Legs with Belts, Black Eyes",
+     "qty": 1,
+     "sets": 3
+    }
+   ],
+   "ucs": true,
+   "versions": [],
+   "figs_value_huf": 27068,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/10179-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/10179-1.png"
+   ]
+  },
+  "10188-1": {
+   "type": "SET",
+   "name": "Death Star - UCS",
+   "year": 2008,
+   "category": "Star Wars",
+   "weight_g": 8060.0,
+   "dims_cm": [
+    58.5,
+    50.2,
+    17.2
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 3787,
+   "minifigs": [
+    {
+     "no": "sw0011a",
+     "name": "Chewbacca - Reddish Brown",
+     "qty": 1,
+     "sets": 13
+    },
+    {
+     "no": "sw0040b",
+     "name": "Imperial Royal Guard - Black Hands",
+     "qty": 2,
+     "sets": 2
+    },
+    {
+     "no": "sw0156",
+     "name": "Mouse Droid (MSE-6-series Repair Droid) - Black / Dark Bluish Gray",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sw0157",
+     "name": "Grand Moff Wilhuff Tarkin - Dark Bluish Gray Uniform, Smooth Hair",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0161a",
+     "name": "C-3PO - Pearl Gold with Pearl Gold Hands",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sw0175",
+     "name": "Princess Leia - White Dress, Simple Belt, Small Eyes, Textured Hair",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0176",
+     "name": "Luke Skywalker - Tatooine, Light Nougat, Long Hair, White Tunic, Tan Legs",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0179",
+     "name": "Han Solo - Black Vest over Tan Shirt, Reddish Brown Legs with Belts, Black Eyes",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0188",
+     "name": "Imperial Stormtrooper - Black Head, Dotted Mouth Helmet",
+     "qty": 2,
+     "sets": 6
+    },
+    {
+     "no": "sw0204",
+     "name": "Luke Skywalker - Stormtrooper Outfit, Plain Legs",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0205",
+     "name": "Han Solo - Stormtrooper Outfit, Plain Legs, Black Eyes",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0206",
+     "name": "Obi-Wan Kenobi - Old, Reddish Brown Hood and Cape, Black Eyes",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0207",
+     "name": "Luke Skywalker (Jedi Knight)",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0208",
+     "name": "Imperial Trooper (Black Helmet)",
+     "qty": 2,
+     "sets": 2
+    },
+    {
+     "no": "sw0209",
+     "name": "Darth Vader (Death Star Torso)",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0210",
+     "name": "Emperor Palpatine - Light Bluish Gray Head, Black Hands",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0211",
+     "name": "Interrogation Droid - Screwdriver with Narrow Head",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0212",
+     "name": "Protocol Droid",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0213",
+     "name": "Astromech Droid, R2-Q5",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0215",
+     "name": "Assassin Droid - White",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0217",
+     "name": "Astromech Droid, R2-D2, Light Bluish Gray Head",
+     "qty": 1,
+     "sets": 10
+    }
+   ],
+   "ucs": true,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/10188-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/10188-1.png"
+   ]
+  },
+  "10198-1": {
+   "type": "SET",
+   "name": "Tantive IV",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 2176.0,
+   "dims_cm": [
+    58.2,
+    37.8,
+    8.7
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 1403,
+   "minifigs": [
+    {
+     "no": "sw0161a",
+     "name": "C-3PO - Pearl Gold with Pearl Gold Hands",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sw0175",
+     "name": "Princess Leia - White Dress, Simple Belt, Small Eyes, Textured Hair",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0187",
+     "name": "Rebel Fleet Trooper / Rebel Scout Trooper - Plain Vest, Frown",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0217",
+     "name": "Astromech Droid, R2-D2, Light Bluish Gray Head",
+     "qty": 1,
+     "sets": 10
+    },
+    {
+     "no": "sw0256",
+     "name": "Captain Antilles - Light Bluish Gray Shirt",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": true,
+   "versions": [
+    {
+     "no": "10198-1",
+     "name": "Tantive IV",
+     "year": 2009,
+     "pieces": 1408,
+     "img": "https://cdn.rebrickable.com/media/sets/10198-1.jpg",
+     "figs": 5
+    },
+    {
+     "no": "6382975-1",
+     "name": "Tantive IV",
+     "year": 2019,
+     "pieces": 56,
+     "img": "https://cdn.rebrickable.com/media/sets/6382975-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "75244-1",
+     "name": "Tantive IV",
+     "year": 2019,
+     "pieces": 1768,
+     "img": "https://cdn.rebrickable.com/media/sets/75244-1.jpg",
+     "figs": 6
+    },
+    {
+     "no": "75376-1",
+     "name": "Tantive IV",
+     "year": 2024,
+     "pieces": 654,
+     "img": "https://cdn.rebrickable.com/media/sets/75376-1.jpg",
+     "figs": 0
+    }
+   ],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/10198-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/10198-1.png"
+   ]
+  },
+  "10212-1": {
+   "type": "SET",
+   "name": "Imperial Shuttle - UCS",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 3985.0,
+   "dims_cm": [
+    58.0,
+    47.5,
+    8.8
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 2497,
+   "minifigs": [
+    {
+     "no": "sw0188",
+     "name": "Imperial Stormtrooper - Black Head, Dotted Mouth Helmet",
+     "qty": 1,
+     "sets": 6
+    },
+    {
+     "no": "sw0277",
+     "name": "Darth Vader (White Pupils)",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0292",
+     "name": "Luke Skywalker (Jedi Knight, Pupils)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0293",
+     "name": "Imperial Officer (Captain / Commandant / Commander) - Cavalry Kepi, Smirk",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0294",
+     "name": "Imperial Pilot (Cap)",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": true,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/10212-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/10212-1.png"
+   ]
+  },
+  "10217-1": {
+   "type": "SET",
+   "name": "Diagon Alley",
+   "year": 2011,
+   "category": "Harry Potter",
+   "weight_g": 2330.0,
+   "dims_cm": [
+    57.5,
+    37.3,
+    8.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 2018,
+   "minifigs": [
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 1,
+     "sets": 47
+    },
+    {
+     "no": "hp087",
+     "name": "Harry Potter - Dark Blue Open Jacket with Stripe, Black Legs",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "hp091",
+     "name": "Fenrir Greyback - Dark Brown Hair",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "hp104",
+     "name": "Lucius Malfoy - Black Robe, Tan Hair",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "hp111",
+     "name": "Rubeus Hagrid - Dark Brown Topcoat with Buttons (Light Nougat Version with Movable Hands)",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "hp117",
+     "name": "Goblin - Black Jacket, Light Bluish Gray Legs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "hp118",
+     "name": "Goblin - Black Jacket, Reddish Brown Legs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "hp119",
+     "name": "Garrick Ollivander - Bushy Hair with Bangs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "hp121",
+     "name": "Hermione Granger - Light Bluish Gray Sweater",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "hp122",
+     "name": "Fred / George Weasley - Dark Orange Suit",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "hp123",
+     "name": "Ron Weasley - Red Tartan Sweater, Reddish Brown Legs",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "10217-1",
+     "name": "Diagon Alley",
+     "year": 2011,
+     "pieces": 2029,
+     "img": "https://cdn.rebrickable.com/media/sets/10217-1.jpg",
+     "figs": 12
+    },
+    {
+     "no": "40289-1",
+     "name": "Diagon Alley",
+     "year": 2018,
+     "pieces": 374,
+     "img": "https://cdn.rebrickable.com/media/sets/40289-1.jpg",
+     "figs": 1
+    },
+    {
+     "no": "75978-1",
+     "name": "Diagon Alley",
+     "year": 2020,
+     "pieces": 5548,
+     "img": "https://cdn.rebrickable.com/media/sets/75978-1.jpg",
+     "figs": 17
+    }
+   ],
+   "figs_value_huf": 33087,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/10217-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/10217-1.png"
+   ]
+  },
   "10225-1": {
    "type": "SET",
    "name": "R2-D2 - UCS",
@@ -29,6 +598,341 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/10225-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/10225-1.png"
+   ],
+   "desc_en": "Presenting the ultimate collector series R2-D2 – the best-loved droid in the Star Wars galaxy!\nPresenting the iconic R2-D2 as you've never seen him before. Everyone's favorite droid from the Star Wars galaxy is now part of the ultimate collector series and features fantastic detailing, such as rectractable third leg, front panels that open to reveal a universal computer interface arm and a circular saw, rotating head and 2 fold-out front spacecraft linkage control arms. With the included fact plaque and mini R2-D2 figure, this diminutive model is the perfect addition to your Star Wars collection! Measures over 12” (31cm) high and 7” (18cm) wide.\n•\nUltimate Collector Series R2-D2™!\n•\nFeatures retractable third leg!\n•\nFront panels open to reveal a universal computer interface arm and circular saw!\n•\nFeatures realistic rotating head!\n•\nR2-D2 features 2 fold-out front spacecraft linkage control arms!\n•\nIncludes fact plaque and R2-D2 minifigure!\n•\nMeasures over 12” (31 cm) high and 7” (18 cm) wide!",
+   "subtheme": "Ultimate Collector Series"
+  },
+  "10236-1": {
+   "type": "SET",
+   "name": "Ewok Village - UCS",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 3031.0,
+   "dims_cm": [
+    58.0,
+    48.0,
+    9.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 1988,
+   "minifigs": [
+    {
+     "no": "sw0011a",
+     "name": "Chewbacca - Reddish Brown",
+     "qty": 1,
+     "sets": 13
+    },
+    {
+     "no": "sw0236",
+     "name": "Chief Chirpa (Ewok)",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0338",
+     "name": "Logray (Ewok)",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0365",
+     "name": "C-3PO - Colorful Wires Pattern",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0366",
+     "name": "Imperial Stormtrooper - Printed Black Head, Dotted Mouth Helmet, Detailed Armor",
+     "qty": 2,
+     "sets": 2
+    },
+    {
+     "no": "sw0367",
+     "name": "Endor Rebel Commando - Dark Tan Vest",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0451",
+     "name": "Han Solo - Black Vest with Pockets over Tan Shirt with Dark Tan Creases, Reddish Brown Legs with Belts",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0504",
+     "name": "Princess Leia - Endor Outfit, Dark Tan Robe and Skirt, Loose Hair",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0505",
+     "name": "Imperial Scout Trooper - Printed Black Head and Legs",
+     "qty": 2,
+     "sets": 2
+    },
+    {
+     "no": "sw0508",
+     "name": "Ewok Warrior",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0509",
+     "name": "Luke Skywalker (Jedi Master, Endor, Dark Tan Hair, Smile / Open Mouth)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0510",
+     "name": "Teebo (Ewok)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0511",
+     "name": "Endor Rebel Commando - Shaggy Beard, Dual Sided Head",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0512",
+     "name": "Astromech Droid, R2-D2, Flat Silver Head",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0513",
+     "name": "Wicket (Ewok) - Printed Dark Orange Hood, Tan Face",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": true,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/10236-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/10236-1.png"
+   ]
+  },
+  "10240-1": {
+   "type": "SET",
+   "name": "Red Five X-wing Starfighter - UCS",
+   "year": 2013,
+   "category": "Star Wars",
+   "weight_g": 2270.0,
+   "dims_cm": [
+    58.0,
+    37.5,
+    8.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 1596,
+   "minifigs": [
+    {
+     "no": "sw0217",
+     "name": "Astromech Droid, R2-D2, Light Bluish Gray Head",
+     "qty": 1,
+     "sets": 10
+    }
+   ],
+   "ucs": true,
+   "versions": [],
+   "figs_value_huf": 1286,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/10240-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/10240-1.png"
+   ]
+  },
+  "1382-1": {
+   "type": "SET",
+   "name": "Scary Laboratory",
+   "year": 2002,
+   "category": "Studios",
+   "weight_g": 900.0,
+   "dims_cm": [
+    38.0,
+    28.0,
+    5.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 482,
+   "minifigs": [
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 1,
+     "sets": 47
+    },
+    {
+     "no": "hrf001",
+     "name": "Frankenstein",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "hrf002",
+     "name": "Gent",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "hrf003",
+     "name": "Lady",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "hrf004",
+     "name": "Mad Scientist",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "stu002",
+     "name": "Director",
+     "qty": 1,
+     "sets": 11
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 25735,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/1382-1.png"
+   ]
+  },
+  "1383-1": {
+   "type": "SET",
+   "name": "Curse of the Pharaoh",
+   "year": 2002,
+   "category": "Studios",
+   "weight_g": 98.0,
+   "dims_cm": [
+    14.2,
+    9.5,
+    4.7
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 44,
+   "minifigs": [
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 1,
+     "sets": 47
+    },
+    {
+     "no": "hrf007",
+     "name": "Mummy",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 6524,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/1383-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/1383-1.png"
+   ]
+  },
+  "1411-1": {
+   "type": "SET",
+   "name": "Pirate's Treasure Hunt - Quaker Oats Promotional polybag",
+   "year": 2001,
+   "category": "Studios",
+   "weight_g": 27.62,
+   "dims_cm": [
+    17.0,
+    16.5,
+    1.36
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 16,
+   "minifigs": [
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 1,
+     "sets": 47
+    },
+    {
+     "no": "pi002",
+     "name": "Captain Red Beard - Plain Pirate Hat",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "stu001",
+     "name": "Cameraman, Blue Legs, Blue Cap",
+     "qty": 1,
+     "sets": 13
+    },
+    {
+     "no": "stu002",
+     "name": "Director",
+     "qty": 1,
+     "sets": 11
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 9264,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/1411-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/1411-1.png"
+   ]
+  },
+  "1782-1": {
+   "type": "SET",
+   "name": "Discovery Station",
+   "year": 1997,
+   "category": "Town",
+   "weight_g": 980.0,
+   "dims_cm": [
+    38.2,
+    28.6,
+    7.1
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 301,
+   "minifigs": [
+    {
+     "no": "div008",
+     "name": "Divers - Control 1, Yellow Legs with Black Hips, White Cap",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "div012",
+     "name": "Divers - Control 2, Yellow Legs with Black Hips, White Cap",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "div014",
+     "name": "Divers - Red Diver 2, Red Legs, Black Helmet",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "div020",
+     "name": "Divers - Red Diver 2, White Cap",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 1,
+     "sets": 47
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 5220,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/1782-1.png"
    ]
   },
   "20009-1": {
@@ -46,6 +950,511 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/20009-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/20009-1.png"
+   ],
+   "desc_en": "This powerful six-legged walker vehicle is a vital part of the Republic forces. Separatists around the galaxy fear its approach! This miniature build features details straight from The Clone Wars ! Four ball-turret laser cannons line the front of the walker! A single heavy cannon is mounted on the turret! The walker's armour easily deflect small arms fire! AT-TE Walker dimensions: 12.6cm x 7.7cm! LEGO Club Exclusives are only available to LEGO Club members from launch for a period of six weeks. If you would like to purchase this product between 9th November and 21st December 2009 someone in your household must be a member of the LEGO Club. If you would like to register your child for LEGO Club membership please add this product to your shopping cart and fill in the LEGO Club membership form at the end of checkout. If someone in your household is already a LEGO Club member, please add this item to your cart and proceed as usual.",
+   "subtheme": "The Clone Wars"
+  },
+  "21113-1": {
+   "type": "SET",
+   "name": "The Cave",
+   "year": 2014,
+   "category": "Minecraft",
+   "weight_g": 418.0,
+   "dims_cm": [
+    26.0,
+    19.5,
+    7.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 256,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1333,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21113-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21113-1.png"
+   ]
+  },
+  "21114-1": {
+   "type": "SET",
+   "name": "The Farm",
+   "year": 2014,
+   "category": "Minecraft",
+   "weight_g": 475.0,
+   "dims_cm": [
+    35.0,
+    19.0,
+    5.7
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 264,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min011",
+     "name": "Skeleton, Minecraft",
+     "qty": 1,
+     "sets": 26
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1242,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21114-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21114-1.png"
+   ]
+  },
+  "21115-1": {
+   "type": "SET",
+   "name": "The First Night",
+   "year": 2014,
+   "category": "Minecraft",
+   "weight_g": 854.0,
+   "dims_cm": [
+    28.0,
+    26.0,
+    9.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 412,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1341,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21115-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21115-1.png"
+   ]
+  },
+  "21116-1": {
+   "type": "SET",
+   "name": "Crafting Box",
+   "year": 2014,
+   "category": "Minecraft",
+   "weight_g": 1045.0,
+   "dims_cm": [
+    38.0,
+    26.0,
+    9.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 525,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min011",
+     "name": "Skeleton, Minecraft",
+     "qty": 1,
+     "sets": 26
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1242,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21116-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21116-1.png"
+   ]
+  },
+  "21118-1": {
+   "type": "SET",
+   "name": "The Mine",
+   "year": 2014,
+   "category": "Minecraft",
+   "weight_g": 1730.0,
+   "dims_cm": [
+    47.3,
+    37.3,
+    9.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 920,
+   "minifigs": [
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min011",
+     "name": "Skeleton, Minecraft",
+     "qty": 1,
+     "sets": 26
+    },
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min013",
+     "name": "Steve (Light Nougat) - Dark Purple Legs, Flat Silver Helmet and Armor",
+     "qty": 1,
+     "sets": 4
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "4204-1",
+     "name": "The Mine",
+     "year": 2012,
+     "pieces": 748,
+     "img": "https://cdn.rebrickable.com/media/sets/4204-1.jpg",
+     "figs": 4
+    },
+    {
+     "no": "21118-1",
+     "name": "The Mine",
+     "year": 2014,
+     "pieces": 922,
+     "img": "https://cdn.rebrickable.com/media/sets/21118-1.jpg",
+     "figs": 4
+    }
+   ],
+   "figs_value_huf": 3077,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21118-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21118-1.png"
+   ]
+  },
+  "21119-1": {
+   "type": "SET",
+   "name": "The Dungeon",
+   "year": 2015,
+   "category": "Minecraft",
+   "weight_g": 410.0,
+   "dims_cm": [
+    26.0,
+    19.0,
+    6.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 228,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 2,
+     "sets": 22
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1898,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21119-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21119-1.png"
+   ]
+  },
+  "21120-1": {
+   "type": "SET",
+   "name": "The Snow Hideout",
+   "year": 2015,
+   "category": "Minecraft",
+   "weight_g": 644.0,
+   "dims_cm": [
+    28.0,
+    26.0,
+    7.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 319,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min023",
+     "name": "Snow Golem - Stud Shooter Arms, Narrow Torso",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 4162,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21120-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21120-1.png"
+   ]
+  },
+  "21121-1": {
+   "type": "SET",
+   "name": "The Desert Outpost",
+   "year": 2015,
+   "category": "Minecraft",
+   "weight_g": 928.0,
+   "dims_cm": [
+    37.6,
+    26.0,
+    6.8
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 509,
+   "minifigs": [
+    {
+     "no": "min011",
+     "name": "Skeleton, Minecraft",
+     "qty": 1,
+     "sets": 26
+    },
+    {
+     "no": "min016",
+     "name": "Steve (Light Nougat) - Dark Purple Legs, Flat Silver Helmet",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "min017",
+     "name": "Alex - Reddish Brown Legs",
+     "qty": 1,
+     "sets": 24
+    },
+    {
+     "no": "min018",
+     "name": "Skeleton, Minecraft - Flat Silver Helmet and Armor",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 3616,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21121-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21121-1.png"
+   ]
+  },
+  "21122-1": {
+   "type": "SET",
+   "name": "The Nether Fortress",
+   "year": 2015,
+   "category": "Minecraft",
+   "weight_g": 985.0,
+   "dims_cm": [
+    53.0,
+    28.0,
+    5.7
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 572,
+   "minifigs": [
+    {
+     "no": "min019",
+     "name": "Alex - Reddish Brown Legs, Medium Azure Helmet",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min020",
+     "name": "Steve (Light Nougat) - Dark Purple Legs, Medium Azure Helmet and Armor",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min021",
+     "name": "Zombie Pigman",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "min022",
+     "name": "Blaze - Plates Stand",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 6891,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21122-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21122-1.png"
+   ]
+  },
+  "21123-1": {
+   "type": "SET",
+   "name": "The Iron Golem",
+   "year": 2016,
+   "category": "Minecraft",
+   "weight_g": 400.0,
+   "dims_cm": [
+    26.2,
+    18.9,
+    6.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 174,
+   "minifigs": [
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min017",
+     "name": "Alex - Reddish Brown Legs",
+     "qty": 1,
+     "sets": 24
+    },
+    {
+     "no": "min093",
+     "name": "Iron Golem - Tow Ball Arm Attachments",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2986,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21123-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21123-1.png"
+   ]
+  },
+  "21125-1": {
+   "type": "SET",
+   "name": "The Jungle Tree House",
+   "year": 2016,
+   "category": "Minecraft",
+   "weight_g": 1300.0,
+   "dims_cm": [
+    47.7,
+    28.0,
+    5.8
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 721,
+   "minifigs": [
+    {
+     "no": "min011",
+     "name": "Skeleton, Minecraft",
+     "qty": 1,
+     "sets": 26
+    },
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min016",
+     "name": "Steve (Light Nougat) - Dark Purple Legs, Flat Silver Helmet",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "min026",
+     "name": "Alex - Flat Silver Legs",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2740,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21125-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21125-1.png"
+   ]
+  },
+  "21126-1": {
+   "type": "SET",
+   "name": "The Wither",
+   "year": 2016,
+   "category": "Minecraft",
+   "weight_g": 550.0,
+   "dims_cm": [
+    35.3,
+    19.0,
+    5.7
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 287,
+   "minifigs": [
+    {
+     "no": "min013",
+     "name": "Steve (Light Nougat) - Dark Purple Legs, Flat Silver Helmet and Armor",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "min025",
+     "name": "Wither Skeleton - Straight Arms",
+     "qty": 2,
+     "sets": 7
+    },
+    {
+     "no": "min154",
+     "name": "Wither",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 10466,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21126-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21126-1.png"
    ]
   },
   "30611-1": {
@@ -67,7 +1476,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/30611-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/30611-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Promotional"
   },
   "40686-1": {
    "bs_id": 48958,
@@ -306,7 +1717,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/4479-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/4479-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Episode V"
   },
   "472407-1": {
    "bs_id": 50369,
@@ -440,7 +1853,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/6210-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/6210-1.png"
-   ]
+   ],
+   "desc_en": "As he sails across the dunes of Tatooine in his mighty Sail Barge, little does Jabba the Hutt know that he's in for a nasty surprise! With its opening panels and rotating blaster cannon, the giant Sail Barge seems unstoppable…until Luke Skywalker and his friends break free on the desert skiff above the hungry Sarlacc Pit! Even bounty hunter Boba Fett may not be able to keep the heroes from escaping. Includes Jabba the Hutt, Luke Skywalker, Han Solo, Lando Calrissian in guard disguise, prisoner Princess Leia, Boba Fett, Gamorrean Guard, and R2-D2 with serving tray! Sail Barge measures 18\" (46cm) long! Includes Sarlacc pit and desert skiff! Sarlacc's jaws open and close! Sail Barge's side flips down to reveal inner chambers! Desert skiff measures over 8\" (20cm) long!",
+   "subtheme": "Episode VI"
   },
   "75020-1": {
    "bs_id": 10227,
@@ -696,7 +2111,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/75182-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/75182-1.png"
-   ]
+   ],
+   "desc_en": "Engage the Droid Army with this LEGO® Star Wars Republic Fighter Tank, featuring an opening top hatch with minifigure cockpit, 2 elevating guns with stud shooters, rear ammo store and hidden wheels for a hover look. This set also includes 2 minifigures and 2 droid figures.\n• Includes 2 minifigures: Aayla Secura and a Clone Trooper Gunner, plus 2 Battle Droid figures.\n• Features an opening top hatch with minifigure cockpit, 2 elevating guns with stud shooters, rear ammo store and hidden wheels for a hover look.\n• Elevate the stud shooters and blast the Battle Droids!\n• Weapons include Aayla’s Lightsaber, 2 blasters and a blaster rifle.\n• Accessory elements include a wrench and extra stud shooter ammo.\n• Measures over 2” (7cm) high, 6” (17cm) long and 4” (12cm) wide.",
+   "subtheme": "The Clone Wars"
   },
   "75280-1": {
    "bs_id": 30188,
@@ -963,7 +2380,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/75308-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/75308-1.png"
-   ]
+   ],
+   "desc_en": "Relive classic Star Wars™ moments as you build this exceptionally detailed R2-D2 LEGO® droid figure. The brilliant new-for-May-2021 design is packed with authentic details, including a retractable mid-leg, rotating head, opening and extendable front hatches, a periscope that can be pulled up and turned, and Luke Skywalker’s lightsaber hidden in a compartment in the head.\nBuild and display\nThis cool construction model comes with a buildable display stand, featuring an information plaque, R2-D2 LEGO droid figure and an exclusive Lucasfilm 50th anniversary LEGO brick, to complete an awesome centrepiece for your home or workplace.\nSpecial gift\nPart of a premium-quality collection of LEGO Star Wars building kits for adults, this set would make a wonderful gift for yourself, Star Wars fans and advanced LEGO builders.\n• Build and display this fantastically detailed, new-for-May-2021, LEGO® brick model of an iconic character from the Star Wars™ saga: R2-D2 (75308).\n• Authentic features include a retractable mid-leg, rotating head, opening and extendable front hatches and adjustable periscope, plus a lightsaber hidden in a compartment in the head.\n• Includes a buildable display stand with an information plaque, LEGO® Star Wars™ R2-D2 LEGO droid figure and a special Lucasfilm 50th anniversary LEGO brick.\n• This premium-quality set is part of a series of collectible LEGO® Star Wars™ build-to-display models.\n• Offering a challenging and rewarding build, this 2,315-piece set makes an awesome birthday present, holiday gift or surprise treat for any Star Wars™ connoisseur and LEGO® Star Wars lover.\n• Measuring over 12.5 in. (31 cm) high, 7.5 in. (19 cm) wide and 6 in. (15 cm) deep, this collectible, brick-built R2-D2 model makes an impressive centrepiece in a home or workplace.\n• Thinking of buying this set for a Star Wars™ memorabilia collector who is new to LEGO® building? Don’t worry. It comes with clear instructions so they can tackle this complex build with confidence.\n• Collectible LEGO® Star Wars™ sets for adults are designed for discerning hobbyists who enjoy DIY projects to disconnect from their day-to-day lives in a mindful, creative and fun way.\n• LEGO® components meet rigorous industry standards to ensure compatibility and a simple, secure connection every time.\n• LEGO® bricks and pieces are tested in almost every way imaginable to make sure that they satisfy stringent global safety standards.",
+   "subtheme": "Miscellaneous"
   },
   "75314-1": {
    "bs_id": 31236,
@@ -2072,7 +3491,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/75397-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/75397-1.png"
-   ]
+   ],
+   "desc_en": "Relive Star Wars: Return of the Jedi scenes aboard Jabba’s Sail Barge with this LEGO® Star Wars™ Ultimate Collector Series display set for adults (75397). A top gift for any Star Wars fan or UCS collector, this playful buildable model measures over 30.5 in. (77 cm) long. It has adjustable textile sails and a top deck that lifts off and sides that fold down to reveal the detailed interior. Explore the cockpit, prison cell, armory and entertainment room equipped with Jabba’s bed and more.The set includes 11 collectible Star Wars characters, including C-3PO, Princess Leia, and Bib Fortuna LEGO minifigures, plus an R2-D2 LEGO droid figure wearing a bar table, like in Star Wars: Return of the Jedi! Display your creation alongside a stand which has space for the Jabba the Hutt LEGO figure, an information plaque and a LEGO Star Wars 25th anniversary brick. And to recreate the whole iconic Star Wars: Return of the Jedi scene, add the Desert Skiff \\u0026 Sarlacc Pit (set 75396 – sold separately).• Jabba’s Sail Barge set – Create a playful display with this LEGO® Star Wars™ Ultimate Collector Series buildable model of Jabba the Hutt’s sail barge from Star Wars: Return of the Jedi\n• 11 collectible Star Wars™ characters – Bib Fortuna, Princess Leia, C-3PO, Max Rebo, Kithaba, Vizam, Wooof, Gamorrean Guard, Jabba the Hutt, Salacious Crumb and R2-D2 with a bar table accessory\n• Revel in the details – Fold down the sides and lift off the textile sails and top deck to explore the barge’s detailed interior, including the cockpit, prison cell, armory, kitchen and Jabba’s bed\n• Made for display – Showcase your creation next to the display stand, which has space for the Jabba the Hutt LEGO® figure, an information plaque and a LEGO Star Wars™ 25th anniversary brick\n• LEGO® Star Wars™ gift for adults – Treat yourself or gift this 3,942-piece display set to another Star Wars fan, advanced LEGO builder or collector of LEGO Star Wars UCS sets\n• Complete the scene – Add the Desert Skiff \\u0026 Sarlacc Pit (set 75396 – sold separately) to recreate the whole iconic escape scene from Star Wars: Return of the Jedi\n• LEGO® Star Wars™ sets for adults – From a galaxy far, far away to your living room, LEGO Star Wars building sets for adults are designed for people like you who enjoy mindful, creative activities\n• Build and display – This brick-built Star Wars™ vehicle measures over 10 in. (25 cm) high, 30.5 in. (77 cm) long and 9.5 in. (25 cm) wide",
+   "subtheme": "Ultimate Collector Series"
   },
   "75400-1": {
    "bs_id": 51092,
@@ -2434,7 +3855,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7675-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7675-1.png"
-   ]
+   ],
+   "desc_en": "When droids attack, it's time to call in the mighty AT-TE! This powerful 6-legged walker features details straight from the Clone Wars, including positionable legs, movable cannons, firing missiles, and armored hatches and cockpit that open to reveal the cabin and troop bay inside. Even with its flying STAP vehicle, the battle droid doesn't stand a chance against Anakin Skywalker and the clone army of the Republic! Includes Anakin Skywalker, Ahsoka, Captain Rex, Clone Trooper and Battle Droid minifigures, plus Rotta the Hutt! AT-TE Walker has 2 missiles that really fire! Cannon on top rotates in all directions! Hatches open to reveal the inside cabins and troop bay with 4 seats and extra equipment! Open front to access the cockpit and to slide out the pilot seat! Measures 15.5\" (39cm) long and 8\" (20cm) high",
+   "subtheme": "The Clone Wars"
   },
   "7679-1": {
    "type": "SET",
@@ -2502,7 +3925,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7679-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7679-1.png"
-   ]
+   ],
+   "desc_en": "The powerful TX-130S hover-tank is the Republic's latest weapon in the Clone Wars! With heavy armor, two movable laser cannon turrets, an elevating gunner seat, hidden wheels and flip-out flick-missile launchers, it's sure to turn the tide of any battle. Includes 2 clone trooper minifigures! Flip out the sides to reveal the flick-fire missile launchers! Use the elevating gunner seat to control the laser cannon turret on top! Hover-tank is on wheels for realistic play! Measures 9\" (23cm) long and 8\" (20cm) wide!",
+   "subtheme": "The Clone Wars"
   },
   "7961-1": {
    "type": "SET",
@@ -8213,14 +9638,44 @@
   "cas328": 9,
   "cas329": 2,
   "colsh10": 1,
+  "div008": 1,
+  "div012": 1,
+  "div014": 1,
+  "div020": 1,
   "gen001": 47,
+  "hp087": 3,
+  "hp091": 2,
+  "hp104": 3,
+  "hp111": 3,
+  "hp117": 1,
+  "hp118": 1,
+  "hp119": 1,
+  "hp121": 1,
+  "hp122": 1,
+  "hp123": 1,
+  "hrf001": 1,
+  "hrf002": 3,
+  "hrf003": 1,
+  "hrf004": 1,
+  "hrf007": 1,
   "min009": 28,
   "min010": 22,
+  "min011": 26,
   "min012": 29,
+  "min013": 4,
+  "min016": 3,
+  "min017": 24,
   "min018": 1,
+  "min019": 1,
+  "min020": 1,
   "min021": 3,
+  "min022": 2,
+  "min023": 1,
   "min025": 7,
+  "min026": 1,
   "min057": 1,
+  "min093": 2,
+  "min154": 1,
   "min158": 1,
   "min194": 2,
   "min195": 1,
@@ -8228,6 +9683,7 @@
   "min198": 2,
   "min200": 1,
   "njo0025": 1,
+  "pi002": 1,
   "sh0167": 3,
   "sh0168": 1,
   "sh0169": 1,
@@ -8235,6 +9691,8 @@
   "sh0177": 5,
   "sh0178": 1,
   "sh0186": 3,
+  "stu001": 13,
+  "stu002": 11,
   "sw0001b": 16,
   "sw0001c": 36,
   "sw0001d": 2,
@@ -8244,6 +9702,7 @@
   "sw0025": 2,
   "sw0028a": 1,
   "sw0035": 2,
+  "sw0040b": 2,
   "sw0055": 1,
   "sw0059": 1,
   "sw0071": 2,
@@ -8252,9 +9711,20 @@
   "sw0085": 1,
   "sw0086": 1,
   "sw0087": 1,
+  "sw0090": 3,
   "sw0115": 9,
   "sw0119": 1,
+  "sw0156": 5,
+  "sw0157": 2,
+  "sw0161a": 5,
+  "sw0174": 1,
+  "sw0175": 3,
+  "sw0176": 2,
+  "sw0177": 1,
+  "sw0178": 1,
+  "sw0179": 3,
   "sw0183": 9,
+  "sw0187": 2,
   "sw0188": 6,
   "sw0192": 6,
   "sw0193": 2,
@@ -8263,7 +9733,17 @@
   "sw0198": 2,
   "sw0201": 11,
   "sw0203": 1,
+  "sw0204": 2,
+  "sw0205": 2,
+  "sw0206": 1,
+  "sw0207": 2,
+  "sw0208": 2,
   "sw0209": 3,
+  "sw0210": 2,
+  "sw0211": 1,
+  "sw0212": 1,
+  "sw0213": 3,
+  "sw0215": 1,
   "sw0216s": 1,
   "sw0217": 10,
   "sw0217a": 1,
@@ -8272,16 +9752,22 @@
   "sw0226": 1,
   "sw0229": 1,
   "sw0230": 2,
+  "sw0236": 2,
   "sw0242": 2,
   "sw0252": 1,
+  "sw0256": 1,
   "sw0259": 1,
   "sw0260": 2,
   "sw0261": 1,
   "sw0268a": 2,
+  "sw0277": 3,
   "sw0279": 1,
   "sw0284": 1,
   "sw0285": 2,
   "sw0291": 2,
+  "sw0292": 1,
+  "sw0293": 1,
+  "sw0294": 1,
   "sw0296": 2,
   "sw0297": 1,
   "sw0298": 1,
@@ -8295,7 +9781,11 @@
   "sw0323": 1,
   "sw0324": 1,
   "sw0337": 1,
+  "sw0338": 2,
   "sw0364": 1,
+  "sw0365": 3,
+  "sw0366": 2,
+  "sw0367": 2,
   "sw0375": 1,
   "sw0377": 1,
   "sw0378": 1,
@@ -8308,6 +9798,7 @@
   "sw0438": 1,
   "sw0439": 1,
   "sw0442": 5,
+  "sw0451": 2,
   "sw0453": 1,
   "sw0456": 1,
   "sw0467": 2,
@@ -8319,6 +9810,14 @@
   "sw0487": 1,
   "sw0491": 1,
   "sw0494": 1,
+  "sw0504": 1,
+  "sw0505": 2,
+  "sw0508": 2,
+  "sw0509": 1,
+  "sw0510": 1,
+  "sw0511": 1,
+  "sw0512": 1,
+  "sw0513": 2,
   "sw0514": 1,
   "sw0518": 3,
   "sw0519": 2,
@@ -8461,6 +9960,206 @@
   "sw1489": 1
  },
  "figvalues": {
+  "div008": {
+   "eur": 4.95,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "div012": {
+   "eur": 1.46,
+   "cond": "U",
+   "at": "2026-11-02"
+  },
+  "div014": {
+   "eur": 1.5,
+   "cond": "U",
+   "at": "2026-11-02"
+  },
+  "div020": {
+   "eur": 1.16,
+   "cond": "U",
+   "at": "2026-11-02"
+  },
+  "gen001": {
+   "eur": 5.18,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "hp087": {
+   "eur": 3.61,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "hp091": {
+   "eur": 6.73,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "hp104": {
+   "eur": 5.66,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "hp111": {
+   "eur": 6.06,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "hp117": {
+   "eur": 6.82,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "hp118": {
+   "eur": 4.75,
+   "cond": "U",
+   "at": "2026-11-02"
+  },
+  "hp119": {
+   "eur": 4.13,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "hp121": {
+   "eur": 7.95,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "hp122": {
+   "eur": 17.24,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "hp123": {
+   "eur": 4.95,
+   "cond": "U",
+   "at": "2026-11-02"
+  },
+  "hrf001": {
+   "eur": 36.36,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "hrf002": {
+   "eur": 5.17,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "hrf003": {
+   "eur": 7.38,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "hrf004": {
+   "eur": 12.23,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "hrf007": {
+   "eur": 12.63,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min009": {
+   "eur": 2.1,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min010": {
+   "eur": 1.54,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min011": {
+   "eur": 1.29,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min012": {
+   "eur": 1.56,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min013": {
+   "eur": 4.01,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min016": {
+   "eur": 2.41,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min017": {
+   "eur": 1.35,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min018": {
+   "eur": 4.82,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min019": {
+   "eur": 2.66,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min020": {
+   "eur": 7.55,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min021": {
+   "eur": 4.42,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min022": {
+   "eur": 4.18,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min023": {
+   "eur": 7.7,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min025": {
+   "eur": 2.41,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min026": {
+   "eur": 2.22,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min093": {
+   "eur": 5.26,
+   "cond": "U",
+   "at": "2026-11-02"
+  },
+  "min154": {
+   "eur": 19.74,
+   "cond": "U",
+   "at": "2026-11-02"
+  },
+  "pi002": {
+   "eur": 13.77,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "stu001": {
+   "eur": 2.41,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "stu002": {
+   "eur": 3.93,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
   "sw0001b": {
    "eur": 1.73,
    "cond": "N",
@@ -8481,6 +10180,11 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "sw0011a": {
+   "eur": 4.84,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
   "sw0028a": {
    "eur": 10.83,
    "cond": "N",
@@ -8488,6 +10192,11 @@
   },
   "sw0035": {
    "eur": 7.57,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0040b": {
+   "eur": 7.92,
    "cond": "N",
    "at": "2026-11-02"
   },
@@ -8521,8 +10230,73 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "sw0090": {
+   "eur": 9.12,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0115": {
+   "eur": 4.46,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0156": {
+   "eur": 1.48,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0157": {
+   "eur": 18.92,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0161a": {
+   "eur": 3.94,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0174": {
+   "eur": 34.99,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0175": {
+   "eur": 11.65,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0176": {
+   "eur": 13.24,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0177": {
+   "eur": 20.7,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0178": {
+   "eur": 15.76,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0179": {
+   "eur": 9.17,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
   "sw0183": {
    "eur": 9.52,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0187": {
+   "eur": 4.56,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0188": {
+   "eur": 6.96,
    "cond": "N",
    "at": "2026-11-02"
   },
@@ -8548,6 +10322,31 @@
   },
   "sw0203": {
    "eur": 45.95,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0204": {
+   "eur": 9.31,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0205": {
+   "eur": 9.29,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0206": {
+   "eur": 56.16,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0207": {
+   "eur": 15.9,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0208": {
+   "eur": 12.23,
    "cond": "N",
    "at": "2026-11-02"
   },
