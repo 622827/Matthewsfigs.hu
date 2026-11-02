@@ -342,6 +342,11 @@ def main():
         if t == "SET":
             for f in (items.get(n) or {}).get("minifigs") or []:
                 wanted.setdefault(f["no"], "MINIFIG")
+    # other releases of our sets (the "all releases" table) get a page too: fetch their minifigures etc.
+    own_sets = {n for n, t in wanted.items() if t == "SET" and n in {i["no"] for i in inv.get("items", [])}}
+    for n in sorted(own_sets):
+        for v in (items.get(n) or {}).get("versions") or []:
+            wanted.setdefault(v["no"], "SET")
     today = date.today()
 
     def stale(no):
@@ -367,7 +372,7 @@ def main():
             print(f"  {no}: {d.get('year')} · {d.get('category')} · {d.get('pieces', '')}")
     # Brickset: fotók, bolti ár, dátumok (csak ha van kulcs; egyszer szettenként)
     if BS_KEY:
-        bs_todo = [n for n, d in items.items() if d.get("type") == "SET" and "bs_id" not in d and n in wanted][:BS_MAX]
+        bs_todo = [n for n, d in items.items() if d.get("type") == "SET" and "bs_id" not in d and n in own_sets][:BS_MAX]
         print(f"Brickset: {len(bs_todo)} szett.")
         for n in bs_todo:
             r = brickset(n)
@@ -377,7 +382,7 @@ def main():
             changed = True
         # official LEGO description for sets that were fetched before we stored it (same daily quota)
         left = BS_MAX - len(bs_todo)
-        desc_todo = [n for n, d in items.items() if d.get("type") == "SET" and d.get("bs_id") and "subtheme" not in d and n in wanted][:max(0, left)]
+        desc_todo = [n for n, d in items.items() if d.get("type") == "SET" and d.get("bs_id") and "subtheme" not in d and n in own_sets][:max(0, left)]
         if desc_todo:
             print(f"Brickset leírás és altéma: {len(desc_todo)} szett.")
         for n in desc_todo:
