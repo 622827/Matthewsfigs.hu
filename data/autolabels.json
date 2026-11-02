@@ -1,6 +1,9 @@
 {
  "_info": "Automatikus címkék (scripts/catalog_details.py): UCS a Rebrickable témája, Retired a Brickset kivezetési dátuma alapján.",
  "labels": {
+  "10225-1": [
+   "UCS"
+  ],
   "40686-1": [
    "Retired"
   ],
@@ -45,6 +48,9 @@
   ],
   "75391-1": [
    "Retired"
+  ],
+  "75397-1": [
+   "UCS"
   ],
   "75436-1": [
    "Retired"

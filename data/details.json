@@ -1,7 +1,74 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-01T23:07:52+00:00",
+ "updated": "2026-11-02T11:50:42+00:00",
  "items": {
+  "10225-1": {
+   "type": "SET",
+   "name": "R2-D2 - UCS",
+   "year": 2012,
+   "category": "Star Wars",
+   "weight_g": 2590.0,
+   "dims_cm": [
+    38.0,
+    58.0,
+    10.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 2157,
+   "minifigs": [
+    {
+     "no": "sw0217",
+     "name": "Astromech Droid, R2-D2, Light Bluish Gray Head",
+     "qty": 1,
+     "sets": 10
+    }
+   ],
+   "ucs": true,
+   "versions": [],
+   "figs_value_huf": 1286,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/10225-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/10225-1.png"
+   ]
+  },
+  "20009-1": {
+   "type": "SET",
+   "name": "AT-TE Walker - Mini polybag",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 63.1,
+   "dims_cm": null,
+   "fetched": "2026-11-02",
+   "pieces": 98,
+   "minifigs": [],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/20009-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/20009-1.png"
+   ]
+  },
+  "30611-1": {
+   "type": "SET",
+   "name": "R2-D2 - Mini polybag",
+   "year": 2017,
+   "category": "Star Wars",
+   "weight_g": 46.2,
+   "dims_cm": [
+    20.0,
+    19.0,
+    2.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 80,
+   "minifigs": [],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/30611-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/30611-1.png"
+   ]
+  },
   "40686-1": {
    "bs_id": 48958,
    "photos": [
@@ -179,6 +246,68 @@
    "desc_en": "Inspire kids’ imaginations during the holiday season with the festive LEGO® Star Wars™ Gingerbread AT-AT Walker (40806). A brilliant Star Wars gift idea for boys, girls and fans aged 10 and over, this Christmas craft building set features an AT-AT with gingerbread-house-style decoration and a Gingerbread Darth Vader LEGO minifigure. Pose the legs of the AT-AT, open the cockpit and flip up the sides of the main compartment to reveal the cosy interior: there’s a seat by the fireplace for Darth Vader, a table, drinking cup, cookie and candy cane elements, stockings hanging on the wall, a pile of gifts, and other festive accessories for creative play.\nThis building kit offers a fun Christmas activity for young Star Wars fans. Make their creative experience extra fun with the LEGO Builder app, which lets them zoom in and rotate a digital 3D version of the Gingerbread AT-AT as they build. Set contains 697 pieces.\n• Christmas craft building set for kids – Play out classic Star Wars™ trilogy adventures with a festive twist with this LEGO® brick-built Gingerbread AT-AT Walker for play and display\n• Gingerbread Darth Vader LEGO® minifigure – The set includes a special LEGO Star Wars™ minifigure of Gingerbread Darth Vader with a candy cane element and a Lightsaber™\n• Festive LEGO® Star Wars™ AT-AT walker – Features gingerbread-house-style decoration, posable legs, an opening LEGO minifigure cockpit and opening sides for easy access to the main compartment\n• Seasonal creative fun – Open the sides to reveal a seat for Darth Vader by the fireplace, a table with a drink and cookie, and lots of festive decorations including Christmas stockings and gifts\n• LEGO® Star Wars™ gift idea for kids – This festive building set makes a brilliant Christmas gift for creative boys, girls and any Star Wars fans aged 10 years old and over\n• Fun Christmas activity – Let the LEGO® Builder app guide kids on an intuitive building adventure where they can view a 3D digital version of their construction model as they build, and more\n• Explore the assortment – LEGO® Star Wars™ sets (sold separately) enable kids and adult Star Wars fans to relive classic moments, create new adventures or simply display the buildable models\n• Dimensions – The LEGO® Star Wars™ AT-AT walker in this 697-piece building kit measures over 19 cm (7.5 in.) high, 23 cm (9 in.) long and 10 cm (4 in.) wide",
    "subtheme": "Seasonal"
   },
+  "4479-1": {
+   "type": "SET",
+   "name": "TIE Bomber",
+   "year": 2003,
+   "category": "Star Wars",
+   "weight_g": 608.0,
+   "dims_cm": [
+    28.6,
+    28.6,
+    6.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 231,
+   "minifigs": [
+    {
+     "no": "sw0035",
+     "name": "Imperial TIE Fighter Pilot - Brown Head",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "4479-1",
+     "name": "TIE Bomber",
+     "year": 2003,
+     "pieces": 229,
+     "img": "https://cdn.rebrickable.com/media/sets/4479-1.jpg",
+     "figs": 1
+    },
+    {
+     "no": "911613-1",
+     "name": "TIE Bomber",
+     "year": 2016,
+     "pieces": 26,
+     "img": "https://cdn.rebrickable.com/media/sets/911613-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "912171-1",
+     "name": "TIE Bomber",
+     "year": 2021,
+     "pieces": 28,
+     "img": "https://cdn.rebrickable.com/media/sets/912171-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "75347-1",
+     "name": "TIE Bomber",
+     "year": 2023,
+     "pieces": 625,
+     "img": "https://cdn.rebrickable.com/media/sets/75347-1.jpg",
+     "figs": 4
+    }
+   ],
+   "figs_value_huf": 2773,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/4479-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/4479-1.png"
+   ]
+  },
   "472407-1": {
    "bs_id": 50369,
    "photos": [
@@ -216,6 +345,102 @@
    ],
    "desc_en": "",
    "subtheme": "Magazine Gift"
+  },
+  "6210-1": {
+   "type": "SET",
+   "name": "Jabba's Sail Barge",
+   "year": 2006,
+   "category": "Star Wars",
+   "weight_g": 1562.0,
+   "dims_cm": [
+    48.0,
+    38.4,
+    7.2
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 753,
+   "minifigs": [
+    {
+     "no": "sw0002a",
+     "name": "Boba Fett - Bluish Grays",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0028a",
+     "name": "Astromech Droid, R2-D2 - Dark Bluish Gray Serving Tray",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0071",
+     "name": "Jabba the Hutt - Sand Green",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0083",
+     "name": "Luke Skywalker -  Light Nougat, Black Tunic",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0084",
+     "name": "Han Solo - White Shirt without Wrinkles, Reddish Brown Legs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0085",
+     "name": "Princess Leia - Jabba Slave Outfit, Reddish Brown Ponytail, Neck Bracket",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0086",
+     "name": "Lando Calrissian - Skiff Guard, Reddish Brown Hips",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0087",
+     "name": "Gamorrean Guard - Sand Green, Reddish Brown Arms",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "6210-1",
+     "name": "Jabba's Sail Barge",
+     "year": 2006,
+     "pieces": 782,
+     "img": "https://cdn.rebrickable.com/media/sets/6210-1.jpg",
+     "figs": 8
+    },
+    {
+     "no": "75020-1",
+     "name": "Jabba's Sail Barge",
+     "year": 2013,
+     "pieces": 851,
+     "img": "https://cdn.rebrickable.com/media/sets/75020-1.jpg",
+     "figs": 6
+    },
+    {
+     "no": "75397-1",
+     "name": "Jabba's Sail Barge",
+     "year": 2024,
+     "pieces": 3943,
+     "img": "https://cdn.rebrickable.com/media/sets/75397-1.jpg",
+     "figs": 10
+    }
+   ],
+   "figs_value_huf": 71401,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/6210-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/6210-1.png"
+   ]
   },
   "75020-1": {
    "bs_id": 10227,
@@ -398,6 +623,80 @@
    ],
    "desc_en": "Evade the Empire aboard the Rebels’ Combat Frigate!\nImperial forces are on the hunt for Ezra and his rebel friends aboard the Rebel Combat Frigate. If they’re forced into battle, get into position with the lifting handle and fold out the wings. Then load the spring-loaded shooters, arm the stud shooter and fire! Can you fend off the Empire’s Agent Kallus and escape to safety? That’s up to you…\n• Includes 4 minifigures: Ezra Bridger, Agent Kallus, Ahsoka Tano and Commander Sato, plus Chopper Astromech Droid.\n• Features foldout wings, spring-loaded shooters, stud shooter, a useful lifting handle and removable upper cover for easy access.\n• Remove the top and play out adventures within the starship.\n• Grab the lifting handle and make-believe you’re piloting a real starship!\n• Fire the weapons to act out exciting deep-space battles.\n• Weapons include Ahsoka’s Lightsabers, Ezra’s Lightsaber and Agent Kallus’ built-up blaster.\n• Also includes a wrench accessory element.\n• As featured in the Star Wars Rebels animated TV series.\n• This set offers an age-appropriate building experience for ages 9-14.\n• Rebel Combat Frigate with engines closed measures over 4” (12cm) high, 14” (38cm) long and 5” (14cm) wide.",
    "subtheme": "Rebels"
+  },
+  "75182-1": {
+   "type": "SET",
+   "name": "Republic Fighter Tank",
+   "year": 2017,
+   "category": "Star Wars",
+   "weight_g": 395.0,
+   "dims_cm": [
+    26.2,
+    19.1,
+    6.1
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 302,
+   "minifigs": [
+    {
+     "no": "sw0001c",
+     "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+     "qty": 2,
+     "sets": 36
+    },
+    {
+     "no": "sw0833",
+     "name": "Aayla Secura - Dark Pink Lips",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0837",
+     "name": "Clone Trooper Gunner (Phase 2) - Scowl",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "7679-1",
+     "name": "Republic Fighter Tank",
+     "year": 2008,
+     "pieces": 596,
+     "img": "https://cdn.rebrickable.com/media/sets/7679-1.jpg",
+     "figs": 2
+    },
+    {
+     "no": "75182-1",
+     "name": "Republic Fighter Tank",
+     "year": 2017,
+     "pieces": 305,
+     "img": "https://cdn.rebrickable.com/media/sets/75182-1.jpg",
+     "figs": 4
+    },
+    {
+     "no": "75342-1",
+     "name": "Republic Fighter Tank",
+     "year": 2022,
+     "pieces": 262,
+     "img": "https://cdn.rebrickable.com/media/sets/75342-1.jpg",
+     "figs": 6
+    },
+    {
+     "no": "912313-1",
+     "name": "Republic Fighter Tank",
+     "year": 2023,
+     "pieces": 44,
+     "img": "https://cdn.rebrickable.com/media/sets/912313-1.jpg",
+     "figs": 0
+    }
+   ],
+   "figs_value_huf": 16100,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75182-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75182-1.png"
+   ]
   },
   "75280-1": {
    "bs_id": 30188,
@@ -595,6 +894,76 @@
    ],
    "desc_en": "Kids can enjoy hours of epic battle action with this LEGO® Star Wars: The Clone Wars Armored Assault Tank (AAT) building set (75283). The AAT has lots of realistic details to inspire fun, creative play, including opening hatches with space inside for the Battle Droids, LEGO minifigures, 2 spring-loaded shooters and a rotating turret with an elevating cannon.\n501st Legion vs. Battle Droids!\nThis action-packed set comes with 2 LEGO Star Wars™ minifigures – Ahsoka Tano and Ahsoka's Clone Trooper – AAT Driver Battle Droid and Battle Droid LEGO figures, and assorted weapons to inspire role play. An awesome gift idea to enhance any fan’s LEGO Star Wars collection, this toy building kit is great for solo or group play.\nStar Wars action in LEGO style!\nThe LEGO Group has been creating brick-built versions of iconic Star Wars starfighters, vehicles, locations and characters since 1999. It's become a hugely successful theme with a fantastic variety of sets to thrill fans of all ages.\n• Recreate thrilling 501st Legion vs. Battle Droid conflicts from Star Wars: The Clone Wars with this awesome Armored Assault Tank (AAT) LEGO® building toy for kids (75283).\n• This set includes 2 LEGO® Star Wars™ minifigures – Ahsoka Tano and Ahsoka's Clone Trooper – AAT Driver Battle Droid and Battle Droid LEGO figures, and cool weapons including 2 Lightsabers to role-play action stories.\n• The AAT building toy has many cool features to inspire battle play including 2 spring-loaded shooters,a rotating turret with an elevating cannon, plus opening front and turret hatches to place the Battle Droids inside.\n• This 286-piece construction toy makes a great holiday gift and offers a fun, rewarding building challenge for boys and girls aged 7+. It combines brilliantly with other LEGO® Star Wars™ sets for even more creative fun.\n• The AAT building toy measures over 4.5” (12cm) high, 8.5” (21cm) long and 5.5” (14cm) wide. Fans can also command the vehicle in the LEGO® Star Wars: The Skywalker Saga video game for extra creative fun.\n• This construction playset is powered by creative kids’ free-thinking – no batteries required – so whether building and playing solo or sharing the fun with family and friends, the galactic adventures never stop!\n• Looking for the best building toy for a kid who is new to LEGO® sets? This Star Wars: The Clone Wars set comes with easy-to-follow, printed instructions so they can build independently… and feel Jedi-level awesome!\n• LEGO® Star Wars™ construction playsets are great for kids (and adult fans) to build and display, recreate scenes from the memorable Star Wars saga and create their own unique stories.\n• Ever since 1958, LEGO® bricks have met the highest industry standards, which ensures they are consistent and connect and pull apart easily every time – no need to use the Force!\n• LEGO® bricks and pieces are tested in almost every way imaginable so you can be sure that this LEGO Star Wars™ AAT set meets the highest safety standards here on planet Earth – and in galaxies far, far away!",
    "subtheme": "The Clone Wars"
+  },
+  "75308-1": {
+   "type": "SET",
+   "name": "R2-D2",
+   "year": 2021,
+   "category": "Star Wars",
+   "weight_g": 2743.0,
+   "dims_cm": [
+    37.3,
+    58.0,
+    9.7
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 2353,
+   "minifigs": [
+    {
+     "no": "sw1085",
+     "name": "Astromech Droid, R2-D2 - Flat Silver Head, Dark Pink Dots and Large Receptor",
+     "qty": 1,
+     "sets": 6
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "8009-1",
+     "name": "R2-D2",
+     "year": 2002,
+     "pieces": 239,
+     "img": "https://cdn.rebrickable.com/media/sets/8009-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "10225-1",
+     "name": "R2-D2",
+     "year": 2012,
+     "pieces": 2127,
+     "img": "https://cdn.rebrickable.com/media/sets/10225-1.jpg",
+     "figs": 1
+    },
+    {
+     "no": "30611-1",
+     "name": "R2-D2",
+     "year": 2017,
+     "pieces": 70,
+     "img": "https://cdn.rebrickable.com/media/sets/30611-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "75308-1",
+     "name": "R2-D2",
+     "year": 2021,
+     "pieces": 2314,
+     "img": "https://cdn.rebrickable.com/media/sets/75308-1.jpg",
+     "figs": 1
+    },
+    {
+     "no": "75379-1",
+     "name": "R2-D2",
+     "year": 2024,
+     "pieces": 1050,
+     "img": "https://cdn.rebrickable.com/media/sets/75379-1.jpg",
+     "figs": 2
+    }
+   ],
+   "figs_value_huf": 1183,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75308-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75308-1.png"
+   ]
   },
   "75314-1": {
    "bs_id": 31236,
@@ -1616,6 +1985,95 @@
    "desc_en": "Let kids team up with a popular Star Wars: The Clone Wars character on playtime missions with this LEGO® brick-built Captain Rex Y-Wing Microfighter (75391) starship toy. A fun fantasy gift idea for creative boys, girls and any young fan aged 6 and up, this buildable vehicle toy playset features the first-ever LEGO Star Wars™ construction model of Captain Rex’s Y-wing. Designed to be easy to build so the action starts fast, this miniature version of the iconic Star Wars starfighter has a minifigure cockpit and 2 stud shooters, and the included Captain Rex LEGO minifigure comes with 2 blasters.\nAdd another dimension to your child’s creative experience with the LEGO Builder app, featuring instructions and digital zoom and rotate viewing tools to help them build with confidence.\nThis small set is part of a fun collectible series of quick-build LEGO Star Wars Microfighters (sold separately), which can be matched up for even more brick-built action-adventures.\n• Quick-build, microscale LEGO® Star Wars™ vehicle toy – Inspire young kids to create their own Star Wars: The Clone Wars adventures with this brick-built Captain Rex’s Y-Wing Microfighter starship\n• Captain Rex LEGO® minifigure – A fun fantasy gift idea for creative kids, this buildable playset includes the Star Wars™ character Captain Rex with 2 blaster pistols for action play\n• The first-ever LEGO® brick-built model of Captain Rex’s Y-wing – This miniature scale LEGO Star Wars™ starfighter hasa cockpit with space for a LEGO minifigure and 2 stud shooters\n• LEGO® Star Wars™ collectible Microfighters for kids – This buildable toy playset is a fun match-up for other LEGO Star Wars Microfighters (sold separately) to open up even more play possibilities\n• LEGO® Star Wars™ gift for kids aged 6 and up – This LEGO brick-built starship toy makes a fun everyday gift for boys, girls and any Star Wars fan\n• A helping hand – Discover intuitive instructions in the LEGO® Builder app, where builders can view a 3D digital version of the construction model as they build and develop new skills\n• Creative building toys for all ages – Collectible LEGO® Star Wars™ sets enable kids and adult Star Wars fans to create their own adventures or simply display the buildable models\n• Built for action play and display – The Captain Rex Y-Wing Microfighter buildable toy in this 99-piece set measures over 1 in. (2 cm) high, 4.5 in. (11 cm) long and 3 in. (8 cm) wide",
    "subtheme": "Microfighters"
   },
+  "75397-1": {
+   "type": "SET",
+   "name": "Jabba's Sail Barge - UCS",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 6170.0,
+   "dims_cm": [
+    52.5,
+    38.0,
+    26.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 3980,
+   "minifigs": [
+    {
+     "no": "sw0486",
+     "name": "Max Rebo",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1196",
+     "name": "Gamorrean Guard - Olive Green, Reddish Brown Legs",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1201",
+     "name": "C-3PO - Printed Legs, Toes and Arms, Bright Light Yellow Eyes",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sw1383",
+     "name": "Bib Fortuna - Black Robe, Dark Silver Armor",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1384",
+     "name": "Wooof",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1385",
+     "name": "Astromech Droid, R2-D2 - Dark Tan Serving Tray, Flat Silver Head",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1386",
+     "name": "Kithaba (Klatooinian Skiff Guard) - Medium Nougat Vest",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1387",
+     "name": "Salacious B. Crumb - Yellow Eyes with White Glints (6488557)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1388",
+     "name": "Jabba the Hutt - Olive Green, Tan Face, Dark Bluish Gray Wrinkles",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1389",
+     "name": "Princess Leia - Jabba Slave Outfit, Dark Brown Braid over Shoulder, Neck Bracket",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1390",
+     "name": "Vizam",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": true,
+   "versions": [],
+   "figs_value_huf": 91326,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75397-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75397-1.png"
+   ]
+  },
   "75400-1": {
    "bs_id": 51092,
    "photos": [
@@ -1894,6 +2352,377 @@
    "desc_en": "Replay thrilling Star Wars: The Mandalorian™ Season 1 scenes on Tatooine with this cool toy building set. A cool small gift for kids, boys and girls ages 6 and up, it features a LEGO® brick version of The Mandalorian & Grogu’s Speeder Bike (75436). Place The Mandalorian LEGO minifigure in the driver’s seat with the Grogu LEGO figure alongside in the attached satchel. Clip The Mandalorian’s blaster rifle to the back of the vehicle ready for action. Designed for quick building so the action starts fast, this building toy is a great way to inspire children’s imaginations as they create their own fantasy adventures with iconic Star Wars™ characters. Kids can build with confidence using the LEGO Builder app – zoom, rotate in 3D and track progress with easy-to-follow digital instructions. Set contains 58 pieces.\n• VEHICLE TOY BUILDING SET (75436) – Spark kids’ imaginations to recreate Star Wars: The Mandalorian™ Season 1 adventures on Tatooine with The Mandalorian & Grogu’s Speeder Bike\n• 2 STAR WARS™ CHARACTERS – Role-play fantasy adventures with The Mandalorian LEGO® minifigure, equipped with a blaster pistol that converts into a blaster rifle, and the Grogu LEGO figure\n• HOURS OF PLAY – This speeder bike is designed to be a quick build so the action starts fast\n• SPEEDER BIKE – Attach The Mandalorian’sblaster rifle to the back of the speeder bike, and place him in the driver’s seat with Grogu alongside in the attached satchel\n• GIFT FOR KIDS – This buildable toy playset makes a cool small gift for boys, girls and any LEGO® Star Wars™ fans ages 6years old and up\n• COLLECTIBLE SETS – LEGO® Star Wars™ sets (sold separately) enable kids and adult fans to replay classic scenes, create new stories or simply display the brick-built models\n• DIGITAL BUILDING INSTRUCTIONS – The LEGO® Builder app guidesyour child on a building adventure that lets them zoom in and rotate sets using 3D instructions, as well as save and track their progress\n• DIMENSIONS – The LEGO® Star Wars™ speeder in this 58-piece set measures over 1 in. (3 cm) high, 4.5 in. (11 cm) long and 1 in. (3 cm) wide",
    "subtheme": "The Mandalorian"
   },
+  "7675-1": {
+   "type": "SET",
+   "name": "AT-TE Walker",
+   "year": 2008,
+   "category": "Star Wars",
+   "weight_g": 1520.0,
+   "dims_cm": [
+    47.0,
+    38.0,
+    9.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 790,
+   "minifigs": [
+    {
+     "no": "sw0001b",
+     "name": "Battle Droid - Tan, Angled Arms",
+     "qty": 1,
+     "sets": 16
+    },
+    {
+     "no": "sw0183",
+     "name": "Anakin Skywalker - Large Eyes, Reddish Brown Arms",
+     "qty": 1,
+     "sets": 9
+    },
+    {
+     "no": "sw0192",
+     "name": "Ahsoka Tano (Padawan) - Tube Top and Belt",
+     "qty": 1,
+     "sets": 6
+    },
+    {
+     "no": "sw0193",
+     "name": "Rotta",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0194",
+     "name": "Clone Trooper Captain Rex, 501st Legion (Phase 1) - Dark Bluish Gray Visor, Pauldron, and Kama, Large Eyes",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0201",
+     "name": "Clone Trooper (Phase 1) - Large Eyes",
+     "qty": 1,
+     "sets": 11
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "7675-1",
+     "name": "AT-TE Walker",
+     "year": 2008,
+     "pieces": 810,
+     "img": "https://cdn.rebrickable.com/media/sets/7675-1.jpg",
+     "figs": 6
+    },
+    {
+     "no": "20009-1",
+     "name": "AT-TE Walker",
+     "year": 2009,
+     "pieces": 94,
+     "img": "https://cdn.rebrickable.com/media/sets/20009-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "75337-1",
+     "name": "AT-TE Walker",
+     "year": 2022,
+     "pieces": 1082,
+     "img": "https://cdn.rebrickable.com/media/sets/75337-1.jpg",
+     "figs": 9
+    }
+   ],
+   "figs_value_huf": 59276,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7675-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7675-1.png"
+   ]
+  },
+  "7679-1": {
+   "type": "SET",
+   "name": "Republic Fighter Tank",
+   "year": 2008,
+   "category": "Star Wars",
+   "weight_g": 900.0,
+   "dims_cm": [
+    47.8,
+    28.7,
+    7.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 600,
+   "minifigs": [
+    {
+     "no": "sw0201",
+     "name": "Clone Trooper (Phase 1) - Large Eyes",
+     "qty": 1,
+     "sets": 11
+    },
+    {
+     "no": "sw0203",
+     "name": "Clone Trooper (Phase 1) - Dark Bluish Gray Visor, Pauldron, and Kama, Large Eyes",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "7679-1",
+     "name": "Republic Fighter Tank",
+     "year": 2008,
+     "pieces": 596,
+     "img": "https://cdn.rebrickable.com/media/sets/7679-1.jpg",
+     "figs": 2
+    },
+    {
+     "no": "75182-1",
+     "name": "Republic Fighter Tank",
+     "year": 2017,
+     "pieces": 305,
+     "img": "https://cdn.rebrickable.com/media/sets/75182-1.jpg",
+     "figs": 4
+    },
+    {
+     "no": "75342-1",
+     "name": "Republic Fighter Tank",
+     "year": 2022,
+     "pieces": 262,
+     "img": "https://cdn.rebrickable.com/media/sets/75342-1.jpg",
+     "figs": 6
+    },
+    {
+     "no": "912313-1",
+     "name": "Republic Fighter Tank",
+     "year": 2023,
+     "pieces": 44,
+     "img": "https://cdn.rebrickable.com/media/sets/912313-1.jpg",
+     "figs": 0
+    }
+   ],
+   "figs_value_huf": 21379,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7679-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7679-1.png"
+   ]
+  },
+  "7961-1": {
+   "type": "SET",
+   "name": "Darth Maul's Sith Infiltrator",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 1010.0,
+   "dims_cm": [
+    54.0,
+    28.2,
+    5.9
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 469,
+   "minifigs": [
+    {
+     "no": "sw0321",
+     "name": "Captain Panaka",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0322",
+     "name": "Qui-Gon Jinn - Light Nougat Head, Reddish Brown Legs and Cape",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0323",
+     "name": "Darth Maul - Horns and Cape, Plain Legs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0324",
+     "name": "Padmé Naberrie (Amidala) - Light Nought Head {Padme}",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "7961-1",
+     "name": "Darth Maul's Sith Infiltrator",
+     "year": 2011,
+     "pieces": 479,
+     "img": "https://cdn.rebrickable.com/media/sets/7961-1.jpg",
+     "figs": 4
+    },
+    {
+     "no": "912058-1",
+     "name": "Darth Maul's Sith Infiltrator",
+     "year": 2020,
+     "pieces": 34,
+     "img": "https://cdn.rebrickable.com/media/sets/912058-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "75383-1",
+     "name": "Darth Maul's Sith Infiltrator",
+     "year": 2024,
+     "pieces": 640,
+     "img": "https://cdn.rebrickable.com/media/sets/75383-1.jpg",
+     "figs": 4
+    }
+   ],
+   "figs_value_huf": 22936,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7961-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7961-1.png"
+   ]
+  },
+  "8009-1": {
+   "type": "SET",
+   "name": "R2-D2",
+   "year": 2002,
+   "category": "Technic",
+   "weight_g": 344.0,
+   "dims_cm": [
+    28.5,
+    19.0,
+    4.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 248,
+   "minifigs": [],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "8009-1",
+     "name": "R2-D2",
+     "year": 2002,
+     "pieces": 239,
+     "img": "https://cdn.rebrickable.com/media/sets/8009-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "10225-1",
+     "name": "R2-D2",
+     "year": 2012,
+     "pieces": 2127,
+     "img": "https://cdn.rebrickable.com/media/sets/10225-1.jpg",
+     "figs": 1
+    },
+    {
+     "no": "30611-1",
+     "name": "R2-D2",
+     "year": 2017,
+     "pieces": 70,
+     "img": "https://cdn.rebrickable.com/media/sets/30611-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "75308-1",
+     "name": "R2-D2",
+     "year": 2021,
+     "pieces": 2314,
+     "img": "https://cdn.rebrickable.com/media/sets/75308-1.jpg",
+     "figs": 1
+    },
+    {
+     "no": "75379-1",
+     "name": "R2-D2",
+     "year": 2024,
+     "pieces": 1050,
+     "img": "https://cdn.rebrickable.com/media/sets/75379-1.jpg",
+     "figs": 2
+    }
+   ],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/8009-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/8009-1.png"
+   ]
+  },
+  "8018-1": {
+   "type": "SET",
+   "name": "Armored Assault Tank (AAT)",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 746.0,
+   "dims_cm": [
+    48.0,
+    28.0,
+    5.9
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 386,
+   "minifigs": [
+    {
+     "no": "sw0001b",
+     "name": "Battle Droid - Tan, Angled Arms",
+     "qty": 2,
+     "sets": 16
+    },
+    {
+     "no": "sw0201",
+     "name": "Clone Trooper (Phase 1) - Large Eyes",
+     "qty": 1,
+     "sets": 11
+    },
+    {
+     "no": "sw0219",
+     "name": "Yoda - Clone Wars, Light Bluish Gray Hair",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0230",
+     "name": "Super Battle Droid - Pearl Dark Gray, Blaster Arm",
+     "qty": 3,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "8018-1",
+     "name": "Armored Assault Tank (AAT)",
+     "year": 2009,
+     "pieces": 407,
+     "img": "https://cdn.rebrickable.com/media/sets/8018-1.jpg",
+     "figs": 7
+    },
+    {
+     "no": "75283-1",
+     "name": "Armored Assault Tank (AAT)",
+     "year": 2020,
+     "pieces": 286,
+     "img": "https://cdn.rebrickable.com/media/sets/75283-1.jpg",
+     "figs": 4
+    }
+   ],
+   "figs_value_huf": 17478,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/8018-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/8018-1.png"
+   ]
+  },
+  "911613-1": {
+   "type": "SET",
+   "name": "TIE Bomber - Mini foil pack",
+   "year": 2016,
+   "category": "Star Wars",
+   "weight_g": 25.4,
+   "dims_cm": [
+    10.0,
+    14.0,
+    2.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 26,
+   "minifigs": [],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/911613-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/911613-1.png"
+   ]
+  },
   "911832-1": {
    "bs_id": 27899,
    "photos": [
@@ -2001,6 +2830,26 @@
    "desc_en": "",
    "subtheme": "Magazine Gift"
   },
+  "912058-1": {
+   "type": "SET",
+   "name": "Darth Maul's Sith Infiltrator - Mini foil pack",
+   "year": 2020,
+   "category": "Star Wars",
+   "weight_g": 25.7,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 34,
+   "minifigs": [],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/912058-1.png"
+   ]
+  },
   "912169-1": {
    "bs_id": 31498,
    "photos": [
@@ -2038,6 +2887,26 @@
    ],
    "desc_en": "",
    "subtheme": "Magazine Gift"
+  },
+  "912171-1": {
+   "type": "SET",
+   "name": "TIE Bomber - Mini foil pack",
+   "year": 2021,
+   "category": "Star Wars",
+   "weight_g": 20.0,
+   "dims_cm": [
+    12.0,
+    14.0,
+    1.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 28,
+   "minifigs": [],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912171-1.png"
+   ]
   },
   "912284-1": {
    "bs_id": 33782,
@@ -2210,6 +3079,26 @@
    ],
    "desc_en": "",
    "subtheme": "Magazine Gift"
+  },
+  "912313-1": {
+   "type": "SET",
+   "name": "Republic Fighter Tank - Mini paper bag",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 28.0,
+   "dims_cm": [
+    11.8,
+    14.5,
+    1.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 44,
+   "minifigs": [],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912313-1.png"
+   ]
   },
   "912403-1": {
    "bs_id": 49026,
@@ -7349,23 +8238,40 @@
   "sw0001b": 16,
   "sw0001c": 36,
   "sw0001d": 2,
+  "sw0002a": 2,
   "sw0005a": 2,
   "sw0011a": 13,
   "sw0025": 2,
+  "sw0028a": 1,
+  "sw0035": 2,
   "sw0055": 1,
   "sw0059": 1,
+  "sw0071": 2,
+  "sw0083": 1,
+  "sw0084": 1,
+  "sw0085": 1,
+  "sw0086": 1,
+  "sw0087": 1,
   "sw0115": 9,
   "sw0119": 1,
+  "sw0183": 9,
   "sw0188": 6,
+  "sw0192": 6,
+  "sw0193": 2,
+  "sw0194": 2,
   "sw0196": 1,
   "sw0198": 2,
+  "sw0201": 11,
+  "sw0203": 1,
   "sw0209": 3,
   "sw0216s": 1,
   "sw0217": 10,
   "sw0217a": 1,
+  "sw0219": 2,
   "sw0222": 3,
   "sw0226": 1,
   "sw0229": 1,
+  "sw0230": 2,
   "sw0242": 2,
   "sw0252": 1,
   "sw0259": 1,
@@ -7384,6 +8290,10 @@
   "sw0314": 1,
   "sw0316": 1,
   "sw0319": 1,
+  "sw0321": 1,
+  "sw0322": 1,
+  "sw0323": 1,
+  "sw0324": 1,
   "sw0337": 1,
   "sw0364": 1,
   "sw0375": 1,
@@ -7441,7 +8351,9 @@
   "sw0802": 3,
   "sw0808": 2,
   "sw0830": 2,
+  "sw0833": 1,
   "sw0834": 2,
+  "sw0837": 1,
   "sw0904": 1,
   "sw0909": 1,
   "sw0910": 1,
@@ -7449,6 +8361,7 @@
   "sw0939": 1,
   "sw0961": 1,
   "sw0996": 3,
+  "sw1085": 6,
   "sw1093": 1,
   "sw1094": 2,
   "sw1096": 2,
@@ -7466,6 +8379,7 @@
   "sw1155": 2,
   "sw1161": 2,
   "sw1179": 2,
+  "sw1196": 2,
   "sw1201": 5,
   "sw1202": 6,
   "sw1205": 1,
@@ -7516,6 +8430,14 @@
   "sw1367": 1,
   "sw1368": 1,
   "sw1372": 1,
+  "sw1383": 1,
+  "sw1384": 1,
+  "sw1385": 1,
+  "sw1386": 1,
+  "sw1387": 1,
+  "sw1388": 1,
+  "sw1389": 1,
+  "sw1390": 1,
   "sw1391": 1,
   "sw1392": 1,
   "sw1393": 1,
@@ -7539,6 +8461,11 @@
   "sw1489": 1
  },
  "figvalues": {
+  "sw0001b": {
+   "eur": 1.73,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
   "sw0001c": {
    "eur": 1.46,
    "cond": "N",
@@ -7549,10 +8476,120 @@
    "cond": "N",
    "at": "2026-11-01"
   },
+  "sw0002a": {
+   "eur": 51.35,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0028a": {
+   "eur": 10.83,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0035": {
+   "eur": 7.57,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0071": {
+   "eur": 38.57,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0083": {
+   "eur": 15.05,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0084": {
+   "eur": 13.36,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0085": {
+   "eur": 21.09,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0086": {
+   "eur": 27.53,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0087": {
+   "eur": 17.13,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0183": {
+   "eur": 9.52,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0192": {
+   "eur": 11.62,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0193": {
+   "eur": 26.72,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0194": {
+   "eur": 99.81,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0201": {
+   "eur": 12.41,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0203": {
+   "eur": 45.95,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0217": {
+   "eur": 3.51,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
   "sw0217a": {
    "eur": 8.06,
    "cond": "N",
    "at": "2026-11-01"
+  },
+  "sw0219": {
+   "eur": 10.72,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0230": {
+   "eur": 7.04,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0321": {
+   "eur": 13.86,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0322": {
+   "eur": 15.91,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0323": {
+   "eur": 19.31,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0324": {
+   "eur": 13.53,
+   "cond": "N",
+   "at": "2026-11-02"
   },
   "sw0402": {
    "eur": 39.24,
@@ -7614,10 +8651,25 @@
    "cond": "N",
    "at": "2026-11-01"
   },
+  "sw0833": {
+   "eur": 25.74,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw0837": {
+   "eur": 15.29,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
   "sw0996": {
    "eur": 4.48,
    "cond": "N",
    "at": "2026-11-01"
+  },
+  "sw1085": {
+   "eur": 3.23,
+   "cond": "N",
+   "at": "2026-11-02"
   },
   "sw1093": {
    "eur": 5.21,
@@ -7683,6 +8735,11 @@
    "eur": 7.09,
    "cond": "N",
    "at": "2026-11-01"
+  },
+  "sw1196": {
+   "eur": 12.97,
+   "cond": "N",
+   "at": "2026-11-02"
   },
   "sw1201": {
    "eur": 4.75,
@@ -7903,6 +8960,46 @@
    "eur": 7.25,
    "cond": "N",
    "at": "2026-11-01"
+  },
+  "sw1383": {
+   "eur": 14.41,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw1384": {
+   "eur": 33.86,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw1385": {
+   "eur": 6.15,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw1386": {
+   "eur": 14.53,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw1387": {
+   "eur": 17.73,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw1388": {
+   "eur": 40.87,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw1389": {
+   "eur": 47.08,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "sw1390": {
+   "eur": 20.98,
+   "cond": "N",
+   "at": "2026-11-02"
   },
   "sw1391": {
    "eur": 3.08,
