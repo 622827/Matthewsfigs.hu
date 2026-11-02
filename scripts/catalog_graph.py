@@ -128,7 +128,8 @@ def main():
     for n, d in det.items():
         if d.get("type") == "SET" and d.get("minifigs") is not None and n not in bl:
             bl[n] = [[f["no"], f["qty"], f["name"]] for f in d["minifigs"]]
-    todo = sorted(n for n in comp if n not in bl and s2f.get(n))
+    # sets around our own stock first (so e.g. a Battle Pack with our clone trooper gets its BrickLink numbers early)
+    todo = sorted((n for n in comp if n not in bl and s2f.get(n)), key=lambda n: (n not in seeds, n))
     done = 0
     if have_keys:
         for n in todo[:MAP_MAX]:
@@ -142,6 +143,20 @@ def main():
     # Rebrickable fig -> BrickLink fig (majority vote over all sets where both lists are known)
     votes = {}
     for n, blist in bl.items():
+        rlist = [[f, qn, figs.get(f, {}).get("name", f)] for f, qn in (s2f.get(n) or {}).items()]
+        for rf, bf in match(rlist, blist).items():
+            votes.setdefault(rf, {}).setdefault(bf, 0)
+            votes[rf][bf] += 1
+    # partial lists before the subsets call: the BrickLink minifigures we already know to be in a set
+    # (from their own "appears in" list), e.g. our sw0299 → 7913-1
+    known = {}
+    for fno, d in det.items():
+        if d.get("type") == "MINIFIG":
+            for s in d.get("sets") or []:
+                known.setdefault(s["no"], []).append([fno, 0, d.get("name") or fno])
+    for n, blist in known.items():
+        if n in bl:
+            continue
         rlist = [[f, qn, figs.get(f, {}).get("name", f)] for f, qn in (s2f.get(n) or {}).items()]
         for rf, bf in match(rlist, blist).items():
             votes.setdefault(rf, {}).setdefault(bf, 0)
@@ -165,7 +180,8 @@ def main():
                 out_figs.setdefault(fid, figs.get(f, {}).get("name", fid))
         out_sets[n] = [s["name"], int(s["year"] or 0) or None, int(s["num_parts"] or 0) or None, fl]
     OUT.write_text(json.dumps({"_info": "Szett–minifigura háló (scripts/catalog_graph.py): Rebrickable kapcsolatok, BrickLink-figuraszámok.",
-                               "sets": out_sets, "figs": dict(sorted(out_figs.items()))},
+                               "sets": out_sets, "figs": dict(sorted(out_figs.items())),
+                               "alias": dict(sorted(rb2bl.items()))},   # old Rebrickable links -> BrickLink number
                               ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     MAP.write_text(json.dumps({"built": date.today().isoformat(), "todo": max(0, len(todo) - done), "bl": dict(sorted(bl.items()))},
                               ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")

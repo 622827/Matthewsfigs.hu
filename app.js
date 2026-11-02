@@ -898,7 +898,9 @@
   ])
     .then(([d, boxes, labels, figs, , details, auto, deschu, graph]) => {
       DESC_HU = deschu || {};
-      GRAPH = { sets: (graph && graph.sets) || {}, figs: (graph && graph.figs) || {} };
+      GRAPH = { sets: (graph && graph.sets) || {}, figs: (graph && graph.figs) || {}, alias: (graph && graph.alias) || {} };
+      // a Rebrickable minifigure page that has a BrickLink number by now: go to the BrickLink one (it may be in our stock)
+      if (PAGE_KIND === "product") { const q = new URLSearchParams(location.search), n = q.get("no"); if (n && GRAPH.alias[n]) { q.set("no", GRAPH.alias[n]); location.replace("termek.html?" + q); return; } }
       AUTOLABELS = (auto && auto.labels) || {};
       BOXES = boxes || {}; LABELS = labels || {}; FIGS = figs || {}; DETAILS = (details && details.items) || {}; VALUES = (details && details.values) || {}; FIGVALUES = (details && details.figvalues) || {};
       if (window.MFShop) window.MFShop.setLots(d.items.map(i => ({ ...i })));
