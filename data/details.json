@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-02T15:26:28+00:00",
+ "updated": "2026-11-02T16:31:41+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -858,7 +858,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/1383-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/1383-1.png"
-   ]
+   ],
+   "desc_en": "Get ready for the climax of the movie! The Pharaoh has awakened from his long sleep, and who knows what will happen next? But wait – what's that skeleton doing in the Pharaoh's tomb? Cut! Better try that shot again!",
+   "subtheme": "Horror"
   },
   "1411-1": {
    "type": "SET",
@@ -905,7 +907,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/1411-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/1411-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Promotional"
   },
   "1782-1": {
    "type": "SET",
@@ -957,7 +961,9 @@
    "figs_value_huf": 5220,
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/1782-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Divers"
   },
   "20009-1": {
    "type": "SET",
@@ -1011,7 +1017,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/21113-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/21113-1.png"
-   ]
+   ],
+   "desc_en": "Join Steve on his quest for vital resources in The Cave!\nVenture into The Cave on a dangerous quest for vital resources! Wield the iron pickaxe to dig and battle against hostile zombie and spider mobs. Blast out valuable ores and minerals with the TNT and combine the flowing water and lava to create precious obsidian! When you’re done battling and mining, restore your energy levels with the chest of bread. Proceed with caution! Rebuild the set for more LEGO® Minecraft™ creations! Includes 2 minifigures with assorted accessories: Steve and a zombie, plus a spider.\n• Includes 2 minifigures with assorted accessories: Steve and a zombie, plus a spider\n• Features waterfall, lavafall, coal, iron, redstone, gold, and obsidian elements, plus TNT, torch and a ladder\n• Accessories include a pickaxe, chest and bread\n• Includes 249 assorted LEGO® pieces\n• Experience The Cave!\n• Mine for precious ores and minerals\n• Watch out for the mobs!\n• The perfect gift for fans of LEGO® building and Minecraft™\n• Rebuild for more LEGO® Minecraft™ creations\n• Measures 5”(15cm)high, 8” (22cm) wide and 5” (14cm) deep\n• Combine this set with others in the series to create your own LEGO® Minecraft™ world",
+   "subtheme": ""
   },
   "21114-1": {
    "type": "SET",
@@ -1046,7 +1054,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/21114-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/21114-1.png"
-   ]
+   ],
+   "desc_en": "Nurture vital crops and supplies at The Farm!\nYield renewable resources with The Farm! You’ll need food to survive, so fence in the livestock and channel the flowing water to nurture the crops. Harvest pumpkins, wheat, sugar cane and carrots. Use the crafting table to create a pumpkin helmet or jack-o'-lantern. But watch out for the skeleton with his bow and arrow after nightfall! Rebuild the set for more LEGO® Minecraft™ creations or combine with 21115 The First Night and other sets in the series for an even bigger Minecraft adventure! Includes a Steve minifigure with an accessory, plus a skeleton, cow and a sheep.\n• Includes a Steve minifigure with an accessory, plus a skeleton, cow and a sheep\n• Features a crafting table, pumpkin helmet, 2 torches, fences, waterfall, sugar cane, pre-mature and mature wheat, carrots, tree, and a chest\n• Includes skeleton’s bow\n• Includes a shovel\n• Includes 262 assorted LEGO® pieces\n• Experience The Farm\n• Nurture precious crops and supplies\n• Watch out for the evil skeleton!\n• The perfect gift for fans of LEGO® building and Minecraft™\n• Rebuild for more LEGO® Minecraft™creations\n• Measures 4” (11cm) high, 10” (27cm) wide and 6” (17cm) deep\n• Combine with 21115 The First Night and other sets in the series for an even bigger LEGO® Minecraft™ adventure!\n• Add other biomes in the series to create your own LEGO® Minecraft™ world",
+   "subtheme": ""
   },
   "21115-1": {
    "type": "SET",
@@ -1081,7 +1091,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/21115-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/21115-1.png"
-   ]
+   ],
+   "desc_en": "Help Steve survive the hours of darkness with the The First Night!\nUse the daylight hours wisely to survive The First Night! Build a shelter and enclosure to protect your livestock, craft a bed, oven and a chest, but make sure you’re finished before nightfall if you wish to avoid the hissing Creeper™! Rebuild the set for more LEGO® Minecraft™ creations or combine with 21114 The Farm and other sets in the series for an even bigger Minecraft adventure! Includes a Steve minifigure with weapons and assorted accessories, plus a creeper and a pig.\n• Includes a Steve minifigure with a weapon and assorted accessories, plus a Creeper™ and a pig\n• Features a shelter, fence, bed, oven, crafting table, chest, plants and a tree\n• Shelter is hinged to allow access to its interior and features a removable garden-roof that can be used to expand the exterior play area\n• Includes a sword\n• Accessories include bread, pickaxe and an axe\n• Includes 408 assorted LEGO® pieces\n• Experience the first night\n• Build to survive!\n• Watch out for the hissing Creeper™!\n• The perfect gift for fans of LEGO® building and Minecraft™\n• Rebuild for more LEGO® Minecraft™ creations\n• Measures 3” (10cm) high, 13” (33cm) wide and 9” (24cm) deep\n• Combine with 21114 The Farm and other sets in the series for an even bigger LEGO® Minecraft™ adventure!\n• Add other biomes in the series to create your own LEGO® Minecraft™ world",
+   "subtheme": ""
   },
   "21116-1": {
    "type": "SET",
@@ -1116,7 +1128,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/21116-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/21116-1.png"
-   ]
+   ],
+   "desc_en": "Expand your imagination with the LEGO® Minecraft™ Crafting Box!\nSet your imagination free with the LEGO® Minecraft™ Crafting Box! Create your own Minecraft models, build from the 8-in-1 instructions or follow the inspirational pictures and scenarios to complete other awesome Minecraft biomes. Use the periodic table poster to identify the LEGO Minecraft elements. You can even try out a diamond pickaxe! This set really boosts your creative potential! Includes a Steve minifigure with an accessory, plus a skeleton and a mooshroom.\n• Includes a Steve minifigure with an accessory, plus a skeleton and a mooshroom\n• Features redstone and lapis elements, plus torches, plants, oven, TNT, and mature wheat\n• Includes skeleton’s bow\n• Includes a pickaxe\n• Includes 521 assorted LEGO® pieces\n• Set your imagination free!\n• Build your own LEGO® Minecraft™ creations!\n• Check out the periodic table poster!\n• The perfect gift for fans of LEGO® building and Minecraft™\n• Rebuild using the 8-in-1 building instructions or inspirational images and scenarios for more LEGO® Minecraft™ adventures\n• Measures 3” (10cm) high, 12” (31cm) wide and 9” (22cm) deep\n• Combine with other biomes in the series to create your own LEGO® Minecraft™ world",
+   "subtheme": "Crafting Box"
   },
   "21118-1": {
    "type": "SET",
@@ -1180,7 +1194,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/21118-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/21118-1.png"
-   ]
+   ],
+   "desc_en": "Jump aboard the minecart and enter the darkness of The Mine!\nEnter The Mine at your own risk! You’ll need to don your iron armor for this dangerous expedition. Grab your iron pickaxe and venture into the darkness, keeping an eye out for hostile mobs that lurk deep in the mine. Plant the TNT and activate the explosion function to blast away the rock face. Then load up the precious ores, jump aboard the minecart and hurtle past the Creeper, zombie and skeleton, using the iron sword to keep them at bay until you’re safely above ground. All in a days work fora LEGO® Minecraft™ hero! Rebuild the set for more LEGO Minecraft creations. Includes a Steve minifigure with weapons and accessories, plus a skeleton, zombie, spider and a Creeper™.\n• Includes a Steve minifigure with weapons and accessories, plus Creeper™, zombie, skeleton and a spider\n• Features a huge minecart track, minecart, chest, TNT, rock face with explosion function, diamond, redstone and coal elements, torches and 2 trees\n• Weapons include a sword and a bow\n• Accessories include armor, helmet and a pickaxe\n• Includes 926 assorted LEGO® pieces\n• Ride on the awesome minecart track\n• Blast away the rock face!\n• Watch out for the hostile mobs!\n• The perfect gift for fans of LEGO® building and Minecraft™\n• Rebuild for more LEGO® Minecraft™ creations\n• Measures 12” (32cm) high, 15” (40cm) wide and 9” (25cm) deep\n• Add other biomes in the series to create your own LEGO® Minecraft™ world",
+   "subtheme": ""
   },
   "21119-1": {
    "type": "SET",
@@ -1215,7 +1231,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/21119-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/21119-1.png"
-   ]
+   ],
+   "desc_en": "Enter the zombie-spawning dungeon at your peril!\nVenture into The Dungeon on a perilous quest for valuable ores! Craft torches from your resources to light your way and disable the mob spawner. Wield your iron pickaxe to defeat the roaming zombies, then mine the gold ore and grab the chest containing wheat and redstone. But watch out… zombies can spawn anywhere! Rebuild the set for more LEGO® Minecraft™ creations! Includes 3 minifigures with assorted accessories: Steve and 2 zombies.\n• Includes 3 minifigures with assorted accessories: Steve and 2 zombies\n• The Dungeon features a spawner with rotating function, secret opening wall where zombies can spring a surprise attack, chest with wheat and redstone elements, 3 buildable torches, brick-built cactus, moss stone block element and a gold ore element\n• Sand-colored roof section can be removed and added to bottom section to enlarge the playing area or rebuilt into a set of stairs for exiting the dungeon\n• Includes Steve’s pickaxe\n• Includes 219 assorted LEGO® pieces\n• Set your imagination free!\n• Experience The Dungeon!\n• Launch a surprise zombie attack!\n• Rotate the spawner!\n• The perfect gift for fans of LEGO® building and Minecraft™\n• Rebuild for more Minecraft™ creations\n• Measures 3” (9cm) high, 7” (19cm) wide and 6” (17cm) deep\n• Combine this biome with others in the series to create your own LEGO® Minecraft™ world",
+   "subtheme": ""
   },
   "21120-1": {
    "type": "SET",
@@ -1256,7 +1274,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/21120-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/21120-1.png"
-   ]
+   ],
+   "desc_en": "Build to survive with The Snow Hideout!\nBuild The Snow Hideout! You’ve ventured out on an icy mining expedition, but the sun is heading for the horizon and hostile mobs will soon be roaming this snow-covered landscape. Lay down your wooden pickaxe, store your newly mined coal and build to survive! Use your wooden shovel and the crafting tables to craft snow blocks from the drift, then take your bucket and scoop water from the lake to make ice-block windows. Craft a door and build a netherrack fireplace and chimney. Finally, build a Snow Golem to ward off the exploding Creeper™ that roams after nightfall and you’re ready for action! Rebuild the set for more LEGO® Minecraft™ creations! Includes a Steve minifigure with assorted accessories, plus a Creeper™ and a Snow Golem.\n• Includes a Steve minifigure with assorted accessories, plus a Creeper™ with explode function and a Snow Golem with snowball-shooting function\n• Features a shelter with opening door, netherrack fireplace, crafting table, bucket, 2 buildable torches and snowy tree, plus transparent ice block elements and 2 brick-built coal ores\n• Includes Steve’s pickaxe\n• Includes 327 assorted LEGO® pieces\n• Set your imagination free!\n• Experience The Snow Hideout!\n• Look out for the exploding Creeper™!\n• Buildto survive!\n• Activate the Snow Golem’s shooting function!\n• The perfect gift for fans of LEGO® building and Minecraft™\n• Rebuild for more Minecraft™ creations\n• Measures 3” (8cm) high, 11” (28cm) wide and 9” (23cm) deep\n• Combine this biome with others in the series to create your own LEGO® Minecraft™ world",
+   "subtheme": ""
   },
   "21121-1": {
    "type": "SET",
@@ -2504,6 +2524,1040 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/21184-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/21184-1.png"
+   ]
+  },
+  "21186-1": {
+   "type": "SET",
+   "name": "The Ice Castle",
+   "year": 2022,
+   "category": "Minecraft",
+   "weight_g": 733.0,
+   "dims_cm": [
+    26.2,
+    22.2,
+    9.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 491,
+   "minifigs": [
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min011",
+     "name": "Skeleton, Minecraft",
+     "qty": 2,
+     "sets": 26
+    },
+    {
+     "no": "min129",
+     "name": "Royal Warrior",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min130",
+     "name": "Yeti",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min131",
+     "name": "Zombie - Dark Purple Legs, Flat Silver Helmet",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "43197-1",
+     "name": "The Ice Castle",
+     "year": 2021,
+     "pieces": 1709,
+     "img": "https://cdn.rebrickable.com/media/sets/43197-1.jpg",
+     "figs": 10
+    },
+    {
+     "no": "21186-1",
+     "name": "The Ice Castle",
+     "year": 2022,
+     "pieces": 499,
+     "img": "https://cdn.rebrickable.com/media/sets/21186-1.jpg",
+     "figs": 6
+    }
+   ],
+   "figs_value_huf": 4825,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21186-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21186-1.png"
+   ]
+  },
+  "21240-1": {
+   "type": "SET",
+   "name": "The Swamp Adventure",
+   "year": 2023,
+   "category": "Minecraft",
+   "weight_g": 109.0,
+   "dims_cm": [
+    14.0,
+    12.1,
+    4.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 65,
+   "minifigs": [
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min017",
+     "name": "Alex - Reddish Brown Legs",
+     "qty": 1,
+     "sets": 24
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1059,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21240-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21240-1.png"
+   ]
+  },
+  "21243-1": {
+   "type": "SET",
+   "name": "The Frozen Peaks",
+   "year": 2023,
+   "category": "Minecraft",
+   "weight_g": 506.0,
+   "dims_cm": [
+    26.0,
+    21.9,
+    7.4
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 309,
+   "minifigs": [
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min140",
+     "name": "Steve (Light Nougat) - Bright Green Legs, Helmet and Armor",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min141",
+     "name": "Stray - Pearl Gold Armor",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 3312,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21243-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21243-1.png"
+   ]
+  },
+  "21244-1": {
+   "type": "SET",
+   "name": "The Sword Outpost",
+   "year": 2023,
+   "category": "Minecraft",
+   "weight_g": 735.0,
+   "dims_cm": [
+    28.1,
+    25.9,
+    7.4
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 415,
+   "minifigs": [
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min032",
+     "name": "Skeleton, Minecraft - Flat Silver Helmet",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "min143",
+     "name": "Sentinel Soldier",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min144",
+     "name": "Guardian Warrior",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min145",
+     "name": "Allay",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 5198,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21244-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21244-1.png"
+   ]
+  },
+  "21248-1": {
+   "type": "SET",
+   "name": "The Pumpkin Farm",
+   "year": 2023,
+   "category": "Minecraft",
+   "weight_g": 459.0,
+   "dims_cm": [
+    35.4,
+    19.1,
+    5.9
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 263,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min150",
+     "name": "Witch - Detachable Plain Hat",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2176,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21248-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21248-1.png"
+   ]
+  },
+  "21249-1": {
+   "type": "SET",
+   "name": "The Crafting Box 4.0",
+   "year": 2023,
+   "category": "Minecraft",
+   "weight_g": 1229.0,
+   "dims_cm": [
+    47.8,
+    28.0,
+    6.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 615,
+   "minifigs": [
+    {
+     "no": "min009",
+     "name": "Steve (Light Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 28
+    },
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min017",
+     "name": "Alex - Reddish Brown Legs",
+     "qty": 1,
+     "sets": 24
+    },
+    {
+     "no": "min131",
+     "name": "Zombie - Dark Purple Legs, Flat Silver Helmet",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2784,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21249-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21249-1.png"
+   ]
+  },
+  "21252-1": {
+   "type": "SET",
+   "name": "The Armory",
+   "year": 2023,
+   "category": "Minecraft",
+   "weight_g": 316.0,
+   "dims_cm": [
+    26.0,
+    19.0,
+    4.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 205,
+   "minifigs": [
+    {
+     "no": "min157",
+     "name": "Armorsmith",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min158",
+     "name": "Alex - Reddish Brown Legs, Pearl Gold Helmet",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1015,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21252-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21252-1.png"
+   ]
+  },
+  "21256-1": {
+   "type": "SET",
+   "name": "The Frog House",
+   "year": 2024,
+   "category": "Minecraft",
+   "weight_g": 712.0,
+   "dims_cm": [
+    38.0,
+    26.0,
+    5.7
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 404,
+   "minifigs": [
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min088",
+     "name": "Drowned Zombie - Dark Brown, Dark Turquoise, Green, Sand Green, White Pixelated Vest",
+     "qty": 1,
+     "sets": 9
+    },
+    {
+     "no": "min161",
+     "name": "Swamp Explorer",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2502,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21256-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21256-1.png"
+   ]
+  },
+  "21260-1": {
+   "type": "SET",
+   "name": "The Cherry Blossom Garden",
+   "year": 2024,
+   "category": "Minecraft",
+   "weight_g": 380.0,
+   "dims_cm": [
+    26.0,
+    18.9,
+    6.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 319,
+   "minifigs": [
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min172",
+     "name": "Sunny",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1432,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21260-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21260-1.png"
+   ]
+  },
+  "21263-1": {
+   "type": "SET",
+   "name": "The Badlands Mineshaft",
+   "year": 2024,
+   "category": "Minecraft",
+   "weight_g": 839.0,
+   "dims_cm": [
+    38.0,
+    25.9,
+    7.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 545,
+   "minifigs": [
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min176",
+     "name": "Badlands Explorer",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min177",
+     "name": "Husk - Dark Brown Legs",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 3121,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21263-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21263-1.png"
+   ]
+  },
+  "21266-1": {
+   "type": "SET",
+   "name": "The Nether Lava Battle",
+   "year": 2025,
+   "category": "Minecraft",
+   "weight_g": 115.1,
+   "dims_cm": [
+    14.0,
+    12.0,
+    4.4
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 84,
+   "minifigs": [
+    {
+     "no": "min025",
+     "name": "Wither Skeleton - Straight Arms",
+     "qty": 1,
+     "sets": 7
+    },
+    {
+     "no": "min197",
+     "name": "Alex - Medium Azure Legs, Angry",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min198",
+     "name": "Blaze - Trans-Black Cone Stand",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2275,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21266-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21266-1.png"
+   ]
+  },
+  "21267-1": {
+   "type": "SET",
+   "name": "The Illager Desert Patrol",
+   "year": 2025,
+   "category": "Minecraft",
+   "weight_g": 166.8,
+   "dims_cm": [
+    19.0,
+    13.8,
+    4.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 92,
+   "minifigs": [
+    {
+     "no": "min193",
+     "name": "Cactus Knight - Medium Azure Helmet and Armor",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min194",
+     "name": "Illager (Vindicator) - Narrow Eyes",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "min195",
+     "name": "Illager (Pillager) - Narrow Eyes",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min196",
+     "name": "Illager (Pillager) - Narrow Eyes, Dark Bluish Gray Neck Bracket and Tile with Clip, Ominous Banner",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2923,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21267-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21267-1.png"
+   ]
+  },
+  "21275-1": {
+   "type": "SET",
+   "name": "The TNT Jungle House",
+   "year": 2025,
+   "category": "Minecraft",
+   "weight_g": 481.0,
+   "dims_cm": [
+    35.1,
+    19.0,
+    5.8
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 291,
+   "minifigs": [
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min199",
+     "name": "Steve (Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 3
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1890,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21275-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21275-1.png"
+   ]
+  },
+  "21278-1": {
+   "type": "SET",
+   "name": "The Pillager Outpost and Ravager",
+   "year": 2025,
+   "category": "Minecraft",
+   "weight_g": 990.0,
+   "dims_cm": [
+    45.6,
+    28.2,
+    6.1
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 671,
+   "minifigs": [
+    {
+     "no": "min194",
+     "name": "Illager (Vindicator) - Narrow Eyes",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "min223",
+     "name": "Space Sentinel - Dark Bluish Gray Legs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min224",
+     "name": "Villager (Mason) - Savannah Biome Outfit",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min229",
+     "name": "Illager (Pillager) - Narrow Eyes, Dark Bluish Gray Neck Bracket",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 8312,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21278-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21278-1.png"
+   ]
+  },
+  "21280-5": {
+   "type": "SET",
+   "name": "Advent Calendar 2025, Minecraft (Day  4) - Creeper and Sweet Berry Bush",
+   "year": 2025,
+   "category": "Holiday & Event",
+   "weight_g": 7.74,
+   "dims_cm": [
+    11.0,
+    9.0,
+    2.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 12,
+   "minifigs": [
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 571,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/21280-5.png"
+   ]
+  },
+  "21583-1": {
+   "type": "SET",
+   "name": "Steve's Taiga Adventure",
+   "year": 2026,
+   "category": "Minecraft",
+   "weight_g": 121.5,
+   "dims_cm": [
+    14.0,
+    12.0,
+    4.5
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 80,
+   "minifigs": [
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min199",
+     "name": "Steve (Nougat) - Dark Purple Legs",
+     "qty": 1,
+     "sets": 3
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1326,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21583-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21583-1.png"
+   ]
+  },
+  "21586-1": {
+   "type": "SET",
+   "name": "The Pale Garden",
+   "year": 2026,
+   "category": "Minecraft",
+   "weight_g": 399.0,
+   "dims_cm": [
+    26.0,
+    19.0,
+    6.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 207,
+   "minifigs": [
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min252",
+     "name": "Mothman",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min253",
+     "name": "Skeleton, Minecraft - Medium Lavender Armor and Helmet",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min254",
+     "name": "Creaking",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 3641,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21586-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21586-1.png"
+   ]
+  },
+  "21587-1": {
+   "type": "SET",
+   "name": "Zombie Dungeon",
+   "year": 2026,
+   "category": "Minecraft",
+   "weight_g": 527.0,
+   "dims_cm": [
+    19.0,
+    26.0,
+    9.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 283,
+   "minifigs": [
+    {
+     "no": "min010",
+     "name": "Zombie - Dark Purple Legs",
+     "qty": 1,
+     "sets": 22
+    },
+    {
+     "no": "min174",
+     "name": "Zombie - Dark Purple Legs, Medium Azure Helmet",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "min245",
+     "name": "Zombie - Medium Lavender Legs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min246",
+     "name": "Wastelands Wanderer",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2656,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21587-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21587-1.png"
+   ]
+  },
+  "21590-1": {
+   "type": "SET",
+   "name": "Wither Battle",
+   "year": 2026,
+   "category": "Minecraft",
+   "weight_g": 857.0,
+   "dims_cm": [
+    38.0,
+    26.0,
+    7.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 479,
+   "minifigs": [
+    {
+     "no": "min025",
+     "name": "Wither Skeleton - Straight Arms",
+     "qty": 2,
+     "sets": 7
+    },
+    {
+     "no": "min260",
+     "name": "Wither - Base with Connector Hubs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "min261",
+     "name": "Crimson Warrior",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 6539,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21590-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21590-1.png"
+   ]
+  },
+  "21593-1": {
+   "type": "SET",
+   "name": "First Night Adventure",
+   "year": 2026,
+   "category": "Minecraft",
+   "weight_g": 443.0,
+   "dims_cm": [
+    26.0,
+    19.0,
+    7.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 308,
+   "minifigs": [
+    {
+     "no": "min011",
+     "name": "Skeleton, Minecraft",
+     "qty": 1,
+     "sets": 26
+    },
+    {
+     "no": "min012",
+     "name": "Creeper",
+     "qty": 1,
+     "sets": 29
+    },
+    {
+     "no": "min017",
+     "name": "Alex - Reddish Brown Legs",
+     "qty": 1,
+     "sets": 24
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1539,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/21593-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/21593-1.png"
+   ]
+  },
+  "2173-1": {
+   "type": "SET",
+   "name": "Nuckal blister pack",
+   "year": 2011,
+   "category": "NINJAGO",
+   "weight_g": 98.0,
+   "dims_cm": [
+    17.2,
+    23.0,
+    2.8
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 18,
+   "minifigs": [
+    {
+     "no": "njo0025",
+     "name": "Nuckal (Skulkin) - Horizontal Grip Hands",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 3623,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/2173-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/2173-1.png"
+   ]
+  },
+  "2879-1": {
+   "type": "SET",
+   "name": "Desert Expedition",
+   "year": 1998,
+   "category": "Adventurers",
+   "weight_g": 360.0,
+   "dims_cm": [
+    24.0,
+    24.0,
+    6.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 178,
+   "minifigs": [
+    {
+     "no": "adv009",
+     "name": "Harry Cane",
+     "qty": 1,
+     "sets": 9
+    },
+    {
+     "no": "adv038",
+     "name": "Slyboots / Sam Sinister",
+     "qty": 1,
+     "sets": 9
+    },
+    {
+     "no": "adv039",
+     "name": "Sam Sinister / Baron von Barron - Tan Shirt, Light Gray Legs, White Pith Helmet, White Epaulettes",
+     "qty": 1,
+     "sets": 11
+    },
+    {
+     "no": "adv040",
+     "name": "Dr. Kilroy / Dr. Charles Lightning - White Shirt and Suspenders, Green Legs, White Pith Helmet, Brown Backpack",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 1,
+     "sets": 47
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "2879-1",
+     "name": "Desert Expedition",
+     "year": 1998,
+     "pieces": 196,
+     "img": "https://cdn.rebrickable.com/media/sets/2879-1.jpg",
+     "figs": 5
+    },
+    {
+     "no": "5948-1",
+     "name": "Desert Expedition",
+     "year": 1998,
+     "pieces": 196,
+     "img": "https://cdn.rebrickable.com/media/sets/5948-1.jpg",
+     "figs": 5
+    }
+   ],
+   "figs_value_huf": 14613,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/2879-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/2879-1.png"
+   ]
+  },
+  "30004-1": {
+   "type": "SET",
+   "name": "Battle Droid on STAP - Mini polybag",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 20.0,
+   "dims_cm": [
+    13.9,
+    13.9,
+    1.9
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 27,
+   "minifigs": [
+    {
+     "no": "sw0001b",
+     "name": "Battle Droid - Tan, Angled Arms",
+     "qty": 1,
+     "sets": 16
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 634,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/30004-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/30004-1.png"
+   ]
+  },
+  "30005-1": {
+   "type": "SET",
+   "name": "Imperial Speeder Bike - Mini polybag",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 25.0,
+   "dims_cm": [
+    13.8,
+    13.3,
+    1.0
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 29,
+   "minifigs": [
+    {
+     "no": "sw0188",
+     "name": "Imperial Stormtrooper - Black Head, Dotted Mouth Helmet",
+     "qty": 1,
+     "sets": 6
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2550,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/30005-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/30005-1.png"
+   ]
+  },
+  "30058-1": {
+   "type": "SET",
+   "name": "STAP - Mini polybag",
+   "year": 2012,
+   "category": "Star Wars",
+   "weight_g": 16.0,
+   "dims_cm": [
+    13.7,
+    13.7,
+    0.9
+   ],
+   "fetched": "2026-11-02",
+   "pieces": 22,
+   "minifigs": [
+    {
+     "no": "sw0001b",
+     "name": "Battle Droid - Tan, Angled Arms",
+     "qty": 1,
+     "sets": 16
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 634,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/30058-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/30058-1.png"
    ]
   },
   "30611-1": {
@@ -10683,6 +11737,10 @@
   }
  },
  "figsets": {
+  "adv009": 9,
+  "adv038": 9,
+  "adv039": 11,
+  "adv040": 5,
   "cas327": 7,
   "cas328": 9,
   "cas329": 2,
@@ -10726,6 +11784,7 @@
   "min028": 2,
   "min029": 1,
   "min030": 1,
+  "min032": 2,
   "min042": 1,
   "min047": 1,
   "min048": 1,
@@ -10741,6 +11800,7 @@
   "min072": 1,
   "min073": 1,
   "min087": 1,
+  "min088": 9,
   "min093": 2,
   "min098": 1,
   "min106": 1,
@@ -10749,13 +11809,41 @@
   "min111": 1,
   "min115": 1,
   "min116": 1,
+  "min129": 1,
+  "min130": 1,
+  "min131": 2,
+  "min140": 1,
+  "min141": 2,
+  "min143": 1,
+  "min144": 1,
+  "min145": 1,
+  "min150": 2,
   "min154": 1,
+  "min157": 1,
   "min158": 1,
+  "min161": 1,
+  "min172": 1,
+  "min174": 3,
+  "min176": 1,
+  "min177": 2,
+  "min193": 1,
   "min194": 2,
   "min195": 1,
   "min196": 1,
+  "min197": 1,
   "min198": 2,
+  "min199": 3,
   "min200": 1,
+  "min223": 1,
+  "min224": 1,
+  "min229": 1,
+  "min245": 1,
+  "min246": 1,
+  "min252": 1,
+  "min253": 1,
+  "min254": 1,
+  "min260": 1,
+  "min261": 1,
   "njo0025": 1,
   "pi002": 1,
   "sh0167": 3,
@@ -11034,6 +12122,26 @@
   "sw1489": 1
  },
  "figvalues": {
+  "adv009": {
+   "eur": 12.69,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "adv038": {
+   "eur": 10.03,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "adv039": {
+   "eur": 7.94,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "adv040": {
+   "eur": 4.05,
+   "cond": "U",
+   "at": "2026-11-02"
+  },
   "div008": {
    "eur": 4.95,
    "cond": "N",
@@ -11229,6 +12337,11 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "min032": {
+   "eur": 2.34,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
   "min042": {
    "eur": 2.05,
    "cond": "U",
@@ -11304,6 +12417,11 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "min088": {
+   "eur": 1.57,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
   "min093": {
    "eur": 5.26,
    "cond": "U",
@@ -11344,9 +12462,179 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "min129": {
+   "eur": 2.04,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min130": {
+   "eur": 4.42,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min131": {
+   "eur": 2.59,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min140": {
+   "eur": 4.15,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min141": {
+   "eur": 3.33,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min143": {
+   "eur": 1.8,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min144": {
+   "eur": 2.21,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min145": {
+   "eur": 6.28,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min150": {
+   "eur": 3.84,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
   "min154": {
    "eur": 19.74,
    "cond": "U",
+   "at": "2026-11-02"
+  },
+  "min157": {
+   "eur": 1.38,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min158": {
+   "eur": 1.39,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min161": {
+   "eur": 3.72,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min172": {
+   "eur": 2.37,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min174": {
+   "eur": 1.48,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min176": {
+   "eur": 3.56,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min177": {
+   "eur": 3.4,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min193": {
+   "eur": 1.84,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min194": {
+   "eur": 1.95,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min195": {
+   "eur": 1.68,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min196": {
+   "eur": 2.51,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min197": {
+   "eur": 1.68,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min198": {
+   "eur": 2.12,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min199": {
+   "eur": 2.06,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min223": {
+   "eur": 6.76,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min224": {
+   "eur": 8.5,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min229": {
+   "eur": 5.48,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min245": {
+   "eur": 1.41,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min246": {
+   "eur": 2.82,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min252": {
+   "eur": 2.26,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min253": {
+   "eur": 2.11,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min254": {
+   "eur": 4.01,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min260": {
+   "eur": 6.18,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "min261": {
+   "eur": 6.85,
+   "cond": "N",
+   "at": "2026-11-02"
+  },
+  "njo0025": {
+   "eur": 9.89,
+   "cond": "N",
    "at": "2026-11-02"
   },
   "pi002": {

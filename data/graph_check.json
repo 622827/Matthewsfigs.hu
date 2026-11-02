@@ -1,7 +1,7 @@
 {
  "_info": "Raktári figurák, amelyek nincsenek a hálóban BrickLink-számmal (scripts/catalog_graph.py).",
  "checked": "2026-11-02",
- "count": 11,
+ "count": 7,
  "missing": [
   {
    "no": "sw0314",
@@ -31,27 +31,6 @@
     "colsh-10"
    ],
    "candidates": []
-  },
-  {
-   "no": "sw0782",
-   "name": "K-2SO Droid - Dark Bluish Gray and Silver Chest Panel",
-   "sets": [
-    "75156-1"
-   ],
-   "candidates": [
-    [
-     "fig-004211",
-     "K-2SO"
-    ],
-    [
-     "fig-004209",
-     "Bodhi Rook"
-    ],
-    [
-     "fig-004212",
-     "Imperial Death Trooper / Specialist / Commander"
-    ]
-   ]
   },
   {
    "no": "sw0364",
@@ -86,29 +65,8 @@
      "Luke Skywalker, Dark Bluish Gray Robes, Tan Hair, Single Sided Head"
     ],
     [
-     "fig-003885",
-     "Kithaba"
-    ]
-   ]
-  },
-  {
-   "no": "sw0636",
-   "name": "Darth Vader (Type 2 Helmet)",
-   "sets": [
-    "75093-1"
-   ],
-   "candidates": [
-    [
-     "fig-002683",
-     "Darth Vader, White Skin, 50231 Cape, Robe Hem on Legs"
-    ],
-    [
-     "fig-002681",
-     "Royal Guard, Dark Red Hands, 50231 Cape"
-    ],
-    [
-     "fig-002530",
-     "Luke Skywalker, Final Duel Outfit, Short Dark Tan Hair"
+     "fig-003886",
+     "Lando Calrissian, Skiff Guard Disguise, Dark Brown Helmet, Tan Legs"
     ]
    ]
   },
@@ -121,48 +79,6 @@
    "candidates": []
   },
   {
-   "no": "sw0569",
-   "name": "Luke Skywalker (Pilot, Printed Legs, Cheek Lines)",
-   "sets": [
-    "75049-1"
-   ],
-   "candidates": [
-    [
-     "fig-004077",
-     "Luke Skywalker, Orange Rebel Pilot Outfit, Light Bluish Gray Hips, White Hands, Visor on Both Sides of Head"
-    ],
-    [
-     "fig-004076",
-     "Dak Ralter, Printed Visor, White Hands"
-    ],
-    [
-     "fig-001940",
-     "Snowtrooper, Light Bluish Gray Hips, Neck Bracket with Printed 1 x 1 Tile and 1 x 1 Plate with Clip Light, Kama"
-    ]
-   ]
-  },
-  {
-   "no": "sw1105",
-   "name": "AT-AT Driver - Dark Red Imperial Logo, Cheek Lines, Smile",
-   "sets": [
-    "75288-1"
-   ],
-   "candidates": [
-    [
-     "fig-010387",
-     "AT-AT Driver, Sand Blue Uniform, 3626cpr3168 Head"
-    ],
-    [
-     "fig-010388",
-     "AT-AT Driver, Sand Blue Uniform, 3626cpr0937 Head"
-    ],
-    [
-     "fig-010385",
-     "Snowtrooper, White Hips, Printed Legs, Dark Tan Hands (3626cpr1709 Head)"
-    ]
-   ]
-  },
-  {
    "no": "sw1487",
    "name": "Mandalorian Super Commando - Printed Legs, Female",
    "sets": [
@@ -170,12 +86,12 @@
    ],
    "candidates": [
     [
-     "fig-017325",
-     "Mandalorian, Umber Brown Head"
-    ],
-    [
      "fig-017326",
      "Mandalorian, Light Nougat Head"
+    ],
+    [
+     "fig-017325",
+     "Mandalorian, Umber Brown Head"
     ]
    ]
   },
@@ -187,12 +103,12 @@
    ],
    "candidates": [
     [
-     "fig-017325",
-     "Mandalorian, Umber Brown Head"
-    ],
-    [
      "fig-017326",
      "Mandalorian, Light Nougat Head"
+    ],
+    [
+     "fig-017325",
+     "Mandalorian, Umber Brown Head"
     ]
    ]
   }
