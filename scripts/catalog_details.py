@@ -391,6 +391,17 @@ def main():
                 break
             items[n].update(r)
             changed = True
+        # other releases (own page only): film/series + description, a few per run so the daily quota lasts
+        left2 = max(0, left - len(desc_todo))
+        ext_todo = [n for n, d in items.items() if d.get("type") == "SET" and n in wanted and n not in own_sets and "subtheme" not in d][:min(left2, 10)]
+        if ext_todo:
+            print(f"Brickset altéma (többi kiadás): {len(ext_todo)} szett.")
+        for n in ext_todo:
+            r = brickset_extra(n)
+            if r is None:
+                break
+            items[n].update(r)
+            changed = True
 
     figval = out.get("figvalues", {})
     changed = update_fig_values(items, wanted, figval, today) or changed
