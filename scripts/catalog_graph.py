@@ -26,6 +26,7 @@ INV = ROOT / "data" / "inventory.json"
 DETAILS = ROOT / "data" / "details.json"
 OUT = ROOT / "data" / "graph.json"
 MAP = ROOT / "data" / "graph_map.json"
+CHECK = ROOT / "data" / "graph_check.json"
 RB = "https://cdn.rebrickable.com/media/downloads/"
 MAP_MAX = int(os.environ.get("GRAPH_MAP_MAX", "100"))
 MAX_NODES = 6000
@@ -186,6 +187,25 @@ def main():
     MAP.write_text(json.dumps({"built": date.today().isoformat(), "todo": max(0, len(todo) - done), "bl": dict(sorted(bl.items()))},
                               ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     print(f"Mentve: {len(out_sets)} szett, {len(out_figs)} figura ({len(rb2bl)} párosítva).")
+    check(inv, det, out_sets, out_figs, figs, s2f, rb2bl)
+
+
+def check(inv, det, out_sets, out_figs, figs, s2f, rb2bl):
+    """Every minifigure we stock must be in the web under its BrickLink number; list the ones that aren't
+    (with the unpaired Rebrickable figures of its sets as likely matches) in data/graph_check.json."""
+    missing = []
+    for i in inv.get("items", []):
+        if i.get("type") != "MINIFIG" or i["no"] in out_figs:
+            continue
+        sets_of = [s["no"] for s in (det.get(i["no"]) or {}).get("sets") or []]
+        cands = sorted({f for s in sets_of for f in (s2f.get(s) or {}) if f not in rb2bl},
+                       key=lambda f: -len(words(figs.get(f, {}).get("name", "")) & words(i["name"])))[:3]
+        missing.append({"no": i["no"], "name": i["name"], "sets": sets_of[:5],
+                        "candidates": [[f, figs.get(f, {}).get("name", f)] for f in cands]})
+    CHECK.write_text(json.dumps({"_info": "Raktári figurák, amelyek nincsenek a hálóban BrickLink-számmal (scripts/catalog_graph.py).",
+                                 "checked": date.today().isoformat(), "count": len(missing), "missing": missing},
+                                ensure_ascii=False, indent=1) + "\n", encoding="utf-8")
+    print(f"Ellenőrzés: {len(missing)} raktári figura hiányzik a hálóból BrickLink-számmal.")
 
 
 if __name__ == "__main__":

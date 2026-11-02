@@ -54,7 +54,7 @@ jobs:
         run: |
           git config user.name "inventory-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/inventory.json data/prices_huf.json data/details.json data/autolabels.json data/graph.json data/graph_map.json 2>/dev/null || git add data/inventory.json data/prices_huf.json
+          git add data/inventory.json data/prices_huf.json data/details.json data/autolabels.json data/graph.json data/graph_map.json data/graph_check.json 2>/dev/null || git add data/inventory.json data/prices_huf.json
           git diff --cached --quiet && exit 0
           git commit -q -m "Készlet frissítése $(date -u +%F' '%H:%M)"
           for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done; exit 1

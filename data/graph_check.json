@@ -1,0 +1,222 @@
+{
+ "_info": "Raktári figurák, amelyek nincsenek a hálóban BrickLink-számmal (scripts/catalog_graph.py).",
+ "checked": "2026-11-02",
+ "count": 12,
+ "missing": [
+  {
+   "no": "sw0314",
+   "name": "Clone Trooper Captain Rex, 501st Legion (Phase 1) - Dark Bluish Gray Rangefinder, Pauldron, and Kama, Large Eyes",
+   "sets": [
+    "7869-1"
+   ],
+   "candidates": [
+    [
+     "fig-003708",
+     "Captain Rex, Helmet Rangefinder"
+    ],
+    [
+     "fig-003707",
+     "Luminara Unduli, Black Hat"
+    ],
+    [
+     "fig-014064",
+     "Super Battle Droid, Pearl Titanium, Blaster Arm"
+    ]
+   ]
+  },
+  {
+   "no": "colsh10",
+   "name": "Batman, DC Super Heroes (Minifigure Only without Stand and Accessories)",
+   "sets": [
+    "colsh-10"
+   ],
+   "candidates": []
+  },
+  {
+   "no": "sw0782",
+   "name": "K-2SO Droid - Dark Bluish Gray and Silver Chest Panel",
+   "sets": [
+    "75156-1"
+   ],
+   "candidates": [
+    [
+     "fig-004211",
+     "K-2SO"
+    ],
+    [
+     "fig-004210",
+     "Director Orson Callan Krennic"
+    ],
+    [
+     "fig-004212",
+     "Imperial Death Trooper / Specialist / Commander"
+    ]
+   ]
+  },
+  {
+   "no": "sw0364",
+   "name": "Sandtrooper - Orange Pauldron, Survival Backpack, Dirt Stains, Balaclava Head Print and Helmet with Dotted Mouth Pattern",
+   "sets": [
+    "9490-1"
+   ],
+   "candidates": [
+    [
+     "fig-003903",
+     "Sandtrooper Squad Leader / Captain, Orange Pauldron, Neck Bracket, Printed Black Head"
+    ],
+    [
+     "fig-003902",
+     "Sandtrooper Sergeant, White Pauldron, Neck Bracket, Printed Black Head"
+    ]
+   ]
+  },
+  {
+   "no": "sw0396",
+   "name": "Boba Fett - Head Beard Stubble",
+   "sets": [
+    "9496-1"
+   ],
+   "candidates": [
+    [
+     "fig-001109",
+     "Boba Fett, Helmet, Jetpack Neckwear, Olive Green Pauldron, Dark Green Hips"
+    ],
+    [
+     "fig-003887",
+     "Luke Skywalker, Dark Bluish Gray Robes, Tan Hair, Single Sided Head"
+    ],
+    [
+     "fig-003886",
+     "Lando Calrissian, Skiff Guard Disguise, Dark Brown Helmet, Tan Legs"
+    ]
+   ]
+  },
+  {
+   "no": "sw0636",
+   "name": "Darth Vader (Type 2 Helmet)",
+   "sets": [
+    "75093-1"
+   ],
+   "candidates": [
+    [
+     "fig-002683",
+     "Darth Vader, White Skin, 50231 Cape, Robe Hem on Legs"
+    ],
+    [
+     "fig-002684",
+     "Emperor Palpatine, Tan Skin (50231 Cape)"
+    ],
+    [
+     "fig-002681",
+     "Royal Guard, Dark Red Hands, 50231 Cape"
+    ]
+   ]
+  },
+  {
+   "no": "sw0514",
+   "name": "Boba Fett, Young - Dark Azure Shirt",
+   "sets": [
+    "75023-23"
+   ],
+   "candidates": []
+  },
+  {
+   "no": "cas329",
+   "name": "Fantasy Era - Skeleton Warrior 3, White, Speckled Helmet",
+   "sets": [
+    "7091-1",
+    "7092-1"
+   ],
+   "candidates": [
+    [
+     "fig-009932",
+     "Skeleton, Red Eyes, Speckle Black-Silver Helmet"
+    ],
+    [
+     "fig-009933",
+     "Knight, Black, Armor, Helmet with Grille, Cheek Lines"
+    ],
+    [
+     "fig-009934",
+     "Knight, Dark Blue, Helmet, Angry"
+    ]
+   ]
+  },
+  {
+   "no": "sw0569",
+   "name": "Luke Skywalker (Pilot, Printed Legs, Cheek Lines)",
+   "sets": [
+    "75049-1"
+   ],
+   "candidates": [
+    [
+     "fig-004077",
+     "Luke Skywalker, Orange Rebel Pilot Outfit, Light Bluish Gray Hips, White Hands, Visor on Both Sides of Head"
+    ],
+    [
+     "fig-004076",
+     "Dak Ralter, Printed Visor, White Hands"
+    ],
+    [
+     "fig-001940",
+     "Snowtrooper, Light Bluish Gray Hips, Neck Bracket with Printed 1 x 1 Tile and 1 x 1 Plate with Clip Light, Kama"
+    ]
+   ]
+  },
+  {
+   "no": "sw1105",
+   "name": "AT-AT Driver - Dark Red Imperial Logo, Cheek Lines, Smile",
+   "sets": [
+    "75288-1"
+   ],
+   "candidates": [
+    [
+     "fig-010387",
+     "AT-AT Driver, Sand Blue Uniform, 3626cpr3168 Head"
+    ],
+    [
+     "fig-010388",
+     "AT-AT Driver, Sand Blue Uniform, 3626cpr0937 Head"
+    ],
+    [
+     "fig-010385",
+     "Snowtrooper, White Hips, Printed Legs, Dark Tan Hands (3626cpr1709 Head)"
+    ]
+   ]
+  },
+  {
+   "no": "sw1487",
+   "name": "Mandalorian Super Commando - Printed Legs, Female",
+   "sets": [
+    "75449-1"
+   ],
+   "candidates": [
+    [
+     "fig-017326",
+     "Mandalorian, Light Nougat Head"
+    ],
+    [
+     "fig-017325",
+     "Mandalorian, Umber Brown Head"
+    ]
+   ]
+  },
+  {
+   "no": "sw1486",
+   "name": "Mandalorian Super Commando - Printed Legs, Male",
+   "sets": [
+    "75449-1"
+   ],
+   "candidates": [
+    [
+     "fig-017326",
+     "Mandalorian, Light Nougat Head"
+    ],
+    [
+     "fig-017325",
+     "Mandalorian, Umber Brown Head"
+    ]
+   ]
+  }
+ ]
+}
