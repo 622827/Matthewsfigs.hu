@@ -34,7 +34,7 @@
     "hero.title":"If we don't have it,<br>we can get it.",
     "hero.lead":"Bulk LEGO® sets and minifigures below retail. Looking for a rare figure or a long-retired set? Message us and we'll source it within a few weeks.",
     "hero.cta1":"Browse the shop","hero.cta2":"Message us",
-    "stats.lots":"lots in stock","stats.praise":"positive feedback","stats.ship":"ships in Hungary & abroad","stats.place":"pickup in Budapest",
+    "stats.lots":"lots in stock","stats.sold":"items sold","stats.ship":"ships in Hungary & abroad","stats.place":"pickup in Budapest",
     "shop.title":"Shop","shop.updated":"Updated:","shop.sets":"Sets","shop.figs":"Minifigures","shop.parts":"Parts","shop.all":"All",
     "shop.search":"Search by name or number…","shop.condAll":"Any condition","shop.condNew":"New","shop.condUsed":"Used",
     "shop.empty":"Nothing found. Message us and we'll source it!","shop.more":"Show more",
@@ -865,6 +865,8 @@
       d.items = [...byItem.values()];
       data = d;
       const lots = $("statLots"); if (lots && d.total_lots) lots.textContent = d.total_lots;
+      const sold = $("statSold");   // data/sales.json: items sold so far (scripts/sales_stats.py, BrickLink orders)
+      if (sold) fetch("data/sales.json", { cache: "no-cache" }).then(r => r.ok ? r.json() : null).then(j => { if (j && j.sold) sold.textContent = j.sold.toLocaleString(lang === "hu" ? "hu-HU" : "en-GB"); }).catch(() => {});
       if (d.updated && $("updated")) $("updated").textContent =
         new Date(d.updated).toLocaleString(lang === "hu" ? "hu-HU" : "en-GB", { dateStyle: "medium", timeStyle: "short" });
       renderAll(true);

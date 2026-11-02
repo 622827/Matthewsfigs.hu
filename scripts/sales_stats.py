@@ -61,7 +61,10 @@ def main():
     iv, ct = seal(key, res)
     OUT.mkdir(parents=True, exist_ok=True)
     (OUT / f"{fid}.json").write_text(json.dumps({"v": 1, "iv": base64.b64encode(iv).decode(), "ct": base64.b64encode(ct).decode()}))
-    print("Mentve (titkosítva).")
+    # public: only the total number of items sold (homepage counter)
+    sold = sum(v["qty"] for v in by_type.values())
+    (OUT.parent.parent / "sales.json").write_text(json.dumps({"sold": sold, "updated": res["at"]}) + "\n")
+    print("Mentve (titkosítva) + data/sales.json.")
 
 
 if __name__ == "__main__":
