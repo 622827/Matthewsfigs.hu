@@ -1,29 +1,8 @@
 {
  "_info": "Raktári figurák, amelyek nincsenek a hálóban BrickLink-számmal (scripts/catalog_graph.py).",
  "checked": "2026-11-02",
- "count": 7,
+ "count": 3,
  "missing": [
-  {
-   "no": "sw0314",
-   "name": "Clone Trooper Captain Rex, 501st Legion (Phase 1) - Dark Bluish Gray Rangefinder, Pauldron, and Kama, Large Eyes",
-   "sets": [
-    "7869-1"
-   ],
-   "candidates": [
-    [
-     "fig-003708",
-     "Captain Rex, Helmet Rangefinder"
-    ],
-    [
-     "fig-014064",
-     "Super Battle Droid, Pearl Titanium, Blaster Arm"
-    ],
-    [
-     "fig-003707",
-     "Luminara Unduli, Black Hat"
-    ]
-   ]
-  },
   {
    "no": "colsh10",
    "name": "Batman, DC Super Heroes (Minifigure Only without Stand and Accessories)",
@@ -33,42 +12,12 @@
    "candidates": []
   },
   {
-   "no": "sw0364",
-   "name": "Sandtrooper - Orange Pauldron, Survival Backpack, Dirt Stains, Balaclava Head Print and Helmet with Dotted Mouth Pattern",
+   "no": "sw0216s",
+   "name": "EV-A4-D with Sticker",
    "sets": [
-    "9490-1"
+    "8095-1"
    ],
-   "candidates": [
-    [
-     "fig-003903",
-     "Sandtrooper Squad Leader / Captain, Orange Pauldron, Neck Bracket, Printed Black Head"
-    ],
-    [
-     "fig-003902",
-     "Sandtrooper Sergeant, White Pauldron, Neck Bracket, Printed Black Head"
-    ]
-   ]
-  },
-  {
-   "no": "sw0396",
-   "name": "Boba Fett - Head Beard Stubble",
-   "sets": [
-    "9496-1"
-   ],
-   "candidates": [
-    [
-     "fig-001109",
-     "Boba Fett, Helmet, Jetpack Neckwear, Olive Green Pauldron, Dark Green Hips"
-    ],
-    [
-     "fig-003887",
-     "Luke Skywalker, Dark Bluish Gray Robes, Tan Hair, Single Sided Head"
-    ],
-    [
-     "fig-003886",
-     "Lando Calrissian, Skiff Guard Disguise, Dark Brown Helmet, Tan Legs"
-    ]
-   ]
+   "candidates": []
   },
   {
    "no": "sw0514",
@@ -77,40 +26,6 @@
     "75023-23"
    ],
    "candidates": []
-  },
-  {
-   "no": "sw1487",
-   "name": "Mandalorian Super Commando - Printed Legs, Female",
-   "sets": [
-    "75449-1"
-   ],
-   "candidates": [
-    [
-     "fig-017326",
-     "Mandalorian, Light Nougat Head"
-    ],
-    [
-     "fig-017325",
-     "Mandalorian, Umber Brown Head"
-    ]
-   ]
-  },
-  {
-   "no": "sw1486",
-   "name": "Mandalorian Super Commando - Printed Legs, Male",
-   "sets": [
-    "75449-1"
-   ],
-   "candidates": [
-    [
-     "fig-017326",
-     "Mandalorian, Light Nougat Head"
-    ],
-    [
-     "fig-017325",
-     "Mandalorian, Umber Brown Head"
-    ]
-   ]
   }
  ]
 }
