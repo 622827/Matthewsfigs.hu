@@ -20,6 +20,7 @@ INV = ROOT / "data" / "inventory.json"
 OUT = ROOT / "data" / "details.json"
 MAX_ITEMS = int(os.environ.get("DETAILS_MAX", "80"))
 STALE_DAYS = 90
+EXTRA_MAX = int(os.environ.get("DETAILS_EXTRA_MAX", "25"))   # sets only known from a minifigure's set list
 
 
 def get(path, params=None):
@@ -347,6 +348,15 @@ def main():
     for n in sorted(own_sets):
         for v in (items.get(n) or {}).get("versions") or []:
             wanted.setdefault(v["no"], "SET")
+    # sets our minifigures come in ("appears in these sets") get a page too – fetched slowly, EXTRA_MAX per run
+    fig_sets = set()
+    for n, t in list(wanted.items()):
+        if t == "MINIFIG":
+            for s in (items.get(n) or {}).get("sets") or []:
+                if s["no"] not in wanted:
+                    fig_sets.add(s["no"])
+    for n in fig_sets:
+        wanted[n] = "SET"
     today = date.today()
 
     def stale(no):
@@ -360,7 +370,9 @@ def main():
         except ValueError:
             return True
 
-    todo = [no for no in sorted(wanted, key=lambda n: (n in items, n)) if stale(no)][:MAX_ITEMS]
+    todo = [no for no in sorted(wanted, key=lambda n: (n in fig_sets, n in items, n)) if stale(no)]
+    extra = [n for n in todo if n in fig_sets][:EXTRA_MAX]
+    todo = ([n for n in todo if n not in fig_sets] + extra)[:MAX_ITEMS]
     print(f"{len(todo)} tétel lekérése ({sum(1 for n in wanted if n not in items)} hiányzik).")
     changed = False
     for no in todo:
