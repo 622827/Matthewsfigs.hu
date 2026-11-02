@@ -520,8 +520,8 @@
     const figTotal = (D.minifigs || []).reduce((s, f) => s + f.qty, 0);
     const shopRound = v => Math.max(500, Math.round(v / 500) * 500) - 20;
     const isBag = /foil pack|paper bag|polybag/i.test(i.name);   // there the minifigure is the product
-    // set-only price: the full price minus 70% of the minifigures' market value (Máté, 2026-11-02)
-    const FIG_SHARE = 0.7;
+    // set-only price: the full price minus 75% of the minifigures' market value (Máté, 2026-11-02)
+    const FIG_SHARE = 0.75;
     const noFig = set && !isBag && !i.preorder && i.price && D.figs_value_huf > 0 ? shopRound(i.price - D.figs_value_huf * FIG_SHARE) : 0;
     const showNoFig = noFig >= i.price * 0.3 && noFig <= i.price - 980;
     const noFigLink = MESSENGER + "?text=" + encodeURIComponent((hu ? "Szia! Csak a szettet kérem, minifigurák nélkül: " : "Hi! I'd like just the set, without the minifigures: ") + `${sn} ${i.name} (${money(noFig)})`);
