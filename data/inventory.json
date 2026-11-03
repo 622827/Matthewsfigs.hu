@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-03T15:48:10+00:00",
+ "updated": "2026-11-03T17:47:33+00:00",
  "store": "MatthewHorseman",
  "currency": "HUF",
  "bl_currency": "EUR",
@@ -70,7 +70,7 @@
    "name": "The Dark Falcon",
    "color": null,
    "cond": "N",
-   "qty": 6,
+   "qty": 5,
    "price": 52480,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75389-1.png",
