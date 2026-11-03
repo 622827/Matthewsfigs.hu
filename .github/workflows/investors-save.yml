@@ -1,0 +1,48 @@
+name: Befektetői oldal mentése
+
+# The admin page (befektetoknek.html) re-encrypts an investor's page in the browser and sends only the
+# ciphertext here – the workflow never sees a password or any readable data, so the public log stays clean.
+on:
+  workflow_dispatch:
+    inputs:
+      fid:
+        description: "Fájlazonosító (data/i/<fid>.json)"
+        required: true
+      blob:
+        description: "Titkosított tartalom (JSON: v, iv, ct)"
+        required: true
+
+concurrency:
+  group: investors-save
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  save:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - name: Mentés
+        env:
+          FID: ${{ inputs.fid }}
+          BLOB: ${{ inputs.blob }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, re, sys, base64
+          fid, blob = os.environ["FID"], os.environ["BLOB"]
+          if not re.fullmatch(r"[0-9a-f]{32}", fid) or not os.path.exists(f"data/i/{fid}.json"):
+              sys.exit("Ismeretlen befektetői oldal.")
+          b = json.loads(blob)
+          if set(b) != {"v", "iv", "ct"} or b["v"] != 1:
+              sys.exit("Hibás tartalom.")
+          base64.b64decode(b["iv"], validate=True); base64.b64decode(b["ct"], validate=True)
+          open(f"data/i/{fid}.json", "w").write(json.dumps(b))
+          EOF
+          git config user.name "inventory-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/i
+          git diff --cached --quiet && exit 0
+          git commit -q -m "Befektetői oldal frissítése"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done; exit 1
