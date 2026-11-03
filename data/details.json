@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-03T21:41:32+00:00",
+ "updated": "2026-11-03T22:39:53+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -19752,7 +19752,9 @@
     "https://img.bricklink.com/ItemImage/ON/0/7877-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7877-1.png"
    ],
-   "figs_value_huf": 15100
+   "figs_value_huf": 15100,
+   "desc_en": "Stop the invasion of Naboo™ with the Naboo Starfighter™!\nBlast through the battle droids and droideka to clear the hangar! Then speed into battle against the Droid™ Control Ship in the Naboo Starfighter™! Stage a realistic space stand-off with opening cockpit, ejecting R2-D2™, flick missiles, access ladder and rotating stand. Includes Anakin Skywalker™, Naboo™ pilot, R2-D2 and 2 security battle droid minifigures. Service vehicle and droideka™ also included.\n• Includes 5 minifigures: Anakin Skywalker, Naboo pilot, R2-D2 and 2 security battle droids\n• Features droideka and service vehicle\n• Board your ship with the access ladder!\n• Fire missiles at the opposition!\n• Open the realistic cockpit!\n• Eject R2-D2 with a special function!\n• Naboo Starfighter™ measures 14” (35cm) long and 9” (22cm) wide",
+   "subtheme": "Episode I"
   },
   "7879-1": {
    "type": "SET",
@@ -19817,7 +19819,9 @@
     "https://img.bricklink.com/ItemImage/ON/0/7879-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7879-1.png"
    ],
-   "figs_value_huf": 35318
+   "figs_value_huf": 35318,
+   "desc_en": "Defend the Hoth Echo Base from the evil Imperial forces!\nPrepare for attack! Imperial forces have discovered the Rebel base hidden on the ice planet of Hoth and are preparing to crush the Rebel Alliance. Han Solo, Chewbacca, Princess Leia and protocol droid R-3PO get ready to fend off the attack as 2 snowtroopers approach. Luke Skywalker is in the bacta tank being treated by medical droid 2-1B. Expanding base features tauntaun stable with tauntaun, working cargo crane, 2 rotating radar dishes, icicle trap and speeder bike.\n• Features tauntaun stable with locking gate, tauntaun, rotating radar dishes, falling icicle trap, working cargo crane, and medical bay with bacta tank\n• Includes 8 minifigures: Han Solo, injured Luke Skywalker, Princess Leia, 2-1B, protocol droid R-3PO, Chewbacca and 2 snowtroopers\n• Fire the flick missile gun turrets!\n• Defend the Rebel Alliance with repeating blaster and blaster rifle weapons!\n• Measures over 21” (53cm) wide and 5” (12cm) tall\n• Imperial speeder bike measures over 5” (12cm) long",
+   "subtheme": "Episode V"
   },
   "79014-1": {
    "type": "SET",
@@ -19888,7 +19892,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/79014-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/79014-1.png"
-   ]
+   ],
+   "desc_en": "Defeat the forces of evil in an epic conflict with Dol Guldur Battle!\nRumors of the rise of an ancient Evil have brought Gandalf™ The Grey and Radagast™ to investigate the fortress ruins of Dol Guldur. Flick the magical wall to make the sinister Necromancer of Dol Guldur appear to the Wizards. But beware – Azog™ and 2 Gundabad Orcs are about to attack with a rolling catapult. Can the brave Wizards dodge the skulls falling from the turrets and swinging blades and axe, and avoid being trapped in the spider web and hanging cage? Will Gandalf discover the treasures hidden within the statue? It’s up to you to decide the fate of Gandalf and Radagast in this epic battle of good versus evil! Includes 6 minifigures with assorted weapons and accessories: Gandalf the Grey, Radagast, Necromancer of Dol Guldur, Azog and 2 Gundabad Orcs.• Includes 6 minifigures with assorted weapons and accessories: Gandalf™ the Grey, Radagast™, Necromancer of Dol Guldur, Azog™ and 2 Gundabad Orcs\n• Fortress features Necromancer magical wall, spider web, swinging axe and blades, huge spikes, falling skull trap, removable cage with crane and a statue with hidden treasure compartment with a Wizard ring\n• Also includes a firing catapult\n• Weapons include a mace, club, 2 staffs and 3 swords\n• Radagast™ and Necromancer of Dol Guldur minifigures are exclusive to this set\n• Flick the magical wall and make the Necromancer appear to the Wizards\n• Drop the skulls above the entrance\n• Fire the catapult\n• Discover the Wizard ring hidden within the statue\n• Swing the blades into the path of intruders\n• Watch out for the spider web\n• Trap a minifigure in the cage\n• Combine with 79011 Dol Guldur Ambush and stage the ultimate Dol Guldur conflict!\n• Dol Guldur fortress measures over 9” (23cm) high, 16” (43cm) wide and 4” (12cm) deep",
+   "subtheme": "The Desolation of Smaug"
   },
   "7913-1": {
    "type": "SET",
@@ -19929,7 +19935,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7913-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7913-1.png"
-   ]
+   ],
+   "desc_en": "Unleash the might of the clone army against the Mandalorians!\nAs the Clone Wars rage across the galaxy, the Army of the Republic faces a powerful new enemy- the Mandalorians! Build up your crack team of clone troopers with the BARC speeder, the all-new ARF clone trooper, 2 new bomb squad clone troopers and the new clone commander minifigures.\n• Includes 4 minifigures: clone commander, 2 bomb squad clone troopers and 1 ARF clone trooper\n• Features 5 weapons!\n• Includes BARC speeder\n• Move the cannon turret!\n• BARC speeder measures 6” (15cm) long, 3” (7cm) wide",
+   "subtheme": "The Clone Wars"
   },
   "7914-1": {
    "type": "SET",
@@ -19975,7 +19983,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7914-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7914-1.png"
-   ]
+   ],
+   "desc_en": "Fight off the clone troopers with the Mandalorian Army!\nA new force has entered Clone Wars on the side of the Separatists - the Mandalorians! Build up your Mandalorian Army and take the battle to the Clone Army with Mandalorian assassin and 3 Mandalorian trooper minifigures, each with their own unique weapon.\n• Includes 4 minifigures: Mandalorian assassin and 3 Mandalorian troopers\n• Features Mandalorian speeder, blaster turret and 5 weapons\n• Each Mandalorian trooper features a unique weapon\n• Blast the opposition with the big, blaster turret\n• Deploy your forces against the #7913 Clone Trooper Battle Pack\n• Mandalorian speeder measures 2” (5cm) wide, 3” (7cm) long\n• Blaster turret measures 2” (5cm) wide and 2” (5cm) long",
+   "subtheme": "The Clone Wars"
   },
   "7929-1": {
    "type": "SET",
@@ -20022,7 +20032,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7929-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7929-1.png"
-   ]
+   ],
+   "desc_en": "Recreate the epic Battle of Naboo!\nThe invasion of the planet Naboo has begun! As the Trade Federation deploys its vast battle droid army from the Trade Federation troop carrier, Jar Jar Binks and his fellow Gungans prepare to repel the invasion. Fight off the battle droids as they awaken and unload! Includes 8 battle droids with blasters, two droid pilots, Jar Jar Binks and Gungan soldier minifigures.\n• Includes 12 minifigures: Jar Jar Binks, Gungan soldier, 2 droid pilots and 8 battle droids\n• Arm the Gungan soldier with an all-new transparent energy shield!\n• Deploy 2 racks of realistic, detachable battle droids!\n• Move the controls of the Trade Federation troop carrier!\n• Trade Federation troop carrier measures 10” (25cm) long, 3” (7cm) wide and 4” (10cm) tall",
+   "subtheme": "Episode I"
   },
   "7930-1": {
    "type": "SET",
@@ -20086,7 +20098,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7930-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7930-1.png"
-   ]
+   ],
+   "desc_en": "Capture the Jedi Knights with the Bounty Hunter Assault Gunship!\nWhile the outcome of the Clone Wars hangs in the balance, bounty hunters are out to capture the Jedi Knights! Rotate the twin engines for flying and landing modes, open the cockpit, and fire away with laser cannons! Use the ship’s prison cell for captured Jedi, and store the stolen Holocron in a secret chamber aboard the Bounty Hunter Assault Gunship! Includes all-new Sugi, Aurra Sing, Embo and IG-86 assassin droid bounty hunter minifigures.\n• Includes 4 minifigures: Sugi, Aurra Sing, Embo and IG-86 Assassin Droid Bounty Hunter\n• Rotate the engines!\n• Features the Holocron, stored in a secret compartment\n• Open cockpit and prison cell for play inside!\n• Hunt down the Jedi Knights in their #7931 Jedi Shuttle!\n• Bounty Hunter Assault Gunship measures 11” wide (30cm) 10” long (25cm) and 6” (15cm) tall",
+   "subtheme": "The Clone Wars"
   },
   "7931-1": {
    "type": "SET",
@@ -20133,7 +20147,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7931-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7931-1.png"
-   ]
+   ],
+   "desc_en": "Battle the bounty hunters in deep space!\nRacing to a distant Clone Wars battlefield in their T-6 Jedi shuttle, the Jedi have been ambushed by bounty hunters! With flick missiles, a rotating wing for flying mode, and a detachable cockpit that turns into an escape pod, the Jedi shuttle may be more than a match for the Bounty Hunter Assault Gunship. Includes Anakin Skywalker, Obi-Wan Kenobi, all new Jedi Masters Shaak Ti and Saesee Tiin minifigures.\n• Includes 4 minifigures: Anakin Skywalker, Obi-Wan Kenobi, Shaak Ti and Saesee Tiin\n• Push engines to shoot flick-fire missiles!\n• Rotate wing for flying mode!\n• Features retractable landing gear!\n• Battle the bounty hunters and their #7930 Bounty Hunter Assault Gunship!\n• T-6 Jedi shuttle measures 14” (35cm) wide, 10” (25cm) long and 5” (12cm) tall",
+   "subtheme": "The Clone Wars"
   },
   "7952-11": {
    "type": "SET",
@@ -20161,7 +20177,9 @@
    "figs_value_huf": 1898,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/7952-11.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": ""
   },
   "7956-1": {
    "type": "SET",
@@ -20219,7 +20237,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7956-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7956-1.png"
-   ]
+   ],
+   "desc_en": "Ambush the Imperial scout trooper from the Ewok’s™ treetop hideout!\nPrepare to lead the Ewoks in an ambush! Watch the Imperial scout trooper on his Imperial speeder bike and get ready to strike–Ewok style! Launch a barrage of stones and release the tumbling logs! Then hide in the secret compartment and retract the ladder! Includes Imperial scout trooper, Logray and Ewok warrior minifigures with weapons.\n• Includes 3 minifigures: Imperial scout trooper™ with speeder bike™, Logray™ and Ewok™ warrior\n• Treetop hideout features stone launcher, log trap, secret compartment and retractable ladder\n• Launch stones from the treetop hideout!\n• Flick-fire logs onto the Imperial scout trooper!\n• Retract the ladder and retreat to safety!\n• Measures over 6” (15cm) wide and 4” (10cm) tall\n• Imperial speeder bike measures over 5” (12cm) long",
+   "subtheme": "Episode VI"
   },
   "7957-1": {
    "type": "SET",
