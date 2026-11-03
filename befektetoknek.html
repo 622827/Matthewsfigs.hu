@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,800&family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=202611021046">
+<link rel="stylesheet" href="style.css?v=202611030440">
 <style>
   [hidden]{display:none!important}
   body{min-height:100vh;display:flex;flex-direction:column}
@@ -101,7 +101,7 @@
   .empty-inv{background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:40px 28px;text-align:center;display:grid;justify-items:center;gap:12px}
   .empty-inv p{max-width:52ch;color:var(--muted);margin:0}
   .dash-actions{display:flex;gap:8px;flex-wrap:wrap}
-  .master{padding:40px 0 72px}
+  .master{padding-top:40px;padding-bottom:72px}
   .mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
   .mcard{all:unset;box-sizing:border-box;cursor:pointer;background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:20px;display:grid;gap:6px}
   .mcard:hover,.mcard:focus-visible{border-color:var(--gold);box-shadow:0 8px 22px -14px rgba(18,50,27,.5)}
@@ -112,6 +112,16 @@
   .mcard dd{margin:0;font-weight:700;color:var(--green)}
   .mcard i{font-style:normal;font-weight:700;color:var(--green);border-bottom:2px solid var(--gold);justify-self:start}
   .mcard--err{cursor:default;border-color:#e2b4ae}
+  .mtabs{display:flex;gap:8px;margin:0 0 20px;border-bottom:2px solid var(--line)}
+  .mtabs button{all:unset;cursor:pointer;padding:10px 16px;font-weight:700;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-2px}
+  .mtabs button[aria-selected="true"]{color:var(--green);border-color:var(--gold)}
+  .adm{display:grid;gap:18px}
+  .adm h2{font-family:var(--display);color:var(--green);margin:8px 0 0;font-size:24px}
+  .adm-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .adm-kpis div{background:#fff;border:1.5px solid var(--line);border-radius:var(--r);padding:16px}
+  .adm-kpis b{display:block;font-family:var(--display);font-size:26px;color:var(--green)}
+  .adm-kpis span{font-size:13px;color:var(--muted)}
+  @media (max-width:760px){ .adm-kpis{grid-template-columns:repeat(2,1fr)} }
   .note{font-size:14px;color:var(--muted);background:var(--cream);border-radius:10px;padding:12px 14px;margin:0}
   @media (max-width:760px){ .kpis{grid-template-columns:repeat(2,1fr)} .split{grid-template-columns:1fr} }
 </style>
@@ -344,6 +354,7 @@
     try {
       const data = await unlock($("pw").value);
       if (!data) { $("err").textContent = "Ehhez a jelszóhoz nem tartozik befektetői oldal. Figyelj a kis- és nagybetűkre."; return; }
+      ADMIN_PW = data.master ? $("pw").value : null;
       data.master ? await renderMaster(data) : render(data);
       $("pw").value = "";
       $("lock").hidden = true; $("dash").hidden = false; window.scrollTo(0, 0);
@@ -355,7 +366,7 @@
   });
   $("logout").onclick = () => {
     $("deals").innerHTML = $("kpis").innerHTML = $("master").innerHTML = "";
-    MASTER = null; $("back").hidden = true; $("master").hidden = true;
+    MASTER = null; ADMIN_PW = null; $("back").hidden = true; $("master").hidden = true;
     $("dash").hidden = true; $("lock").hidden = false; $("pw").focus();
   };
   $("back").onclick = () => showMasterList();
@@ -366,6 +377,8 @@
 
   // ---------- master view: pick an investor ----------
   let MASTER = null;   // [{name, data}]
+  let ADMIN_PW = null; // only after the master (admin) password; never stored
+  let TAB = "inv";
   async function renderMaster(m) {
     const loaded = await Promise.all(m.investors.map(async i => ({ name: i.name, data: await unlock(i.password).catch(() => null) })));
     MASTER = loaded;
@@ -377,7 +390,11 @@
     $("back").hidden = true;
     $("kpis").parentElement.hidden = true; $("deals").hidden = true; $("deals").innerHTML = "";
     $("master").hidden = false;
-    $("master").innerHTML = `<div class="mgrid">` + MASTER.map((x, n) => {
+    const tabs = `<div class="mtabs" role="tablist">
+      <button type="button" role="tab" data-tab="inv" aria-selected="${TAB === "inv"}">Befektetők</button>
+      <button type="button" role="tab" data-tab="adm" aria-selected="${TAB === "adm"}">Admin</button></div>`;
+    if (TAB === "adm") { $("hello").textContent = "Admin"; $("sub").textContent = "Csak az admin jelszóval látható."; $("master").innerHTML = tabs + `<div class="adm" id="adm"><p class="note">Betöltés…</p></div>`; wireTabs(); renderAdmin(); return; }
+    $("master").innerHTML = tabs + `<div class="mgrid">` + MASTER.map((x, n) => {
       if (!x.data) return `<div class="mcard mcard--err"><b>${esc(x.name)}</b><span>Az oldal nem nyitható meg (hibás jelszó a listában).</span></div>`;
       let cap = 0, prof = 0, open = 0;
       for (const d of x.data.deals) { const s = calc(d); if (s.capKnown) { cap += s.capI; prof += s.myProfit; } if (d.status === "open") open++; }
@@ -386,14 +403,51 @@
         <span>${x.data.deals.length ? `${x.data.deals.length} ügylet · ${open} folyamatban` : "Még nincs ügylet"}</span>
         <dl><div><dt>Tőke</dt><dd class="num">${huf(cap)}</dd></div><div><dt>Nyeresége eddig</dt><dd class="num">${huf(prof)}</dd></div></dl>
         <i>Megnyitás →</i></button>`;
-    }).join("") + `<a class="mcard" href="csomagok.html"><b>📦 Csomagok</b><span>Foxpost csomagcímke és csomagfigyelő</span><i>Megnyitás →</i></a></div>`;
+    }).join("") + `</div>`;
+    wireTabs();
     $("master").querySelectorAll(".mcard[data-n]").forEach(b => b.onclick = () => {
       $("master").hidden = true; $("deals").hidden = false; $("back").hidden = false;
       render(MASTER[+b.dataset.n].data); window.scrollTo(0, 0);
     });
   }
+  function wireTabs() {
+    $("master").querySelectorAll("[data-tab]").forEach(b => b.onclick = () => { TAB = b.dataset.tab; showMasterList(); });
+  }
+
+  // ---------- admin tab: shop tools + sales totals (data/p/s, encrypted with the package-page key) ----------
+  async function openPkg(password, dir) {
+    const base = await crypto.subtle.importKey("raw", new TextEncoder().encode(password.trim()), "PBKDF2", false, ["deriveBits"]);
+    const bits = new Uint8Array(await crypto.subtle.deriveBits({ name: "PBKDF2", salt: new TextEncoder().encode("matthewsfigs.hu/packages/v1"), iterations: ROUNDS, hash: "SHA-256" }, base, 384));
+    const id = [...bits.slice(32)].map(b => b.toString(16).padStart(2, "0")).join("");
+    const res = await fetch(`data/p/${dir}/${id}.json`, { cache: "no-cache" });
+    if (!res.ok) return null;
+    const blob = await res.json();
+    const key = await crypto.subtle.importKey("raw", bits.slice(0, 32), "AES-GCM", false, ["decrypt"]);
+    return JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({ name: "AES-GCM", iv: b64(blob.iv) }, key, b64(blob.ct))));
+  }
+  async function renderAdmin() {
+    const box = $("adm"); if (!box) return;
+    const eur = v => new Intl.NumberFormat("hu-HU", { style: "currency", currency: "EUR", maximumFractionDigits: 0 }).format(v || 0);
+    const st = ADMIN_PW ? await openPkg(ADMIN_PW, "s").catch(() => null) : null;
+    const T = (st && st.by_type) || {}, q = k => (T[k] || {}).qty || 0;
+    const sold = Object.values(T).reduce((a, v) => a + v.qty, 0);
+    const tools = `<h2>Eszközök</h2><div class="mgrid">
+      <a class="mcard" href="csomagok.html"><b>📦 Csomagok</b><span>Foxpost csomagcímke, csomagfigyelő, BrickLink-rendelésből címke</span><i>Megnyitás →</i></a>
+      <a class="mcard" href="kosar.html?shop=preview"><b>🛒 Webshop</b><span>A kosár és a pénztár előnézete</span><i>Megnyitás →</i></a>
+      <a class="mcard" href="https://github.com/622827/Matthewsfigs.hu/actions" target="_blank" rel="noopener"><b>⚙️ Automatikák</b><span>Készletszinkron, csomagfigyelő, kivágások, összesítő (GitHub)</span><i>Megnyitás →</i></a>
+      <a class="mcard" href="https://www.vinted.hu/member/3125768223-matthewsfigsupplyco" target="_blank" rel="noopener"><b>🏷️ Vinted bolt</b><span>matthewsfigsupplyco</span><i>Megnyitás →</i></a></div>`;
+    box.innerHTML = `<h2>Eladások (BrickLink)</h2>` + (st ? `
+      <div class="adm-kpis">
+        <div><b class="num">${sold}</b><span>eladott termék összesen</span></div>
+        <div><b class="num">${q("SET")}</b><span>szett · ${eur((T.SET || {}).eur)}</span></div>
+        <div><b class="num">${q("MINIFIG")}</b><span>minifigura · ${eur((T.MINIFIG || {}).eur)}</span></div>
+        <div><b class="num">${q("PART")}</b><span>alkatrész · ${eur((T.PART || {}).eur)}</span></div>
+      </div>
+      <p class="note">${st.orders} rendelés (${esc(st.first || "")} – ${esc(st.last || "")}), termékérték összesen ${Object.entries(st.subtotal || {}).map(([c, v]) => new Intl.NumberFormat("hu-HU", { style: "currency", currency: c, maximumFractionDigits: 0 }).format(v)).join(" + ")}, szállítás nélkül. ${st.skipped} törölt / kifizetetlen rendelés nincs benne. Frissítve: ${new Date(st.at).toLocaleString("hu-HU", { dateStyle: "medium", timeStyle: "short" })} (naponta).</p>`
+      : `<p class="note">Az eladási összesítő nem nyitható meg ezzel a jelszóval (az admin jelszó a csomagoldal jelszavával egyezik).</p>`) + tools;
+  }
 })();
 </script>
-<script src="anim.js?v=202611021030" defer></script>
+<script src="anim.js?v=202611030440" defer></script>
 </body>
 </html>
