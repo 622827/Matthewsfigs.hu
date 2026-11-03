@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-03T20:44:01+00:00",
+ "updated": "2026-11-03T21:41:32+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -19025,7 +19025,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7667-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7667-1.png"
-   ]
+   ],
+   "desc_en": "Send in the Imperial Dropship with its stormtrooper squad! Equipped with laser cannons and a detachable troop platform, this speedy space transport is ready to battle the Rebellion on any planet in the Empire. Includes 3 stormtroopers and shadow stormtrooper pilot! Lift back up to drop the clone troop platform into battle! Imperial Dropship is 4\" (10 cm) long!",
+   "subtheme": "Miscellaneous"
   },
   "7670-1": {
    "type": "SET",
@@ -19072,7 +19074,9 @@
     "https://img.bricklink.com/ItemImage/ON/0/7670-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7670-1.png"
    ],
-   "figs_value_huf": 9001
+   "figs_value_huf": 9001,
+   "desc_en": "The Separatist army is on the attack! Roll into battle with the giant-wheeled Hailfire droid with 8 flick-firing missiles. The heavily armed and armored spider droid is close behind, backed up by a squad of battle droids! Includes folding Hailfire droid, spider droid, super battle droid, battle droid commander and 2 battle droids! Halfire droid has giant movable wheels and flick-fire missiles!",
+   "subtheme": "The Clone Wars"
   },
   "7670-2": {
    "type": "SET",
@@ -19115,7 +19119,9 @@
     "https://img.bricklink.com/ItemImage/ON/0/7670-2.png",
     "https://img.bricklink.com/ItemImage/SN/0/7670-2.png"
    ],
-   "figs_value_huf": 9001
+   "figs_value_huf": 9001,
+   "desc_en": "",
+   "subtheme": ""
   },
   "7675-1": {
    "type": "SET",
@@ -19260,7 +19266,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7676-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7676-1.png"
-   ]
+   ],
+   "desc_en": "Take the battle to the Separatists with the Republic Attack Gunship! This heavily armed and armored Clone Wars troop carrier can fly and land in any battlefield or hostile terrain. Features include opening troop bay doors, removable command station and healing chamber, positionable cannons, spy droids, flick missiles, a speeder bike that deploys from the back, and multiple decals to create different gunships for your army. But will even Obi-Wan Kenobi and Plo Koon be enough to stop the sinister Asajj Ventress and her double Sith lightsabers? Includes Obi-Wan Kenobi, Plo Koon, Asajj Ventress, Commander Cody and Clone Trooper minifigures! Side troop bay doors open! Open the front side compartment to remove the command station! The 2 cockpits in front and the 2 on the wings open! Features 8 positionable flick-fire missiles on top and 2 rotating missiles in front! Back hatch opens to deploy the speeder bike! Open the compartment on top to access the spy droids! Measures 14\" (36cm) long, 17\" (43cm) wide and 7\" (18cm) high",
+   "subtheme": "The Clone Wars"
   },
   "7678-1": {
    "type": "SET",
@@ -19328,7 +19336,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7678-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7678-1.png"
-   ]
+   ],
+   "desc_en": "The Separatists strike back with the mighty Droid Gunship! This heavily-armed vehicle straight out of the Clone Wars features wing-mounted laser cannons, movable nose-mounted blaster turrets, retractable landing gear, an opening cockpit, and 'bombs' that automatically drop with the turn of a gear. Includes Droid Pilot and 2 Battle Droid minifigures! Open the cockpit the put the Droid Pilot at the controls! Turn the gear to drop the \"bombs\"! Rotate the blaster turrets! Measures 10\" (25cm) long and 9\" (23cm) wide!",
+   "subtheme": "The Clone Wars"
   },
   "7679-1": {
    "type": "SET",
@@ -19451,7 +19461,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7681-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7681-1.png"
-   ]
+   ],
+   "desc_en": "Unleash the power of the Separatist Spider Droid! This towering engine of mechanical destruction from the Clone Wars strides across hostile terrain on four independently positionable stilt legs, then uses its moveable laser cannons to blast Republic forces. Includes Commander Fox, Clone Trooper, Battle Droid, Super Battle Droid and Battle Droid Commander minifigures! Rotate the laser cannon on top! Laser cannon underneath bends to change direction! Measures 6\" (15cm) tall and 10'½\" (27cm) wide!",
+   "subtheme": "The Clone Wars"
   },
   "7748-1": {
    "type": "SET",
@@ -19503,7 +19515,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7748-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7748-1.png"
-   ]
+   ],
+   "desc_en": "With their rotating center treads and double laser blasters, these armed and armored Separatist droids fight in battle after battle during the Clone Wars. Even a special squad of clone troopers with rocket packs may not be enough to stop them this time! Features flick-launching missiles and clone trooper catapult for 'flying' action. Includes 2 Battle Droid and 2 Jet-Pack Clone Trooper minifigures. Includes 4 minifigures: 2 Battle Droid and 2 jet-pack equipped Clone Troopers Features tracks that move and flick fire missiles! Corporate Alliance Tank Droid measures 6.5\" (17cm) long",
+   "subtheme": "The Clone Wars"
   },
   "7749-1": {
    "type": "SET",
@@ -19544,7 +19558,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7749-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7749-1.png"
-   ]
+   ],
+   "desc_en": "It's the 10th anniversary of LEGO Star Wars , and Imperial forces are invading the Rebels' secret base on the ice planet Hoth! As Han Solo leaves for a mission on his tauntaun, snowtroopers attack with their heavy repeating blaster. It's up to the Rebel Alliance troopers to fight back with their missile-firing defense turret and trench with figure-flinging battle action. Includes 2 Snowtroopers, 2 Hoth Rebel Soldiers, Han Solo with Hoth gear, and the first-ever LEGO Tauntaun! Includes 5 minifigures: 2 snow troopers with E-web blaster, 2 Rebel troopers and Han Solo in Hoth winter gear! Features anti-infantry laser battery with opening turret door and flick fire missiles! First-ever LEGO Tauntaun also included! Turret is 3.5\" (9cm) tall; trenches are 4.5\" (11cm) long",
+   "subtheme": "Episode V"
   },
   "7868-1": {
    "type": "SET",
@@ -19591,7 +19607,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7868-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7868-1.png"
-   ]
+   ],
+   "desc_en": "Repel the droid ambush with Jedi Master Mace Windu\"!",
+   "subtheme": "The Clone Wars"
   },
   "7869-1": {
    "type": "SET",
@@ -19638,7 +19656,9 @@
     "https://img.bricklink.com/ItemImage/ON/0/7869-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7869-1.png"
    ],
-   "figs_value_huf": 45945
+   "figs_value_huf": 45945,
+   "desc_en": "Help Captain Rex™ and Luminara Unduli™ fight the droid army!\nThe Battle for Geonosis rages on! The devastating Separatist proton cannon leads the droid army in the greatest battle of Star Wars: The Clone Wars, with a missile launcher, adjustable turret and poseable legs. The Separatists seem unstoppable until Captain Rex and Jedi General Luminara Unduli arrive on the BARC speeder and turn the tide!\n• Includes 5 minifigures: Captain Rex, Luminara Unduli, 2 battle droids and 1 super battle droid\n• Features BARC speeder\n• Fire missiles at the opposition!\n• BARC speeder measures 6” (15cm) long, 3” (7cm) wide\n• Separatist proton cannon measures 9” (22cm) long, 7” (17cm) wide",
+   "subtheme": "The Clone Wars"
   },
   "7877-1": {
    "type": "SET",
