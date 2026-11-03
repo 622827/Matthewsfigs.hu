@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-03T00:59:22+00:00",
+ "updated": "2026-11-03T01:58:29+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -6014,7 +6014,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/6560-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/6560-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Divers"
   },
   "662101-1": {
    "type": "SET",
@@ -6048,7 +6050,9 @@
    "figs_value_huf": 1333,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/662101-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "662204-1": {
    "type": "SET",
@@ -6082,7 +6086,9 @@
    "figs_value_huf": 1480,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/662204-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "662205-1": {
    "type": "SET",
@@ -6116,7 +6122,9 @@
    "figs_value_huf": 1344,
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/662205-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "662207-1": {
    "type": "SET",
@@ -6144,7 +6152,9 @@
    "figs_value_huf": 769,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/662207-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "662302-1": {
    "type": "SET",
@@ -6178,7 +6188,9 @@
    "figs_value_huf": 1099,
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/662302-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "662304-1": {
    "type": "SET",
@@ -6212,7 +6224,9 @@
    "figs_value_huf": 1517,
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/662304-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "662317-1": {
    "type": "SET",
@@ -6240,7 +6254,9 @@
    "figs_value_huf": 769,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/662317-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "662403-1": {
    "type": "SET",
@@ -6274,7 +6290,9 @@
    "figs_value_huf": 1191,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/662403-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "662411-1": {
    "type": "SET",
@@ -6302,7 +6320,9 @@
    "figs_value_huf": 484,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/662411-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "662502-1": {
    "type": "SET",
@@ -18102,6 +18122,634 @@
     "https://img.bricklink.com/ItemImage/SN/0/76038-1.png"
    ]
   },
+  "76041-1": {
+   "type": "SET",
+   "name": "The Hydra Fortress Smash",
+   "year": 2015,
+   "category": "Super Heroes",
+   "weight_g": 765.0,
+   "dims_cm": [
+    38.0,
+    26.0,
+    7.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 403,
+   "minifigs": [
+    {
+     "no": "sh0171",
+     "name": "Hydra Henchman - Chitauri Armor",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sh0173",
+     "name": "Hulk - Giant, Dark Purple Pants with Avengers Logo",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sh0177",
+     "name": "Captain America - Dark Blue Suit with Reddish Brown Belt and Harness, Reddish Brown Hands, Mask",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sh0179",
+     "name": "Baron Von Strucker",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sh0180",
+     "name": "Quicksilver - Dark Azure Shirt",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 34105,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/76041-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/76041-1.png"
+   ]
+  },
+  "76042-1": {
+   "type": "SET",
+   "name": "The SHIELD Helicarrier",
+   "year": 2015,
+   "category": "Super Heroes",
+   "weight_g": 5300.0,
+   "dims_cm": [
+    58.3,
+    48.5,
+    18.7
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 3047,
+   "minifigs": [
+    {
+     "no": "90398pb002",
+     "name": "Captain America Statuette / Trophy (6115170)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "90398pb003",
+     "name": "Hawkeye Statuette / Trophy (6115149)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "90398pb004c01",
+     "name": "Iron Man Statuette / Trophy",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "90398pb005",
+     "name": "Nick Fury Statuette / Trophy (6107896)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "90398pb006",
+     "name": "SHIELD Agent Statuette / Trophy (6107897)",
+     "qty": 8,
+     "sets": 1
+    },
+    {
+     "no": "sh0172",
+     "name": "Hawkeye - Black and Dark Red Suit, Reddish Brown Spiked Hair",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sh0183",
+     "name": "Maria Hill - Dark Blue Suit, Printed Right Arm",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sh0184",
+     "name": "Captain America - Dark Blue Suit with Reddish Brown Belt and Harness, Reddish Brown Hands, Hair, Dark Orange Eyebrows",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sh0185",
+     "name": "Nick Fury - Leather Trench Coat, Dark Bluish Gray Legs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sh0186",
+     "name": "Black Widow - Black Jumpsuit, Dark Orange Short Hair, Printed Legs, Dark Azure Trim",
+     "qty": 1,
+     "sets": 3
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 74314,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/76042-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/76042-1.png"
+   ]
+  },
+  "76050-1": {
+   "type": "SET",
+   "name": "Crossbones' Hazard Heist",
+   "year": 2016,
+   "category": "Super Heroes",
+   "weight_g": 326.0,
+   "dims_cm": [
+    26.0,
+    18.7,
+    6.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 175,
+   "minifigs": [
+    {
+     "no": "sh0186",
+     "name": "Black Widow - Black Jumpsuit, Dark Orange Short Hair, Printed Legs, Dark Azure Trim",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sh0261",
+     "name": "Falcon - Light Bluish Gray and Dark Red Wings",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sh0262",
+     "name": "Crossbones",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 8814,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/76050-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/76050-1.png"
+   ]
+  },
+  "76051-1": {
+   "type": "SET",
+   "name": "Super Hero Airport Battle",
+   "year": 2016,
+   "category": "Super Heroes",
+   "weight_g": 1170.0,
+   "dims_cm": [
+    53.5,
+    27.8,
+    7.4
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 810,
+   "minifigs": [
+    {
+     "no": "90398pb007",
+     "name": "Ant-Man (Scott Lang) Statuette / Trophy - Original Suit",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "sh0177",
+     "name": "Captain America - Dark Blue Suit with Reddish Brown Belt and Harness, Reddish Brown Hands, Mask",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sh0254",
+     "name": "Iron Man - Mark 46 Armor, Small Helmet Visor, Foot Repulsors",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sh0255",
+     "name": "Agent 13 (Sharon Carter)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sh0256",
+     "name": "The Scarlet Witch (Wanda Maximoff) - Plain Legs, Reddish Brown Hair, Dark Red Cloth Skirt",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sh0257",
+     "name": "Winter Soldier - Dark Brown Hair, Black Hands",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sh0258",
+     "name": "War Machine - with Shooter",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 34798,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/76051-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/76051-1.png"
+   ]
+  },
+  "76067-1": {
+   "type": "SET",
+   "name": "Tanker Truck Takedown",
+   "year": 2016,
+   "category": "Super Heroes",
+   "weight_g": 503.0,
+   "dims_cm": [
+    35.0,
+    19.5,
+    6.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 336,
+   "minifigs": [
+    {
+     "no": "sh0177",
+     "name": "Captain America - Dark Blue Suit with Reddish Brown Belt and Harness, Reddish Brown Hands, Mask",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sh0299",
+     "name": "Spider-Man - Black Web Pattern, Red Torso Large Vest, Red Boots",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sh0302",
+     "name": "Hawkeye - Black and Dark Purple Suit",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sh0303",
+     "name": "Vision - Sand Green, Yellow Spot on Forehead",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 27119,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/76067-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/76067-1.png"
+   ]
+  },
+  "7654-1": {
+   "type": "SET",
+   "name": "Droids Battle Pack",
+   "year": 2007,
+   "category": "Star Wars",
+   "weight_g": 130.0,
+   "dims_cm": [
+    19.0,
+    14.3,
+    4.7
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 79,
+   "minifigs": [
+    {
+     "no": "sw0001b",
+     "name": "Battle Droid - Tan, Angled Arms",
+     "qty": 4,
+     "sets": 16
+    },
+    {
+     "no": "sw0092",
+     "name": "Super Battle Droid - Pearl Dark Gray, Wide Head",
+     "qty": 3,
+     "sets": 13
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 5370,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7654-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7654-1.png"
+   ]
+  },
+  "7659-1": {
+   "type": "SET",
+   "name": "Imperial Landing Craft",
+   "year": 2007,
+   "category": "Star Wars",
+   "weight_g": 912.0,
+   "dims_cm": [
+    47.7,
+    28.5,
+    7.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 459,
+   "minifigs": [
+    {
+     "no": "sw0035b",
+     "name": "Imperial TIE Fighter / Interceptor Pilot - Black Head",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0036b",
+     "name": "Imperial Stormtrooper - Black Head, Solid Mouth Helmet",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "sw0109a",
+     "name": "Sandtrooper - Orange Pauldron (Solid), No Survival Backpack, No Dirt Stains, Helmet with Solid Mouth Pattern and Solid Black Head",
+     "qty": 2,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "7659-1",
+     "name": "Imperial Landing Craft",
+     "year": 2007,
+     "pieces": 471,
+     "img": "https://cdn.rebrickable.com/media/sets/7659-1.jpg",
+     "figs": 5
+    },
+    {
+     "no": "75221-1",
+     "name": "Imperial Landing Craft",
+     "year": 2018,
+     "pieces": 636,
+     "img": "https://cdn.rebrickable.com/media/sets/75221-1.jpg",
+     "figs": 5
+    }
+   ],
+   "figs_value_huf": 37585,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7659-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7659-1.png"
+   ]
+  },
+  "7662-1": {
+   "type": "SET",
+   "name": "Trade Federation MTT",
+   "year": 2007,
+   "category": "Star Wars",
+   "weight_g": 2260.0,
+   "dims_cm": [
+    65.0,
+    38.0,
+    9.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 1215,
+   "minifigs": [
+    {
+     "no": "sw0001c",
+     "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+     "qty": 16,
+     "sets": 36
+    },
+    {
+     "no": "sw0095",
+     "name": "Battle Droid Pilot - Blue Torso, Angled Arm and Straight Arm",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "sw0096",
+     "name": "Security Battle Droid - Dark Red Torso, Angled Arm and Straight Arm",
+     "qty": 2,
+     "sets": 3
+    },
+    {
+     "no": "sw0164",
+     "name": "Droideka (Destroyer Droid) - Copper Top",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "7184-1",
+     "name": "Trade Federation MTT",
+     "year": 2000,
+     "pieces": 466,
+     "img": "https://cdn.rebrickable.com/media/sets/7184-1.jpg",
+     "figs": 7
+    },
+    {
+     "no": "7662-1",
+     "name": "Trade Federation MTT",
+     "year": 2007,
+     "pieces": 1326,
+     "img": "https://cdn.rebrickable.com/media/sets/7662-1.jpg",
+     "figs": 21
+    }
+   ],
+   "figs_value_huf": 31307,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7662-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7662-1.png"
+   ]
+  },
+  "7666-1": {
+   "type": "SET",
+   "name": "Hoth Rebel Base - Limited Edition",
+   "year": 2007,
+   "category": "Star Wars",
+   "weight_g": 980.0,
+   "dims_cm": [
+    47.7,
+    28.5,
+    7.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 506,
+   "minifigs": [
+    {
+     "no": "sw0012b",
+     "name": "Dak Ralter - Dark Bluish Gray Hips, Light Nougat Head",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0090",
+     "name": "Luke Skywalker - Pilot Suit, Simple Torso and Helmet, Light Nougat Head",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0115",
+     "name": "Snowtrooper, Light Bluish Gray Hips, White Hands (Hoth Stormtrooper)",
+     "qty": 2,
+     "sets": 9
+    },
+    {
+     "no": "sw0165",
+     "name": "K-3PO",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0167",
+     "name": "Hoth Rebel - Light Nougat Head, White Visor Goggles",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "sw0171",
+     "name": "Imperial Probe Droid - White Dish Stand, Lever on Top",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 30757,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7666-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7666-1.png"
+   ]
+  },
+  "7667-1": {
+   "type": "SET",
+   "name": "Imperial Dropship",
+   "year": 2008,
+   "category": "Star Wars",
+   "weight_g": 126.0,
+   "dims_cm": [
+    19.0,
+    14.3,
+    4.7
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 67,
+   "minifigs": [
+    {
+     "no": "sw0166a",
+     "name": "Imperial Shadow Trooper - Short Line on Back",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0188",
+     "name": "Imperial Stormtrooper - Black Head, Dotted Mouth Helmet",
+     "qty": 3,
+     "sets": 6
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 11056,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7667-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7667-1.png"
+   ]
+  },
+  "7670-1": {
+   "type": "SET",
+   "name": "Hailfire Droid & Spider Droid",
+   "year": 2008,
+   "category": "Star Wars",
+   "weight_g": 285.0,
+   "dims_cm": [
+    28.5,
+    28.5,
+    4.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 203,
+   "minifigs": [
+    {
+     "no": "sw0001c",
+     "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+     "qty": 2,
+     "sets": 36
+    },
+    {
+     "no": "sw0092",
+     "name": "Super Battle Droid - Pearl Dark Gray, Wide Head",
+     "qty": 1,
+     "sets": 13
+    },
+    {
+     "no": "sw0184",
+     "name": "Battle Droid Commander - Yellow Torso, Angled Arm and Straight Arm",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0964",
+     "name": "Dwarf Spider Droid - Reddish Brown Dome",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7670-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7670-1.png"
+   ]
+  },
+  "7670-2": {
+   "type": "SET",
+   "name": "Hailfire Droid & Spider Droid, Clone Wars White Box",
+   "year": 2008,
+   "category": "Star Wars",
+   "weight_g": 294.0,
+   "dims_cm": null,
+   "fetched": "2026-11-03",
+   "pieces": 203,
+   "minifigs": [
+    {
+     "no": "sw0001c",
+     "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+     "qty": 2,
+     "sets": 36
+    },
+    {
+     "no": "sw0092",
+     "name": "Super Battle Droid - Pearl Dark Gray, Wide Head",
+     "qty": 1,
+     "sets": 13
+    },
+    {
+     "no": "sw0184",
+     "name": "Battle Droid Commander - Yellow Torso, Angled Arm and Straight Arm",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0964",
+     "name": "Dwarf Spider Droid - Reddish Brown Dome",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7670-2.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7670-2.png"
+   ]
+  },
   "7675-1": {
    "type": "SET",
    "name": "AT-TE Walker",
@@ -18188,6 +18836,133 @@
    "desc_en": "When droids attack, it's time to call in the mighty AT-TE! This powerful 6-legged walker features details straight from the Clone Wars, including positionable legs, movable cannons, firing missiles, and armored hatches and cockpit that open to reveal the cabin and troop bay inside. Even with its flying STAP vehicle, the battle droid doesn't stand a chance against Anakin Skywalker and the clone army of the Republic! Includes Anakin Skywalker, Ahsoka, Captain Rex, Clone Trooper and Battle Droid minifigures, plus Rotta the Hutt! AT-TE Walker has 2 missiles that really fire! Cannon on top rotates in all directions! Hatches open to reveal the inside cabins and troop bay with 4 seats and extra equipment! Open front to access the cockpit and to slide out the pilot seat! Measures 15.5\" (39cm) long and 8\" (20cm) high",
    "subtheme": "The Clone Wars"
   },
+  "7676-1": {
+   "type": "SET",
+   "name": "Republic Attack Gunship",
+   "year": 2008,
+   "category": "Star Wars",
+   "weight_g": 2000.0,
+   "dims_cm": [
+    65.0,
+    38.0,
+    9.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 1022,
+   "minifigs": [
+    {
+     "no": "sw0195",
+     "name": "Asajj Ventress - Dark Blue Torso",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0196",
+     "name": "Clone Trooper Commander Cody, 212th Attack Battalion (Phase 1) - Dark Bluish Gray Visor, Pauldron, and Kama, Large Eyes",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0197",
+     "name": "Obi-Wan Kenobi - Clone Wars, Large Eyes",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sw0198",
+     "name": "Plo Koon - Dark Brown Robe, Tan Shirt, Plain Legs",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0200",
+     "name": "Clone Trooper (Phase 1) - Dark Bluish Gray Rangefinder, Large Eyes",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0311",
+     "name": "DRK-1 Dark Eye Probe Droid - Bluish Grays",
+     "qty": 2,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 44780,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7676-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7676-1.png"
+   ]
+  },
+  "7678-1": {
+   "type": "SET",
+   "name": "Droid Gunship",
+   "year": 2008,
+   "category": "Star Wars",
+   "weight_g": 567.0,
+   "dims_cm": [
+    38.2,
+    28.7,
+    5.8
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 322,
+   "minifigs": [
+    {
+     "no": "sw0001b",
+     "name": "Battle Droid - Tan, Angled Arms",
+     "qty": 1,
+     "sets": 16
+    },
+    {
+     "no": "sw0001d",
+     "name": "Battle Droid - Tan, Straight Arms",
+     "qty": 2,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "7678-1",
+     "name": "Droid Gunship",
+     "year": 2008,
+     "pieces": 329,
+     "img": "https://cdn.rebrickable.com/media/sets/7678-1.jpg",
+     "figs": 3
+    },
+    {
+     "no": "75042-1",
+     "name": "Droid Gunship",
+     "year": 2014,
+     "pieces": 439,
+     "img": "https://cdn.rebrickable.com/media/sets/75042-1.jpg",
+     "figs": 4
+    },
+    {
+     "no": "911729-1",
+     "name": "Droid Gunship",
+     "year": 2017,
+     "pieces": 25,
+     "img": "https://cdn.rebrickable.com/media/sets/911729-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "75233-1",
+     "name": "Droid Gunship",
+     "year": 2019,
+     "pieces": 389,
+     "img": "https://cdn.rebrickable.com/media/sets/75233-1.jpg",
+     "figs": 4
+    }
+   ],
+   "figs_value_huf": 1718,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7678-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7678-1.png"
+   ]
+  },
   "7679-1": {
    "type": "SET",
    "name": "Republic Fighter Tank",
@@ -18257,6 +19032,560 @@
    ],
    "desc_en": "The powerful TX-130S hover-tank is the Republic's latest weapon in the Clone Wars! With heavy armor, two movable laser cannon turrets, an elevating gunner seat, hidden wheels and flip-out flick-missile launchers, it's sure to turn the tide of any battle. Includes 2 clone trooper minifigures! Flip out the sides to reveal the flick-fire missile launchers! Use the elevating gunner seat to control the laser cannon turret on top! Hover-tank is on wheels for realistic play! Measures 9\" (23cm) long and 8\" (20cm) wide!",
    "subtheme": "The Clone Wars"
+  },
+  "7681-1": {
+   "type": "SET",
+   "name": "Separatist Spider Droid",
+   "year": 2008,
+   "category": "Star Wars",
+   "weight_g": 333.0,
+   "dims_cm": [
+    28.5,
+    28.5,
+    5.8
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 194,
+   "minifigs": [
+    {
+     "no": "sw0001c",
+     "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+     "qty": 1,
+     "sets": 36
+    },
+    {
+     "no": "sw0092",
+     "name": "Super Battle Droid - Pearl Dark Gray, Wide Head",
+     "qty": 1,
+     "sets": 13
+    },
+    {
+     "no": "sw0184",
+     "name": "Battle Droid Commander - Yellow Torso, Angled Arm and Straight Arm",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0201",
+     "name": "Clone Trooper (Phase 1) - Large Eyes",
+     "qty": 1,
+     "sets": 11
+    },
+    {
+     "no": "sw0202a",
+     "name": "Clone Trooper Commander Fox, Coruscant Guard (Phase 1) - Dark Bluish Gray Visor, Pauldron, and Kama, Large Eyes, with Solid Light Bluish Gray Semicircle above Belt",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 64067,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7681-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7681-1.png"
+   ]
+  },
+  "7748-1": {
+   "type": "SET",
+   "name": "Corporate Alliance Tank Droid",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 310.0,
+   "dims_cm": [
+    28.0,
+    25.9,
+    4.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 203,
+   "minifigs": [
+    {
+     "no": "sw0001c",
+     "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+     "qty": 2,
+     "sets": 36
+    },
+    {
+     "no": "sw0233",
+     "name": "Clone Jet Trooper (Phase 1) - Large Eyes",
+     "qty": 2,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "7748-1",
+     "name": "Corporate Alliance Tank Droid",
+     "year": 2009,
+     "pieces": 216,
+     "img": "https://cdn.rebrickable.com/media/sets/7748-1.jpg",
+     "figs": 4
+    },
+    {
+     "no": "75015-1",
+     "name": "Corporate Alliance Tank Droid",
+     "year": 2013,
+     "pieces": 271,
+     "img": "https://cdn.rebrickable.com/media/sets/75015-1.jpg",
+     "figs": 3
+    }
+   ],
+   "figs_value_huf": 12463,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7748-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7748-1.png"
+   ]
+  },
+  "7749-1": {
+   "type": "SET",
+   "name": "Echo Base",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 312.0,
+   "dims_cm": [
+    28.0,
+    26.0,
+    6.4
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 139,
+   "minifigs": [
+    {
+     "no": "sw0115",
+     "name": "Snowtrooper, Light Bluish Gray Hips, White Hands (Hoth Stormtrooper)",
+     "qty": 2,
+     "sets": 9
+    },
+    {
+     "no": "sw0252",
+     "name": "Hoth Rebel - Light Nougat Head, White Visor Snow Goggles",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "sw0253",
+     "name": "Han Solo - Light Nougat, Parka Hood, Tan Legs with Holster",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 9623,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7749-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7749-1.png"
+   ]
+  },
+  "7868-1": {
+   "type": "SET",
+   "name": "Mace Windu's Jedi Starfighter",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 506.0,
+   "dims_cm": [
+    38.0,
+    26.0,
+    4.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 303,
+   "minifigs": [
+    {
+     "no": "sw0001b",
+     "name": "Battle Droid - Tan, Angled Arms",
+     "qty": 2,
+     "sets": 16
+    },
+    {
+     "no": "sw0220",
+     "name": "Mace Windu - Large Eyes",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0312",
+     "name": "TX-20 (Tactical Droid)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0313",
+     "name": "Astromech Droid, R8-B7",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 45978,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7868-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7868-1.png"
+   ]
+  },
+  "7869-1": {
+   "type": "SET",
+   "name": "Battle for Geonosis",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 555.0,
+   "dims_cm": [
+    38.0,
+    25.9,
+    5.6
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 325,
+   "minifigs": [
+    {
+     "no": "sw0001c",
+     "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+     "qty": 2,
+     "sets": 36
+    },
+    {
+     "no": "sw0230",
+     "name": "Super Battle Droid - Pearl Dark Gray, Blaster Arm",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0310",
+     "name": "Luminara Unduli - Black Headgear",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0314",
+     "name": "Clone Trooper Captain Rex, 501st Legion (Phase 1) - Dark Bluish Gray Rangefinder, Pauldron, and Kama, Large Eyes",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7869-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7869-1.png"
+   ]
+  },
+  "7877-1": {
+   "type": "SET",
+   "name": "Naboo Starfighter",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 557.0,
+   "dims_cm": [
+    38.0,
+    26.0,
+    5.4
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 277,
+   "minifigs": [
+    {
+     "no": "sw0217",
+     "name": "Astromech Droid, R2-D2, Light Bluish Gray Head",
+     "qty": 1,
+     "sets": 10
+    },
+    {
+     "no": "sw0340",
+     "name": "Naboo Fighter Pilot - Red Jumpsuit",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0347",
+     "name": "Security Battle Droid - Dark Red Torso with Tan Insignia and Chest Badge, Angled Arm and Straight Arm",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "sw0348",
+     "name": "Droideka (Destroyer Droid) - Dark Bluish Gray Arms Mechanical",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0349",
+     "name": "Anakin Skywalker - Short Legs, Short Tousled Hair, Belt with Gold Buckle",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "10026-1",
+     "name": "Naboo Starfighter",
+     "year": 2002,
+     "pieces": 188,
+     "img": "https://cdn.rebrickable.com/media/sets/10026-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "7877-1",
+     "name": "Naboo Starfighter",
+     "year": 2011,
+     "pieces": 318,
+     "img": "https://cdn.rebrickable.com/media/sets/7877-1.jpg",
+     "figs": 6
+    },
+    {
+     "no": "75092-1",
+     "name": "Naboo Starfighter",
+     "year": 2015,
+     "pieces": 442,
+     "img": "https://cdn.rebrickable.com/media/sets/75092-1.jpg",
+     "figs": 9
+    },
+    {
+     "no": "911609-1",
+     "name": "Naboo Starfighter",
+     "year": 2016,
+     "pieces": 34,
+     "img": "https://cdn.rebrickable.com/media/sets/911609-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "30383-1",
+     "name": "Naboo Starfighter",
+     "year": 2019,
+     "pieces": 48,
+     "img": "https://cdn.rebrickable.com/media/sets/30383-1.jpg",
+     "figs": 0
+    }
+   ],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7877-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7877-1.png"
+   ]
+  },
+  "7879-1": {
+   "type": "SET",
+   "name": "Hoth Echo Base",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 1205.0,
+   "dims_cm": [
+    47.5,
+    37.9,
+    6.8
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 775,
+   "minifigs": [
+    {
+     "no": "sw0011a",
+     "name": "Chewbacca - Reddish Brown",
+     "qty": 1,
+     "sets": 13
+    },
+    {
+     "no": "sw0115",
+     "name": "Snowtrooper, Light Bluish Gray Hips, White Hands (Hoth Stormtrooper)",
+     "qty": 2,
+     "sets": 9
+    },
+    {
+     "no": "sw0342",
+     "name": "Luke Skywalker (Bacta Tank Outfit)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0343",
+     "name": "Han Solo, Tan Legs with Holster Pattern, Parka Hood with Tan Fur",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0344",
+     "name": "R-3PO Protocol Droid",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0345",
+     "name": "2-1B Medical Droid - Dotted Badge Pattern (Sand Blue), Light Bluish Gray Legs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0346",
+     "name": "Princess Leia - Hoth Outfit, Tan Jacket, Braided Hair",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7879-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7879-1.png"
+   ]
+  },
+  "79014-1": {
+   "type": "SET",
+   "name": "Dol Guldur Battle",
+   "year": 2013,
+   "category": "The Hobbit & The Lord of the Rings",
+   "weight_g": 1152.0,
+   "dims_cm": [
+    53.6,
+    27.8,
+    7.4
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 793,
+   "minifigs": [
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 1,
+     "sets": 47
+    },
+    {
+     "no": "lor073",
+     "name": "Gandalf the Grey - Hair, Starched Fabric Cape",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "lor081",
+     "name": "Necromancer of Dol Guldur",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "lor082",
+     "name": "Radagast the Brown",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "lor087",
+     "name": "Azog",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "lor088",
+     "name": "Gundabad Orc - Bald",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "lor089",
+     "name": "Gundabad Orc - Bald with Shoulder Spikes",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "lor090",
+     "name": "Statue - Dol Guldur",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 87864,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/79014-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/79014-1.png"
+   ]
+  },
+  "7913-1": {
+   "type": "SET",
+   "name": "Clone Trooper Battle Pack",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 106.0,
+   "dims_cm": [
+    19.1,
+    14.1,
+    4.1
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 70,
+   "minifigs": [
+    {
+     "no": "sw0297",
+     "name": "Clone ARF Trooper Razor / Stak, 91st Mobile Reconnaissance Corps Lightning Squadron (Phase 1) - Large Eyes",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0298",
+     "name": "Clone Trooper, Horn Company (Phase 1) - Sand Green and Lime Markings, Large Eyes",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0299",
+     "name": "Clone Bomb Squad Trooper (Phase 1) - Large Eyes",
+     "qty": 2,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 16009,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7913-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7913-1.png"
+   ]
+  },
+  "7914-1": {
+   "type": "SET",
+   "name": "Mandalorian Battle Pack",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 90.0,
+   "dims_cm": [
+    19.1,
+    14.1,
+    4.6
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 53,
+   "minifigs": [
+    {
+     "no": "sw0296",
+     "name": "Mandalorian Death Watch Warrior",
+     "qty": 4,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "7914-1",
+     "name": "Mandalorian Battle Pack",
+     "year": 2011,
+     "pieces": 68,
+     "img": "https://cdn.rebrickable.com/media/sets/7914-1.jpg",
+     "figs": 4
+    },
+    {
+     "no": "75267-1",
+     "name": "Mandalorian Battle Pack",
+     "year": 2020,
+     "pieces": 103,
+     "img": "https://cdn.rebrickable.com/media/sets/75267-1.jpg",
+     "figs": 4
+    }
+   ],
+   "figs_value_huf": 7722,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7914-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7914-1.png"
+   ]
   },
   "7961-1": {
    "type": "SET",
@@ -23963,6 +25292,12 @@
   }
  },
  "figsets": {
+  "90398pb002": 1,
+  "90398pb003": 1,
+  "90398pb004c01": 1,
+  "90398pb005": 1,
+  "90398pb006": 1,
+  "90398pb007": 1,
   "adv001": 3,
   "adv006": 12,
   "adv008": 2,
@@ -24068,6 +25403,13 @@
   "hrf003": 1,
   "hrf004": 1,
   "hrf007": 1,
+  "lor073": 2,
+  "lor081": 1,
+  "lor082": 1,
+  "lor087": 2,
+  "lor088": 2,
+  "lor089": 2,
+  "lor090": 1,
   "min009": 28,
   "min010": 22,
   "min011": 26,
@@ -24170,13 +25512,30 @@
   "sh0168": 1,
   "sh0169": 1,
   "sh0170": 2,
+  "sh0171": 2,
+  "sh0172": 2,
   "sh0173": 2,
   "sh0174": 1,
   "sh0175": 1,
   "sh0176": 2,
   "sh0177": 5,
   "sh0178": 1,
+  "sh0179": 1,
+  "sh0180": 1,
+  "sh0183": 1,
+  "sh0184": 1,
+  "sh0185": 1,
   "sh0186": 3,
+  "sh0254": 1,
+  "sh0255": 1,
+  "sh0256": 1,
+  "sh0257": 2,
+  "sh0258": 1,
+  "sh0261": 1,
+  "sh0262": 1,
+  "sh0299": 1,
+  "sh0302": 1,
+  "sh0303": 2,
   "stu001": 13,
   "stu002": 11,
   "sw0001b": 16,
@@ -24188,12 +25547,15 @@
   "sw0008": 3,
   "sw0010": 6,
   "sw0011a": 13,
+  "sw0012b": 1,
   "sw0017": 5,
   "sw0025": 2,
   "sw0027": 5,
   "sw0028": 16,
   "sw0028a": 1,
   "sw0035": 2,
+  "sw0035b": 2,
+  "sw0036b": 1,
   "sw0037": 2,
   "sw0039": 1,
   "sw0040b": 2,
@@ -24216,7 +25578,10 @@
   "sw0089": 1,
   "sw0090": 3,
   "sw0092": 13,
+  "sw0095": 1,
+  "sw0096": 3,
   "sw0100": 1,
+  "sw0109a": 1,
   "sw0113": 3,
   "sw0115": 9,
   "sw0116": 1,
@@ -24233,6 +25598,11 @@
   "sw0156": 5,
   "sw0157": 2,
   "sw0161a": 5,
+  "sw0164": 1,
+  "sw0165": 1,
+  "sw0166a": 2,
+  "sw0167": 1,
+  "sw0171": 1,
   "sw0174": 1,
   "sw0175": 3,
   "sw0176": 2,
@@ -24240,14 +25610,19 @@
   "sw0178": 1,
   "sw0179": 3,
   "sw0183": 9,
+  "sw0184": 3,
   "sw0187": 2,
   "sw0188": 6,
   "sw0192": 6,
   "sw0193": 2,
   "sw0194": 2,
+  "sw0195": 2,
   "sw0196": 1,
+  "sw0197": 5,
   "sw0198": 2,
+  "sw0200": 1,
   "sw0201": 11,
+  "sw0202a": 1,
   "sw0203": 1,
   "sw0204": 2,
   "sw0205": 2,
@@ -24264,14 +25639,17 @@
   "sw0217": 10,
   "sw0217a": 1,
   "sw0219": 2,
+  "sw0220": 3,
   "sw0222": 3,
   "sw0226": 1,
   "sw0229": 1,
   "sw0230": 2,
+  "sw0233": 1,
   "sw0236": 2,
   "sw0242": 2,
   "sw0247": 3,
   "sw0252": 1,
+  "sw0253": 2,
   "sw0256": 1,
   "sw0259": 1,
   "sw0260": 2,
@@ -24292,6 +25670,10 @@
   "sw0300": 2,
   "sw0301": 3,
   "sw0309": 1,
+  "sw0310": 1,
+  "sw0311": 1,
+  "sw0312": 1,
+  "sw0313": 1,
   "sw0314": 1,
   "sw0316": 1,
   "sw0319": 1,
@@ -24301,6 +25683,15 @@
   "sw0324": 1,
   "sw0337": 1,
   "sw0338": 2,
+  "sw0340": 2,
+  "sw0342": 1,
+  "sw0343": 1,
+  "sw0344": 1,
+  "sw0345": 1,
+  "sw0346": 1,
+  "sw0347": 1,
+  "sw0348": 1,
+  "sw0349": 1,
   "sw0360": 6,
   "sw0364": 1,
   "sw0365": 3,
@@ -24522,6 +25913,7 @@
   "sw0958": 2,
   "sw0960": 1,
   "sw0961": 1,
+  "sw0964": 2,
   "sw0965": 1,
   "sw0966": 1,
   "sw0969": 2,
@@ -24799,6 +26191,36 @@
   "tim007": 1
  },
  "figvalues": {
+  "90398pb002": {
+   "eur": 31.91,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "90398pb003": {
+   "eur": 12.52,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "90398pb004c01": {
+   "eur": 58.65,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "90398pb005": {
+   "eur": 14.12,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "90398pb006": {
+   "eur": 2.34,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "90398pb007": {
+   "eur": 1.71,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "adv001": {
    "eur": 66.06,
    "cond": "N",
@@ -25319,6 +26741,41 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "lor073": {
+   "eur": 13.26,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "lor081": {
+   "eur": 11.42,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "lor082": {
+   "eur": 114.03,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "lor087": {
+   "eur": 54.97,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "lor088": {
+   "eur": 11.67,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "lor089": {
+   "eur": 14.2,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "lor090": {
+   "eur": 15.12,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "min009": {
    "eur": 2.1,
    "cond": "N",
@@ -25829,6 +27286,16 @@
    "cond": "N",
    "at": "2026-11-03"
   },
+  "sh0171": {
+   "eur": 3.56,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0172": {
+   "eur": 7.48,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sh0173": {
    "eur": 15.31,
    "cond": "N",
@@ -25859,8 +27326,83 @@
    "cond": "N",
    "at": "2026-11-03"
   },
+  "sh0179": {
+   "eur": 9.59,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0180": {
+   "eur": 60.17,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0183": {
+   "eur": 22.38,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0184": {
+   "eur": 14.08,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0185": {
+   "eur": 17.81,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sh0186": {
    "eur": 5.19,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0254": {
+   "eur": 27.5,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0255": {
+   "eur": 7.92,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0256": {
+   "eur": 16.74,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0257": {
+   "eur": 9.99,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0258": {
+   "eur": 24.95,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0261": {
+   "eur": 11.22,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0262": {
+   "eur": 7.65,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0299": {
+   "eur": 23.06,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0302": {
+   "eur": 23.05,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sh0303": {
+   "eur": 23.45,
    "cond": "N",
    "at": "2026-11-03"
   },
@@ -25914,6 +27456,11 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "sw0012b": {
+   "eur": 10.79,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw0017": {
    "eur": 9.12,
    "cond": "N",
@@ -25943,6 +27490,16 @@
    "eur": 7.57,
    "cond": "N",
    "at": "2026-11-02"
+  },
+  "sw0035b": {
+   "eur": 7.76,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0036b": {
+   "eur": 8.61,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "sw0037": {
    "eur": 7.74,
@@ -26054,10 +27611,25 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "sw0095": {
+   "eur": 3.53,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0096": {
+   "eur": 3.36,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw0100": {
    "eur": 22.44,
    "cond": "N",
    "at": "2026-11-02"
+  },
+  "sw0109a": {
+   "eur": 38.81,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "sw0113": {
    "eur": 12.1,
@@ -26134,6 +27706,31 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "sw0164": {
+   "eur": 48.32,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0165": {
+   "eur": 36.32,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0166a": {
+   "eur": 9.3,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0167": {
+   "eur": 6.4,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0171": {
+   "eur": 6.01,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw0174": {
    "eur": 34.99,
    "cond": "N",
@@ -26169,6 +27766,11 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "sw0184": {
+   "eur": 3.78,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw0187": {
    "eur": 4.56,
    "cond": "N",
@@ -26194,10 +27796,40 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "sw0195": {
+   "eur": 25.13,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0196": {
+   "eur": 59.41,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0197": {
+   "eur": 10.48,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0198": {
+   "eur": 12.65,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0200": {
+   "eur": 12.27,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw0201": {
    "eur": 12.41,
    "cond": "N",
    "at": "2026-11-02"
+  },
+  "sw0202a": {
+   "eur": 154.66,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "sw0203": {
    "eur": 45.95,
@@ -26274,10 +27906,20 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "sw0220": {
+   "eur": 6.88,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw0230": {
    "eur": 7.04,
    "cond": "N",
    "at": "2026-11-02"
+  },
+  "sw0233": {
+   "eur": 15.55,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "sw0236": {
    "eur": 12.45,
@@ -26288,6 +27930,16 @@
    "eur": 10.94,
    "cond": "N",
    "at": "2026-11-02"
+  },
+  "sw0252": {
+   "eur": 4.26,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0253": {
+   "eur": 8.83,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "sw0256": {
    "eur": 59.17,
@@ -26319,6 +27971,26 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "sw0296": {
+   "eur": 5.27,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0297": {
+   "eur": 13.95,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0298": {
+   "eur": 12.63,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0299": {
+   "eur": 8.56,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw0300": {
    "eur": 2.48,
    "cond": "N",
@@ -26328,6 +28000,26 @@
    "eur": 11.25,
    "cond": "N",
    "at": "2026-11-02"
+  },
+  "sw0310": {
+   "eur": 23.1,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0311": {
+   "eur": 1.15,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0312": {
+   "eur": 92.67,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw0313": {
+   "eur": 22.5,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "sw0321": {
    "eur": 13.86,
