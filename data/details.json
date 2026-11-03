@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-02T23:15:19+00:00",
+ "updated": "2026-11-03T00:05:44+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -4592,7 +4592,9 @@
    "figs_value_huf": 1898,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/5383-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Castle"
   },
   "5909-1": {
    "type": "SET",
@@ -4645,7 +4647,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/5909-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/5909-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Desert"
   },
   "5936-1": {
    "type": "SET",
@@ -4686,7 +4690,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/5936-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/5936-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Jungle"
   },
   "5948-1": {
    "type": "SET",
@@ -4755,7 +4761,9 @@
    "figs_value_huf": 14613,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/5948-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Desert"
   },
   "5976-1": {
    "type": "SET",
@@ -4820,7 +4828,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/5976-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/5976-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Jungle"
   },
   "5986-1": {
    "type": "SET",
@@ -4885,7 +4895,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/5986-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/5986-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Jungle"
   },
   "5988-1": {
    "type": "SET",
@@ -4956,7 +4968,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/5988-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/5988-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Desert"
   },
   "6036-1": {
    "type": "SET",
@@ -4987,7 +5001,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/6036-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/6036-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Royal Knights"
   },
   "6046-1": {
    "type": "SET",
@@ -5040,7 +5056,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/6046-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/6046-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Dark Forest"
   },
   "6078-1": {
    "type": "SET",
@@ -5093,7 +5111,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/6078-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/6078-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Royal Knights"
   },
   "6079-1": {
    "type": "SET",
@@ -13993,7 +14013,8 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/75313-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/75313-1.png"
-   ]
+   ],
+   "figs_value_huf": 26229
   },
   "75314-1": {
    "bs_id": 31236,
@@ -14159,7 +14180,8 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/75315-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/75315-1.png"
-   ]
+   ],
+   "figs_value_huf": 25808
   },
   "75318-1": {
    "type": "SET",
@@ -14251,7 +14273,8 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/75320-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/75320-1.png"
-   ]
+   ],
+   "figs_value_huf": 5598
   },
   "75323-1": {
    "type": "SET",
@@ -14303,7 +14326,8 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/75323-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/75323-1.png"
-   ]
+   ],
+   "figs_value_huf": 21504
   },
   "75324-1": {
    "type": "SET",
@@ -14337,6 +14361,126 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/75324-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/75324-1.png"
+   ],
+   "figs_value_huf": 7524
+  },
+  "75325-1": {
+   "type": "SET",
+   "name": "The Mandalorian's N-1 Starfighter",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 738.0,
+   "dims_cm": [
+    38.0,
+    25.8,
+    5.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 416,
+   "minifigs": [
+    {
+     "no": "sw1113",
+     "name": "Din Grogu / The Child / 'Baby Yoda'",
+     "qty": 1,
+     "sets": 12
+    },
+    {
+     "no": "sw1210",
+     "name": "Peli Motto",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1211",
+     "name": "BD-72 (6331232)",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1212",
+     "name": "The Mandalorian / Din Djarin / 'Mando' - Silver Beskar Armor, Jet Pack, Printed Head",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "75325-1",
+     "name": "The Mandalorian's N-1 Starfighter",
+     "year": 2022,
+     "pieces": 412,
+     "img": "https://cdn.rebrickable.com/media/sets/75325-1.jpg",
+     "figs": 3
+    },
+    {
+     "no": "912405-1",
+     "name": "The Mandalorian's N-1 Starfighter",
+     "year": 2024,
+     "pieces": 50,
+     "img": "https://cdn.rebrickable.com/media/sets/912405-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "75442-1",
+     "name": "The Mandalorian's N-1 Starfighter",
+     "year": 2026,
+     "pieces": 1809,
+     "img": "https://cdn.rebrickable.com/media/sets/75442-1.jpg",
+     "figs": 2
+    }
+   ],
+   "figs_value_huf": 6359,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75325-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75325-1.png"
+   ]
+  },
+  "75331-1": {
+   "type": "SET",
+   "name": "The Razor Crest - UCS",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 8150.0,
+   "dims_cm": [
+    52.3,
+    48.0,
+    24.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 6284,
+   "minifigs": [
+    {
+     "no": "sw1113",
+     "name": "Din Grogu / The Child / 'Baby Yoda'",
+     "qty": 1,
+     "sets": 12
+    },
+    {
+     "no": "sw1242",
+     "name": "The Mandalorian / Din Djarin / 'Mando' - Brown Durasteel Armor, Printed Arms",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1243",
+     "name": "The Mythrol",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1244",
+     "name": "Kuiil - Brick Built Backpack",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": true,
+   "versions": [],
+   "figs_value_huf": 34212,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75331-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75331-1.png"
    ]
   },
   "75333-1": {
@@ -14509,6 +14653,128 @@
    ],
    "desc_en": "Recreate the Battle of Utapau with this fantastic LEGO® Star Wars™ AT-TE Walker (75337). A great gift idea for Star Wars: Revenge of the Sith fans aged 9 and over, this building toy features posable legs, a 360-degree-rotating elevating heavy blaster cannon with 2 stud shooters, a detachable minifigure cockpit and 2 detailed cabins with space for up to 7 LEGO minifigures in total. Each of the cabins opens for easy play and an extendable handle makes it simple to lift and move the AT-TE.\nBattle action\nThe set includes 5 LEGO minifigures – Commander Cody, a 212th Clone Gunner and 3 212th Clone Troopers – to pit against 3 Battle Droid LEGO figures and a buildable Dwarf Spider Droid, plus assorted cool weapons. Find building instructions in the box and on the LEGO Building Instructions app, which has interactive viewing tools to enhance the creative experience.\nPopular building toys\nExplore the entire LEGO Star Wars range to discover other construction sets to delight people of all ages.\n• AT-TE Walker building toy (75337) – Kids can recreate the Battle of Utapau with this detailed LEGO® Star Wars™ version of an AT-TE Walker from Star Wars: Revenge of the Sith\n• 5 LEGO® minifigures and 3 LEGO droid figures – Commander Cody, a 212th Clone Gunner, 3 212th Clone Troopers and 3 Battle Droids, all with weapons, plus a buildable Dwarf Spider Droid\n• Designed for play – The AT-TE has posable legs and an extendable handle to lift and move it, and the detachable cockpit and the 2 detailed cabins for Clone Troopers are easy to access\n• Playful features – A 360-degree-rotating elevating heavy blaster cannon with 2 stud shooters and a seat for the 212th Clone Gunner, 6 blaster cannons, 2 thermal detonator elements and more\n• Gift idea for ages 9 and over – Give this 1,082-piece buildable toy playset as a birthday or Christmas gift to kids who love Star Wars: Revenge of the Sith and any LEGO® Star Wars™ collector\n• Build together – Kids and their friends, siblings or parents can share the fun of building the AT-TE Walker, which measures over 19 cm (7.5 in.) high, 44 cm (17 in.) long and 24 cm (9.5 in.) wide\n• App-assisted building – Find step-by-step illustrated instructions in the box and check out the LEGO® Building Instructions app for digital instructions and interactive viewing tools\n• Fun for all ages – LEGO® Star Wars™ building sets allow kids and adult fans to recreate their favourite scenes, make up original stories or simply display the buildable models\n• Quality assurance – LEGO® bricks and pieces meet stringent quality standards, ensuring that they are compatible and connect securely for robust builds\n• Safety first – LEGO® components are thoroughly tested to make sure that they satisfy rigorous global safety standards",
    "subtheme": "Episode III"
+  },
+  "75339-1": {
+   "type": "SET",
+   "name": "Death Star Trash Compactor Diorama",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 975.0,
+   "dims_cm": [
+    38.0,
+    26.0,
+    7.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 799,
+   "minifigs": [
+    {
+     "no": "sw0532",
+     "name": "Chewbacca - Dark Brown, Medium Nougat Fur",
+     "qty": 1,
+     "sets": 20
+    },
+    {
+     "no": "sw0994",
+     "name": "Princess Leia - White Dress, Detailed Belt with 3 Emblems, White Legs, Lopsided Grin / Angry Open Mouth Scowl",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1201",
+     "name": "C-3PO - Printed Legs, Toes and Arms, Bright Light Yellow Eyes",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sw1202",
+     "name": "Astromech Droid, R2-D2 - Flat Silver Head, Dark Pink Dots, Large Receptor, Back Printing",
+     "qty": 1,
+     "sets": 6
+    },
+    {
+     "no": "sw1203",
+     "name": "Luke Skywalker - Stormtrooper Outfit, Printed Legs, Dark Tan Hair, Smile / Stern",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1204",
+     "name": "Han Solo - Stormtrooper Outfit, Printed Legs, Shoulder Belts, Open Mouth Smile / Determined",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 13627,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75339-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75339-1.png"
+   ]
+  },
+  "75340-6": {
+   "type": "SET",
+   "name": "Advent Calendar 2022, Star Wars (Day  5) - Battle Droid",
+   "year": 2022,
+   "category": "Holiday & Event",
+   "weight_g": 3.0,
+   "dims_cm": [
+    9.2,
+    8.2,
+    0.85
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 3,
+   "minifigs": [
+    {
+     "no": "sw0001c",
+     "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+     "qty": 1,
+     "sets": 36
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 535,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/75340-6.png"
+   ]
+  },
+  "75341-1": {
+   "type": "SET",
+   "name": "Luke Skywalker's Landspeeder - UCS",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 2550.0,
+   "dims_cm": [
+    57.8,
+    37.3,
+    8.1
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 1921,
+   "minifigs": [
+    {
+     "no": "sw0778",
+     "name": "Luke Skywalker (Tatooine, White Legs, Stern / Smile Face Print)",
+     "qty": 1,
+     "sets": 8
+    },
+    {
+     "no": "sw1209",
+     "name": "C-3PO - Molded Light Bluish Gray Lower Leg, Printed Arms",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": true,
+   "versions": [],
+   "figs_value_huf": 7279,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75341-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75341-1.png"
+   ]
   },
   "75342-1": {
    "bs_id": 32399,
@@ -14838,6 +15104,706 @@
    "desc_en": "Star Wars: The Empire Strikes Back fans can play out Imperial missions to defeat the Rebel Alliance with this LEGO® brick-built TIE Bomber (75347) starfighter toy. It features an opening minifigure cockpit, a torpedo-dropping function and 2 stud shooters. A top gift idea for Star Wars™ fans aged 9 and up, this action-packed, buildable toy playset also includes Darth Vader, Vice Admiral Sloane and TIE Bomber Pilot LEGO minifigures with weapons, plus a Gonk Droid LEGO figure and a cart to transport torpedoes to the TIE Bomber.\nDigital instructions\nDownload the LEGO Builder app for an even more fun and engaging creative experience. It offers a digital step-by-step building guide, intuitive zoom and rotate tools to help kids visualize the real construction model as they build, and more.\nAwesome building toys\nThe LEGO Group has been recreating starships, vehicles, locations and characters from the Star Wars universe since 1999, and there is an amazing variety of sets to thrill fans of all ages.\n• LEGO® Star Wars™ TIE Bomber (75347) for action play – Fans can relive thrilling Star Wars: The Empire Strikes Back scenes with this brick-built TIE Bomber starfighter toy\n• 3 LEGO® Star Wars™ minifigures with weapons, plus a Gonk Droid – Darth Vader with a lightsaber, Vice Admiral Sloane and a TIE Bomber Pilot, each with a blaster pistol, plus a Gonk Droid LEGO figure\n• Built for battle play – The TIE Bomber has an opening minifigure cockpit, a warhead bay with torpedo-dropping function for 4 torpedoes (the set includes 6 buildable torpedoes) and 2 stud shooters\n• Cart to transport torpedoes to the TIE Bomber – The cart has space for a LEGO® minifigure driver and for 2 torpedoes at the back\n• Gift idea for ages 9 and up – Give this 625-piece building toy as a holiday gift, birthday present or special treat for fans of the classic Star Wars™ saga and any Star Wars collector\n• Build, play and display – This brick-built TIE Bomber model measures over 4 in. (10 cm) high, 6 in. (16 cm) long and 7.5 in. (20 cm) wide\n• Step into a new way of building – The LEGO® Builder app is an interactive digital mentor for kids, guiding them through their building experience on their tablets or smartphones\n• Fun construction toys for all ages – LEGO® Star Wars™ sets enable kids and adult Star Wars fans to recreate iconic scenes, play out their own creative stories or simply display the buildable models\n• High quality – LEGO® components meet demanding industry standards, ensuring a simple, secure connection every time\n• Safety first – LEGO® components are dropped, heated, crushed, twisted and carefully analyzed to make sure that they comply with stringent global safety standards",
    "subtheme": "Episode VI"
   },
+  "75348-1": {
+   "type": "SET",
+   "name": "Mandalorian Fang Fighter vs TIE Interceptor",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 1315.0,
+   "dims_cm": [
+    47.9,
+    28.0,
+    7.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 970,
+   "minifigs": [
+    {
+     "no": "sw1258",
+     "name": "The Mandalorian / Din Djarin / 'Mando' - Silver Beskar Armor, Jet Pack, Helmet with Top Lines",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sw1259",
+     "name": "Mandalorian Fleet Commander - Hair",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1260",
+     "name": "Imperial TIE Fighter / Interceptor Pilot - Female, Nougat Head",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw1261",
+     "name": "Astromech Droid, R2-E6",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 7894,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75348-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75348-1.png"
+   ]
+  },
+  "75352-1": {
+   "type": "SET",
+   "name": "Emperor's Throne Room Diorama",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 936.0,
+   "dims_cm": [
+    38.0,
+    26.0,
+    7.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 813,
+   "minifigs": [
+    {
+     "no": "sw1249",
+     "name": "Darth Vader - Printed Arms, Spongy Cape, White Head with Frown",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "sw1262",
+     "name": "Luke Skywalker - Jedi, Hair with Side Part, Smile / Stern",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1263",
+     "name": "Emperor Palpatine - Spongy Cape, Hood Basic, Yellow Eyes",
+     "qty": 1,
+     "sets": 3
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 9341,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75352-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75352-1.png"
+   ]
+  },
+  "75354-1": {
+   "type": "SET",
+   "name": "Coruscant Guard Gunship",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 1730.0,
+   "dims_cm": [
+    47.5,
+    37.4,
+    6.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 1090,
+   "minifigs": [
+    {
+     "no": "sw1303",
+     "name": "Padmé Amidala - Senator, Nougat Lips {Padme}",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1304",
+     "name": "Clone Trooper Commander Fox, Coruscant Guard (Phase 2) - Dark Bluish Gray Visor, Printed Legs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1305",
+     "name": "Clone Shock Trooper, Coruscant Guard (Phase 2) - Nougat Head",
+     "qty": 2,
+     "sets": 5
+    },
+    {
+     "no": "sw1306",
+     "name": "Chancellor Palpatine - Dark Red Outfit, Skirt, Tan Hair",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 24826,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75354-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75354-1.png"
+   ]
+  },
+  "75355-1": {
+   "type": "SET",
+   "name": "X-wing Starfighter - UCS",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 2810.0,
+   "dims_cm": [
+    57.7,
+    37.4,
+    8.2
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 1970,
+   "minifigs": [
+    {
+     "no": "sw1202",
+     "name": "Astromech Droid, R2-D2 - Flat Silver Head, Dark Pink Dots, Large Receptor, Back Printing",
+     "qty": 1,
+     "sets": 6
+    },
+    {
+     "no": "sw1267",
+     "name": "Luke Skywalker - Pilot Suit, Printed Arms, Black Boots",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": true,
+   "versions": [],
+   "figs_value_huf": 7909,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75355-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75355-1.png"
+   ]
+  },
+  "75359-1": {
+   "type": "SET",
+   "name": "332nd Ahsoka's Clone Trooper Battle Pack",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 131.0,
+   "dims_cm": [
+    19.0,
+    14.0,
+    4.6
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 103,
+   "minifigs": [
+    {
+     "no": "sw1276",
+     "name": "Clone Trooper, 501st Legion, 332nd Company (Phase 2) - Helmet with Holes and Togruta Markings, Blue Jet Pack",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "sw1277",
+     "name": "Clone Captain Vaughn, 501st Legion, 332nd Company (Phase 2) - Helmet with Holes and Togruta Markings, Orange Visor",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1278",
+     "name": "Clone Trooper, 501st Legion, 332nd Company (Phase 2) - Helmet with Holes and Togruta Markings",
+     "qty": 1,
+     "sets": 3
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 4462,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75359-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75359-1.png"
+   ]
+  },
+  "75360-1": {
+   "type": "SET",
+   "name": "Yoda's Jedi Starfighter",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 336.0,
+   "dims_cm": [
+    26.0,
+    19.0,
+    4.6
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 256,
+   "minifigs": [
+    {
+     "no": "sw1202",
+     "name": "Astromech Droid, R2-D2 - Flat Silver Head, Dark Pink Dots, Large Receptor, Back Printing",
+     "qty": 1,
+     "sets": 6
+    },
+    {
+     "no": "sw1288",
+     "name": "Yoda - Olive Green, Open Robe with Small Creases",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "75168-1",
+     "name": "Yoda's Jedi Starfighter",
+     "year": 2017,
+     "pieces": 262,
+     "img": "https://cdn.rebrickable.com/media/sets/75168-1.jpg",
+     "figs": 2
+    },
+    {
+     "no": "75360-1",
+     "name": "Yoda's Jedi Starfighter",
+     "year": 2023,
+     "pieces": 253,
+     "img": "https://cdn.rebrickable.com/media/sets/75360-1.jpg",
+     "figs": 2
+    },
+    {
+     "no": "912312-1",
+     "name": "Yoda's Jedi Starfighter",
+     "year": 2023,
+     "pieces": 36,
+     "img": "https://cdn.rebrickable.com/media/sets/912312-1.jpg",
+     "figs": 0
+    }
+   ],
+   "figs_value_huf": 3370,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75360-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75360-1.png"
+   ]
+  },
+  "75361-1": {
+   "type": "SET",
+   "name": "Spider Tank",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 526.0,
+   "dims_cm": [
+    26.0,
+    22.0,
+    7.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 532,
+   "minifigs": [
+    {
+     "no": "sw1113",
+     "name": "Din Grogu / The Child / 'Baby Yoda'",
+     "qty": 1,
+     "sets": 12
+    },
+    {
+     "no": "sw1258",
+     "name": "The Mandalorian / Din Djarin / 'Mando' - Silver Beskar Armor, Jet Pack, Helmet with Top Lines",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sw1287",
+     "name": "Bo-Katan Kryze - Printed Arms, Jet Pack, Dark Orange Hair",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 9481,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75361-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75361-1.png"
+   ]
+  },
+  "75362-1": {
+   "type": "SET",
+   "name": "Ahsoka Tano's T-6 Jedi Shuttle",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 927.8,
+   "dims_cm": [
+    38.0,
+    26.0,
+    7.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 610,
+   "minifigs": [
+    {
+     "no": "sw1299",
+     "name": "Professor Huyang",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1300",
+     "name": "Ahsoka Tano (Adult) - Pearl Dark Gray Robe, Printed Arms",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw1301",
+     "name": "Marrok, Inquisitor",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1302",
+     "name": "Sabine Wren - Dark Brown Armor, Helmet",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 11250,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75362-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75362-1.png"
+   ]
+  },
+  "75363-1": {
+   "type": "SET",
+   "name": "The Mandalorian N-1 Starfighter Microfighter",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 100.0,
+   "dims_cm": [
+    14.1,
+    12.2,
+    4.6
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 92,
+   "minifigs": [
+    {
+     "no": "sw1113",
+     "name": "Din Grogu / The Child / 'Baby Yoda'",
+     "qty": 1,
+     "sets": 12
+    },
+    {
+     "no": "sw1258",
+     "name": "The Mandalorian / Din Djarin / 'Mando' - Silver Beskar Armor, Jet Pack, Helmet with Top Lines",
+     "qty": 1,
+     "sets": 5
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2557,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75363-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75363-1.png"
+   ]
+  },
+  "75365-1": {
+   "type": "SET",
+   "name": "Yavin 4 Rebel Base",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 1847.0,
+   "dims_cm": [
+    47.5,
+    37.5,
+    6.1
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 1052,
+   "minifigs": [
+    {
+     "no": "sw0532",
+     "name": "Chewbacca - Dark Brown, Medium Nougat Fur",
+     "qty": 1,
+     "sets": 20
+    },
+    {
+     "no": "sw1140",
+     "name": "General Jan Dodonna",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1201",
+     "name": "C-3PO - Printed Legs, Toes and Arms, Bright Light Yellow Eyes",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sw1202",
+     "name": "Astromech Droid, R2-D2 - Flat Silver Head, Dark Pink Dots, Large Receptor, Back Printing",
+     "qty": 1,
+     "sets": 6
+    },
+    {
+     "no": "sw1279",
+     "name": "Rebel Pilot Y-wing (Jon 'Dutch' Vander, Gold Leader) - Printed Legs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1280",
+     "name": "Astromech Droid, R2-BHD - Light Bluish Gray Body",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1281",
+     "name": "Rebel Pilot Garven Dreis (Red Leader)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1282",
+     "name": "Princess Leia - Celebration Outfit, Skirt",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1283",
+     "name": "Luke Skywalker - Celebration, Bright Light Yellow Jacket",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1284",
+     "name": "Han Solo - Celebration, Wavy Hair",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1285",
+     "name": "Rebel Fleet Trooper - Male, Vest with Pockets, Black Neck, Reddish Brown Eyebrows",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "sw1286",
+     "name": "Rebel Crew - Female, Nougat Head",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 32043,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75365-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75365-1.png"
+   ]
+  },
+  "75366-7": {
+   "type": "SET",
+   "name": "Advent Calendar 2023, Star Wars (Day  6) - 212th Clone Trooper",
+   "year": 2023,
+   "category": "Holiday & Event",
+   "weight_g": 5.44,
+   "dims_cm": [
+    11.0,
+    8.0,
+    1.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 2,
+   "minifigs": [
+    {
+     "no": "sw1235",
+     "name": "Clone Trooper, 212th Attack Battalion (Phase 2) - White Arms, Dirt Stains, Nougat Head, Helmet with Holes",
+     "qty": 1,
+     "sets": 3
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2370,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/75366-7.png"
+   ]
+  },
+  "75366-9": {
+   "type": "SET",
+   "name": "Advent Calendar 2023, Star Wars (Day  8) - B-1 Battle Droid",
+   "year": 2023,
+   "category": "Holiday & Event",
+   "weight_g": 2.53,
+   "dims_cm": [
+    9.0,
+    7.0,
+    1.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 3,
+   "minifigs": [
+    {
+     "no": "sw0001c",
+     "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+     "qty": 1,
+     "sets": 36
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 535,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/75366-9.png"
+   ]
+  },
+  "75367-1": {
+   "type": "SET",
+   "name": "Venator-Class Republic Attack Cruiser - UCS",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 9880.0,
+   "dims_cm": [
+    52.0,
+    47.5,
+    37.8
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 5427,
+   "minifigs": [
+    {
+     "no": "sw1315",
+     "name": "Clone Trooper Captain Rex, 501st Legion (Phase 2) - Blue Cloth Pauldron, Rangefinder, Printed White Arms",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1316",
+     "name": "Admiral Wullf Yularen - Dark Bluish Gray Uniform, Dark Brown Hair",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": true,
+   "versions": [],
+   "figs_value_huf": 18258,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75367-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75367-1.png"
+   ]
+  },
+  "75369-1": {
+   "type": "SET",
+   "name": "Boba Fett Mech",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 172.0,
+   "dims_cm": [
+    15.7,
+    14.1,
+    6.1
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 165,
+   "minifigs": [
+    {
+     "no": "sw1274",
+     "name": "Boba Fett - Helmet, Jet Pack, Printed Arms and Legs, Rangefinder",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2253,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75369-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75369-1.png"
+   ]
+  },
+  "75370-1": {
+   "type": "SET",
+   "name": "Stormtrooper Mech",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 157.0,
+   "dims_cm": [
+    14.0,
+    15.2,
+    4.3
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 141,
+   "minifigs": [
+    {
+     "no": "sw1275",
+     "name": "Imperial Stormtrooper - Female, Dual Molded Helmet with Light Bluish Gray Panels on Back, Shoulder Belts, Nougat Head",
+     "qty": 1,
+     "sets": 3
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1627,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75370-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75370-1.png"
+   ]
+  },
+  "75371-1": {
+   "type": "SET",
+   "name": "Chewbacca",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 2428.0,
+   "dims_cm": [
+    37.8,
+    57.8,
+    9.8
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 2349,
+   "minifigs": [
+    {
+     "no": "sw0532",
+     "name": "Chewbacca - Dark Brown, Medium Nougat Fur",
+     "qty": 1,
+     "sets": 20
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "75530-1",
+     "name": "Chewbacca",
+     "year": 2017,
+     "pieces": 179,
+     "img": "https://cdn.rebrickable.com/media/sets/75530-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "41609-1",
+     "name": "Chewbacca",
+     "year": 2018,
+     "pieces": 149,
+     "img": "https://cdn.rebrickable.com/media/sets/41609-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "6252808-1",
+     "name": "Chewbacca",
+     "year": 2018,
+     "pieces": 22,
+     "img": "https://cdn.rebrickable.com/media/sets/6252808-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "75371-1",
+     "name": "Chewbacca",
+     "year": 2023,
+     "pieces": 2319,
+     "img": "https://cdn.rebrickable.com/media/sets/75371-1.jpg",
+     "figs": 1
+    }
+   ],
+   "figs_value_huf": 1421,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75371-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75371-1.png"
+   ]
+  },
   "75372-1": {
    "bs_id": 48520,
    "photos": [
@@ -14915,6 +15881,88 @@
    ],
    "desc_en": "Inspire youngsters to recreate thrilling Star Wars: The Clone Wars scenes with this LEGO® Star Wars™ Clone Trooper \\u0026amp; Battle Droid Battle Pack (75372) for ages 7 and over. It features 4 LEGO Star Wars minifigures and 5 LEGO figures – a Clone Shock Trooper, 3 Clone Troopers, 3 Super Battle Droids and 2 Battle Droids – with iconic weapons for action play. This LEGO building set also includes a stud-shooting Star Wars speeder bike for 2 Clone Troopers and a buildable STAP speeder vehicle toy for a Battle Droid. A tri-droid with 3 flick shooters and a defensive post with a stud shooter add even more creative-play possibilities.\nCheck out the LEGO Builder app for digital instructions and zoom and rotate viewing tools to enhance children’s building experience.\nThis buildable playset is great to play with on its own and the characters and builds can be combined with other LEGO Star Wars sets (sold separately) in the extensive range.\n• Clone Trooper & Battle Droid Battle Pack for kids – Recreate Star Wars: The Clone Wars scenes with this buildable action toy, featuring LEGO® figures, a speeder bike vehicle and more\n• 4 LEGO® Star Wars™ minifigures and 5 LEGO figures for action play – A Clone Shock Trooper, 3 Clone Troopers, 3 Super Battle Droids and 2 Battle Droids with assorted accessories\n• Buildable LEGO® Star Wars™ speeder bike – The speeder bike has 2 stud shooters, 2 holders for blasters and space for 2 Clone Troopers\n• Unlimited creative play – A tri-droid with a rotating top and 3 flick shooters, a STAP speeder for a Battle Droid, a defensive post with a stud shooter, a thermal detonator element and more\n• Gift for Star Wars™ fans aged 7 and up – Give this fun, collectible building toy to kids who are into Star Wars: The Clone Wars\n• Fun LEGO® Star Wars™ sets for all ages – LEGO Star Wars building toys enable kids and adult fans to recreate iconic scenes, make up their own action-adventures or simply display the buildable models\n• Compact 215-piece set – The tri-droid measures over 4.5 in. (12 cm) high, 6 in. (15 cm) long and 5 in. (13 cm) wide",
    "subtheme": "The Clone Wars"
+  },
+  "75373-1": {
+   "type": "SET",
+   "name": "Ambush on Mandalore Battle Pack",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 148.0,
+   "dims_cm": [
+    15.7,
+    14.0,
+    4.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 99,
+   "minifigs": [
+    {
+     "no": "sw1344",
+     "name": "Mandalorian Nite Owl",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1345",
+     "name": "Mandalorian Warrior",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1346",
+     "name": "Imperial Commando",
+     "qty": 2,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 4484,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75373-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75373-1.png"
+   ]
+  },
+  "75378-1": {
+   "type": "SET",
+   "name": "BARC Speeder Escape",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 237.1,
+   "dims_cm": [
+    20.5,
+    19.0,
+    4.6
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 222,
+   "minifigs": [
+    {
+     "no": "sw1113",
+     "name": "Din Grogu / The Child / 'Baby Yoda'",
+     "qty": 1,
+     "sets": 12
+    },
+    {
+     "no": "sw1336",
+     "name": "Kelleran Beq",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1337",
+     "name": "Clone Trooper, 501st Legion (Phase 2) - White Arms, Nougat Head, Helmet with Holes",
+     "qty": 2,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 5663,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75378-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75378-1.png"
+   ]
   },
   "75379-1": {
    "bs_id": 48524,
@@ -15119,6 +16167,65 @@
    ],
    "desc_en": "Build Darth Maul’s Sith Infiltrator (75383) and role-play his pursuit of Qui-Gon Jinn from Star Wars: The Phantom Menace with this starship building toy for kids aged 9 and up. A super gift idea for Star Wars™ fans and collectors, this unique set features a detailed LEGO® brick-built toy model of Darth Maul’s personal starship, with lots of playful features to inspire action-packed fantasy adventures. Fold out the wings and retract the landing gear for flight, fire the 2 spring-loaded shooters and press the trigger to drop 3 DRK-1 Probe Droids from the front compartment.\nThere are 4 LEGO minifigures for creative play: Darth Maul, Anakin Skywalker and Qui-Gon Jinn, plus an exclusive LEGO Star Wars 25th anniversary Saw Gerrera minifigure with a display stand. Darth Maul is equipped with a double-bladed lightsaber, and Qui-Gon Jinn has a lightsaber for duels, and the set also includes Darth Maul’s Bloodfin speeder, which fits inside the starship cockpit.\n• LEGO® Star Wars™ brick-built Darth Maul starship toy – Recreate Darth Maul’s Sith Infiltrator and Bloodfin speeder, and play out Star Wars: The Phantom Menace scenes with this building toy for kids\n• Fantasy-adventure building toy with 4 LEGO® minifigures – Darth Maul, Anakin Skywalker and Qui-Gon Jinn, plus an exclusive LEGO Star Wars™ 25th anniversary Saw Gerrera minifigure with a display stand\n• Playful details – Features foldout wings for flight, retractable landing gear, 2 spring-loaded shooters and a trigger-operated hatch to release the 3 DRK-1 Probe Droids from the front compartment\n• Collectible building toy for creative play – Darth Maul can sit on his Bloodfin speeder in the starship’s cockpit, and the set also includes his double-bladed lightsaber and Qui-Gon Jinn’s lightsaber\n• Gift idea for kids aged 9 and up – This LEGO® Star Wars™ starship building toy makes a fun birthday gift for boys, girls and any Star Wars fans or collector\n• A helping hand – Using the LEGO® Builder app, kids can zoom in, rotate sets in 3D and visualize a digital version of this construction model as they build, track their progress and save sets\n• Collectible Star Wars™ building toys for kids and all ages – LEGO® Star Wars sets allow kids and adult fans to relive classic scenes, role-play unique stories or simply display the buildable models\n• Build, play and display – The brick-built Star Wars™ toy starship in this 640-piece LEGO® building set measures over 3 in. (7 cm) high, 11 in. (27 cm)long and 7.5 in. (20 cm) wide",
    "subtheme": "Episode I"
+  },
+  "75387-1": {
+   "type": "SET",
+   "name": "Boarding the Tantive IV",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 719.0,
+   "dims_cm": [
+    35.3,
+    19.3,
+    9.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 493,
+   "minifigs": [
+    {
+     "no": "sw1249",
+     "name": "Darth Vader - Printed Arms, Spongy Cape, White Head with Frown",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "sw1285",
+     "name": "Rebel Fleet Trooper - Male, Vest with Pockets, Black Neck, Reddish Brown Eyebrows",
+     "qty": 2,
+     "sets": 4
+    },
+    {
+     "no": "sw1326",
+     "name": "Imperial Stormtrooper - Female, Dual Molded Helmet with Light Bluish Gray Panels on Back, Shoulder Belts, Medium Brown Head",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sw1327",
+     "name": "Imperial Stormtrooper - Male, Dual Molded Helmet with Light Bluish Gray Panels on Back, Shoulder Belts, Light Nougat Head",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw1328",
+     "name": "Captain Antilles - Dark Tan Shirt, Large Rank Badge",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw1329",
+     "name": "Clone ARC Trooper Fives, 501st Legion (Phase 2)",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 12763,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/75387-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/75387-1.png"
+   ]
   },
   "75389-1": {
    "bs_id": 48876,
@@ -22064,6 +23171,7 @@
   "sw0980": 1,
   "sw0991": 3,
   "sw0992": 1,
+  "sw0994": 2,
   "sw0995": 3,
   "sw0996": 3,
   "sw0997b": 5,
@@ -22117,6 +23225,7 @@
   "sw1132": 1,
   "sw1135": 3,
   "sw1139": 4,
+  "sw1140": 2,
   "sw1148": 2,
   "sw1149": 1,
   "sw1150": 1,
@@ -22139,9 +23248,14 @@
   "sw1196": 2,
   "sw1201": 5,
   "sw1202": 6,
+  "sw1203": 1,
+  "sw1204": 1,
   "sw1205": 1,
   "sw1206": 1,
   "sw1207": 1,
+  "sw1209": 2,
+  "sw1210": 1,
+  "sw1211": 2,
   "sw1212": 1,
   "sw1214": 2,
   "sw1215": 1,
@@ -22153,6 +23267,9 @@
   "sw1234": 1,
   "sw1235": 3,
   "sw1236": 1,
+  "sw1242": 1,
+  "sw1243": 1,
+  "sw1244": 1,
   "sw1245": 1,
   "sw1246": 1,
   "sw1247": 1,
@@ -22161,15 +23278,39 @@
   "sw1250": 1,
   "sw1251": 1,
   "sw1252": 1,
+  "sw1258": 5,
+  "sw1259": 2,
   "sw1260": 3,
+  "sw1261": 1,
+  "sw1262": 1,
+  "sw1263": 3,
+  "sw1267": 1,
   "sw1274": 2,
   "sw1275": 3,
+  "sw1276": 1,
+  "sw1277": 1,
   "sw1278": 3,
+  "sw1279": 1,
+  "sw1280": 1,
+  "sw1281": 1,
+  "sw1282": 1,
+  "sw1283": 1,
+  "sw1284": 1,
   "sw1285": 4,
+  "sw1286": 1,
+  "sw1287": 1,
+  "sw1288": 2,
+  "sw1299": 1,
   "sw1300": 3,
+  "sw1301": 1,
+  "sw1302": 1,
+  "sw1303": 1,
+  "sw1304": 1,
   "sw1305": 5,
+  "sw1306": 1,
   "sw1314": 1,
   "sw1315": 2,
+  "sw1316": 1,
   "sw1317": 1,
   "sw1318": 1,
   "sw1319": 2,
@@ -22178,13 +23319,18 @@
   "sw1325": 1,
   "sw1326": 5,
   "sw1327": 2,
+  "sw1328": 1,
   "sw1329": 1,
   "sw1332": 1,
   "sw1333": 2,
   "sw1334a": 1,
   "sw1335": 1,
+  "sw1336": 1,
+  "sw1337": 2,
   "sw1338": 2,
   "sw1344": 2,
+  "sw1345": 1,
+  "sw1346": 2,
   "sw1363": 1,
   "sw1364": 1,
   "sw1365": 1,
@@ -24851,6 +25997,11 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "sw0994": {
+   "eur": 8.13,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw0995": {
    "eur": 4.85,
    "cond": "N",
@@ -25116,6 +26267,11 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "sw1140": {
+   "eur": 3.99,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw1148": {
    "eur": 12.33,
    "cond": "N",
@@ -25151,6 +26307,66 @@
    "cond": "N",
    "at": "2026-11-01"
   },
+  "sw1159": {
+   "eur": 12.19,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1160": {
+   "eur": 38.63,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1161": {
+   "eur": 4.79,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1175": {
+   "eur": 30.44,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1176": {
+   "eur": 6.83,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1177": {
+   "eur": 9.07,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1178": {
+   "eur": 3.55,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1179": {
+   "eur": 3.75,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1180": {
+   "eur": 4.25,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1181": {
+   "eur": 3.82,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1182": {
+   "eur": 4.16,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1191": {
+   "eur": 6.17,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw1196": {
    "eur": 12.97,
    "cond": "N",
@@ -25165,6 +26381,16 @@
    "eur": 4.02,
    "cond": "N",
    "at": "2026-11-01"
+  },
+  "sw1203": {
+   "eur": 8.36,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1204": {
+   "eur": 8.06,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "sw1205": {
    "eur": 6.73,
@@ -25181,10 +26407,45 @@
    "cond": "N",
    "at": "2026-11-01"
   },
+  "sw1209": {
+   "eur": 15.08,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1210": {
+   "eur": 5.7,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1211": {
+   "eur": 3.89,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1212": {
+   "eur": 5.13,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1214": {
+   "eur": 4.48,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1215": {
+   "eur": 8.11,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw1216": {
    "eur": 5.77,
    "cond": "N",
    "at": "2026-11-01"
+  },
+  "sw1219": {
+   "eur": 21.59,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "sw1220": {
    "eur": 4.87,
@@ -25215,6 +26476,21 @@
    "eur": 10.14,
    "cond": "N",
    "at": "2026-11-01"
+  },
+  "sw1242": {
+   "eur": 33.25,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1243": {
+   "eur": 25.95,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1244": {
+   "eur": 31.55,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "sw1245": {
    "eur": 4.34,
@@ -25256,30 +26532,155 @@
    "cond": "N",
    "at": "2026-11-01"
   },
+  "sw1258": {
+   "eur": 4.34,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1259": {
+   "eur": 3.83,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw1260": {
    "eur": 4.82,
    "cond": "N",
    "at": "2026-11-01"
+  },
+  "sw1261": {
+   "eur": 8.56,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1262": {
+   "eur": 11.24,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1263": {
+   "eur": 7.58,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1267": {
+   "eur": 17.57,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1274": {
+   "eur": 6.15,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "sw1275": {
    "eur": 4.44,
    "cond": "N",
    "at": "2026-11-01"
   },
+  "sw1276": {
+   "eur": 3.17,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1277": {
+   "eur": 3.21,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1278": {
+   "eur": 2.63,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1279": {
+   "eur": 10.41,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1280": {
+   "eur": 8.48,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1281": {
+   "eur": 10.51,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1282": {
+   "eur": 10.23,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1283": {
+   "eur": 12.37,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1284": {
+   "eur": 9.73,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw1285": {
    "eur": 2.61,
    "cond": "N",
    "at": "2026-11-01"
+  },
+  "sw1286": {
+   "eur": 6.49,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1287": {
+   "eur": 18.9,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1288": {
+   "eur": 5.18,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1299": {
+   "eur": 6.26,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "sw1300": {
    "eur": 4.5,
    "cond": "N",
    "at": "2026-11-02"
   },
+  "sw1301": {
+   "eur": 14.42,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1302": {
+   "eur": 5.53,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1303": {
+   "eur": 11.02,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1304": {
+   "eur": 31.16,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw1305": {
    "eur": 4.05,
    "cond": "N",
    "at": "2026-11-01"
+  },
+  "sw1306": {
+   "eur": 17.49,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "sw1314": {
    "eur": 1.73,
@@ -25290,6 +26691,11 @@
    "eur": 6.51,
    "cond": "N",
    "at": "2026-11-01"
+  },
+  "sw1316": {
+   "eur": 43.33,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "sw1317": {
    "eur": 5.47,
@@ -25331,6 +26737,16 @@
    "cond": "N",
    "at": "2026-11-01"
   },
+  "sw1328": {
+   "eur": 2.35,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1329": {
+   "eur": 12.09,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw1332": {
    "eur": 3.15,
    "cond": "N",
@@ -25351,6 +26767,16 @@
    "cond": "N",
    "at": "2026-11-01"
   },
+  "sw1336": {
+   "eur": 5.18,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1337": {
+   "eur": 3.82,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "sw1338": {
    "eur": 3.34,
    "cond": "N",
@@ -25360,6 +26786,16 @@
    "eur": 2.93,
    "cond": "N",
    "at": "2026-11-01"
+  },
+  "sw1345": {
+   "eur": 2.97,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "sw1346": {
+   "eur": 3.17,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "sw1363": {
    "eur": 31.55,
