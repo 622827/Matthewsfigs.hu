@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-03T22:39:53+00:00",
+ "updated": "2026-11-03T23:37:51+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -20280,7 +20280,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7957-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7957-1.png"
-   ]
+   ],
+   "desc_en": "Use the Force to fight off the stealthy Sith Nightspeeder™!\nSith Assassin Asajj Ventress and Savage Opress are speeding toward Anakin Skywalker on the stealthy Sith Nightspeeder with flick-missiles. Detach their twin pods and close in on the young Jedi warrior! Will Anakin Skywalker be able to fend them off? You decide!\n• Includes 3 minifigures: Anakin Skywalker, Asajj Ventress and Savage Opress\n• Features 4 lightsabers and weapon!\n• Flick-fire the missile!\n• Detach the twin pods from the Sith Nightspeeder for a multi-directional attack!\n• Measures over 6” (15cm) wide, 5” (12cm) long and 2” (5cm) tall\n• Pods measure over 4” (10cm) long",
+   "subtheme": "The Clone Wars"
   },
   "7958-3": {
    "type": "SET",
@@ -20308,7 +20310,9 @@
    "figs_value_huf": 2901,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/7958-3.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": ""
   },
   "7958-7": {
    "type": "SET",
@@ -20336,7 +20340,9 @@
    "figs_value_huf": 1773,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/7958-7.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": ""
   },
   "7959-1": {
    "type": "SET",
@@ -20377,7 +20383,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7959-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7959-1.png"
-   ]
+   ],
+   "desc_en": "Take on the Geonosian Starfighter™ in a Clone Wars battle!\nOn the desolate surface of Geonosis, Clone Commander Cody and Jedi Master Ki-Adi-Mundi prepare the Clone Army for another assault on the Separatist droid factory. Suddenly, they spot a Geonosian Starfighter speeding towards them. Can they defend themselves against the Geonosian pilot, armed with a powerful turret-mounted cannon and proton torpedo launcher? You decide!\n• Includes 3 minifigures: Ki-Adi-Mundi, Clone Commander Cody and Geonosian pilot\n• Features opening cockpit, rotating laser cannon and proton torpedo launcher\n• Lower the hidden compartment and fire the proton torpedo!\n• Measures over 10” (25cm) long and 3” (7cm) tall",
+   "subtheme": "The Clone Wars"
   },
   "7961-1": {
    "type": "SET",
@@ -20449,7 +20457,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7961-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7961-1.png"
-   ]
+   ],
+   "desc_en": "Track down Queen Amidala™ in the Darth Maul’s Sith Infiltrator™!\nDarth Maul is flying across Tatooine in his stealthy Sith Infiltrator, straight towards Captain Panaka and Jedi Master Qui-Gon Jinn! Don’t let him defeat Queen Amidala’s protectors! Defend the Queen at all costs! When the Sith Infiltrator makes a landing, open the hatches, fold the wings, deploy the landing gear and prepare for battle! Will Captain Panaka’s blaster and Jedi Master Qui-Gon Jinn’s lightsaber be enough to fend off Darth Maul on his detachable Sith speeder? You decide!\n• Includes 4 minifigures: Darth Maul™, Padmé Amidala™, Captain Panaka™, and Qui-Gon Jinn™` with assorted weapons\n• Features detailed interior, folding wings, flick missile, landing gear and detachable Sith speeder!\n• Flick-fire the missile!\n• Fold the wings, deploy the landing gear and lift the hatch to reveal the Sith Infiltrator’s detailed interior!\n• Measures over 15” (38cm) long and 9” (22cm) wide",
+   "subtheme": "Episode I"
   },
   "7965-1": {
    "type": "SET",
@@ -20637,7 +20647,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7965-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7965-1.png"
-   ]
+   ],
+   "desc_en": "Escape from the grip of the Death Star in the iconic Millennium Falcon™!\nWill you rewrite history and help Ben Kenobi defeat the dark side? Prepare for an epic battle of intergalactic proportions! Straight from the Death Star escape scene of Star Wars: Episode IV A New Hope, the all-new LEGO® Star Wars™ Millennium Falcon features stunning details including hull plates that open to reveal a detailed interior, twin flick missiles, rotating quad laser cannons and a detachable cockpit cover. Includes Han Solo, Luke Skywalker, Chewbacca, Ben Kenobi, Princess Leia Organa and Darth Vader with assorted weapons.\n• Includes 6 minifigures: Han Solo, Luke Skywalker, Chewbacca, Ben Kenobi, Princess Leia Organa and Darth Vader with assorted weapons\n• Features opening hull, detailed interior, twin flick missiles, rotating laser cannons, detachable cockpit cover, chairs, cup, control panels and game board\n• Flick-fire the twin missiles!\n• Rotate the laser cannons!\n• Measures over 15” (38cm) wide and 4” (10cm) tall",
+   "subtheme": "Episode IV"
   },
   "7979-5": {
    "type": "SET",
@@ -20664,7 +20676,9 @@
    "figs_value_huf": 1832,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/7979-5.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": ""
   },
   "7979-7": {
    "type": "SET",
@@ -20691,7 +20705,9 @@
    "figs_value_huf": 2143,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/7979-7.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": ""
   },
   "8009-1": {
    "type": "SET",
@@ -20753,7 +20769,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8009-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8009-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Technic"
   },
   "8015-1": {
    "type": "SET",
@@ -20788,7 +20806,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8015-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8015-1.png"
-   ]
+   ],
+   "desc_en": "Programmed for stealth and destruction, Assassin Droids are used by gangsters, smugglers and crooks on every planet from Coruscant to Tatooine. Build up your own army of these silent, skilled and sneaky droids and send them out with their flick-missile-firing speeder on secret missions all across the galaxy! Includes 3 Assassin Droid and 2 Elite Assassin Droid minifigures and 2 flick fire missiles! Build your army and add #8014 Clone Walker Battle Pack for even more fun! Measures 8\" (20cm) long",
+   "subtheme": "The Clone Wars"
   },
   "8017-1": {
    "type": "SET",
