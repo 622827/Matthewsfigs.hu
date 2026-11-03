@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-03T02:48:21+00:00",
+ "updated": "2026-11-03T03:50:52+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -6855,7 +6855,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7094-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7094-1.png"
-   ]
+   ],
+   "desc_en": "From this mighty Castle, the good King rules over all he surveys. Help him defend his kingdom against the evil skeleton warriors and their powerful flying dragon! Raise the drawbridge, launch the catapults to fire boulders at attackers, and knock over the bridge to send skeletons to their doom! Includes treasure chest, dungeon, dragon, 4 knights, 4 skeletons, king and more! Protect the treasure chest of jewels! King has gold-colored crown and sword! Castle measures 12\" (31cm) tall and 15\" (38cm) wide! Lower the bridge and gate to keep the skeletons out! Lock the skeletons in the castle prison! Evil dragon is 13\" (33cm) long and has a 13\" (33cm) wingspan!",
+   "subtheme": "Fantasy Era"
   },
   "7126-1": {
    "type": "SET",
@@ -6890,7 +6892,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7126-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7126-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Episode I"
   },
   "7131-1": {
    "type": "SET",
@@ -6948,7 +6952,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7131-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7131-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Episode I"
   },
   "7133-1": {
    "type": "SET",
@@ -6989,7 +6995,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7133-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7133-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Episode II"
   },
   "7141-1": {
    "type": "SET",
@@ -7047,7 +7055,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7141-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7141-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Episode I"
   },
   "7143-1": {
    "type": "SET",
@@ -7093,7 +7103,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7143-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7143-1.png"
-   ]
+   ],
+   "desc_en": "Obi-Wan Kenobi™ is ready to pursue Jango Fett™ in his sleek Jedi Starfighter! It's fast enough to navigate through even the most dangerous asteroid field. Includes Obi-Wan and R4-P17™.\nAges 8-12.  138 pieces.",
+   "subtheme": "Episode II"
   },
   "7155-1": {
    "type": "SET",
@@ -7122,7 +7134,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7155-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7155-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Episode I"
   },
   "7171-1": {
    "type": "SET",
@@ -7222,7 +7236,9 @@
     "https://img.bricklink.com/ItemImage/ON/0/7171-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7171-1.png"
    ],
-   "figs_value_huf": 48531
+   "figs_value_huf": 48531,
+   "desc_en": "",
+   "subtheme": "Episode I"
   },
   "7184-1": {
    "type": "SET",
@@ -7268,7 +7284,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7184-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7184-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Episode I"
   },
   "7258-1": {
    "type": "SET",
@@ -7309,7 +7327,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/7258-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/7258-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Episode III"
   },
   "7260-1": {
    "type": "SET",
@@ -21084,6 +21104,912 @@
     "https://img.bricklink.com/ItemImage/SN/0/8095-1.png"
    ]
   },
+  "8097-1": {
+   "type": "SET",
+   "name": "Slave I",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 1262.0,
+   "dims_cm": [
+    47.5,
+    37.5,
+    7.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 579,
+   "minifigs": [
+    {
+     "no": "sw0278",
+     "name": "Han Solo - White Shirt with Wrinkles on Front, Reddish Brown Legs, Lopsided Grin",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0279",
+     "name": "Boba Fett - Reddish Brown Pauldron, Helmet, Jet Pack",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0280",
+     "name": "Bossk - Sand Green",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "7144-1",
+     "name": "Slave I",
+     "year": 2000,
+     "pieces": 166,
+     "img": "https://cdn.rebrickable.com/media/sets/7144-1.jpg",
+     "figs": 1
+    },
+    {
+     "no": "6209-1",
+     "name": "Slave I",
+     "year": 2006,
+     "pieces": 537,
+     "img": "https://cdn.rebrickable.com/media/sets/6209-1.jpg",
+     "figs": 4
+    },
+    {
+     "no": "8097-1",
+     "name": "Slave I",
+     "year": 2010,
+     "pieces": 563,
+     "img": "https://cdn.rebrickable.com/media/sets/8097-1.jpg",
+     "figs": 3
+    },
+    {
+     "no": "20019-1",
+     "name": "Slave I",
+     "year": 2011,
+     "pieces": 76,
+     "img": "https://cdn.rebrickable.com/media/sets/20019-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "75060-1",
+     "name": "Slave I",
+     "year": 2015,
+     "pieces": 1996,
+     "img": "https://cdn.rebrickable.com/media/sets/75060-1.jpg",
+     "figs": 4
+    },
+    {
+     "no": "911945-1",
+     "name": "Slave I",
+     "year": 2019,
+     "pieces": 31,
+     "img": "https://cdn.rebrickable.com/media/sets/911945-1.jpg",
+     "figs": 0
+    }
+   ],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/8097-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/8097-1.png"
+   ]
+  },
+  "8098-1": {
+   "type": "SET",
+   "name": "Clone Turbo Tank",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 1880.0,
+   "dims_cm": [
+    58.0,
+    38.0,
+    8.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 1160,
+   "minifigs": [
+    {
+     "no": "sw0183",
+     "name": "Anakin Skywalker - Large Eyes, Reddish Brown Arms",
+     "qty": 1,
+     "sets": 9
+    },
+    {
+     "no": "sw0192",
+     "name": "Ahsoka Tano (Padawan) - Tube Top and Belt",
+     "qty": 1,
+     "sets": 6
+    },
+    {
+     "no": "sw0200a",
+     "name": "Clone Trooper (Phase 1) - Black Rangefinder, Large Eyes",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0284",
+     "name": "Aayla Secura - Large Eyes",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0285",
+     "name": "Cad Bane - Blue Head, Dark Bluish Gray Legs",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0286",
+     "name": "Clone Trooper (Phase 1) - Black Visor and Pauldron, Large Eyes",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "20006-1",
+     "name": "Clone Turbo Tank",
+     "year": 2008,
+     "pieces": 64,
+     "img": "https://cdn.rebrickable.com/media/sets/20006-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "8098-1",
+     "name": "Clone Turbo Tank",
+     "year": 2010,
+     "pieces": 1145,
+     "img": "https://cdn.rebrickable.com/media/sets/8098-1.jpg",
+     "figs": 6
+    },
+    {
+     "no": "75028-1",
+     "name": "Clone Turbo Tank",
+     "year": 2014,
+     "pieces": 96,
+     "img": "https://cdn.rebrickable.com/media/sets/75028-1.jpg",
+     "figs": 1
+    },
+    {
+     "no": "75151-1",
+     "name": "Clone Turbo Tank",
+     "year": 2016,
+     "pieces": 903,
+     "img": "https://cdn.rebrickable.com/media/sets/75151-1.jpg",
+     "figs": 6
+    },
+    {
+     "no": "912176-1",
+     "name": "Clone Turbo Tank",
+     "year": 2021,
+     "pieces": 57,
+     "img": "https://cdn.rebrickable.com/media/sets/912176-1.jpg",
+     "figs": 0
+    }
+   ],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/8098-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/8098-1.png"
+   ]
+  },
+  "8128-1": {
+   "type": "SET",
+   "name": "Cad Bane's Speeder",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 621.0,
+   "dims_cm": [
+    47.8,
+    28.1,
+    6.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 306,
+   "minifigs": [
+    {
+     "no": "sw0222",
+     "name": "Assassin Droid - Black (Elite)",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "sw0244",
+     "name": "Senate Commando - Plain Legs, Large Eyes",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0285",
+     "name": "Cad Bane - Blue Head, Dark Bluish Gray Legs",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0287",
+     "name": "Shahan Alama",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0288",
+     "name": "Senate Commando Captain - Plain Legs, Large Eyes",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/8128-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/8128-1.png"
+   ]
+  },
+  "8129-1": {
+   "type": "SET",
+   "name": "AT-AT Walker",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 1430.0,
+   "dims_cm": [
+    58.0,
+    37.7,
+    8.3
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 792,
+   "minifigs": [
+    {
+     "no": "sw0115",
+     "name": "Snowtrooper, Light Bluish Gray Hips, White Hands (Hoth Stormtrooper)",
+     "qty": 2,
+     "sets": 9
+    },
+    {
+     "no": "sw0161a",
+     "name": "C-3PO - Pearl Gold with Pearl Gold Hands",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "sw0262",
+     "name": "AT-AT Driver - Red Imperial Logo, Bluish Grays, Black Head, Stormtrooper Type 2 Helmet",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0289",
+     "name": "General Maximillian Veers - Chest Armor, Light Bluish Gray Helmet",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0290",
+     "name": "Han Solo, Reddish Brown Legs with Holster Pattern, Open Jacket",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0291",
+     "name": "Hoth Rebel Trooper (Black Chin Dimple)",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0295",
+     "name": "Luke Skywalker - Pilot Suit, Detailed Torso and Helmet",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "20018-1",
+     "name": "AT-AT Walker",
+     "year": 2010,
+     "pieces": 83,
+     "img": "https://cdn.rebrickable.com/media/sets/20018-1.jpg",
+     "figs": 0
+    },
+    {
+     "no": "8129-1",
+     "name": "AT-AT Walker",
+     "year": 2010,
+     "pieces": 815,
+     "img": "https://cdn.rebrickable.com/media/sets/8129-1.jpg",
+     "figs": 8
+    }
+   ],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/8129-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/8129-1.png"
+   ]
+  },
+  "852001-1": {
+   "type": "SET",
+   "name": "Chess",
+   "year": 2007,
+   "category": "Castle",
+   "weight_g": 1500.0,
+   "dims_cm": [
+    35.0,
+    31.8,
+    6.3
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 162,
+   "minifigs": [
+    {
+     "no": "cas326",
+     "name": "Fantasy Era - Evil Wizard",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "cas327",
+     "name": "Fantasy Era - Skeleton Warrior 1, Black",
+     "qty": 8,
+     "sets": 7
+    },
+    {
+     "no": "cas332",
+     "name": "Fantasy Era - Crown King with Cape",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "cas333",
+     "name": "Fantasy Era - Crown Princess (Maiden)",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "cas339",
+     "name": "Fantasy Era - Crown Knight Scale Mail with Crown, Helmet with Neck Protector, Vertical Cheek Lines",
+     "qty": 8,
+     "sets": 4
+    },
+    {
+     "no": "cas351",
+     "name": "Fantasy Era - Evil Bishop (Chess Piece)",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "cas352",
+     "name": "Fantasy Era - Crown Bishop (Chess Piece)",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "cas353",
+     "name": "Fantasy Era - Evil Queen (Chess Piece)",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 91000,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/852001-1.png"
+   ]
+  },
+  "852272-1": {
+   "type": "SET",
+   "name": "Battle Pack Skeletons blister pack",
+   "year": 2008,
+   "category": "Castle",
+   "weight_g": 80.0,
+   "dims_cm": [
+    10.0,
+    26.0,
+    3.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 13,
+   "minifigs": [
+    {
+     "no": "cas327",
+     "name": "Fantasy Era - Skeleton Warrior 1, Black",
+     "qty": 1,
+     "sets": 7
+    },
+    {
+     "no": "cas328",
+     "name": "Fantasy Era - Skeleton Warrior 2, White",
+     "qty": 1,
+     "sets": 9
+    },
+    {
+     "no": "cas330",
+     "name": "Fantasy Era - Skeleton Warrior 4, White, Black Breastplate and Helmet, Dark Red Hips and Black Legs",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "cas331",
+     "name": "Fantasy Era - Skeleton Warrior 5, White, Speckled Breastplate and Helmet, Dark Red Hips and Black Legs",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "cas378",
+     "name": "Fantasy Era - Skeleton Warrior 6, White, Black Hood and Cape",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 20617,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/852272-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/852272-1.png"
+   ]
+  },
+  "852293-1": {
+   "type": "SET",
+   "name": "Giant Chess",
+   "year": 2008,
+   "category": "Castle",
+   "weight_g": 8600.0,
+   "dims_cm": [
+    57.0,
+    64.0,
+    20.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 2319,
+   "minifigs": [
+    {
+     "no": "cas326",
+     "name": "Fantasy Era - Evil Wizard",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "cas328",
+     "name": "Fantasy Era - Skeleton Warrior 2, White",
+     "qty": 3,
+     "sets": 9
+    },
+    {
+     "no": "cas330",
+     "name": "Fantasy Era - Skeleton Warrior 4, White, Black Breastplate and Helmet, Dark Red Hips and Black Legs",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "cas331",
+     "name": "Fantasy Era - Skeleton Warrior 5, White, Speckled Breastplate and Helmet, Dark Red Hips and Black Legs",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "cas333",
+     "name": "Fantasy Era - Crown Princess (Maiden)",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "cas350",
+     "name": "Fantasy Era - Crown Knight Plain with Breastplate, Helmet with Visor, Curly Eyebrows and Goatee, Black Hips, Light Bluish Gray Legs",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "cas354",
+     "name": "Fantasy Era - Dwarf, Black Beard, Metallic Silver Helmet with Studded Bands, Dark Blue Arms",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "cas358",
+     "name": "Fantasy Era - Troll, Dark Tan with Copper Armor",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "cas359",
+     "name": "Fantasy Era - Troll Warrior 1",
+     "qty": 2,
+     "sets": 2
+    },
+    {
+     "no": "cas368",
+     "name": "Fantasy Era - Troll Warrior 3",
+     "qty": 1,
+     "sets": 9
+    },
+    {
+     "no": "cas376",
+     "name": "Fantasy Era - Troll, Sand Green with Pearl Dark Gray Armor, 2 White Horns and 3 Pearl Light Gray Horns",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "cas385",
+     "name": "Fantasy Era - Crown Knight Scale Mail with Chest Strap, Helmet with Neck Protector, Dual Sided Head",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas386",
+     "name": "Fantasy Era - Crown Knight Scale Mail with Chest Strap, Helmet with Neck Protector, Vertical Cheek Lines",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas387",
+     "name": "Fantasy Era - Crown Knight Scale Mail with Crown, Breastplate, Helmet with Broad Brim, Smirk and Stubble Beard",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas388",
+     "name": "Fantasy Era - Crown King, No Cape",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas389",
+     "name": "Fantasy Era - Dwarf, Dark Brown Beard, Copper Helmet with Studded Bands, Sand Blue Arms, Smirk",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas390",
+     "name": "Fantasy Era - Dwarf, Dark Orange Beard, Copper Helmet with Studded Bands, Dark Blue Arms",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas391",
+     "name": "Fantasy Era - Dwarf, Black Beard, Copper Helmet with Studded Bands, Dark Red Arms",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas392",
+     "name": "Fantasy Era - Dwarf, Dark Orange Beard, Metallic Silver Helmet with Studded Bands, Dark Blue Arms, Brown Eyebrows, Thin Grin",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas393",
+     "name": "Fantasy Era - Dwarf, Dark Brown Beard, Metallic Silver Helmet with Studded Bands, Sand Blue Arms",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas394",
+     "name": "Fantasy Era - Dwarf, Dark Brown Beard, Metallic Gold Helmet with Wings, Dark Red Arms, Vertical Cheek Lines",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas395",
+     "name": "Fantasy Era - Dwarf, Dark Orange Beard, Metallic Gold Helmet with Wings, Dark Red Arms",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas396",
+     "name": "Fantasy Era - Good Wizard with Cape",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "cas397",
+     "name": "Fantasy Era - Evil Witch",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "cas398",
+     "name": "Fantasy Era - Troll Warrior 6",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas399",
+     "name": "Fantasy Era - Troll Warrior 7",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "cas400",
+     "name": "Fantasy Era - Troll Warrior 8",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "cas401",
+     "name": "Fantasy Era - Troll Warrior 9",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 204302,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/852293-1.png"
+   ]
+  },
+  "8781-1": {
+   "type": "SET",
+   "name": "Castle of Morcia",
+   "year": 2004,
+   "category": "Castle",
+   "weight_g": 2327.0,
+   "dims_cm": [
+    57.5,
+    38.3,
+    11.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 597,
+   "minifigs": [
+    {
+     "no": "cas256",
+     "name": "Knights' Kingdom II - Shadow Knight Vladek",
+     "qty": 1,
+     "sets": 5
+    },
+    {
+     "no": "cas257",
+     "name": "Knights' Kingdom II - Shadow Knight, Le Chevalier Des Ombres",
+     "qty": 1,
+     "sets": 8
+    },
+    {
+     "no": "cas258",
+     "name": "Knights' Kingdom II - King Mathias",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "cas259",
+     "name": "Knights' Kingdom II - Santis",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "cas260",
+     "name": "Knights' Kingdom II - Jayko Plain Torso, Armor",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "cas261",
+     "name": "Knights' Kingdom II - Rascus with Armor, Plain Torso",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "cas262",
+     "name": "Knights' Kingdom II - Danju",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 1,
+     "sets": 47
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 36882,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/8781-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/8781-1.png"
+   ]
+  },
+  "8813-1": {
+   "type": "SET",
+   "name": "Battle at the Pass",
+   "year": 2006,
+   "category": "Castle",
+   "weight_g": 800.0,
+   "dims_cm": [
+    48.0,
+    28.6,
+    5.7
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 330,
+   "minifigs": [
+    {
+     "no": "cas290",
+     "name": "Knights' Kingdom II - Sir Kentis",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "cas298",
+     "name": "Knights' Kingdom II - Dracus",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas310",
+     "name": "Knights' Kingdom II - Rogue Knight 3 (Yellow Legs, Black Breastplate, Black Neck-Protector)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas311",
+     "name": "Knights' Kingdom II - Rogue Knight 4 (Yellow Legs, Black Breastplate, Speckle Cheek Protector Helmet)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas312",
+     "name": "Knights' Kingdom II - Rogue Knight 5 (Black Legs, Speckle Breastplate, Black Neck-Protector)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas313",
+     "name": "Knights' Kingdom II - Rogue Knight 6 (Black Legs, Speckle Breastplate, Speckle Cheek Protector Helmet)",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas314",
+     "name": "Knights' Kingdom II - Hero Knight 1",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas315",
+     "name": "Knights' Kingdom II - Hero Knight 2",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas316",
+     "name": "Knights' Kingdom II - Hero Knight 3",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas317",
+     "name": "Knights' Kingdom II - Hero Knight 4",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 1,
+     "sets": 47
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 33303,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/8813-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/8813-1.png"
+   ]
+  },
+  "8823-1": {
+   "type": "SET",
+   "name": "Mistlands Tower",
+   "year": 2006,
+   "category": "Castle",
+   "weight_g": 1185.0,
+   "dims_cm": [
+    47.7,
+    38.0,
+    6.9
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 404,
+   "minifigs": [
+    {
+     "no": "cas292",
+     "name": "Knights' Kingdom II - The Blacksmith",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas293",
+     "name": "Knights' Kingdom II - Karzon",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "cas294",
+     "name": "Knights' Kingdom II - Sir Adric",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "cas295",
+     "name": "Knights' Kingdom II - King Jayko",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "cas296",
+     "name": "Knights' Kingdom II - Lord Vladek",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 1,
+     "sets": 47
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 32054,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/8823-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/8823-1.png"
+   ]
+  },
+  "8876-1": {
+   "type": "SET",
+   "name": "Scorpion Prison Cave",
+   "year": 2005,
+   "category": "Castle",
+   "weight_g": 931.0,
+   "dims_cm": [
+    38.0,
+    38.0,
+    7.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 255,
+   "minifigs": [
+    {
+     "no": "cas257",
+     "name": "Knights' Kingdom II - Shadow Knight, Le Chevalier Des Ombres",
+     "qty": 1,
+     "sets": 8
+    },
+    {
+     "no": "cas268",
+     "name": "Knights' Kingdom II - Jayko Plain Torso, Gold Pattern Armor, Dark Blue Hips",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "cas269",
+     "name": "Knights' Kingdom II - Danju with Gold Pattern Armor, Dark Bluish Gray Hips and Helmet",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "cas270",
+     "name": "Knights' Kingdom II - Shadow Knight Vladek, Dark Red Armor",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 1,
+     "sets": 47
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 24654,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/8876-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/8876-1.png"
+   ]
+  },
   "911613-1": {
    "type": "SET",
    "name": "TIE Bomber - Mini foil pack",
@@ -21212,6 +22138,39 @@
    "desc_en": "",
    "subtheme": "Magazine Gift"
   },
+  "912057-1": {
+   "type": "SET",
+   "name": "R2-D2 + MSE-6 foil pack",
+   "year": 2020,
+   "category": "Star Wars",
+   "weight_g": 8.5,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": null,
+   "minifigs": [
+    {
+     "no": "sw0156a",
+     "name": "Mouse Droid (MSE-6-series Repair Droid) - Black / Light Bluish Gray",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0527a",
+     "name": "Astromech Droid, R2-D2 - Flat Silver Head, Lavender Dots and Small Receptor",
+     "qty": 1,
+     "sets": 17
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/912057-1.png"
+   ]
+  },
   "912058-1": {
    "type": "SET",
    "name": "Darth Maul's Sith Infiltrator - Mini foil pack",
@@ -21288,6 +22247,35 @@
    "versions": [],
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/912171-1.png"
+   ]
+  },
+  "912281-1": {
+   "type": "SET",
+   "name": "Clone Trooper foil pack",
+   "year": 2022,
+   "category": "Star Wars",
+   "weight_g": 7.2,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 1,
+   "minifigs": [
+    {
+     "no": "sw1094",
+     "name": "Clone Trooper, 501st Legion (Phase 2) - White Arms, Nougat Head",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1670,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/912281-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/912281-1.png"
    ]
   },
   "912284-1": {
@@ -21388,6 +22376,34 @@
    "desc_en": "",
    "subtheme": "Magazine Gift"
   },
+  "912303-1": {
+   "type": "SET",
+   "name": "212th Clone Trooper paper bag",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 8.0,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 1,
+   "minifigs": [
+    {
+     "no": "sw1235",
+     "name": "Clone Trooper, 212th Attack Battalion (Phase 2) - White Arms, Dirt Stains, Nougat Head, Helmet with Holes",
+     "qty": 1,
+     "sets": 3
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2370,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912303-1.png"
+   ]
+  },
   "912308-1": {
    "bs_id": 47240,
    "photos": [
@@ -21417,6 +22433,35 @@
    ],
    "desc_en": "",
    "subtheme": "Magazine Gift"
+  },
+  "912309-1": {
+   "type": "SET",
+   "name": "Stormtrooper paper bag",
+   "year": 2023,
+   "category": "Star Wars",
+   "weight_g": 8.5,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 1,
+   "minifigs": [
+    {
+     "no": "sw1275",
+     "name": "Imperial Stormtrooper - Female, Dual Molded Helmet with Light Bluish Gray Panels on Back, Shoulder Belts, Nougat Head",
+     "qty": 1,
+     "sets": 3
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1627,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/912309-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/912309-1.png"
+   ]
   },
   "912310-1": {
    "bs_id": 48338,
@@ -21519,6 +22564,62 @@
    ],
    "desc_en": "",
    "subtheme": "Magazine Gift"
+  },
+  "912404-1": {
+   "type": "SET",
+   "name": "Chewbacca paper bag",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 9.4,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 5,
+   "minifigs": [
+    {
+     "no": "sw0532",
+     "name": "Chewbacca - Dark Brown, Medium Nougat Fur",
+     "qty": 1,
+     "sets": 20
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1421,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912404-1.png"
+   ]
+  },
+  "912407-1": {
+   "type": "SET",
+   "name": "501st Specialist paper bag",
+   "year": 2024,
+   "category": "Star Wars",
+   "weight_g": 7.9,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 2,
+   "minifigs": [
+    {
+     "no": "sw1248",
+     "name": "Clone Trooper Specialist, 501st Legion (Phase 2) - Blue Arms, Macrobinoculars, Nougat Head, Helmet with Holes",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1040,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912407-1.png"
+   ]
   },
   "912409-1": {
    "bs_id": 50373,
@@ -21661,6 +22762,314 @@
    "versions": [],
    "desc_en": "",
    "subtheme": "Magazine Gift"
+  },
+  "912509-1": {
+   "type": "SET",
+   "name": "Darth Maul metal box",
+   "year": 2025,
+   "category": "Star Wars",
+   "weight_g": 60.0,
+   "dims_cm": [
+    9.0,
+    12.5,
+    2.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 3,
+   "minifigs": [
+    {
+     "no": "sw1333",
+     "name": "Darth Maul - Horns, Printed Legs, Closed Mouth",
+     "qty": 1,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 2070,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912509-1.png"
+   ]
+  },
+  "912511-1": {
+   "type": "SET",
+   "name": "Clone Shock Trooper paper bag",
+   "year": 2025,
+   "category": "Star Wars",
+   "weight_g": 9.0,
+   "dims_cm": [
+    12.0,
+    15.0,
+    1.5
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 2,
+   "minifigs": [
+    {
+     "no": "sw1305",
+     "name": "Clone Shock Trooper, Coruscant Guard (Phase 2) - Nougat Head",
+     "qty": 1,
+     "sets": 5
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 1484,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/SN/0/912511-1.png"
+   ]
+  },
+  "9332-1": {
+   "type": "SET",
+   "name": "BuildToExpress Supplemental Kit",
+   "year": 2009,
+   "category": "Educational & Dacta",
+   "weight_g": 264.6,
+   "dims_cm": null,
+   "fetched": "2026-11-03",
+   "pieces": 230,
+   "minifigs": [
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 5,
+     "sets": 47
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 9488,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/9332-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/9332-1.png"
+   ]
+  },
+  "9376-1": {
+   "type": "SET",
+   "name": "Castle Set",
+   "year": 1997,
+   "category": "Educational & Dacta",
+   "weight_g": 1674.0,
+   "dims_cm": [
+    40.0,
+    30.0,
+    14.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 272,
+   "minifigs": [
+    {
+     "no": "cas022a",
+     "name": "Fright Knights - Bat Lord",
+     "qty": 2,
+     "sets": 5
+    },
+    {
+     "no": "cas023",
+     "name": "Fright Knights - Knight 1, Black Dragon Helmet, no Plume",
+     "qty": 2,
+     "sets": 3
+    },
+    {
+     "no": "cas060a",
+     "name": "Royal Knights - King, with Blue Legs without Cape and Plume",
+     "qty": 2,
+     "sets": 2
+    },
+    {
+     "no": "cas215",
+     "name": "Fright Knights - Witch",
+     "qty": 2,
+     "sets": 3
+    },
+    {
+     "no": "cas384",
+     "name": "Royal Knights - Knight 2 without Plume",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 2,
+     "sets": 47
+    },
+    {
+     "no": "gen012",
+     "name": "Ghost with White Legs",
+     "qty": 2,
+     "sets": 3
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "figs_value_huf": 47703,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/9376-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/9376-1.png"
+   ]
+  },
+  "9468-1": {
+   "type": "SET",
+   "name": "Vampyre Castle",
+   "year": 2012,
+   "category": "Monster Fighters",
+   "weight_g": 1860.0,
+   "dims_cm": [
+    58.0,
+    37.0,
+    9.0
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 944,
+   "minifigs": [
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 1,
+     "sets": 47
+    },
+    {
+     "no": "mof005",
+     "name": "Doctor Rodney Rathbone",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "mof006",
+     "name": "Jack McHammer",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "mof007",
+     "name": "Lord Vampyre with Cape",
+     "qty": 1,
+     "sets": 3
+    },
+    {
+     "no": "mof008",
+     "name": "Lord Vampyre's Bride",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "mof009",
+     "name": "Bat Monster",
+     "qty": 2,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/9468-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/9468-1.png"
+   ]
+  },
+  "9473-1": {
+   "type": "SET",
+   "name": "The Mines of Moria",
+   "year": 2012,
+   "category": "The Hobbit & The Lord of the Rings",
+   "weight_g": 1425.0,
+   "dims_cm": [
+    48.0,
+    37.8,
+    7.05
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 752,
+   "minifigs": [
+    {
+     "no": "gen001",
+     "name": "Skeleton - Standard Skull, Floppy Arms",
+     "qty": 2,
+     "sets": 47
+    },
+    {
+     "no": "lor011",
+     "name": "Moria Orc - Olive Green",
+     "qty": 2,
+     "sets": 1
+    },
+    {
+     "no": "lor012",
+     "name": "Peregrin Took (Pippin) - Dark Blue Jacket, Olive Green Cape",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "lor013",
+     "name": "Gimli - Eyelids",
+     "qty": 1,
+     "sets": 4
+    },
+    {
+     "no": "lor014",
+     "name": "Boromir - Dark Bluish Gray Legs",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "lor015",
+     "name": "Legolas - Olive Green Robe, Long Cheek Lines",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "lor027",
+     "name": "Cave Troll",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/9473-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/9473-1.png"
+   ]
+  },
+  "9488-1": {
+   "type": "SET",
+   "name": "Elite Clone Trooper & Commando Droid Battle Pack",
+   "year": 2012,
+   "category": "Star Wars",
+   "weight_g": 112.0,
+   "dims_cm": [
+    19.1,
+    14.1,
+    4.6
+   ],
+   "fetched": "2026-11-03",
+   "pieces": 86,
+   "minifigs": [
+    {
+     "no": "sw0359",
+     "name": "Commando Droid - Dark Brown",
+     "qty": 2,
+     "sets": 3
+    },
+    {
+     "no": "sw0377",
+     "name": "Clone ARC Trooper Hammer, Rancor Battalion (Phase 2) - Dark Red Cloth Pauldron, Black Cloth Kama, Large Eyes",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0378",
+     "name": "Clone ARF Trooper, Rancor Battalion (Phase 1) - Large Eyes",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/9488-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/9488-1.png"
+   ]
   },
   "L0002235-1": {
    "bs_id": 52745,
@@ -26620,6 +28029,8 @@
   "cas016": 1,
   "cas017a": 2,
   "cas022": 4,
+  "cas022a": 5,
+  "cas023": 3,
   "cas027": 2,
   "cas029": 3,
   "cas030": 1,
@@ -26631,6 +28042,7 @@
   "cas041": 2,
   "cas046": 4,
   "cas060": 1,
+  "cas060a": 2,
   "cas061": 1,
   "cas063": 1,
   "cas064": 1,
@@ -26640,18 +28052,45 @@
   "cas153": 1,
   "cas158": 1,
   "cas160": 1,
+  "cas215": 3,
   "cas239": 2,
   "cas243": 2,
   "cas244": 3,
   "cas245": 2,
   "cas247": 2,
   "cas250": 2,
+  "cas256": 5,
+  "cas257": 8,
+  "cas258": 3,
+  "cas259": 4,
+  "cas260": 4,
+  "cas261": 2,
+  "cas262": 2,
+  "cas268": 3,
+  "cas269": 2,
+  "cas270": 3,
   "cas285": 1,
   "cas286": 1,
+  "cas290": 2,
+  "cas292": 1,
+  "cas293": 2,
+  "cas294": 2,
+  "cas295": 1,
+  "cas296": 1,
+  "cas298": 1,
+  "cas310": 1,
+  "cas311": 1,
+  "cas312": 1,
+  "cas313": 1,
+  "cas314": 1,
+  "cas315": 1,
+  "cas316": 1,
+  "cas317": 1,
   "cas326": 3,
   "cas327": 7,
   "cas328": 9,
   "cas329": 2,
+  "cas330": 4,
   "cas331": 3,
   "cas332": 2,
   "cas333": 3,
@@ -26669,9 +28108,35 @@
   "cas348": 1,
   "cas349": 1,
   "cas350": 4,
+  "cas351": 1,
+  "cas352": 1,
+  "cas353": 1,
+  "cas354": 2,
+  "cas358": 2,
+  "cas359": 2,
   "cas360": 1,
   "cas361": 1,
+  "cas368": 9,
+  "cas376": 2,
   "cas378": 2,
+  "cas384": 1,
+  "cas385": 1,
+  "cas386": 1,
+  "cas387": 1,
+  "cas388": 1,
+  "cas389": 1,
+  "cas390": 1,
+  "cas391": 1,
+  "cas392": 1,
+  "cas393": 1,
+  "cas394": 1,
+  "cas395": 1,
+  "cas396": 1,
+  "cas397": 2,
+  "cas398": 1,
+  "cas399": 1,
+  "cas400": 2,
+  "cas401": 1,
   "cas403a": 1,
   "cas415": 1,
   "cas416": 1,
@@ -26687,6 +28152,7 @@
   "div020": 1,
   "gen001": 47,
   "gen002": 9,
+  "gen012": 3,
   "gen019": 3,
   "hp087": 3,
   "hp091": 2,
@@ -26703,6 +28169,12 @@
   "hrf003": 1,
   "hrf004": 1,
   "hrf007": 1,
+  "lor011": 1,
+  "lor012": 1,
+  "lor013": 4,
+  "lor014": 1,
+  "lor015": 2,
+  "lor027": 1,
   "lor073": 2,
   "lor081": 1,
   "lor082": 1,
@@ -26798,6 +28270,11 @@
   "min258": 1,
   "min260": 1,
   "min261": 1,
+  "mof005": 3,
+  "mof006": 2,
+  "mof007": 3,
+  "mof008": 2,
+  "mof009": 1,
   "njo0025": 1,
   "pi002": 1,
   "pi005": 6,
@@ -26898,6 +28375,7 @@
   "sw0133": 1,
   "sw0148": 1,
   "sw0156": 5,
+  "sw0156a": 2,
   "sw0157": 2,
   "sw0161a": 5,
   "sw0164": 1,
@@ -26923,6 +28401,7 @@
   "sw0197": 5,
   "sw0198": 2,
   "sw0200": 1,
+  "sw0200a": 1,
   "sw0201": 11,
   "sw0202a": 1,
   "sw0203": 1,
@@ -26956,6 +28435,7 @@
   "sw0240": 1,
   "sw0241": 1,
   "sw0242": 2,
+  "sw0244": 2,
   "sw0247": 3,
   "sw0252": 1,
   "sw0253": 2,
@@ -26975,13 +28455,21 @@
   "sw0273": 1,
   "sw0274": 1,
   "sw0277": 3,
+  "sw0278": 1,
   "sw0279": 1,
+  "sw0280": 2,
   "sw0284": 1,
   "sw0285": 2,
+  "sw0286": 1,
+  "sw0287": 1,
+  "sw0288": 1,
+  "sw0289": 1,
+  "sw0290": 1,
   "sw0291": 2,
   "sw0292": 1,
   "sw0293": 1,
   "sw0294": 1,
+  "sw0295": 2,
   "sw0296": 2,
   "sw0297": 1,
   "sw0298": 1,
@@ -27024,6 +28512,7 @@
   "sw0347": 1,
   "sw0348": 1,
   "sw0349": 1,
+  "sw0359": 3,
   "sw0360": 6,
   "sw0364": 1,
   "sw0365": 3,
@@ -27668,6 +29157,16 @@
    "cond": "U",
    "at": "2026-11-02"
   },
+  "cas022a": {
+   "eur": 7.94,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas023": {
+   "eur": 9.25,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "cas027": {
    "eur": 8.25,
    "cond": "N",
@@ -27723,6 +29222,11 @@
    "cond": "U",
    "at": "2026-11-02"
   },
+  "cas060a": {
+   "eur": 9.04,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "cas061": {
    "eur": 5.83,
    "cond": "U",
@@ -27768,6 +29272,11 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "cas215": {
+   "eur": 8.86,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "cas239": {
    "eur": 13.4,
    "cond": "N",
@@ -27798,6 +29307,56 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "cas256": {
+   "eur": 9.01,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas257": {
+   "eur": 8.21,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas258": {
+   "eur": 12.25,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas259": {
+   "eur": 9.23,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas260": {
+   "eur": 12.06,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas261": {
+   "eur": 22.1,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas262": {
+   "eur": 22.64,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas268": {
+   "eur": 20.98,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas269": {
+   "eur": 20.67,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas270": {
+   "eur": 12.26,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "cas285": {
    "eur": 54.06,
    "cond": "U",
@@ -27807,6 +29366,81 @@
    "eur": 106.55,
    "cond": "N",
    "at": "2026-11-02"
+  },
+  "cas290": {
+   "eur": 17.63,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas292": {
+   "eur": 5.34,
+   "cond": "U",
+   "at": "2026-11-03"
+  },
+  "cas293": {
+   "eur": 13.29,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas294": {
+   "eur": 13.96,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas295": {
+   "eur": 24.23,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas296": {
+   "eur": 25.5,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas298": {
+   "eur": 5.7,
+   "cond": "U",
+   "at": "2026-11-03"
+  },
+  "cas310": {
+   "eur": 6.31,
+   "cond": "U",
+   "at": "2026-11-03"
+  },
+  "cas311": {
+   "eur": 5.0,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas312": {
+   "eur": 5.83,
+   "cond": "U",
+   "at": "2026-11-03"
+  },
+  "cas313": {
+   "eur": 6.55,
+   "cond": "U",
+   "at": "2026-11-03"
+  },
+  "cas314": {
+   "eur": 9.16,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas315": {
+   "eur": 9.7,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas316": {
+   "eur": 9.82,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas317": {
+   "eur": 10.03,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "cas326": {
    "eur": 37.85,
@@ -27827,6 +29461,11 @@
    "eur": 4.69,
    "cond": "N",
    "at": "2026-11-02"
+  },
+  "cas330": {
+   "eur": 15.51,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "cas331": {
    "eur": 16.13,
@@ -27913,6 +29552,36 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "cas351": {
+   "eur": 11.37,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas352": {
+   "eur": 12.06,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas353": {
+   "eur": 15.14,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas354": {
+   "eur": 17.86,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas358": {
+   "eur": 35.26,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas359": {
+   "eur": 13.47,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "cas360": {
    "eur": 6.93,
    "cond": "N",
@@ -27923,10 +29592,110 @@
    "cond": "N",
    "at": "2026-11-02"
   },
+  "cas368": {
+   "eur": 11.35,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas376": {
+   "eur": 47.84,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
   "cas378": {
    "eur": 13.79,
    "cond": "N",
    "at": "2026-11-02"
+  },
+  "cas384": {
+   "eur": 10.31,
+   "cond": "U",
+   "at": "2026-11-03"
+  },
+  "cas385": {
+   "eur": 6.98,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas386": {
+   "eur": 10.37,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas387": {
+   "eur": 6.8,
+   "cond": "U",
+   "at": "2026-11-03"
+  },
+  "cas388": {
+   "eur": 29.22,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas389": {
+   "eur": 18.48,
+   "cond": "U",
+   "at": "2026-11-03"
+  },
+  "cas390": {
+   "eur": 13.93,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas391": {
+   "eur": 14.87,
+   "cond": "U",
+   "at": "2026-11-03"
+  },
+  "cas392": {
+   "eur": 13.45,
+   "cond": "U",
+   "at": "2026-11-03"
+  },
+  "cas393": {
+   "eur": 16.62,
+   "cond": "U",
+   "at": "2026-11-03"
+  },
+  "cas394": {
+   "eur": 15.59,
+   "cond": "U",
+   "at": "2026-11-03"
+  },
+  "cas395": {
+   "eur": 21.42,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas396": {
+   "eur": 23.3,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas397": {
+   "eur": 20.76,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas398": {
+   "eur": 11.95,
+   "cond": "U",
+   "at": "2026-11-03"
+  },
+  "cas399": {
+   "eur": 12.84,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas400": {
+   "eur": 14.17,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "cas401": {
+   "eur": 14.07,
+   "cond": "U",
+   "at": "2026-11-03"
   },
   "cas403a": {
    "eur": 12.58,
@@ -27997,6 +29766,11 @@
    "eur": 15.4,
    "cond": "N",
    "at": "2026-11-02"
+  },
+  "gen012": {
+   "eur": 14.53,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "gen019": {
    "eur": 2.4,
@@ -28077,6 +29851,21 @@
    "eur": 12.63,
    "cond": "N",
    "at": "2026-11-02"
+  },
+  "lor011": {
+   "eur": 27.11,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "lor012": {
+   "eur": 24.49,
+   "cond": "N",
+   "at": "2026-11-03"
+  },
+  "lor013": {
+   "eur": 16.46,
+   "cond": "N",
+   "at": "2026-11-03"
   },
   "lor073": {
    "eur": 13.26,
