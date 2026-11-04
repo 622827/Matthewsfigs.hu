@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-04T01:55:47+00:00",
+ "updated": "2026-11-04T02:46:29+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -22325,7 +22325,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8813-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8813-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Knights' Kingdom II"
   },
   "8823-1": {
    "type": "SET",
@@ -22384,7 +22386,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8823-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8823-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Knights' Kingdom II"
   },
   "8876-1": {
    "type": "SET",
@@ -22437,7 +22441,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8876-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8876-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Knights' Kingdom II"
   },
   "911613-1": {
    "type": "SET",
@@ -22458,7 +22464,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/911613-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/911613-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "911832-1": {
    "bs_id": 27899,
@@ -22599,7 +22607,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/912057-1.png"
    ],
-   "figs_value_huf": 1535
+   "figs_value_huf": 1535,
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "912058-1": {
    "type": "SET",
@@ -22619,7 +22629,9 @@
    "versions": [],
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/912058-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "912169-1": {
    "bs_id": 31498,
@@ -22677,7 +22689,9 @@
    "versions": [],
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/912171-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "912281-1": {
    "type": "SET",
@@ -22706,7 +22720,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/912281-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/912281-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "912284-1": {
    "bs_id": 33782,
@@ -22832,7 +22848,9 @@
    "figs_value_huf": 2370,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/912303-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "912308-1": {
    "bs_id": 47240,
@@ -22891,7 +22909,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/912309-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/912309-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "912310-1": {
    "bs_id": 48338,
