@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-04T00:56:19+00:00",
+ "updated": "2026-11-04T01:55:47+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -21449,7 +21449,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8093-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8093-1.png"
-   ]
+   ],
+   "desc_en": "Lead the search for General Grievous\" with Jedi Master Plo Koon\"!",
+   "subtheme": "The Clone Wars"
   },
   "8095-1": {
    "type": "SET",
@@ -21507,7 +21509,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8095-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8095-1.png"
-   ]
+   ],
+   "desc_en": "Lead the next attack against the Republic with General Grievous™!\nReturning to his secret lair to recover and plot his next attack on the Republic, General Grievous™ is attacked by a new Jedi Knight, Nahdar Vebb™. Assisted by his trusted droid assistant, A4-D™, and with his speedy starfighter nearby to escape, General Grievous will be difficult to stop!\n• Includes 3 minifigures: General Grievous, A4-D droid, and Nahdar Vebb\n• General Grievous’ Starfighter features hidden flick firing missiles and opening cockpit\n• Rotate back fin down to create landing gear!\n• General Grievous’ lair features swivelling command chair and lightsaber rack\n• Starfighter measures 11\" (29cm) long",
+   "subtheme": "The Clone Wars"
   },
   "8097-1": {
    "type": "SET",
@@ -21597,7 +21601,9 @@
     "https://img.bricklink.com/ItemImage/ON/0/8097-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8097-1.png"
    ],
-   "figs_value_huf": 17936
+   "figs_value_huf": 17936,
+   "desc_en": "Transport the carbonite-frozen Han Solo\" with Boba Fett\" and Bossk\" in Slave I\"!",
+   "subtheme": "Episode V"
   },
   "8098-1": {
    "type": "SET",
@@ -21697,7 +21703,9 @@
     "https://img.bricklink.com/ItemImage/ON/0/8098-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8098-1.png"
    ],
-   "figs_value_huf": 40714
+   "figs_value_huf": 40714,
+   "desc_en": "Stop Cad Bane™ with the Jedi Knights and the turbo tank!\nLoaded with lasers, cannons and missiles, the Clone Turbo Tank rolls through Separatist opposition, as seen in Star Wars™: The Clone Wars.Stop the ruthless bounty hunter Cad Bane™ from sabotaging it with the forces of Anakin Skywalker™, Ahosoka™ and Jedi Knight Aayla™.\n• Includes 6 minifigures: Anakin Skywalker, Ahosoka and Jedi Knight Aayla, Cad Bane and 2 Clone Troopers\n• Features realistic details such as moveable guns, foldable scout walker, dual cockpits and panels that open to reveal a loaded interior\n• Carry the Clone Turbo Tank with sturdy, pop-up handle!\n• Tank goes anywhere with flexible suspension and wheels that turn with model\n• Clone Turbo Tank measures more than 17” (45cm) long and stands more than 8” (20cm)",
+   "subtheme": "The Clone Wars"
   },
   "8128-1": {
    "type": "SET",
@@ -21750,7 +21758,9 @@
     "https://img.bricklink.com/ItemImage/ON/0/8128-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8128-1.png"
    ],
-   "figs_value_huf": 23379
+   "figs_value_huf": 23379,
+   "desc_en": "Take on dangerous bounty hunting missions with Cad Bane™!\nAttack the Senate building with notorious bounty hunter Cad Bane™, mercenary Shahan Alama™ and an elite Assassin Droid™! Will the Senate guards see Cad Bane’s Speeder™ and stop this crew from take over? Only you can decide who triumphs!\n• Includes 5 minifigures: Cad Bane, Shahan Alama™, Elite Assassin Droid™, Senate Commando™, and Senate Commando Officer™\n• Pull trigger to fire headlight missiles!\n• Open rear hatch of Cad Bane’s Speeder to seat up to 6 minifigures!\n• Cad Bane’s Speeder measures more than 10” (25.4cm) long",
+   "subtheme": "The Clone Wars"
   },
   "8129-1": {
    "type": "SET",
@@ -21832,7 +21842,9 @@
     "https://img.bricklink.com/ItemImage/ON/0/8129-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8129-1.png"
    ],
-   "figs_value_huf": 17177
+   "figs_value_huf": 17177,
+   "desc_en": "Attack the Hoth Rebel base with the AT-AT Walker!",
+   "subtheme": "Episode V"
   },
   "852001-1": {
    "type": "SET",
@@ -21902,7 +21914,9 @@
    "figs_value_huf": 91000,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/852001-1.png"
-   ]
+   ],
+   "desc_en": "Battle your opponent in this exciting game of skill and strategy! This exclusive LEGO Castle Chess Set includes a total of 32 chess pieces, featuring 24 minifigures. Just choose your side and you're ready to play! One-piece chess board measures 10\" x 10\" (25 cm x 25 cm)! Includes 32 chess pieces featuring 24 LEGO minifigures including knights, skeletons, wizard, king and princess! Includes sturdy carrying case with leather handle, snap closures and storage compartments for each piece!",
+   "subtheme": "Board Games"
   },
   "852272-1": {
    "type": "SET",
@@ -21955,7 +21969,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/852272-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/852272-1.png"
-   ]
+   ],
+   "desc_en": "Knights of LEGO Castle beware -- the skeleton warriors have brought reinforcements! Build up your skeleton army with this set of 5 skeleton minifigures. Includes 5 different evil skeletons equipped with plenty of weapons, armor and gear, plus a creepy spider!",
+   "subtheme": "Fantasy Era"
   },
   "852293-1": {
    "type": "SET",
@@ -22145,7 +22161,9 @@
    "figs_value_huf": 204302,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/852293-1.png"
-   ]
+   ],
+   "desc_en": "There's never been a chess set like this one before! Now you can build the biggest and best LEGO chess board of all time, covered in incredible LEGO Castle details and complete with a dungeon, armory, and decorative dragon heads…and that's just the board itself! Pieces include king, queen, good and evil wizards, witch, knights, dwarves, trolls, skeleton warriors and horses, castle turrets, rolling siege towers, and more. It's the ultimate LEGO set for any chess player, collector, or LEGO Castle fan! Includes 31 minifigures, 2 giant trolls, 2 horses, 2 skeleton horses and 2 dragon heads! Minifigures are ready for battle with armor, swords, shields, and other cool accessories! It's a battle of good dwarves and knights vs. evil trolls and skeletons! Build the 4 realms in the corners of the chess board - the skeleton realm, troll realm, dwarf realm and castle realm! Measures 17\" (43cm) squared! Complete with a giant storage case, measuring over 24\" (61cm) high, 20\" (50cm) wide and 7\" (17cm) deep.",
+   "subtheme": "Board Games"
   },
   "8781-1": {
    "type": "SET",
@@ -22216,7 +22234,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8781-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8781-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Knights' Kingdom II"
   },
   "8813-1": {
    "type": "SET",
