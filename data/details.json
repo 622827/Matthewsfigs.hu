@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-04T04:53:57+00:00",
+ "updated": "2026-11-04T05:55:23+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -24248,7 +24248,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/9676-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/9676-1.png"
-   ]
+   ],
+   "desc_en": "Defend the Death Star in the Imperial TIE Interceptor!\nAt 160 km across, the Death Star™ is the size of a moon and capable of destroying entire planets! In Star Wars: Episode VI Return of the Jedi, the Imperial TIE Interceptor battles in vain to keep the Rebel Alliance from destroying the second version of the Empire’s greatest weapon. Set includes an accurate model of the Death Star, a TIE pilot minifigure, a TIE Interceptor mini-model, a weapon, and a display stand with name plaque. Collect the other Series 1 sets: 9674 Naboo Starfighter™ & Naboo™ and 9675 Sebulba’s Podracer™ & Tatooine™!\n• Includes 1 minifigure: TIE pilot\n• Features Death Star, TIE Interceptor mini-model and weapon\n• Vehicle and minifigure display stand with plaque also included\n• Hang your planet from the ceiling!\n• Explore the LEGO® Star Wars™ galaxy while you play!\n• Death Star diameter over 3” (9cm)\n• TIE Interceptor measures over 2” (7cm) long",
+   "subtheme": "Planet Set"
   },
   "9677-1": {
    "type": "SET",
@@ -24277,7 +24279,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/9677-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/9677-1.png"
-   ]
+   ],
+   "desc_en": "Lead the attack on the Death Star with the X-wing!\nJungle planet Yavin 4 is home to the secret base of the Rebel Alliance. In Star Wars: Episode IV A New Hope, X-wing starfighters lead the attack against the Empire's Death Star superweapon, signalling the end of the Empire's evil rule! Set includes an accurate model of Yavin 4, an X-wing pilot minifigure, an X-wing starfighter mini-model, a weapon, and a display stand with name plaque. Collect the other Series 2 sets: 9678 Twin-pod Cloud Car & Bespin and 9679 AT-ST & Endor!\n• Includes 1 minifigure: X-wing pilot\n• Features Yavin 4, X-wing starfighter mini-model and weapon\n• Vehicle and minifigure display stand with plaque also included\n• Hang your planet from the ceiling!\n• Explore the LEGO Star Wars galaxy while you play!\n• Yavin 4 diameter over 3” (9cm)\n• X-wing Starfighter measures over 3” (8cm) long",
+   "subtheme": "Planet Set"
   },
   "970089-1": {
    "type": "SET",
@@ -24301,7 +24305,9 @@
    "figs_value_huf": 1898,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/970089-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": ""
   },
   "970661-1": {
    "type": "SET",
@@ -24325,7 +24331,9 @@
    "figs_value_huf": 18976,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/970661-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": ""
   },
   "970672-1": {
    "type": "SET",
@@ -24349,7 +24357,9 @@
    "figs_value_huf": 1898,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/970672-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": ""
   },
   "9725-1": {
    "type": "SET",
@@ -24402,7 +24412,9 @@
     "https://img.bricklink.com/ItemImage/ON/0/9725-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/9725-1.png"
    ],
-   "figs_value_huf": 5114
+   "figs_value_huf": 5114,
+   "desc_en": "This set includes bricks and building instructions for 4 different models. Each model is controlled via the RCX programmable brick using ROBOLAB software (software and RCX not included). The models are based on real-life applications in an amusement-park setting, including a bumper car, merry-go-round, tour bus and haunted house ride. Ideally, one Amusement Park Set for every 3-4 students.",
+   "subtheme": ""
   },
   "9725-2": {
    "type": "SET",
@@ -24436,7 +24448,9 @@
    "figs_value_huf": 3436,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/9725-2.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": ""
   },
   "9914-1": {
    "type": "SET",
@@ -24460,7 +24474,9 @@
    "figs_value_huf": 1898,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/9914-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": ""
   },
   "L0002231-1": {
    "type": "SET",
@@ -24488,7 +24504,9 @@
    "figs_value_huf": 3161,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/L0002231-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "L0002233-1": {
    "type": "SET",
@@ -24516,7 +24534,9 @@
    "figs_value_huf": 2550,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/L0002233-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "L0002235-1": {
    "bs_id": 52745,
