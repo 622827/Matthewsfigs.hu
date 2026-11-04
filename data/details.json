@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-03T23:37:51+00:00",
+ "updated": "2026-11-04T00:56:19+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -20854,7 +20854,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8017-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8017-1.png"
-   ]
+   ],
+   "desc_en": "Straight from the original Star Wars movie, the TIE Advanced x1 is Darth Vader's personal starfighter! Even faster than a standard TIE fighter, Vader's TIE is customized with bent wings, a deflector shield and a hyperdrive. Celebrate 10 years of LEGO Star Wars with this all-new set, featuring incredible movie-accurate details, flick-firing missiles, and the Dark Lord of the Sith himself, Darth Vader! Lift the nose of the ship to seat Darth Vader at the controls! Includes Darth Vader minifigure! Measures 6\" (15cm) long by 7\" (17cm) wide",
+   "subtheme": "Episode IV"
   },
   "8018-1": {
    "type": "SET",
@@ -20918,7 +20920,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8018-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8018-1.png"
-   ]
+   ],
+   "desc_en": "Leading an army of Separatist Super Battle Droids, the formidable Armored Assault Tank (AAT) glides quickly over the Clone Wars battlefield. With a movable heavy laser cannon, blasters with flick-missile launchers, opening cockpit and turret hatches and a detachable speeder, it seems unstoppable…until Jedi Master Yoda arrives on the scene to turn the tide! Includes Yoda, Clone Trooper, 2 Battle Droids and 3 Super Battle Droids with rocket-launcher arms! Tons of action play! Lift the compartment hatch and play inside, turret moves and a detachable speeder too! Measures 8\" (20cm) wide by 8\" (20cm) long",
+   "subtheme": "The Clone Wars"
   },
   "8036-1": {
    "type": "SET",
@@ -20965,7 +20969,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8036-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8036-1.png"
-   ]
+   ],
+   "desc_en": "The Separatist shuttle transports Nute Gunray to conquer, loot and battle on planets all across the galaxy! With a droid pilot and two battle droid bodyguards to carry out his orders, the Viceroy of the Trade Federation plans to recruit Onaconda Farr to the Separatist side -- whether the Rodian senator likes it or not! Shuttle features movable landing gear, opening cockpit and sliding passenger compartment hatch. Includes Nute Gunray, Battle Droid Pilot, 2 Battle Droids and Onaconda Farr minifigures. Includes 5 minifigures: Viceroy Nute Gunray, Onaconda Farr, Droid Pilot, and 2 Battle Droids! Features opening cockpit and retractable landing gear! Turn the knob to open the back hatch and hide Nute Gunray inside! Shuttle measures 7\" (18cm) long by 3\" wide (8cm) by 7\" (18cm) tall",
+   "subtheme": "The Clone Wars"
   },
   "8038-1": {
    "type": "SET",
@@ -21054,7 +21060,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8038-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8038-1.png"
-   ]
+   ],
+   "desc_en": "Battle on the forest moon of Endor\"!",
+   "subtheme": "Episode VI"
   },
   "8083-1": {
    "type": "SET",
@@ -21112,7 +21120,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8083-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8083-1.png"
-   ]
+   ],
+   "desc_en": "Help the Rebels defend their base on Hoth!",
+   "subtheme": "Episode V"
   },
   "8084-1": {
    "type": "SET",
@@ -21170,7 +21180,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8084-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8084-1.png"
-   ]
+   ],
+   "desc_en": "Defeat the Rebels with Imperial might!",
+   "subtheme": "Episode V"
   },
   "8087-1": {
    "type": "SET",
@@ -21222,7 +21234,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8087-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8087-1.png"
-   ]
+   ],
+   "desc_en": "Built in response to the Rebellion's highly-skilled starfighter forces, the top-secret TIE defender is the ultimate expression of Imperial power and technology! Never before made as a LEGO set, this unique 3-winged TIE fighter blasts into battle with 6 flick-launching missiles and an opening cockpit that rotates when the model turns. Includes TIE defender, stormtrooper and new TIE fighter pilot TIE fighter pilot equipped with new helmet Blast the 6 flick-firing missiles -- 2 on each wing Turn the TIE defender to rotate the opening cockpit Measures over 8\" (20cm) tall; over 9\" (22cm) wide",
+   "subtheme": "Legends"
   },
   "8089-1": {
    "type": "SET",
@@ -21263,7 +21277,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8089-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8089-1.png"
-   ]
+   ],
+   "desc_en": "Escape from the wampa ice creature with Luke Skywalker\"!",
+   "subtheme": "Episode V"
   },
   "8091-1": {
    "type": "SET",
@@ -21310,7 +21326,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8091-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8091-1.png"
-   ]
+   ],
+   "desc_en": "Battle Separatists on any terrain!",
+   "subtheme": "Episode III"
   },
   "8092-1": {
    "type": "SET",
@@ -21394,7 +21412,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/8092-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/8092-1.png"
-   ]
+   ],
+   "desc_en": "Adventure on Tatooine…where it all began!\nWhen he drove the old hermit Ben Kenobi into Mos Eisley spaceport, young farm boy Luke Skywalker™ had no idea that he would end up becoming a Jedi Knight and saving the galaxy. Recreate the moment the adventure began with this special-edition set, featuring an landspeeder vehicle with a secret lightsaber compartment, a cast of droids and heroes, and a sandtrooper guard with a security droid. Are these the droids he’s looking for?\n• Special Edition set every serious collector must have\n• Includes Luke Skywalker, Obi-Wan Kenobi™, R2-D2™, C-3PO™ and sandtrooper\n• New landspeeder vehicle conceals secret lightsaber compartment\n• Sandtrooper guard with security droid\n• Measures over 6\" (15cm) long, over 2\" (5cm) wide and over 2\" (5cm) tall",
+   "subtheme": "Episode IV"
   },
   "8093-1": {
    "type": "SET",
