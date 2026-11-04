@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-04T02:46:29+00:00",
+ "updated": "2026-11-04T03:49:59+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -22975,7 +22975,9 @@
    "versions": [],
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/912313-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "912403-1": {
    "bs_id": 49026,
@@ -23041,7 +23043,9 @@
    "figs_value_huf": 1421,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/912404-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "912407-1": {
    "type": "SET",
@@ -23069,7 +23073,9 @@
    "figs_value_huf": 1040,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/912407-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "912409-1": {
    "bs_id": 50373,
@@ -23239,7 +23245,9 @@
    "figs_value_huf": 2070,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/912509-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "912511-1": {
    "type": "SET",
@@ -23267,7 +23275,9 @@
    "figs_value_huf": 1484,
    "gallery": [
     "https://img.bricklink.com/ItemImage/SN/0/912511-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Magazine Gift"
   },
   "9332-1": {
    "type": "SET",
@@ -23292,7 +23302,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/9332-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/9332-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": ""
   },
   "9376-1": {
    "type": "SET",
@@ -23357,7 +23369,9 @@
    "gallery": [
     "https://img.bricklink.com/ItemImage/ON/0/9376-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/9376-1.png"
-   ]
+   ],
+   "desc_en": "",
+   "subtheme": "Castle"
   },
   "9468-1": {
    "type": "SET",
@@ -23416,7 +23430,9 @@
     "https://img.bricklink.com/ItemImage/ON/0/9468-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/9468-1.png"
    ],
-   "figs_value_huf": 26409
+   "figs_value_huf": 26409,
+   "desc_en": "Enter Vampyre's castle and rescue the world from eternal darkness!\nIt's time for the final showdown with the Vampyre! He has gathered all 6 moonstones at his castle and is about to cloak the world in darkness forever so that his followers can roam free for the rest of eternity! Will our heroes Dr. Rodney Rathbone and Jack McHammer survive the castle's hidden spikes and traps to disable the moonstone device? Or will the Vampyre's bride and the manbats throw them into the castle dungeon? You decide! Includes 6 minifigures: Rodney Rathbone, Jack McHammer, the Vampyre, the Vampyre's bride and 2 manbats.\n• Includes 6 minifigures: Rodney Rathbone, Jack McHammer, the Vampyre, the Vampyre's bride and 2 manbats\n• Features the Vampyre's Castle with the moonstone device, shooting spiders, hidden spikes, trapdoor, stairs, secret entrances, coffin, organ and dungeon\n• Hero car includes a net launcher\n• 4 weapons included\n• Watch out for the spiders!\n• Dodge the hidden traps!\n• Defeat the Vampyre and his nightmarish helpers!\n• Measures over 18” (45cm) high, 11” (28cm) wide and 10” (26cm) deep\n• Hero car measures over 1” (5cm) high, 2” (6cm) wide and 6” (16cm) long",
+   "subtheme": ""
   },
   "9473-1": {
    "type": "SET",
@@ -23481,7 +23497,9 @@
     "https://img.bricklink.com/ItemImage/ON/0/9473-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/9473-1.png"
    ],
-   "figs_value_huf": 91539
+   "figs_value_huf": 91539,
+   "desc_en": "Battle the Cave Troll in The Mines of Moria!\nOn their epic journey across the lands of Middle-earth, the heroic Fellowship of the Ring travels through the abandoned Mines of Moria. Pursued by the evil Moria orcs and a giant Cave Troll, Pippin, Boromir, Gimli and Legolas make a stand in Balin's Tomb. Can the heroes hold back the evil horde and make it out of the mine unhurt? Includes 6 minifigures: Pippin, Boromir, Gimli, Legolas and 2 Moria orcs. Set features giant cave troll and 2 skeletons.\n• Includes 6 minifigures: Pippin, Boromir, Gimli, Legolas and 2 Moria orcs\n• Features giant cave troll and 2 skeletons\n• Weapons include chain, club, bow, double-bladed axe, single-bladed axe, small hobbit sword, shield and Boromir's sword\n• The Mines of Moria features well, wall and gate, and several weapons\n• Wall features hidden room with treasure, opening doors and falling wall elements\n• Topple the walls!\n• Defeat the cave troll!\n• Drop the skeleton into the well!\n• Flick open the tomb!\n• Wall and gate measure11\" (27cm) high and 5\" (12cm) wide\n• Tomb measures 3\" (7cm) long\n• Well measures 3\" (7cm) long\n• Cave troll stands 4\" (9cm) tall",
+   "subtheme": "The Fellowship of the Ring"
   },
   "9488-1": {
    "type": "SET",
@@ -23522,7 +23540,9 @@
     "https://img.bricklink.com/ItemImage/ON/0/9488-1.png",
     "https://img.bricklink.com/ItemImage/SN/0/9488-1.png"
    ],
-   "figs_value_huf": 20936
+   "figs_value_huf": 20936,
+   "desc_en": "Bombard the Separatist forces with the Republic artillery cannon!\nThe Separatists have sent a new droid enemy to attack the forces of the Republic, but the clone army’s elite troopers have a new weapon of their own: the powerful Republic artillery cannon! With elevating turret and flick missile, those clankers will be running for cover! Includes 4 minifigures: ARC trooper, ARF trooper and 2 new enemy Commando Droids.\n• Includes 4 minifigures: ARC Trooper, ARF Trooper and 2 Commando Droids\n• Features Republic artillery cannon and 5 blasters\n• Republic artillery cannon features flick missile\n• Elevate the turret!\n• Fire the flick missile!\n• Republic artillery cannon measures over 5” (13cm) long and 3” (8cm) tall",
+   "subtheme": "The Clone Wars"
   },
   "9490-1": {
    "type": "SET",
