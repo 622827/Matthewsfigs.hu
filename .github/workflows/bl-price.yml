@@ -10,6 +10,9 @@ on:
         description: "Új egységár (EUR)"
         required: true
 
+permissions:
+  contents: write
+
 jobs:
   price:
     runs-on: ubuntu-latest
@@ -27,3 +30,12 @@ jobs:
           BL_TOKEN: ${{ secrets.BL_TOKEN }}
           BL_TOKEN_SECRET: ${{ secrets.BL_TOKEN_SECRET }}
         run: python scripts/bl_price.py "$LOT" "$EUR"
+      - name: Eredmény mentése
+        if: always()
+        run: |
+          git config user.name "inventory-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/bl_price_last.json 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -q -m "BrickLink-ár módosítás eredménye"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done

@@ -4,7 +4,7 @@
 Used by the "BrickLink-ár" workflow. Only the lot id and the new price are involved,
 so nothing personal reaches the public Actions log.
 """
-import base64, hashlib, hmac, json, os, secrets, sys, time, urllib.request
+import base64, hashlib, hmac, json, os, secrets, sys, time, urllib.error, urllib.request
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -33,9 +33,23 @@ def main():
     lot, price = sys.argv[1], f"{float(sys.argv[2]):.4f}"
     if not lot.isdigit():
         sys.exit("Hibás tételazonosító.")
-    before = oauth_get(f"{API}/inventories/{lot}")
-    after = oauth_put(f"{API}/inventories/{lot}", {"unit_price": price})
-    print(f'{before["item"]["no"]}: {before["unit_price"]} -> {after["unit_price"]} EUR')
+    out = Path(__file__).resolve().parent.parent / "data" / "bl_price_last.json"
+    res = {"lot": lot, "eur": price, "at": time.strftime("%Y-%m-%d %H:%M:%S")}
+    try:
+        before = oauth_get(f"{API}/inventories/{lot}")
+        res["before"] = before.get("unit_price")
+        after = oauth_put(f"{API}/inventories/{lot}", {"unit_price": price})
+        res.update(ok=True, after=after.get("unit_price"), no=after.get("item", {}).get("no"))
+    except SystemExit as e:
+        res.update(ok=False, error=str(e))
+    except urllib.error.HTTPError as e:
+        res.update(ok=False, error=f"HTTP {e.code}: {e.read()[:300].decode('utf-8', 'replace')}")
+    except Exception as e:
+        res.update(ok=False, error=repr(e)[:300])
+    out.write_text(json.dumps(res, ensure_ascii=False) + "\n")
+    print(res)
+    if not res["ok"]:
+        sys.exit(1)
 
 
 if __name__ == "__main__":
