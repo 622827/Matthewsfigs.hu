@@ -23,7 +23,11 @@ def oauth_put(url, payload):
     req = urllib.request.Request(url, data=json.dumps(payload).encode(), method="PUT",
                                  headers={"Authorization": header, "Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=60) as r:
-        body = json.load(r)
+        raw = r.read()
+    try:
+        body = json.loads(raw)
+    except ValueError:
+        sys.exit(f"Nem JSON válasz ({len(raw)} bájt): {raw[:200]!r}")
     if body.get("meta", {}).get("code") != 200:
         sys.exit(f"BrickLink API error: {body.get('meta')}")
     return body["data"]
@@ -36,8 +40,10 @@ def main():
     out = Path(__file__).resolve().parent.parent / "data" / "bl_price_last.json"
     res = {"lot": lot, "eur": price, "at": time.strftime("%Y-%m-%d %H:%M:%S")}
     try:
-        before = oauth_get(f"{API}/inventories/{lot}")
-        res["before"] = before.get("unit_price")
+        try:
+            res["before"] = oauth_get(f"{API}/inventories/{lot}").get("unit_price")
+        except Exception as e:
+            res["get_error"] = repr(e)[:200]
         after = oauth_put(f"{API}/inventories/{lot}", {"unit_price": price})
         res.update(ok=True, after=after.get("unit_price"), no=after.get("item", {}).get("no"))
     except SystemExit as e:
