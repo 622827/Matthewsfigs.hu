@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+"""Change the price of one BrickLink store lot: python scripts/bl_price.py <lot id> <EUR price>.
+
+Used by the "BrickLink-ár" workflow. Only the lot id and the new price are involved,
+so nothing personal reaches the public Actions log.
+"""
+import base64, hashlib, hmac, json, os, secrets, sys, time, urllib.request
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from sync_bricklink import API, q, oauth_get   # noqa: E402
+
+
+def oauth_put(url, payload):
+    ck, cs = os.environ["BL_CONSUMER_KEY"], os.environ["BL_CONSUMER_SECRET"]
+    tk, ts = os.environ["BL_TOKEN"], os.environ["BL_TOKEN_SECRET"]
+    oauth = {"oauth_consumer_key": ck, "oauth_token": tk, "oauth_signature_method": "HMAC-SHA1",
+             "oauth_timestamp": str(int(time.time())), "oauth_nonce": secrets.token_hex(16), "oauth_version": "1.0"}
+    base_params = "&".join(f"{q(k)}={q(v)}" for k, v in sorted(oauth.items()))
+    base = "&".join(["PUT", q(url), q(base_params)])
+    oauth["oauth_signature"] = base64.b64encode(hmac.new(f"{q(cs)}&{q(ts)}".encode(), base.encode(), hashlib.sha1).digest()).decode()
+    header = "OAuth " + ", ".join(f'{k}="{q(v)}"' for k, v in oauth.items())
+    req = urllib.request.Request(url, data=json.dumps(payload).encode(), method="PUT",
+                                 headers={"Authorization": header, "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=60) as r:
+        body = json.load(r)
+    if body.get("meta", {}).get("code") != 200:
+        sys.exit(f"BrickLink API error: {body.get('meta')}")
+    return body["data"]
+
+
+def main():
+    lot, price = sys.argv[1], f"{float(sys.argv[2]):.4f}"
+    if not lot.isdigit():
+        sys.exit("Hibás tételazonosító.")
+    before = oauth_get(f"{API}/inventories/{lot}")
+    after = oauth_put(f"{API}/inventories/{lot}", {"unit_price": price})
+    print(f'{before["item"]["no"]}: {before["unit_price"]} -> {after["unit_price"]} EUR')
+
+
+if __name__ == "__main__":
+    main()
