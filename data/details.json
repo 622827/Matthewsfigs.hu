@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-04T07:06:15+00:00",
+ "updated": "2026-11-05T09:32:53+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -26564,6 +26564,25 @@
     }
    ]
   },
+  "sw0219": {
+   "type": "MINIFIG",
+   "name": "Yoda - Clone Wars, Light Bluish Gray Hair",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 3.0,
+   "dims_cm": null,
+   "fetched": "2026-11-05",
+   "sets": [
+    {
+     "no": "7964-1",
+     "name": "Republic Frigate"
+    },
+    {
+     "no": "8018-1",
+     "name": "Armored Assault Tank (AAT)"
+    }
+   ]
+  },
   "sw0222": {
    "type": "MINIFIG",
    "name": "Assassin Droid - Black (Elite)",
@@ -26599,6 +26618,25 @@
     {
      "no": "8095-1",
      "name": "General Grievous' Starfighter"
+    }
+   ]
+  },
+  "sw0228": {
+   "type": "MINIFIG",
+   "name": "Rocket Battle Droid",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 2.4,
+   "dims_cm": null,
+   "fetched": "2026-11-05",
+   "sets": [
+    {
+     "no": "8016-1",
+     "name": "Hyena Droid Bomber"
+    },
+    {
+     "no": "8086-1",
+     "name": "Droid Tri-Fighter"
     }
    ]
   },
@@ -30183,6 +30221,7 @@
   "sw0222": 3,
   "sw0224": 3,
   "sw0226": 1,
+  "sw0228": 2,
   "sw0229": 1,
   "sw0230": 2,
   "sw0233": 1,

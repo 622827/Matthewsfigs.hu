@@ -1,9 +1,9 @@
 {
- "updated": "2026-11-03T17:47:33+00:00",
+ "updated": "2026-11-05T09:32:52+00:00",
  "store": "MatthewHorseman",
  "currency": "HUF",
  "bl_currency": "EUR",
- "total_lots": 740,
+ "total_lots": 744,
  "parts_lots": 537,
  "parts_qty": 4111,
  "items": [
@@ -849,6 +849,20 @@
    "eur": 24.99
   },
   {
+   "id": 569652205,
+   "type": "MINIFIG",
+   "no": "sw1233",
+   "name": "Clone Trooper Commander Cody, 212th Attack Battalion (Phase 2) - Orange Visor, Nougat Head, Helmet with Holes, Printed Legs",
+   "color": null,
+   "cond": "U",
+   "qty": 1,
+   "price": 8980,
+   "note": "Mint condition.",
+   "img": "https://img.bricklink.com/ItemImage/MN/0/sw1233.png",
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=569652205",
+   "eur": 24.99
+  },
+  {
    "id": 541925527,
    "type": "MINIFIG",
    "no": "sw1372",
@@ -1275,7 +1289,7 @@
    "name": "Clone Trooper Commander, 187th Legion (Phase 2) - Nougat Head",
    "color": null,
    "cond": "N",
-   "qty": 1,
+   "qty": 2,
    "price": 3980,
    "note": "Excellent condition.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1206.png",
@@ -1294,6 +1308,20 @@
    "note": "Comes with lightsaber.",
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0055.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547949335",
+   "eur": 9.99
+  },
+  {
+   "id": 569652611,
+   "type": "MINIFIG",
+   "no": "sw0219",
+   "name": "Yoda - Clone Wars, Light Bluish Gray Hair",
+   "color": null,
+   "cond": "U",
+   "qty": 1,
+   "price": 3480,
+   "note": "",
+   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0219.png",
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=569652611",
    "eur": 9.99
   },
   {
@@ -1575,6 +1603,20 @@
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw1235.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564169039",
    "eur": 7.99
+  },
+  {
+   "id": 569652155,
+   "type": "MINIFIG",
+   "no": "sw1315",
+   "name": "Clone Trooper Captain Rex, 501st Legion (Phase 2) - Blue Cloth Pauldron, Rangefinder, Printed White Arms",
+   "color": null,
+   "cond": "U",
+   "qty": 2,
+   "price": 2980,
+   "note": "Mint condition.",
+   "img": "https://img.bricklink.com/ItemImage/MN/0/sw1315.png",
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=569652155",
+   "eur": 7.9
   },
   {
    "id": 547704452,
@@ -2233,6 +2275,20 @@
    "img": "https://img.bricklink.com/ItemImage/MN/0/cas328.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543467754",
    "eur": 4.29
+  },
+  {
+   "id": 569652597,
+   "type": "MINIFIG",
+   "no": "sw0228",
+   "name": "Rocket Battle Droid",
+   "color": null,
+   "cond": "U",
+   "qty": 1,
+   "price": 1480,
+   "note": "",
+   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0228.png",
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=569652597",
+   "eur": 3.99
   },
   {
    "id": 564317254,
