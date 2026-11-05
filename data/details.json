@@ -1,6 +1,6 @@
 {
  "_info": "BrickLink katalógusadatok (scripts/catalog_details.py). Tényadatok, a termékoldal adattáblázatához.",
- "updated": "2026-11-05T09:32:53+00:00",
+ "updated": "2026-11-05T10:32:19+00:00",
  "items": {
   "10066-1": {
    "type": "SET",
@@ -20461,6 +20461,78 @@
    "desc_en": "Track down Queen Amidala™ in the Darth Maul’s Sith Infiltrator™!\nDarth Maul is flying across Tatooine in his stealthy Sith Infiltrator, straight towards Captain Panaka and Jedi Master Qui-Gon Jinn! Don’t let him defeat Queen Amidala’s protectors! Defend the Queen at all costs! When the Sith Infiltrator makes a landing, open the hatches, fold the wings, deploy the landing gear and prepare for battle! Will Captain Panaka’s blaster and Jedi Master Qui-Gon Jinn’s lightsaber be enough to fend off Darth Maul on his detachable Sith speeder? You decide!\n• Includes 4 minifigures: Darth Maul™, Padmé Amidala™, Captain Panaka™, and Qui-Gon Jinn™` with assorted weapons\n• Features detailed interior, folding wings, flick missile, landing gear and detachable Sith speeder!\n• Flick-fire the missile!\n• Fold the wings, deploy the landing gear and lift the hatch to reveal the Sith Infiltrator’s detailed interior!\n• Measures over 15” (38cm) long and 9” (22cm) wide",
    "subtheme": "Episode I"
   },
+  "7964-1": {
+   "type": "SET",
+   "name": "Republic Frigate",
+   "year": 2011,
+   "category": "Star Wars",
+   "weight_g": 1820.0,
+   "dims_cm": [
+    58.2,
+    37.8,
+    8.7
+   ],
+   "fetched": "2026-11-05",
+   "pieces": 1037,
+   "minifigs": [
+    {
+     "no": "sw0219",
+     "name": "Yoda - Clone Wars, Light Bluish Gray Hair",
+     "qty": 1,
+     "sets": 2
+    },
+    {
+     "no": "sw0330",
+     "name": "Clone Trooper Commander Wolffe, 104th Battalion 'Wolfpack' (Phase 1) - Black Rangefinder and Kama, Sand Blue Markings, Large Eyes",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0331",
+     "name": "Clone Trooper, 104th Battalion 'Wolfpack' (Phase 1) - Sand Blue Markings, White Jet Pack, Large Eyes",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0332",
+     "name": "Eeth Koth",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0333",
+     "name": "Quinlan Vos",
+     "qty": 1,
+     "sets": 1
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "7964-1",
+     "name": "Republic Frigate",
+     "year": 2011,
+     "pieces": 1030,
+     "img": "https://cdn.rebrickable.com/media/sets/7964-1.jpg",
+     "figs": 5
+    },
+    {
+     "no": "30242-1",
+     "name": "Republic Frigate",
+     "year": 2013,
+     "pieces": 45,
+     "img": "https://cdn.rebrickable.com/media/sets/30242-1.jpg",
+     "figs": 0
+    }
+   ],
+   "desc_en": "Take the Jedi Knights and clone heroes into battle with the Republic Frigate™!\nStraight from Star Wars: The Clone Wars, the iconic Republic Frigate features a detachable escape pod, opening cockpit, rotating turbo-laser cannons, proton torpedo launcher, retractable undercarriage, opening hatches and detailed interior. Includes Yoda, Eeth Koth, Quinlan Vos, Clone Commander Wolffe and Wolfpack clone trooper minifigures.\n• Includes 5 minifigures: Yoda™, Eeth Koth™, Quinlan Vos™, Clone Commander Wolffe™ and Wolfpack Clone Trooper™\n• Features detachable escape pod, opening cockpit, rotating turbo-laser cannons, proton torpedo launcher, retractable undercarriage, opening hatches and detailed interior\n• Open the hatches to play in the detailed interior with windows, storage compartment, seating and dashboard!\n• Communicate with Chancellor Palpatine through the holographic transmitter!\n• Unfold the 4 legs to make a smooth landing or to display!\n• Rotate the turbo-laser cannons to fire in any direction!\n• Measures over 19” (48cm) long, 11” (27cm) wide and 5” (12cm) tall",
+   "subtheme": "The Clone Wars",
+   "figs_value_huf": 117229,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/7964-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/7964-1.png"
+   ]
+  },
   "7965-1": {
    "type": "SET",
    "name": "Millennium Falcon",
@@ -20809,6 +20881,37 @@
    ],
    "desc_en": "Programmed for stealth and destruction, Assassin Droids are used by gangsters, smugglers and crooks on every planet from Coruscant to Tatooine. Build up your own army of these silent, skilled and sneaky droids and send them out with their flick-missile-firing speeder on secret missions all across the galaxy! Includes 3 Assassin Droid and 2 Elite Assassin Droid minifigures and 2 flick fire missiles! Build your army and add #8014 Clone Walker Battle Pack for even more fun! Measures 8\" (20cm) long",
    "subtheme": "The Clone Wars"
+  },
+  "8016-1": {
+   "type": "SET",
+   "name": "Hyena Droid Bomber",
+   "year": 2009,
+   "category": "Star Wars",
+   "weight_g": 397.0,
+   "dims_cm": [
+    28.0,
+    25.9,
+    6.1
+   ],
+   "fetched": "2026-11-05",
+   "pieces": 217,
+   "minifigs": [
+    {
+     "no": "sw0228",
+     "name": "Rocket Battle Droid",
+     "qty": 3,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [],
+   "desc_en": "Switching between walker, bomber and attack modes, the Hyena Droid is a powerful multi-purpose weapon for the Separatists as seen in Star Wars: The Clone Wars . Features four dropping bombs and three all-new rocket battle droid minifigures. Pivot the wings for flying and walking positions! Includes 3 new droid minifigures with special jet packs! Measures 10\" (25cm) wide by 8\" (20cm) long!",
+   "subtheme": "The Clone Wars",
+   "figs_value_huf": 4407,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/8016-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/8016-1.png"
+   ]
   },
   "8017-1": {
    "type": "SET",
@@ -21183,6 +21286,68 @@
    ],
    "desc_en": "Defeat the Rebels with Imperial might!",
    "subtheme": "Episode V"
+  },
+  "8086-1": {
+   "type": "SET",
+   "name": "Droid Tri-Fighter",
+   "year": 2010,
+   "category": "Star Wars",
+   "weight_g": 371.0,
+   "dims_cm": [
+    28.0,
+    26.0,
+    6.5
+   ],
+   "fetched": "2026-11-05",
+   "pieces": 252,
+   "minifigs": [
+    {
+     "no": "sw0227",
+     "name": "Rocket Battle Droid Commander",
+     "qty": 1,
+     "sets": 1
+    },
+    {
+     "no": "sw0228",
+     "name": "Rocket Battle Droid",
+     "qty": 2,
+     "sets": 2
+    }
+   ],
+   "ucs": false,
+   "versions": [
+    {
+     "no": "7252-1",
+     "name": "Droid Tri-Fighter",
+     "year": 2005,
+     "pieces": 148,
+     "img": "https://cdn.rebrickable.com/media/sets/7252-1.jpg",
+     "figs": 1
+    },
+    {
+     "no": "8086-1",
+     "name": "Droid Tri-Fighter",
+     "year": 2010,
+     "pieces": 268,
+     "img": "https://cdn.rebrickable.com/media/sets/8086-1.jpg",
+     "figs": 3
+    },
+    {
+     "no": "75044-1",
+     "name": "Droid Tri-Fighter",
+     "year": 2014,
+     "pieces": 262,
+     "img": "https://cdn.rebrickable.com/media/sets/75044-1.jpg",
+     "figs": 4
+    }
+   ],
+   "desc_en": "Beware this devastating droid starfighter!",
+   "subtheme": "The Clone Wars",
+   "figs_value_huf": 5546,
+   "gallery": [
+    "https://img.bricklink.com/ItemImage/ON/0/8086-1.png",
+    "https://img.bricklink.com/ItemImage/SN/0/8086-1.png"
+   ]
   },
   "8087-1": {
    "type": "SET",
@@ -30221,6 +30386,7 @@
   "sw0222": 3,
   "sw0224": 3,
   "sw0226": 1,
+  "sw0227": 1,
   "sw0228": 2,
   "sw0229": 1,
   "sw0230": 2,
@@ -30294,6 +30460,10 @@
   "sw0322": 1,
   "sw0323": 1,
   "sw0324": 1,
+  "sw0330": 1,
+  "sw0331": 1,
+  "sw0332": 1,
+  "sw0333": 1,
   "sw0334": 1,
   "sw0335": 1,
   "sw0336": 2,
@@ -32983,6 +33153,16 @@
    "cond": "N",
    "at": "2026-11-03"
   },
+  "sw0227": {
+   "eur": 7.12,
+   "cond": "N",
+   "at": "2026-11-05"
+  },
+  "sw0228": {
+   "eur": 4.01,
+   "cond": "N",
+   "at": "2026-11-05"
+  },
   "sw0229": {
    "eur": 2.68,
    "cond": "N",
@@ -33342,6 +33522,26 @@
    "eur": 13.53,
    "cond": "N",
    "at": "2026-11-02"
+  },
+  "sw0330": {
+   "eur": 161.91,
+   "cond": "N",
+   "at": "2026-11-05"
+  },
+  "sw0331": {
+   "eur": 87.16,
+   "cond": "N",
+   "at": "2026-11-05"
+  },
+  "sw0332": {
+   "eur": 46.93,
+   "cond": "N",
+   "at": "2026-11-05"
+  },
+  "sw0333": {
+   "eur": 13.29,
+   "cond": "N",
+   "at": "2026-11-05"
   },
   "sw0334": {
    "eur": 9.71,
