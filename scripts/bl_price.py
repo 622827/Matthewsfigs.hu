@@ -41,7 +41,14 @@ def main():
     res = {"lot": lot, "eur": price, "at": time.strftime("%Y-%m-%d %H:%M:%S")}
     try:
         try:
-            res["before"] = oauth_get(f"{API}/inventories/{lot}").get("unit_price")
+            rows = oauth_get(f"{API}/inventories")
+            hit = [r for r in rows if str(r.get("inventory_id")) == lot]
+            res["list_ok"] = len(rows); res["found"] = bool(hit)
+            if hit: res["before"] = hit[0].get("unit_price")
+        except Exception as e:
+            res["list_error"] = repr(e)[:200]
+        try:
+            res["before1"] = oauth_get(f"{API}/inventories/{lot}").get("unit_price")
         except Exception as e:
             res["get_error"] = repr(e)[:200]
         after = oauth_put(f"{API}/inventories/{lot}", {"unit_price": price})
