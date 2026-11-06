@@ -715,12 +715,24 @@
       ${D.sets.length > 3 ? `<button type="button" class="btn btn--line pd-mosaic__more" id="pdInsetsMore">${hu ? `Mind a ${D.sets.length} szett mutatása` : `Show all ${D.sets.length} sets`}</button>` : ""}</section>` : "";
     // static product photos (no spinning model here): box + built set for sets, catalogue photo for minifigures
     const IMG = "https://img.bricklink.com/ItemImage/", enc = encodeURIComponent(i.no);
-    const photos = set
+    const photos0 = set
       ? (D.gallery && D.gallery.length   // de-duplicated by scripts/photo_dedup.py (the same picture often comes from BrickLink and Brickset)
         ? D.gallery.map((src, k) => ({ src, alt: k === 0 ? (hu ? "doboz" : "box") : k === 1 ? (hu ? "a megépített szett" : "built set") : (hu ? "fotó " : "photo ") + (k + 1) }))
         : [{ src: `${IMG}ON/0/${enc}.png`, alt: hu ? "doboz" : "box" }, { src: `${IMG}SN/0/${enc}.png`, alt: hu ? "a megépített szett" : "built set" },
            ...(D.photos || []).slice(1).map((src, k) => ({ src, alt: (hu ? "fotó " : "photo ") + (k + 3) }))])   // Brickset official images
       : [{ src: i.img || `${IMG}MN/0/${enc}.png`, alt: hu ? "minifigura" : "minifigure" }];
+    // the box FRONT always comes first. LEGO's file names on Brickset tell the kind: *_box1_* (or Box2–4) = front,
+    // *_boxprod_* = front with the model, *_box5_* = back. BrickLink's box photo (ON) is sometimes the back.
+    const photos = (() => {
+      if (!set) return photos0;
+      const all = [...photos0.map(p => p.src), ...(D.photos || [])];
+      const boxN = u => +((u.match(/_box([1-4])_/i) || [])[1] || 9);           // older sets: Box3 = front, Box6 = back
+      const front = all.filter(u => boxN(u) < 9).sort((a, b) => boxN(a) - boxN(b))[0] || all.find(u => /_boxprod_/i.test(u));
+      if (!front) return photos0;
+      const hasBack = all.some(u => /_box[56]_/i.test(u));
+      const rest = photos0.filter(p => p.src !== front && !(hasBack && p.src.includes("/ItemImage/ON/")));
+      return [{ src: front, alt: hu ? "a doboz eleje" : "box front" }, ...rest];
+    })();
     root.innerHTML = `
       <nav class="pd-crumbs"><a href="index.html">${hu ? "Főoldal" : "Home"}</a> › <a href="${back}">${set ? (hu ? "Szettek" : "Sets") : (hu ? "Figurák" : "Minifigures")}</a> › <span>${esc(sn)}</span></nav>
       <div class="pd">
