@@ -721,6 +721,25 @@
         : [{ src: `${IMG}ON/0/${enc}.png`, alt: hu ? "doboz" : "box" }, { src: `${IMG}SN/0/${enc}.png`, alt: hu ? "a megépített szett" : "built set" },
            ...(D.photos || []).slice(1).map((src, k) => ({ src, alt: (hu ? "fotó " : "photo ") + (k + 3) }))])   // Brickset official images
       : [{ src: i.img || `${IMG}MN/0/${enc}.png`, alt: hu ? "minifigura" : "minifigure" }];
+    // price comparison: shown only when we really are the cheapest (BrickLink sellers in Europe + LEGO's own price)
+    const priceCompare = (() => {
+      if (!set || i.preorder || !i.price) return "";
+      const M = D.market || {}, RATE = 366.33, rows = [];
+      if (M.min) rows.push([hu ? "Legolcsóbb európai BrickLink-ajánlat" : "Cheapest BrickLink offer in Europe", M.min]);
+      if (M.avg) rows.push([hu ? "Európai BrickLink-átlagár" : "Average BrickLink price in Europe", M.avg]);
+      if (D.retail_eur) rows.push([hu ? "Eredeti LEGO bolti ár" : "Original LEGO retail price", Math.round(D.retail_eur * RATE)]);
+      if (!rows.length || rows.some(r => r[1] <= i.price)) return "";
+      const ref = M.avg || rows[0][1], save = ref - i.price, pct = Math.round(save / ref * 100);
+      const when = M.at ? new Date(M.at).toLocaleDateString(hu ? "hu-HU" : "en-GB").replace(/\.$/, "") : "";
+      return `<div class="pd-cmp">
+        <p class="pd-cmp__head">${hu ? "Nálunk a legolcsóbb" : "Cheapest here"}</p>
+        <p class="pd-cmp__save">${hu ? `${money(save)}-tal (${pct}%) olcsóbb, mint az európai átlag` : `${money(save)} (${pct}%) below the European average`}</p>
+        <dl class="pd-cmp__dl"><dt>${hu ? "Nálunk" : "Here"}</dt><dd class="is-us">${money(i.price)}</dd>
+          ${rows.map(([l, v]) => `<dt>${l}</dt><dd>${money(v)}</dd>`).join("")}</dl>
+        <p class="pd-cmp__src">${hu ? `Új, bontatlan szett; BrickLink: európai eladók aktuális ajánlatai ÁFA-val, szállítás nélkül${when ? ", " + when : ""}. LEGO-ár: LEGO Németország (Brickset), ${RATE} Ft/€.`
+                                       : `New, sealed set; BrickLink: current offers of European sellers incl. VAT, excl. shipping${when ? ", " + when : ""}. LEGO price: LEGO Germany (Brickset), ${RATE} HUF/€.`}</p>
+      </div>`;
+    })();
     // the box FRONT always comes first. LEGO's file names on Brickset tell the kind: *_box1_* (or Box2–4) = front,
     // *_boxprod_* = front with the model, *_box5_* = back. BrickLink's box photo (ON) is sometimes the back.
     const photos = (() => {
@@ -739,6 +758,7 @@
         <div class="pd-gallery">
           <div class="pd-media"><img id="pdMain" src="${esc(photos[0].src)}" alt="${esc(i.name)} – ${esc(photos[0].alt)}"></div>
           ${photos.length > 1 ? `<div class="pd-thumbs">${photos.map((p, k) => `<button type="button" class="pd-thumb${k ? "" : " is-on"}" data-src="${esc(p.src)}" data-alt="${esc(p.alt)}" aria-label="${esc(p.alt)}"><img src="${esc(p.src)}" alt="" loading="lazy"></button>`).join("")}</div>` : ""}
+          ${priceCompare}
         </div>
         ${figList || verList || simList || setList ? `<div class="pd-figs">${figList}${setList}${simList}${verList}</div>` : ""}
         <div class="pd-info">

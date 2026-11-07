@@ -256,6 +256,42 @@ FIGVAL_DAYS = 30
 PRICES = ROOT / "data" / "prices_huf.json"
 
 
+MARKET_DAYS = 3
+
+
+def eu_market(no):
+    """Current BrickLink offers for a new set from sellers in Europe, HUF incl. VAT: {"min", "avg", "lots"}.
+    None on API error (try again next run); {} when nobody in Europe sells it."""
+    r = get(f"/items/SET/{urllib.parse.quote(no)}/price",
+            {"guide_type": "stock", "new_or_used": "N", "region": "europe", "currency_code": "HUF", "vat": "Y"})
+    if r is None:
+        return None
+    mn, avg = num(r.get("min_price")), num(r.get("qty_avg_price")) or num(r.get("avg_price"))
+    return {"min": round(mn), "avg": round(avg), "lots": r.get("unit_quantity") or 0} if mn and avg else {}
+
+
+def update_market(items, own_sets, today):
+    """Price comparison for the sets we sell (every MARKET_DAYS days)."""
+    changed = False
+    for n in sorted(own_sets):
+        d = items.get(n)
+        if not d:
+            continue
+        m = d.get("market") or {}
+        try:
+            fresh = (today - date.fromisoformat(m.get("at", "2000-01-01"))).days < MARKET_DAYS
+        except ValueError:
+            fresh = False
+        if fresh:
+            continue
+        r = eu_market(n)
+        if r is None:
+            break
+        d["market"] = {**r, "at": today.isoformat()}
+        changed = True
+    return changed
+
+
 def fig_value(no):
     """Average BrickLink sale price of a minifigure in the last 6 months, EUR (new; used as fallback)."""
     for cond in ("N", "U"):
@@ -417,6 +453,7 @@ def main():
 
     figval = out.get("figvalues", {})
     changed = update_fig_values(items, wanted, figval, today) or changed
+    changed = update_market(items, own_sets, today) or changed
     write_autolabels(items, wanted, today)
     if not changed:
         print("Nincs új katalógusadat.")
