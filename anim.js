@@ -73,3 +73,22 @@
   }).observe(document.body, { subtree: true, childList: true, attributes: true, attributeFilter: ["hidden"] });
   window.addEventListener("pageshow", function (e) { if (e.persisted) document.body.classList.remove("mf-leave"); });
 })();
+
+// Picture fallback: when img.bricklink.com is unreachable (e.g. BrickLink is offline), show the same item's
+// picture from Rebrickable instead – sets by number, minifigures via data/imgalt.json (BrickLink no. -> Rebrickable fig id).
+(() => {
+  let alt = null, altP = null;
+  const loadAlt = () => altP || (altP = fetch("data/imgalt.json", { cache: "force-cache" }).then(r => r.ok ? r.json() : {}).catch(() => ({})).then(j => alt = j));
+  document.addEventListener("error", async e => {
+    const img = e.target;
+    if (!(img instanceof HTMLImageElement) || img.dataset.altTried) return;
+    const m = /img\.bricklink\.com\/ItemImage\/(SN|MN|ON)\/\d+\/([^/?#]+)\.(?:png|jpg)/i.exec(img.currentSrc || img.src);
+    if (!m) return;
+    img.dataset.altTried = "1";
+    const no = decodeURIComponent(m[2]);
+    let url = "";
+    if (m[1].toUpperCase() !== "MN") url = `https://cdn.rebrickable.com/media/sets/${encodeURIComponent(/-\d+$/.test(no) ? no : no + "-1")}.jpg`;
+    else { await loadAlt(); if (alt && alt[no]) url = `https://cdn.rebrickable.com/media/sets/${alt[no]}.jpg`; }
+    if (url) { img.removeAttribute("srcset"); img.src = url; }
+  }, true);
+})();

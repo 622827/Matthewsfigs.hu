@@ -186,6 +186,12 @@ def main():
                               ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
     MAP.write_text(json.dumps({"built": date.today().isoformat(), "todo": max(0, len(todo) - done), "bl": dict(sorted(bl.items()))},
                               ensure_ascii=False, separators=(",", ":")) + "\n", encoding="utf-8")
+    # picture fallback for the site when img.bricklink.com is unreachable: BrickLink figure number -> Rebrickable fig id
+    alt = {}
+    for rb, bln in rb2bl.items():
+        if re.match(r"^sw\d", bln) and rb.startswith("fig-"):
+            alt.setdefault(bln, rb)
+    (ROOT / "data" / "imgalt.json").write_text(json.dumps(dict(sorted(alt.items())), separators=(",", ":")) + "\n", encoding="utf-8")
     print(f"Mentve: {len(out_sets)} szett, {len(out_figs)} figura ({len(rb2bl)} párosítva).")
     check(inv, det, out_sets, out_figs, figs, s2f, rb2bl)
 
