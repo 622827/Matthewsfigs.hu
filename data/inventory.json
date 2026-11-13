@@ -1,11 +1,11 @@
 {
- "updated": "2026-11-05T17:06:54+00:00",
+ "updated": "2026-11-13T16:06:33+00:00",
  "store": "MatthewHorseman",
  "currency": "HUF",
  "bl_currency": "EUR",
- "total_lots": 739,
- "parts_lots": 540,
- "parts_qty": 4114,
+ "total_lots": 731,
+ "parts_lots": 539,
+ "parts_qty": 4112,
  "items": [
   {
    "id": 565498056,
@@ -70,12 +70,12 @@
    "name": "The Dark Falcon",
    "color": null,
    "cond": "N",
-   "qty": 5,
+   "qty": 2,
    "price": 54980,
    "note": "MISB",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75389-1.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=564799171",
-   "eur": 143.9
+   "eur": 149.99
   },
   {
    "id": 564798883,
@@ -1353,20 +1353,6 @@
    "eur": 8.99
   },
   {
-   "id": 547560358,
-   "type": "MINIFIG",
-   "no": "sw0834",
-   "name": "Darth Vader (Light Nougat Head, Plain Arms)",
-   "color": null,
-   "cond": "U",
-   "qty": 1,
-   "price": 3480,
-   "note": "Excellent condition.",
-   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0834.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547560358",
-   "eur": 8.99
-  },
-  {
    "id": 554253946,
    "type": "MINIFIG",
    "no": "sw0909",
@@ -1631,20 +1617,6 @@
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0442.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=554255322",
    "eur": 6.9
-  },
-  {
-   "id": 563662385,
-   "type": "MINIFIG",
-   "no": "sw0467",
-   "name": "Battle Droid - Dark Orange, Angled Arm and Straight Arm",
-   "color": null,
-   "cond": "U",
-   "qty": 1,
-   "price": 2480,
-   "note": "Excellent condition.",
-   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0467.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=563662385",
-   "eur": 6.99
   },
   {
    "id": 554552289,
@@ -2529,20 +2501,6 @@
    "eur": 2.99
   },
   {
-   "id": 559049047,
-   "type": "MINIFIG",
-   "no": "sw0532",
-   "name": "Chewbacca - Dark Brown, Medium Nougat Fur",
-   "color": null,
-   "cond": "U",
-   "qty": 1,
-   "price": 980,
-   "note": "Excellent condition, comes with crossbow.",
-   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0532.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559049047",
-   "eur": 2.99
-  },
-  {
    "id": 547704603,
    "type": "MINIFIG",
    "no": "min010",
@@ -2627,20 +2585,6 @@
    "eur": 2.99
   },
   {
-   "id": 536129930,
-   "type": "MINIFIG",
-   "no": "gen001",
-   "name": "Skeleton - Standard Skull, Floppy Arms",
-   "color": null,
-   "cond": "U",
-   "qty": 1,
-   "price": 480,
-   "note": "",
-   "img": "https://img.bricklink.com/ItemImage/MN/0/gen001.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=536129930",
-   "eur": 0.99
-  },
-  {
    "id": 536603229,
    "type": "MINIFIG",
    "no": "sw0001b",
@@ -2653,34 +2597,6 @@
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0001b.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=536603229",
    "eur": 1.49
-  },
-  {
-   "id": 535202161,
-   "type": "MINIFIG",
-   "no": "sw0001c",
-   "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
-   "color": null,
-   "cond": "U",
-   "qty": 6,
-   "price": 480,
-   "note": "10/10, comes with blaster",
-   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0001c.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=535202161",
-   "eur": 1.49
-  },
-  {
-   "id": 543105783,
-   "type": "MINIFIG",
-   "no": "sw0217",
-   "name": "Astromech Droid, R2-D2, Light Bluish Gray Head",
-   "color": null,
-   "cond": "U",
-   "qty": 1,
-   "price": 480,
-   "note": "",
-   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0217.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=543105783",
-   "eur": 1.99
   },
   {
    "id": 566912406,
@@ -2750,20 +2666,6 @@
    "note": "10/10",
    "img": "https://img.bricklink.com/ItemImage/MN/0/min010.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547704616",
-   "eur": 1.99
-  },
-  {
-   "id": 547559304,
-   "type": "MINIFIG",
-   "no": "sw0527a",
-   "name": "Astromech Droid, R2-D2 - Flat Silver Head, Lavender Dots and Small Receptor",
-   "color": null,
-   "cond": "U",
-   "qty": 1,
-   "price": 480,
-   "note": "10/10",
-   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0527a.png",
-   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547559304",
    "eur": 1.99
   },
   {
@@ -2914,6 +2816,21 @@
    "eur": 11.9
   },
   {
+   "id": 547560358,
+   "type": "MINIFIG",
+   "no": "sw0834",
+   "name": "Darth Vader (Light Nougat Head, Plain Arms)",
+   "color": null,
+   "cond": "U",
+   "qty": 0,
+   "price": 3480,
+   "note": "Excellent condition.",
+   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0834.png",
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=547560358",
+   "eur": 8.99,
+   "preorder": true
+  },
+  {
    "id": 569652611,
    "type": "MINIFIG",
    "no": "sw0219",
@@ -2926,6 +2843,21 @@
    "img": "https://img.bricklink.com/ItemImage/MN/0/sw0219.png",
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=569652611",
    "eur": 9.99,
+   "preorder": true
+  },
+  {
+   "id": 563662385,
+   "type": "MINIFIG",
+   "no": "sw0467",
+   "name": "Battle Droid - Dark Orange, Angled Arm and Straight Arm",
+   "color": null,
+   "cond": "U",
+   "qty": 0,
+   "price": 2480,
+   "note": "Excellent condition.",
+   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0467.png",
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=563662385",
+   "eur": 6.99,
    "preorder": true
   },
   {
@@ -2974,6 +2906,21 @@
    "preorder": true
   },
   {
+   "id": 559049047,
+   "type": "MINIFIG",
+   "no": "sw0532",
+   "name": "Chewbacca - Dark Brown, Medium Nougat Fur",
+   "color": null,
+   "cond": "U",
+   "qty": 0,
+   "price": 980,
+   "note": "Excellent condition, comes with crossbow.",
+   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0532.png",
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=559049047",
+   "eur": 2.99,
+   "preorder": true
+  },
+  {
    "id": 545420520,
    "type": "MINIFIG",
    "no": "sw1202",
@@ -2987,6 +2934,36 @@
    "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=545420520",
    "preorder": true,
    "eur": 2.9
+  },
+  {
+   "id": 536129930,
+   "type": "MINIFIG",
+   "no": "gen001",
+   "name": "Skeleton - Standard Skull, Floppy Arms",
+   "color": null,
+   "cond": "U",
+   "qty": 0,
+   "price": 480,
+   "note": "",
+   "img": "https://img.bricklink.com/ItemImage/MN/0/gen001.png",
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=536129930",
+   "eur": 0.99,
+   "preorder": true
+  },
+  {
+   "id": 535202161,
+   "type": "MINIFIG",
+   "no": "sw0001c",
+   "name": "Battle Droid - Tan, Angled Arm and Straight Arm",
+   "color": null,
+   "cond": "U",
+   "qty": 0,
+   "price": 480,
+   "note": "10/10, comes with blaster",
+   "img": "https://img.bricklink.com/ItemImage/MN/0/sw0001c.png",
+   "url": "https://www.bricklink.com/store.asp?p=MatthewHorseman&itemID=535202161",
+   "eur": 1.49,
+   "preorder": true
   }
  ]
 }
