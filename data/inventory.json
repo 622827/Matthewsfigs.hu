@@ -1,11 +1,11 @@
 {
- "updated": "2026-11-13T16:06:33+00:00",
+ "updated": "2026-11-16T07:09:55+00:00",
  "store": "MatthewHorseman",
  "currency": "HUF",
  "bl_currency": "EUR",
- "total_lots": 731,
- "parts_lots": 539,
- "parts_qty": 4112,
+ "total_lots": 719,
+ "parts_lots": 527,
+ "parts_qty": 4086,
  "items": [
   {
    "id": 565498056,
