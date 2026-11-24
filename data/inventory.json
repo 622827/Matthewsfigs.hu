@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-24T22:10:54+00:00",
+ "updated": "2026-11-24T22:24:50+00:00",
  "store": "MatthewHorseman",
  "currency": "HUF",
  "bl_currency": "EUR",
@@ -98,7 +98,7 @@
    "name": "Armored Assault Tank (AAT)",
    "color": null,
    "cond": "N",
-   "qty": 2,
+   "qty": 1,
    "price": 30480,
    "note": "",
    "img": "https://img.bricklink.com/ItemImage/SN/0/75283-1.png",
