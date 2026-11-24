@@ -1,0 +1,41 @@
+name: BrickLink-készlet módosítása
+
+on:
+  workflow_dispatch:
+    inputs:
+      lot:
+        description: "BrickLink tételazonosító (lot id)"
+        required: true
+      qty:
+        description: "Új darabszám"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  qty:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Készlet beállítása
+        env:
+          LOT: ${{ inputs.lot }}
+          QTY: ${{ inputs.qty }}
+          BL_CONSUMER_KEY: ${{ secrets.BL_CONSUMER_KEY }}
+          BL_CONSUMER_SECRET: ${{ secrets.BL_CONSUMER_SECRET }}
+          BL_TOKEN: ${{ secrets.BL_TOKEN }}
+          BL_TOKEN_SECRET: ${{ secrets.BL_TOKEN_SECRET }}
+        run: python scripts/bl_qty.py "$LOT" "$QTY"
+      - name: Eredmény mentése
+        if: always()
+        run: |
+          git config user.name "inventory-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/bl_qty_last.json 2>/dev/null || exit 0
+          git diff --cached --quiet && exit 0
+          git commit -q -m "BrickLink-készlet módosítás eredménye"
+          for i in 1 2 3; do git pull -q --rebase origin main && git push -q origin HEAD:main && exit 0; sleep 5; done
